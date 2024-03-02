@@ -1,0 +1,947 @@
+fileFormatVersion: 2
+guid: cf07c0fa9e04e0645979ed6e9a1664fb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6692826930376892682
+    second: Dragon head attack_red-Sheet_0
+  - first:
+      213: -4625634041995732996
+    second: Dragon head attack_red-Sheet_1
+  - first:
+      213: 7277993411946571347
+    second: Dragon head attack_red-Sheet_2
+  - first:
+      213: 7629165945731679887
+    second: Dragon head attack_red-Sheet_3
+  - first:
+      213: -4321915569561575779
+    second: Dragon head attack_red-Sheet_4
+  - first:
+      213: -1855894258273262349
+    second: Dragon head attack_red-Sheet_5
+  - first:
+      213: 2619729167702664960
+    second: Dragon head attack_red-Sheet_6
+  - first:
+      213: -7951879699030048649
+    second: Dragon head attack_red-Sheet_7
+  - first:
+      213: 3239919881106321960
+    second: Dragon head attack_red-Sheet_8
+  - first:
+      213: -2970388159316049475
+    second: Dragon head attack_red-Sheet_9
+  - first:
+      213: -7515809717832707852
+    second: Dragon head attack_red-Sheet_10
+  - first:
+      213: -216235807230834407
+    second: Dragon head attack_red-Sheet_11
+  - first:
+      213: -8918254012746024708
+    second: Dragon head attack_red-Sheet_12
+  - first:
+      213: -6750430413349026616
+    second: Dragon head attack_red-Sheet_13
+  - first:
+      213: -5642493254979984499
+    second: Dragon head attack_red-Sheet_14
+  - first:
+      213: -8958997975982206924
+    second: Dragon head attack_red-Sheet_15
+  - first:
+      213: 2861297569726672329
+    second: Dragon head attack_red-Sheet_16
+  - first:
+      213: -3585407543525852243
+    second: Dragon head attack_red-Sheet_17
+  - first:
+      213: 9089317119554936376
+    second: Dragon head attack_red-Sheet_18
+  - first:
+      213: 993648654557481251
+    second: Dragon head attack_red-Sheet_19
+  - first:
+      213: -5619833889833036620
+    second: Dragon head attack_red-Sheet_20
+  - first:
+      213: 8919908644556112666
+    second: Dragon head attack_red-Sheet_21
+  - first:
+      213: 4850075036409437456
+    second: Dragon head attack_red-Sheet_22
+  - first:
+      213: 1188986789090642761
+    second: Dragon head attack_red-Sheet_23
+  - first:
+      213: -436553918352291740
+    second: Dragon head attack_red-Sheet_24
+  - first:
+      213: -4657798917863628280
+    second: Dragon head attack_red-Sheet_25
+  - first:
+      213: 8288211242622866817
+    second: Dragon head attack_red-Sheet_26
+  - first:
+      213: -2656860079870784254
+    second: Dragon head attack_red-Sheet_27
+  - first:
+      213: -402629597535649235
+    second: Dragon head attack_red-Sheet_28
+  - first:
+      213: 5712703452993860715
+    second: Dragon head attack_red-Sheet_29
+  - first:
+      213: -1085714877956766490
+    second: Dragon head attack_red-Sheet_30
+  - first:
+      213: 2384476965831792555
+    second: Dragon head attack_red-Sheet_31
+  - first:
+      213: -1774743239898786362
+    second: Dragon head attack_red-Sheet_32
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 48
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fe97bfed5d4e13a0800000000000000
+      internalID: -6692826930376892682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf7d3e1b8527ecfb0800000000000000
+      internalID: -4625634041995732996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35665bc9270a00560800000000000000
+      internalID: 7277993411946571347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8608dfa10e30e960800000000000000
+      internalID: 7629165945731679887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9e5d0f10b87504c0800000000000000
+      internalID: -4321915569561575779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f46fea410a8e36e0800000000000000
+      internalID: -1855894258273262349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 007a5a05cc52b5420800000000000000
+      internalID: 2619729167702664960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7708caa6b8f35a190800000000000000
+      internalID: -7951879699030048649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 822711e47f186fc20800000000000000
+      internalID: 3239919881106321960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db1c0f6f4bf07c6d0800000000000000
+      internalID: -2970388159316049475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f01721d1ea72b790800000000000000
+      internalID: -7515809717832707852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9194942dda6cffcf0800000000000000
+      internalID: -216235807230834407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf83291f93ffb3480800000000000000
+      internalID: -8918254012746024708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c4865bed47a152a0800000000000000
+      internalID: -6750430413349026616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d836161a746d1b1b0800000000000000
+      internalID: -5642493254979984499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4301322cece3ba380800000000000000
+      internalID: -8958997975982206924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cd2f38dafe55b720800000000000000
+      internalID: 2861297569726672329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dabb221e5d21e3ec0800000000000000
+      internalID: -3585407543525852243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83ed2f153cdb32e70800000000000000
+      internalID: 9089317119554936376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 3040
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 329817ecf262acd00800000000000000
+      internalID: 993648654557481251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b4dcc33ad65202b0800000000000000
+      internalID: -5619833889833036620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1304bb07a1e9cb70800000000000000
+      internalID: 8919908644556112666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 3520
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01d9c2f7c8dee4340800000000000000
+      internalID: 4850075036409437456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 3680
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94b41666f21208010800000000000000
+      internalID: 1188986789090642761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4688e43368c01f9f0800000000000000
+      internalID: -436553918352291740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8022a81ff8c2c5fb0800000000000000
+      internalID: -4657798917863628280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 4160
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1855feb5634a50370800000000000000
+      internalID: 8288211242622866817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20dc26185dfe02bd0800000000000000
+      internalID: -2656860079870784254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 4480
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2244d6a382996af0800000000000000
+      internalID: -402629597535649235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 4640
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b64b8d6f589974f40800000000000000
+      internalID: 5712703452993860715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e4c7042214cee0f0800000000000000
+      internalID: -1085714877956766490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 4960
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba7518bba2d571120800000000000000
+      internalID: 2384476965831792555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon head attack_red-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c59e422d68de57e0800000000000000
+      internalID: -1774743239898786362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Dragon head attack_red-Sheet_17: -3585407543525852243
+      Dragon head attack_red-Sheet_13: -6750430413349026616
+      Dragon head attack_red-Sheet_18: 9089317119554936376
+      Dragon head attack_red-Sheet_23: 1188986789090642761
+      Dragon head attack_red-Sheet_24: -436553918352291740
+      Dragon head attack_red-Sheet_32: -1774743239898786362
+      Dragon head attack_red-Sheet_14: -5642493254979984499
+      Dragon head attack_red-Sheet_7: -7951879699030048649
+      Dragon head attack_red-Sheet_5: -1855894258273262349
+      Dragon head attack_red-Sheet_11: -216235807230834407
+      Dragon head attack_red-Sheet_12: -8918254012746024708
+      Dragon head attack_red-Sheet_6: 2619729167702664960
+      Dragon head attack_red-Sheet_8: 3239919881106321960
+      Dragon head attack_red-Sheet_0: -6692826930376892682
+      Dragon head attack_red-Sheet_25: -4657798917863628280
+      Dragon head attack_red-Sheet_3: 7629165945731679887
+      Dragon head attack_red-Sheet_20: -5619833889833036620
+      Dragon head attack_red-Sheet_1: -4625634041995732996
+      Dragon head attack_red-Sheet_2: 7277993411946571347
+      Dragon head attack_red-Sheet_16: 2861297569726672329
+      Dragon head attack_red-Sheet_26: 8288211242622866817
+      Dragon head attack_red-Sheet_4: -4321915569561575779
+      Dragon head attack_red-Sheet_9: -2970388159316049475
+      Dragon head attack_red-Sheet_28: -402629597535649235
+      Dragon head attack_red-Sheet_29: 5712703452993860715
+      Dragon head attack_red-Sheet_22: 4850075036409437456
+      Dragon head attack_red-Sheet_21: 8919908644556112666
+      Dragon head attack_red-Sheet_10: -7515809717832707852
+      Dragon head attack_red-Sheet_30: -1085714877956766490
+      Dragon head attack_red-Sheet_15: -8958997975982206924
+      Dragon head attack_red-Sheet_27: -2656860079870784254
+      Dragon head attack_red-Sheet_31: 2384476965831792555
+      Dragon head attack_red-Sheet_19: 993648654557481251
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

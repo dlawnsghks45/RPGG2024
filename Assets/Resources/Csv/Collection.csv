@@ -1,0 +1,31 @@
+id,setid,collecttype,description,name,info,itemid,howmany,piecestat,piecestatvalue,allpiecestat,allpiecevalue
+아이디,세트아이디,타입(item or equip),d설명,이름,개당 설명,아이디,개수,장비하나당오르는스탯이름,오르는 수치,다 모을 시 오르는 스탯,수치
+C1000,C1000,equip,T1무기,collectname/1000,collectinfoone/10,E1000;E1001;E1002;E1003,1;1;1;1,allstat,10,allstat,10
+C1001,C1001,equip,T1방어구,collectname/1001,collectinfoone/10,E1004;E1005;E1006;E1007,1;1;1;1,allstat,10,allstat,10
+C1002,C1002,equip,T1장신구,collectname/1002,collectinfoone/10,E1008;E1009,1;1,allstat,10,allstat,10
+C1003,C1003,equip,T2무기,collectname/1003,collectinfoone/20,E2000;E2001;E2002;E2003,1;1;1;1,allstat,20,allstat,20
+C1004,C1004,equip,T2방어구,collectname/1004,collectinfoone/20,E2004;E2005;E2006;E2007,1;1;1;1,allstat,20,allstat,20
+C1005,C1005,equip,T2장신구,collectname/1005,collectinfoone/20,E2008;E2009,1;1,allstat,20,allstat,20
+C1006,C1006,equip,T3무기,collectname/1006,collectinfoone/30,E3000;E3001;E3002;E3003,1;1;1;1,allstat,30,allstat,30
+C1007,C1007,equip,T3방어구,collectname/1007,collectinfoone/30,E3004;E3005;E3006;E3007,1;1;1;1,allstat,30,allstat,30
+C1008,C1008,equip,T3장신구,collectname/1008,collectinfoone/30,E3008;E3009,1;1,allstat,30,allstat,30
+C1009,C1009,equip,T4무기,collectname/1009,collectinfoone/40,E4000;E4001;E4002;E4003,1;1;1;1,allstat,40,allstat,40
+C1010,C1010,equip,T4방어구,collectname/1010,collectinfoone/40,E4004;E4005;E4006;E4007,1;1;1;1,allstat,40,allstat,40
+C1011,C1011,equip,T4장신구,collectname/1011,collectinfoone/40,E4008;E4009,1;1,allstat,40,allstat,40
+C1012,C1012,equip,T5무기,collectname/1012,collectinfoone/50,E5000;E5001;E5002;E5003,1;1;1;1,allstat,50,allstat,50
+C1013,C1013,equip,T5방어구,collectname/1013,collectinfoone/50,E5004;E5005;E5006;E5007,1;1;1;1,allstat,50,allstat,50
+C1014,C1014,equip,T5장신구,collectname/1014,collectinfoone/50,E5008;E5009,1;1,allstat,50,allstat,50
+C1015,C1015,item,토벌 증표[뱀장어],collectname/1015,collectinfoone/50,2908,5,allstat,50,allstat,50
+C1016,C1016,item,토벌 증표[심해어],collectname/1016,collectinfoone/100,2908,10,allstat,100,allstat,100
+C1017,C1017,item,토벌 증표[공허 촉수],collectname/1017,collectinfoone/150,2908,15,allstat,150,allstat,150
+C1018,C1018,item,토벌 증표[재앙의 씨앗],collectname/1018,collectinfoone/200,2908,20,allstat,200,allstat,200
+C1019,C1019,item,감염된 농장 보스 재료,collectname/1019,collectinfoone/30,3000,1,allstat,30,allstat,30
+C1020,C1020,item,늪지대 보스 재료,collectname/1020,collectinfoone/30,3001,3,allstat,30,allstat,30
+C1021,C1021,item,지하 감옥 보스 재료,collectname/1021,collectinfoone/30,3003,3,allstat,30,allstat,30
+C1022,C1022,item,화산 보스 재료,collectname/1022,collectinfoone/30,3004,3,allstat,30,allstat,30
+C1023,C1023,item,마계 중심부 재료,collectname/1023,collectinfoone/30,3005,3,allstat,30,allstat,30
+C1024,C1024,item,샤이아 재료,collectname/1024,collectinfoone/30,3006,3,allstat,30,allstat,30
+C1025,C1025,item,토벌 증표[뱀장어],collectname/1025,collectinfoone/200,2908,25,allstat,200,allstat,200
+C1026,C1026,item,토벌 증표[심해어],collectname/1026,collectinfoone/200,2908,30,allstat,200,allstat,200
+C1027,C1027,item,토벌 증표[공허 촉수],collectname/1027,collectinfoone/200,2908,35,allstat,200,allstat,200
+C1028,C1028,item,토벌 증표[재앙의 씨앗],collectname/1028,collectinfoone/200,2908,40,allstat,200,allstat,200

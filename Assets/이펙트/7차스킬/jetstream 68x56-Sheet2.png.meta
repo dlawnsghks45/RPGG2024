@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: 545b9aba7d2815a4b8bd87d678760ee5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 48
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: jetstream 68x56-Sheet2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 839d8b478bc0cd9438da1ce5dd215a25
+      internalID: 1409995098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jetstream 68x56-Sheet2_1
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 224
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1768aac1ec19fc46b2a64b9580abbdc
+      internalID: 1342735945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jetstream 68x56-Sheet2_2
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 224
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a1add71de6d9834a9f1a10367a7042e
+      internalID: 1439479342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jetstream 68x56-Sheet2_3
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 224
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfbaf477d27443d41a66c4f24bbb3b91
+      internalID: 1110740584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jetstream 68x56-Sheet2_4
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 224
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7871e4335b83d16479316f5b156d57e3
+      internalID: -44003236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jetstream 68x56-Sheet2_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 168
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f047e40c27d61f443b73c8d814b958c1
+      internalID: 248587703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jetstream 68x56-Sheet2_6
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 168
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d16a24bbc6094c34f89ded470f1bf251
+      internalID: 482694390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jetstream 68x56-Sheet2_7
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 168
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 757665980b729ae4f9b69fd66c588c9f
+      internalID: 1161548614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jetstream 68x56-Sheet2_8
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 168
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72fb155d4e198794c9ad43bf616e537b
+      internalID: -1711176875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jetstream 68x56-Sheet2_9
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 168
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c5b569050171d4408c81e6a52c6fb12
+      internalID: 837214182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jetstream 68x56-Sheet2_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb22be8c1b77c614ea88a71ed8f8fe18
+      internalID: -961111051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jetstream 68x56-Sheet2_11
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 112
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c8714580ad890841bee8f3ee708f88a
+      internalID: -1702611111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jetstream 68x56-Sheet2_12
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 112
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db1dea0f68fd414a94b77930bab9eae
+      internalID: 659582925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jetstream 68x56-Sheet2_13
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 112
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7321d64da33a8b42b96e791f48a73a9
+      internalID: -2090418148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jetstream 68x56-Sheet2_14
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 112
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d177e7fc91167044881f16a92af9b09
+      internalID: -1050641957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jetstream 68x56-Sheet2_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 56
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7de5480ed5b3894ab32f332bc522ec3
+      internalID: 463060380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jetstream 68x56-Sheet2_16
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 56
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba963bd3057828a4fa5fd88bbcf38df9
+      internalID: -447175321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jetstream 68x56-Sheet2_17
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 56
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66a09b09c5bd3c247ad9a198e20eabbf
+      internalID: 957125415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jetstream 68x56-Sheet2_18
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 56
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6e958d0424a847419c7ce9083a52ef5
+      internalID: 1015007808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jetstream 68x56-Sheet2_19
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 56
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19294864cf31929489f4e9df72cb5822
+      internalID: 671752086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jetstream 68x56-Sheet2_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb2565a39bfa02340a7e47b1161344f7
+      internalID: -1846034756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jetstream 68x56-Sheet2_21
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 0
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6135319e52327ca45b40f05eeb0130b6
+      internalID: -129155332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jetstream 68x56-Sheet2_22
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 0
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e4b2c62505a3fe4f94f2f5a830fc55e
+      internalID: 21986811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jetstream 68x56-Sheet2_23
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 0
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 909e32c6df2951b4c9c5751e27a2f2a7
+      internalID: 1637838870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      jetstream 68x56-Sheet2_0: 1409995098
+      jetstream 68x56-Sheet2_1: 1342735945
+      jetstream 68x56-Sheet2_10: -961111051
+      jetstream 68x56-Sheet2_11: -1702611111
+      jetstream 68x56-Sheet2_12: 659582925
+      jetstream 68x56-Sheet2_13: -2090418148
+      jetstream 68x56-Sheet2_14: -1050641957
+      jetstream 68x56-Sheet2_15: 463060380
+      jetstream 68x56-Sheet2_16: -447175321
+      jetstream 68x56-Sheet2_17: 957125415
+      jetstream 68x56-Sheet2_18: 1015007808
+      jetstream 68x56-Sheet2_19: 671752086
+      jetstream 68x56-Sheet2_2: 1439479342
+      jetstream 68x56-Sheet2_20: -1846034756
+      jetstream 68x56-Sheet2_21: -129155332
+      jetstream 68x56-Sheet2_22: 21986811
+      jetstream 68x56-Sheet2_23: 1637838870
+      jetstream 68x56-Sheet2_3: 1110740584
+      jetstream 68x56-Sheet2_4: -44003236
+      jetstream 68x56-Sheet2_5: 248587703
+      jetstream 68x56-Sheet2_6: 482694390
+      jetstream 68x56-Sheet2_7: 1161548614
+      jetstream 68x56-Sheet2_8: -1711176875
+      jetstream 68x56-Sheet2_9: 837214182
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

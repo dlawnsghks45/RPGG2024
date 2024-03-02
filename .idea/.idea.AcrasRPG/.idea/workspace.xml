@@ -1,0 +1,839 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="026fe4cd-66d7-4da1-a1b1-1a7d0490dfd5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AcrasRPG/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AcrasRPG/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AcrasRPG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AcrasRPG/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Autofarmmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Autofarmmanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BackendFerderationAuth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BackendFerderationAuth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BackendLogin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BackendLogin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Classmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Classmanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CollectionRenewalManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CollectionRenewalManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ConsumeSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ConsumeSlot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Contentmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Contentmanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CraftManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DamageManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DamageManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DungeonManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DungeonManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EffectSlots.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EffectSlots.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hpmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hpmanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ItemDropManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ItemDropManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LogManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LogManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MyGuildManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MyGuildManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewIAPManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewIAPManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Passivemanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Passivemanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerBackendData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerBackendData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.startup.startup-runtime-1.0.0.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.startup.startup-runtime-1.0.0.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.work.work-runtime-2.7.0.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.work.work-runtime-2.7.0.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-lite-22.0.0.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-lite-22.0.0.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.sglib.easymobile.easy-mobile-1.5.1.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.sglib.easymobile.easy-mobile-1.5.1.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/material/메인무기.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/material/메인무기.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/material/보조무기.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/material/보조무기.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/아이템/아이템슬릇.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/아이템/아이템슬릇.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RankingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RankingManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Bow2.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Bow2.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/DropSound.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/DropSound.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Block.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Block.ogg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Buff1.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Buff1.ogg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Buff2.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Buff2.ogg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Buff3.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Buff3.ogg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Buff4.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Buff4.ogg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Buff5.mp3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Buff5.mp3.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Buff6.mp3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Buff6.mp3.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Buff_Defence.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Buff_Defence.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Debuff1.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Debuff1.ogg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/ExtraAttack.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/ExtraAttack.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Fire1.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Fire1.ogg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Fire2.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Fire2.ogg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Fire3.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Fire3.ogg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Fire5.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Fire5.ogg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Heal1.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Heal1.ogg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Ice1.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Ice1.ogg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Ice2.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Ice2.ogg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Shield1.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Shield1.ogg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Shield_Shadow_02.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Shield_Shadow_02.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_Black_Magic_03.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_Black_Magic_03.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_Electric_Pulse.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_Electric_Pulse.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_Fire_Critical_03.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_Fire_Critical_03.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_Ice_Hit_01.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_Ice_Hit_01.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_Ice_Spear.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_Ice_Spear.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_ShadowHit_01.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_ShadowHit_01.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_Whoosh_01.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_Whoosh_01.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_Whoosh_High_Pitch_02.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_Whoosh_High_Pitch_02.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Thunder1.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Thunder1.ogg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Spell_Projectile_Magic_02.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Spell_Projectile_Magic_02.ogg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Spell_Projectile_Magic_03.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Spell_Projectile_Magic_03.ogg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Spell_Projectile_Magic_Big_01.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Spell_Projectile_Magic_Big_01.ogg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Spell_Projectile_Magic_Big_02.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Spell_Projectile_Magic_Big_02.ogg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Spell_Projectile_Magic_Big_03.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Spell_Projectile_Magic_Big_03.ogg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/drop.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/drop.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/punch1.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/punch1.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/punch2.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/punch2.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/shield1.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/shield1.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/shoot1.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/shoot1.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/shoot2.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/shoot2.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/shoot3.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/shoot3.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/slash1.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/slash1.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/slash2.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/slash2.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/spell1.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/spell1.ogg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Class.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Class.zip.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Collect.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/Achievement.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/Achievement.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/Class.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/Class.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/Itemdatabasecsv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/Itemdatabasecsv.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/Passive.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/Passive.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/TimeTable.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/TimeTable.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/TradeShop.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/TradeShop.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/altar.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/altar.csv.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/antaltar.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/antaltar.csv.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/goldaltar.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/goldaltar.csv.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/monster.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/monster.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/10.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/11.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/12.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/7.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/8.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/9.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Boot.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Boot/Boot1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Boot/Boot1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Boot/Boot3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Boot/Boot3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Boot/Boot4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Boot/Boot4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Boot/Set_Boot1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Boot/Set_Boot1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Boot/Set_Boot2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Boot/Set_Boot2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/Chest1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/Chest1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/Chest3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/Chest3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/Chest4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/Chest4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/Chest5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/Chest5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/Chest6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/Chest6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/ChestGather.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/ChestGather.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/ChestGather1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/ChestGather1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/L_Chest1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/L_Chest1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/Set_Chest1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/Set_Chest1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/leather_red.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/leather_red.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Glove.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Glove/Glove1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Glove/Glove1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Glove/Glove3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Glove/Glove3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Glove/Glove4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Glove/Glove4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Glove/Glove5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Glove/Glove5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Glove/Set_Glove1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Glove/Set_Glove1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Glove/Set_Glove2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Glove/Set_Glove2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Glove/glove_short_red.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Glove/glove_short_red.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair10.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair11.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair12.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair13.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair14.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair15.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair16.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair17.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair18.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair19.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair20.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair21.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair22.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair23.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair24.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair25.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair26.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair27.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair28.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair28.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair29.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair29.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair30.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair31.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair31.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair32.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair33.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair34.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair34.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair35.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair7.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair8.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair9.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/Helmet1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/Helmet1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/Helmet3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/Helmet3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/Helmet4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/Helmet4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/Helmet5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/Helmet5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/Helmet6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/Helmet6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/L_Helmet1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/L_Helmet1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/NoobHelmet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/NoobHelmet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/Set_Helmet1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/Set_Helmet1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/Set_Helmet2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/Set_Helmet2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/U_Helmet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/U_Helmet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/U_Helmet0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/U_Helmet0.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Legging.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Legging/NoobLegging.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Legging/NoobLegging.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Legging/leg_armor_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Legging/leg_armor_1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Legging/leg_armor_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Legging/leg_armor_2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Legging/leg_armor_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Legging/leg_armor_3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Legging/leg_armor_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Legging/leg_armor_4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Legging/leg_armor_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Legging/leg_armor_5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Legging/pants_darkgreen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Legging/pants_darkgreen.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Wing.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Wing/Clock1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Wing/Clock1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Wing/Clock3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Wing/Clock3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Wing/Clock4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Wing/Clock4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Wing/Clock5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Wing/Clock5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Wing/ratskin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Wing/ratskin.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Wing/white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Wing/white.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/I2Languages.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/I2Languages.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/Special Click 05.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/Special Click 05.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/UI Tight 03.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/UI Tight 03.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/UI Tight 04.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/UI Tight 04.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/UI Tight 10.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/UI Tight 10.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/WHOOSH_ARM_SWING_04.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/WHOOSH_ARM_SWING_04.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/craftsucc.mp3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/craftsucc.mp3.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/potion.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/potion.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/강화대성공.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/강화대성공.ogg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/강화대실패.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/강화대실패.ogg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/강화성공.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/강화성공.ogg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/강화실패.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/강화실패.ogg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/강화확인전.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/강화확인전.ogg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/긍정업.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/긍정업.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/레전드뽑음.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/레전드뽑음.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/상자열기.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/상자열기.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/일반뽑음.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/일반뽑음.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/일퀘수락사운드.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/일퀘수락사운드.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Transform.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Transform.zip.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Roulette.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Roulette.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Savemanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Savemanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lobby.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/classcheck.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/classcheck.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/login.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/login.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Chat/chatmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Chat/chatmanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/DB/altarDB.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/DB/altarDB.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/DB/antaltarDB.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/DB/antaltarDB.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/DB/goldaltarDB.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/DB/goldaltarDB.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SeasonPass.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SeasonPass.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settingmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settingmanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Timemanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Timemanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tutorialmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tutorialmanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Main/Sliders/Slider1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Main/Sliders/Slider1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/ravenui/c114.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/ravenui/c114.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WorldBossManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WorldBossManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/abilitymanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/abilitymanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/achievemanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/achievemanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/achievementslot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/achievementslot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/alertmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/alertmanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/altarmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/altarmanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/dpsmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/dpsmanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/equipoptionchanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/equipoptionchanger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/equipskillmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/equipskillmanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/iteminventoryinfoslot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/iteminventoryinfoslot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/mapmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/mapmanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/mondropmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/mondropmanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/otherusermanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/otherusermanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/petmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/petmanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/presetmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/presetmanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/sendqueuemanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/sendqueuemanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/AdmobRewardAd.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AutoSmelting.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Autofarmmanager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CheckContentCount.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CollectionRenewalManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Collectmanager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ContentSlot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Contentmanager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EquipUpgradeManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Equipchangemanager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EventManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GoolgeManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GuildApplicantSlot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GuildBuffSlot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GuildQuestMemberSlot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GuildRaidmemberslot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GuildrecoSlot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/IAPLKManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ItemDropManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Itemsell.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LoginEventManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/MyGuildManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/MyGuildQuestManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/NewIAPManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Panelcheck.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PartyMemberslot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Petmixmother.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/RoulettePiece.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Settimetext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SettingReNewal.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Settingmanager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sotangpanel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/StatShowManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/StatSlot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TutorialTotalManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/WorldBossManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/WorldBossSlot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/abilitymanager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/abilityslot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/backgroundchange.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/boxsound.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/collectionrenewalslot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/collectionslot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/collectitemslots.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/countpanel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/dailyrewardmanager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/dailyrewardslot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/dpsslot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/equiplistmanager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/equipoptionchanger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/equipshowslot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/eventrpggmanager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/growthmanager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/guildmemberslot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/guildquestslot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/internetcheck.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/itemboxslot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/itemneedslot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/itemshowcountslot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/itemspritedropslot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/loginrewardslot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/otherusermanager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/petboxslot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/petdatabase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/petmixslot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/presetmanager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/presetskillslot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/removeobj.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/roulettebutton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/seasonpassslot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/shopitemslot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/shopslot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/skillminislot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/tradebuy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/tradeslot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.common@6.0.6/Editor/ImagePacker/ImagePacker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ads@4.4.2/Runtime/Advertisement/Platform/Platform.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.purchasing@4.8.0/Editor/UnityPurchasingEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.purchasing@4.8.0/Runtime/Purchasing/Utilites/ILoggerExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.purchasing@4.8.0/Runtime/Stores/FakeStore/UIFakeStore.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Editor/TMP_BaseEditorPanel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Image.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/InputField.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/ScrollRect.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/StencilMaterial.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/ToggleGroup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.arfoundation@5.0.5/Editor/Simulation/SimulationEditorUtilities.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/f5faf91980f74435b3b8c61ce61440ba3d400/b6/53b2fd3c/02000016pdb43.il" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/51b11e759e124da2910b485094c56ca3bde00/30/ee79fbb7/BaseErrorHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/93a8f82184b4439ca5abff025375fe32564da0/10/594b5b83/KeyValuePair`2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c06a8fd53b6a4209ac59c7d20bf5f160140800/61/17431bef/GameChat.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f712b1dc50b4468388b9c5f95d0d0eaf159e00/23/bfc0d15f/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f712b1dc50b4468388b9c5f95d0d0eaf159e00/31/3d11400d/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f712b1dc50b4468388b9c5f95d0d0eaf159e00/9e/6e3bb860/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f712b1dc50b4468388b9c5f95d0d0eaf159e00/d9/870a967d/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f712b1dc50b4468388b9c5f95d0d0eaf159e00/ef/78f7b868/Coroutine.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f712b1dc50b4468388b9c5f95d0d0eaf159e00/fa/a141d74d/Transform.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f743d3e98758457ab3d1ee166ce0ed1ebf800/1e/888cffe5/ChannelType.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f743d3e98758457ab3d1ee166ce0ed1ebf800/48/c518c83b/GameChat.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f8507cae17da4a048c26c1ad6a304248574b88/69/6f59671d/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2OChLJ4yUn02YlAIdJive0lu4EK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;temp3 리베이스 중&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeLensConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\master1\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\master1\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\master1\\AppData\\Local\\Symbols\\src&quot;
+    ]
+  }
+}</component>
+  <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
+    <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.26f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Unity\AcrasRPG -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Unity\AcrasRPG" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.26f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Unity\AcrasRPG -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Unity\AcrasRPG" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.26f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Unity\AcrasRPG -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Unity\AcrasRPG" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unity 시작" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.26f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Unity\AcrasRPG -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Unity\AcrasRPG" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unity 에디터에 연결" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Unreal 에디터에 연결 후 재생" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="026fe4cd-66d7-4da1-a1b1-1a7d0490dfd5" name="Changes" comment="" />
+      <created>1681070416051</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1681070416051</updated>
+      <workItem from="1681070417334" duration="638000" />
+      <workItem from="1681092909511" duration="9025000" />
+      <workItem from="1681136971518" duration="64952000" />
+      <workItem from="1681482597768" duration="11219000" />
+      <workItem from="1681576117289" duration="5513000" />
+      <workItem from="1681618163039" duration="87529000" />
+      <workItem from="1681740435696" duration="49934000" />
+      <workItem from="1681951105056" duration="139779000" />
+      <workItem from="1682519496945" duration="52191000" />
+      <workItem from="1682751664219" duration="1226000" />
+      <workItem from="1682840914984" duration="11582000" />
+      <workItem from="1682903381612" duration="1722000" />
+      <workItem from="1682916947902" duration="13293000" />
+      <workItem from="1683036444255" duration="45553000" />
+      <workItem from="1683385270791" duration="10615000" />
+      <workItem from="1683411022451" duration="14406000" />
+      <workItem from="1683506478925" duration="30562000" />
+      <workItem from="1683845440102" duration="15747000" />
+      <workItem from="1684050080983" duration="3338000" />
+      <workItem from="1684161000349" duration="47047000" />
+      <workItem from="1684392919484" duration="69204000" />
+      <workItem from="1684759785865" duration="98587000" />
+      <workItem from="1685166323540" duration="9614000" />
+      <workItem from="1685200250053" duration="1539000" />
+      <workItem from="1685203400280" duration="217000" />
+      <workItem from="1685230292881" duration="11541000" />
+      <workItem from="1685298524881" duration="80007000" />
+      <workItem from="1685502674153" duration="13000" />
+      <workItem from="1685514829509" duration="11517000" />
+      <workItem from="1686184452502" duration="3005000" />
+      <workItem from="1686188860116" duration="2002000" />
+      <workItem from="1686201831434" duration="53940000" />
+      <workItem from="1686327419100" duration="23884000" />
+      <workItem from="1686399375061" duration="9776000" />
+      <workItem from="1686459737444" duration="3478000" />
+      <workItem from="1686463615955" duration="26469000" />
+      <workItem from="1686500483210" duration="111000" />
+      <workItem from="1686500764129" duration="16784000" />
+      <workItem from="1686584789429" duration="20534000" />
+      <workItem from="1686659718251" duration="28667000" />
+      <workItem from="1686738210931" duration="9000" />
+      <workItem from="1686738399070" duration="11000" />
+      <workItem from="1686738423102" duration="70000" />
+      <workItem from="1686747029282" duration="1044000" />
+      <workItem from="1686756517338" duration="2582000" />
+      <workItem from="1686885925319" duration="1994000" />
+      <workItem from="1687080347378" duration="19886000" />
+      <workItem from="1687222880299" duration="7015000" />
+      <workItem from="1687254593317" duration="10377000" />
+      <workItem from="1687500303729" duration="53397000" />
+      <workItem from="1687845118552" duration="37458000" />
+      <workItem from="1688020880803" duration="73266000" />
+      <workItem from="1688662204668" duration="12921000" />
+      <workItem from="1689070351925" duration="45531000" />
+      <workItem from="1689389619435" duration="32580000" />
+      <workItem from="1689521707161" duration="784000" />
+      <workItem from="1689542310312" duration="41037000" />
+      <workItem from="1689755891210" duration="8810000" />
+      <workItem from="1689790715901" duration="7466000" />
+      <workItem from="1689980395758" duration="4973000" />
+      <workItem from="1690121561446" duration="48371000" />
+      <workItem from="1690362579496" duration="24733000" />
+      <workItem from="1690533858386" duration="3738000" />
+      <workItem from="1690566213018" duration="67820000" />
+      <workItem from="1690966251782" duration="20935000" />
+      <workItem from="1691122014186" duration="10917000" />
+      <workItem from="1691181907583" duration="1384000" />
+      <workItem from="1691252195827" duration="10777000" />
+      <workItem from="1691316765862" duration="13269000" />
+      <workItem from="1691441325282" duration="1196000" />
+      <workItem from="1691494212074" duration="39780000" />
+      <workItem from="1691727054467" duration="12154000" />
+      <workItem from="1691836744239" duration="34766000" />
+      <workItem from="1692263986456" duration="621000" />
+      <workItem from="1692353983934" duration="1457000" />
+      <workItem from="1692385542523" duration="11264000" />
+      <workItem from="1692661539893" duration="16439000" />
+      <workItem from="1692789072832" duration="33232000" />
+      <workItem from="1692980484656" duration="26887000" />
+      <workItem from="1693054262479" duration="1131000" />
+      <workItem from="1693178486074" duration="26187000" />
+      <workItem from="1693224881782" duration="4583000" />
+      <workItem from="1693233542556" duration="596000" />
+      <workItem from="1693250634365" duration="26495000" />
+      <workItem from="1693564113815" duration="9000" />
+      <workItem from="1693797369697" duration="39388000" />
+      <workItem from="1694386871781" duration="27008000" />
+      <workItem from="1694957236692" duration="103361000" />
+      <workItem from="1695783016681" duration="16959000" />
+      <workItem from="1696211457705" duration="50121000" />
+      <workItem from="1696575023468" duration="44576000" />
+      <workItem from="1697345273262" duration="26065000" />
+      <workItem from="1697610771376" duration="10477000" />
+      <workItem from="1697987415453" duration="31952000" />
+      <workItem from="1698374396507" duration="4763000" />
+      <workItem from="1698550898911" duration="16025000" />
+      <workItem from="1698868061749" duration="14850000" />
+      <workItem from="1699039045993" duration="1595000" />
+      <workItem from="1699158018065" duration="39994000" />
+      <workItem from="1699722924991" duration="9417000" />
+      <workItem from="1700183808413" duration="8537000" />
+      <workItem from="1700409880513" duration="75284000" />
+      <workItem from="1700834084435" duration="56545000" />
+      <workItem from="1701130731011" duration="24326000" />
+      <workItem from="1701450851779" duration="35191000" />
+      <workItem from="1701707853273" duration="25414000" />
+      <workItem from="1701870158294" duration="4055000" />
+      <workItem from="1701961863381" duration="1886000" />
+      <workItem from="1702649216189" duration="2743000" />
+      <workItem from="1703388705150" duration="27318000" />
+      <workItem from="1704003924057" duration="61241000" />
+      <workItem from="1704826870064" duration="15729000" />
+      <workItem from="1705283880465" duration="5359000" />
+      <workItem from="1705446175413" duration="5345000" />
+      <workItem from="1705552914940" duration="40038000" />
+      <workItem from="1705854798642" duration="7939000" />
+      <workItem from="1706028417998" duration="16401000" />
+      <workItem from="1706113733552" duration="19891000" />
+      <workItem from="1706442390546" duration="85801000" />
+      <workItem from="1706748437374" duration="4886000" />
+      <workItem from="1706847230619" duration="19002000" />
+      <workItem from="1707022366030" duration="23174000" />
+      <workItem from="1707321258053" duration="40090000" />
+      <workItem from="1707562538123" duration="4869000" />
+      <workItem from="1707682870426" duration="16876000" />
+      <workItem from="1707910387176" duration="20418000" />
+      <workItem from="1708036176143" duration="17061000" />
+      <workItem from="1708229285266" duration="911000" />
+      <workItem from="1708285239113" duration="26534000" />
+      <workItem from="1708399419094" duration="65274000" />
+      <workItem from="1708668425886" duration="19849000" />
+      <workItem from="1708960607102" duration="60190000" />
+    </task>
+    <task id="LOCAL-00001" summary="gg">
+      <created>1681093758612</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1681093758612</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="gg" />
+    <option name="LAST_COMMIT_MESSAGE" value="gg" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/PlayerData.cs</url>
+          <line>854</line>
+          <properties documentPath="C:\Unity\AcrasRPG\Assets\PlayerData.cs" initialLine="705" containingFunctionPresentation="메서드 'GetPlayerStatForSave'" />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/rankslot.cs</url>
+          <line>73</line>
+          <properties documentPath="C:\Unity2\AcrasRPG\Assets\rankslot.cs" initialLine="72" containingFunctionPresentation="메서드 'Bt_ShowUserData'">
+            <startOffsets>
+              <option value="1999" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2065" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Savemanager.cs</url>
+          <line>1685</line>
+          <properties documentPath="C:\Unity2\AcrasRPG\Assets\Savemanager.cs" initialLine="1476" containingFunctionPresentation="메서드 'GameDataGet'">
+            <startOffsets>
+              <option value="-1" />
+            </startOffsets>
+            <endOffsets>
+              <option value="-1" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/achievemanager.cs</url>
+          <line>474</line>
+          <properties documentPath="C:\Unity2\AcrasRPG\Assets\achievemanager.cs" initialLine="458" containingFunctionPresentation="메서드 'Additem'">
+            <startOffsets>
+              <option value="14783" />
+            </startOffsets>
+            <endOffsets>
+              <option value="14784" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/itemiconslot.cs</url>
+          <line>81</line>
+          <properties documentPath="C:\Unity2\AcrasRPG\Assets\itemiconslot.cs" initialLine="80" containingFunctionPresentation="메서드 'Refresh'">
+            <startOffsets>
+              <option value="2493" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2506" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/EquipDatabase.cs</url>
+          <line>84</line>
+          <properties documentPath="C:\Unity2\AcrasRPG\Assets\EquipDatabase.cs" initialLine="84" containingFunctionPresentation="생성자 'EquipDatabase'">
+            <startOffsets>
+              <option value="2892" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2908" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/petmanager.cs</url>
+          <line>780</line>
+          <properties documentPath="C:\Unity2\AcrasRPG\Assets\petmanager.cs" initialLine="723" containingFunctionPresentation="메서드 'Bt_ShowUpgrade'">
+            <startOffsets>
+              <option value="24920" />
+            </startOffsets>
+            <endOffsets>
+              <option value="24926" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Autofarmmanager.cs</url>
+          <line>12</line>
+          <properties documentPath="C:\Unity2\AcrasRPG\Assets\Autofarmmanager.cs" initialLine="10" isMultiMethodBreakpoint="true">
+            <option name="multiMethodBreakpoint" value="true" />
+            <startOffsets>
+              <option value="-1" />
+            </startOffsets>
+            <endOffsets>
+              <option value="-1" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/itemshowcountslot.cs</url>
+          <line>39</line>
+          <properties documentPath="C:\Unity2\AcrasRPG\Assets\itemshowcountslot.cs" initialLine="39" containingFunctionPresentation="메서드 'SetData'">
+            <startOffsets>
+              <option value="1096" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1133" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

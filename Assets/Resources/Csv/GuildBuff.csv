@@ -1,0 +1,15 @@
+id,description,name,info,minlv,maxlv,upperlv,ispercent,sprite,upgradeGold,num,
+1000,모든 능력치 증가,guildbuffname/1000,guildbuffinfo/1000,1,10,0.01,TRUE,Guild/Buff/Battle/모든능력치증가,3000,0,1
+1001,생명력증가,guildbuffname/1001,guildbuffinfo/1001,1,10,0.01,TRUE,Guild/Buff/Battle/생명력증가,3000,1,1
+1002,정신력증가,guildbuffname/1002,guildbuffinfo/1002,1,10,0.01,TRUE,Guild/Buff/Battle/정신력증가,3000,2,1
+1003,재사용시간감소,guildbuffname/1003,guildbuffinfo/1003,1,10,0.01,TRUE,Guild/Buff/Battle/재사용시간감소,3000,3,1
+1004,치명타 확률 증가,guildbuffname/1004,guildbuffinfo/1004,1,10,1,FALSE,Guild/Buff/Battle/치명타확률증가,3000,4,1
+1005,치명타 피해 증가,guildbuffname/1005,guildbuffinfo/1005,1,10,0.02,TRUE,Guild/Buff/Battle/치명타피해증가,3000,5,1
+1006,보스 피해 증가,guildbuffname/1006,guildbuffinfo/1006,1,10,0.01,TRUE,Guild/Buff/Battle/보스피해증가,3000,6,1
+1007,무력화 피해 증가,guildbuffname/1007,guildbuffinfo/1007,1,10,0.02,TRUE,Guild/Buff/Battle/무력화피해증가,3000,7,1
+1008,경험치 증가,guildbuffname/1008,guildbuffinfo/1008,1,10,0.01,TRUE,Item/ETC/Exp,3000,8,1
+1009,골드 획득량 증가,guildbuffname/1009,guildbuffinfo/1009,1,10,0.01,TRUE,Guild/Buff/Util/골드증가,3000,9,1
+1010,길드원 수 증가,guildbuffname/1010,guildbuffinfo/1010,1,10,3,FALSE,Guild/Buff/Util/길드원증가,3000,10,1
+1011,자동 보상 효율 증가,guildbuffname/1011,guildbuffinfo/1011,1,10,0.02,TRUE,Guild/Buff/Util/자동보상,3000,11,1
+1012,드롭율 증가,guildbuffname/1012,guildbuffinfo/1012,1,10,0.01,TRUE,Guild/Buff/Util/드롭율증가,3000,12,1
+1013,제작 시간 감소,guildbuffname/1013,guildbuffinfo/1013,1,10,0.02,TRUE,Guild/Buff/Util/제작시간감소,3000,13,

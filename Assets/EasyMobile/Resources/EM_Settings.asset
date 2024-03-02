@@ -1,0 +1,1074 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb4452e2410c04b34915077cbe0f3a4d, type: 3}
+  m_Name: EM_Settings
+  m_EditorClassIdentifier: 
+  mAdvertisingSettings:
+    mAutoInit: 1
+    mAutoLoadAdsMode: 2
+    mAdCheckingInterval: 10
+    mAdLoadingInterval: 20
+    mIosDefaultAdNetworks:
+      bannerAdNetwork: 0
+      interstitialAdNetwork: 0
+      rewardedAdNetwork: 0
+      rewardedInterstitialNetwork: 0
+    mAndroidDefaultAdNetworks:
+      bannerAdNetwork: 0
+      interstitialAdNetwork: 0
+      rewardedAdNetwork: 0
+      rewardedInterstitialNetwork: 0
+    mAdColony:
+      mEnable: 0
+      mAppId:
+        mIosId: 
+        mAndroidId: 
+      mOrientation: 2
+      mEnableRewardedAdPrePopup: 0
+      mEnableRewardedAdPostPopup: 0
+      mDefaultInterstitialAdId:
+        mIosId: 
+        mAndroidId: 
+      mDefaultRewardedAdId:
+        mIosId: 
+        mAndroidId: 
+      mDefaultBannerAdId:
+        mIosId: 
+        mAndroidId: 
+      mCustomInterstitialAdIds:
+        keys: []
+        values: []
+      mCustomRewardedAdIds:
+        keys: []
+        values: []
+      mCustomBannerAdIds:
+        keys: []
+        values: []
+    mAdMob:
+      mEnable: 0
+      mTargetingSettings:
+        mTagForChildDirectedTreatment: 0
+        mExtraOptions:
+          keys: []
+          values: []
+      mEnableTestMode: 0
+      mUseAdaptiveBanner: 0
+      mAppId:
+        mIosId: 
+        mAndroidId: 
+      mDefaultBannerAdId:
+        mIosId: 
+        mAndroidId: 
+      mDefaultInterstitialAdId:
+        mIosId: 
+        mAndroidId: 
+      mDefaultRewardedAdId:
+        mIosId: 
+        mAndroidId: 
+      mDefaultRewardedInterstitialAdId:
+        mIosId: 
+        mAndroidId: 
+      mCustomBannerAdIds:
+        keys: []
+        values: []
+      mCustomInterstitialAdIds:
+        keys: []
+        values: []
+      mCustomRewardedAdIds:
+        keys: []
+        values: []
+      mCustomRewardedInterstitialAdIds:
+        keys: []
+        values: []
+    mAppLovin:
+      mEnable: 0
+      mAgeRestrictMode: 0
+      mSDKKey: 
+      mDefaultBannerAdId:
+        mIosId: 
+        mAndroidId: 
+      mDefaultInterstitialAdId:
+        mIosId: 
+        mAndroidId: 
+      mDefaultRewardedAdId:
+        mIosId: 
+        mAndroidId: 
+      mCustomBannerAdIds:
+        keys: []
+        values: []
+      mCustomInterstitialAdIds:
+        keys: []
+        values: []
+      mCustomRewardedAdIds:
+        keys: []
+        values: []
+    mFBAudience:
+      mEnable: 0
+      mBannerAdSize: 0
+      mEnableTestMode: 0
+      mTestDevices: []
+      mDefaultBannerId:
+        mIosId: 
+        mAndroidId: 
+      mDefaultInterstitialAdId:
+        mIosId: 
+        mAndroidId: 
+      mDefaultRewardedAdId:
+        mIosId: 
+        mAndroidId: 
+      mCustomBannerIds:
+        keys: []
+        values: []
+      mCustomInterstitialAdIds:
+        keys: []
+        values: []
+      mCustomRewardedAdIds:
+        keys: []
+        values: []
+    mChartboost:
+      mEnable: 0
+      mCustomInterstitialPlacements: []
+      mCustomRewardedPlacements: []
+    mFairBid:
+      mEnable: 0
+      mPublisherId: 
+      mShowTestSuite: 0
+      mDefaultBannerId: 
+      mDefaultInterstitialAdId: 
+      mDefaultRewardedAdId: 
+      mCustomBannerPlacements: []
+      mCustomInterstitialPlacements: []
+      mCustomRewardedPlacements: []
+    mIronSource:
+      mEnable: 0
+      mAppId:
+        mIosId: 
+        mAndroidId: 
+      mUseAdvancedSetting: 0
+      mSegments:
+        age: 0
+        gender: 
+        level: 0
+        isPaying: 0
+        userCreationDate: 0
+        iapt: 0
+        segmentName: 
+        customParams:
+          keys: []
+          values: []
+    mTapjoy:
+      mEnable: 0
+      mAutoReconnect: 1
+      mAutoReconnectInterval: 10
+      mDefaultInterstitialAdId:
+        mIosId: 
+        mAndroidId: 
+      mDefaultRewardedAdId:
+        mIosId: 
+        mAndroidId: 
+      mCustomInterstitialAdIds:
+        keys: []
+        values: []
+      mCustomRewardedAdIds:
+        keys: []
+        values: []
+    mUnityAds:
+      mEnable: 1
+      mAppId:
+        mIosId: 
+        mAndroidId: 
+      mDefaultBannerAdId:
+        mIosId: 
+        mAndroidId: 
+      mDefaultInterstitialAdId:
+        mIosId: video
+        mAndroidId: video
+      mDefaultRewardedAdId:
+        mIosId: rewardedVideo
+        mAndroidId: rewardedVideo
+      mCustomBannerAdIds:
+        keys: []
+        values: []
+      mCustomInterstitialAdIds:
+        keys: []
+        values: []
+      mCustomRewardedAdIds:
+        keys: []
+        values: []
+      mEnableTestMode: 0
+      mUseUnityAd4Client: 0
+    mVungleAds:
+      mEnable: 0
+      mAppId:
+        mIosId: 
+        mAndroidId: 
+      mDefaultInterstitialAdId:
+        mIosId: 
+        mAndroidId: 
+      mDefaultRewardedAdId:
+        mIosId: 
+        mAndroidId: 
+      mDefaultBannerAdId:
+        mIosId: 
+        mAndroidId: 
+      mCustomInterstitialAdIds:
+        keys: []
+        values: []
+      mCustomRewardedAdIds:
+        keys: []
+        values: []
+      mCustomBannerAdIds:
+        keys: []
+        values: []
+      mUseAdvancedSetting: 0
+      mAdvancedSettings:
+        adOrientation: 6
+        prematureAdClosePopup:
+          alertTitle: Alert!!!
+          alertText: You are about to close this ad. If this is a rewarded ad, you
+            might not receive the reward.
+          closeText: Close
+          continueText: Continue
+        enableAdSound: 1
+        minimumDiskSpaceForInitialization: 51000000
+        minimumDiskSpaceForAds: 50000000
+        disableHardwareId: 0
+  mGameServiceSettings:
+    mAutoInit: 1
+    mAutoInitAfterUserLogout: 0
+    mAutoInitDelay: 0
+    mAndroidMaxLoginRequests: 0
+    mGpgsDebugLogEnabled: 0
+    mGpgsPopupGravity: 0
+    mGpgsShouldRequestServerAuthCode: 0
+    mGpgsForceRefreshServerAuthCode: 0
+    mGpgsOauthScopes: []
+    mLeaderboards: []
+    mAchievements: []
+    mAndroidXmlResources: 
+    mEnableMultiplayer: 0
+    mEnableSavedGames: 0
+    mAutoConflictResolutionStrategy: 0
+    mGpgsDataSource: 0
+  mInAppPurchaseSettings:
+    mAutoInit: 1
+    mTargetAndroidStore: 0
+    mSimulateAppleAskToBuy: 0
+    mInterceptApplePromotionalPurchases: 0
+    mEnableAmazonSandboxTesting: 0
+    mValidateAppleReceipt: 1
+    mValidateGooglePlayReceipt: 1
+    mProducts:
+    - _name: rpgg2.ellibless30
+      _type: 0
+      _id: rpgg2.ellibless30
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.ellibless15
+      _type: 0
+      _id: rpgg2.ellibless15
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.fire.4000
+      _type: 0
+      _id: rpgg2.fire.4000
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.fire.8500
+      _type: 0
+      _id: rpgg2.fire.8500
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.fire.25500
+      _type: 0
+      _id: rpgg2.fire.25500
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.fire.45000
+      _type: 0
+      _id: rpgg2.fire.45000
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.fire.95000
+      _type: 0
+      _id: rpgg2.fire.95000
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.equip.package
+      _type: 0
+      _id: rpgg2.equip.package
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.dungeonenter10
+      _type: 0
+      _id: rpgg2.dungeonenter10
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.package.1100
+      _type: 0
+      _id: rpgg2.package.1100
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.smelt.package
+      _type: 0
+      _id: rpgg2.smelt.package
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.class1
+      _type: 0
+      _id: rpgg2.class1
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.class2
+      _type: 0
+      _id: rpgg2.class2
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.class3
+      _type: 0
+      _id: rpgg2.class3
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.class4
+      _type: 0
+      _id: rpgg2.class4
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.class5
+      _type: 0
+      _id: rpgg2.class5
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.class6
+      _type: 0
+      _id: rpgg2.class6
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.package.5500
+      _type: 0
+      _id: rpgg2.package.5500
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.package.11000
+      _type: 0
+      _id: rpgg2.package.11000
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.package.33000
+      _type: 0
+      _id: rpgg2.package.33000
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.ads.free
+      _type: 0
+      _id: rpgg2.ads.free
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.equip.package1
+      _type: 0
+      _id: rpgg2.equip.package1
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.equip.package2
+      _type: 0
+      _id: rpgg2.equip.package2
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.equip.package3
+      _type: 0
+      _id: rpgg2.equip.package3
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.dungeonenter200
+      _type: 0
+      _id: rpgg2.dungeonenter200
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.fire.40002
+      _type: 0
+      _id: rpgg2.fire.40002
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.fire.85002
+      _type: 0
+      _id: rpgg2.fire.85002
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.fire.255002
+      _type: 0
+      _id: rpgg2.fire.255002
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.fire.450002
+      _type: 0
+      _id: rpgg2.fire.450002
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.fire.950002
+      _type: 0
+      _id: rpgg2.fire.950002
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.equip.packagew1
+      _type: 0
+      _id: rpgg2.equip.packagew1
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.equip.packagew2
+      _type: 0
+      _id: rpgg2.equip.packagew2
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.equip.packagew3
+      _type: 0
+      _id: rpgg2.equip.packagew3
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.equip.packagew12
+      _type: 0
+      _id: rpgg2.equip.packagew12
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.equip.packagew22
+      _type: 0
+      _id: rpgg2.equip.packagew22
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.equip.packagew32
+      _type: 0
+      _id: rpgg2.equip.packagew32
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.consume.raid1
+      _type: 0
+      _id: rpgg2.consume.raid1
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.consume.raid2
+      _type: 0
+      _id: rpgg2.consume.raid2
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.all.package1
+      _type: 0
+      _id: rpgg2.all.package1
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.all.package2
+      _type: 0
+      _id: rpgg2.all.package2
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.altar.package1
+      _type: 0
+      _id: rpgg2.altar.package1
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.altar.package2
+      _type: 0
+      _id: rpgg2.altar.package2
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.resource.package1
+      _type: 0
+      _id: rpgg2.resource.package1
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.package.skill3
+      _type: 0
+      _id: rpgg2.package.skill3
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.package.skill2
+      _type: 0
+      _id: rpgg2.package.skill2
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.package.skill1
+      _type: 0
+      _id: rpgg2.package.skill1
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.package.content1
+      _type: 0
+      _id: rpgg2.package.content1
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.package.content2
+      _type: 0
+      _id: rpgg2.package.content2
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.package.seasonpass1
+      _type: 0
+      _id: rpgg2.package.seasonpass1
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.package.etc1
+      _type: 0
+      _id: rpgg2.package.etc1
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.package.etc2
+      _type: 0
+      _id: rpgg2.package.etc2
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.package.advan1
+      _type: 0
+      _id: rpgg2.package.advan1
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.roulette.01
+      _type: 0
+      _id: rpgg2.roulette.01
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.roulette.02
+      _type: 0
+      _id: rpgg2.roulette.02
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.roulette.03
+      _type: 0
+      _id: rpgg2.roulette.03
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.roulette.04
+      _type: 0
+      _id: rpgg2.roulette.04
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.roulette.05
+      _type: 0
+      _id: rpgg2.roulette.05
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.roulette.06
+      _type: 0
+      _id: rpgg2.roulette.06
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.roulette.07
+      _type: 0
+      _id: rpgg2.roulette.07
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.roulette.08
+      _type: 0
+      _id: rpgg2.roulette.08
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.roulette.09
+      _type: 0
+      _id: rpgg2.roulette.09
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.growthguide.premium
+      _type: 0
+      _id: rpgg2.growthguide.premium
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.packagetime.1
+      _type: 0
+      _id: rpgg2.packagetime.1
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.packagetime.2
+      _type: 0
+      _id: rpgg2.packagetime.2
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.packagetime.3
+      _type: 0
+      _id: rpgg2.packagetime.3
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.packagetime.4
+      _type: 0
+      _id: rpgg2.packagetime.4
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.packagetime.5
+      _type: 0
+      _id: rpgg2.packagetime.5
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.packagetime.6
+      _type: 0
+      _id: rpgg2.packagetime.6
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.packagetime.7
+      _type: 0
+      _id: rpgg2.packagetime.7
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.packagetime.8
+      _type: 0
+      _id: rpgg2.packagetime.8
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.packagetime.9
+      _type: 0
+      _id: rpgg2.packagetime.9
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.packagetime.10
+      _type: 0
+      _id: rpgg2.packagetime.10
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.packagetime.11
+      _type: 0
+      _id: rpgg2.packagetime.11
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.packagetime.12
+      _type: 0
+      _id: rpgg2.packagetime.12
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.packagetime.13
+      _type: 0
+      _id: rpgg2.packagetime.13
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.packagetime.14
+      _type: 0
+      _id: rpgg2.packagetime.14
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.packagetime.15
+      _type: 0
+      _id: rpgg2.packagetime.15
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.packagetime.16
+      _type: 0
+      _id: rpgg2.packagetime.16
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.packagetime.17
+      _type: 0
+      _id: rpgg2.packagetime.17
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.packagetime.18
+      _type: 0
+      _id: rpgg2.packagetime.18
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.packagetime.19
+      _type: 0
+      _id: rpgg2.packagetime.19
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.packagetime.20
+      _type: 0
+      _id: rpgg2.packagetime.20
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.packagetime.21
+      _type: 0
+      _id: rpgg2.packagetime.21
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.package2023.ch2
+      _type: 0
+      _id: rpgg2.package2023.ch2
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.package2023.ch1
+      _type: 0
+      _id: rpgg2.package2023.ch1
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.package2023.ch3
+      _type: 0
+      _id: rpgg2.package2023.ch3
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.packagetime.22
+      _type: 0
+      _id: rpgg2.packagetime.22
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.packagetime.23
+      _type: 0
+      _id: rpgg2.packagetime.23
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.packagetime.24
+      _type: 0
+      _id: rpgg2.packagetime.24
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.package2023.ch4
+      _type: 0
+      _id: rpgg2.package2023.ch4
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.package2024.ny1
+      _type: 0
+      _id: rpgg2.package2024.ny1
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.package2024.ny2
+      _type: 0
+      _id: rpgg2.package2024.ny2
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.package2024.ny3
+      _type: 0
+      _id: rpgg2.package2024.ny3
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.package.up.1
+      _type: 0
+      _id: rpgg2.package.up.1
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.package.pet.1
+      _type: 0
+      _id: rpgg2.package.pet.1
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.package.pet.2
+      _type: 0
+      _id: rpgg2.package.pet.2
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.package2024.ny4
+      _type: 0
+      _id: rpgg2.package2024.ny4
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.packagetime.25
+      _type: 0
+      _id: rpgg2.packagetime.25
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.packagetime.26
+      _type: 0
+      _id: rpgg2.packagetime.26
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+    - _name: rpgg2.packagetime.27
+      _type: 0
+      _id: rpgg2.packagetime.27
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 1
+  mNotificationSettings:
+    mAutoInit: 1
+    mAutoInitDelay: 0
+    mIosAuthOptions: 7
+    mPushNotificationService: 0
+    mOneSignalAppId: 
+    mFirebaseTopics: []
+    mCategoryGroups: []
+    mDefaultCategory:
+      id: notification.category.default
+      groupId: 
+      name: Default
+      description: 
+      importance: 0
+      enableBadge: 1
+      lights: 1
+      lightColor: {r: 1, g: 1, b: 1, a: 1}
+      vibration: 1
+      vibrationPattern: 
+      lockScreenVisibility: 2
+      sound: 1
+      soundName: 
+      actionButtons: []
+    mUserCategories: []
+    mAndroidPermissions:
+    - mElementName: uses-permission
+      mValue: android.permission.RECEIVE_BOOT_COMPLETED
+  mPrivacySettings:
+    mDefaultConsentDialog:
+      mContent: 
+      mTitle: Privacy Consent
+      mToggles: []
+      mActionButtons: []
+    mConsentDialogComposerSettings:
+      mToggleSelectedIndex: 0
+      mButtonSelectedIndex: 0
+      mEnableCopyPasteMode: 0
+    mIsAppTrackingEnabled: 0
+    mAppTrackingSettings:
+      mIOSInfoPlistKeys:
+      - mKey: NSUserTrackingUsageDescription
+        mValue: '[Your usage description]'
+  mRatingRequestSettings:
+    mDefaultRatingDialogContent:
+      mTitle: Rate $PRODUCT_NAME
+      mMessage: How would you rate $PRODUCT_NAME?
+      mLowRatingMessage: That's bad. Would you like to give us some feedback instead?
+      mHighRatingMessage: Awesome! Let's do it!
+      mPostponeButtonText: Not Now
+      mRefuseButtonText: Don't Ask Again
+      mRateButtonText: Rate Now!
+      mCancelButtonText: Cancel
+      mFeedbackButtonText: Send Feedback
+    mMinimumAcceptedStars: 4
+    mSupportEmail: 
+    mIosAppId: 
+    mAnnualCap: 12
+    mDelayAfterInstallation: 10
+    mCoolingOffPeriod: 10
+    mIgnoreContraintsInDevelopment: 0
+  mSharingSettings:
+    mAndroidPermissions:
+    - mElementName: uses-permission
+      mValue: android.permission.WRITE_EXTERNAL_STORAGE
+    mIOSInfoPlistItems:
+    - mKey: NSPhotoLibraryUsageDescription
+      mValue: '[Your usage description]'
+    - mKey: NSPhotoLibraryAddUsageDescription
+      mValue: '[Your usage description]'
+  mNativeApisSettings:
+    mIsMediaEnabled: 0
+    mMediaSettings:
+      mAndroidPermissions:
+      - mElementName: uses-permission
+        mValue: android.permission.WRITE_EXTERNAL_STORAGE
+      - mElementName: uses-feature
+        mValue: android.hardware.camera
+      mIOSInfoPlistKeys:
+      - mKey: NSPhotoLibraryUsageDescription
+        mValue: '[Your usage description]'
+      - mKey: NSPhotoLibraryAddUsageDescription
+        mValue: '[Your usage description]'
+      - mKey: NSCameraUsageDescription
+        mValue: '[Your usage description]'
+      - mKey: NSMicrophoneUsageDescription
+        mValue: '[Your usage description]'
+    mIsContactsEnabled: 0
+    mContactsSettings:
+      mAndroidPermissions:
+      - mElementName: uses-permission
+        mValue: android.permission.WRITE_CONTACTS
+      - mElementName: uses-permission
+        mValue: android.permission.READ_CONTACTS
+      mIOSInfoPlistKeys:
+      - mKey: NSContactsUsageDescription
+        mValue: '[Your usage description]'
+  mRuntimeAutoInitialization: 1
+  mIsAdModuleEnable: 0
+  mIsIAPModuleEnable: 1
+  mIsGameServiceModuleEnable: 0
+  mIsNotificationModuleEnable: 0
+  mIsSharingModuleEnable: 0
+  mActiveModuleIndex: 3
+  mIsSelectingModule: 0

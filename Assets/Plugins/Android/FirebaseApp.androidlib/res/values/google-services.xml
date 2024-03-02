@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources tools:keep="@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id" xmlns:tools="http://schemas.android.com/tools">
+  <string name="gcm_defaultSenderId" translatable="false">623716675366</string>
+  <string name="google_storage_bucket" translatable="false">devil-45f63.appspot.com</string>
+  <string name="project_id" translatable="false">devil-45f63</string>
+  <string name="google_api_key" translatable="false">AIzaSyCPfJ0pAoqkGpjTAN4869rHCncC4F36ipk</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCPfJ0pAoqkGpjTAN4869rHCncC4F36ipk</string>
+  <string name="google_app_id" translatable="false">1:623716675366:android:ea74abd746bff914251be7</string>
+  <string name="default_web_client_id" translatable="false">623716675366-cuniuqevfn66l0v0581ffdeb32dao2sa.apps.googleusercontent.com</string>
+</resources>

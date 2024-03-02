@@ -1,0 +1,321 @@
+id,coreid,description,description2,name,info,lv,maxlv,probability,value,c,type,subtype,rare,isstack,isset
+아이디,코어 아이디,이름 설명,설명,이름,정보,레벨,최대레벨,확률,수치,수치,,,,,
+1000,1000,마나의기운,기본 공격 시 정신력 % 회복,EquipSkill/1000,EquipSkillInfo/1000,1,10,20,0.05,0,basicattack,manadrain,1,FALSE,FALSE
+1001,1000,마나의기운,기본 공격 시 정신력 % 회복,EquipSkill/1000,EquipSkillInfo/1001,2,10,22,0.06,0,basicattack,manadrain,1,FALSE,FALSE
+1002,1000,마나의기운,기본 공격 시 정신력 % 회복,EquipSkill/1000,EquipSkillInfo/1002,3,10,24,0.07,0,basicattack,manadrain,2,FALSE,FALSE
+1003,1000,마나의기운,기본 공격 시 정신력 % 회복,EquipSkill/1000,EquipSkillInfo/1003,4,10,26,0.08,0,basicattack,manadrain,2,FALSE,FALSE
+1004,1000,마나의기운,기본 공격 시 정신력 % 회복,EquipSkill/1000,EquipSkillInfo/1004,5,10,28,0.09,0,basicattack,manadrain,2,FALSE,FALSE
+1005,1000,마나의기운,기본 공격 시 정신력 % 회복,EquipSkill/1000,EquipSkillInfo/1005,6,10,30,0.1,0,basicattack,manadrain,3,FALSE,FALSE
+1006,1000,마나의기운,기본 공격 시 정신력 % 회복,EquipSkill/1000,EquipSkillInfo/1006,7,10,32,0.11,0,basicattack,manadrain,3,FALSE,FALSE
+1007,1000,마나의기운,기본 공격 시 정신력 % 회복,EquipSkill/1000,EquipSkillInfo/1007,8,10,34,0.12,0,basicattack,manadrain,4,FALSE,FALSE
+1008,1000,마나의기운,기본 공격 시 정신력 % 회복,EquipSkill/1000,EquipSkillInfo/1008,9,10,36,0.13,0,basicattack,manadrain,4,FALSE,FALSE
+1009,1000,마나의기운,기본 공격 시 정신력 % 회복,EquipSkill/1000,EquipSkillInfo/1009,10,10,40,0.15,0,basicattack,manadrain,5,FALSE,FALSE
+1010,1010,강타,기본 공격 시 확률로 % 공격,EquipSkill/1010,EquipSkillInfo/1010,1,10,20,1.2,0,basicattack,smite,1,FALSE,FALSE
+1011,1010,강타,기본 공격 시 확률로 % 공격,EquipSkill/1010,EquipSkillInfo/1011,2,10,22,1.3,0,basicattack,smite,1,FALSE,FALSE
+1012,1010,강타,기본 공격 시 확률로 % 공격,EquipSkill/1010,EquipSkillInfo/1012,3,10,24,1.4,0,basicattack,smite,2,FALSE,FALSE
+1013,1010,강타,기본 공격 시 확률로 % 공격,EquipSkill/1010,EquipSkillInfo/1013,4,10,26,1.5,0,basicattack,smite,2,FALSE,FALSE
+1014,1010,강타,기본 공격 시 확률로 % 공격,EquipSkill/1010,EquipSkillInfo/1014,5,10,28,1.6,0,basicattack,smite,2,FALSE,FALSE
+1015,1010,강타,기본 공격 시 확률로 % 공격,EquipSkill/1010,EquipSkillInfo/1015,6,10,30,1.7,0,basicattack,smite,3,FALSE,FALSE
+1016,1010,강타,기본 공격 시 확률로 % 공격,EquipSkill/1010,EquipSkillInfo/1016,7,10,32,1.8,0,basicattack,smite,3,FALSE,FALSE
+1017,1010,강타,기본 공격 시 확률로 % 공격,EquipSkill/1010,EquipSkillInfo/1017,8,10,34,1.9,0,basicattack,smite,4,FALSE,FALSE
+1018,1010,강타,기본 공격 시 확률로 % 공격,EquipSkill/1010,EquipSkillInfo/1018,9,10,36,2,0,basicattack,smite,4,FALSE,FALSE
+1019,1010,강타,기본 공격 시 확률로 % 공격,EquipSkill/1010,EquipSkillInfo/1019,10,10,40,2.2,0,basicattack,smite,5,FALSE,FALSE
+1020,1020,천둥 번개,물리 스킬 사용 시 추가 피해,EquipSkill/1020,EquipSkillInfo/1020,1,10,15,2.5,0,physicskillattack,thundersmash,1,FALSE,FALSE
+1021,1020,천둥 번개,물리 스킬 사용 시 추가 피해,EquipSkill/1020,EquipSkillInfo/1021,2,10,17,3,0,physicskillattack,thundersmash,1,FALSE,FALSE
+1022,1020,천둥 번개,물리 스킬 사용 시 추가 피해,EquipSkill/1020,EquipSkillInfo/1022,3,10,19,3.5,0,physicskillattack,thundersmash,2,FALSE,FALSE
+1023,1020,천둥 번개,물리 스킬 사용 시 추가 피해,EquipSkill/1020,EquipSkillInfo/1023,4,10,21,4,0,physicskillattack,thundersmash,2,FALSE,FALSE
+1024,1020,천둥 번개,물리 스킬 사용 시 추가 피해,EquipSkill/1020,EquipSkillInfo/1024,5,10,23,4.5,0,physicskillattack,thundersmash,2,FALSE,FALSE
+1025,1020,천둥 번개,물리 스킬 사용 시 추가 피해,EquipSkill/1020,EquipSkillInfo/1025,6,10,25,5,0,physicskillattack,thundersmash,3,FALSE,FALSE
+1026,1020,천둥 번개,물리 스킬 사용 시 추가 피해,EquipSkill/1020,EquipSkillInfo/1026,7,10,27,5.5,0,physicskillattack,thundersmash,3,FALSE,FALSE
+1027,1020,천둥 번개,물리 스킬 사용 시 추가 피해,EquipSkill/1020,EquipSkillInfo/1027,8,10,29,6,0,physicskillattack,thundersmash,4,FALSE,FALSE
+1028,1020,천둥 번개,물리 스킬 사용 시 추가 피해,EquipSkill/1020,EquipSkillInfo/1028,9,10,31,6.5,0,physicskillattack,thundersmash,4,FALSE,FALSE
+1029,1020,천둥 번개,물리 스킬 사용 시 추가 피해,EquipSkill/1020,EquipSkillInfo/1029,10,10,35,7.5,0,physicskillattack,thundersmash,5,FALSE,FALSE
+1030,1030,힘증가,힘이 증가(고정),EquipSkill/1030,EquipSkillInfo/1030,1,10,0,10,0,passive,strup,1,TRUE,FALSE
+1031,1030,힘증가,힘이 증가(고정),EquipSkill/1030,EquipSkillInfo/1031,2,10,0,20,0,passive,strup,1,TRUE,FALSE
+1032,1030,힘증가,힘이 증가(고정),EquipSkill/1030,EquipSkillInfo/1032,3,10,0,30,0,passive,strup,2,TRUE,FALSE
+1033,1030,힘증가,힘이 증가(고정),EquipSkill/1030,EquipSkillInfo/1033,4,10,0,40,0,passive,strup,2,TRUE,FALSE
+1034,1030,힘증가,힘이 증가(고정),EquipSkill/1030,EquipSkillInfo/1034,5,10,0,50,0,passive,strup,2,TRUE,FALSE
+1035,1030,힘증가,힘이 증가(고정),EquipSkill/1030,EquipSkillInfo/1035,6,10,0,60,0,passive,strup,3,TRUE,FALSE
+1036,1030,힘증가,힘이 증가(고정),EquipSkill/1030,EquipSkillInfo/1036,7,10,0,70,0,passive,strup,3,TRUE,FALSE
+1037,1030,힘증가,힘이 증가(고정),EquipSkill/1030,EquipSkillInfo/1037,8,10,0,80,0,passive,strup,4,TRUE,FALSE
+1038,1030,힘증가,힘이 증가(고정),EquipSkill/1030,EquipSkillInfo/1038,9,10,0,90,0,passive,strup,4,TRUE,FALSE
+1039,1030,힘증가,힘이 증가(고정),EquipSkill/1030,EquipSkillInfo/1039,10,10,0,120,0,passive,strup,5,TRUE,FALSE
+1040,1040,힘증가(%),힘이 증가(%),EquipSkill/1040,EquipSkillInfo/1040,1,10,0,0.05,0,passive,strperup,1,TRUE,FALSE
+1041,1040,힘증가(%),힘이 증가(%),EquipSkill/1040,EquipSkillInfo/1041,2,10,0,0.08,0,passive,strperup,1,TRUE,FALSE
+1042,1040,힘증가(%),힘이 증가(%),EquipSkill/1040,EquipSkillInfo/1042,3,10,0,0.11,0,passive,strperup,2,TRUE,FALSE
+1043,1040,힘증가(%),힘이 증가(%),EquipSkill/1040,EquipSkillInfo/1043,4,10,0,0.14,0,passive,strperup,2,TRUE,FALSE
+1044,1040,힘증가(%),힘이 증가(%),EquipSkill/1040,EquipSkillInfo/1044,5,10,0,0.17,0,passive,strperup,2,TRUE,FALSE
+1045,1040,힘증가(%),힘이 증가(%),EquipSkill/1040,EquipSkillInfo/1045,6,10,0,0.2,0,passive,strperup,3,TRUE,FALSE
+1046,1040,힘증가(%),힘이 증가(%),EquipSkill/1040,EquipSkillInfo/1046,7,10,0,0.23,0,passive,strperup,3,TRUE,FALSE
+1047,1040,힘증가(%),힘이 증가(%),EquipSkill/1040,EquipSkillInfo/1047,8,10,0,0.26,0,passive,strperup,4,TRUE,FALSE
+1048,1040,힘증가(%),힘이 증가(%),EquipSkill/1040,EquipSkillInfo/1048,9,10,0,0.29,0,passive,strperup,4,TRUE,FALSE
+1049,1040,힘증가(%),힘이 증가(%),EquipSkill/1040,EquipSkillInfo/1049,10,10,0,0.4,0,passive,strperup,5,TRUE,FALSE
+1050,1050,민첩증가,민첩이 증가(고정),EquipSkill/1050,EquipSkillInfo/1050,1,10,0,10,0,passive,dexup,1,TRUE,FALSE
+1051,1050,민첩증가,민첩이 증가(고정),EquipSkill/1050,EquipSkillInfo/1051,2,10,0,20,0,passive,dexup,1,TRUE,FALSE
+1052,1050,민첩증가,민첩이 증가(고정),EquipSkill/1050,EquipSkillInfo/1052,3,10,0,30,0,passive,dexup,2,TRUE,FALSE
+1053,1050,민첩증가,민첩이 증가(고정),EquipSkill/1050,EquipSkillInfo/1053,4,10,0,40,0,passive,dexup,2,TRUE,FALSE
+1054,1050,민첩증가,민첩이 증가(고정),EquipSkill/1050,EquipSkillInfo/1054,5,10,0,50,0,passive,dexup,2,TRUE,FALSE
+1055,1050,민첩증가,민첩이 증가(고정),EquipSkill/1050,EquipSkillInfo/1055,6,10,0,60,0,passive,dexup,3,TRUE,FALSE
+1056,1050,민첩증가,민첩이 증가(고정),EquipSkill/1050,EquipSkillInfo/1056,7,10,0,70,0,passive,dexup,3,TRUE,FALSE
+1057,1050,민첩증가,민첩이 증가(고정),EquipSkill/1050,EquipSkillInfo/1057,8,10,0,80,0,passive,dexup,4,TRUE,FALSE
+1058,1050,민첩증가,민첩이 증가(고정),EquipSkill/1050,EquipSkillInfo/1058,9,10,0,90,0,passive,dexup,4,TRUE,FALSE
+1059,1050,민첩증가,민첩이 증가(고정),EquipSkill/1050,EquipSkillInfo/1059,10,10,0,120,0,passive,dexup,5,TRUE,FALSE
+1060,1060,민첩증가(%),민첩이 증가(%),EquipSkill/1060,EquipSkillInfo/1060,1,10,0,0.05,0,passive,dexperup,1,TRUE,FALSE
+1061,1060,민첩증가(%),민첩이 증가(%),EquipSkill/1060,EquipSkillInfo/1061,2,10,0,0.08,0,passive,dexperup,1,TRUE,FALSE
+1062,1060,민첩증가(%),민첩이 증가(%),EquipSkill/1060,EquipSkillInfo/1062,3,10,0,0.11,0,passive,dexperup,2,TRUE,FALSE
+1063,1060,민첩증가(%),민첩이 증가(%),EquipSkill/1060,EquipSkillInfo/1063,4,10,0,0.14,0,passive,dexperup,2,TRUE,FALSE
+1064,1060,민첩증가(%),민첩이 증가(%),EquipSkill/1060,EquipSkillInfo/1064,5,10,0,0.17,0,passive,dexperup,2,TRUE,FALSE
+1065,1060,민첩증가(%),민첩이 증가(%),EquipSkill/1060,EquipSkillInfo/1065,6,10,0,0.2,0,passive,dexperup,3,TRUE,FALSE
+1066,1060,민첩증가(%),민첩이 증가(%),EquipSkill/1060,EquipSkillInfo/1066,7,10,0,0.23,0,passive,dexperup,3,TRUE,FALSE
+1067,1060,민첩증가(%),민첩이 증가(%),EquipSkill/1060,EquipSkillInfo/1067,8,10,0,0.26,0,passive,dexperup,4,TRUE,FALSE
+1068,1060,민첩증가(%),민첩이 증가(%),EquipSkill/1060,EquipSkillInfo/1068,9,10,0,0.29,0,passive,dexperup,4,TRUE,FALSE
+1069,1060,민첩증가(%),민첩이 증가(%),EquipSkill/1060,EquipSkillInfo/1069,10,10,0,0.4,0,passive,dexperup,5,TRUE,FALSE
+1070,1070,지능증가,지능이 증가(고정),EquipSkill/1070,EquipSkillInfo/1070,1,10,0,10,0,passive,intup,1,TRUE,FALSE
+1071,1070,지능증가,지능이 증가(고정),EquipSkill/1070,EquipSkillInfo/1071,2,10,0,20,0,passive,intup,1,TRUE,FALSE
+1072,1070,지능증가,지능이 증가(고정),EquipSkill/1070,EquipSkillInfo/1072,3,10,0,30,0,passive,intup,2,TRUE,FALSE
+1073,1070,지능증가,지능이 증가(고정),EquipSkill/1070,EquipSkillInfo/1073,4,10,0,40,0,passive,intup,2,TRUE,FALSE
+1074,1070,지능증가,지능이 증가(고정),EquipSkill/1070,EquipSkillInfo/1074,5,10,0,50,0,passive,intup,2,TRUE,FALSE
+1075,1070,지능증가,지능이 증가(고정),EquipSkill/1070,EquipSkillInfo/1075,6,10,0,60,0,passive,intup,3,TRUE,FALSE
+1076,1070,지능증가,지능이 증가(고정),EquipSkill/1070,EquipSkillInfo/1076,7,10,0,70,0,passive,intup,3,TRUE,FALSE
+1077,1070,지능증가,지능이 증가(고정),EquipSkill/1070,EquipSkillInfo/1077,8,10,0,80,0,passive,intup,4,TRUE,FALSE
+1078,1070,지능증가,지능이 증가(고정),EquipSkill/1070,EquipSkillInfo/1078,9,10,0,90,0,passive,intup,4,TRUE,FALSE
+1079,1070,지능증가,지능이 증가(고정),EquipSkill/1070,EquipSkillInfo/1079,10,10,0,120,0,passive,intup,5,TRUE,FALSE
+1080,1080,지능증가(%),지능이 증가(%),EquipSkill/1080,EquipSkillInfo/1080,1,10,0,0.05,0,passive,intperup,1,TRUE,FALSE
+1081,1080,지능증가(%),지능이 증가(%),EquipSkill/1080,EquipSkillInfo/1081,2,10,0,0.08,0,passive,intperup,1,TRUE,FALSE
+1082,1080,지능증가(%),지능이 증가(%),EquipSkill/1080,EquipSkillInfo/1082,3,10,0,0.11,0,passive,intperup,2,TRUE,FALSE
+1083,1080,지능증가(%),지능이 증가(%),EquipSkill/1080,EquipSkillInfo/1083,4,10,0,0.14,0,passive,intperup,2,TRUE,FALSE
+1084,1080,지능증가(%),지능이 증가(%),EquipSkill/1080,EquipSkillInfo/1084,5,10,0,0.17,0,passive,intperup,2,TRUE,FALSE
+1085,1080,지능증가(%),지능이 증가(%),EquipSkill/1080,EquipSkillInfo/1085,6,10,0,0.2,0,passive,intperup,3,TRUE,FALSE
+1086,1080,지능증가(%),지능이 증가(%),EquipSkill/1080,EquipSkillInfo/1086,7,10,0,0.23,0,passive,intperup,3,TRUE,FALSE
+1087,1080,지능증가(%),지능이 증가(%),EquipSkill/1080,EquipSkillInfo/1087,8,10,0,0.26,0,passive,intperup,4,TRUE,FALSE
+1088,1080,지능증가(%),지능이 증가(%),EquipSkill/1080,EquipSkillInfo/1088,9,10,0,0.29,0,passive,intperup,4,TRUE,FALSE
+1089,1080,지능증가(%),지능이 증가(%),EquipSkill/1080,EquipSkillInfo/1089,10,10,0,0.4,0,passive,intperup,5,TRUE,FALSE
+1090,1090,지혜증가,지혜이 증가(고정),EquipSkill/1090,EquipSkillInfo/1090,1,10,0,10,0,passive,wisup,1,TRUE,FALSE
+1091,1090,지혜증가,지혜이 증가(고정),EquipSkill/1090,EquipSkillInfo/1091,2,10,0,20,0,passive,wisup,1,TRUE,FALSE
+1092,1090,지혜증가,지혜이 증가(고정),EquipSkill/1090,EquipSkillInfo/1092,3,10,0,30,0,passive,wisup,2,TRUE,FALSE
+1093,1090,지혜증가,지혜이 증가(고정),EquipSkill/1090,EquipSkillInfo/1093,4,10,0,40,0,passive,wisup,2,TRUE,FALSE
+1094,1090,지혜증가,지혜이 증가(고정),EquipSkill/1090,EquipSkillInfo/1094,5,10,0,50,0,passive,wisup,2,TRUE,FALSE
+1095,1090,지혜증가,지혜이 증가(고정),EquipSkill/1090,EquipSkillInfo/1095,6,10,0,60,0,passive,wisup,3,TRUE,FALSE
+1096,1090,지혜증가,지혜이 증가(고정),EquipSkill/1090,EquipSkillInfo/1096,7,10,0,70,0,passive,wisup,3,TRUE,FALSE
+1097,1090,지혜증가,지혜이 증가(고정),EquipSkill/1090,EquipSkillInfo/1097,8,10,0,80,0,passive,wisup,4,TRUE,FALSE
+1098,1090,지혜증가,지혜이 증가(고정),EquipSkill/1090,EquipSkillInfo/1098,9,10,0,90,0,passive,wisup,4,TRUE,FALSE
+1099,1090,지혜증가,지혜이 증가(고정),EquipSkill/1090,EquipSkillInfo/1099,10,10,0,120,0,passive,wisup,5,TRUE,FALSE
+1100,1100,지혜증가(%),지혜이 증가(%),EquipSkill/1100,EquipSkillInfo/1100,1,10,0,0.05,0,passive,wisperup,1,TRUE,FALSE
+1101,1100,지혜증가(%),지혜이 증가(%),EquipSkill/1100,EquipSkillInfo/1101,2,10,0,0.08,0,passive,wisperup,1,TRUE,FALSE
+1102,1100,지혜증가(%),지혜이 증가(%),EquipSkill/1100,EquipSkillInfo/1102,3,10,0,0.11,0,passive,wisperup,2,TRUE,FALSE
+1103,1100,지혜증가(%),지혜이 증가(%),EquipSkill/1100,EquipSkillInfo/1103,4,10,0,0.14,0,passive,wisperup,2,TRUE,FALSE
+1104,1100,지혜증가(%),지혜이 증가(%),EquipSkill/1100,EquipSkillInfo/1104,5,10,0,0.17,0,passive,wisperup,2,TRUE,FALSE
+1105,1100,지혜증가(%),지혜이 증가(%),EquipSkill/1100,EquipSkillInfo/1105,6,10,0,0.2,0,passive,wisperup,3,TRUE,FALSE
+1106,1100,지혜증가(%),지혜이 증가(%),EquipSkill/1100,EquipSkillInfo/1106,7,10,0,0.23,0,passive,wisperup,3,TRUE,FALSE
+1107,1100,지혜증가(%),지혜이 증가(%),EquipSkill/1100,EquipSkillInfo/1107,8,10,0,0.26,0,passive,wisperup,4,TRUE,FALSE
+1108,1100,지혜증가(%),지혜이 증가(%),EquipSkill/1100,EquipSkillInfo/1108,9,10,0,0.29,0,passive,wisperup,4,TRUE,FALSE
+1109,1100,지혜증가(%),지혜이 증가(%),EquipSkill/1100,EquipSkillInfo/1109,10,10,0,0.4,0,passive,wisperup,5,TRUE,FALSE
+1110,1110,물리 공격력 증가(%),물리 공격력 증가(%),EquipSkill/1110,EquipSkillInfo/1110,1,10,0,0.05,0,passive,physicperup,1,TRUE,FALSE
+1111,1110,물리 공격력 증가(%),물리 공격력 증가(%),EquipSkill/1110,EquipSkillInfo/1111,2,10,0,0.08,0,passive,physicperup,1,TRUE,FALSE
+1112,1110,물리 공격력 증가(%),물리 공격력 증가(%),EquipSkill/1110,EquipSkillInfo/1112,3,10,0,0.11,0,passive,physicperup,2,TRUE,FALSE
+1113,1110,물리 공격력 증가(%),물리 공격력 증가(%),EquipSkill/1110,EquipSkillInfo/1113,4,10,0,0.14,0,passive,physicperup,2,TRUE,FALSE
+1114,1110,물리 공격력 증가(%),물리 공격력 증가(%),EquipSkill/1110,EquipSkillInfo/1114,5,10,0,0.17,0,passive,physicperup,2,TRUE,FALSE
+1115,1110,물리 공격력 증가(%),물리 공격력 증가(%),EquipSkill/1110,EquipSkillInfo/1115,6,10,0,0.2,0,passive,physicperup,3,TRUE,FALSE
+1116,1110,물리 공격력 증가(%),물리 공격력 증가(%),EquipSkill/1110,EquipSkillInfo/1116,7,10,0,0.23,0,passive,physicperup,3,TRUE,FALSE
+1117,1110,물리 공격력 증가(%),물리 공격력 증가(%),EquipSkill/1110,EquipSkillInfo/1117,8,10,0,0.26,0,passive,physicperup,4,TRUE,FALSE
+1118,1110,물리 공격력 증가(%),물리 공격력 증가(%),EquipSkill/1110,EquipSkillInfo/1118,9,10,0,0.29,0,passive,physicperup,4,TRUE,FALSE
+1119,1110,물리 공격력 증가(%),물리 공격력 증가(%),EquipSkill/1110,EquipSkillInfo/1119,10,10,0,0.4,0,passive,physicperup,5,TRUE,FALSE
+1120,1120,마법 공격력 증가(%),마법 공격력 증가(%),EquipSkill/1120,EquipSkillInfo/1120,1,10,0,0.05,0,passive,magicperup,1,TRUE,FALSE
+1121,1120,마법 공격력 증가(%),마법 공격력 증가(%),EquipSkill/1120,EquipSkillInfo/1121,2,10,0,0.08,0,passive,magicperup,1,TRUE,FALSE
+1122,1120,마법 공격력 증가(%),마법 공격력 증가(%),EquipSkill/1120,EquipSkillInfo/1122,3,10,0,0.11,0,passive,magicperup,2,TRUE,FALSE
+1123,1120,마법 공격력 증가(%),마법 공격력 증가(%),EquipSkill/1120,EquipSkillInfo/1123,4,10,0,0.14,0,passive,magicperup,2,TRUE,FALSE
+1124,1120,마법 공격력 증가(%),마법 공격력 증가(%),EquipSkill/1120,EquipSkillInfo/1124,5,10,0,0.17,0,passive,magicperup,2,TRUE,FALSE
+1125,1120,마법 공격력 증가(%),마법 공격력 증가(%),EquipSkill/1120,EquipSkillInfo/1125,6,10,0,0.2,0,passive,magicperup,3,TRUE,FALSE
+1126,1120,마법 공격력 증가(%),마법 공격력 증가(%),EquipSkill/1120,EquipSkillInfo/1126,7,10,0,0.23,0,passive,magicperup,3,TRUE,FALSE
+1127,1120,마법 공격력 증가(%),마법 공격력 증가(%),EquipSkill/1120,EquipSkillInfo/1127,8,10,0,0.26,0,passive,magicperup,4,TRUE,FALSE
+1128,1120,마법 공격력 증가(%),마법 공격력 증가(%),EquipSkill/1120,EquipSkillInfo/1128,9,10,0,0.29,0,passive,magicperup,4,TRUE,FALSE
+1129,1120,마법 공격력 증가(%),마법 공격력 증가(%),EquipSkill/1120,EquipSkillInfo/1129,10,10,0,0.4,0,passive,magicperup,5,TRUE,FALSE
+1130,1130,치명타 확률 증가(%),치명타 확률 증가(%),EquipSkill/1130,EquipSkillInfo/1130,1,10,0,2,0,passive,critperup,1,TRUE,FALSE
+1131,1130,치명타 확률 증가(%),치명타 확률 증가(%),EquipSkill/1130,EquipSkillInfo/1131,2,10,0,3.5,0,passive,critperup,1,TRUE,FALSE
+1132,1130,치명타 확률 증가(%),치명타 확률 증가(%),EquipSkill/1130,EquipSkillInfo/1132,3,10,0,5,0,passive,critperup,2,TRUE,FALSE
+1133,1130,치명타 확률 증가(%),치명타 확률 증가(%),EquipSkill/1130,EquipSkillInfo/1133,4,10,0,6.5,0,passive,critperup,2,TRUE,FALSE
+1134,1130,치명타 확률 증가(%),치명타 확률 증가(%),EquipSkill/1130,EquipSkillInfo/1134,5,10,0,8,0,passive,critperup,2,TRUE,FALSE
+1135,1130,치명타 확률 증가(%),치명타 확률 증가(%),EquipSkill/1130,EquipSkillInfo/1135,6,10,0,9.5,0,passive,critperup,3,TRUE,FALSE
+1136,1130,치명타 확률 증가(%),치명타 확률 증가(%),EquipSkill/1130,EquipSkillInfo/1136,7,10,0,11,0,passive,critperup,3,TRUE,FALSE
+1137,1130,치명타 확률 증가(%),치명타 확률 증가(%),EquipSkill/1130,EquipSkillInfo/1137,8,10,0,12.5,0,passive,critperup,4,TRUE,FALSE
+1138,1130,치명타 확률 증가(%),치명타 확률 증가(%),EquipSkill/1130,EquipSkillInfo/1138,9,10,0,14,0,passive,critperup,4,TRUE,FALSE
+1139,1130,치명타 확률 증가(%),치명타 확률 증가(%),EquipSkill/1130,EquipSkillInfo/1139,10,10,0,17,0,passive,critperup,5,TRUE,FALSE
+1140,1140,치명타 피해 증가(%),치명타 피해 증가(%),EquipSkill/1140,EquipSkillInfo/1140,1,10,0,0.05,0,passive,critdmgperup,1,TRUE,FALSE
+1141,1140,치명타 피해 증가(%),치명타 피해 증가(%),EquipSkill/1140,EquipSkillInfo/1141,2,10,0,0.07,0,passive,critdmgperup,1,TRUE,FALSE
+1142,1140,치명타 피해 증가(%),치명타 피해 증가(%),EquipSkill/1140,EquipSkillInfo/1142,3,10,0,0.09,0,passive,critdmgperup,2,TRUE,FALSE
+1143,1140,치명타 피해 증가(%),치명타 피해 증가(%),EquipSkill/1140,EquipSkillInfo/1143,4,10,0,0.11,0,passive,critdmgperup,2,TRUE,FALSE
+1144,1140,치명타 피해 증가(%),치명타 피해 증가(%),EquipSkill/1140,EquipSkillInfo/1144,5,10,0,0.13,0,passive,critdmgperup,2,TRUE,FALSE
+1145,1140,치명타 피해 증가(%),치명타 피해 증가(%),EquipSkill/1140,EquipSkillInfo/1145,6,10,0,0.15,0,passive,critdmgperup,3,TRUE,FALSE
+1146,1140,치명타 피해 증가(%),치명타 피해 증가(%),EquipSkill/1140,EquipSkillInfo/1146,7,10,0,0.17,0,passive,critdmgperup,3,TRUE,FALSE
+1147,1140,치명타 피해 증가(%),치명타 피해 증가(%),EquipSkill/1140,EquipSkillInfo/1147,8,10,0,0.19,0,passive,critdmgperup,4,TRUE,FALSE
+1148,1140,치명타 피해 증가(%),치명타 피해 증가(%),EquipSkill/1140,EquipSkillInfo/1148,9,10,0,0.21,0,passive,critdmgperup,4,TRUE,FALSE
+1149,1140,치명타 피해 증가(%),치명타 피해 증가(%),EquipSkill/1140,EquipSkillInfo/1149,10,10,0,0.25,0,passive,critdmgperup,5,TRUE,FALSE
+1150,1150,익스 플로전,스킬 사용 시 익스플로전 발동,EquipSkill/1150,EquipSkillInfo/1150,1,10,25,2,0,magicskillattack,explosion,1,FALSE,FALSE
+1151,1150,익스 플로전,스킬 사용 시 익스플로전 발동,EquipSkill/1150,EquipSkillInfo/1151,2,10,30,2.5,0,magicskillattack,explosion,1,FALSE,FALSE
+1152,1150,익스 플로전,스킬 사용 시 익스플로전 발동,EquipSkill/1150,EquipSkillInfo/1152,3,10,35,3,0,magicskillattack,explosion,2,FALSE,FALSE
+1153,1150,익스 플로전,스킬 사용 시 익스플로전 발동,EquipSkill/1150,EquipSkillInfo/1153,4,10,40,3.5,0,magicskillattack,explosion,2,FALSE,FALSE
+1154,1150,익스 플로전,스킬 사용 시 익스플로전 발동,EquipSkill/1150,EquipSkillInfo/1154,5,10,45,4,0,magicskillattack,explosion,2,FALSE,FALSE
+1155,1150,익스 플로전,스킬 사용 시 익스플로전 발동,EquipSkill/1150,EquipSkillInfo/1155,6,10,50,4.5,0,magicskillattack,explosion,3,FALSE,FALSE
+1156,1150,익스 플로전,스킬 사용 시 익스플로전 발동,EquipSkill/1150,EquipSkillInfo/1156,7,10,60,5,0,magicskillattack,explosion,3,FALSE,FALSE
+1157,1150,익스 플로전,스킬 사용 시 익스플로전 발동,EquipSkill/1150,EquipSkillInfo/1157,8,10,70,5.5,0,magicskillattack,explosion,4,FALSE,FALSE
+1158,1150,익스 플로전,스킬 사용 시 익스플로전 발동,EquipSkill/1150,EquipSkillInfo/1158,9,10,80,6,0,magicskillattack,explosion,4,FALSE,FALSE
+1159,1150,익스 플로전,스킬 사용 시 익스플로전 발동,EquipSkill/1150,EquipSkillInfo/1159,10,10,90,6.5,0,magicskillattack,explosion,5,FALSE,FALSE
+1160,1160,보스 피해 증가(%),보스 피해 증가(%),EquipSkill/1160,EquipSkillInfo/1160,1,10,0,0.05,0,passive,bossatk,1,TRUE,FALSE
+1161,1160,보스 피해 증가(%),보스 피해 증가(%),EquipSkill/1160,EquipSkillInfo/1161,2,10,0,0.07,0,passive,bossatk,1,TRUE,FALSE
+1162,1160,보스 피해 증가(%),보스 피해 증가(%),EquipSkill/1160,EquipSkillInfo/1162,3,10,0,0.09,0,passive,bossatk,2,TRUE,FALSE
+1163,1160,보스 피해 증가(%),보스 피해 증가(%),EquipSkill/1160,EquipSkillInfo/1163,4,10,0,0.11,0,passive,bossatk,2,TRUE,FALSE
+1164,1160,보스 피해 증가(%),보스 피해 증가(%),EquipSkill/1160,EquipSkillInfo/1164,5,10,0,0.13,0,passive,bossatk,2,TRUE,FALSE
+1165,1160,보스 피해 증가(%),보스 피해 증가(%),EquipSkill/1160,EquipSkillInfo/1165,6,10,0,0.15,0,passive,bossatk,3,TRUE,FALSE
+1166,1160,보스 피해 증가(%),보스 피해 증가(%),EquipSkill/1160,EquipSkillInfo/1166,7,10,0,0.17,0,passive,bossatk,3,TRUE,FALSE
+1167,1160,보스 피해 증가(%),보스 피해 증가(%),EquipSkill/1160,EquipSkillInfo/1167,8,10,0,0.19,0,passive,bossatk,4,TRUE,FALSE
+1168,1160,보스 피해 증가(%),보스 피해 증가(%),EquipSkill/1160,EquipSkillInfo/1168,9,10,0,0.21,0,passive,bossatk,4,TRUE,FALSE
+1169,1160,보스 피해 증가(%),보스 피해 증가(%),EquipSkill/1160,EquipSkillInfo/1169,10,10,0,0.25,0,passive,bossatk,5,TRUE,FALSE
+1170,1170,레이즈의 분노,기본 공격 시 레이즈의 분노 발동,EquipSkill/1170,EquipSkillInfo/1170,10,10,30,15000,0,basicattack,razerage,5,FALSE,FALSE
+1171,1171,발록의 일격,기본 공격 시 발록의 분노,EquipSkill/1171,EquipSkillInfo/1171,10,10,35,65000,0,basicattack,razerage,5,FALSE,FALSE
+1172,1172,뾰족한 가시,상태 이상 피해 증가(%),EquipSkill/1172,EquipSkillInfo/1172,1,10,0,0.05,0,passive,dotperup,1,TRUE,FALSE
+1173,1172,뾰족한 가시,상태 이상 피해 증가(%),EquipSkill/1172,EquipSkillInfo/1173,2,10,0,0.08,0,passive,dotperup,1,TRUE,FALSE
+1174,1172,뾰족한 가시,상태 이상 피해 증가(%),EquipSkill/1172,EquipSkillInfo/1174,3,10,0,0.11,0,passive,dotperup,2,TRUE,FALSE
+1175,1172,뾰족한 가시,상태 이상 피해 증가(%),EquipSkill/1172,EquipSkillInfo/1175,4,10,0,0.14,0,passive,dotperup,2,TRUE,FALSE
+1176,1172,뾰족한 가시,상태 이상 피해 증가(%),EquipSkill/1172,EquipSkillInfo/1176,5,10,0,0.17,0,passive,dotperup,2,TRUE,FALSE
+1177,1172,뾰족한 가시,상태 이상 피해 증가(%),EquipSkill/1172,EquipSkillInfo/1177,6,10,0,0.2,0,passive,dotperup,3,TRUE,FALSE
+1178,1172,뾰족한 가시,상태 이상 피해 증가(%),EquipSkill/1172,EquipSkillInfo/1178,7,10,0,0.23,0,passive,dotperup,3,TRUE,FALSE
+1179,1172,뾰족한 가시,상태 이상 피해 증가(%),EquipSkill/1172,EquipSkillInfo/1179,8,10,0,0.26,0,passive,dotperup,4,TRUE,FALSE
+1180,1172,뾰족한 가시,상태 이상 피해 증가(%),EquipSkill/1172,EquipSkillInfo/1180,9,10,0,0.29,0,passive,dotperup,4,TRUE,FALSE
+1181,1172,뾰족한 가시,상태 이상 피해 증가(%),EquipSkill/1172,EquipSkillInfo/1181,10,10,0,0.4,0,passive,dotperup,5,TRUE,FALSE
+1182,1182,톱날,기본 공격 피해 증가(%),EquipSkill/1182,EquipSkillInfo/1182,1,10,0,0.05,0,passive,basicatkup,1,TRUE,FALSE
+1183,1182,톱날,기본 공격 피해 증가(%),EquipSkill/1182,EquipSkillInfo/1183,2,10,0,0.08,0,passive,basicatkup,1,TRUE,FALSE
+1184,1182,톱날,기본 공격 피해 증가(%),EquipSkill/1182,EquipSkillInfo/1184,3,10,0,0.11,0,passive,basicatkup,2,TRUE,FALSE
+1185,1182,톱날,기본 공격 피해 증가(%),EquipSkill/1182,EquipSkillInfo/1185,4,10,0,0.14,0,passive,basicatkup,2,TRUE,FALSE
+1186,1182,톱날,기본 공격 피해 증가(%),EquipSkill/1182,EquipSkillInfo/1186,5,10,0,0.17,0,passive,basicatkup,2,TRUE,FALSE
+1187,1182,톱날,기본 공격 피해 증가(%),EquipSkill/1182,EquipSkillInfo/1187,6,10,0,0.2,0,passive,basicatkup,3,TRUE,FALSE
+1188,1182,톱날,기본 공격 피해 증가(%),EquipSkill/1182,EquipSkillInfo/1188,7,10,0,0.23,0,passive,basicatkup,3,TRUE,FALSE
+1189,1182,톱날,기본 공격 피해 증가(%),EquipSkill/1182,EquipSkillInfo/1189,8,10,0,0.26,0,passive,basicatkup,4,TRUE,FALSE
+1190,1182,톱날,기본 공격 피해 증가(%),EquipSkill/1182,EquipSkillInfo/1190,9,10,0,0.29,0,passive,basicatkup,4,TRUE,FALSE
+1191,1182,톱날,기본 공격 피해 증가(%),EquipSkill/1182,EquipSkillInfo/1191,10,10,0,0.5,0,passive,basicatkup,5,TRUE,FALSE
+1192,1192,물약,물약 효율 상승(%),EquipSkill/1192,EquipSkillInfo/1192,1,10,0,0.05,0,passive,potionup,1,FALSE,FALSE
+1193,1192,물약,물약 효율 상승(%),EquipSkill/1192,EquipSkillInfo/1193,2,10,0,0.1,0,passive,potionup,1,FALSE,FALSE
+1194,1192,물약,물약 효율 상승(%),EquipSkill/1192,EquipSkillInfo/1194,3,10,0,0.15,0,passive,potionup,2,FALSE,FALSE
+1195,1192,물약,물약 효율 상승(%),EquipSkill/1192,EquipSkillInfo/1195,4,10,0,0.2,0,passive,potionup,2,FALSE,FALSE
+1196,1192,물약,물약 효율 상승(%),EquipSkill/1192,EquipSkillInfo/1196,5,10,0,0.25,0,passive,potionup,2,FALSE,FALSE
+1197,1192,물약,물약 효율 상승(%),EquipSkill/1192,EquipSkillInfo/1197,6,10,0,0.3,0,passive,potionup,3,FALSE,FALSE
+1198,1192,물약,물약 효율 상승(%),EquipSkill/1192,EquipSkillInfo/1198,7,10,0,0.35,0,passive,potionup,3,FALSE,FALSE
+1199,1192,물약,물약 효율 상승(%),EquipSkill/1192,EquipSkillInfo/1199,8,10,0,0.4,0,passive,potionup,4,FALSE,FALSE
+1200,1192,물약,물약 효율 상승(%),EquipSkill/1192,EquipSkillInfo/1200,9,10,0,0.45,0,passive,potionup,4,FALSE,FALSE
+1201,1192,물약,물약 효율 상승(%),EquipSkill/1192,EquipSkillInfo/1201,10,10,0,0.5,0,passive,potionup,5,FALSE,FALSE
+1202,1202,염화검(물리),물리 스킬 사용 시 모든 적에게 150% 만큼 피해,EquipSkill/1202,EquipSkillInfo/1202,10,10,0,4.5,0,physicskillattack,legensword,5,FALSE,FALSE
+1203,1203,멸화도(평타),기본 공격 시 추가 피해,EquipSkill/1203,EquipSkillInfo/1203,10,10,0,4,0,basicattack,legendagger,5,FALSE,FALSE
+1204,1204,블리자드(치명물리),치명타 시 적 하나에게 400% 만큼 피해,EquipSkill/1204,EquipSkillInfo/1204,10,10,0,4,0,critattack,legenboww,5,FALSE,FALSE
+1205,1205,대자연의 지팡이(마법),마나 소모량 증가 마법 추가 피해 50,EquipSkill/1205,EquipSkillInfo/1205,10,10,0,1,0.5,passive,legenstaff,5,FALSE,FALSE
+1206,1206,사신의 낫(상태이상),상태 이상에 걸린 대상에게 스킬 사용 시 ,EquipSkill/1206,EquipSkillInfo/1206,10,10,0,30,20,passive,legenscyth,5,FALSE,FALSE
+1207,1207,제왕의 반지,모든 능력치 증가 30%,EquipSkill/1207,EquipSkillInfo/1207,10,10,0,0.3,0,passive,allstatup,6,TRUE,FALSE
+1208,1208,절대 마력의 반지,물리 공격력 증가 / 마법 공격력 증가 50%,EquipSkill/1208,EquipSkillInfo/1208,10,10,0,0.5,0,passive,bothatkperup,6,TRUE,FALSE
+1209,1209,핏빛 칼날 반지,치명타 피해 40% 증가,EquipSkill/1209,EquipSkillInfo/1209,10,10,0,0.4,0,passive,critdmgperup,6,FALSE,FALSE
+1210,1210,투신의 목걸이,치명타 피해 40% 증가,EquipSkill/1210,EquipSkillInfo/1210,10,10,0,0.4,0,passive,critdmgperup,6,FALSE,FALSE
+1211,1211,봉인된 고대 드래곤의 목걸이,공격 스킬 사용 시 15% 확률로 초기화,EquipSkill/1211,EquipSkillInfo/1211,10,10,15,0,0,useattackskill,resetskillcooldown,6,FALSE,FALSE
+1212,1212,핏빛 칼날 목걸이,상태이상 피해 증가 +100%,EquipSkill/1212,EquipSkillInfo/1212,10,10,0,1,0,passive,dotperup,6,TRUE,FALSE
+1213,1213,마나번,"마나 소모량 +50% , 마법 공격력 5% 증가",EquipSkill/1213,EquipSkillInfo/1213,1,10,0,0.05,0.5,passive,manaburnmatkup,2,TRUE,FALSE
+1214,1213,마나번,"마나 소모량 +55% , 마법 공격력 12% 증가",EquipSkill/1213,EquipSkillInfo/1214,2,10,0,0.12,0.55,passive,manaburnmatkup,2,TRUE,FALSE
+1215,1213,마나번,"마나 소모량 +60% , 마법 공격력 19% 증가",EquipSkill/1213,EquipSkillInfo/1215,3,10,0,0.19,0.6,passive,manaburnmatkup,2,TRUE,FALSE
+1216,1213,마나번,"마나 소모량 +65% , 마법 공격력 26% 증가",EquipSkill/1213,EquipSkillInfo/1216,4,10,0,0.26,0.65,passive,manaburnmatkup,3,TRUE,FALSE
+1217,1213,마나번,"마나 소모량 +70% , 마법 공격력 33% 증가",EquipSkill/1213,EquipSkillInfo/1217,5,10,0,0.33,0.7,passive,manaburnmatkup,3,TRUE,FALSE
+1218,1213,마나번,"마나 소모량 +75% , 마법 공격력 40% 증가",EquipSkill/1213,EquipSkillInfo/1218,6,10,0,0.4,0.75,passive,manaburnmatkup,4,TRUE,FALSE
+1219,1213,마나번,"마나 소모량 +80% , 마법 공격력 47% 증가",EquipSkill/1213,EquipSkillInfo/1219,7,10,0,0.47,0.8,passive,manaburnmatkup,4,TRUE,FALSE
+1220,1213,마나번,"마나 소모량 +85% , 마법 공격력 54% 증가",EquipSkill/1213,EquipSkillInfo/1220,8,10,0,0.54,0.85,passive,manaburnmatkup,5,TRUE,FALSE
+1221,1213,마나번,"마나 소모량 +90% , 마법 공격력 61% 증가",EquipSkill/1213,EquipSkillInfo/1221,9,10,0,0.61,0.9,passive,manaburnmatkup,5,TRUE,FALSE
+1222,1213,마나번,"마나 소모량 +100% , 마법 공격력 70% 증가",EquipSkill/1213,EquipSkillInfo/1222,10,10,0,0.7,1,passive,manaburnmatkup,6,TRUE,FALSE
+1223,1223,부패,상태 이상 최대 중첩 1 증가,EquipSkill/1223,EquipSkillInfo/1223,1,10,0,1,0,passive,maxdotstackup,1,TRUE,FALSE
+1224,1223,부패,상태 이상 최대 중첩 2 증가,EquipSkill/1223,EquipSkillInfo/1224,2,10,0,2,0,passive,maxdotstackup,1,TRUE,FALSE
+1225,1223,부패,상태 이상 최대 중첩 3 증가,EquipSkill/1223,EquipSkillInfo/1225,3,10,0,3,0,passive,maxdotstackup,2,TRUE,FALSE
+1226,1223,부패,상태 이상 최대 중첩 4 증가,EquipSkill/1223,EquipSkillInfo/1226,4,10,0,4,0,passive,maxdotstackup,2,TRUE,FALSE
+1227,1223,부패,상태 이상 최대 중첩 5 증가,EquipSkill/1223,EquipSkillInfo/1227,5,10,0,5,0,passive,maxdotstackup,2,TRUE,FALSE
+1228,1223,부패,상태 이상 최대 중첩 6 증가,EquipSkill/1223,EquipSkillInfo/1228,6,10,0,6,0,passive,maxdotstackup,3,TRUE,FALSE
+1229,1223,부패,상태 이상 최대 중첩 8 증가,EquipSkill/1223,EquipSkillInfo/1229,7,10,0,8,0,passive,maxdotstackup,3,TRUE,FALSE
+1230,1223,부패,상태 이상 최대 중첩 10 증가,EquipSkill/1223,EquipSkillInfo/1230,8,10,0,10,0,passive,maxdotstackup,4,TRUE,FALSE
+1231,1223,부패,상태 이상 최대 중첩 12 증가,EquipSkill/1223,EquipSkillInfo/1231,9,10,0,12,0,passive,maxdotstackup,4,TRUE,FALSE
+1232,1223,부패,상태 이상 최대 중첩 15 증가,EquipSkill/1223,EquipSkillInfo/1232,10,10,0,15,0,passive,maxdotstackup,5,TRUE,FALSE
+1233,1233,광적인 분노,"최대 생명력 -1% , 물리 공격력 5% 증가",EquipSkill/1233,EquipSkillInfo/1233,1,10,0,0.05,0.01,passive,rage,2,TRUE,FALSE
+1234,1233,광적인 분노,"최대 생명력 -2% , 물리 공격력 12% 증가",EquipSkill/1233,EquipSkillInfo/1234,2,10,0,0.12,0.02,passive,rage,2,TRUE,FALSE
+1235,1233,광적인 분노,"최대 생명력 -3% , 물리 공격력 19% 증가",EquipSkill/1233,EquipSkillInfo/1235,3,10,0,0.19,0.03,passive,rage,2,TRUE,FALSE
+1236,1233,광적인 분노,"최대 생명력 -4% , 물리 공격력 26% 증가",EquipSkill/1233,EquipSkillInfo/1236,4,10,0,0.26,0.04,passive,rage,3,TRUE,FALSE
+1237,1233,광적인 분노,"최대 생명력 -5% , 물리 공격력 33% 증가",EquipSkill/1233,EquipSkillInfo/1237,5,10,0,0.33,0.05,passive,rage,3,TRUE,FALSE
+1238,1233,광적인 분노,"최대 생명력 -6% , 물리 공격력 40% 증가",EquipSkill/1233,EquipSkillInfo/1238,6,10,0,0.4,0.06,passive,rage,4,TRUE,FALSE
+1239,1233,광적인 분노,"최대 생명력 -7% , 물리 공격력 47% 증가",EquipSkill/1233,EquipSkillInfo/1239,7,10,0,0.47,0.07,passive,rage,4,TRUE,FALSE
+1240,1233,광적인 분노,"최대 생명력 -8% , 물리 공격력 54% 증가",EquipSkill/1233,EquipSkillInfo/1240,8,10,0,0.54,0.08,passive,rage,5,TRUE,FALSE
+1241,1233,광적인 분노,"최대 생명력 -9% , 물리 공격력 61% 증가",EquipSkill/1233,EquipSkillInfo/1241,9,10,0,0.61,0.09,passive,rage,5,TRUE,FALSE
+1242,1233,광적인 분노,"최대 생명력 -10% , 물리 공격력 70% 증가",EquipSkill/1233,EquipSkillInfo/1242,10,10,0,0.7,0.1,passive,rage,6,TRUE,FALSE
+1243,1243,청파검(물리),물리 스킬 사용 시 모든 적에게 물리 공격력의 850% 만큼 피해를 입힌다.,EquipSkill/1243,EquipSkillInfo/1243,10,10,0,10,0,physicskillattack,legensword,6,FALSE,FALSE
+1244,1244,청화도(평타),기본 공격 시 물리 공격력의 750% 만큼 피해를 입힌다.,EquipSkill/1244,EquipSkillInfo/1244,10,10,0,9,0,basicattack,legendagger,6,FALSE,FALSE
+1245,1245,헬파이어(치명물리),"치명타 시 적에게 물리 공격력의 1100% 만큼 피해를 입힌다.
+공격 기회 당 1회만 피해를 준다.",EquipSkill/1245,EquipSkillInfo/1245,10,10,0,14.5,0,critattack,legenboww,6,FALSE,FALSE
+1246,1246,이그니시아(마법),정신력 소모량이 2배 증가하는 대신 발동된 공격 마법 피해가 100% 증가한다.,EquipSkill/1246,EquipSkillInfo/1246,10,10,0,1,1.5,passive,legenstaff,6,FALSE,FALSE
+1247,1247,립 헬(상태,"상태 이상 중첩 +50
+상태 이상 최대 중첩 +50",EquipSkill/1247,EquipSkillInfo/1247,10,10,0,65,65,passive,legenscyth,6,FALSE,FALSE
+1248,1248,슬레이어(물리),물리 공격력 500 증가,EquipSkill/1248,EquipSkillInfo/1248,10,10,0,3,0,passive,physicperup,6,TRUE,FALSE
+1249,1249,러브(마법) 사냥용,"기본 공격 시 마법 공격력의 700% 만큼 피해를 입힌다.
+
+<color=magenta><size=20>[우리는 오로지 사랑을 함으로써 사랑을 배울 수 있다 -아이리스 머독]</size></color>",EquipSkill/1249,EquipSkillInfo/1249,10,10,0,15,0,basicattack,legenmace,6,FALSE,FALSE
+1250,1250,라그나로크(스킬 사용 시 플레임),마법 스킬 사용 시 모든 적에게 마법 공격력의 750% 만큼 피해를 입히는 플레임 버스트를 사용한다.,EquipSkill/1250,EquipSkillInfo/1250,10,10,0,10,0,magicskillattack,legenscyth,6,FALSE,FALSE
+1251,1251,거인의 기백,최대 생명력 40만 당 치명타 피해 1% 증가,EquipSkill/1251,EquipSkillInfo/1251,1,10,0,4000,0.01,passive,warriorrune,2,FALSE,FALSE
+1252,1251,거인의 기백,최대 생명력 37만 당 치명타 피해 1% 증가,EquipSkill/1251,EquipSkillInfo/1252,2,10,0,3800,0.01,passive,warriorrune,2,FALSE,FALSE
+1253,1251,거인의 기백,최대 생명력 34만 당 치명타 피해 1% 증가,EquipSkill/1251,EquipSkillInfo/1253,3,10,0,3600,0.01,passive,warriorrune,2,FALSE,FALSE
+1254,1251,거인의 기백,최대 생명력 31만 당 치명타 피해 1% 증가,EquipSkill/1251,EquipSkillInfo/1254,4,10,0,3400,0.01,passive,warriorrune,3,FALSE,FALSE
+1255,1251,거인의 기백,최대 생명력 28만 당 치명타 피해 1% 증가,EquipSkill/1251,EquipSkillInfo/1255,5,10,0,3200,0.01,passive,warriorrune,3,FALSE,FALSE
+1256,1251,거인의 기백,최대 생명력 25만 당 치명타 피해 1% 증가,EquipSkill/1251,EquipSkillInfo/1256,6,10,0,3000,0.01,passive,warriorrune,4,FALSE,FALSE
+1257,1251,거인의 기백,최대 생명력 22만 당 치명타 피해 1% 증가,EquipSkill/1251,EquipSkillInfo/1257,7,10,0,2800,0.01,passive,warriorrune,4,FALSE,FALSE
+1258,1251,거인의 기백,최대 생명력 19만 당 치명타 피해 1% 증가,EquipSkill/1251,EquipSkillInfo/1258,8,10,0,2500,0.01,passive,warriorrune,5,FALSE,FALSE
+1259,1251,거인의 기백,최대 생명력 16만 당 치명타 피해 1% 증가,EquipSkill/1251,EquipSkillInfo/1259,9,10,0,2200,0.01,passive,warriorrune,5,FALSE,FALSE
+1260,1251,거인의 기백,최대 생명력 10만 당 치명타 피해 1% 증가,EquipSkill/1251,EquipSkillInfo/1260,10,10,0,1800,0.01,passive,warriorrune,6,FALSE,FALSE
+1261,1261,초월자의 정신,최대 생명력 40만 당 치명타 피해 1% 증가,EquipSkill/1261,EquipSkillInfo/1261,1,10,0,4000,0.01,passive,magerune,2,FALSE,FALSE
+1262,1261,초월자의 정신,최대 생명력 37만 당 치명타 피해 1% 증가,EquipSkill/1261,EquipSkillInfo/1262,2,10,0,3800,0.01,passive,magerune,2,FALSE,FALSE
+1263,1261,초월자의 정신,최대 생명력 34만 당 치명타 피해 1% 증가,EquipSkill/1261,EquipSkillInfo/1263,3,10,0,3600,0.01,passive,magerune,2,FALSE,FALSE
+1264,1261,초월자의 정신,최대 생명력 31만 당 치명타 피해 1% 증가,EquipSkill/1261,EquipSkillInfo/1264,4,10,0,3400,0.01,passive,magerune,3,FALSE,FALSE
+1265,1261,초월자의 정신,최대 생명력 28만 당 치명타 피해 1% 증가,EquipSkill/1261,EquipSkillInfo/1265,5,10,0,3200,0.01,passive,magerune,3,FALSE,FALSE
+1266,1261,초월자의 정신,최대 생명력 25만 당 치명타 피해 1% 증가,EquipSkill/1261,EquipSkillInfo/1266,6,10,0,3000,0.01,passive,magerune,4,FALSE,FALSE
+1267,1261,초월자의 정신,최대 생명력 22만 당 치명타 피해 1% 증가,EquipSkill/1261,EquipSkillInfo/1267,7,10,0,2800,0.01,passive,magerune,4,FALSE,FALSE
+1268,1261,초월자의 정신,최대 생명력 19만 당 치명타 피해 1% 증가,EquipSkill/1261,EquipSkillInfo/1268,8,10,0,2500,0.01,passive,magerune,5,FALSE,FALSE
+1269,1261,초월자의 정신,최대 생명력 16만 당 치명타 피해 1% 증가,EquipSkill/1261,EquipSkillInfo/1269,9,10,0,2200,0.01,passive,magerune,5,FALSE,FALSE
+1270,1261,초월자의 정신,최대 생명력 10만 당 치명타 피해 1% 증가,EquipSkill/1261,EquipSkillInfo/1270,10,10,0,1800,0.01,passive,magerune,6,FALSE,FALSE
+1271,1271,분쇄자,공격 횟수 1당 기본 공격 피해가 30% 증가,EquipSkill/1271,EquipSkillInfo/1271,1,10,0,0,0.3,passive,destroyer,2,FALSE,FALSE
+1272,1271,분쇄자,공격 횟수 1당 기본 공격 피해가 35% 증가,EquipSkill/1271,EquipSkillInfo/1272,2,10,0,0,0.35,passive,destroyer,2,FALSE,FALSE
+1273,1271,분쇄자,공격 횟수 1당 기본 공격 피해가 40% 증가,EquipSkill/1271,EquipSkillInfo/1273,3,10,0,0,0.4,passive,destroyer,2,FALSE,FALSE
+1274,1271,분쇄자,공격 횟수 1당 기본 공격 피해가 45% 증가,EquipSkill/1271,EquipSkillInfo/1274,4,10,0,0,0.45,passive,destroyer,3,FALSE,FALSE
+1275,1271,분쇄자,공격 횟수 1당 기본 공격 피해가 50% 증가,EquipSkill/1271,EquipSkillInfo/1275,5,10,0,0,0.5,passive,destroyer,3,FALSE,FALSE
+1276,1271,분쇄자,공격 횟수 1당 기본 공격 피해가 60% 증가,EquipSkill/1271,EquipSkillInfo/1276,6,10,0,0,0.6,passive,destroyer,4,FALSE,FALSE
+1277,1271,분쇄자,공격 횟수 1당 기본 공격 피해가 70% 증가,EquipSkill/1271,EquipSkillInfo/1277,7,10,0,0,0.7,passive,destroyer,4,FALSE,FALSE
+1278,1271,분쇄자,공격 횟수 1당 기본 공격 피해가 80% 증가,EquipSkill/1271,EquipSkillInfo/1278,8,10,0,0,0.8,passive,destroyer,5,FALSE,FALSE
+1279,1271,분쇄자,공격 횟수 1당 기본 공격 피해가 90% 증가,EquipSkill/1271,EquipSkillInfo/1279,9,10,0,0,0.9,passive,destroyer,5,FALSE,FALSE
+1280,1271,분쇄자,공격 횟수 1당 기본 공격 피해가 120% 증가,EquipSkill/1271,EquipSkillInfo/1280,10,10,0,0,1.2,passive,destroyer,6,FALSE,FALSE
+1281,1281,상처,상태 이상 최대 중첩 10당 상태 이상 피해량 5% 증가,EquipSkill/1281,EquipSkillInfo/1281,1,10,0,10,0.05,passive,scar,2,FALSE,FALSE
+1282,1281,상처,상태 이상 최대 중첩 9당 상태 이상 피해량 5% 증가,EquipSkill/1281,EquipSkillInfo/1282,2,10,0,9,0.05,passive,scar,2,FALSE,FALSE
+1283,1281,상처,상태 이상 최대 중첩 8당 상태 이상 피해량 5% 증가,EquipSkill/1281,EquipSkillInfo/1283,3,10,0,8,0.05,passive,scar,2,FALSE,FALSE
+1284,1281,상처,상태 이상 최대 중첩 7당 상태 이상 피해량 5% 증가,EquipSkill/1281,EquipSkillInfo/1284,4,10,0,7,0.05,passive,scar,3,FALSE,FALSE
+1285,1281,상처,상태 이상 최대 중첩 6당 상태 이상 피해량 5% 증가,EquipSkill/1281,EquipSkillInfo/1285,5,10,0,6,0.05,passive,scar,3,FALSE,FALSE
+1286,1281,상처,상태 이상 최대 중첩 5당 상태 이상 피해량 5% 증가,EquipSkill/1281,EquipSkillInfo/1286,6,10,0,5,0.05,passive,scar,4,FALSE,FALSE
+1287,1281,상처,상태 이상 최대 중첩 4당 상태 이상 피해량 5% 증가,EquipSkill/1281,EquipSkillInfo/1287,7,10,0,4,0.05,passive,scar,4,FALSE,FALSE
+1288,1281,상처,상태 이상 최대 중첩 3당 상태 이상 피해량 5% 증가,EquipSkill/1281,EquipSkillInfo/1288,8,10,0,3,0.05,passive,scar,5,FALSE,FALSE
+1289,1281,상처,상태 이상 최대 중첩 2당 상태 이상 피해량 5% 증가,EquipSkill/1281,EquipSkillInfo/1289,9,10,0,2,0.05,passive,scar,5,FALSE,FALSE
+1290,1281,상처,상태 이상 최대 중첩 1당 상태 이상 피해량 5% 증가,EquipSkill/1281,EquipSkillInfo/1290,10,10,0,1,0.05,passive,scar,6,FALSE,FALSE
+1291,1291,보스룬,보스 피해 증가 30% 증가,EquipSkill/1291,EquipSkillInfo/1291,5,10,0,0.3,0,passive,bossatk,4,FALSE,FALSE
+1292,1292,보스룬1,보스 피해 증가 40% 증가,EquipSkill/1292,EquipSkillInfo/1292,6,10,0,0.4,0,passive,bossatk,4,FALSE,FALSE
+1293,1293,보스룬2,보스 피해 증가 50% 증가,EquipSkill/1293,EquipSkillInfo/1293,7,10,0,0.5,0,passive,bossatk,5,FALSE,FALSE
+1294,1294,보스룬3,보스 피해 증가 70% 증가,EquipSkill/1294,EquipSkillInfo/1294,8,10,0,0.7,0,passive,bossatk,5,FALSE,FALSE
+1295,1295,보스룬4,보스 피해 증가 90% 증가,EquipSkill/1295,EquipSkillInfo/1295,9,10,0,0.9,0,passive,bossatk,6,FALSE,FALSE
+1296,1296,보스룬5,보스 피해 증가 120% 증가,EquipSkill/1296,EquipSkillInfo/1296,10,10,0,1.2,0,passive,bossatk,6,FALSE,FALSE
+1297,1297,일반룬,일반 피해 증가 30% 증가,EquipSkill/1297,EquipSkillInfo/1297,5,10,0,0.3,0,passive,basicmonster,4,FALSE,FALSE
+1298,1298,일반룬1,일반 피해 증가 40% 증가,EquipSkill/1298,EquipSkillInfo/1298,6,10,0,0.4,0,passive,basicmonster,4,FALSE,FALSE
+1299,1299,일반룬2,일반 피해 증가 50% 증가,EquipSkill/1299,EquipSkillInfo/1299,7,10,0,0.5,0,passive,basicmonster,5,FALSE,FALSE
+1300,1300,일반룬3,일반 피해 증가 70% 증가,EquipSkill/1300,EquipSkillInfo/1300,8,10,0,0.7,0,passive,basicmonster,5,FALSE,FALSE
+1301,1301,일반룬4,일반 피해 증가 90% 증가,EquipSkill/1301,EquipSkillInfo/1301,9,10,0,0.9,0,passive,basicmonster,6,FALSE,FALSE
+1302,1302,일반룬5,일반 피해 증가 120% 증가,EquipSkill/1302,EquipSkillInfo/1302,10,10,0,1.2,0,passive,basicmonster,6,FALSE,FALSE
+1303,1303,경험치룬,"추가 경험치 20% 증가
+골드 획득량 20% 증가",EquipSkill/1303,EquipSkillInfo/1303,5,10,0,0.2,0.1,passive,expgold,4,FALSE,FALSE
+1304,1304,경험치룬1,"추가 경험치 30% 증가
+골드 획득량 30% 증가",EquipSkill/1304,EquipSkillInfo/1304,6,10,0,0.3,0.2,passive,expgold,4,FALSE,FALSE
+1305,1305,경험치룬2,"추가 경험치 40% 증가
+골드 획득량 40% 증가",EquipSkill/1305,EquipSkillInfo/1305,7,10,0,0.4,0.3,passive,expgold,5,FALSE,FALSE
+1306,1306,경험치룬3,"추가 경험치 50% 증가
+골드 획득량 50% 증가",EquipSkill/1306,EquipSkillInfo/1306,8,10,0,0.5,0.4,passive,expgold,5,FALSE,FALSE
+1307,1307,경험치룬4,"추가 경험치 60% 증가
+골드 획득량 60% 증가",EquipSkill/1307,EquipSkillInfo/1307,9,10,0,0.6,0.5,passive,expgold,6,FALSE,FALSE
+1308,1308,경험치룬5,"추가 경험치 80% 증가
+골드 획득량 80% 증가",EquipSkill/1308,EquipSkillInfo/1308,10,10,0,0.8,0.6,passive,expgold,6,FALSE,FALSE

@@ -1,0 +1,329 @@
+id,coreid,name,description,type,subtype,level,nextlevel,count,item,itemhowmany,paneltype,islast
+A1000,A1000,achievement/1000,몬스터처치,killmonster,daily,0,0,1000,999,200,daily,0
+A1001,A1001,achievement/1001,던전 격파,dungeonclear,daily,0,0,5,999,300,daily,0
+A1002,A1002,achievement/1002,아이템 제작,crafting,daily,0,0,2,999,200,daily,0
+A1003,A1003,achievement/1003,보스 처치,bosskill,daily,0,0,3,999,200,daily,0
+A1004,A1004,achievement/1004,사냥터 클리어,StageClear,daily,0,0,3,999,200,daily,0
+A2000,A2000,achievement/2000,레이드 격파,raidclear,daily,0,0,1,999,300,daily,0
+A2001,A2001,achievement/2001,성물 격파,altarwar,daily,0,0,1,999,300,daily,0
+A1005,A1005,achievement/1000,몬스터처치,killmonster,forever,0,A1006,20,999,200,forever,0
+A1006,A1005,achievement/1000,몬스터처치,killmonster,forever,1,A1007,100,999,200,forever,0
+A1007,A1005,achievement/1000,몬스터처치,killmonster,forever,2,A1008,300,999,200,forever,0
+A1008,A1005,achievement/1000,몬스터처치,killmonster,forever,3,A1009,700,999,400,forever,0
+A1009,A1005,achievement/1000,몬스터처치,killmonster,forever,4,A1010,1200,999,600,forever,0
+A1010,A1005,achievement/1000,몬스터처치,killmonster,forever,5,A1011,2000,999,800,forever,0
+A1011,A1005,achievement/1000,몬스터처치,killmonster,forever,6,A1012,3000,999,1000,forever,0
+A1012,A1005,achievement/1000,몬스터처치,killmonster,forever,7,A1013,5000,999,1200,forever,0
+A1013,A1005,achievement/1000,몬스터처치,killmonster,forever,8,A1014,7000,999,1400,forever,0
+A1014,A1005,achievement/1000,몬스터처치,killmonster,forever,9,A1015,10000,999,1600,forever,0
+A1015,A1005,achievement/1000,몬스터처치,killmonster,forever,10,A1016,13000,999,1800,forever,0
+A1016,A1005,achievement/1000,몬스터처치,killmonster,forever,11,A1017,16000,999,2000,forever,0
+A1017,A1005,achievement/1000,몬스터처치,killmonster,forever,12,A1018,19000,999,2200,forever,0
+A1018,A1005,achievement/1000,몬스터처치,killmonster,forever,13,A1019,22000,999,2400,forever,0
+A1019,A1005,achievement/1000,몬스터처치,killmonster,forever,14,A1020,25000,999,2600,forever,0
+A1020,A1005,achievement/1000,몬스터처치,killmonster,forever,15,A1021,28000,999,2800,forever,0
+A1021,A1005,achievement/1000,몬스터처치,killmonster,forever,16,A1022,31000,999,3000,forever,0
+A1022,A1005,achievement/1000,몬스터처치,killmonster,forever,17,A1023,34000,999,3200,forever,0
+A1023,A1005,achievement/1000,몬스터처치,killmonster,forever,18,A1024,37000,999,3400,forever,0
+A1024,A1005,achievement/1000,몬스터처치,killmonster,forever,19,A1025,40000,999,3600,forever,0
+A1025,A1005,achievement/1000,몬스터처치,killmonster,forever,20,A1026,43000,999,3800,forever,0
+A1026,A1005,achievement/1000,몬스터처치,killmonster,forever,21,A1027,46000,999,4000,forever,0
+A1027,A1005,achievement/1000,몬스터처치,killmonster,forever,22,A1028,49000,999,4200,forever,0
+A1028,A1005,achievement/1000,몬스터처치,killmonster,forever,23,A1029,52000,999,4400,forever,0
+A1029,A1005,achievement/1000,몬스터처치,killmonster,forever,24,A1030,55000,999,4600,forever,0
+A1030,A1005,achievement/1000,몬스터처치,killmonster,forever,25,A1031,58000,999,4800,forever,0
+A1031,A1005,achievement/1000,몬스터처치,killmonster,forever,26,A1032,61000,999,5000,forever,0
+A1032,A1005,achievement/1000,몬스터처치,killmonster,forever,27,A1033,64000,999,5200,forever,0
+A1033,A1005,achievement/1000,몬스터처치,killmonster,forever,28,A1034,67000,999,5400,forever,0
+A1034,A1005,achievement/1000,몬스터처치,killmonster,forever,29,A1144,70000,999,5600,forever,0
+A1035,A1035,achievement/1035,승급2,adlvup,forever,0,A1036,2,999,200,forever,0
+A1036,A1035,achievement/1036,승급3,adlvup,forever,1,A1037,3,999,200,forever,0
+A1037,A1035,achievement/1037,승급4,adlvup,forever,2,A1038,4,999,200,forever,0
+A1038,A1035,achievement/1038,승급5,adlvup,forever,3,A1039,5,999,400,forever,0
+A1039,A1035,achievement/1039,승급6,adlvup,forever,4,A1040,6,999,600,forever,0
+A1040,A1035,achievement/1040,승급7,adlvup,forever,5,A1041,7,999,800,forever,0
+A1041,A1035,achievement/1041,승급8,adlvup,forever,6,A1042,8,999,1000,forever,0
+A1042,A1035,achievement/1042,승급9,adlvup,forever,7,A1043,9,999,1200,forever,0
+A1043,A1035,achievement/1043,승급10,adlvup,forever,8,A1135,10,999,1400,forever,0
+A1134,A1035,achievement/1044,승급11,adlvup,forever,7,A1135,11,999,1600,forever,0
+A1135,A1035,achievement/1045,승급12,adlvup,forever,8,A1136,12,999,1800,forever,0
+A1136,A1035,achievement/1046,승급13,adlvup,forever,9,A1137,13,999,2000,forever,0
+A1137,A1035,achievement/1047,승급14,adlvup,forever,10,A1138,14,999,2200,forever,0
+A1138,A1035,achievement/1048,승급15,adlvup,forever,11,A1139,15,999,2400,forever,1
+A1139,A1035,achievement/1049,승급16,adlvup,forever,12,A1140,16,999,2600,forever,0
+A1140,A1035,achievement/1050,승급17,adlvup,forever,13,A1141,17,999,2800,forever,0
+A1141,A1035,achievement/1051,승급18,adlvup,forever,14,A1142,18,999,3000,forever,0
+A1142,A1035,achievement/1052,승급19,adlvup,forever,15,A1143,19,999,3200,forever,0
+A1143,A1035,achievement/1053,승급20,adlvup,forever,16,A3330,20,999,3400,forever,0
+A3330,A1035,achievement/1054,승급21,adlvup,forever,17,A3331,21,999,3600,forever,0
+A3331,A1035,achievement/1055,승급22,adlvup,forever,18,A3332,22,999,3800,forever,0
+A3332,A1035,achievement/1056,승급23,adlvup,forever,19,A3333,23,999,4000,forever,0
+A3333,A1035,achievement/1057,승급24,adlvup,forever,20,A3334,24,999,4200,forever,0
+A3334,A1035,achievement/1058,승급25,adlvup,forever,21,A3335,25,999,4400,forever,0
+A3335,A1035,achievement/1059,승급26,adlvup,forever,22,A3336,26,999,4600,forever,0
+A3336,A1035,achievement/1060,승급27,adlvup,forever,23,A3337,27,999,4800,forever,0
+A3337,A1035,achievement/1061,승급28,adlvup,forever,24,A3338,28,999,5000,forever,0
+A3338,A1035,achievement/1062,승급29,adlvup,forever,25,A3339,29,999,5200,forever,0
+A3339,A1035,achievement/1063,승급30,adlvup,forever,26,A3340,30,999,5400,forever,0
+A3340,A1035,achievement/1064,승급31,adlvup,forever,27,0,31,999,5600,forever,1
+A1044,A1044,achievement/1001,던전 격파,dungeonclear,forever,0,A1045,3,999,200,forever,0
+A1045,A1044,achievement/1001,던전 격파,dungeonclear,forever,1,A1046,8,999,200,forever,0
+A1046,A1044,achievement/1001,던전 격파,dungeonclear,forever,2,A1047,13,999,200,forever,0
+A1047,A1044,achievement/1001,던전 격파,dungeonclear,forever,3,A1048,18,999,400,forever,0
+A1048,A1044,achievement/1001,던전 격파,dungeonclear,forever,4,A1049,23,999,600,forever,0
+A1049,A1044,achievement/1001,던전 격파,dungeonclear,forever,5,A1050,28,999,800,forever,0
+A1050,A1044,achievement/1001,던전 격파,dungeonclear,forever,6,A1051,33,999,1000,forever,0
+A1051,A1044,achievement/1001,던전 격파,dungeonclear,forever,7,A1052,38,999,1200,forever,0
+A1052,A1044,achievement/1001,던전 격파,dungeonclear,forever,8,A1053,43,999,1400,forever,0
+A1053,A1044,achievement/1001,던전 격파,dungeonclear,forever,9,A1054,50,999,1600,forever,0
+A1054,A1044,achievement/1001,던전 격파,dungeonclear,forever,10,A1055,58,999,1800,forever,0
+A1055,A1044,achievement/1001,던전 격파,dungeonclear,forever,11,A1056,66,999,2000,forever,0
+A1056,A1044,achievement/1001,던전 격파,dungeonclear,forever,12,A1057,74,999,2200,forever,0
+A1057,A1044,achievement/1001,던전 격파,dungeonclear,forever,13,A1058,82,999,2400,forever,0
+A1058,A1044,achievement/1001,던전 격파,dungeonclear,forever,14,A1059,90,999,2600,forever,0
+A1059,A1044,achievement/1001,던전 격파,dungeonclear,forever,15,A1060,98,999,2800,forever,0
+A1060,A1044,achievement/1001,던전 격파,dungeonclear,forever,16,A1061,106,999,3000,forever,0
+A1061,A1044,achievement/1001,던전 격파,dungeonclear,forever,17,A1062,126,999,3200,forever,0
+A1062,A1044,achievement/1001,던전 격파,dungeonclear,forever,18,A1063,150,999,3400,forever,0
+A1063,A1044,achievement/1001,던전 격파,dungeonclear,forever,19,A1064,174,999,3600,forever,0
+A1064,A1044,achievement/1001,던전 격파,dungeonclear,forever,20,A1065,198,999,3800,forever,0
+A1065,A1044,achievement/1001,던전 격파,dungeonclear,forever,21,A1066,222,999,4000,forever,0
+A1066,A1044,achievement/1001,던전 격파,dungeonclear,forever,22,A1067,246,999,4200,forever,0
+A1067,A1044,achievement/1001,던전 격파,dungeonclear,forever,23,A1068,270,999,4400,forever,0
+A1068,A1044,achievement/1001,던전 격파,dungeonclear,forever,24,A1069,294,999,4600,forever,0
+A1069,A1044,achievement/1001,던전 격파,dungeonclear,forever,25,A1070,318,999,4800,forever,0
+A1070,A1044,achievement/1001,던전 격파,dungeonclear,forever,26,A1071,342,999,5000,forever,0
+A1071,A1044,achievement/1001,던전 격파,dungeonclear,forever,27,A1072,366,999,5200,forever,0
+A1072,A1044,achievement/1001,던전 격파,dungeonclear,forever,28,A1073,390,999,5400,forever,0
+A1073,A1044,achievement/1001,던전 격파,dungeonclear,forever,29,A50000,414,999,5600,forever,0
+A50000,A1044,achievement/1001,던전 격파,dungeonclear,forever,30,A50001,450,999,5800,forever,0
+A50001,A1044,achievement/1001,던전 격파,dungeonclear,forever,31,A50002,700,999,6000,forever,0
+A50002,A1044,achievement/1001,던전 격파,dungeonclear,forever,32,A50003,900,999,6200,forever,0
+A50003,A1044,achievement/1001,던전 격파,dungeonclear,forever,33,A50004,1100,999,6400,forever,0
+A50004,A1044,achievement/1001,던전 격파,dungeonclear,forever,34,A50005,1300,999,6600,forever,0
+A50005,A1044,achievement/1001,던전 격파,dungeonclear,forever,35,A50006,1500,999,6800,forever,0
+A50006,A1044,achievement/1001,던전 격파,dungeonclear,forever,36,A50007,1700,999,7000,forever,0
+A50007,A1044,achievement/1001,던전 격파,dungeonclear,forever,37,A50008,1900,999,7200,forever,0
+A50008,A1044,achievement/1001,던전 격파,dungeonclear,forever,38,A50009,2100,999,7400,forever,0
+A50009,A1044,achievement/1001,던전 격파,dungeonclear,forever,39,A50010,2300,999,7600,forever,0
+A50010,A1044,achievement/1001,던전 격파,dungeonclear,forever,40,0,2500,999,7800,forever,1
+E1000,E1000,achievement/E1000,이벤트 수집,killmonster,daily,0,0,2000,100012,600,event,0
+E1001,E1001,achievement/E1001,이벤트 수집,dungeonclear,daily,0,0,10,100012,600,event,0
+E1002,E1002,achievement/E1002,이벤트 수집,raidclear,daily,0,0,1,100013,200,event,0
+E1003,E1003,achievement/E1003,이벤트 수집,altarwar,daily,0,0,1,100014,1,event,0
+A1074,A1074,achievement/2000,레이드 격파,raidclear,forever,0,A1075,3,999,200,forever,0
+A1075,A1074,achievement/2000,레이드 격파,raidclear,forever,1,A1076,10,999,200,forever,0
+A1076,A1074,achievement/2000,레이드 격파,raidclear,forever,2,A1077,17,999,200,forever,0
+A1077,A1074,achievement/2000,레이드 격파,raidclear,forever,3,A1078,24,999,400,forever,0
+A1078,A1074,achievement/2000,레이드 격파,raidclear,forever,4,A1079,30,999,600,forever,0
+A1079,A1074,achievement/2000,레이드 격파,raidclear,forever,5,A1080,30,999,800,forever,0
+A1080,A1074,achievement/2000,레이드 격파,raidclear,forever,6,A1081,30,999,1000,forever,0
+A1081,A1074,achievement/2000,레이드 격파,raidclear,forever,7,A1082,30,999,1200,forever,0
+A1082,A1074,achievement/2000,레이드 격파,raidclear,forever,8,A1083,30,999,1400,forever,0
+A1083,A1074,achievement/2000,레이드 격파,raidclear,forever,9,A1084,30,999,1600,forever,0
+A1084,A1074,achievement/2000,레이드 격파,raidclear,forever,10,A1085,30,999,1800,forever,0
+A1085,A1074,achievement/2000,레이드 격파,raidclear,forever,11,A1086,30,999,2000,forever,0
+A1086,A1074,achievement/2000,레이드 격파,raidclear,forever,12,A1087,30,999,2200,forever,0
+A1087,A1074,achievement/2000,레이드 격파,raidclear,forever,13,A1088,30,999,2400,forever,0
+A1088,A1074,achievement/2000,레이드 격파,raidclear,forever,14,A1089,30,999,2600,forever,0
+A1089,A1074,achievement/2000,레이드 격파,raidclear,forever,15,A1090,30,999,2800,forever,0
+A1090,A1074,achievement/2000,레이드 격파,raidclear,forever,16,A1091,30,999,3000,forever,0
+A1091,A1074,achievement/2000,레이드 격파,raidclear,forever,17,A1092,30,999,3200,forever,0
+A1092,A1074,achievement/2000,레이드 격파,raidclear,forever,18,A1093,30,999,3400,forever,0
+A1093,A1074,achievement/2000,레이드 격파,raidclear,forever,19,A1094,30,999,3600,forever,0
+A1094,A1074,achievement/2000,레이드 격파,raidclear,forever,20,A1095,30,999,3800,forever,0
+A1095,A1074,achievement/2000,레이드 격파,raidclear,forever,21,A1096,30,999,4000,forever,0
+A1096,A1074,achievement/2000,레이드 격파,raidclear,forever,22,A1097,30,999,4200,forever,0
+A1097,A1074,achievement/2000,레이드 격파,raidclear,forever,23,A1098,30,999,4400,forever,0
+A1098,A1074,achievement/2000,레이드 격파,raidclear,forever,24,A1099,30,999,4600,forever,0
+A1099,A1074,achievement/2000,레이드 격파,raidclear,forever,25,A1100,30,999,4800,forever,0
+A2200,A1074,achievement/2000,레이드 격파,raidclear,forever,26,A2201,30,999,5000,forever,0
+A2201,A1074,achievement/2000,레이드 격파,raidclear,forever,27,A2202,30,999,5200,forever,0
+A2202,A1074,achievement/2000,레이드 격파,raidclear,forever,28,A2203,30,999,5400,forever,0
+A2203,A1074,achievement/2000,레이드 격파,raidclear,forever,29,A2204,30,999,5600,forever,0
+A2204,A1074,achievement/2000,레이드 격파,raidclear,forever,30,A2205,30,999,5800,forever,0
+A2205,A1074,achievement/2000,레이드 격파,raidclear,forever,31,A2206,30,999,6000,forever,0
+A2206,A1074,achievement/2000,레이드 격파,raidclear,forever,32,A2207,30,999,6200,forever,0
+A2207,A1074,achievement/2000,레이드 격파,raidclear,forever,33,A2208,30,999,6400,forever,0
+A2208,A1074,achievement/2000,레이드 격파,raidclear,forever,34,A2209,30,999,6600,forever,0
+A2209,A1074,achievement/2000,레이드 격파,raidclear,forever,35,A2210,30,999,6800,forever,0
+A2210,A1074,achievement/2000,레이드 격파,raidclear,forever,36,A2211,30,999,7000,forever,0
+A2211,A1074,achievement/2000,레이드 격파,raidclear,forever,37,A2212,30,999,7200,forever,0
+A2212,A1074,achievement/2000,레이드 격파,raidclear,forever,38,A2213,30,999,7400,forever,0
+A2213,A1074,achievement/2000,레이드 격파,raidclear,forever,39,A2214,30,999,7600,forever,0
+A2214,A1074,achievement/2000,레이드 격파,raidclear,forever,40,A2215,30,999,7800,forever,0
+A2215,A1074,achievement/2000,레이드 격파,raidclear,forever,41,A2216,30,999,8000,forever,0
+A2216,A1074,achievement/2000,레이드 격파,raidclear,forever,42,A2217,30,999,8200,forever,0
+A2217,A1074,achievement/2000,레이드 격파,raidclear,forever,43,A2218,30,999,8400,forever,0
+A2218,A1074,achievement/2000,레이드 격파,raidclear,forever,44,0,30,999,8600,forever,1
+A1104,A1104,achievement/2001,성물 격파,altarwar,forever,0,A1105,4,999,200,forever,0
+A1105,A1104,achievement/2001,성물 격파,altarwar,forever,1,A1106,7,999,200,forever,0
+A1106,A1104,achievement/2001,성물 격파,altarwar,forever,2,A1107,10,999,200,forever,0
+A1107,A1104,achievement/2001,성물 격파,altarwar,forever,3,A1108,13,999,400,forever,0
+A1108,A1104,achievement/2001,성물 격파,altarwar,forever,4,A1109,16,999,600,forever,0
+A1109,A1104,achievement/2001,성물 격파,altarwar,forever,5,A1110,19,999,800,forever,0
+A1110,A1104,achievement/2001,성물 격파,altarwar,forever,6,A1111,22,999,1000,forever,0
+A1111,A1104,achievement/2001,성물 격파,altarwar,forever,7,A1112,25,999,1200,forever,0
+A1112,A1104,achievement/2001,성물 격파,altarwar,forever,8,A1113,28,999,1400,forever,0
+A1113,A1104,achievement/2001,성물 격파,altarwar,forever,9,A1114,31,999,1600,forever,0
+A1114,A1104,achievement/2001,성물 격파,altarwar,forever,10,A1115,34,999,1800,forever,0
+A1115,A1104,achievement/2001,성물 격파,altarwar,forever,11,A1116,37,999,2000,forever,0
+A1116,A1104,achievement/2001,성물 격파,altarwar,forever,12,A1117,40,999,2200,forever,0
+A1117,A1104,achievement/2001,성물 격파,altarwar,forever,13,A1118,43,999,2400,forever,0
+A1118,A1104,achievement/2001,성물 격파,altarwar,forever,14,A1119,46,999,2600,forever,0
+A1119,A1104,achievement/2001,성물 격파,altarwar,forever,15,A1120,49,999,2800,forever,0
+A1120,A1104,achievement/2001,성물 격파,altarwar,forever,16,A1121,52,999,3000,forever,0
+A1121,A1104,achievement/2001,성물 격파,altarwar,forever,17,A1122,55,999,3200,forever,0
+A1122,A1104,achievement/2001,성물 격파,altarwar,forever,18,A1123,58,999,3400,forever,0
+A1123,A1104,achievement/2001,성물 격파,altarwar,forever,19,A1124,61,999,3600,forever,0
+A1124,A1104,achievement/2001,성물 격파,altarwar,forever,20,A1125,64,999,3800,forever,0
+A1125,A1104,achievement/2001,성물 격파,altarwar,forever,21,A1126,67,999,4000,forever,0
+A1126,A1104,achievement/2001,성물 격파,altarwar,forever,22,A1127,70,999,4200,forever,0
+A1127,A1104,achievement/2001,성물 격파,altarwar,forever,23,A1128,73,999,4400,forever,0
+A1128,A1104,achievement/2001,성물 격파,altarwar,forever,24,A1129,76,999,4600,forever,0
+A1129,A1104,achievement/2001,성물 격파,altarwar,forever,25,A1130,79,999,4800,forever,0
+A1130,A1104,achievement/2001,성물 격파,altarwar,forever,26,A1131,82,999,5000,forever,0
+A1131,A1104,achievement/2001,성물 격파,altarwar,forever,27,A1132,85,999,5200,forever,0
+A1132,A1104,achievement/2001,성물 격파,altarwar,forever,28,A1133,88,999,5400,forever,0
+A1133,A1104,achievement/2001,성물 격파,altarwar,forever,29,0,91,999,5600,forever,1
+C1000,C1000,achievement/1000,몬스터처치,killmonster,daily,0,0,3000,1001,200,crystal,0
+C1001,C1001,achievement/1001,던전 격파,dungeonclear,daily,0,0,5,1001,200,crystal,0
+C1002,C1002,achievement/1002,아이템 제작,crafting,daily,0,0,2,1001,200,crystal,0
+C1003,C1003,achievement/1003,보스 처치,bosskill,daily,0,0,10,1001,200,crystal,0
+C1004,C1004,achievement/1004,사냥터 클리어,StageClear,daily,0,0,50,1001,200,crystal,0
+C1005,C1005,achievement/2000,레이드 격파,raidclear,daily,0,0,1,1001,200,crystal,0
+C1006,C1006,achievement/2001,성물 격파,altarwar,daily,0,0,1,1001,200,crystal,0
+C1007,C1007,achievement/2002,길드레이드,guildraid,daily,0,0,1,1001,200,crystal,0
+C1008,C1008,achievement/2003,대마법사의묘,contentskill,daily,0,0,1,1001,200,crystal,0
+E1004,E1004,achievement/E1000,이벤트 수집,killmonster,daily,0,0,2000,100012,1000,event,0
+E1005,E1005,achievement/E1001,이벤트 수집,dungeonclear,daily,0,0,10,100012,1000,event,0
+E1006,E1006,achievement/E1002,이벤트 수집,raidclear,daily,0,0,1,100013,400,event,0
+E1007,E1007,achievement/E1003,이벤트 수집,altarwar,daily,0,0,1,100014,1,event,0
+E1008,E1008,achievement/E1008,대마법사의묘,contentskill,daily,0,0,1,40003,3,event,0
+E1009,E1009,achievement/E1000,이벤트 수집,killmonster,daily,0,0,5000,565,2,event,0
+A1144,A1005,achievement/1000,몬스터처치,killmonster,forever,30,A1145,73000,999,5800,forever,0
+A1145,A1005,achievement/1000,몬스터처치,killmonster,forever,31,A1146,76000,999,6000,forever,0
+A1146,A1005,achievement/1000,몬스터처치,killmonster,forever,32,A1147,79000,999,6200,forever,0
+A1147,A1005,achievement/1000,몬스터처치,killmonster,forever,33,A1148,82000,999,6400,forever,0
+A1148,A1005,achievement/1000,몬스터처치,killmonster,forever,34,A1149,85000,999,6600,forever,0
+A1149,A1005,achievement/1000,몬스터처치,killmonster,forever,35,A1150,88000,999,6800,forever,0
+A1150,A1005,achievement/1000,몬스터처치,killmonster,forever,36,A1151,91000,999,7000,forever,0
+A1151,A1005,achievement/1000,몬스터처치,killmonster,forever,37,A1152,94000,999,7000,forever,0
+A1152,A1005,achievement/1000,몬스터처치,killmonster,forever,38,A1153,97000,999,7000,forever,0
+A1153,A1005,achievement/1000,몬스터처치,killmonster,forever,39,A1154,100000,999,7000,forever,0
+A1154,A1005,achievement/1000,몬스터처치,killmonster,forever,40,A1155,103000,999,7000,forever,0
+A1155,A1005,achievement/1000,몬스터처치,killmonster,forever,41,A1156,106000,999,7000,forever,0
+A1156,A1005,achievement/1000,몬스터처치,killmonster,forever,42,A1157,109000,999,7000,forever,0
+A1157,A1005,achievement/1000,몬스터처치,killmonster,forever,43,A1158,112000,999,7000,forever,0
+A1158,A1005,achievement/1000,몬스터처치,killmonster,forever,44,A1159,115000,999,7000,forever,0
+A1159,A1005,achievement/1000,몬스터처치,killmonster,forever,45,A1160,118000,999,7000,forever,0
+A1160,A1005,achievement/1000,몬스터처치,killmonster,forever,46,A1161,121000,999,7000,forever,0
+A1161,A1005,achievement/1000,몬스터처치,killmonster,forever,47,A1162,124000,999,7000,forever,0
+A1162,A1005,achievement/1000,몬스터처치,killmonster,forever,48,A1163,127000,999,7000,forever,0
+A1163,A1005,achievement/1000,몬스터처치,killmonster,forever,49,A1164,130000,999,7000,forever,0
+A1164,A1005,achievement/1000,몬스터처치,killmonster,forever,50,A1165,133000,999,7000,forever,0
+A1165,A1005,achievement/1000,몬스터처치,killmonster,forever,51,A1166,136000,999,7000,forever,0
+A1166,A1005,achievement/1000,몬스터처치,killmonster,forever,52,A1167,139000,999,7000,forever,0
+A1167,A1005,achievement/1000,몬스터처치,killmonster,forever,53,A1168,142000,999,7000,forever,0
+A1168,A1005,achievement/1000,몬스터처치,killmonster,forever,54,A1169,145000,999,7000,forever,0
+A1169,A1005,achievement/1000,몬스터처치,killmonster,forever,55,A1170,148000,999,7000,forever,0
+A1170,A1005,achievement/1000,몬스터처치,killmonster,forever,56,A1171,150000,999,7000,forever,0
+A1171,A1005,achievement/1000,몬스터처치,killmonster,forever,57,A1172,150000,999,7000,forever,0
+A1172,A1005,achievement/1000,몬스터처치,killmonster,forever,58,A1173,150000,999,7000,forever,0
+A1173,A1005,achievement/1000,몬스터처치,killmonster,forever,59,A1174,150000,999,7000,forever,0
+A1174,A1005,achievement/1000,몬스터처치,killmonster,forever,60,A1175,150000,999,7000,forever,0
+A1175,A1005,achievement/1000,몬스터처치,killmonster,forever,61,A1176,150000,999,7000,forever,0
+A1176,A1005,achievement/1000,몬스터처치,killmonster,forever,62,A1177,150000,999,7000,forever,0
+A1177,A1005,achievement/1000,몬스터처치,killmonster,forever,63,A1178,150000,999,7000,forever,0
+A1178,A1005,achievement/1000,몬스터처치,killmonster,forever,64,A1179,150000,999,7000,forever,0
+A1179,A1005,achievement/1000,몬스터처치,killmonster,forever,65,A1180,150000,999,7000,forever,0
+A1180,A1005,achievement/1000,몬스터처치,killmonster,forever,66,A1181,150000,999,7000,forever,0
+A1181,A1005,achievement/1000,몬스터처치,killmonster,forever,67,A1182,150000,999,7000,forever,0
+A1182,A1005,achievement/1000,몬스터처치,killmonster,forever,68,A1183,150000,999,7000,forever,0
+A1183,A1005,achievement/1000,몬스터처치,killmonster,forever,69,A1184,150000,999,7000,forever,0
+A1184,A1005,achievement/1000,몬스터처치,killmonster,forever,70,A1185,150000,999,7000,forever,0
+A1185,A1005,achievement/1000,몬스터처치,killmonster,forever,71,A1186,150000,999,7000,forever,0
+A1186,A1005,achievement/1000,몬스터처치,killmonster,forever,72,A1187,150000,999,7000,forever,0
+A1187,A1005,achievement/1000,몬스터처치,killmonster,forever,73,A1188,150000,999,7000,forever,0
+A1188,A1005,achievement/1000,몬스터처치,killmonster,forever,74,A1189,150000,999,7000,forever,0
+A1189,A1005,achievement/1000,몬스터처치,killmonster,forever,75,A1190,150000,999,7000,forever,0
+A1190,A1005,achievement/1000,몬스터처치,killmonster,forever,76,A1191,150000,999,7000,forever,0
+A1191,A1005,achievement/1000,몬스터처치,killmonster,forever,77,A1192,150000,999,7000,forever,0
+A1192,A1005,achievement/1000,몬스터처치,killmonster,forever,78,A1193,150000,999,7000,forever,0
+A1193,A1005,achievement/1000,몬스터처치,killmonster,forever,79,A1194,150000,999,7000,forever,0
+A1194,A1005,achievement/1000,몬스터처치,killmonster,forever,80,A1195,150000,999,7000,forever,0
+A1195,A1005,achievement/1000,몬스터처치,killmonster,forever,81,A1196,150000,999,7000,forever,0
+A1196,A1005,achievement/1000,몬스터처치,killmonster,forever,82,A1197,150000,999,7000,forever,0
+A1197,A1005,achievement/1000,몬스터처치,killmonster,forever,83,A1198,150000,999,7000,forever,0
+A1198,A1005,achievement/1000,몬스터처치,killmonster,forever,84,A1199,150000,999,7000,forever,0
+A1199,A1005,achievement/1000,몬스터처치,killmonster,forever,85,A1200,150000,999,7000,forever,0
+A1200,A1005,achievement/1000,몬스터처치,killmonster,forever,86,A1201,150000,999,7000,forever,0
+A1201,A1005,achievement/1000,몬스터처치,killmonster,forever,87,A1202,150000,999,7000,forever,0
+A1202,A1005,achievement/1000,몬스터처치,killmonster,forever,88,A1203,150000,999,7000,forever,0
+A1203,A1005,achievement/1000,몬스터처치,killmonster,forever,89,A1204,150000,999,7000,forever,0
+A1204,A1005,achievement/1000,몬스터처치,killmonster,forever,90,A1205,150000,999,7000,forever,0
+A1205,A1005,achievement/1000,몬스터처치,killmonster,forever,91,A1206,150000,999,7000,forever,0
+A1206,A1005,achievement/1000,몬스터처치,killmonster,forever,92,A1207,150000,999,7000,forever,0
+A1207,A1005,achievement/1000,몬스터처치,killmonster,forever,93,A1208,150000,999,7000,forever,0
+A1208,A1005,achievement/1000,몬스터처치,killmonster,forever,94,A1209,150000,999,7000,forever,0
+A1209,A1005,achievement/1000,몬스터처치,killmonster,forever,95,A1210,150000,999,7000,forever,0
+A1210,A1005,achievement/1000,몬스터처치,killmonster,forever,96,A1211,150000,999,7000,forever,0
+A1211,A1005,achievement/1000,몬스터처치,killmonster,forever,97,A1212,150000,999,7000,forever,0
+A1212,A1005,achievement/1000,몬스터처치,killmonster,forever,98,A1213,150000,999,7000,forever,0
+A1213,A1005,achievement/1000,몬스터처치,killmonster,forever,99,A1214,150000,999,7000,forever,0
+A1214,A1005,achievement/1000,몬스터처치,killmonster,forever,100,A1215,150000,999,7000,forever,0
+A1215,A1005,achievement/1000,몬스터처치,killmonster,forever,101,A1216,150000,999,7000,forever,0
+A1216,A1005,achievement/1000,몬스터처치,killmonster,forever,102,A1217,150000,999,7000,forever,0
+A1217,A1005,achievement/1000,몬스터처치,killmonster,forever,103,A1218,150000,999,7000,forever,0
+A1218,A1005,achievement/1000,몬스터처치,killmonster,forever,104,A1219,150000,999,7000,forever,0
+A1219,A1005,achievement/1000,몬스터처치,killmonster,forever,105,A1220,150000,999,7000,forever,0
+A1220,A1005,achievement/1000,몬스터처치,killmonster,forever,106,A1221,150000,999,7000,forever,0
+A1221,A1005,achievement/1000,몬스터처치,killmonster,forever,107,A1222,150000,999,7000,forever,0
+A1222,A1005,achievement/1000,몬스터처치,killmonster,forever,108,A1223,150000,999,7000,forever,0
+A1223,A1005,achievement/1000,몬스터처치,killmonster,forever,109,A1224,150000,999,7000,forever,0
+A1224,A1005,achievement/1000,몬스터처치,killmonster,forever,110,A1225,150000,999,7000,forever,0
+A1225,A1005,achievement/1000,몬스터처치,killmonster,forever,111,A1226,150000,999,7000,forever,0
+A1226,A1005,achievement/1000,몬스터처치,killmonster,forever,112,A1227,150000,999,7000,forever,0
+A1227,A1005,achievement/1000,몬스터처치,killmonster,forever,113,A1228,150000,999,7000,forever,0
+A1228,A1005,achievement/1000,몬스터처치,killmonster,forever,114,A1229,150000,999,7000,forever,0
+A1229,A1005,achievement/1000,몬스터처치,killmonster,forever,115,A1230,150000,999,7000,forever,0
+A1230,A1005,achievement/1000,몬스터처치,killmonster,forever,116,A1231,150000,999,7000,forever,0
+A1231,A1005,achievement/1000,몬스터처치,killmonster,forever,117,A1232,150000,999,7000,forever,0
+A1232,A1005,achievement/1000,몬스터처치,killmonster,forever,118,A1233,150000,999,7000,forever,0
+A1233,A1005,achievement/1000,몬스터처치,killmonster,forever,119,A1234,150000,999,7000,forever,0
+A1234,A1005,achievement/1000,몬스터처치,killmonster,forever,120,A1235,150000,999,7000,forever,0
+A1235,A1005,achievement/1000,몬스터처치,killmonster,forever,121,A1236,150000,999,7000,forever,0
+A1236,A1005,achievement/1000,몬스터처치,killmonster,forever,122,A1237,150000,999,7000,forever,0
+A1237,A1005,achievement/1000,몬스터처치,killmonster,forever,123,A1238,150000,999,7000,forever,0
+A1238,A1005,achievement/1000,몬스터처치,killmonster,forever,124,A1239,150000,999,7000,forever,0
+A1239,A1005,achievement/1000,몬스터처치,killmonster,forever,125,A1240,150000,999,7000,forever,0
+A1240,A1005,achievement/1000,몬스터처치,killmonster,forever,126,A1241,150000,999,7000,forever,0
+A1241,A1005,achievement/1000,몬스터처치,killmonster,forever,127,A1242,150000,999,7000,forever,0
+A1242,A1005,achievement/1000,몬스터처치,killmonster,forever,128,A1243,150000,999,7000,forever,0
+A1243,A1005,achievement/1000,몬스터처치,killmonster,forever,129,A1244,150000,999,7000,forever,0
+A1244,A1005,achievement/1000,몬스터처치,killmonster,forever,130,A1245,150000,999,7000,forever,0
+A1245,A1005,achievement/1000,몬스터처치,killmonster,forever,131,A1246,150000,999,7000,forever,0
+A1246,A1005,achievement/1000,몬스터처치,killmonster,forever,132,A1247,150000,999,7000,forever,0
+A1247,A1005,achievement/1000,몬스터처치,killmonster,forever,133,A1248,150000,999,7000,forever,0
+A1248,A1005,achievement/1000,몬스터처치,killmonster,forever,134,A1249,150000,999,7000,forever,0
+A1249,A1005,achievement/1000,몬스터처치,killmonster,forever,135,A1250,150000,999,7000,forever,0
+A1250,A1005,achievement/1000,몬스터처치,killmonster,forever,136,A1251,150000,999,7000,forever,0
+A1251,A1005,achievement/1000,몬스터처치,killmonster,forever,137,A1252,150000,999,7000,forever,0
+A1252,A1005,achievement/1000,몬스터처치,killmonster,forever,138,A1253,150000,999,7000,forever,0
+A1253,A1005,achievement/1000,몬스터처치,killmonster,forever,139,A1254,150000,999,7000,forever,0
+A1254,A1005,achievement/1000,몬스터처치,killmonster,forever,140,A1255,150000,999,7000,forever,0
+A1255,A1005,achievement/1000,몬스터처치,killmonster,forever,141,A1256,150000,999,7000,forever,0
+A1256,A1005,achievement/1000,몬스터처치,killmonster,forever,142,A1257,150000,999,7000,forever,0
+A1257,A1005,achievement/1000,몬스터처치,killmonster,forever,143,A1258,150000,999,7000,forever,0
+A1258,A1005,achievement/1000,몬스터처치,killmonster,forever,144,A1259,150000,999,7000,forever,0
+A1259,A1005,achievement/1000,몬스터처치,killmonster,forever,145,A1260,150000,999,7000,forever,32
+A1260,A1005,achievement/1000,몬스터처치,killmonster,forever,146,0,150000,999,7000,forever,1
+S1000,S1000,achievement/S1000,몬스터처치,killmonster,daily,0,0,2000,998,600,daily,0
+S1001,S1001,achievement/S1001,던전 격파,dungeonclear,daily,0,0,5,998,600,daily,0
+S1002,S1002,achievement/S1002,아이템 제작,crafting,daily,0,0,3,998,600,daily,0
+S1003,S1003,achievement/S1003,보스 처치,bosskill,daily,0,0,20,998,600,daily,0
+S1004,S1004,achievement/S1004,사냥터 클리어,StageClear,daily,0,0,20,998,600,daily,0
+S1005,S1005,achievement/S1005,레이드 격파,raidclear,daily,0,0,1,998,600,daily,0
+S1006,S1006,achievement/S1006,성물 격파,altarwar,daily,0,0,1,998,600,daily,0
+S1007,S1007,achievement/S1007,길드레이드,guildraid,daily,0,0,1,998,600,daily,0
+S1008,S1008,achievement/S1008,대마법사의묘,contentskill,daily,0,0,1,998,600,daily,0

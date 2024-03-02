@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "676790033068",
+    "project_id": "rpgg222-8d893",
+    "storage_bucket": "rpgg222-8d893.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:676790033068:android:0f9bacd0f11d192c7f1d09",
+        "android_client_info": {
+          "package_name": "com.LKGames.com.unity.RPGG2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "676790033068-l9tl3jaaa7qhq1bfiukbj991l8bbd9hd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgn_DJcsoJB2n4IB0uxKULw_x5ACrT1Yg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "676790033068-l9tl3jaaa7qhq1bfiukbj991l8bbd9hd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

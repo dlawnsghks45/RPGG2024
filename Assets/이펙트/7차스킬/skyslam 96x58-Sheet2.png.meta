@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: 2e175a3f1f6ca14498287638421e1acc
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 48
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: skyslam 96x58-Sheet2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 232
+        width: 96
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c6b3bb2ab88a71419996e3272ee316c
+      internalID: 259217969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skyslam 96x58-Sheet2_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 232
+        width: 96
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1fb4af21e45afa4084c5491eb27db4f
+      internalID: 318390246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skyslam 96x58-Sheet2_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 232
+        width: 96
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3473db03c7cffa845bfc95aa39c88dd1
+      internalID: -250907791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skyslam 96x58-Sheet2_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 232
+        width: 96
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffb96546797feda47b3277fd14da7703
+      internalID: -1485801978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skyslam 96x58-Sheet2_4
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 232
+        width: 96
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08d281a7d5d492545ae2ec5d358726e3
+      internalID: 1996212543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skyslam 96x58-Sheet2_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 174
+        width: 96
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d075596920e91e4385ef78beb19a135
+      internalID: -1442168746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skyslam 96x58-Sheet2_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 174
+        width: 96
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62c32acbae876664f9ebdec0c5e5777c
+      internalID: -1083953805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skyslam 96x58-Sheet2_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 174
+        width: 96
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a93d2cc4826041c4e99bcd0d0d95867a
+      internalID: -1708145940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skyslam 96x58-Sheet2_8
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 174
+        width: 96
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05487ca32c3bdcb439880f30115baea5
+      internalID: -563062412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skyslam 96x58-Sheet2_9
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 174
+        width: 96
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 178e31d763a57024c88f36f71c58a5e5
+      internalID: -626982682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skyslam 96x58-Sheet2_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 116
+        width: 96
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5926f58f2d064e84e9e04a74938966d6
+      internalID: -1849873636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skyslam 96x58-Sheet2_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 116
+        width: 96
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc0c0bfa025ac7a448bc4f59826da841
+      internalID: 2105031168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skyslam 96x58-Sheet2_12
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 116
+        width: 96
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e224843ecce91a48be9f36c9fbfc73a
+      internalID: 2086245570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skyslam 96x58-Sheet2_13
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 116
+        width: 96
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f81a1fcdb2bce74a8f0306f183532c4
+      internalID: 1913979020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skyslam 96x58-Sheet2_14
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 116
+        width: 96
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88cb89b3449b855499384966da4dc260
+      internalID: 1054512076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skyslam 96x58-Sheet2_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 58
+        width: 96
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2faff17fe068f0241896c556a90d63d8
+      internalID: -837186453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skyslam 96x58-Sheet2_16
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 58
+        width: 96
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e2bff1fdb2e1b241ac70d1c50ef4796
+      internalID: -1822858900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skyslam 96x58-Sheet2_17
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 58
+        width: 96
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94b24ca044ab02847bb435208d2059d3
+      internalID: -1048962342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skyslam 96x58-Sheet2_18
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 58
+        width: 96
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 138552d97d8df1140898f400cb0bfc27
+      internalID: -645029754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skyslam 96x58-Sheet2_19
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 58
+        width: 96
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c143a3af127286d40a0de2bf7efa9d43
+      internalID: 1461613906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skyslam 96x58-Sheet2_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 96
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a39a36c72596ba24e8ccd558d2ce1b25
+      internalID: 1597295867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skyslam 96x58-Sheet2_21
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 96
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13c204fb37ec441409158b4c83e82614
+      internalID: 839176022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skyslam 96x58-Sheet2_22
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 96
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b399999690de2a14a9d0f6a3874d9ea6
+      internalID: -2130816660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skyslam 96x58-Sheet2_23
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 96
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ed092cbb91f9104e8ab1b60e04fd9fc
+      internalID: -410985740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      skyslam 96x58-Sheet2_0: 259217969
+      skyslam 96x58-Sheet2_1: 318390246
+      skyslam 96x58-Sheet2_10: -1849873636
+      skyslam 96x58-Sheet2_11: 2105031168
+      skyslam 96x58-Sheet2_12: 2086245570
+      skyslam 96x58-Sheet2_13: 1913979020
+      skyslam 96x58-Sheet2_14: 1054512076
+      skyslam 96x58-Sheet2_15: -837186453
+      skyslam 96x58-Sheet2_16: -1822858900
+      skyslam 96x58-Sheet2_17: -1048962342
+      skyslam 96x58-Sheet2_18: -645029754
+      skyslam 96x58-Sheet2_19: 1461613906
+      skyslam 96x58-Sheet2_2: -250907791
+      skyslam 96x58-Sheet2_20: 1597295867
+      skyslam 96x58-Sheet2_21: 839176022
+      skyslam 96x58-Sheet2_22: -2130816660
+      skyslam 96x58-Sheet2_23: -410985740
+      skyslam 96x58-Sheet2_3: -1485801978
+      skyslam 96x58-Sheet2_4: 1996212543
+      skyslam 96x58-Sheet2_5: -1442168746
+      skyslam 96x58-Sheet2_6: -1083953805
+      skyslam 96x58-Sheet2_7: -1708145940
+      skyslam 96x58-Sheet2_8: -563062412
+      skyslam 96x58-Sheet2_9: -626982682
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

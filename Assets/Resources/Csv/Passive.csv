@@ -1,0 +1,45 @@
+id,description,name,info,type,subtype,value,percent,A,B,C
+C1000,워리어,Passive/C1000,PassiveInfo/C1000,statup,allstatperup,0.05,0,모든 능력치 5% 증가,,
+C1001,로그,Passive/C1001,PassiveInfo/C1001,statup,atkspdup,0.1,0,공격속도 10% 증가,,
+C1002,매지션,Passive/C1002,PassiveInfo/C1002,statup,reduceskillcooldown,0.1,0,스킬 재사용 시간 10% 감소,,
+C1003,나이트,Passive/C1003,PassiveInfo/C1003,statup,strperup,0.1,0,힘 10% 증가,,
+C1004,어쌔신,Passive/C1004,PassiveInfo/C1004,statup,dexperup,0.1,0,민첩 10% 증가,,
+C1005,위자드,Passive/C1005,PassiveInfo/C1005,statup,intwisperup,0.5,0,지능 / 지혜 5%씩 증가,,
+C1006,파이터,Passive/C1006,PassiveInfo/C1006,statup,breakdmgup,0.2,0,무력화 피해 20%,버프 효율 10퍼,
+C1007,랜서,Passive/C1007,PassiveInfo/C1007,statup,atkdmgup,0.15,0,물리 공격력 15% 증가,,
+C1008,씨프,Passive/C1008,PassiveInfo/C1008,statup,atkspdup,0.15,0,공격 속도 15%,,
+C1009,헌터,Passive/C1009,PassiveInfo/C1009,statup,allstatperup,0.15,0,모든 능력치 15% 증가,,
+C1010,파이어 위저드,Passive/C1010,PassiveInfo/C1010,statup,matkdmgup,0.15,0,마법 공격력 15% 증가,,
+C1011,아이스 위저드,Passive/C1011,PassiveInfo/C1011,statup,dotdmgup,0.5,0,상태이상 피해 50% 증가,,
+C1012,크루세이더,Passive/C1012,PassiveInfo/C1012,statup,breakdmgup,0.3,0,무력화 피해 30%,무력화 피해 30%,
+C1013,버서커,Passive/C1013,PassiveInfo/C1013,statup,critup,25,0,치명타 확률 25% 증가,,
+C1014,슬레이어,Passive/C1014,PassiveInfo/C1014,statup,attackcountup,1,0,기본 공격 범위 +1,,
+C1015,레인저,Passive/C1015,PassiveInfo/C1015,statup,atkcooldown,0.2,0,공격 시 스킬 재사용 시간 0.2초 감소,,
+C1016,어스 서머너,Passive/C1016,PassiveInfo/C1016,statup,reduceskillcooldown,0.3,0,스킬 재사용 시간 30% 감소,,
+C1017,워록,Passive/C1017,PassiveInfo/C1017,statup,dotdmgup,1,0,상태이상 피해 100% 증가,,
+C1018,홀리 나이트,Passive/C1018,PassiveInfo/C1018,statup,allstatperup,0.3,0,모든 능력치 30% 증가,,
+C1019,데스 나이트,Passive/C1019,PassiveInfo/C1019,statup,critdmgup,0.5,0,치명타 피해 50% 증가,,
+C1020,사신,Passive/C1020,PassiveInfo/C1020,statup,atkcountup,2,0,기본 공격 횟수 +2,,
+C1021,샤프슈터,Passive/C1021,PassiveInfo/C1021,statup,atkdmgup,0.3,0,물리 공격력 30% 증가,,
+C1022,네이쳐,Passive/C1022,PassiveInfo/C1022,statup,matkdmgup,0.3,0,마법 공격력 30% 증가,,
+C1023,리치,Passive/C1023,PassiveInfo/C1023,statup,dotstackup,10,0,상태이상 최대 중첩 10 증가 상태이상 중첩 수 10 증가,,
+C1024,생츄어리,Passive/C1024,PassiveInfo/C1024,statup,buffup,0.4,0,버프 스킬 효율 40% 증가,,
+C1025,카이저,Passive/C1025,PassiveInfo/C1025,statup,critmeleedmgup,0.3,0.2,"치명타 피해 30% 증가
+물리 공격력 20% 증가",,
+C1026,헬 로드,Passive/C1026,PassiveInfo/C1026,statup,attackcountupandrange,1,1,"기본 공격 범위 +1
+기본 공격 횟수 +1",,
+C1027,드래곤 헌터,Passive/C1027,PassiveInfo/C1027,statup,atkcooldown,0.4,0,기본 공격 시 스킬 쿨타임 0.4초 감소,,
+C1028,드래곤 메이지,Passive/C1028,PassiveInfo/C1028,statup,makdouble,2,100,공격 마법 사용 시 해당 스킬이 2회 발동,,
+C1029,네크로맨서,Passive/C1029,PassiveInfo/C1029,statup,dotdouble,0.5,0,상태 이상 피해가 4배 증가하고 피해 속도가 2배 빨라진다.,,
+C1030,데바,Passive/C1030,PassiveInfo/C1030,statup,1030,2.5,0.7,"물리 공격력 +250%
+버프 스킬 효율 70% 증가",,
+C1031,어벤저,Passive/C1031,PassiveInfo/C1031,statup,1031,5,0,물리 공격력 +500%,,
+C1032,다크로드,Passive/C1032,PassiveInfo/C1032,statup,1032,2,4.5,"기본 공격 피해 +450%
+기본 공격 횟수 +2",,
+C1033,무법자,Passive/C1033,PassiveInfo/C1033,statup,1033,3,0.3,"치명타 피해 +300%
+모든 능력치 +30%
+기본 공격 횟수 +1",,
+C1034,마지스터,Passive/C1034,PassiveInfo/C1034,statup,1034,0.2,0.5,"시전 속도 +20%
+마법 스킬 사용 시 마법 스킬 피해의 절반 만큼 추가 피해를 입힌다.",,
+C1035,페일마스터,Passive/C1035,PassiveInfo/C1035,statup,1035,0.2,0.5,"시전 속도 +20%
+모든 시체 폭발 마법 스킬 피해 50% 증가",,

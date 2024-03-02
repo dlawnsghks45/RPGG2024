@@ -1,0 +1,51 @@
+id,num,desc,statdesc,name,info,getinfo,type,sprite,equipsprite,stattype,stat,statinfo,rare,isshow,costtype,cost
+A2000,0,서큐버스,모든 능력치 +2%,Avartaname/2000,0,AvartaGetinfo/2000,A,Transform/1020,,allstat,0.02,Avartainfo/2000,4,TRUE,crystal,10000
+A2001,1,뱀파이어,모든 능력치 +2%,Avartaname/2001,,AvartaGetinfo/2001,A,Transform/1007,,allstat,0.02,Avartainfo/2000,4,TRUE,crystal,10000
+A2002,2,문어 전사,모든 능력치 +4%,Avartaname/2002,,AvartaGetinfo/2002,A,Transform/문어전사,,allstat,0.04,Avartainfo/2002,5,TRUE,crystal,20000
+A2003,3,문어 마법사,모든 능력치 +4%,Avartaname/2003,,AvartaGetinfo/2003,A,Transform/문어마법사,,allstat,0.04,Avartainfo/2002,5,TRUE,crystal,20000
+A2004,4,독문어,모든 능력치 +4%,Avartaname/2004,,AvartaGetinfo/2004,A,Transform/독문어,,allstat,0.04,Avartainfo/2002,5,TRUE,crystal,20000
+A2005,5,문어왕,모든 능력치 +7%,Avartaname/2005,,AvartaGetinfo/2005,A,Transform/문어왕 - 복사본,,allstat,0.07,Avartainfo/2005,6,TRUE,crystal,35000
+A2006,6,크리스마스 위장,경험치 획득량 증가 +10%,Avartaname/2006,,AvartaGetinfo/2006,A,Transform/산타,,exp,0.1,Avartainfo/2006,6,TRUE,item,
+A2007,7,크리스마스 무기,골드 획득량 증가 +15%,Avartaname/2007,,AvartaGetinfo/2007,W,Item/Event/크리스마스/무기_산타무기_장착,,gold,0.15,Avartainfo/2007,6,TRUE,item,
+A2008,8,설날위장구매(대장군),경험치 획득량 증가 +10%,Avartaname/2008,,AvartaGetinfo/2008,A,Transform/대장군,,exp,0.1,Avartainfo/2006,6,TRUE,item,
+A2009,9,설날위장이벤트(사또),경험치 획득량 증가 +5%,Avartaname/2009,,AvartaGetinfo/2009,A,Transform/사또,,exp,0.05,Avartainfo/2006,5,TRUE,item,
+A2010,10,망령기사,경험치 획득량 증가 +5%,Avartaname/2010,,AvartaGetinfo/2010,A,Transform/망령기사,,exp,0.1,Avartainfo/2006,6,TRUE,item,
+A2011,11,호박기사,경험치 획득량 증가 +5%,Avartaname/2011,,AvartaGetinfo/2011,A,Transform/호박기사1,,exp,0.05,Avartainfo/2006,5,TRUE,item,
+A2012,12,화이트슈트,경험치 획득량 증가 +5%,Avartaname/2012,,AvartaGetinfo/2000,A,Transform/화이트슈트,,allstat,0.04,Avartainfo/2002,5,TRUE,crystal,20000
+A2013,13,카타나,,Avartaname/2013,,AvartaGetinfo/2000,W,위장/무기위장/0,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2014,14,할버드,,Avartaname/2014,,AvartaGetinfo/2000,W,위장/무기위장/1,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2015,15,글레이브,,Avartaname/2015,,AvartaGetinfo/2000,W,위장/무기위장/2,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2016,16,도깨비 방망이,,Avartaname/2016,,AvartaGetinfo/2000,W,위장/무기위장/3,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2017,17,목검,,Avartaname/2017,,AvartaGetinfo/2000,W,위장/무기위장/4,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2018,18,독검,,Avartaname/2018,,AvartaGetinfo/2000,W,위장/무기위장/5,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2019,19,해골 지팡이,,Avartaname/2019,,AvartaGetinfo/2000,W,위장/무기위장/6,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2020,20,나무 지팡이,,Avartaname/2020,,AvartaGetinfo/2000,W,위장/무기위장/7,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2021,21,악마 지팡이,,Avartaname/2021,,AvartaGetinfo/2000,W,위장/무기위장/8,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2022,22,황금 검,,Avartaname/2022,,AvartaGetinfo/2000,W,위장/무기위장/9,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2023,23,악마 창,,Avartaname/2023,,AvartaGetinfo/2000,W,위장/무기위장/10,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2024,24,삼지창,,Avartaname/2024,,AvartaGetinfo/2000,W,위장/무기위장/11,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2025,25,전투 도끼,,Avartaname/2025,,AvartaGetinfo/2000,W,위장/무기위장/12,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2026,26,채찍,,Avartaname/2026,,AvartaGetinfo/2000,W,위장/무기위장/13,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2027,27,랜턴,,Avartaname/2027,,AvartaGetinfo/2000,W,위장/무기위장/14,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2028,28,물병,,Avartaname/2028,,AvartaGetinfo/2000,W,위장/무기위장/15,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2029,29,피 뭍은 막대,,Avartaname/2029,,AvartaGetinfo/2000,W,위장/무기위장/16,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2030,30,대검,,Avartaname/2030,,AvartaGetinfo/2000,W,위장/무기위장/17,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2031,31,랜스,,Avartaname/2031,,AvartaGetinfo/2000,W,위장/무기위장/18,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2032,32,철퇴,,Avartaname/2032,,AvartaGetinfo/2000,W,위장/무기위장/19,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2033,33,블러드 베인,,Avartaname/2033,,AvartaGetinfo/2000,W,위장/무기위장/20,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2034,34,블러드 액스,,Avartaname/2034,,AvartaGetinfo/2000,W,위장/무기위장/21,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2035,35,럭키박스,,Avartaname/2035,,AvartaGetinfo/2000,W,위장/무기위장/22,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2036,36,검은검,,Avartaname/2036,,AvartaGetinfo/2000,W,위장/무기위장/23,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2037,37,칠지도,,Avartaname/2037,,AvartaGetinfo/2000,W,위장/무기위장/24,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2038,38,목궁,,Avartaname/2038,,AvartaGetinfo/2000,W,위장/무기위장/25,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2039,39,라이트닝,,Avartaname/2039,,AvartaGetinfo/2000,W,위장/무기위장/26,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2040,40,그물,,Avartaname/2040,,AvartaGetinfo/2000,W,위장/무기위장/27,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2041,41,큰 철퇴,,Avartaname/2041,,AvartaGetinfo/2000,W,위장/무기위장/28,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2042,42,도끼,,Avartaname/2042,,AvartaGetinfo/2000,W,위장/무기위장/29,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2043,43,활,,Avartaname/2043,,AvartaGetinfo/2000,W,위장/무기위장/30,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2044,44,주술 지팡이,,Avartaname/2044,,AvartaGetinfo/2000,W,위장/무기위장/31,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2045,45,루비 지팡이,,Avartaname/2045,,AvartaGetinfo/2000,W,위장/무기위장/32,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2046,46,다크 글레이브,,Avartaname/2046,,AvartaGetinfo/2000,W,위장/무기위장/33,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2047,47,곡괭이,,Avartaname/2047,,AvartaGetinfo/2000,W,위장/무기위장/34,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2048,48,기습단검,,Avartaname/2048,,AvartaGetinfo/2000,W,위장/무기위장/35,,allstat,0.02,Avartainfo/2000,5,TRUE,crystal,10000
+A2049,49,언월도,,Avartaname/2049,,AvartaGetinfo/2009,W,위장/무기위장/36,,gold,0.15,Avartainfo/2007,6,TRUE,item,

@@ -1,0 +1,146 @@
+ids,namedes,infodes,name,sprite,productid,price,producttype,enumname,isnew,,,
+1000,부스터 31일,부스터 31일,Shopname/1000,Shopinfo/1000,50;1003,1;110,Item/Consume/Boost,rpgg2.ellibless30,11000,all,,FALSE
+1001,부스터 15일,부스터 15일,Shopname/1001,Shopinfo/1001,51;1003,1;66,Item/Consume/Boost,rpgg2.ellibless15,6600,all,,FALSE
+1002,던전 입장 패키지,던전 입장권 불꽃,Shopname/1002,Shopinfo/1002,1711;1001;1003,300;1000;220,Item/ETC/DungeonPass,rpgg2.dungeonenter10,11000,weekly,프상장비강화패키지,FALSE
+1003,장비 강화 패키지," (등급,품질,특수효과 10개씩)",Shopname/1003,Shopinfo/1003,52;53;54;1003,10;10;10;220,Item/Consume/Paper/quest_27,rpgg2.equip.package,11000,weekly,프상던전입장권패키지,FALSE
+1004,크리스탈 4000개,크리스탈 4000개,Shopname/1004,Shopinfo/1004,1001;1003,4000;55,Item/ETC/Fire,rpgg2.fire.4000,5500,all,,FALSE
+1005,크리스탈 8000+500개,크리스탈 8000+500개,Shopname/1005,Shopinfo/1005,1001;1001;1003,8000;500;110,Item/ETC/Fire,rpgg2.fire.8500,11000,all,,FALSE
+1006,크리스탈 24000+1500개,크리스탈 24000+1500개,Shopname/1006,Shopinfo/1006,1001;1001;1003,24000;1500;330,Item/ETC/Fire,rpgg2.fire.25500,33000,all,,FALSE
+1007,크리스탈 40000+5000개,크리스탈 40000+5000개,Shopname/1007,Shopinfo/1007,1001;1001;1003,40000;5000;550,Item/ETC/Fire,rpgg2.fire.45000,55000,all,,FALSE
+1008,크리스탈 80000+15000개,크리스탈 80000+15000개,Shopname/1008,Shopinfo/1008,1001;1001;1003,80000;15000;1110,Item/ETC/Fire,rpgg2.fire.95000,110000,all,,FALSE
+1010,제련석 패키지,제련석 패키지,Shopname/1010,Shopinfo/1010,99000;1001;1003,300;400;220,Item/Resource/acientresource/제련석,rpgg2.smelt.package,11000,weekly,프상제련석패키지,FALSE
+1011, ★1 신의 증표, ★1 신의 증표,Shopname/1011,Shopinfo/1011,4000;1003,1;11,Item/ETC/goldsafe2,rpgg2.class1,1100,all,,FALSE
+1012, ★2 신의 증표, ★2 신의 증표,Shopname/1012,Shopinfo/1012,4001;1003,1;22,Item/ETC/goldsafe2,rpgg2.class2,2200,all,,FALSE
+1013, ★3 신의 증표, ★3 신의 증표,Shopname/1013,Shopinfo/1013,4002;1003,1;33,Item/ETC/goldsafe2,rpgg2.class3,3300,all,,FALSE
+1014, ★4 신의 증표, ★4 신의 증표,Shopname/1014,Shopinfo/1014,4003;1003,1;55,Item/ETC/goldsafe2,rpgg2.class4,5500,all,,FALSE
+1015, ★5 신의 증표, ★5 신의 증표,Shopname/1015,Shopinfo/1015,4004;1003,1;110,Item/ETC/goldsafe2,rpgg2.class5,11000,all,,FALSE
+1016, ★6 신의 증표, ★6 신의 증표,Shopname/1016,Shopinfo/1016,4005;1003,1;330,Item/ETC/goldsafe2,rpgg2.class6,33000,all,,FALSE
+1017,1100 패키지,"3성 직업권 1개
+3성 무기 방어구
+제단석 50개",Shopname/1017,Shopinfo/1017,4002;40003;1003,1;20;22,Item/Consume/Box/chest_1,rpgg2.package.1100,1100,one,,FALSE
+1018,5500 패키지,"4성 직업권 1개
+4성 무기 방어구
+제단석 50개",Shopname/1018,Shopinfo/1018,4003;40004;1003,1;20;22,Item/Consume/Box/chest_2,rpgg2.package.5500,5500,one,,FALSE
+1019,11000 패키지,"악세 무기 선택
+5성 무기 방어구
+도전장 100장
+품질 패키지 10개씩",Shopname/1019,Shopinfo/1019,4004;40005;1003,1;10;22,Item/Consume/Box/chest_3,rpgg2.package.11000,11000,one,,FALSE
+1020,33000 패키지,"6성 직업 선택권
+레이즈무기,숲 보조무기 선택권
+품질 패키지 50개씩
+제련석 100개",Shopname/1020,Shopinfo/1020,4005;40005;1003,1;30;22,Item/Consume/Box/chest_4,rpgg2.package.33000,33000,one,,FALSE
+1021,광고 무제한 제거,광고 무제한 제거,Shopname/1021,Shopinfo/1021,55,1,Item/Consume/Icon48,rpgg2.ads.free,11000,one,,FALSE
+1022,장비 품질 집중 패키지,품질 40장,Shopname/1022,Shopinfo/1022,52;1005;1003,50;10;220,Item/Consume/Paper/quest_27,rpgg2.equip.package1,11000,one,,FALSE
+1023,장비 등급 집중 패키지,등급 40장,Shopname/1023,Shopinfo/1023,53;1005;1003,50;10;220,Item/Consume/Paper/quest_28,rpgg2.equip.package2,11000,one,,FALSE
+1024,장비 특수효과 집중 패키지,특효 40장,Shopname/1024,Shopinfo/1024,54;1005;1003,50;10;220,Item/Consume/Paper/quest_25,rpgg2.equip.package3,11000,one,,FALSE
+1025,던전 입장권 집중 패키지,던전 입장권 불꽃,Shopname/1025,Shopinfo/1025,1711;1001;1003,600;1000;220,Item/ETC/DungeonPass,rpgg2.dungeonenter200,11000,one,,FALSE
+1026,크리스탈 4000개,크리스탈 4000+4000개,Shopname/1026,Shopinfo/1026,1001;1001;1003,4000;4000;55,Item/ETC/Fire,rpgg2.fire.40002,5500,one,,FALSE
+1027,크리스탈 8000+500개 2배,크리스탈 8000+500개,Shopname/1027,Shopinfo/1027,1001;1001;1003,8500;8500;110,Item/ETC/Fire,rpgg2.fire.85002,11000,one,,FALSE
+1028,크리스탈 24000+1500개,크리스탈 24000+1500개,Shopname/1028,Shopinfo/1028,1001;1001;1003,25500;25500;330,Item/ETC/Fire,rpgg2.fire.255002,33000,one,,FALSE
+1029,크리스탈 40000+5000개,크리스탈 40000+5000개,Shopname/1029,Shopinfo/1029,1001;1001;1003,45000;45000;550,Item/ETC/Fire,rpgg2.fire.450002,55000,one,,FALSE
+1030,크리스탈 80000+15000개,크리스탈 80000+15000개,Shopname/1030,Shopinfo/1030,1001;1001;1003,95000;95000;1110,Item/ETC/Fire,rpgg2.fire.950002,110000,one,,FALSE
+1031,장비 품질 집중 패키지,품질 30장,Shopname/1031,Shopinfo/1031,52;1003,30;220,Item/Consume/Paper/quest_27,rpgg2.equip.packagew1,11000,weekly,프상주간패키지재설정1,FALSE
+1032,장비 등급 집중 패키지,등급 30장,Shopname/1032,Shopinfo/1032,53;1003,30;220,Item/Consume/Paper/quest_28,rpgg2.equip.packagew2,11000,weekly,프상주간패키지재설정2,FALSE
+1033,장비 특수효과 집중 패키지,특효 30장,Shopname/1033,Shopinfo/1033,54;1003,30;220,Item/Consume/Paper/quest_25,rpgg2.equip.packagew3,11000,weekly,프상주간패키지재설정3,FALSE
+1034,장비 품질 집중 패키지★,품질 30장,Shopname/1034,Shopinfo/1034,52;1003,100;660,Item/Consume/Paper/quest_27,rpgg2.equip.packagew12,33000,weekly,프상주간패키지재설정1_2,FALSE
+1035,장비 등급 집중 패키지★,등급 30장,Shopname/1035,Shopinfo/1035,53;1003,100;660,Item/Consume/Paper/quest_28,rpgg2.equip.packagew22,33000,weekly,프상주간패키지재설정2_2,FALSE
+1036,장비 특수효과 집중 패키지★,특효 30장,Shopname/1036,Shopinfo/1036,54;1003,100;660,Item/Consume/Paper/quest_25,rpgg2.equip.packagew32,33000,weekly,프상주간패키지재설정3_2,FALSE
+1037,레이드 충전권 패키지,레이드 충전권 20장,Shopname/1037,Shopinfo/1037,200000;1003,20;220,Item/Consume/Paper/quest_82,rpgg2.consume.raid1,11000,weekly,프상주간패키지레이드1,FALSE
+1038,레이드 충전권 패키지★,레이드 충전권 80장,Shopname/1038,Shopinfo/1038,200000;1003,80;620,Item/Consume/Paper/quest_82,rpgg2.consume.raid2,33000,weekly,프상주간패키지레이드2,FALSE
+1039,슈퍼 성장 패키지,"6성 직업 선택권 1장
+T10 무기
+숲 보조무기 선택권
+방어구 악세서리
+품질 패키지 60개씩
+제련석 120개
+200레벨 권",Shopname/1039,Shopinfo/1039,4005;521;512;522;523;200003;52;53;54;1711;99000;1003,1;1;1;1;1;1;50;50;50;900;2000;1100,Item/Consume/Box/죽은왕상자,rpgg2.all.package1,55000,one,,FALSE
+1040,초고속 성장 패키지,"6성 직업 선택권 2장
+악몽 주무기
+악몽 보조무기
+악몽 방어구 세트
+1~3단계 스킬북 상자 1개
+4~6단계 스킬북 상자 1개
+황금 룰렛 열쇠 20개
+골드 300억
+품질 패키지 100개씩
+던전 입장권 300개
+제련석 5000개
+700레벨 권",Shopname/1040,Shopinfo/1040,200007;4005;5450;546;547;548;532;533;40005;40002;526;1711;99000;1003,1;2;2;1;2;1;1;1;20;600;10;900;5000;2200,Item/Consume/Box/죽은왕상자,rpgg2.all.package2,110000,one,,FALSE
+1041,제단 강화석 주간 패키지,제단 강화석 주간 패키지,Shopname/1041,Shopinfo/1041,1712;1003,800;220,Item/ETC/OpenBox,rpgg2.altar.package1,11000,weekly,프상주간패키지제단석1,FALSE
+1042,제단 강화석 주간 패키지★,제단 강화석 주간 패키지★,Shopname/1042,Shopinfo/1042,1712;1003,2400;660,Item/ETC/OpenBox,rpgg2.altar.package2,33000,weekly,프상주간패키지제단석2,FALSE
+1043,크리스탈 4000개,크리스탈 4000+4000개,Shopname/1026,Shopinfo/1026,1001;1001;1003,4000;4000;55,Item/ETC/Fire,rpgg2.fire.40002,5500,monthly,크리스탈5500,FALSE
+1044,크리스탈 8000+500개 2배,크리스탈 8000+500개,Shopname/1027,Shopinfo/1027,1001;1001;1003,8500;8500;110,Item/ETC/Fire,rpgg2.fire.85002,11000,monthly,크리스탈11000,FALSE
+1045,크리스탈 24000+1500개,크리스탈 24000+1500개,Shopname/1028,Shopinfo/1028,1001;1001;1003,25500;25500;330,Item/ETC/Fire,rpgg2.fire.255002,33000,monthly,크리스탈33000,FALSE
+1046,크리스탈 40000+5000개,크리스탈 40000+5000개,Shopname/1029,Shopinfo/1029,1001;1001;1003,45000;45000;550,Item/ETC/Fire,rpgg2.fire.450002,55000,monthly,크리스탈55000,FALSE
+1047,크리스탈 80000+15000개,크리스탈 80000+15000개,Shopname/1030,Shopinfo/1030,1001;1001;1003,95000;95000;1110,Item/ETC/Fire,rpgg2.fire.950002,110000,monthly,크리스탈110000,FALSE
+1048,장비 제작 패키지,장비 파편 500000개 + 골드 30억 + 신화 제작서 10개,Shopname/1048,Shopinfo/1048,17;1700;1006,30;500000;10,Item/Resource/3.Godlike,rpgg2.resource.package1,22000,weekly,프상주간패키지제작1,FALSE
+1049,스킬북 패키지 1,"스킬북 조각 3000 , 스킬룬1 15개 , 신화 제작비법서 5개 + 악몽의 파편 1000개",Shopname/1049,Shopinfo/1049,1716;1710;1006;16;1003,20;5000;5;1000;110,Item/ETC/RUNE1,rpgg2.package.skill1,11000,weekly,프상스킬북패키지1,FALSE
+1050,스킬북 패키지 2,"스킬북 조각 3000 , 스킬룬1 15개 , 신화 제작비법서 5개 + 악몽의 파편 1000개",Shopname/1050,Shopinfo/1050,1717;1716;1710;1006;16;1003,20;50;10000;11;2000;220,Item/ETC/RUNE2,rpgg2.package.skill2,22000,weekly,프상스킬북패키지2,FALSE
+1051,스킬북 패키지 3,"스킬북 조각 3000 , 스킬룬1 15개 , 신화 제작비법서 5개 + 악몽의 파편 1000개",Shopname/1051,Shopinfo/1051,1718;1717;1716;1710;1006;16;1003,30;50;100;20000;18;3000;330,Item/ETC/RUNE3,rpgg2.package.skill3,33000,weekly,프상스킬북패키지3,FALSE
+1052,대마법사의 묘 입장권1,마법사의 묘 입장권1,Shopname/1052,Shopinfo/1052,1750;1001;1003,10;8000;110,Item/ETC/DungeonPass2,rpgg2.package.content1,11000,weekly,프상마법사입장권패키지1,FALSE
+1053,대마법사의 묘 입장권2,마법사의 묘 입장권2,Shopname/1053,Shopinfo/1053,1750;1001;1003,30;24000;330,Item/ETC/DungeonPass2,rpgg2.package.content2,33000,weekly,프상마법사입장권패키지2,FALSE
+1054,악몽의 파편 패키지,악몽 파편 꾸러미,Shopname/1054,Shopinfo/1054,16;1006;1003,5000;10;110,Item/Resource/Scale2,rpgg2.package.etc1,11000,,,FALSE
+1055,지옥의 파편 패키지,지옥 파편 꾸러미,Shopname/1055,Shopinfo/1055,18;1006;1003,5000;10;110,Item/Resource/완벽한룬의기억 1,rpgg2.package.etc1,11000,,,FALSE
+1056,승급석 패키지,승급석 패키지,Shopname/1056,Shopinfo/1056,50000;1003,15;220,Item/Resource/DungeonChange1,rpgg2.package.advan1,22000,weekly,프상승급석패키지,FALSE
+1057,룰렛 초보자 패키지1,5500 당 10개,Shopname/1057,Shopinfo/1057,40003;1003,10;55,Item/Consume/Box2/Icon27,rpgg2.roulette.01,5500,,,FALSE
+1058,룰렛 초보자 패키지2,11000당 22개,Shopname/1058,Shopinfo/1058,40003;1003,22;110,Item/Consume/Box2/Icon27,rpgg2.roulette.02,11000,,,FALSE
+1059,룰렛 초보자 패키지3,33000당 70개,Shopname/1059,Shopinfo/1059,40003;1003,70;330,Item/Consume/Box2/Icon27,rpgg2.roulette.03,33000,,,FALSE
+1060,룰렛 모험가 ,11000 당 15개,Shopname/1060,Shopinfo/1060,40004;1003,15;110,Item/Consume/Box2/Icon25,rpgg2.roulette.04,11000,,,FALSE
+1061,룰렛 모험가 ,33000당 48개,Shopname/1061,Shopinfo/1061,40004;1003,48;330,Item/Consume/Box2/Icon25,rpgg2.roulette.05,33000,,,FALSE
+1062,룰렛 모험가 ,55000당 83개,Shopname/1062,Shopinfo/1062,40004;1003,83;550,Item/Consume/Box2/Icon25,rpgg2.roulette.06,55000,,,FALSE
+1063,룰렛 프리미엄,11000 당 6개,Shopname/1063,Shopinfo/1063,40005;1003,6;110,Item/Consume/Box2/Icon26,rpgg2.roulette.07,11000,,,FALSE
+1064,룰렛 프리미엄,33000 당 20개,Shopname/1064,Shopinfo/1064,40005;1003,20;330,Item/Consume/Box2/Icon26,rpgg2.roulette.08,33000,,,FALSE
+1065,룰렛 프리미엄,99000 당 70개,Shopname/1065,Shopinfo/1065,40005;1003,70;990,Item/Consume/Box2/Icon26,rpgg2.roulette.09,99000,,,FALSE
+1066,[BF]성장 콘텐츠 입장권 패키지Ⅱ,마법사의 묘 입장권2,Shopname/1066,Shopinfo/1066,1750;1001;1003,30;24000;110,Item/ETC/DungeonPass2,rpgg2.package2023.bf1,11000,one,,FALSE
+1067,[BF]스킬북 패키지Ⅲ,"스킬북 조각 3000 , 스킬룬1 15개 , 신화 제작비법서 5개 + 악몽의 파편 1000개",Shopname/1067,Shopinfo/1067,1718;1717;1716;1710;1006;16;1003,30;50;100;20000;18;3000;110,Item/ETC/RUNE3,rpgg2.package2023.bf2,11000,one,,FALSE
+1068,[BF]악몽 파편 꾸러미,악몽 파편 꾸러미,Shopname/1068,Shopinfo/1068,16;1006;1003,5000;10;55,Item/Resource/Scale2,rpgg2.package2023.bf3,5500,daily,블랙프라이데이악몽,FALSE
+1069,[BF]지옥 파편 꾸러미,지옥 파편 꾸러미,Shopname/1069,Shopinfo/1069,18;1006;1003,5000;10;55,Item/Resource/완벽한룬의기억 1,rpgg2.package2023.bf4,5500,daily,블랙프라이데이지옥,FALSE
+1070,[BF]제단석 패키지★,제단 강화석 주간 패키지★,Shopname/1070,Shopinfo/1070,1712;1003,2400;110,Item/ETC/OpenBox,rpgg2.package2023.bf5,11000,one,,FALSE
+1071,[BF]룰렛 열쇠 - 초보자 60+10개,33000당 70개,Shopname/1071,Shopinfo/1071,40003;1003,70;110,Item/Key/material_98,rpgg2.package2023.bf6,11000,one,,FALSE
+1072,[BF]룰렛 열쇠 - 모험가 45+3개,33000당 48개,Shopname/1072,Shopinfo/1072,40004;1003,48;110,Item/Key/material_68,rpgg2.package2023.bf7,11000,one,,FALSE
+1073,[BF]룰렛 열쇠 - 프리미엄 18+2개,33000 당 20개,Shopname/1073,Shopinfo/1073,40005;1003,20;110,Item/Key/material_48,rpgg2.package2023.bf8,11000,one,,FALSE
+1074,[BF]악몽 승급석 패키지,승급석 패키지,Shopname/1074,Shopinfo/1074,50000;1003,15;110,Item/Resource/DungeonChange1,rpgg2.package2023.bf9,11000,daily,블랙프라이데이승급,FALSE
+1075,[BF]1억 금괴 500개,500억,Shopname/1075,Shopinfo/1075,40002;1003,100;110,Item/유물/bag3,rpgg2.package2023.bf10,11000,one,,FALSE
+1076,[BF]엘리의 축복 (31일),부스터 31일,Shopname/1076,Shopinfo/1076,50;1003,1;110,Item/Consume/Boost,rpgg2.package2023.bf11,5500,one,,FALSE
+1077,[BF]스킬북 패키지Ⅱ,"스킬북 조각 3000 , 스킬룬1 15개 , 신화 제작비법서 5개 + 악몽의 파편 1000개",Shopname/1077,Shopinfo/1077,1717;1716;1710;1006;16;1003,20;50;10000;11;2000;55,Item/ETC/RUNE2,rpgg2.package2023.bf12,5500,one,,FALSE
+1078,[BF]장비 품질 주간 패키지,품질 30장,Shopname/1078,Shopinfo/1078,52;1003,100;110,Item/Consume/Paper/quest_27,rpgg2.package2023.bf13,11000,one,,FALSE
+1079,[BF]장비 등급 주간 패키지,등급 30장,Shopname/1079,Shopinfo/1079,53;1003,100;110,Item/Consume/Paper/quest_28,rpgg2.package2023.bf14,11000,one,,FALSE
+1080,[BF]장비 특수효과 주간 패키지,특효 30장,Shopname/1080,Shopinfo/1080,54;1003,100;110,Item/Consume/Paper/quest_25,rpgg2.package2023.bf15,11000,one,,FALSE
+1081,크리스마스 패키지,[이벤트]완성된 진저 쿠키 15+2개 상자,Shopname/1081,Shopinfo/1081,100107;1003,17;110,Item/Event/크리스마스/01_Gingerbread_Whole,rpgg2.package2023.ch1,11000,,,FALSE
+1082,크리스마스 패키지,[이벤트]완성된 진저 쿠키 30+7개 상자,Shopname/1082,Shopinfo/1082,100107;1003,37;220,Item/Event/크리스마스/01_Gingerbread_Whole,rpgg2.package2023.ch2,22000,,,FALSE
+1083,크리스마스 패키지,[이벤트]완성된 진저 쿠키  75+25개 + 상자,Shopname/1083,Shopinfo/1083,100107;1003,100;550,Item/Event/크리스마스/01_Gingerbread_Whole,rpgg2.package2023.ch3,55000,one,,FALSE
+10000,0,제단 강화 패키지 1/3,Shopname/10000,Shopinfo/10000,1712;1003,1200;55,Item/ETC/OpenBox,rpgg2.packagetime.1,5500,,,FALSE
+10001,1,제단 강화 패키지 2/3,Shopname/10001,Shopinfo/10001,1712;1003,2400;110,Item/ETC/OpenBox,rpgg2.packagetime.2,11000,,,FALSE
+10002,2,제단 강화 패키지 3/3,Shopname/10002,Shopinfo/10002,1712;1003,4800;220,Item/ETC/OpenBox,rpgg2.packagetime.3,22000,,,FALSE
+10003,3,스킬북 패키지 1/3,Shopname/10003,Shopinfo/10003,532;1003,1;55,Item/Consume/Box/드래곤체스트,rpgg2.packagetime.4,5500,,,FALSE
+10004,4,스킬북 패키지 2/3,Shopname/10004,Shopinfo/10004,533;1003,1;110,Item/Consume/Box/드래곤체스트,rpgg2.packagetime.5,11000,,,FALSE
+10005,5,스킬북 패키지 3/3,Shopname/10005,Shopinfo/10005,534;1003,1;220,Item/Consume/Box/드래곤체스트,rpgg2.packagetime.6,22000,,,FALSE
+10006,6,개미굴 제단 강화석 패키지 1/3,Shopname/10006,Shopinfo/10006,1714;1003,100;55,Item/Resource/신악세파편칼날,rpgg2.packagetime.7,5500,,,FALSE
+10007,7,개미굴 제단 강화석 패키지 2/3,Shopname/10007,Shopinfo/10007,1714;1003,200;110,Item/Resource/신악세파편칼날,rpgg2.packagetime.8,11000,,,FALSE
+10008,8,개미굴 제단 강화석 패키지 3/3,Shopname/10008,Shopinfo/10008,1714;1003,400;220,Item/Resource/신악세파편칼날,rpgg2.packagetime.9,22000,,,FALSE
+10009,9,룰렛 열쇠 - 프리미엄 패키지 1/3,Shopname/10009,Shopinfo/10009,40005;1003,10;55,Item/Consume/Box2/Icon26,rpgg2.packagetime.10,5500,,,FALSE
+10010,10,룰렛 열쇠 - 프리미엄 패키지 2/3,Shopname/10010,Shopinfo/10010,40005;1003,20;110,Item/Consume/Box2/Icon26,rpgg2.packagetime.11,11000,,,FALSE
+10011,11,룰렛 열쇠 - 프리미엄 패키지 3/3,Shopname/10011,Shopinfo/10011,40005;1003,40;220,Item/Consume/Box2/Icon26,rpgg2.packagetime.12,22000,,,FALSE
+10012,12,성장 콘텐츠 패키지 1/3,Shopname/10012,Shopinfo/10012,1750;1001;1003,15;12000;55,Item/ETC/DungeonPass2,rpgg2.packagetime.13,5500,,,FALSE
+10013,13,성장 콘텐츠 패키지 2/3,Shopname/10013,Shopinfo/10013,1750;1001;1003,30;24000;110,Item/ETC/DungeonPass2,rpgg2.packagetime.14,11000,,,FALSE
+10014,14,성장 콘텐츠 패키지 3/3,Shopname/10014,Shopinfo/10014,1750;1001;1003,60;48000;220,Item/ETC/DungeonPass2,rpgg2.packagetime.15,22000,,,FALSE
+10015,15,악몽 장비 승급석 패키지 1/3,Shopname/10015,Shopinfo/10015,50000;1003,8;55,Item/Resource/DungeonChange1,rpgg2.packagetime.16,5500,,,FALSE
+10016,16,악몽 장비 승급석 패키지 2/3,Shopname/10016,Shopinfo/10016,50000;1003,16;110,Item/Resource/DungeonChange1,rpgg2.packagetime.17,11000,,,FALSE
+10017,17,악몽 장비 승급석 패키지 3/3,Shopname/10017,Shopinfo/10017,50000;1003,32;220,Item/Resource/DungeonChange1,rpgg2.packagetime.18,22000,,,FALSE
+10018,18,유물 수집 패키지 1/3,Shopname/10018,Shopinfo/10018,90000;90001;90002;1003,50;50;50;55,Item/유물/갑옷조각,rpgg2.packagetime.19,5500,,,FALSE
+10019,19,유물 수집 패키지 2/3,Shopname/10019,Shopinfo/10019,90000;90001;90002;1003,50;50;50;1003,Item/유물/갑옷조각,rpgg2.packagetime.20,11000,,,FALSE
+10020,20,유물 수집 패키지 3/3,Shopname/10020,Shopinfo/10020,90000;90001;90002;1003,50;50;50;1003,Item/유물/갑옷조각,rpgg2.packagetime.21,22000,,,FALSE
+10021,21,룬 제련 패키지 1/3,Shopname/10021,Shopinfo/10021,99001;1003,200;55,Item/룬/Icon27,rpgg2.packagetime.22,5500,,,FALSE
+10022,22,룬 제련 패키지 2/3,Shopname/10022,Shopinfo/10022,99001;1003,400;110,Item/룬/Icon27,rpgg2.packagetime.23,11000,,,FALSE
+10023,23,룬 제련 패키지 3/3,Shopname/10023,Shopinfo/10023,99001;1003,800;220,Item/룬/Icon27,rpgg2.packagetime.24,22000,,,FALSE
+1084,크리스마스 위장 패키지,산타 클로스 + 캔디콘,Shopname/1084,Shopinfo/1084,100107;40014;40015;1003,35;1;1;330,Transform/산타,rpgg2.package2023.ch4,33000,one,,TRUE
+1085,설날 위장 패키지,설날 위장 + 무기,Shopname/1085,Shopinfo/1085,50006;40016;40018;1003,20;1;1;220,Transform/대장군,rpgg2.package2024.ny1,33000,one,,TRUE
+1086,설날 펫 패키지,펫 티켓,Shopname/1086,Shopinfo/1086,50006;50007;1003,30;600;220,Item/Consume/Paper/quest_83,rpgg2.package2024.ny2,22000,one,,TRUE
+1087,설날 장비 강화 패키지,무기강화석 촉진제 등,Shopname/1087,Shopinfo/1087,50005;50002;50003;50004;1003,500;200;200;200;330,Item/Resource/강화촉진제,rpgg2.package2024.ny3,22000,one,,TRUE
+1088,장비 강화 촉진 가루,장비 강화 촉진 가루,Shopname/1088,Shopinfo/1088,50005;1003,200;110,Item/Resource/강화촉진제,rpgg2.package.up.1,11000,,,TRUE
+1089,고급 펫 상자 티켓,펫 티켓,Shopname/1089,Shopinfo/1089,50006;1003,10;110,Item/Consume/Paper/quest_83,rpgg2.package.pet.1,11000,weekly,프상주간펫패키지1,TRUE
+1090,고급 펫 상자 티켓,펫 티켓,Shopname/1090,Shopinfo/1090,50006;1003,34;330,Item/Consume/Paper/quest_83,rpgg2.package.pet.2,33000,weekly,프상주간펫패키지2,TRUE
+1091,설날 복주머니,무기강화석 촉진제 등,Shopname/1091,Shopinfo/1091,565;1003,20;55,Item/Event/설날/설날복주머니,rpgg2.package2024.ny4,5500,,,TRUE
+10024,24,펫 패키지 1/3,Shopname/10024,Shopinfo/10024,50006;1003,10;55,Item/Consume/Paper/quest_83,rpgg2.packagetime.25,5500,,,FALSE
+10025,25,펫 패키지 2/3,Shopname/10025,Shopinfo/10025,50006;1003,20;110,Item/Consume/Paper/quest_83,rpgg2.packagetime.26,11000,,,FALSE
+10026,26,펫 패키지 3/3,Shopname/10026,Shopinfo/10026,50006;1003,40;220,Item/Consume/Paper/quest_83,rpgg2.packagetime.27,22000,,,FALSE
