@@ -949,6 +949,7 @@ public class Settingmanager : MonoBehaviour
             Savemanager.Instance.SaveEvery();
             // LogManager.OfflineRewardLog();
             isPaused = true;
+            PartyRaidRoommanager.Instance.Bt_ExitRoom();
             SaveOffline();
             /* 앱이 비활성화 되었을 때 처리 */
         }

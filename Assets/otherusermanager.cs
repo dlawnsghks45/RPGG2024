@@ -1021,18 +1021,25 @@ public class otherusermanager : MonoBehaviour
      public Text ChatReportUserNameText;
      public GameObject[] ChatuserButton;
 
+     
+     public GameObject InviteButton;
+     public GameObject WithdrawpartyButton;
+     
      public InputField ChatReportInput;
      public InputField ChatReportInput2;
      //채팅 유저 정보
      public void Bt_ShowChatUserData(Sprite body,Sprite main,Sprite sub,string username)
      {
+         if(username == PlayerBackendData.Instance.nickname)
+             return; 
          ChatUserImage[0].sprite = body;
          ChatUserImage[1].sprite = main;
          ChatUserImage[2].sprite = sub;
          ChatUserNameText.text = username;
          ChatReportUserNameText.text = username;
          bool isUnblock = Backend.Chat.IsUserBlocked(username);
-
+         InviteButton.SetActive(false);
+         WithdrawpartyButton.SetActive(false);
          if (isUnblock)
          {
              Debug.Log("해당 유저는 차단된 상태입니다.");
@@ -1045,6 +1052,30 @@ public class otherusermanager : MonoBehaviour
              ChatuserButton[0].SetActive(true);
              ChatuserButton[1].SetActive(false);
          }
+
+         //리더만 초대가 뜬다.
+         if (PartyRaidRoommanager.Instance.nowmyleadernickname == PlayerBackendData.Instance.nickname)
+         {
+             bool ishave = false;
+             for (int i = 0; i < PartyRaidRoommanager.Instance.PartyMember.Length; i++)
+             {
+                 if (PartyRaidRoommanager.Instance.PartyMember[i].data.nickname == username)
+                 {
+                     ishave = true;
+                     break;
+                 }
+             }
+             if (ishave)
+             {
+                 WithdrawpartyButton.SetActive(true);
+             }
+             else
+             {
+                 InviteButton.SetActive(true);
+             }
+             //내 유저라면
+         }
+         
          ChatUserPanel.Show(false);
      }
 
@@ -1078,6 +1109,30 @@ public class otherusermanager : MonoBehaviour
      public void Bt_UnBanChat()
      {
          chatmanager.Instance.UnBlockUser(ChatUserNameText.text);
+     }
+
+     public void Bt_InviteParty()
+     {
+         for (int i = 0; i < PartyRaidRoommanager.Instance.PartyMember.Length; i++)
+         {
+             if (PartyRaidRoommanager.Instance.PartyMember[i].data == null)
+             {
+                 PartyraidChatManager.Instance.Chat_invitePlayer(ChatUserNameText.text);
+                 break;
+             }
+         }
+     }
+
+     public void Bt_ExitParty()
+     {
+         Debug.Log(ChatUserNameText.text);
+
+         Debug.Log(PartyRaidRoommanager.Instance.PartyMember[PartyRaidRoommanager.Instance.SelectPartyUsernum].data.nickname);
+         if (PartyRaidRoommanager.Instance.PartyMember[PartyRaidRoommanager.Instance.SelectPartyUsernum].data.nickname == ChatUserNameText.text)
+         {
+             PartyraidChatManager.Instance.Chat_WithdrawMember(ChatUserNameText.text);
+             ChatUserPanel.Hide(false);
+         }
      }
 
      public void Bt_ReportPlayer()

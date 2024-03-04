@@ -118,7 +118,7 @@ public class PlayerBackendData : MonoBehaviour
         
         if (avata_weapon != "")
         {
-            weaponavata = AvartaDB.Instance.Find_id(avata_weapon).equipsprite;
+            weaponavata = AvartaDB.Instance.Find_id(avata_weapon).sprite;
         }
         else
         {

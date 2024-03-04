@@ -181,12 +181,13 @@ public class chatmanager : MonoBehaviour
                 if (args.Message.Contains(publicsystem))
                 {
                     string[] stringdata = args.Message.Split(';');
+//                    Debug.Log(stringdata);
                     //[0]은 시스템 번호 1은 다른 거
                     switch (stringdata[1])
                     {
                         case "SU":
                             ShowSystemChat(args.From.NickName,
-                                string.Format(Inventory.GetTranslate("UI6/채팅_제련성공"), 
+                                string.Format(Inventory.GetTranslate("UI6/채팅_제련성공"),
                                     stringdata[2], //이름
                                     Inventory.Instance.GetRareColorFF(stringdata[3]),
                                     Inventory.GetTranslate(EquipItemDB.Instance.Find_id(stringdata[4]).Name), //징비색
@@ -200,10 +201,10 @@ public class chatmanager : MonoBehaviour
                             ShowSystemChat(args.From.NickName,
                                 string.Format(Inventory.GetTranslate("UI6/채팅_룰렛뽑기"),
                                     stringdata[2],
-                                    Inventory.Instance.GetRareColorFF(item.rare), 
+                                    Inventory.Instance.GetRareColorFF(item.rare),
                                     Inventory.GetTranslate(item.name),
-                                    Inventory.Instance.GetRareColorFF(item2.rare), 
-                                    Inventory.GetTranslate(item2.name),stringdata[5]),
+                                    Inventory.Instance.GetRareColorFF(item2.rare),
+                                    Inventory.GetTranslate(item2.name), stringdata[5]),
                                 false);
                             break;
                         case "EUP":
@@ -224,6 +225,179 @@ public class chatmanager : MonoBehaviour
                                     Inventory.GetTranslate(PetDB.Instance.Find_id(stringdata[4])
                                         .name)), false);
                             break;
+
+
+                        #region 파티레이드
+                        //파티장이 유저에게 초대를 보낸걸 리시브
+                        case "PI":
+                            if (stringdata[3] != (PlayerBackendData.Instance.nickname))
+                            {
+                                break;
+                            }
+
+                            if (PartyRaidRoommanager.Instance.nowmyleadernickname !=
+                                PlayerBackendData.Instance.nickname)
+                            {
+                                Debug.Log("리더는 현재 내가 아니다.");
+                                break;
+                            }
+                            
+                            Debug.Log("초대를 받았다");
+                            //system;PI;내이름;유저이름;mapname;level
+                            PartyRaidRoommanager.Instance.ShowInvitedPanel(stringdata[4], int.Parse(stringdata[5]), stringdata[2]);
+                            break;
+                        case "PA":
+                            if (stringdata[2] != (PlayerBackendData.Instance.nickname))
+                            {
+                                break;
+                            }
+                            Debug.Log("파티원이 내 초대를 수락 했다.");
+                            //system;PA;리더이름;파티원이름
+                            //그래서 받은 파장이 파티원에게 데이터를 보냄.
+                            string[] Partymemberdata= args.Message.Split('&');
+                            bool ishave= false;
+                            for (int i = 0; i < PartyRaidRoommanager.Instance.PartyMember.Length; i++)
+                            {
+                                //데이터를 빈자리에 넣는다.
+                                if (PartyRaidRoommanager.Instance.PartyMember[i].data == null)
+                                {
+                                    Debug.Log("빈자리에데이터"+i);
+                                    PartyRaidRoommanager.Instance.PartyMember[i].SetPlayerData(Partymemberdata[1],i);
+                                    ishave = true;
+                                    break;
+                                }
+                            }
+
+                            if (ishave)
+                            {
+                                //자리가 있어서 초대
+                                Debug.Log("자리가있다");
+                                Debug.Log(stringdata[3]);
+                                string[] a = args.Message.Split('&');
+                                string[] b = a[0].Split(';');
+                                PartyraidChatManager.Instance.Chat_GivePartyData(b[3]);
+                            }
+                            else
+                            {
+                                Debug.Log("자리가없다");
+                                //자리가 없다
+                            }
+                            break;
+                        //파티원에게 데이터를 줌.
+                        case "PGD":
+                            if (PartyRaidRoommanager.Instance.nowmyleadernickname != stringdata[2])
+                                break;
+                            //system; 0
+                            //PGD 1;
+                            //파장이름; 2
+                            //해당유저; 3
+                            //맵아이디; 4
+                            //맵난이도 5
+                            //&유저1; 0
+                            //유저2; 1
+                            //유저3; 2
+                            //유저4 3
+                            alertmanager.Instance.ShowAlert(string.Format(Inventory.GetTranslate("UI7/파티가입함"),stringdata[3]),alertmanager.alertenum.일반);
+                            string[] PartyData = args.Message.Split('&');
+                            string[] Partyplayerdata = PartyData[1].Split('#');
+                            int usercount = 0;
+                            for (int i = 0; i < Partyplayerdata.Length; i++)
+                            {
+                                if (Partyplayerdata[i] != "")
+                                {
+                                    usercount++;
+                                    PartyRaidRoommanager.Instance.PartyMember[i].SetPlayerData(Partyplayerdata[i],i);
+                                }
+                            }
+
+                            string[] roomddata = PartyData[0].Split(';');
+                         
+                            
+                            PartyRaidRoommanager.Instance.partyroomdata = new PartyRoom(roomddata[4],
+                                int.Parse(roomddata[5]), roomddata[2], usercount);
+
+                            PartyRaidRoommanager.Instance.RefreshPartyData();
+                            
+                            //그래서 받은 파장이 파티원에게 데이터를 보냄.
+                            break;
+                        
+                        //파티장이 방을 깸.
+                        case "PRB":
+                            //system;PRB;파티장이름
+                            if(PartyRaidRoommanager.Instance.nowmyleadernickname != stringdata[2])
+                                break;
+                            
+                            alertmanager.Instance.ShowAlert(string.Format(Inventory.GetTranslate("UI7/파티해체함"),stringdata[2]),alertmanager.alertenum.일반);
+                            Debug.Log("파티장이 방을 깼다 다 각자 다시 파장을 한다");
+                            PartyRaidRoommanager.Instance.Bt_MakeRoom();
+                            break;
+                        
+                        //파티원이 나감
+                        case "PRO":
+                            //파티원이 나갔다 현재 내 데이터에서 이 파티원을 빼자.
+                            //system;0
+                            //PRO;1
+                            //파티장이름;2
+                            //나간유저이름;3
+                            //나간유저 파티자리4
+
+                            //리더가 다르면 나간다.
+                            Debug.Log(stringdata[2]);
+                            Debug.Log(PartyRaidRoommanager.Instance.nowmyleadernickname);
+                            if(PartyRaidRoommanager.Instance.nowmyleadernickname != stringdata[2])
+                                break;
+                            
+                            
+                            alertmanager.Instance.ShowAlert(string.Format(Inventory.GetTranslate("UI7/파티탈퇴함"),stringdata[3]),alertmanager.alertenum.일반);
+                            Debug.Log("나간 유저의 파티 자리는" + stringdata[4]);
+                            PartyRaidRoommanager.Instance.PartyMember[int.Parse(stringdata[4])].ExitPlayer();
+                            
+                            break;
+                        //파티원이 나감
+                        case "PWD":
+                            //파티원을 강퇴함
+                            Debug.Log("3은" + stringdata[3]);
+                            if (stringdata[3] != PlayerBackendData.Instance.nickname)
+                            {
+                                break;
+                            }
+                            
+                            alertmanager.Instance.ShowAlert(string.Format(Inventory.GetTranslate("UI7/파티탈퇴함"),stringdata[3]),alertmanager.alertenum.일반);
+                            Debug.Log("강퇴" + stringdata[4]); 
+                            PartyRaidRoommanager.Instance.Bt_ExitRoom();
+
+
+                            break;
+                        case "PRC":
+                            //레이드 시작 패널열기 파장은 자동 준비확인이다.
+                            //system;PRC;파티장이름;
+                            if(PartyRaidRoommanager.Instance.nowmyleadernickname != stringdata[2])
+                                break;
+                            //레디창을 보여줌
+                            PartyRaidRoommanager.Instance.ShowRaidReadyPanel();
+                            break;
+                        case "PRYR":
+                            //레이드 준비완료를 했다.
+                            //system;PRYR;파티장이름;신청자이름;신청자자리번호;
+                            if(PartyRaidRoommanager.Instance.nowmyleadernickname != stringdata[2])
+                                break;
+                            //레디창을 보여줌
+                            PartyRaidRoommanager.Instance.readyslots[int.Parse(stringdata[4])].SetReady();
+                            break;
+                        case "PRNY":
+                            //레이드 준비완료를 했다.
+                            //system;PRYR;파티장이름;신청자이름;신청자자리번호;
+                            if(PartyRaidRoommanager.Instance.nowmyleadernickname != stringdata[2])
+                                break;
+                            //레디창을 보여줌
+                            PartyRaidRoommanager.Instance.readyyesnopanel.SetActive(false);
+                            //누구가 준비를 취소하였습니다.
+                            alertmanager.Instance.ShowAlert(string.Format(Inventory.GetTranslate("UI7/준비취소함"),stringdata[3]),alertmanager.alertenum.일반);
+                            break;
+                        #endregion
+
+
+
                     }
                 }
                 else

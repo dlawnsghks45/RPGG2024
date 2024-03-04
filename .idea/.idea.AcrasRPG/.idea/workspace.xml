@@ -5,349 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="026fe4cd-66d7-4da1-a1b1-1a7d0490dfd5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AcrasRPG/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AcrasRPG/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AcrasRPG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AcrasRPG/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Autofarmmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Autofarmmanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BackendFerderationAuth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BackendFerderationAuth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BackendLogin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BackendLogin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Classmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Classmanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CollectionRenewalManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CollectionRenewalManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ConsumeSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ConsumeSlot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Contentmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Contentmanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CraftManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DamageManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DamageManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DungeonManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DungeonManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EffectSlots.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EffectSlots.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hpmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hpmanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ItemDropManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ItemDropManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LogManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LogManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyGuildManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MyGuildManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewIAPManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewIAPManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Passivemanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Passivemanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PartyMemberslot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PartyMemberslot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PartyRaidRoommanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PartyRaidRoommanager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PlayerBackendData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerBackendData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.startup.startup-runtime-1.0.0.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.startup.startup-runtime-1.0.0.aar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.work.work-runtime-2.7.0.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.work.work-runtime-2.7.0.aar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-lite-22.0.0.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-lite-22.0.0.aar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.sglib.easymobile.easy-mobile-1.5.1.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.sglib.easymobile.easy-mobile-1.5.1.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/material/메인무기.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/material/메인무기.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/material/보조무기.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/material/보조무기.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/아이템/아이템슬릇.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/아이템/아이템슬릇.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RankingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RankingManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Bow2.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Bow2.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/DropSound.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/DropSound.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Block.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Block.ogg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Buff1.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Buff1.ogg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Buff2.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Buff2.ogg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Buff3.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Buff3.ogg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Buff4.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Buff4.ogg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Buff5.mp3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Buff5.mp3.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Buff6.mp3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Buff6.mp3.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Buff_Defence.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Buff_Defence.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Debuff1.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Debuff1.ogg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/ExtraAttack.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/ExtraAttack.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Fire1.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Fire1.ogg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Fire2.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Fire2.ogg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Fire3.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Fire3.ogg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Fire5.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Fire5.ogg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Heal1.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Heal1.ogg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Ice1.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Ice1.ogg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Ice2.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Ice2.ogg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Shield1.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Shield1.ogg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Shield_Shadow_02.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Shield_Shadow_02.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_Black_Magic_03.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_Black_Magic_03.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_Electric_Pulse.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_Electric_Pulse.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_Fire_Critical_03.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_Fire_Critical_03.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_Ice_Hit_01.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_Ice_Hit_01.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_Ice_Spear.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_Ice_Spear.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_ShadowHit_01.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_ShadowHit_01.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_Whoosh_01.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_Whoosh_01.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_Whoosh_High_Pitch_02.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Spell_Whoosh_High_Pitch_02.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Thunder1.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Magic/Thunder1.ogg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Spell_Projectile_Magic_02.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Spell_Projectile_Magic_02.ogg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Spell_Projectile_Magic_03.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Spell_Projectile_Magic_03.ogg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Spell_Projectile_Magic_Big_01.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Spell_Projectile_Magic_Big_01.ogg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Spell_Projectile_Magic_Big_02.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Spell_Projectile_Magic_Big_02.ogg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/Spell_Projectile_Magic_Big_03.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/Spell_Projectile_Magic_Big_03.ogg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/drop.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/drop.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/punch1.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/punch1.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/punch2.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/punch2.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/shield1.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/shield1.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/shoot1.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/shoot1.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/shoot2.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/shoot2.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/shoot3.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/shoot3.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/slash1.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/slash1.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/slash2.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/slash2.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Attack/spell1.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Attack/spell1.ogg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Class.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Class.zip.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Collect.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/Achievement.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/Achievement.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/Class.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/Class.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/Itemdatabasecsv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/Itemdatabasecsv.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/Passive.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/Passive.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/TimeTable.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/TimeTable.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/TradeShop.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/TradeShop.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/altar.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/altar.csv.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/antaltar.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/antaltar.csv.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/goldaltar.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/goldaltar.csv.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/monster.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/monster.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/10.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/11.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/12.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/5.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/6.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/7.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/8.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Beard/9.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Boot.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Boot/Boot1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Boot/Boot1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Boot/Boot3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Boot/Boot3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Boot/Boot4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Boot/Boot4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Boot/Set_Boot1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Boot/Set_Boot1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Boot/Set_Boot2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Boot/Set_Boot2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/Chest1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/Chest1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/Chest3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/Chest3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/Chest4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/Chest4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/Chest5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/Chest5.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/Chest6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/Chest6.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/ChestGather.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/ChestGather.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/ChestGather1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/ChestGather1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/L_Chest1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/L_Chest1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/Set_Chest1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/Set_Chest1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/leather_red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Chest/leather_red.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Glove.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Glove/Glove1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Glove/Glove1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Glove/Glove3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Glove/Glove3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Glove/Glove4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Glove/Glove4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Glove/Glove5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Glove/Glove5.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Glove/Set_Glove1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Glove/Set_Glove1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Glove/Set_Glove2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Glove/Set_Glove2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Glove/glove_short_red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Glove/glove_short_red.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair10.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair11.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair12.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair13.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair14.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair15.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair16.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair17.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair18.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair19.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair20.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair21.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair22.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair23.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair23.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair24.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair25.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair25.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair26.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair26.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair27.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair27.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair28.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair28.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair29.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair29.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair30.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair31.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair31.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair32.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair33.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair33.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair34.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair34.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair35.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair35.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair5.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair6.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair7.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair8.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Hair/Hair9.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/Helmet1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/Helmet1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/Helmet3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/Helmet3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/Helmet4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/Helmet4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/Helmet5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/Helmet5.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/Helmet6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/Helmet6.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/L_Helmet1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/L_Helmet1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/NoobHelmet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/NoobHelmet.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/Set_Helmet1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/Set_Helmet1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/Set_Helmet2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/Set_Helmet2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/U_Helmet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/U_Helmet.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/U_Helmet0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Helmet/U_Helmet0.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Legging.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Legging/NoobLegging.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Legging/NoobLegging.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Legging/leg_armor_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Legging/leg_armor_1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Legging/leg_armor_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Legging/leg_armor_2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Legging/leg_armor_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Legging/leg_armor_3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Legging/leg_armor_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Legging/leg_armor_4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Legging/leg_armor_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Legging/leg_armor_5.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Legging/pants_darkgreen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Legging/pants_darkgreen.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Wing.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Wing/Clock1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Wing/Clock1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Wing/Clock3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Wing/Clock3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Wing/Clock4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Wing/Clock4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Wing/Clock5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Wing/Clock5.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Wing/ratskin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Wing/ratskin.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Wing/white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipItem/Wing/white.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/PartyRaid/파티원.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/PartyRaid/파티원.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/I2Languages.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/I2Languages.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/Special Click 05.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/Special Click 05.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/UI Tight 03.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/UI Tight 03.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/UI Tight 04.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/UI Tight 04.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/UI Tight 10.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/UI Tight 10.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/WHOOSH_ARM_SWING_04.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/WHOOSH_ARM_SWING_04.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/craftsucc.mp3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/craftsucc.mp3.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/potion.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/potion.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/강화대성공.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/강화대성공.ogg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/강화대실패.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/강화대실패.ogg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/강화성공.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/강화성공.ogg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/강화실패.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/강화실패.ogg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/강화확인전.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/강화확인전.ogg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/긍정업.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/긍정업.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/레전드뽑음.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/레전드뽑음.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/상자열기.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/상자열기.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/일반뽑음.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/일반뽑음.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sound/일퀘수락사운드.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sound/일퀘수락사운드.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Transform.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Transform.zip.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Roulette.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Roulette.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Savemanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Savemanager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lobby.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/classcheck.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/classcheck.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/login.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/login.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Chat/chatmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Chat/chatmanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/DB/altarDB.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/DB/altarDB.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/DB/antaltarDB.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/DB/antaltarDB.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/DB/goldaltarDB.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/DB/goldaltarDB.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SeasonPass.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SeasonPass.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settingmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settingmanager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Timemanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Timemanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tutorialmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tutorialmanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Main/Sliders/Slider1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Main/Sliders/Slider1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/ravenui/c114.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/ravenui/c114.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WorldBossManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WorldBossManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/abilitymanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/abilitymanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/achievemanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/achievemanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/achievementslot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/achievementslot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/alertmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/alertmanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/altarmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/altarmanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/dpsmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/dpsmanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/equipoptionchanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/equipoptionchanger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/equipskillmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/equipskillmanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/iteminventoryinfoslot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/iteminventoryinfoslot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/mapmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/mapmanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/mondropmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/mondropmanager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/otherusermanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/otherusermanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/petmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/petmanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/presetmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/presetmanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/sendqueuemanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/sendqueuemanager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -421,6 +93,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/itemspritedropslot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/loginrewardslot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/otherusermanager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/partyraidreadyslot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/petboxslot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/petdatabase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/petmixslot.cs" root0="FORCE_HIGHLIGHTING" />
@@ -475,7 +148,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;temp3 리베이스 중&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -686,6 +359,8 @@
       <workItem from="1708399419094" duration="65274000" />
       <workItem from="1708668425886" duration="19849000" />
       <workItem from="1708960607102" duration="60190000" />
+      <workItem from="1709490737276" duration="20877000" />
+      <workItem from="1709554199995" duration="5910000" />
     </task>
     <task id="LOCAL-00001" summary="gg">
       <created>1681093758612</created>

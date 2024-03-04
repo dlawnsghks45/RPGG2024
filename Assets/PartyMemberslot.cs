@@ -6,11 +6,9 @@ using UnityEngine.UI;
 
 public class PartyMemberslot : MonoBehaviour
 {
-   public bool isready;
+   public int PartyNum; //0~3
    public GameObject NoUserObj;
    public GameObject HaveUserObj;
-
-   public GameObject Readyobj;
    public int nowstate = 0;
    public playerdata data;
 
@@ -22,22 +20,45 @@ public class PartyMemberslot : MonoBehaviour
 
    public Text PlayerName;
 
- 
 
-   public void SetPlayerData(string playerdata)
+   public void SetPartyNum()
+   {
+      PartyRaidRoommanager.Instance.SelectPartyUsernum = PartyNum;
+   }
+
+   public void SetPlayerData(string playerdata,int num)
    {
       data = new playerdata();
       data.GetPlayerData(playerdata);
+      if (data.nickname == PlayerBackendData.Instance.nickname)
+      {
+         Debug.Log("내자리는" + num);
+         PartyRaidRoommanager.Instance.mypartynum = num;
+      }
+      
+      data.GetPlayerData(playerdata);
       ShowPlayer();
-
+      if (PartyRaidRoommanager.Instance.nowmyleadernickname == PlayerBackendData.Instance.nickname)
+      {
+         PartyRaidRoommanager.Instance.StartButton.SetActive(true);
+      }
+      else
+      {
+   
+         PartyRaidRoommanager.Instance.StartButton.SetActive(false);
+      }
       NoUserObj.SetActive(false);
       HaveUserObj.SetActive(true);
-      Readyobj.SetActive(false);
+      
+      
+      
+      
    }
 
    public void Bt_ShowPlayerData()
    {
-      otherusermanager.Instance.ShowPlayerData(data.nickname);
+      otherusermanager.Instance.Bt_ShowChatUserData(avata.sprite, weapon.sprite, subweapon.sprite,
+         data.nickname);
    }
 
    void ShowPlayer()
@@ -75,7 +96,6 @@ public class PartyMemberslot : MonoBehaviour
          {
             playermaterial[0].SetFloat(Shader.PropertyToID("_OuterOutlineFade"), 0f);
          }
-       
       }
       
       if (data.subweaponpath != null)
@@ -96,36 +116,27 @@ public class PartyMemberslot : MonoBehaviour
 
 
       PlayerName.text = $"Lv.{data.lv}\n{data.nickname}";
-      
    }
 
-   public void Bt_Ready()
+   public void Bt_ShowInvite()
    {
-      if (isready)
-      {
-         //레디중이였다면
-         isready = false;
-         Readyobj.SetActive(false);
-      }
-      else
-      {
-         isready = true;
-         Readyobj.SetActive(true);
-      }
+      PartyRaidRoommanager.Instance.ShowInvitePanel();
    }
    
    public void ExitPlayer()
    {
       foreach (var t in playermaterial)
          t.SetFloat(Shader.PropertyToID("_OuterOutlineFade"), 0f);
-      Readyobj.SetActive(false);
-      isready = true;
       data = null;
+      NoUserObj.SetActive(true);
+      HaveUserObj.SetActive(false);
+
    }
 }
 
 public class playerdata
 {
+   public string dataall;
    public string nickname;
    public string indate;
    public int lv;
@@ -137,13 +148,13 @@ public class playerdata
    public string petpath;
    public string petrare;
 
-
    public playerdata()
    {
    }
 
    public void GetPlayerData(string datastring)
    {
+      dataall = datastring;
       string[] datas = datastring.Split(';');
 
       nickname = datas[0];
@@ -160,6 +171,10 @@ public class playerdata
 
       petpath = datas[8];
       petrare = datas[9];
+   }
 
+   public string GiveData()
+   {
+      return dataall;
    }
 }
