@@ -29,9 +29,9 @@ id,DescriptionKor,mapname,name,hp,dmg,crit,attackcount,attacktime,montype,sprite
 126,승급 시험28,,MonsterName/126,4500000000000000000,1110000,30,1,1,basic,Monster/Boss/126,126,126,550,5,8,2,FALSE,0
 127,승급 시험29,,MonsterName/127,6500000000000000000,1590000,30,1,1,basic,Monster/Boss/127,127,127,550,5,8,2,FALSE,0
 128,승급 시험30,,MonsterName/128,9000000000000000000,2270000,30,1,1,basic,Monster/Boss/128,128,128,550,5,8,2,FALSE,0
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
+129,승급 시험31,,MonsterName/129,155000000000000000000,2950000,30,1,1,basic,Monster/Boss/129,129,129,550,5,8,2,FALSE,0
+130,승급 시험32,,MonsterName/130,355000000000000000000,3630000,30,1,1,basic,Monster/Boss/130,130,130,550,5,8,2,FALSE,0
+131,승급 시험33,,MonsterName/131,355000000000000000000,4310000,30,1,1,basic,Monster/Boss/131,131,131,550,5,8,2,FALSE,0
 ,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,FALSE,0
 99,허수아비,,MonsterName/113,0,0,0,1,1,boss,Monster/Field/Training,0,0,500,10,8,2,FALSE,0
@@ -503,3 +503,13 @@ id,DescriptionKor,mapname,name,hp,dmg,crit,attackcount,attacktime,montype,sprite
 700010,,,,,,,,,,,,,,,,,,
 700011,,,,,,,,,,,,,,,,,,
 700012,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,
+20000,파티레이드-파괴된 신전,,MonsterName/20000,36000000000000000000,450000,30,1,1,boss,Monster/PartyRaid/0/7,5020,5020,3000,12,5,3,TRUE,0.1
+20001,파티레이드-파괴된 신전,,MonsterName/20001,18000000000000000000,250000,30,1,1,boss,Monster/PartyRaid/0/0,0,0,1500,8,3,3,TRUE,0.1
+20002,파티레이드-파괴된 신전,,MonsterName/20002,18000000000000000000,250000,30,1,1,boss,Monster/PartyRaid/0/1,0,0,1500,8,3,3,TRUE,0.1
+20003,파티레이드-파괴된 신전,,MonsterName/20003,18000000000000000000,250000,30,1,1,boss,Monster/PartyRaid/0/2,0,0,1500,8,3,3,TRUE,0.1
+20004,파티레이드-파괴된 신전,,MonsterName/20004,18000000000000000000,250000,30,1,1,boss,Monster/PartyRaid/0/3,0,0,1500,8,3,3,TRUE,0.1
+20005,파티레이드-파괴된 신전,,MonsterName/20005,18000000000000000000,250000,30,1,1,boss,Monster/PartyRaid/0/4,0,0,1500,8,3,3,TRUE,0.1
+20006,파티레이드-파괴된 신전,,MonsterName/20006,18000000000000000000,250000,30,1,1,boss,Monster/PartyRaid/0/5,0,0,1500,8,3,3,TRUE,0.1
+20006,파티레이드-파괴된 신전,,MonsterName/20007,18000000000000000000,250000,30,1,1,boss,Monster/PartyRaid/0/6,0,0,1500,8,3,3,TRUE,0.1

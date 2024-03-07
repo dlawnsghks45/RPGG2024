@@ -93,6 +93,14 @@ public class chatslot : MonoBehaviour
         Contents.text = content;
     }
 
+    public void ShowPartyRaidChat(string nick, string content)
+    {
+        Contents.text = $"<color=yellow>{nick}</color> : {content}";
+    }
+    public void ShowPartyRaidSystemChat(string content)
+    {
+        Contents.text = $"{content}";
+    }
     public void Bt_ShowUser()
     {
         if (issys)// || PlayerBackendData.Instance.nickname==nick)

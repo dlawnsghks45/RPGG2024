@@ -26,12 +26,18 @@ public class PartyraidChatManager : MonoBehaviour
             return _instance;
         }
     }
+
     const string publicsystem = "#publicsys#";
+
     #region 파티초대전용
 
     //유저에게 초대 보냄.
     public void Chat_invitePlayer(string invited)
     {
+        //자기 자신은 안됨.
+
+        if (invited == PlayerBackendData.Instance.nickname)
+            return;
         //system;PI;내이름;유저이름;mapname;level
         bool isConnect = Backend.Chat.IsChatConnect(ChannelType.Public);
         if (isConnect)
@@ -57,7 +63,19 @@ public class PartyraidChatManager : MonoBehaviour
                 $"{publicsystem};PA;{PartyRaidRoommanager.Instance.invitednickname};{PlayerBackendData.Instance.nickname}&{PartyRaidRoommanager.Instance.GiveMyPartyData()}");
         }
     }
-    
+
+    public void Chat_AreadyHaveParty(string nickname)
+    {
+        //수락한다는걸 보낸다.
+        //system;PAH;파장이름
+        bool isConnect = Backend.Chat.IsChatConnect(ChannelType.Public);
+        if (isConnect)
+        {
+            Backend.Chat.ChatToChannel(ChannelType.Public,
+                $"{publicsystem};PAH;{nickname};{PlayerBackendData.Instance.nickname}");
+        }
+    }
+
     //초대를 수락해서 파장에게 수락여부를 보냄.
     public void Chat_GivePartyData(string partymembernick)
     {
@@ -76,10 +94,34 @@ public class PartyraidChatManager : MonoBehaviour
                 $"#{PartyRaidRoommanager.Instance.GivePartyData(3)}");
         }
     }
-    
+
     #endregion
 
+    #region 맵변경
+
+    public void Chat_ChangeMap()
+    {
+        bool isConnect = Backend.Chat.IsChatConnect(ChannelType.Public);
+        if (isConnect)
+        {
+            //system;PRNR;파티장이름;맵아이디;난이도
+            //PartyRaidRoommanager.Instance.partyroomdata.nowmap = 선택한맵
+            PartyRaidRoommanager.Instance.partyroomdata.level = PartyRaidRoommanager.Instance.LevelCount.nowcount;
+
+            Backend.Chat.ChatToChannel(ChannelType.Public,
+                $"{publicsystem};PRCM;{PartyRaidRoommanager.Instance.nowmyleadernickname};{PartyRaidRoommanager.Instance.partyroomdata.nowmap};{PartyRaidRoommanager.Instance.partyroomdata.level}");
+
+            PartyRaidRoommanager.Instance.RefreshPartyData();
+        }
+    }
+
+
+
+    #endregion
+
+
     #region 파티나가기
+
     //파티장이 나가기를 누르면
     public void Chat_ExitLeader()
     {
@@ -94,13 +136,14 @@ public class PartyraidChatManager : MonoBehaviour
                 $"{publicsystem};PRB;{PartyRaidRoommanager.Instance.nowmyleadernickname}");
         }
     }
+
     //파티원이 나가기를 누르면
     public void Chat_ExitMember()
     {
         bool isConnect = Backend.Chat.IsChatConnect(ChannelType.Public);
         if (isConnect)
         {
-            Debug.Log("파티원 나가서 다른유저에게 내가 나간걸 보낸다."); 
+            Debug.Log("파티원 나가서 다른유저에게 내가 나간걸 보낸다.");
             //PRO = party room out
             //system;PRO;파티장이름;내이름;내파티자리
 
@@ -108,13 +151,13 @@ public class PartyraidChatManager : MonoBehaviour
                 $"{publicsystem};PRO;{PartyRaidRoommanager.Instance.nowmyleadernickname};{PlayerBackendData.Instance.nickname};{PartyRaidRoommanager.Instance.mypartynum}");
         }
     }
-    
+
     public void Chat_WithdrawMember(string nickname)
     {
         bool isConnect = Backend.Chat.IsChatConnect(ChannelType.Public);
         if (isConnect)
         {
-            Debug.Log("파티원 나가서 다른유저에게 내가 나간걸 보낸다."); 
+            Debug.Log("파티원 나가서 다른유저에게 내가 나간걸 보낸다.");
             //PRO = party room out
             //system;PRO;파티장이름;내이름;내파티자리
 
@@ -122,17 +165,18 @@ public class PartyraidChatManager : MonoBehaviour
                 $"{publicsystem};PWD;{PartyRaidRoommanager.Instance.nowmyleadernickname};{nickname};{PartyRaidRoommanager.Instance.mypartynum}");
         }
     }
+
     #endregion
 
 
     #region 레이드시작
-    
+
     public void Chat_CheckStartRaid()
     {
         bool isConnect = Backend.Chat.IsChatConnect(ChannelType.Public);
         if (isConnect)
         {
-            Debug.Log("레이드시작을 알린다."); 
+            Debug.Log("레이드시작을 알린다.");
             //system;PRC;파티장이름;
             Backend.Chat.ChatToChannel(ChannelType.Public,
                 $"{publicsystem};PRC;{PartyRaidRoommanager.Instance.nowmyleadernickname}");
@@ -145,25 +189,78 @@ public class PartyraidChatManager : MonoBehaviour
         if (isConnect)
         {
             PartyRaidRoommanager.Instance.readyyesnopanel.SetActive(false);
-            Debug.Log("준비"); 
+            Debug.Log("준비");
             //system;PRYR;파티장이름;내이름;내자리
             Backend.Chat.ChatToChannel(ChannelType.Public,
                 $"{publicsystem};PRYR;{PartyRaidRoommanager.Instance.nowmyleadernickname};{PlayerBackendData.Instance.nickname};{PartyRaidRoommanager.Instance.mypartynum}");
         }
     }
+
     public void Chat_NoReady()
     {
         bool isConnect = Backend.Chat.IsChatConnect(ChannelType.Public);
         if (isConnect)
         {
-            Debug.Log("준비취소."); 
+            Debug.Log("준비취소.");
             PartyRaidRoommanager.Instance.RaidReadyPanel.SetActive(false);
             //system;PRNR;파티장이름;내이름;내자리
             Backend.Chat.ChatToChannel(ChannelType.Public,
                 $"{publicsystem};PRNR;{PartyRaidRoommanager.Instance.nowmyleadernickname};{PlayerBackendData.Instance.nickname};{PartyRaidRoommanager.Instance.mypartynum}");
         }
     }
-    #endregion
-    
-}
 
+    public void TrggetNoready()
+    {
+        Invoke(nameof(NoReady), 12);
+    }
+
+    //11초 뒤에 내가 레디를 안했다면 강퇴
+    public void NoReady()
+    {
+        //창이 나와있는데 레디도안했다면
+        if (!PartyRaidRoommanager.Instance.readyslots[PartyRaidRoommanager.Instance.mypartynum].isready &&
+            PartyRaidRoommanager.Instance.RaidReadyPanel.activeSelf &&
+            PartyRaidRoommanager.Instance.RaidReadyPanel.activeSelf)
+        {
+            PartyRaidRoommanager.Instance.Bt_ExitRoom();
+            PartyRaidRoommanager.Instance.RaidReadyPanel.SetActive(false);
+        }
+    }
+
+    #endregion
+
+
+    /////////레이드진행////////
+
+    #region 레이드 진행
+
+    public void Chat_ChatSystemOnlyContent(string content)
+    {
+        //모두가 레디해서 레이드가 시작헀다.
+        bool isConnect = Backend.Chat.IsChatConnect(ChannelType.Public);
+        if (isConnect)
+        {
+            PartyRaidRoommanager.Instance.RaidReadyPanel.SetActive(false);
+            Backend.Chat.ChatToChannel(ChannelType.Public,
+                $"{publicsystem};PSMOC;{PlayerBackendData.Instance.nickname};{content}");
+        }
+    }
+    public void Chat_RaidRealStart()
+    {
+        //모두가 레디해서 레이드가 시작헀다.
+                 bool isConnect = Backend.Chat.IsChatConnect(ChannelType.Public);
+                 if (isConnect)
+                 {
+                     PartyRaidRoommanager.Instance.RaidReadyPanel.SetActive(false);
+                     Backend.Chat.ChatToChannel(ChannelType.Public,
+                         $"{publicsystem};PRRS;{PartyRaidRoommanager.Instance.nowmyleadernickname};{PlayerBackendData.Instance.nickname};{PartyRaidRoommanager.Instance.mypartynum}");
+                     Chat_ChatSystemOnlyContent("파티 레이드가 시작됩니다.");
+                 }
+    }
+
+
+
+    #endregion
+
+
+}

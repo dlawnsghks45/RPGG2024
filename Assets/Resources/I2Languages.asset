@@ -9132,7 +9132,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uC790\uB3D9 \uBCF4\uC0C1"
-      - Automatic compensation
+      - Automatic reward
       - 
       - 
       - 
@@ -9346,7 +9346,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uAC8C\uC784\uC744 \uC885\uB8CC\uD574\uB3C4 \uBCF4\uC0C1\uC774 \uC800\uC7A5\uB429\uB2C8\uB2E4."
-      - Even if the game is terminated, the reward is stored.
+      - Even if the game is terminated, the reward is saved.
       - 
       - 
       - 
@@ -15784,6 +15784,32 @@ MonoBehaviour:
       - 
       Flags: 00000000000000
       Languages_Touch: []
+    - Term: "UI7/\uB09C\uC774\uB3C4\uBCC0\uACBD"
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uB09C\uC774\uB3C4\uAC00 \uBCC0\uACBD\uB418\uC5C8\uC2B5\uB2C8\uB2E4."
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
+    - Term: "UI7/\uC774\uBBF8\uAC00\uC785\uD568"
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC774\uBBF8 \uD30C\uD2F0\uC5D0 \uAC00\uC785\uB41C \uC720\uC800\uC785\uB2C8\uB2E4."
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
     - Term: "Ads/\uAD11\uACE0_\uC5D8\uB9AC\uCD95\uBCF5"
       TermType: 0
       Description: 
@@ -20731,7 +20757,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uD1A0\uBC8C \uC99D\uD45C[\uD32C\uD140]"
-      - Putting card [Phantom]
+      - Testimonies [Phantom]
       - 
       - 
       - 
@@ -29202,7 +29228,7 @@ MonoBehaviour:
       Languages:
       - "\uBAA8\uB4E0 \uC218\uC9D1 \uC644\uB8CC \uC2DC \uBAA8\uB4E0 \uB2A5\uB825\uCE58
         +10"
-      - All stats +10 when all collections are completed
+      - All stats +10 when completing all collections
       - 
       - 
       - 
@@ -31239,8 +31265,8 @@ MonoBehaviour:
       Languages:
       - "\uAE30\uBCF8 \uACF5\uACA9 \uC2DC 24% \uD655\uB960\uB85C \uBB3C\uB9AC \uACF5\uACA9\uB825
         140% \uB9CC\uD07C \uD53C\uD574\uB97C \uC785\uD798."
-      - The 24% chance of attacking the default attack, which damage to the physical
-        attack power 140%.
+      - Due to the 24% chance of default attacks, the physical attack power has been
+        damaged by 140%.
       - 
       - 
       - 
@@ -31405,7 +31431,7 @@ MonoBehaviour:
       - "\uBB3C\uB9AC \uC2A4\uD0AC \uC0AC\uC6A9 \uC2DC 21% \uD655\uB960\uB85C \uBB3C\uB9AC
         \uACF5\uACA9\uB825 400% \uB9CC\uD07C \uD53C\uD574\uB97C \uC785\uD798."
       - When using physical skills, it is 21% chance of damage to 400% of physical
-        attacks.
+        damage.
       - 
       - 
       - 
@@ -31570,7 +31596,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uD798 60 \uC99D\uAC00"
-      - 60 increase
+      - Strength 60 increase
       - 
       - 
       - 
@@ -31830,7 +31856,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uBBFC\uCCA9 60 \uC99D\uAC00"
-      - Agility 60 increase
+      - 60 agility increases
       - 
       - 
       - 
@@ -31869,7 +31895,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uBBFC\uCCA9 90 \uC99D\uAC00"
-      - 90 agility increases
+      - Agility 90 increase
       - 
       - 
       - 
@@ -31882,7 +31908,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uBBFC\uCCA9 120 \uC99D\uAC00"
-      - Civement 120 increase
+      - Temple 120 increase
       - 
       - 
       - 
@@ -32493,7 +32519,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uC9C0\uD61C 23% \uC99D\uAC00"
-      - Increase in wisdom by 23%
+      - 23% increase in wisdom
       - 
       - 
       - 
@@ -32688,7 +32714,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uB9C8\uBC95 \uACF5\uACA9\uB825 8% \uC99D\uAC00"
-      - 8% increase in magic damage
+      - 8% increase in magic attack power
       - 
       - 
       - 
@@ -33067,8 +33093,7 @@ MonoBehaviour:
       - "\uB9C8\uBC95 \uC2A4\uD0AC \uC0AC\uC6A9 \uC2DC 25% \uD655\uB960\uB85C \uB9C8\uBC95
         \uACF5\uACA9\uB825 200% \uB9CC\uD07C\uC758 \uB9C8\uBC95 \uD53C\uD574\uB97C
         \uC785\uD798."
-      - When using magic skills, a 25% chance of using magic damage to 200% of magic
-        damage.
+      - When using magic skills, a 25% chance to deal with magic damage of 200%.
       - 
       - 
       - 
@@ -33232,7 +33257,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uBCF4\uC2A4\uC5D0\uAC8C \uC785\uD788\uB294 \uD53C\uD574 7% \uC99D\uAC00."
-      - The damage to the boss increases by 7%.
+      - 7% increase in damage to the boss.
       - 
       - 
       - 
@@ -33547,7 +33572,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uAE30\uBCF8 \uACF5\uACA9 \uD53C\uD574 14% \uC99D\uAC00."
-      - 14% increase in basic attack damage.
+      - Basic attack damage 14% increase.
       - 
       - 
       - 
@@ -33690,7 +33715,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uBB3C\uC57D \uD68C\uBCF5 \uD6A8\uC728 25% \uC99D\uAC00."
-      - Potion recovery efficiency 25% increase.
+      - Potion recovery efficiency increased 25%.
       - 
       - 
       - 
@@ -33703,7 +33728,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uBB3C\uC57D \uD68C\uBCF5 \uD6A8\uC728 30% \uC99D\uAC00."
-      - Potion recovery efficiency 30% increase.
+      - 30% increase in potion recovery efficiency.
       - 
       - 
       - 
@@ -43255,7 +43280,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uAE38\uB4DC\uB808\uC774\uB4DC 8\uB2E8\uACC4"
-      - Guardrad 8th stage
+      - Guardrade 8th stage
       - 
       - 
       - 
@@ -43567,6 +43592,97 @@ MonoBehaviour:
       Description: 
       Languages:
       - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
+    - Term: mapname/20000
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uD30C\uAD34\uB41C \uC2E0\uC804"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
+    - Term: mapname/20001
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uD22C\uC9C0\uC758 \uC131\uC18C"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
+    - Term: mapname/20002
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uD1B5\uCC30\uC758 \uC131\uC18C"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
+    - Term: mapname/20003
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC2E0\uC804 \uC678\uAC01"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
+    - Term: mapname/20004
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC2E0\uC804 \uC785\uAD6C"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
+    - Term: mapname/20005
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC2E0\uC804 \uB0B4\uBD80"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
+    - Term: mapname/20006
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC2E0\uC804 \uC9C0\uD558"
       - 
       - 
       - 
@@ -44751,7 +44867,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uAE38\uB4DC \uACF5\uC9C0\uC0AC\uD56D \uC785\uB2C8\uB2E4."
-      - Guild notice.
+      - Guild announcement.
       - 
       - 
       - 
@@ -44764,7 +44880,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uAE38\uB4DC \uC18C\uAC1C\uAE00 \uC785\uB2C8\uB2E4."
-      - Guild introduction article.
+      - Guild introduction.
       - 
       - 
       - 
@@ -44999,7 +45115,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uAC00\uC785 \uB808\uBCA8 \uC81C\uD55C"
-      - Limit of subscription level
+      - Limited subscription level
       - 
       - 
       - 
@@ -45665,7 +45781,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uC774\uBBF8 \uC694\uCCAD\uD55C \uAE38\uB4DC\uC785\uB2C8\uB2E4."
-      - The guild already requested.
+      - This is the guild already requested.
       - 
       - 
       - 
@@ -45851,7 +45967,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uB0A9\uD488\uC774 \uC644\uB8CC\uB418\uC5C8\uC2B5\uB2C8\uB2E4."
-      - Delivery has been completed.
+      - Delivery is complete.
       - 
       - 
       - 
@@ -47573,7 +47689,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uC790\uB3D9 \uBCF4\uC0C1"
-      - Automatic compensation
+      - Automatic reward
       - 
       - 
       - 
@@ -49963,7 +50079,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uD2B9\uC218 \uD6A8\uACFC \uC7AC\uAC10\uC815\uC11D\uC744 \uD68D\uB4DD\uD569\uB2C8\uB2E4."
-      - Get a special effect reconciliation.
+      - Get a special effect reinvestment.
       - 
       - 
       - 
@@ -50592,7 +50708,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uC0AC\uB0E5\uD130 \uD074\uB9AC\uC5B4 {0}\uD68C"
-      - Clear hunting ground {0} sashimi
+      - Hunting ground clear {0} sashimi
       - 
       - 
       - 
@@ -50605,7 +50721,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uBAA8\uD5D8 \uB7AD\uD06C 2 \uB2EC\uC131"
-      - Achievement of adventure rank 2
+      - Adventure rank 2 achieved
       - 
       - 
       - 
@@ -51709,7 +51825,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uBB34\uAE30 \uACF5\uACA9\uB825[\uB9C8\uBC95]"
-      - Weapon Attack [Magic]
+      - Weapon damage [Magic]
       - 
       - 
       - 
@@ -53468,7 +53584,7 @@ MonoBehaviour:
         \uC801\uC5D0\uAC8C <color=red>140%</color> \uBB3C\uB9AC \uD53C\uD574\uB97C
         3\uD68C \uC785\uD78C\uB2E4.\n[\uCD94\uAC00 \uCE58\uBA85\uD0C0 \uD53C\uD574
         +30%]"
-      - 'It explodes the power of the devil''s power and puts the enemy to 140%</color>
+      - 'It explodes the power of the devil''s power and puts it on the enemy 140%</color>
         physical damage three times.
 
         [Additional Critical Strike damage
@@ -53527,7 +53643,7 @@ MonoBehaviour:
       Languages:
       - "\uC9C0\uC625\uC758 \uBD88\uC744 \uC18C\uD658\uD558\uC5EC \uC801\uC5D0\uAC8C
         <color=#00FFFF>1,200%</color> \uB9C8\uBC95 \uD53C\uD574\uB97C \uC785\uD78C\uB2E4."
-      - Summon the fire of hell and cause the enemy to <color =#00FFF> 1,200%</color>
+      - Summon the fire of hell and cause the enemy to <color =#00FFFF> 1,200%</color>
         magic damage.
       - 
       - 
@@ -54444,7 +54560,7 @@ MonoBehaviour:
         \uACF5\uACA9\uB825\uC744 \uD55C\uB2E4."
       - 'It is an attacking job.
 
-        Based on agility, it has the right vitality
+        Based on agility, it has appropriate vitality
         and powerful damage.'
       - 
       - 
@@ -55830,7 +55946,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycbxhcSJOOxI2cpDPngQJFCYrJuB6ffrqjqE3UgW-z7NUkneTss0VycsDEYRszHhWYImy/exec
     Google_SpreadsheetKey: 1rhi3AD5stOr4ljin6mwlgGM5wvn1pTUlM2ritN6RDf8
     Google_SpreadsheetName: I2Loc RIZE RPG Localization
-    Google_LastUpdatedVersion: 1709558987810
+    Google_LastUpdatedVersion: 1709629588427
     Google_Password: gksrnr13
     GoogleUpdateFrequency: 3
     GoogleInEditorCheckFrequency: 2
