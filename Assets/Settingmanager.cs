@@ -1392,8 +1392,8 @@ public class Settingmanager : MonoBehaviour
                     nowtimeNow = Timemanager.Instance.GetServerTime();
                     DateTime datetime = System.DateTime.Parse(data["OfflineTime"].ToString());
                     TimeSpan dateDiff = nowtimeNow - datetime;
-                    Debug.Log(nowtimeNow);
-                   Debug.Log(datetime);
+//                    Debug.Log(nowtimeNow);
+               //    Debug.Log(datetime);
                     Debug.Log("총안들어온 시간" +  dateDiff.TotalSeconds);
 
                     if (PlayerBackendData.Instance.Offlinedata != null)

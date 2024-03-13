@@ -6,9 +6,14 @@ using Doozy.Engine.UI;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class PartyRaidRoommanager : MonoBehaviour
 {
+    public Color[] syscolor;
+
+    public UIView PartyradPanel;
+
     //싱글톤만들기.
     private static PartyRaidRoommanager _instance = null;
 
@@ -31,39 +36,48 @@ public class PartyRaidRoommanager : MonoBehaviour
 
     public GameObject PartyNotStartObj;
     public GameObject PartyStartObj;
-    
+
 
     public int SelectPartyUsernum;
+
     //파티룸 데이터
     public PartyRoom partyroomdata = new PartyRoom();
+
     //내 파티 데이터
     public int mypartynum; //내 파티 자리
     public bool isready;
     public countpanel LevelCount;
-    
-    
-    
+
+
+    public GameObject ExitButtons;
     //버튼
     public GameObject StartButton;
     public GameObject ChangemapButton;
+    public GameObject AdmentiseButton;
+    public GameObject JoinUserButton;
+
     public GameObject ChatInput;
+
     //정보
     public PartyMemberslot[] PartyMember;
 
     //초대
     public UIView InvitePanel;
+
     public InputField InviteNicknameinput;
+
     //초대 받음
     public GameObject PartyInvitedPanel;
     public Text PartyInvitedMap;
     public Text PartyInvitedNickname;
 
-    
-    
+
+    public string[] DropId;
+
     //레이드 시작확인
     public GameObject RaidReadyPanel;
-    
-    
+
+
 
 
     #region 파티초대
@@ -81,16 +95,19 @@ public class PartyRaidRoommanager : MonoBehaviour
         PartyraidChatManager.Instance.Chat_invitePlayer(InviteNicknameinput.text);
     }
 
-  
+
     public string invitednickname;
     public string nowmyleadernickname;
-    public void ShowInvitedPanel(string mapid,int level,string leadernick)
+
+    public void ShowInvitedPanel(string mapid, int level, string leadernick)
     {
         invitednickname = leadernick;
         //system;PI;내이름;유저이름;mapname;level
         PartyInvitedMap.text = string.Format(Inventory.GetTranslate("UI7/초대내용"),
             Inventory.GetTranslate(MapDB.Instance.Find_id(mapid).name), level);
-        readymaptext.text = PartyInvitedMap.text;
+        Debug.Log("난이도는" + PartyInvitedMap.text);
+        readymaptext.text = string.Format(Inventory.GetTranslate("UI7/초대내용"),
+            Inventory.GetTranslate(MapDB.Instance.Find_id(mapid).name), level);
         PartyInvitedNickname.text = string.Format(Inventory.GetTranslate("UI7/누구의 파티"),
             leadernick);
 
@@ -101,7 +118,7 @@ public class PartyRaidRoommanager : MonoBehaviour
     {
         PartyraidChatManager.Instance.Chat_AcceptInvite();
     }
-    
+
 
     #endregion
 
@@ -109,7 +126,9 @@ public class PartyRaidRoommanager : MonoBehaviour
 
     public partyraidreadyslot[] readyslots;
     public GameObject readyyesnopanel;
+
     public Text readymaptext;
+
     //레이드 시작
     public void Bt_StartRaid()
     {
@@ -131,11 +150,14 @@ public class PartyRaidRoommanager : MonoBehaviour
                 readyslots[i].gameObject.SetActive(true);
             }
         }
-        
+
+        readymaptext.text = string.Format(Inventory.GetTranslate("UI7/초대내용"),
+            Inventory.GetTranslate(MapDB.Instance.Find_id(partyroomdata.nowmap).name), partyroomdata.level);
+
         RaidReadyPanel.SetActive(true);
         if (nowmyleadernickname == PlayerBackendData.Instance.nickname)
         {
-            Invoke(nameof(RaidStartCheck),11f);
+            Invoke(nameof(RaidStartCheck), 11f);
         }
         else
         {
@@ -149,17 +171,19 @@ public class PartyRaidRoommanager : MonoBehaviour
         //내 자리가 레디라고 보냄.
         PartyraidChatManager.Instance.Chat_YesReady();
     }
+
     //준비취소
     public void Bt_NoReady()
     {
         //전체 유저를 취소 시킴. 탈퇴하지는 않음.
         PartyraidChatManager.Instance.Chat_NoReady();
     }
-    
+
     public void SetReadyPanel(int num)
     {
         readyslots[num].SetReady();
     }
+
     //타이머가 종료되면 레디에 따라 달라진다.
     void RaidStartCheck()
     {
@@ -187,7 +211,7 @@ public class PartyRaidRoommanager : MonoBehaviour
         {
             Debug.Log("모두가 레디했다");
             RaidReadyPanel.SetActive(false);
-            
+
             //레이드를 시작
             PartyraidChatManager.Instance.Chat_RaidRealStart();
         }
@@ -209,6 +233,7 @@ public class PartyRaidRoommanager : MonoBehaviour
                     }
                 }
             }
+
             RaidReadyPanel.SetActive(false);
         }
     }
@@ -217,8 +242,8 @@ public class PartyRaidRoommanager : MonoBehaviour
 
 
     //방 나가기
-  
-    
+
+
 
     private void Start()
     {
@@ -226,6 +251,7 @@ public class PartyRaidRoommanager : MonoBehaviour
     }
 
     public GameObject ExitButton;
+
     //방 나가기
     public void Bt_ExitRoom()
     {
@@ -239,9 +265,10 @@ public class PartyRaidRoommanager : MonoBehaviour
             //리더가 아니면 나혼자 나감.
             PartyraidChatManager.Instance.Chat_ExitMember();
         }
+
         Bt_MakeRoom();
     }
-    
+
     public void Bt_MakeRoom()
     {
         Debug.Log("파티를 만든다");
@@ -251,22 +278,36 @@ public class PartyRaidRoommanager : MonoBehaviour
             t.gameObject.SetActive(false);
             chatmanager.Instance.party_num = 0;
         }
+
         foreach (var t in chatmanager.Instance.partyraidSystemchatslot)
         {
             t.gameObject.SetActive(false);
             chatmanager.Instance.partySystem_num = 0;
         }
+
         for (int i = 0; i < PartyMember.Length; i++)
         {
             PartyMember[i].ExitPlayer();
         }
-        PartyMember[0].SetPlayerData(GiveMyPartyData(),0);
+
+        StartButton.SetActive(true);
+        ChangemapButton.SetActive(false);
+        JoinUserButton.SetActive(false);
+        AdmentiseButton.SetActive(false);
+
+        PartyMember[0].SetPlayerData(GiveMyPartyData(), 0);
         nowmyleadernickname = PlayerBackendData.Instance.nickname;
         mypartynum = 0;
         partyroomdata = new PartyRoom();
-        RefreshPartyData();
+        DropId = PartyRaidDB.Instance.Find_id(partyroomdata.nowmap).dropid.Split(';');
+        RefreshCount();
+        ClearAllJoinUser();
+       ExitButtons.SetActive(true);
     }
 
+
+    public int MinAdLv = 15;
+    
     //플레이어 이미지 정보를 줌.
     public string GiveMyPartyData()
     {
@@ -277,12 +318,13 @@ public class PartyRaidRoommanager : MonoBehaviour
 
     public string GivePartyData(int num)
     {
-        
+
         //이름;인데이트;레벨;아바타정보;준비정보
         if (PartyRaidRoommanager.Instance.PartyMember[num].data != null)
         {
             return PartyRaidRoommanager.Instance.PartyMember[num].data.GiveData();
         }
+
         return "";
     }
 
@@ -298,38 +340,136 @@ public class PartyRaidRoommanager : MonoBehaviour
         {
             PartyNotStartObj.SetActive(false);
         }
-        
+
         if (nowmyleadernickname == PlayerBackendData.Instance.nickname)
         {
             LevelCount.gameObject.SetActive(true);
             StartButton.SetActive(true);
-            ChangemapButton.SetActive(true);
+            JoinUserButton.SetActive(true);
+            AdmentiseButton.SetActive(true);
         }
         else
         {
             LevelCount.gameObject.SetActive(false);
             StartButton.SetActive(false);
             ChangemapButton.SetActive(false);
+            JoinUserButton.SetActive(false);
+            AdmentiseButton.SetActive(false);
         }
+
         if (partyroomdata.usercount == 1)
         {
-            ExitButton.SetActive(false);
+            //ExitButton.SetActive(false);
             ChatInput.SetActive(false);
         }
         else
         {
-            ExitButton.SetActive(true);
+            //ExitButton.SetActive(true);
             ChatInput.SetActive(true);
         }
+
         RefreshMapData();
+    }
+
+    public GameObject[] BuffsObj;
+
+    public void RefreshCount()
+    {
+        PartyRaidRoommanager.Instance.partyroomdata.level = PartyRaidRoommanager.Instance.LevelCount.nowcount;
+
+        int[] playerbuff = new int[(int)PartyRaidBuffEnemy.Length];
+        int[] enemybuff = new int[(int)PartyRaidBuffEnemy.Length];
+        switch (PartyRaidRoommanager.Instance.partyroomdata.level)
+        {
+            case 1:
+                enemybuff[0] = 0;
+                enemybuff[1] = 0;
+                enemybuff[2] = 0;
+                enemybuff[3] = 1;
+                enemybuff[4] = 1;
+                enemybuff[5] = 1;
+                enemybuff[6] = 1;
+                break;
+            case 2:
+                enemybuff[0] = 0;
+                enemybuff[1] = 0;
+                enemybuff[2] = 0;
+                enemybuff[3] = 1;
+                enemybuff[4] = 1;
+                enemybuff[5] = 1;
+                enemybuff[6] = 1;
+                break;
+            case 3:
+                enemybuff[0] = 1;
+                enemybuff[1] = 0;
+                enemybuff[2] = 0;
+                enemybuff[3] = 1;
+                enemybuff[4] = 1;
+                enemybuff[5] = 1;
+                enemybuff[6] = 1;
+                break;
+            case 4:
+                enemybuff[0] = 1;
+                enemybuff[1] = 1;
+                enemybuff[2] = 0;
+                enemybuff[3] = 1;
+                enemybuff[4] = 1;
+                enemybuff[5] = 1;
+                enemybuff[6] = 1;
+                break;
+            case 5:
+                enemybuff[0] = 1;
+                enemybuff[1] = 1;
+                enemybuff[2] = 1;
+                enemybuff[3] = 1;
+                enemybuff[4] = 1;
+                enemybuff[5] = 1;
+                enemybuff[6] = 1;
+                break;
+            case 6:
+                enemybuff[0] = 1;
+                enemybuff[1] = 1;
+                enemybuff[2] = 1;
+                enemybuff[3] = 1;
+                enemybuff[4] = 1;
+                enemybuff[5] = 1;
+                enemybuff[6] = 1;
+                break;
+            case 7:
+                enemybuff[0] = 1;
+                enemybuff[1] = 1;
+                enemybuff[2] = 1;
+                enemybuff[3] = 1;
+                enemybuff[4] = 1;
+                enemybuff[5] = 1;
+                enemybuff[6] = 1;
+                break;
+        }
+
+        for (int i = 0; i < BuffsObj.Length; i++)
+        {
+            BuffsObj[i].SetActive(false);
+        }
+
+        for (int i = 0; i < enemybuff.Length; i++)
+        {
+            if (enemybuff[i] != 0)
+            {
+                BuffsObj[i].SetActive(true);
+            }
+        }
+
+        BuffInfo(enemybuff);
+        PartyRaidRoommanager.Instance.RefreshPartyData();
     }
 
     public void Bt_mapChange()
     {
         PartyraidChatManager.Instance.Chat_ChangeMap();
-        
+        PartyRaidRoommanager.Instance.RefreshPartyData();
+
         alertmanager.Instance.ShowAlert(
-            Inventory.GetTranslate("UI7/난이도변경"),alertmanager.alertenum.일반);
+            Inventory.GetTranslate("UI7/난이도변경"), alertmanager.alertenum.일반);
     }
 
     public Image[] Background;
@@ -342,42 +482,47 @@ public class PartyRaidRoommanager : MonoBehaviour
 
     public decimal GetMaxHp()
     {
-        decimal a = (decimal.Parse(monsterDB.Instance.Find_id(MapDB.Instance.Find_id(partyroomdata.nowmap).monsterid).hp) * (decimal)math.pow(1.6f, partyroomdata.level));
+        decimal a =
+            (decimal.Parse(monsterDB.Instance.Find_id(MapDB.Instance.Find_id(partyroomdata.nowmap).monsterid).hp) *
+             (decimal)math.pow(2.2f, partyroomdata.level));
         return a;
     }
+
     void RefreshMapData()
     {
         //보스 생명력
         decimal a = GetMaxHp();
-        Debug.Log("생명력은" + a);
-        BossHp.text = $"HP: {dpsmanager.convertNumber(a)}" ;
-        
+        BossHp.text = $"HP: {dpsmanager.convertNumber(a)}";
+
         foreach (var VARIABLE in Background)
         {
             VARIABLE.sprite = SpriteManager.Instance.GetSprite(MapDB.Instance.Find_id(partyroomdata.nowmap).maplayer0);
         }
+
         foreach (var VARIABLE in MonImage)
         {
-            VARIABLE.sprite = SpriteManager.Instance.GetSprite(monsterDB.Instance.Find_id(MapDB.Instance.Find_id(partyroomdata.nowmap).monsterid).sprite);
+            VARIABLE.sprite = SpriteManager.Instance.GetSprite(monsterDB.Instance
+                .Find_id(MapDB.Instance.Find_id(partyroomdata.nowmap).monsterid).sprite);
         }
+
         foreach (var VARIABLE in MapName)
         {
             VARIABLE.text = Inventory.GetTranslate(MapDB.Instance.Find_id(partyroomdata.nowmap).name);
         }
+
         foreach (var VARIABLE in MapLevel)
         {
             VARIABLE.text = string.Format(Inventory.GetTranslate("UI7/난이도"), partyroomdata.level);
         }
-        
+
         for (int i = 0; i < itemdrops.Length; i++)
         {
             itemdrops[i].gameObject.SetActive(false);
         }
 
         MapDB.Row mapdata = MapDB.Instance.Find_id(partyroomdata.nowmap);
-        monsterDB.Row mondata = monsterDB.Instance.Find_id(mapdata.monsterid);
 
-        string dropid = monsterDB.Instance.Find_id(mapdata.monsterid.Split(';')[0]).dropid;
+        string dropid = DropId[partyroomdata.level - 1];
         //일반몹 드롭테이블
         List<MonDropDB.Row> dropdatas_basic = MonDropDB.Instance.FindAll_id(dropid);
 //          Debug.Log(dropdatas_basic.Count);
@@ -387,6 +532,155 @@ public class PartyRaidRoommanager : MonoBehaviour
             itemdrops[i].gameObject.SetActive(true);
         }
     }
+
+    public UIView BuffInfoPanel;
+    public GameObject[] BuffPanel;
+
+    public void BuffInfo(int[] buffnum)
+    {
+        foreach (var VARIABLE in BuffPanel)
+        {
+            VARIABLE.SetActive(false);
+        }
+
+        for (int i = 0; i < buffnum.Length; i++)
+        {
+            if (buffnum[i] != 0)
+            {
+                BuffPanel[i].SetActive(true);
+            }
+        }
+    }
+
+    public void Bt_ShowBuff()
+    {
+        BuffInfoPanel.Show(false);
+    }
+
+    
+    public UIView Adpanel;
+    public InputField AdInputText;
+    public InputField AdRankInputText;
+    public string adstring; //홍보 번호
+
+    public void Bt_ShowAdTisePanel()
+    {
+        Adpanel.Show(false);
+    }
+
+    public void Bt_Adtise()
+    {
+        int ran = Random.Range(1000, 50000);
+
+        adstring = $"{PlayerBackendData.Instance.nickname}{ran}";
+
+        if (AdRankInputText.text == "")
+        {
+            //랭크입력
+            return;
+        }
+        if (int.Parse(AdRankInputText.text) < PartyRaidRoommanager.Instance.MinAdLv)
+        {
+            //랭크최소제한15
+            return;
+        }
+        Adpanel.Hide(false);
+        PartyraidChatManager.Instance.Chat_Admentise(adstring,AdRankInputText.text);
+        
+        
+    }
+
+    public int rankjoin;
+    public GameObject JoinPanel;
+    public void ShowAdmenPanel()
+    {
+        JoinPanel.SetActive(true);
+    }
+    
+    //파티 가입신청넣기
+    public void Bt_JoinParty()
+    {
+        if (rankjoin > PlayerBackendData.Instance.GetAdLv())
+        {
+            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI7/0_가입제한됨"),alertmanager.alertenum.주의);
+            chatmanager.Instance.Panel.Hide(true);
+            return;
+        }
+        
+        alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI7/0_파티가입신청함"),alertmanager.alertenum.일반);
+        PartyraidChatManager.Instance.Chat_SendJoin();
+        chatmanager.Instance.Panel.Hide(true);
+    }
+
+
+    public GameObject PartyRaidMemberJoinPanel;
+    public GameObject PartyRaidMemberCountObj;
+    public GameObject PartyRaidMemberCountObj2;
+    public Text PartyRaidMemberCountText;
+
+    public partyraidjoinmemberslot[] Joinmemberslots;
+
+    public List<string> joinusername = new List<string>();
+    //파티가입신청자확인
+
+    public void Bt_ShowJoinMemberPanel()
+    {
+        RefreshJoinmemberCount();
+        PartyRaidMemberJoinPanel.SetActive(true);
+    }
+    
+    public void AddJoinUser(string nick, string[] Avatadata,int lv,int rank)
+    {
+        if(joinusername.Contains(nick))
+            return;
+        foreach (var t in Joinmemberslots)
+        {
+            if (!t.gameObject.activeSelf)
+            {
+                //닫혀있으니 빈것이다 넣어도 된다.
+                t.SetData(nick,Avatadata,lv,rank);
+                joinusername.Add(nick);
+                t.gameObject.SetActive(true);
+                break;
+            }
+        }
+
+        RefreshJoinmemberCount();
+    }
+
+    public void RefreshJoinmemberCount()
+    {
+        int JoinMemberCount = 0;
+        for (int i = 0; i < Joinmemberslots.Length; i++)
+        {
+            if (Joinmemberslots[i].gameObject.activeSelf)
+                JoinMemberCount++;
+        }
+
+        if (JoinMemberCount == 0)
+        {
+            PartyRaidMemberCountObj.SetActive(false);
+            PartyRaidMemberCountObj2.SetActive(false);
+        }
+        else
+        {
+            PartyRaidMemberCountObj.SetActive(true);
+            PartyRaidMemberCountObj2.SetActive(true);
+            PartyRaidMemberCountText.text = JoinMemberCount.ToString();
+        }
+
+    }
+    public void ClearAllJoinUser()
+    {
+        for (int i = 0; i < Joinmemberslots.Length; i++)
+        {
+            Joinmemberslots[i].gameObject.SetActive(false);
+        }
+        joinusername.Clear();
+        RefreshJoinmemberCount();
+    }
+
+
 }
 
 public class PartyRoom
@@ -422,11 +716,14 @@ public class PartyRaidBoss
     public string monid;
     public decimal curhp;
     public decimal maxhp;
+    public List<decimal> DmgPlayer;
+    public List<string> DmgPlayerNickname;
+    
     public int[] MonsterBuff;
     public int[] playerBuff;
 
-    public int[] BattleCount = new int[7];
-
+    public int BossAttackcount ;
+    public int MiddleBossAttackcount ;
     public PartyRaidBoss(string monid, decimal maxhp,int[] debuffcount,int[] playerbuffs)
     {
         this.monid = monid;
@@ -435,19 +732,23 @@ public class PartyRaidBoss
 
         MonsterBuff = debuffcount;
         this.playerBuff = playerbuffs;
-        BattleCount  =new int[] {1,1,1,1,1,1,1}; 
+        BossAttackcount = 1;
+        MiddleBossAttackcount = 1;
+
+        DmgPlayer = new List<decimal>();
+        DmgPlayerNickname = new List<string>();
     }
 }
 
-enum PartyRaidBuffEnemy
+public enum PartyRaidBuffEnemy
 {
     강인함,//받는 피해 감소(무력화 시 삭제).
     민첩함,//치명타 방어 30% (치명타 확률 % 만큼 깎음).
     발화,//일정 시간 마다 생명력 회복 (일정 스테이지 클리어 시 삭제.
     해,//물리,마법 스킬 피해량 감소 (해의 토템 파괴 시 삭제).
     달,//상태 이상 피해량 감소 (달의 토템 파괴 시 삭제).
-    광폭, // 일정 시간 마다 몬스터 피해량 상승.
     불멸,//무력화가 잠금일 때 피해를 입지 않음. (삭제 불가).
+    광폭, // 일정 시간 마다 몬스터 피해량 상승.
     Length
 }
 

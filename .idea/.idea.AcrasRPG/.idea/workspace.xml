@@ -6,20 +6,67 @@
   <component name="ChangeListManager">
     <list default="true" id="026fe4cd-66d7-4da1-a1b1-1a7d0490dfd5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AcrasRPG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AcrasRPG/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EnemySpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnemySpawnManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hpmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hpmanager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PartyMemberslot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PartyMemberslot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PartyRaidBattlemanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PartyRaidBattlemanager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PartyRaidRoommanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PartyRaidRoommanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerBackendData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerBackendData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PartyraidChatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PartyraidChatManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.startup.startup-runtime-1.0.0.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.startup.startup-runtime-1.0.0.aar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.work.work-runtime-2.7.0.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.work.work-runtime-2.7.0.aar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-lite-22.0.0.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-lite-22.0.0.aar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.sglib.easymobile.easy-mobile-1.5.1.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.sglib.easymobile.easy-mobile-1.5.1.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Chat/채팅 1인 - 파티레이드.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Chat/채팅 1인 - 파티레이드.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Chat/채팅 1인.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Chat/채팅 1인.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Chat/파티레이드 시스템.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Chat/파티레이드 시스템.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/PartyRaid/파티원.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/PartyRaid/파티원.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/material/유저정보/메인무기 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/material/유저정보/메인무기 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/material/유저정보/보조무기 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/material/유저정보/보조무기 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/material/유저정보/펫 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/material/유저정보/펫 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/material/파티/메인무기 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/material/파티/메인무기 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/material/파티/보조무기 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/material/파티/보조무기 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/MonDrop.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/MonDrop.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/PartyRaid.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/PartyRaid.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/TimeTable.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/TimeTable.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/monster.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/monster.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/I2Languages.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/I2Languages.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lobby.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/login.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/login.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Chat/chatmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Chat/chatmanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Chat/chatslot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Chat/chatslot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/DB/monsterDB.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/DB/monsterDB.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settimetext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settimetext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settingmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settingmanager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Timemanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Timemanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/individual_32x32/c2395.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/individual_32x32/c2395.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/individual_32x32/c2972.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/individual_32x32/c2972.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/individual_32x32/icon112.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/individual_32x32/icon112.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/individual_32x32/icon113.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/individual_32x32/icon113.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/individual_32x32/icon176.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/individual_32x32/icon176.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/individual_32x32/icon219.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/individual_32x32/icon219.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/individual_32x32/icon582.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/individual_32x32/icon582.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/individual_32x32/icon585.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/individual_32x32/icon585.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/individual_32x32/광폭.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/individual_32x32/광폭.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/achievementslot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/achievementslot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/dpsmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/dpsmanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/mapmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/mapmanager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/otherusermanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/otherusermanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/partyraidbuff.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/partyraidbuff.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/partyraidmiddlebossslot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/partyraidmiddlebossslot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +78,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AdmobRewardAd.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AutoSmelting.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Autofarmmanager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -52,6 +100,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/ItemDropManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Itemsell.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LoginEventManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/MultiGage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MyGuildManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MyGuildQuestManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/NewIAPManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -361,6 +410,7 @@
       <workItem from="1708960607102" duration="60190000" />
       <workItem from="1709490737276" duration="20877000" />
       <workItem from="1709554199995" duration="5910000" />
+      <workItem from="1709785251094" duration="119443000" />
     </task>
     <task id="LOCAL-00001" summary="gg">
       <created>1681093758612</created>
@@ -507,6 +557,58 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/otherusermanager.cs</url>
+          <line>1086</line>
+          <properties documentPath="C:\Unity2\AcrasRPG\Assets\otherusermanager.cs" initialLine="1084" containingFunctionPresentation="메서드 'RefreshChatUserData'">
+            <startOffsets>
+              <option value="37720" />
+            </startOffsets>
+            <endOffsets>
+              <option value="37787" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Hpmanager.cs</url>
+          <line>507</line>
+          <properties documentPath="C:\Unity2\AcrasRPG\Assets\Hpmanager.cs" initialLine="386" containingFunctionPresentation="메서드 'TakeDamage'">
+            <startOffsets>
+              <option value="16127" />
+            </startOffsets>
+            <endOffsets>
+              <option value="16165" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Hpmanager.cs</url>
+          <line>440</line>
+          <properties documentPath="C:\Unity2\AcrasRPG\Assets\Hpmanager.cs" initialLine="411" containingFunctionPresentation="메서드 'TakeDamage'">
+            <startOffsets>
+              <option value="13001" />
+            </startOffsets>
+            <endOffsets>
+              <option value="13077" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/dpsmanager.cs</url>
+          <line>153</line>
+          <properties documentPath="C:\Unity2\AcrasRPG\Assets\dpsmanager.cs" initialLine="153" containingFunctionPresentation="메서드 'AddDps'">
+            <startOffsets>
+              <option value="3371" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3372" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

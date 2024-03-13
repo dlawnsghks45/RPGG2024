@@ -20,7 +20,40 @@ public class PartyMemberslot : MonoBehaviour
 
    public Text PlayerName;
 
+   public GameObject BattleObj;
+   public Text BattleText;
 
+   public GameObject[] BuffObj;
+   public Text[] BuffObjText;
+   
+   public void Set_Battle(string mapname)
+   {
+      BattleText.text = mapname;
+      BattleObj.SetActive(true);
+   }
+
+   public void Set_EndBattle()
+   {
+      BattleObj.SetActive(false);
+   }
+
+   public void RefreshPlayerBuff()
+   {
+      foreach (var t in BuffObj)
+      {
+         t.SetActive(false);
+      }
+
+      for (int i = 0; i < PartyRaidBattlemanager.Instance.battledata.playerBuff.Length; i++)
+      {
+         if (PartyRaidBattlemanager.Instance.battledata.playerBuff[i] != 0)
+         {
+            BuffObj[i].SetActive(true);
+            BuffObjText[i].text = PartyRaidBattlemanager.Instance.battledata.playerBuff[i].ToString();
+         }
+      }
+   }
+   
    public void SetPartyNum()
    {
       PartyRaidRoommanager.Instance.SelectPartyUsernum = PartyNum;
@@ -49,10 +82,7 @@ public class PartyMemberslot : MonoBehaviour
       }
       NoUserObj.SetActive(false);
       HaveUserObj.SetActive(true);
-      
-      
-      
-      
+      BattleObj.SetActive(false);
    }
 
    public void Bt_ShowPlayerData()
@@ -130,7 +160,8 @@ public class PartyMemberslot : MonoBehaviour
       data = null;
       NoUserObj.SetActive(true);
       HaveUserObj.SetActive(false);
-
+      foreach(var t in BuffObj)
+         t.SetActive(false);
    }
 }
 

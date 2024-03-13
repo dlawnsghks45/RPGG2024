@@ -250,7 +250,7 @@ id,coreid,description,description2,name,info,lv,maxlv,probability,value,c,type,s
 1246,1246,이그니시아(마법),정신력 소모량이 2배 증가하는 대신 발동된 공격 마법 피해가 100% 증가한다.,EquipSkill/1246,EquipSkillInfo/1246,10,10,0,1,1.5,passive,legenstaff,6,FALSE,FALSE
 1247,1247,립 헬(상태,"상태 이상 중첩 +50
 상태 이상 최대 중첩 +50",EquipSkill/1247,EquipSkillInfo/1247,10,10,0,65,65,passive,legenscyth,6,FALSE,FALSE
-1248,1248,슬레이어(물리),물리 공격력 500 증가,EquipSkill/1248,EquipSkillInfo/1248,10,10,0,3,0,passive,physicperup,6,TRUE,FALSE
+1248,1248,슬레이어(물리),물리 공격력 500%\ 증가,EquipSkill/1248,EquipSkillInfo/1248,10,10,0,5,0,passive,physicperup,6,TRUE,FALSE
 1249,1249,러브(마법) 사냥용,"기본 공격 시 마법 공격력의 700% 만큼 피해를 입힌다.
 
 <color=magenta><size=20>[우리는 오로지 사랑을 함으로써 사랑을 배울 수 있다 -아이리스 머독]</size></color>",EquipSkill/1249,EquipSkillInfo/1249,10,10,0,15,0,basicattack,legenmace,6,FALSE,FALSE
@@ -319,3 +319,30 @@ id,coreid,description,description2,name,info,lv,maxlv,probability,value,c,type,s
 골드 획득량 60% 증가",EquipSkill/1307,EquipSkillInfo/1307,9,10,0,0.6,0.5,passive,expgold,6,FALSE,FALSE
 1308,1308,경험치룬5,"추가 경험치 80% 증가
 골드 획득량 80% 증가",EquipSkill/1308,EquipSkillInfo/1308,10,10,0,0.8,0.6,passive,expgold,6,FALSE,FALSE
+1309,1309,파멸의 검,"[발화]
+스킬 사용 시 모든적에게 공격 후 발화를 남김
+[냉각]
+발화 버프 몬스터에게 추가 피해",EquipSkill/1309,EquipSkillInfo/1309,10,10,0,1,1,0,0,7,FALSE,FALSE
+1310,1310,하데스의 도끼,"물리 공격력 증가
+악마화 / 모든 지능 지혜가 0으로 고정 지능 지혜 만큼의 능력치가 힘으로 치환",EquipSkill/1310,EquipSkillInfo/1310,10,10,0,6,1,0,0,7,FALSE,FALSE
+1311,1311,거인 분쇄기,버프 효율 증가 250%,EquipSkill/1311,EquipSkillInfo/1311,10,10,0,2.5,0,0,0,7,FALSE,FALSE
+1312,1312,적화의 건틀릿,"청화의 건틀릿 필요.
+
+[발화]
+기본/스킬 공격 시 적에게 공격 후 점화를 남김 +1
+[냉각]
+점화 1당 적이 받는 피해량 상승",EquipSkill/1312,EquipSkillInfo/1312,10,10,0,1,0,0,0,7,FALSE,FALSE
+1313,1313,레일 건,치명타 확률 1% 당 치명타 피해  100% 증가,EquipSkill/1313,EquipSkillInfo/1313,10,10,0,1,1,0,0,7,FALSE,FALSE
+1314,1314,드래곤 보우,"치명타 타격 시 얼음 화살 발사 후 결정 스택 +1.
+용의 분노
+결정 스택이 +100 이라면 폭발하고 0으로 변경",EquipSkill/1314,EquipSkillInfo/1314,10,10,0,1,300,0,0,7,FALSE,FALSE
+1315,1315,블러드 커터,기본 공격 피해 증가,EquipSkill/1315,EquipSkillInfo/1315,10,10,0,18,0,0,0,7,FALSE,FALSE
+1316,1316,단테의 석궁,기본공격/스킬 사용 시 모든 적에게 표식은 남김. 표식이 있는 몬스터를 공격 시 피해를 입힘,EquipSkill/1316,EquipSkillInfo/1316,10,10,0,1,30,0,0,7,FALSE,FALSE
+1317,1317,제우스의 지팡이,"마법 피해 증가
+마법 피해 시 한마리에게 번개를 추가로 떨굼.",EquipSkill/1317,EquipSkillInfo/1317,10,10,0,250,2,0,0,7,FALSE,FALSE
+1318,1318,포세이돈의 지팡이,"마법 피해 증가
+마법 스킬 사용 시 모든 몬스터에게 워터 익스플로전 사용.",EquipSkill/1318,EquipSkillInfo/1318,10,10,0,50,2,0,0,7,FALSE,FALSE
+1319,1319,아폴론의 메이스,"기본 공격 시 마법 피해
+기본 공격 횟수 증가.",EquipSkill/1319,EquipSkillInfo/1319,10,10,0,28,0,0,0,7,FALSE,FALSE
+1320,1320,처단자,폭발 피해 증가,EquipSkill/1320,EquipSkillInfo/1320,10,10,0,0.3,0,0,0,7,FALSE,FALSE
+1321,1321,고통,중첩+ 피해 틱 감소.,EquipSkill/1321,EquipSkillInfo/1321,10,10,0,0.2,0,0,0,7,FALSE,FALSE

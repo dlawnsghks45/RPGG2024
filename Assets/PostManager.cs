@@ -311,6 +311,7 @@ if (!callback.IsSuccess()) return;
         postItemList.Remove(postIndate);
         alertmanager.Instance.NotiCheck_Post();
         Savemanager.Instance.SaveInventory_SaveOn();
+        LogManager.Log_CrystalEarn("¿ìÆí");
     }
 
     void ShowPostList()

@@ -180,6 +180,7 @@ public class Timemanager : MonoBehaviour
         프상승급석패키지,
         프상주간펫패키지1,
         프상주간펫패키지2,
+        파티레이드주간횟수,
         Length
     }
     public enum ContentEnumMonthly
@@ -202,13 +203,19 @@ public class Timemanager : MonoBehaviour
     {
         return DailyContentCount[time];
     }
-    
+    public int GetNowCount_weekly2(ContentEnumWeekly time)
+    {
+        return WeeklyContentCount[(int)time];
+    }
     //일일기간 최대치 현재꺼 가져오기
     public int GetMaxCount_daily(ContentEnumDaily time)
     {
         return DailyContentCount_Standard[(int)time];
     }
-
+    public int GetMaxCount_weekly(ContentEnumWeekly time)
+    {
+        return WeeklyContentCount_Standard[(int)time];
+    }
     //싱글톤만들기.
     private static Timemanager _instance = null;
     public static Timemanager Instance

@@ -305,6 +305,13 @@ public class EnemySpawnManager : MonoBehaviour
                         enemys_boss.hpmanager.RefreshHp();
                         enemys_boss.hpmanager.isdeath = false;
                         break;
+                    case "12":
+                        //  enemys_boss.hpmanager.CurHp = enemys_boss.hpmanager.MaxHp;
+                        enemys_boss.RefreshMonsterBoss();
+                        enemys_boss.hpmanager.ReSetDot();
+                        enemys_boss.hpmanager.RefreshHp();
+                        enemys_boss.hpmanager.isdeath = false;
+                        break;
                 }
             }
             else
@@ -492,6 +499,13 @@ public class EnemySpawnManager : MonoBehaviour
         mapmanager.Instance.RefreshBoss();
     }
     public void bt_SpawnWorldBoss()
+    {
+        bossstage = true;
+        isspawn = false;
+        mapmanager.Instance.StartTimer(60);
+        mapmanager.Instance.RefreshBoss();
+    }
+    public void bt_SpawnPartyRaidBoss()
     {
         bossstage = true;
         isspawn = false;

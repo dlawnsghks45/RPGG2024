@@ -665,6 +665,7 @@ public class Inventory : MonoBehaviour
     public GameObject[] InvenslotButtons; //장착 장착해제등
 
     public GameObject EquipskillPanel;
+    public GameObject[] EquipSkills_Obj;
     public TMProHyperLink[] EquipSkills;
     public TMPro.TextMeshProUGUI EquipSkill_Count;
     public TMProHyperLink SetText;
@@ -861,7 +862,7 @@ public class Inventory : MonoBehaviour
         }
 
         EquipSkill_Count.gameObject.SetActive(false);
-        foreach (var d in EquipSkills)
+        foreach (var d in EquipSkills_Obj)
             d.gameObject.SetActive(false);
 
         //특수효과
@@ -871,7 +872,7 @@ public class Inventory : MonoBehaviour
             for (int i = 0; i < data.EquipSkill1.Count; i++)
             {
                 EquipSkills[i].SetEquipSkill(data.EquipSkill1[i]);
-                EquipSkills[i].gameObject.SetActive(true);
+                EquipSkills_Obj[i].gameObject.SetActive(true);
             }
 
             EquipskillPanel.SetActive(true);
@@ -958,14 +959,14 @@ public class Inventory : MonoBehaviour
         EquipskillPanel.SetActive(false);
         EquipSkill_Count.gameObject.SetActive(false);
 
-        foreach (var t in EquipSkills)
+        foreach (var t in EquipSkills_Obj)
             t.gameObject.SetActive(false);
 
         //고유효과가있다면
         if (datas.SpeMehodP != "0")
         {
             EquipSkills[0].SetEquipSkill(datas.SpeMehodP);
-            EquipSkills[0].gameObject.SetActive(true);
+            EquipSkills_Obj[0].gameObject.SetActive(true);
             
             EquipskillPanel.SetActive(true);
         }

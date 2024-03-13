@@ -475,6 +475,7 @@ public class GuildRaidManager : MonoBehaviour
             Mon_DropItemPercentboss, true);
 
         Inventory.Instance.ShowEarnItem(dungeondropsid.ToArray(), dungeondropshowmany.ToArray(),false);
+        LogManager.Log_CrystalEarn("길드레이드");
     }
     public void Bt_GetReward()
     {
@@ -496,6 +497,7 @@ public class GuildRaidManager : MonoBehaviour
             alertmanager.alertenum.일반);
      Inventory.Instance.ShowEarnItem(dungeondropsid.ToArray(), dungeondropshowmany.ToArray(), false);
         RefreshRaidRaidHp();
+        LogManager.Log_CrystalEarn("길드레이드");
     }
 
     public List<string> dungeondropsid = new List<string>();

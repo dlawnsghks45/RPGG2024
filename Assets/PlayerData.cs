@@ -747,6 +747,7 @@ public class PlayerData : MonoBehaviour
     }
     public void UpCash(decimal cash)
     {
+        LogManager.EarnCrystal += (int)cash;
         StartCoroutine(Count(moneyenum.불꽃, PlayerCash, PlayerBackendData.Instance.GetCash() + cash, PlayerBackendData.Instance.GetCash()));
         Savemanager.Instance.SaveCash();
 
@@ -1119,10 +1120,6 @@ public class PlayerData : MonoBehaviour
             PlayerStat_info[(int)statenum.상태이상].color = Color.white;
         }
             
-        
-        
-        
-        
         PlayerStat[(int)playerstatenum.생명력].text = mainplayer.stat_hp.ToString("N0");
         PlayerStat_info[(int)statenum.생명력].text = mainplayer.stat_hp.ToString("N0");
         if (mainplayer.buff_hp > 0)
@@ -1190,6 +1187,13 @@ public class PlayerData : MonoBehaviour
         {
             PlayerStat[(int)playerstatenum.치명타확률].color = Color.white;
             PlayerStat_info[(int)statenum.치명타].color = Color.white;
+        }
+        
+        if (mapmanager.Instance.BossPenalty[1].activeSelf)
+        {
+            Debug.Log("치명타 감소");
+            PlayerStat[(int)playerstatenum.치명타확률].color = Color.red;
+            PlayerStat_info[(int)statenum.치명타].color = Color.red;
         }
 
         PlayerStat[(int)playerstatenum.치명타피해].text = $"{(mainplayer.stat_critdmg * 100f):N0}%";

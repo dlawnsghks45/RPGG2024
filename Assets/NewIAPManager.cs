@@ -134,8 +134,8 @@ public class NewIAPManager : MonoBehaviour
                     Shopmanager.Instance.nowshopslot.RefreshBuyCount();
                     break;
             }
-            Shopmanager.Instance.infopanel.Hide(false);
-            LogManager.InsertIAPBuyProduct(Shopmanager.Instance.nowshopid);
+                Shopmanager.Instance.infopanel.Hide(false);
+                LogManager.InsertIAPBuyProduct(Shopmanager.Instance.nowshopid);
             }
 
             if (Shopmanager.Instance.istimeshop)
@@ -389,8 +389,11 @@ public class NewIAPManager : MonoBehaviour
                     Savemanager.Instance.SaveGuideQuest();
                     Savemanager.Instance.SaveInventory();
                     Savemanager.Instance.Save();
+                    
                     break;
             }
+            
+            
         }
         else
         {

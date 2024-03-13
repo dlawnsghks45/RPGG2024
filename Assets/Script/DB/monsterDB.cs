@@ -55,6 +55,7 @@ public class monsterDB : MonoBehaviour
 		public string breakadddmg;
 		public string israge;
 		public string ragepercent;
+		public string ispenalty;
 
 	}
 
@@ -97,6 +98,7 @@ public class monsterDB : MonoBehaviour
 			row.breakadddmg = grid[i][16];
 			row.israge = grid[i][17];
 			row.ragepercent = grid[i][18];
+			row.ispenalty = grid[i][19];
 
 			rowList.Add(row);
 		}
@@ -266,6 +268,14 @@ public class monsterDB : MonoBehaviour
 	public List<Row> FindAll_ragepercent(string find)
 	{
 		return rowList.FindAll(x => x.ragepercent == find);
+	}
+	public Row Find_ispenalty(string find)
+	{
+		return rowList.Find(x => x.ispenalty == find);
+	}
+	public List<Row> FindAll_ispenalty(string find)
+	{
+		return rowList.FindAll(x => x.ispenalty == find);
 	}
 
 }

@@ -96,7 +96,15 @@ public class Test : MonoBehaviour
     
     public void Bt_Make()
     {
-        Inventory.Instance.AddItem(itemid.text,int.Parse(itemcount.text));
+        if (itemid.text.Contains("E"))
+        {
+            //Àåºñ
+            PlayerBackendData.Instance.MakeEquipment(itemid.text¤Ä);
+        }
+        else
+        {
+            Inventory.Instance.AddItem(itemid.text,int.Parse(itemcount.text));
+        }
     }
     
     public void GameDataGet()
@@ -596,5 +604,11 @@ public class Test : MonoBehaviour
     public void Bt_1123()
     {
         otherusermanager.Instance.ShowPlayerData(username);
+    }
+    
+    [Button(Name = "HP")] 
+    public void Bt_11223()
+    {
+        MultiGage.Instance.ObserveStart(3);
     }
 }

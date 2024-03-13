@@ -42,11 +42,13 @@ public class mapmanager : MonoBehaviour
     public GameObject BreakStop; //무력화가 되면 나가는 모래시계
     public GameObject BreakStop2; //무력화가 되면 나가는 모래시계
     public GameObject BreakLock; //무력화가 끝난 후 무력화가 잠기는 시간.
+        //public GameObject RageObj;
+   // public Text RageText;
+   // public int RageCount = 0;
 
-    public GameObject RageObj;
-    public Text RageText;
-    public int RageCount = 0;
-    
+    public GameObject[] BossPenalty;
+    public Text[] BossPenaltyText;
+    public int[] BossPenaltyCount;
 
     public float Curtime;
     public float Maxtime;
@@ -152,29 +154,62 @@ public class mapmanager : MonoBehaviour
     }
     IEnumerator RageOn()
     {
-        RageObj.SetActive(true);
-        RageText.text = "1";
-        RageCount = 1;
+        BossPenalty[(int)PartyRaidBuffEnemy.광폭].SetActive(true);
+        BossPenaltyText[(int)PartyRaidBuffEnemy.광폭].text = "1";
+        BossPenaltyCount[(int)PartyRaidBuffEnemy.광폭] = 1;
         float basicatk = EnemySpawnManager.Instance.enemys_boss.atk;
         while (EnemySpawnManager.Instance.bossstage)
         {
             yield return wait3;
             if (!mapmanager.Instance.isbreak)
             {
-                RageCount++;
-                RageText.text = RageCount.ToString();
-                EnemySpawnManager.Instance.enemys_boss.atk = (basicatk * (1.1f * RageCount));
+                BossPenaltyCount[(int)PartyRaidBuffEnemy.광폭]++;
+                BossPenaltyText[(int)PartyRaidBuffEnemy.광폭].text = BossPenaltyCount[(int)PartyRaidBuffEnemy.광폭].ToString();
+                EnemySpawnManager.Instance.enemys_boss.atk = (basicatk * (1.1f * BossPenaltyCount[(int)PartyRaidBuffEnemy.광폭]));
             }
         }
     }
     private IEnumerator Timerstart()
     {
-        yield return wait2;
-        RageObj.SetActive(false);
-        if (bool.Parse(monsterDB.Instance.Find_id(EnemySpawnManager.Instance.enemys_boss.monid).israge))
+        for (int i = 0; i < BossPenalty.Length; i++)
         {
-            RageStart();
+            BossPenalty[i].SetActive(false);
+            BossPenaltyCount[i] = 0;
+            BossPenaltyText[i].text = "";
         }
+        yield return wait2;
+        if (bool.Parse(monsterDB.Instance.Find_id(EnemySpawnManager.Instance.enemys_boss.monid).ispenalty))
+        {
+
+
+            for (int i = 0; i < PartyRaidBattlemanager.Instance.nowPenalty.Length; i++)
+            {
+                if (PartyRaidBattlemanager.Instance.nowPenalty[i] == 1)
+                {
+                    BossPenalty[i].SetActive(true);
+                    BossPenaltyCount[i] = 1;
+                    BossPenaltyText[i].text = "";
+                }
+            }
+
+            if (bool.Parse(monsterDB.Instance.Find_id(EnemySpawnManager.Instance.enemys_boss.monid).israge))
+            {
+                RageStart();
+            }
+
+            PlayerData.Instance.RefreshPlayerstat();
+        }
+        else
+        {
+            if (bool.Parse(monsterDB.Instance.Find_id(EnemySpawnManager.Instance.enemys_boss.monid).israge))
+            {
+                RageStart();
+            }
+        }
+        
+        
+       
+        
         while(EnemySpawnManager.Instance.bossstage)
         {
             if (!isbreak)
@@ -249,6 +284,30 @@ public class mapmanager : MonoBehaviour
                         //랭킹입력
                         WorldBossManager.RankInsert(WorldBossManager.Instance.TotalDmg.ToString(CultureInfo.InvariantCulture));
                         WorldBossManager.Instance.WorldbossPanel.Show(false);
+                        LocateMap(savemapid);
+                        break;
+                    case "12":
+                        //월드보스레이드
+                        //랭킹입력
+                        PartyRaidRoommanager.Instance.PartyradPanel.Show(false);
+                       //WorldBossManager.RankInsert(WorldBossManager.Instance.TotalDmg.ToString(CultureInfo.InvariantCulture));
+                       // WorldBossManager.Instance.WorldbossPanel.Show(false);
+                        //메인보스 피해 저장
+                        if (PartyRaidRoommanager.Instance.partyroomdata.nowmap.Equals(PlayerBackendData.Instance
+                                .nowstage))
+                        {
+                            //보스방이면
+                            //TotalDmg
+                            PartyraidChatManager.Instance.Chat_MainBossRaidFinish(dpsmanager.Instance.TotalDmg);
+                            dpsmanager.Instance.EndDps();
+                        }
+                        else
+                        {
+                            PartyraidChatManager.Instance.Chat_MiddleRaidFail();
+                        }
+                        
+                        
+                        LocateMap(savemapid);
                         break;
                 }
                 EnemySpawnManager.Instance.bossstage = false;
@@ -325,11 +384,30 @@ public class mapmanager : MonoBehaviour
                 //시간 잠시 스톱
                 isbreak = true;
                 EnemySpawnManager.Instance.enemys_boss.ani.speed = 0;
-                if (RageObj.activeSelf)
+                if (BossPenalty[(int)PartyRaidBuffEnemy.광폭].activeSelf)
                 {
-                    RageCount /= 2;
-                    RageText.text = RageCount.ToString();
+                    BossPenaltyCount[(int)PartyRaidBuffEnemy.광폭] /= 2;
+                    BossPenaltyText[(int)PartyRaidBuffEnemy.광폭].text = BossPenaltyCount[(int)PartyRaidBuffEnemy.광폭].ToString();
                 }
+                
+                //보스전
+                if (mapmanager.Instance.BossPenalty[2].activeSelf)
+                {
+                    EnemySpawnManager.Instance.enemys_boss.hpmanager.CurHp +=
+                        (EnemySpawnManager.Instance.enemys_boss.hpmanager.MaxHp * 0.07m);
+
+                    if (EnemySpawnManager.Instance.enemys_boss.hpmanager.CurHp >
+                        EnemySpawnManager.Instance.enemys_boss.hpmanager.MaxHp)
+                    {
+                        EnemySpawnManager.Instance.enemys_boss.hpmanager.CurHp =
+                            EnemySpawnManager.Instance.enemys_boss.hpmanager.MaxHp;
+                    }
+                    
+                    DamageManager.Instance.ShowDamageText(DamageManager.damagetype.회복, 
+                        EnemySpawnManager.Instance.enemys_boss.transform,  (EnemySpawnManager.Instance.enemys_boss.hpmanager.MaxHp * 0.07m));
+                }
+                
+
                 BreakStop.SetActive(true); //무력화
                 BreakStop2.SetActive(true);
                 BreakLock.SetActive(false); //무력화 잠금 없앰
@@ -566,6 +644,20 @@ public class mapmanager : MonoBehaviour
                 EnemySpawnManager.Instance.CloseStageObj();
                 dpsmanager.Instance.StartDps();
                 break;
+            case "12": //월드보스레이드
+                if (PartyRaidRoommanager.Instance.partyroomdata.nowmap.Equals(PlayerBackendData.Instance
+                        .nowstage))
+                {
+                    //보스방이면
+                    //TotalDmg
+                    dpsmanager.Instance.StartDps();
+                }
+                EnemySpawnManager.Instance.spawnedmonstercur = 0;
+                EnemySpawnManager.Instance.spawnedmonstermax =
+                    int.Parse(MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage).mapcount);
+                Invoke(nameof(StartPartyRaidBoss), 2.1f);
+                EnemySpawnManager.Instance.CloseStageObj();
+                break;
         }
         changeLocateAni.SetTrigger(Mapchange);
         if (maptype.Equals("9"))
@@ -622,6 +714,12 @@ public class mapmanager : MonoBehaviour
         Skillmanager.Instance.ResetAllSkills();
     }
     public void StartWorldBoss()
+    {
+        EnemySpawnManager.Instance.bt_SpawnWorldBoss();
+        Battlemanager.Instance.mainplayer.hpmanager.HealAll();
+        Skillmanager.Instance.ResetAllSkills();
+    }
+    public void StartPartyRaidBoss()
     {
         EnemySpawnManager.Instance.bt_SpawnWorldBoss();
         Battlemanager.Instance.mainplayer.hpmanager.HealAll();
@@ -779,6 +877,13 @@ public class mapmanager : MonoBehaviour
 
     public void Bt_LocateMap()
     {
+        MapDB.Row mapdata_Now = MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage);
+        if (mapdata_Now.maptype == "12")
+        {
+            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI7/콘텐츠 중 불가"), alertmanager.alertenum.주의);
+            return;
+        }
+        
         LocateMap(nowselectmapid);
         mapobj.Hide(false);
     }

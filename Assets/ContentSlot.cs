@@ -21,7 +21,7 @@ public class ContentSlot : MonoBehaviour
         }
         else
         {
-            LockPanel.SetActive(false);            
+            LockPanel.SetActive(false);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
         }
     }
 
@@ -35,6 +35,9 @@ public class ContentSlot : MonoBehaviour
         
         switch (contentname)
         {
+            case "파티레이드":
+                PartyRaidRoommanager.Instance.PartyradPanel.Show(false);
+                break;
            case "개미굴":
                Antcavemanager.Instance.ShowAntCave();
                break;

@@ -205,6 +205,7 @@ public class Antcavemanager : MonoBehaviour
                 RankingManager.Instance.RankInsert(PlayerBackendData.Instance.AntCaveLv.ToString(),RankingManager.RankEnum.개미굴);
                 FinishButton.gameObject.SetActive(false);
                 Settingmanager.Instance.SaveDataALl();
+                LogManager.Log_CrystalEarn("개미굴");
             }
             else
             {
@@ -268,7 +269,7 @@ public class Antcavemanager : MonoBehaviour
                 FinishButton.gameObject.SetActive(false);
                 RankingManager.Instance.RankInsert(PlayerBackendData.Instance.AntCaveLv.ToString(),RankingManager.RankEnum.개미굴);
                 Settingmanager.Instance.SaveDataALl();
-
+                LogManager.Log_CrystalEarn("개미굴");
             }
             
         });

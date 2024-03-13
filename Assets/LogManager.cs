@@ -74,6 +74,7 @@ public class LogManager : MonoBehaviour
         {
             // ÀÌÈÄ Ã³¸®
         });
+        LogManager.Log_CrystalEarn("ÇÁ¸®¹Ì¾ö»óÁ¡");
     }
     public static void InsertIAPBuyProductpass()
     {
@@ -650,7 +651,30 @@ public class LogManager : MonoBehaviour
             // ÀÌÈÄ Ã³¸®
             if (callback.IsSuccess())
             {
+                Debug.Log("ÅäÅ« ½ÇÆÐ");
                 Application.Quit();
+            }
+        });
+    }
+
+    public static int EarnCrystal;
+    public static void Log_CrystalEarn(string Reason)
+    {
+        if(EarnCrystal ==0)
+            return;
+        Param param = new Param();
+        param.Add("¾ò±â°÷",Reason);
+        param.Add("¾ò±âÀüÅ©¸®½ºÅ»",PlayerBackendData.Instance.GetCash() - EarnCrystal);
+        param.Add("¾òÀºÅ©¸®½ºÅ»",EarnCrystal);
+        param.Add("¾òÀºÈÄÅ©¸®½ºÅ»",PlayerBackendData.Instance.GetCash());
+        param.Add("·¹º§",PlayerBackendData.Instance.GetLv());
+        SendQueue.Enqueue(Backend.GameLog.InsertLogV2, "Å©¸®½ºÅ»È¹µæ", param, (callback) =>
+        {
+            // ÀÌÈÄ Ã³¸®
+            if (callback.IsSuccess())
+            {
+                EarnCrystal = 0;
+                Debug.Log("Å©¸®½ºÅ»È¹µæ");
             }
         });
     }

@@ -1,515 +1,515 @@
-id,DescriptionKor,mapname,name,hp,dmg,crit,attackcount,attacktime,montype,sprite,dropid,bossdrop,breakPoint,breakTime,breaknewstart,breakadddmg,israge,ragepercent
-아이디,,,이름,체력,데미지,크리확률,공격횟수,공격시간,몬스터 타입,이미지,드롭아이디,보스 드롭 아이디,무력화 점수,무력화 시간,무력화다시시작시간,무력화 시 추가딜,움직이는가?,
-100,승급 시험2,,MonsterName/100,70000,150,30,1,1,basic,Monster/Boss/100,100,100,100,5,8,2,FALSE,0
-101,승급 시험3,,MonsterName/101,250000,250,30,1,1,basic,Monster/Boss/101,101,101,150,5,8,2,FALSE,0
-102,승급 시험4,,MonsterName/102,4000000,500,30,1,1,basic,Monster/Boss/102,102,102,200,5,8,2,FALSE,0
-103,승급 시험5,,MonsterName/103,20000000,1000,30,1,1,basic,Monster/Boss/103,103,103,250,5,8,2,FALSE,0
-104,승급 시험6,,MonsterName/104,102000000,3000,30,1,1,basic,Monster/Boss/104,104,104,300,5,8,2,FALSE,0
-105,승급 시험7,,MonsterName/105,300000000,5000,30,1,1,basic,Monster/Boss/105,105,105,500,5,8,2,FALSE,0
-106,승급 시험8,,MonsterName/106,800000000,7500,30,1,1,basic,Monster/Boss/106,106,106,500,5,8,2,FALSE,0
-107,승급 시험9,,MonsterName/107,2000000000,15000,30,1,1,basic,Monster/Boss/107,107,107,500,5,8,2,FALSE,0
-108,승급 시험10,,MonsterName/108,10000000000,30000,30,1,1,basic,Monster/Boss/108,108,108,500,5,8,2,FALSE,0
-109,승급 시험11,,MonsterName/109,250000000000,45000,30,1,1,basic,Monster/Boss/109,109,109,550,5,8,2,FALSE,0
-110,승급 시험12,,MonsterName/110,500000000000,55000,30,1,1,basic,Monster/Boss/110,110,110,550,5,8,2,FALSE,0
-111,승급 시험13,,MonsterName/111,1500000000000,80000,30,1,1,basic,Monster/Boss/111,111,111,550,5,8,2,FALSE,0
-112,승급 시험14,,MonsterName/112,7000000000000,130000,30,1,1,basic,Monster/Boss/112,112,112,550,5,8,2,FALSE,0
-113,승급 시험15,,MonsterName/113,18000000000000,170000,30,1,1,basic,Monster/Boss/113,113,113,550,5,8,2,FALSE,0
-114,승급 시험16,,MonsterName/114,101000000000000,210000,30,1,1,basic,Monster/Boss/114,114,114,550,5,8,2,FALSE,0
-115,승급 시험17,,MonsterName/115,310000000000000,250000,30,1,1,basic,Monster/Boss/115,115,115,550,5,8,2,FALSE,0
-116,승급 시험18,,MonsterName/116,989000000000000,290000,30,1,1,basic,Monster/Boss/116,116,116,550,5,8,2,FALSE,0
-117,승급 시험19,,MonsterName/117,2268000000000000,330000,30,1,1,basic,Monster/Boss/117,117,117,550,5,8,2,FALSE,0
-118,승급 시험20,,MonsterName/118,4568000000000000,370000,30,1,1,basic,Monster/Boss/118,118,118,550,5,8,2,FALSE,0
-119,승급 시험21,,MonsterName/119,15868000000000000,410000,30,1,1,basic,Monster/Boss/119,119,119,550,5,8,2,FALSE,0
-120,승급 시험22,,MonsterName/120,30068000000000000,450000,30,1,1,basic,Monster/Boss/120,120,120,550,5,8,2,FALSE,0
-121,승급 시험23,,MonsterName/121,78635870242928600,570000,30,1,1,basic,Monster/Boss/121,121,121,550,5,8,2,FALSE,0
-122,승급 시험24,,MonsterName/122,240000000000000000,690000,30,1,1,basic,Monster/Boss/122,122,122,550,5,8,2,FALSE,0
-123,승급 시험25,,MonsterName/123,850000000000000000,810000,30,1,1,basic,Monster/Boss/123,123,123,550,5,8,2,FALSE,0
-124,승급 시험26,,MonsterName/124,1550000000000000000,930000,30,1,1,basic,Monster/Boss/124,124,124,550,5,8,2,FALSE,0
-125,승급 시험27,,MonsterName/125,3000000000000000000,1050000,30,1,1,basic,Monster/Boss/125,125,125,550,5,8,2,FALSE,0
-126,승급 시험28,,MonsterName/126,4500000000000000000,1110000,30,1,1,basic,Monster/Boss/126,126,126,550,5,8,2,FALSE,0
-127,승급 시험29,,MonsterName/127,6500000000000000000,1590000,30,1,1,basic,Monster/Boss/127,127,127,550,5,8,2,FALSE,0
-128,승급 시험30,,MonsterName/128,9000000000000000000,2270000,30,1,1,basic,Monster/Boss/128,128,128,550,5,8,2,FALSE,0
-129,승급 시험31,,MonsterName/129,155000000000000000000,2950000,30,1,1,basic,Monster/Boss/129,129,129,550,5,8,2,FALSE,0
-130,승급 시험32,,MonsterName/130,355000000000000000000,3630000,30,1,1,basic,Monster/Boss/130,130,130,550,5,8,2,FALSE,0
-131,승급 시험33,,MonsterName/131,355000000000000000000,4310000,30,1,1,basic,Monster/Boss/131,131,131,550,5,8,2,FALSE,0
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,FALSE,0
-99,허수아비,,MonsterName/113,0,0,0,1,1,boss,Monster/Field/Training,0,0,500,10,8,2,FALSE,0
-98,개미굴여왕,,MonsterName/98,2000000000000,0,0,1,1,boss,Monster/Field/Training,0,0,500,10,8,2,FALSE,0
-,,,,13409502308809,40,,,,,,,,,,,,FALSE,0
-,,,,,,,,,,,,,,,,,FALSE,0
-4999,황금박쥐,이벤트 몹,MonsterName/4999,,0,0,1,1,boss,Monster/Event/산타,99999,99999,15,30,8,0,FALSE,0
-레이드,,,,,,,,,,,,,,,,,FALSE,0
-5000,전기 뱀장어,레이드 지역,MonsterName/5000,25000000,0,0,1,1,boss,Monster/Field/54/0,5000,5000,400,12,8,2.5,FALSE,0
-5001,심해어,레이드 지역,MonsterName/5001,120000000,0,0,1,1,boss,Monster/Field/54/1,5001,5001,400,12,8,2.5,FALSE,0
-5002,공허 촉수,레이드 지역,MonsterName/5002,700000000,0,0,1,1,boss,Monster/Field/48/0,5002,5002,400,12,8,2.5,FALSE,0
-5003,재앙의 씨앗,레이드 지역,MonsterName/5003,8000000000,0,0,1,1,boss,Monster/Field/48/1,5003,5003,400,12,8,2.5,FALSE,0
-5004,스컬 피쉬,레이드 지역,MonsterName/5004,40000000000,0,0,1,1,boss,Monster/Dungeon/Dungeon8/1,5004,5004,400,12,8,2.5,FALSE,0
-5005,스컬 하이드라,레이드 지역,MonsterName/5005,80000000000,0,0,1,1,boss,Monster/Dungeon/Dungeon8/2,5005,5005,400,12,8,2.5,FALSE,0
-5006,팬텀,레이드 지역,MonsterName/5006,160000000000,0,0,1,1,boss,Monster/Dungeon/Dungeon8/5,5006,5006,400,12,8,2.5,FALSE,0
-5007,엘더 본 드래곤,레이드 지역,MonsterName/5007,320000000000,0,0,1,1,boss,Monster/Dungeon/Dungeon8/7,5007,5007,400,12,8,2.5,FALSE,0
-5008,홀리 티탄,레이드 지역,MonsterName/5008,9800000000000,0,0,1,1,boss,Monster/Dungeon/Dungeon17/3,5008,5008,600,12,8,2.5,FALSE,0
-5009,홀리 그리폰,레이드 지역,MonsterName/5009,19000000000000,0,0,1,1,boss,Monster/Dungeon/Dungeon17/1,5009,5009,600,12,8,2.5,FALSE,0
-5010,홀리 아피스,레이드 지역,MonsterName/5010,79000000000000,0,0,1,1,boss,Monster/Dungeon/Dungeon17/5,5010,5010,600,12,8,2.5,FALSE,0
-5011,홀리 아켄젤,레이드 지역,MonsterName/5011,250000000000000,0,0,1,1,boss,Monster/Dungeon/Dungeon17/7,5011,5011,600,12,8,2.5,FALSE,0
-5012,홀리 엔트로 위버,레이드 지역,MonsterName/5012,850000000000000,0,0,1,1,boss,Monster/Dungeon/Dungeon17/8,5012,5012,600,12,8,2.5,FALSE,0
-5013,저거넛,레이드 지역,MonsterName/5013,2715096693658710,0,0,1,1,boss,Monster/Dungeon/Dungeon18/0,5013,5013,600,12,8,2.5,FALSE,0
-5014,거인,레이드 지역,MonsterName/5014,4580193387317420,0,0,1,1,boss,Monster/Dungeon/Dungeon18/5,5014,5014,600,12,8,2.5,FALSE,0
-5015,히포그리프,레이드 지역,MonsterName/5015,6445290080976130,0,0,1,1,boss,Monster/Dungeon/Dungeon18/3,5015,5015,600,12,8,2.5,FALSE,0
-5016,칸,레이드 지역,MonsterName/5016,8310386774634840,0,0,1,1,boss,Monster/Dungeon/Dungeon18/7,5016,5016,600,12,8,2.5,FALSE,0
-5017,퍼지,레이드 지역,MonsterName/5017,15175483468293600,0,0,1,1,boss,Monster/Raven Fantasy/a5,5017,5017,900,12,8,2.5,FALSE,0
-5018,할로우 나이트,레이드 지역,MonsterName/5018,22040580161952400,0,0,1,1,boss,Monster/Raven Fantasy/a28,5018,5018,900,12,8,2.5,FALSE,0
-5019,스컬 데몬,레이드 지역,MonsterName/5019,28905676855611100,0,0,1,1,boss,Monster/Raven Fantasy/a10,5019,5019,900,12,8,2.5,FALSE,0
-5020,리퍼,레이드 지역,MonsterName/5020,35770773549269900,0,0,1,1,boss,Monster/Raven Fantasy/a16,5020,5020,900,12,8,2.5,FALSE,0
-5021,기간테스,레이드 지역,MonsterName/5021,78635870242928600,0,0,1,1,boss,Monster/WorldBoss/기간테스,5021,5021,900,12,8,2.5,FALSE,0
-5022,모레그,레이드 지역,MonsterName/5022,240000000000000000,0,0,1,1,boss,Monster/WorldBoss/모레그,5022,5022,900,12,8,2.5,FALSE,0
-5023,허수아비,레이드 지역,MonsterName/5023,850000000000000000,0,0,1,1,boss,Monster/WorldBoss/허수아비,5023,5023,900,12,8,2.5,FALSE,0
-5024,헬나이트,레이드 지역,MonsterName/5024,1550000000000000000,0,0,1,1,boss,Monster/WorldBoss/헬나이트,5024,5024,900,12,8,2.5,FALSE,0
-5025,심연의 주술사,레이드 지역,MonsterName/5025,3000000000000000000,0,0,1,1,boss,Monster/Raven Fantasy/a20,5025,5025,900,12,8,2.5,FALSE,0
-5026,악의,레이드 지역,MonsterName/5026,4500000000000000000,0,0,1,1,boss,Monster/Raven Fantasy/a11,5026,5026,900,12,8,2.5,FALSE,0
-5027,미믹,레이드 지역,MonsterName/5027,6500000000000000000,0,0,1,1,boss,Monster/Field2/Outline22,5027,5027,900,12,8,2.5,FALSE,0
-5028,웨어울프,레이드 지역,MonsterName/5028,9000000000000000000,0,0,1,1,boss,Monster/Field2/Outline9,5028,5028,900,12,8,2.5,FALSE,0
-,,,,,,,,,,,,,,,,,FALSE,0
-,,,,,,,,,,,,,,,,,FALSE,0
-,,,,,,,,,,,,,,,,,FALSE,0
-,,,,,,,,,,,,,,,,,FALSE,0
-5022,,,,,,,,,,,,,,,,,FALSE,0
-5023,,,,,,,,,,,,,,,,,FALSE,0
-5024,,,,,,,,,,,,,,,,,FALSE,0
-5025,,,,,,,,,,,,,,,,,FALSE,0
-,,,,,,,,,,,,,,,,,FALSE,0
-,,,,,,,,,,,,,,,,,FALSE,0
-,,,,,,,,,,,,,,,,,FALSE,0
-,,레이드 지역,MonsterName/5010,,,,,,,,,,,,,,FALSE,0
-9999,개미굴,콘텐츠,MonsterName/9999,3000000000,0,0,0,0,boss,Monster/Ant/orb_guardian,0,0,1000,10,8,2,FALSE,0
-10000,성물,콘텐츠,MonsterName/10000,0,0,0,0,0,boss,TotemImage/35,5003,5003,500,10,8,2,FALSE,0
-10001,골드러쉬,콘텐츠,MonsterName/10001,100000,0,0,0,0,boss,Item/ETC/goldsafe2,5003,5003,500,10,8,2,FALSE,0
-10002,도적단 섬멸,콘텐츠,MonsterName/10002,100000,1000,30,1,1,boss,Monster/Field/48/1,5003,5003,500,10,8,2,FALSE,0
-,,,,,,,,,,,,길드레이드 보상,,,,,FALSE,0
-10003,,길드레이드 1단계,,100000000,0,0,0,0,boss,Monster/GuildRaid/0,0,6000,1000,12,20,4,FALSE,0
-10004,,길드레이드 2단계,,10000000000,0,0,0,0,boss,Monster/GuildRaid/1,0,6001,1000,12,20,4,FALSE,0
-10005,,길드레이드 3단계,,1000000000000,0,0,0,0,boss,Monster/GuildRaid/2,0,6002,1000,12,20,4,FALSE,0
-10006,,길드레이드 4단계,,100000000000000,0,0,0,0,boss,Monster/GuildRaid/3,0,6003,1000,12,20,4,FALSE,0
-10007,,길드레이드 5단계,,5000000000000000,0,0,0,0,boss,Monster/GuildRaid/4,0,6004,1000,12,20,4,FALSE,0
-10008,,길드레이드 6단계,,20000000000000000,0,0,0,0,boss,Monster/GuildRaid/5,0,6005,1000,12,20,4,FALSE,0
-10009,,길드레이드 7단계,,50000000000000000,0,0,0,0,boss,Monster/GuildRaid/6,0,6006,1000,12,20,4,FALSE,0
-10010,,길드레이드 8단계,,80000000000000000,0,0,0,0,boss,Monster/GuildRaid/7,0,6007,1000,12,20,4,FALSE,0
-10011,,길드레이드 9단계,,110000000000000000,0,0,0,0,boss,Monster/Dungeon/Dungeon33/7,0,6008,1000,12,20,4,FALSE,0
-10012,,길드레이드 10단계,,140000000000000000,0,0,0,0,boss,Monster/Dungeon/Dungeon32/5,0,6009,1000,12,20,4,FALSE,0
-10013,,길드레이드 11,,170000000000000000,0,0,0,0,boss,Monster/Dungeon/Dungeon32/7,0,6010,1000,12,20,4,FALSE,0
-10014,,길드레이드 12,,200000000000000000,0,0,0,0,boss,Monster/Dungeon/Runway/2,0,6011,1000,12,20,4,FALSE,0
-10015,,길드레이드 13,,270000000000000000,0,0,0,0,boss,Monster/Raven Fantasy/gr1,0,6012,1000,12,20,4,FALSE,0
-10016,,길드레이드 14,,360000000000000000,0,0,0,0,boss,Monster/Raven Fantasy/gr2,0,6013,1000,12,20,4,FALSE,0
-10017,,길드레이드 15,,450000000000000000,0,0,0,0,boss,Monster/Raven Fantasy/gr3,0,6014,1000,12,20,4,FALSE,0
-10018,,길드레이드 16,,540000000000000000,0,0,0,0,boss,Monster/Raven Fantasy/gr4,0,6015,1000,12,20,4,FALSE,0
-10019,,길드레이드 17,,800000000000000000,0,0,0,0,boss,Monster/Raven Fantasy/gr5,0,6016,1000,12,20,4,FALSE,0
-10020,,길드레이드 18,,1200000000000000000,0,0,0,0,boss,Monster/Raven Fantasy/gr6,0,6017,1000,12,20,4,FALSE,0
-10021,,길드레이드 19,,3500000000000000000,0,0,0,0,boss,Monster/Raven Fantasy/gr7,0,6018,1000,12,20,4,FALSE,0
-10022,,길드레이드 20,,7500000000000000000,0,0,0,0,boss,Monster/Raven Fantasy/gr8,0,6019,1000,12,20,4,FALSE,0
-10023,,길드레이드 21,,12000000000000000000,0,0,0,0,boss,Monster/Raven Fantasy/gr9,0,6020,1000,12,20,4,FALSE,0
-10024,,길드레이드 22,,22000000000000000000,0,0,0,0,boss,Monster/Raven Fantasy/gr10,0,6021,1000,12,20,4,FALSE,0
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-1000,1,들판,MonsterName/1000,"4,096",14,30,1,1,basic,Monster/Animal/0_Sheep;Monster/Animal/0_Yak;Monster/Animal/0_Oldyak,1000,1001,0,0,0,0,FALSE,0
-1001,1,초원,MonsterName/1001,5793,21,30,1,1,basic,Monster/Animal/1_Pig;Monster/Animal/1_OldPig,1002,1003,0,0,0,0,FALSE,0
-1002,2,산,MonsterName/1002,8192,42,30,1,1,basic,Monster/Animal/2_Naga;Monster/Animal/2_Bat;Monster/Animal/2_Wolf,1004,1005,0,0,0,0,FALSE,0
-1003,2,뱀굴,MonsterName/1003,11585,49,30,1,1,basic,Monster/Animal/3_Snake3;Monster/Animal/3_Snake1;Monster/Animal/3_Snake,1006,1007,0,0,0,0,FALSE,0
-1004,3,켄타 부락,MonsterName/1004,16384,210,30,1,1,basic,Monster/Field/0/0_mob2;Monster/Field/0/0_mob1;Monster/Field/0/0_mob0,1008,1009,0,0,0,0,FALSE,0
-1005,3,트롤족 주둔지,MonsterName/1005,23170,105,30,1,1,basic,Monster/Field/1/1_mob3;Monster/Field/1/1_mob2;Monster/Field/1/1_mob1,1010,1011,0,0,0,0,FALSE,0
-1006,4,협곡,MonsterName/1006,32768,210,30,1,1,basic,Monster/Field/2/2_mob3;Monster/Field/2/2_mob2;Monster/Field/2/2_mob1,1012,1013,0,0,0,0,FALSE,0
-1007,4,폐허,MonsterName/1007,46341,238,30,1,1,basic,Monster/Field/3/3_mob3;Monster/Field/3/3_mob2;Monster/Field/3/3_mob1,1014,1015,0,0,0,0,FALSE,0
-1008,4,묘지,MonsterName/1008,65536,350,30,1,1,basic,Monster/Field/4/mob3;Monster/Field/4/mob2;Monster/Field/4/mob1,1016,1017,0,0,0,0,FALSE,0
-1009,5,차원의 갈림길,MonsterName/1009,92682,700,30,1,1,basic,Monster/Field/5/mob4;Monster/Field/5/mob3;Monster/Field/5/mob42,1018,1019,0,0,0,0,FALSE,0
-1010,5,마계 외부,MonsterName/1010,131072,784,30,1,1,basic,Monster/Field/6/mob4;Monster/Field/6/mob3;Monster/Field/6/mob2,1020,1021,0,0,0,0,FALSE,0
-1011,6,마계 내부,MonsterName/1011,185364,980,30,1,1,basic,Monster/Field/7/mob4;Monster/Field/7/mob3;Monster/Field/7/mob2,1022,1023,0,0,0,0,FALSE,0
-1012,6,천계 입구,MonsterName/1012,262144,1106,30,1,1,basic,Monster/Field/8/mob4;Monster/Field/8/mob3;Monster/Field/8/mob2,1024,1025,0,0,0,0,FALSE,0
-1013,6,죽음의 땅,MonsterName/1013,370728,1260,30,1,1,basic,Monster/Field/9/mob4;Monster/Field/9/mob3;Monster/Field/9/mob2,1026,1027,0,0,0,0,FALSE,0
-1014,7,제국,MonsterName/1014,524288,1330,30,1,1,basic,Monster/Field/10/mob4;Monster/Field/10/mob3;Monster/Field/10/mob2,1028,1029,0,0,0,0,FALSE,0
-1015,7,밀림,MonsterName/1015,741455,1400,30,1,1,basic,Monster/Field/11/mob4;Monster/Field/11/mob3;Monster/Field/11/mob2,1030,1031,0,0,0,0,FALSE,0
-1016,7,드래고니아,MonsterName/1016,1048576,1470,30,1,1,basic,Monster/Field/12/mob4;Monster/Field/12/mob3;Monster/Field/12/mob2,1032,1033,0,0,0,0,FALSE,0
-1017,8,실험실,MonsterName/1017,1482910,1680,30,1,1,basic,Monster/Field/13/mob4;Monster/Field/13/mob3;Monster/Field/13/mob2,1034,1035,0,0,0,0,FALSE,0
-1018,8,검은대지,MonsterName/1018,2097152,1680,30,1,1,basic,Monster/Field/14/mob4;Monster/Field/14/mob3;Monster/Field/14/mob2,1036,1037,0,0,0,0,FALSE,0
-1019,8,빙결지대,MonsterName/1019,2965821,1820,30,1,1,basic,Monster/Field/15/mob4;Monster/Field/15/mob3;Monster/Field/15/mob2,1038,1039,0,0,0,0,FALSE,0
-1020,8,신비로운 숲,MonsterName/1020,4194304,1960,30,1,1,basic,Monster/Field/16/mob4;Monster/Field/16/mob3;Monster/Field/16/mob2,1040,1041,0,0,0,0,FALSE,0
-1021,9,공허,MonsterName/1021,5931642,2100,30,1,1,basic,Monster/Field/17/mob4;Monster/Field/17/mob3;Monster/Field/17/mob2,1042,1043,0,0,0,0,FALSE,0
-1022,9,오즈니아,MonsterName/1022,8388608,2240,30,1,1,basic,Monster/Field/18/mob4;Monster/Field/18/mob3;Monster/Field/18/mob2,1044,1045,0,0,0,0,FALSE,0
-1023,9,마왕성 입구,MonsterName/1023,11863283,2380,30,1,1,basic,Monster/Field/19/mob4;Monster/Field/19/mob3;Monster/Field/19/mob2,1046,1047,0,0,0,0,FALSE,0
-1024,9,오염 지역,MonsterName/1024,16777216,2520,30,1,1,basic,Monster/Field/20/mob4;Monster/Field/20/mob3;Monster/Field/20/mob2,1048,1049,0,0,0,0,FALSE,0
-1025,10,용의 나라,MonsterName/1025,23726566,4900,30,1,1,basic,Monster/Field/21/mob4;Monster/Field/21/mob3;Monster/Field/21/mob2,1050,1051,0,0,0,0,FALSE,0
-1026,10,칸의 연구소,MonsterName/1026,33554432,5600,30,1,1,basic,Monster/Field/24/mob4;Monster/Field/24/mob3;Monster/Field/24/mob2,1052,1053,0,0,0,0,FALSE,0
-1027,10,망령의 숲,MonsterName/1027,47453133,6300,30,1,1,basic,Monster/Field/25/mob4;Monster/Field/25/mob3;Monster/Field/25/mob2,1054,1055,0,0,0,0,FALSE,0
-1028,10,고르곤의 동굴,MonsterName/1028,67108864,7000,30,1,1,basic,Monster/Field/26/mob4;Monster/Field/26/mob3;Monster/Field/26/mob2,1056,1057,0,0,0,0,FALSE,0
-1029,10,운명의 틈,MonsterName/1029,94906266,7700,30,1,1,basic,Monster/Field/27/mob4;Monster/Field/27/mob3;Monster/Field/27/mob2,1058,1059,0,0,0,0,FALSE,0
-1030,10,사막,MonsterName/1030,134217728,8400,30,1,1,basic,Monster/Field/28/mob4;Monster/Field/28/mob3;Monster/Field/28/mob2,1060,1061,0,0,0,0,FALSE,0
-1031,10,엘프의 마을,MonsterName/1031,189812531,9100,30,1,1,basic,Monster/Field/29/mob4;Monster/Field/29/mob3;Monster/Field/29/mob2,1062,1063,0,0,0,0,FALSE,0
-1032,10,광신도 마을,MonsterName/1032,268435456,9800,30,1,1,basic,Monster/Field/30/mob4;Monster/Field/30/mob3;Monster/Field/30/mob2,1064,1065,0,0,0,0,FALSE,0
-1033,11,마법도시,MonsterName/1033,854156391,25000,30,1,1,basic,Monster/Field/31/3;Monster/Field/31/2;Monster/Field/31/1,1070,1071,0,0,0,0,FALSE,0
-1034,11,불타는 평야,MonsterName/1034,1708312781,30000,30,1,1,basic,Monster/Field/32/2;Monster/Field/32/3;Monster/Field/32/1,1072,1073,0,0,0,0,FALSE,0
-1035,11,아마존,MonsterName/1035,2415919104,35000,30,1,1,basic,Monster/Field/33/3;Monster/Field/33/2;Monster/Field/33/1,1074,1075,0,0,0,0,FALSE,0
-1036,11,나가랜드,MonsterName/1036,3416625562,40000,30,1,1,basic,Monster/Field/34/3;Monster/Field/34/2;Monster/Field/34/1,1076,1077,0,0,0,0,FALSE,0
-1037,11,코볼트 주둔지,MonsterName/1037,4831838208,45000,30,1,1,basic,Monster/Field/35/3;Monster/Field/35/2;Monster/Field/35/1,1078,1079,0,0,0,0,FALSE,0
-1038,12,음산한 마을,MonsterName/1038,9663676416,50000,30,1,1,basic,Monster/Field/36/3;Monster/Field/36/2;Monster/Field/36/1,1080,1081,0,0,0,0,FALSE,0
-1039,12,아인 약탈지,MonsterName/1039,13666502250,55000,30,1,1,basic,Monster/Field/38/3;Monster/Field/38/2;Monster/Field/38/1,1082,1083,0,0,0,0,FALSE,0
-1040,12,카지노,MonsterName/1040,19327352832,60000,30,1,1,basic,Monster/Field/40/3;Monster/Field/40/2;Monster/Field/40/1,1084,1085,0,0,0,0,FALSE,0
-1041,12,버려진 숲,MonsterName/1041,27333004500,65000,30,1,1,basic,Monster/Field/41/3;Monster/Field/41/2;Monster/Field/41/1,1086,1087,0,0,0,0,FALSE,0
-1042,12,미지의 드래고니아,MonsterName/1042,38654705664,70000,30,1,1,basic,Monster/Field/42/3;Monster/Field/42/2;Monster/Field/42/1,1088,1089,0,0,0,0,FALSE,0
-1043,12,미지의 공허,MonsterName/1043,54666009000,75000,30,1,1,basic,Monster/Field/43/3;Monster/Field/43/2;Monster/Field/43/1,1090,1091,0,0,0,0,FALSE,0
-1044,13,미지의 용의 나라,MonsterName/1044,109332017999,80000,30,1,1,basic,Monster/Field/44/3;Monster/Field/44/2;Monster/Field/44/1,1092,1093,0,0,0,0,FALSE,0
-1045,13,뱀파이어의 성,MonsterName/1045,154618822656,85000,30,1,1,basic,Monster/Field/45/3;Monster/Field/45/2;Monster/Field/45/1,1094,1095,0,0,0,0,FALSE,0
-1046,13,끝없는 미로,MonsterName/1046,218664035998,90000,30,1,1,basic,Monster/Field/46/3;Monster/Field/46/2;Monster/Field/46/1,1096,1097,0,0,0,0,FALSE,0
-1047,13,소서러 길드,MonsterName/1047,309237645312,95000,30,1,1,basic,Monster/Field/47/3;Monster/Field/47/2;Monster/Field/47/1,1098,1099,0,0,0,0,FALSE,0
-1048,13,심해,MonsterName/1048,437328071997,100000,30,1,1,basic,Monster/Field/48/3;Monster/Field/48/2;Monster/Field/48/1,1100,1101,0,0,0,0,FALSE,0
-1049,13,폭염지대,MonsterName/1049,618475290624,105000,30,1,1,basic,Monster/Field/49/3;Monster/Field/49/2;Monster/Field/49/1,1102,1103,0,0,0,0,FALSE,0
-1050,13,언데드 출몰지역,MonsterName/1050,874656143993,110000,30,1,1,basic,Monster/Field/50/3;Monster/Field/50/2;Monster/Field/50/1,1104,1105,0,0,0,0,FALSE,0
-1051,14,아이언헤븐,MonsterName/1051,1076828025275,115000,30,1,1,basic,Monster/Field/51/3;Monster/Field/51/2;Monster/Field/51/1,1106,1107,0,0,0,0,FALSE,0
-1052,14,모험가의 서,MonsterName/1052,1325730807450,120000,30,1,1,basic,Monster/Field/52/3;Monster/Field/52/2;Monster/Field/52/1,1108,1109,0,0,0,0,FALSE,0
-1053,14,마티노 초원,MonsterName/1053,1632166077192,125000,30,1,1,basic,Monster/Field/53/3;Monster/Field/53/2;Monster/Field/53/1,1110,1111,0,0,0,0,FALSE,0
-1054,14,마티노 앞 바다,MonsterName/1054,2009432147586,130000,30,1,1,basic,Monster/Field/54/3;Monster/Field/54/2;Monster/Field/54/1,1112,1113,0,0,0,0,FALSE,0
-1055,14,진'나가 랜드,MonsterName/1055,2473901162496,135000,30,1,1,basic,Monster/Field/34/3;Monster/Field/34/2;Monster/Field/34/1,1114,1115,0,0,0,0,FALSE,0
-1056,14,진'코볼트 주둔지,MonsterName/1056,3045729595374,140000,30,1,1,basic,Monster/Field/35/3;Monster/Field/35/2;Monster/Field/35/1,1116,1117,0,0,0,0,FALSE,0
-1057,14,진'음산한 마을,MonsterName/1057,3749732975905,145000,30,1,1,basic,Monster/Field/36/3;Monster/Field/36/2;Monster/Field/36/1,1118,1119,0,0,0,0,FALSE,0
-1058,14,진'아인 약탈지,MonsterName/1058,4616462804820,150000,30,1,1,basic,Monster/Field/38/3;Monster/Field/38/2;Monster/Field/38/1,1120,1121,0,0,0,0,FALSE,0
-1059,14,진'카지노,MonsterName/1059,5683532391569,155000,30,1,1,basic,Monster/Field/40/3;Monster/Field/40/2;Monster/Field/40/1,1122,1123,0,0,0,0,FALSE,0
-1060,15,진'버려진 숲,MonsterName/1060,6997249151945,160000,30,1,1,basic,Monster/Field/41/3;Monster/Field/41/2;Monster/Field/41/1,1124,1125,0,0,0,0,FALSE,0
-1061,15,고블린 숲 입구,MonsterName/1061,8614624202199,165000,30,1,1,basic,Monster/Field/55/3;Monster/Field/55/2;Monster/Field/55/1,1126,1127,0,0,0,0,FALSE,0
-1062,15,고블린 숲,MonsterName/1062,10605846459604,170000,30,1,1,basic,Monster/Field/56/3;Monster/Field/56/2;Monster/Field/56/1,1128,1129,0,0,0,0,FALSE,0
-1063,15,바닷가,MonsterName/1063,13057328617535,175000,30,1,1,basic,Monster/Field/57/3;Monster/Field/57/2;Monster/Field/57/1,1130,1131,0,0,0,0,FALSE,0
-1064,15,음산한 묘지,MonsterName/1064,16075457180687,180000,30,1,1,basic,Monster/Field/4/mob3;Monster/Field/4/mob2;Monster/Field/4/mob1,1132,1133,0,0,0,0,FALSE,0
-1065,15,뒤틀린 차원,MonsterName/1065,19791209299968,185000,30,1,1,basic,Monster/Field/5/mob4;Monster/Field/5/mob3;Monster/Field/5/mob42,1134,1135,0,0,0,0,FALSE,0
-1066,15,마족 집결지,MonsterName/1066,24365836762996,190000,30,1,1,basic,Monster/Field/6/mob1;Monster/Field/6/mob2;Monster/Field/6/mob5,1136,1137,0,0,0,0,FALSE,0
-,,,,,,,,,,,,,,,,,FALSE,0
-1067,16,마법도시,MonsterName/1067,27988996607779,250000,30,1,1,basic,Monster/Field/31/3;Monster/Field/31/2;Monster/Field/31/1,1138,1139,0,0,0,0,FALSE,0
-1068,16,불타는 평야,MonsterName/1068,32150914361374,255000,30,1,1,basic,Monster/Field/32/2;Monster/Field/32/3;Monster/Field/32/1,1140,1141,0,0,0,0,FALSE,0
-1069,16,아마존,MonsterName/1069,36931702438560,260000,30,1,1,basic,Monster/Field/33/3;Monster/Field/33/2;Monster/Field/33/1,1142,1143,0,0,0,0,FALSE,0
-1070,16,나가랜드,MonsterName/1070,42423385838414,265000,30,1,1,basic,Monster/Field/34/3;Monster/Field/34/2;Monster/Field/34/1,1144,1145,0,0,0,0,FALSE,0
-1071,16,코볼트 주둔지,MonsterName/1071,48731673525991,270000,30,1,1,basic,Monster/Field/35/3;Monster/Field/35/2;Monster/Field/35/1,1146,1147,0,0,0,0,FALSE,0
-1072,12,음산한 마을,MonsterName/1072,55977993215559,275000,30,1,1,basic,Monster/Field/36/3;Monster/Field/36/2;Monster/Field/36/1,1148,1149,0,0,0,0,FALSE,0
-1073,12,아인 약탈지,MonsterName/1073,64301828722747,280000,30,1,1,basic,Monster/Field/38/3;Monster/Field/38/2;Monster/Field/38/1,1150,1151,0,0,0,0,FALSE,0
-1074,12,카지노,MonsterName/1074,73863404877121,285000,30,1,1,basic,Monster/Field/40/3;Monster/Field/40/2;Monster/Field/40/1,1152,1153,0,0,0,0,FALSE,0
-1075,12,버려진 숲,MonsterName/1075,84846771676829,290000,30,1,1,basic,Monster/Field/41/3;Monster/Field/41/2;Monster/Field/41/1,1154,1155,0,0,0,0,FALSE,0
-1076,12,미지의 드래고니아,MonsterName/1076,97463347051982,295000,30,1,1,basic,Monster/Field/42/3;Monster/Field/42/2;Monster/Field/42/1,1156,1157,0,0,0,0,FALSE,0
-1077,12,미지의 공허,MonsterName/1077,111955986431117,300000,30,1,1,basic,Monster/Field/43/3;Monster/Field/43/2;Monster/Field/43/1,1158,1159,0,0,0,0,FALSE,0
-1078,13,미지의 용의 나라,MonsterName/1078,128603657445495,305000,30,1,1,basic,Monster/Field/44/3;Monster/Field/44/2;Monster/Field/44/1,1160,1161,0,0,0,0,FALSE,0
-1079,13,뱀파이어의 성,MonsterName/1079,147726809754242,310000,30,1,1,basic,Monster/Field/45/3;Monster/Field/45/2;Monster/Field/45/1,1162,1163,0,0,0,0,FALSE,0
-1080,13,끝없는 미로,MonsterName/1080,169693543353658,315000,30,1,1,basic,Monster/Field/46/3;Monster/Field/46/2;Monster/Field/46/1,1164,1165,0,0,0,0,FALSE,0
-1081,13,소서러 길드,MonsterName/1081,194926694103964,320000,30,1,1,basic,Monster/Field/47/3;Monster/Field/47/2;Monster/Field/47/1,1166,1167,0,0,0,0,FALSE,0
-1082,13,심해,MonsterName/1082,223911972862234,325000,30,1,1,basic,Monster/Field/48/3;Monster/Field/48/2;Monster/Field/48/1,1168,1169,0,0,0,0,FALSE,0
-1083,13,폭염지대,MonsterName/1083,257207314890990,330000,30,1,1,basic,Monster/Field/49/3;Monster/Field/49/2;Monster/Field/49/1,1170,1171,0,0,0,0,FALSE,0
-1084,13,언데드 출몰지역,MonsterName/1084,295453619508504,335000,30,1,1,basic,Monster/Field/50/3;Monster/Field/50/2;Monster/Field/50/1,1172,1173,0,0,0,0,FALSE,0
-1085,14,아이언헤븐,MonsterName/1085,339387086707339,340000,30,1,1,basic,Monster/Field/51/3;Monster/Field/51/2;Monster/Field/51/1,1174,1175,0,0,0,0,FALSE,0
-1086,14,모험가의 서,MonsterName/1086,389853388207955,345000,30,1,1,basic,Monster/Field/52/3;Monster/Field/52/2;Monster/Field/52/1,1176,1177,0,0,0,0,FALSE,0
-1087,14,마티노 초원,MonsterName/1087,447823945724499,350000,30,1,1,basic,Monster/Field/53/3;Monster/Field/53/2;Monster/Field/53/1,1178,1179,0,0,0,0,FALSE,0
-1088,14,마티노 앞 바다,MonsterName/1088,514414629782015,355000,30,1,1,basic,Monster/Field/54/3;Monster/Field/54/2;Monster/Field/54/1,1180,1181,0,0,0,0,FALSE,0
-1089,14,진'나가 랜드,MonsterName/1089,590907239017007,360000,30,1,1,basic,Monster/Field/34/3;Monster/Field/34/2;Monster/Field/34/1,1182,1183,0,0,0,0,FALSE,0
-1090,14,진'코볼트 주둔지,MonsterName/1090,678774173414678,365000,30,1,1,basic,Monster/Field/35/3;Monster/Field/35/2;Monster/Field/35/1,1184,1185,0,0,0,0,FALSE,0
-1091,14,진'음산한 마을,MonsterName/1091,779706776415910,370000,30,1,1,basic,Monster/Field/36/3;Monster/Field/36/2;Monster/Field/36/1,1186,1187,0,0,0,0,FALSE,0
-1092,14,진'아인 약탈지,MonsterName/1092,895647891448999,375000,30,1,1,basic,Monster/Field/38/3;Monster/Field/38/2;Monster/Field/38/1,1188,1189,0,0,0,0,FALSE,0
-1093,14,진'카지노,MonsterName/1093,1028829259564030,380000,30,1,1,basic,Monster/Field/40/3;Monster/Field/40/2;Monster/Field/40/1,1190,1191,0,0,0,0,FALSE,0
-1094,15,진'버려진 숲,MonsterName/1094,1181814478034010,385000,30,1,1,basic,Monster/Field/41/3;Monster/Field/41/2;Monster/Field/41/1,1192,1193,0,0,0,0,FALSE,0
-1095,15,고블린 숲 입구,MonsterName/1095,1357548346829360,390000,30,1,1,basic,Monster/Field/55/3;Monster/Field/55/2;Monster/Field/55/1,1194,1195,0,0,0,0,FALSE,0
-1096,15,고블린 숲,MonsterName/1096,1559413552831820,395000,30,1,1,basic,Monster/Field/56/3;Monster/Field/56/2;Monster/Field/56/1,1196,1197,0,0,0,0,FALSE,0
-1097,15,바닷가,MonsterName/1097,1791295782898000,400000,30,1,1,basic,Monster/Field/57/3;Monster/Field/57/2;Monster/Field/57/1,1198,1199,0,0,0,0,FALSE,0
-1098,15,음산한 묘지,MonsterName/1098,2057658519128060,405000,30,1,1,basic,Monster/Field/4/mob3;Monster/Field/4/mob2;Monster/Field/4/mob1,1200,1201,0,0,0,0,FALSE,0
-1099,15,뒤틀린 차원,MonsterName/1099,2363628956068030,410000,30,1,1,basic,Monster/Field/5/mob4;Monster/Field/5/mob3;Monster/Field/5/mob42,1202,1203,0,0,0,0,FALSE,0
-1100,15,마족 집결지,MonsterName/1100,2715096693658710,415000,30,1,1,basic,Monster/Field/6/mob1;Monster/Field/6/mob2;Monster/Field/6/mob5,1204,1205,0,0,0,0,FALSE,0
-,지옥2,,,,,,,,,,,,,,,,FALSE,0
-1101,22,마법도시,MonsterName/1101,3342676126089170,450000,30,1,1,basic,Monster/Field/31/3;Monster/Field/31/2;Monster/Field/31/1,1206,1207,0,0,0,0,FALSE,0
-1102,22,불타는 평야,MonsterName/1102,4115317038256120,480000,30,1,1,basic,Monster/Field/32/2;Monster/Field/32/3;Monster/Field/32/1,1208,1209,0,0,0,0,FALSE,0
-1103,22,아마존,MonsterName/1103,5066549580792160,510000,30,1,1,basic,Monster/Field/33/3;Monster/Field/33/2;Monster/Field/33/1,1210,1211,0,0,0,0,FALSE,0
-1104,22,나가랜드,MonsterName/1104,6237654211327280,540000,30,1,1,basic,Monster/Field/34/3;Monster/Field/34/2;Monster/Field/34/1,1212,1213,0,0,0,0,FALSE,0
-1105,22,코볼트 주둔지,MonsterName/1105,7679453134652990,570000,30,1,1,basic,Monster/Field/35/3;Monster/Field/35/2;Monster/Field/35/1,1214,1215,0,0,0,0,FALSE,0
-1106,23,음산한 마을,MonsterName/1106,9454515824272770,600000,30,1,1,basic,Monster/Field/36/3;Monster/Field/36/2;Monster/Field/36/1,1216,1217,0,0,0,0,FALSE,0
-1107,23,아인 약탈지,MonsterName/1107,11639874337934600,630000,30,1,1,basic,Monster/Field/38/3;Monster/Field/38/2;Monster/Field/38/1,1218,1219,0,0,0,0,FALSE,0
-1108,23,카지노,MonsterName/1108,14330366263185000,660000,30,1,1,basic,Monster/Field/40/3;Monster/Field/40/2;Monster/Field/40/1,1220,1221,0,0,0,0,FALSE,0
-1109,23,버려진 숲,MonsterName/1109,17642750366106700,690000,30,1,1,basic,Monster/Field/41/3;Monster/Field/41/2;Monster/Field/41/1,1222,1223,0,0,0,0,FALSE,0
-1110,23,미지의 드래고니아,MonsterName/1110,21720773549271200,720000,30,1,1,basic,Monster/Field/42/3;Monster/Field/42/2;Monster/Field/42/1,1224,1225,0,0,0,0,FALSE,0
-1111,23,미지의 공허,MonsterName/1111,26741409008715200,750000,30,1,1,basic,Monster/Field/43/3;Monster/Field/43/2;Monster/Field/43/1,1226,1227,0,0,0,0,FALSE,0
-1112,24,미지의 용의 나라,MonsterName/1112,32922536306051200,780000,30,1,1,basic,Monster/Field/44/3;Monster/Field/44/2;Monster/Field/44/1,1228,1229,0,0,0,0,FALSE,0
-1113,24,뱀파이어의 성,MonsterName/1113,40532396646340100,810000,30,1,1,basic,Monster/Field/45/3;Monster/Field/45/2;Monster/Field/45/1,1230,1231,0,0,0,0,FALSE,0
-1114,24,끝없는 미로,MonsterName/1114,49901233690621900,840000,30,1,1,basic,Monster/Field/46/3;Monster/Field/46/2;Monster/Field/46/1,1232,1233,0,0,0,0,FALSE,0
-1115,24,소서러 길드,MonsterName/1115,61435625077232400,870000,30,1,1,basic,Monster/Field/47/3;Monster/Field/47/2;Monster/Field/47/1,1234,1235,0,0,0,0,FALSE,0
-1116,24,심해,MonsterName/1116,75636126594187400,900000,30,1,1,basic,Monster/Field/48/3;Monster/Field/48/2;Monster/Field/48/1,1236,1237,0,0,0,0,FALSE,0
-1117,24,폭염지대,MonsterName/1117,93118994703482900,930000,30,1,1,basic,Monster/Field/49/3;Monster/Field/49/2;Monster/Field/49/1,1238,1239,0,0,0,0,FALSE,0
-1118,25,언데드 출몰지역,MonsterName/1118,114642930105488000,960000,30,1,1,basic,Monster/Field/50/3;Monster/Field/50/2;Monster/Field/50/1,1240,1241,0,0,0,0,FALSE,0
-1119,25,아이언헤븐,MonsterName/1119,141142002928863000,990000,30,1,1,basic,Monster/Field/51/3;Monster/Field/51/2;Monster/Field/51/1,1242,1243,0,0,0,0,FALSE,0
-1120,25,모험가의 서,MonsterName/1120,173766188394181000,1020000,30,1,1,basic,Monster/Field/52/3;Monster/Field/52/2;Monster/Field/52/1,1244,1245,0,0,0,0,FALSE,0
-1121,25,마티노 초원,MonsterName/1121,213931272069736000,1050000,30,1,1,basic,Monster/Field/53/3;Monster/Field/53/2;Monster/Field/53/1,1246,1247,0,0,0,0,FALSE,0
-1122,25,마티노 앞 바다,MonsterName/1122,263380290448428000,1080000,30,1,1,basic,Monster/Field/54/3;Monster/Field/54/2;Monster/Field/54/1,1248,1249,0,0,0,0,FALSE,0
-1123,25,진'나가 랜드,MonsterName/1123,324259173170743000,1110000,30,1,1,basic,Monster/Field/34/3;Monster/Field/34/2;Monster/Field/34/1,1250,1251,0,0,0,0,FALSE,0
-1124,26,진'코볼트 주둔지,MonsterName/1124,399209869525030000,1140000,30,1,1,basic,Monster/Field/35/3;Monster/Field/35/2;Monster/Field/35/1,1252,1253,0,0,0,0,FALSE,0
-1125,26,진'음산한 마을,MonsterName/1125,491485000617893000,1170000,30,1,1,basic,Monster/Field/36/3;Monster/Field/36/2;Monster/Field/36/1,1254,1255,0,0,0,0,FALSE,0
-1126,26,진'아인 약탈지,MonsterName/1126,605089012753541000,1200000,30,1,1,basic,Monster/Field/38/3;Monster/Field/38/2;Monster/Field/38/1,1256,1257,0,0,0,0,FALSE,0
-1127,26,진'카지노,MonsterName/1127,744951957627915000,1230000,30,1,1,basic,Monster/Field/40/3;Monster/Field/40/2;Monster/Field/40/1,1258,1259,0,0,0,0,FALSE,0
-1128,27,진'버려진 숲,MonsterName/1128,917143440843964000,1260000,30,1,1,basic,Monster/Field/41/3;Monster/Field/41/2;Monster/Field/41/1,1260,1261,0,0,0,0,FALSE,0
-1129,27,고블린 숲 입구,MonsterName/1129,1129136023430980000,1290000,30,1,1,basic,Monster/Field/55/3;Monster/Field/55/2;Monster/Field/55/1,1262,1263,0,0,0,0,FALSE,0
-1130,27,고블린 숲,MonsterName/1130,1390129507153550000,1320000,30,1,1,basic,Monster/Field/56/3;Monster/Field/56/2;Monster/Field/56/1,1264,1265,0,0,0,0,FALSE,0
-1131,28,바닷가,MonsterName/1131,1711450176558010000,1350000,30,1,1,basic,Monster/Field/57/3;Monster/Field/57/2;Monster/Field/57/1,1266,1267,0,0,0,0,FALSE,0
-1132,28,음산한 묘지,MonsterName/1132,2107042323587570000,1380000,30,1,1,basic,Monster/Field/4/mob3;Monster/Field/4/mob2;Monster/Field/4/mob1,1268,1269,0,0,0,0,FALSE,0
-1133,28,뒤틀린 차원,MonsterName/1133,2594073385366120000,1410000,30,1,1,basic,Monster/Field/5/mob4;Monster/Field/5/mob3;Monster/Field/5/mob42,1270,1271,0,0,0,0,FALSE,0
-1134,28,마족 집결지,MonsterName/1134,3193678956200240000,1440000,30,1,1,basic,Monster/Field/6/mob1;Monster/Field/6/mob2;Monster/Field/6/mob5,1272,1273,0,0,0,0,FALSE,0
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-던전,,,,,,,,,,,,,,,,,FALSE,0
-3000,3,던전-감염된 농장,MonsterName/3000,23170,150,50,1,1,basic,Monster/Dungeon/Dungeon1/0;Monster/Dungeon/Dungeon1/1;Monster/Dungeon/Dungeon1/2,3000,0,0,0,0,0,FALSE,0
-3001,3,던전-감염된 농장,MonsterName/3001,23170,150,50,1,1,basic,Monster/Dungeon/Dungeon1/0;Monster/Dungeon/Dungeon1/1;Monster/Dungeon/Dungeon1/2,3000,0,0,0,0,0,FALSE,0
-3002,3,던전-감염된 농장,MonsterName/3002,23170,150,50,1,1,basic,Monster/Dungeon/Dungeon1/0;Monster/Dungeon/Dungeon1/1;Monster/Dungeon/Dungeon1/2,3000,0,0,0,0,0,FALSE,0
-3003,3,던전-감염된 농장,MonsterName/3003,23170,150,50,1,1,basic,Monster/Dungeon/Dungeon1/3;Monster/Dungeon/Dungeon1/4;Monster/Dungeon/Dungeon1/5,3000,0,0,0,0,0,FALSE,0
-3004,3,던전-감염된 농장,MonsterName/3004,23170,150,50,1,1,basic,Monster/Dungeon/Dungeon1/3;Monster/Dungeon/Dungeon1/4;Monster/Dungeon/Dungeon1/5,3000,0,0,0,0,0,FALSE,0
-3005,3,던전-감염된 농장,MonsterName/3005,23170,150,50,1,1,basic,Monster/Dungeon/Dungeon1/3;Monster/Dungeon/Dungeon1/4;Monster/Dungeon/Dungeon1/5,3000,0,0,0,0,0,FALSE,0
-3006,3,던전-감염된 농장,MonsterName/3006,23170,150,50,1,1,basic,Monster/Dungeon/Dungeon1/6;Monster/Dungeon/Dungeon1/5,3000,0,0,0,0,0,FALSE,0
-3007,3,던전-감염된 농장 보스,MonsterName/3007,23170,450,50,1,1,boss,Monster/Dungeon/Dungeon1/7,0,3001,100,5,8,1.5,FALSE,0
-3008,4,던전-늪 지대,MonsterName/3008,92682,250,50,1,1,basic,Monster/Dungeon/Dungeon2/0;Monster/Dungeon/Dungeon2/1;Monster/Dungeon/Dungeon2/2,3002,0,0,0,0,0,FALSE,0
-3009,4,던전-늪 지대,MonsterName/3009,92682,250,50,1,1,basic,Monster/Dungeon/Dungeon2/0;Monster/Dungeon/Dungeon2/1;Monster/Dungeon/Dungeon2/2,3002,0,0,0,0,0,FALSE,0
-3010,4,던전-늪 지대,MonsterName/3010,92682,250,50,1,1,basic,Monster/Dungeon/Dungeon2/0;Monster/Dungeon/Dungeon2/1;Monster/Dungeon/Dungeon2/2,3002,0,0,0,0,0,FALSE,0
-3011,4,던전-늪 지대,MonsterName/3011,92682,250,50,1,1,basic,Monster/Dungeon/Dungeon2/3;Monster/Dungeon/Dungeon2/4;Monster/Dungeon/Dungeon2/5,3002,0,0,0,0,0,FALSE,0
-3012,4,던전-늪 지대,MonsterName/3012,92682,250,50,1,1,basic,Monster/Dungeon/Dungeon2/3;Monster/Dungeon/Dungeon2/4;Monster/Dungeon/Dungeon2/5,3002,0,0,0,0,0,FALSE,0
-3013,4,던전-늪 지대,MonsterName/3013,92682,250,50,1,1,basic,Monster/Dungeon/Dungeon2/3;Monster/Dungeon/Dungeon2/4;Monster/Dungeon/Dungeon2/5,3002,0,0,0,0,0,FALSE,0
-3014,4,던전-늪 지대,MonsterName/3014,92682,250,50,1,1,basic,Monster/Dungeon/Dungeon2/6;Monster/Dungeon/Dungeon2/5,3002,0,0,0,0,0,FALSE,0
-3015,4,던전-늪 지대 보스,MonsterName/3015,92682,700,50,1,1,boss,Monster/Dungeon/Dungeon2/7,0,3003,100,5,8,1.5,FALSE,0
-3016,5,던전-지하 감옥,MonsterName/3016,524288,700,50,1,1,basic,Monster/Dungeon/Dungeon4/0;Monster/Dungeon/Dungeon4/1;Monster/Dungeon/Dungeon4/2,3004,0,0,0,0,0,FALSE,0
-3017,5,던전-지하 감옥,MonsterName/3017,524288,700,50,1,1,basic,Monster/Dungeon/Dungeon4/0;Monster/Dungeon/Dungeon4/1;Monster/Dungeon/Dungeon4/2,3004,0,0,0,0,0,FALSE,0
-3018,5,던전-지하 감옥,MonsterName/3018,524288,700,50,1,1,basic,Monster/Dungeon/Dungeon4/0;Monster/Dungeon/Dungeon4/1;Monster/Dungeon/Dungeon4/2,3004,0,0,0,0,0,FALSE,0
-3019,5,던전-지하 감옥,MonsterName/3019,524288,700,50,1,1,basic,Monster/Dungeon/Dungeon4/3;Monster/Dungeon/Dungeon4/4;Monster/Dungeon/Dungeon4/5,3004,0,0,0,0,0,FALSE,0
-3020,5,던전-지하 감옥,MonsterName/3020,524288,700,50,1,1,basic,Monster/Dungeon/Dungeon4/3;Monster/Dungeon/Dungeon4/4;Monster/Dungeon/Dungeon4/5,3004,0,0,0,0,0,FALSE,0
-3021,5,던전-지하 감옥,MonsterName/3021,524288,700,50,1,1,basic,Monster/Dungeon/Dungeon4/3;Monster/Dungeon/Dungeon4/4;Monster/Dungeon/Dungeon4/5,3004,0,0,0,0,0,FALSE,0
-3022,5,던전-지하 감옥,MonsterName/3022,524288,700,50,1,1,basic,Monster/Dungeon/Dungeon4/6;Monster/Dungeon/Dungeon4/5,3004,0,0,0,0,0,FALSE,0
-3023,5,던전-지하감옥 보스,MonsterName/3023,524288,1400,50,1,1,boss,Monster/Dungeon/Dungeon4/7,0,3005,100,5,8,1.5,FALSE,0
-3024,6,던전-화산,MonsterName/3024,8388608,1000,50,1,1,basic,Monster/Dungeon/Dungeon5/0;Monster/Dungeon/Dungeon5/1;Monster/Dungeon/Dungeon5/2,3006,0,0,0,0,0,FALSE,0
-3025,6,던전-화산,MonsterName/3025,8388608,1000,50,1,1,basic,Monster/Dungeon/Dungeon5/0;Monster/Dungeon/Dungeon5/1;Monster/Dungeon/Dungeon5/2,3006,0,0,0,0,0,FALSE,0
-3026,6,던전-화산,MonsterName/3026,8388608,1000,50,1,1,basic,Monster/Dungeon/Dungeon5/0;Monster/Dungeon/Dungeon5/1;Monster/Dungeon/Dungeon5/2,3006,0,0,0,0,0,FALSE,0
-3027,6,던전-화산,MonsterName/3027,8388608,1000,50,1,1,basic,Monster/Dungeon/Dungeon5/3;Monster/Dungeon/Dungeon5/4;Monster/Dungeon/Dungeon5/5,3006,0,0,0,0,0,FALSE,0
-3028,6,던전-화산,MonsterName/3028,8388608,1000,50,1,1,basic,Monster/Dungeon/Dungeon5/3;Monster/Dungeon/Dungeon5/4;Monster/Dungeon/Dungeon5/5,3006,0,0,0,0,0,FALSE,0
-3029,6,던전-화산,MonsterName/3029,8388608,1000,50,1,1,basic,Monster/Dungeon/Dungeon5/3;Monster/Dungeon/Dungeon5/4;Monster/Dungeon/Dungeon5/5,3006,0,0,0,0,0,FALSE,0
-3030,6,던전-화산,MonsterName/3030,8388608,1000,50,1,1,basic,Monster/Dungeon/Dungeon5/6;Monster/Dungeon/Dungeon5/5,3006,0,0,0,0,0,FALSE,0
-3031,6,던전-화산 보스,MonsterName/3031,8388608,2000,50,1,1,boss,Monster/Dungeon/Dungeon5/7,0,3007,150,5,8,1.5,FALSE,0
-3032,7,던전-마계 중심부,MonsterName/3032,16777216,1400,50,1,1,basic,Monster/Dungeon/Dungeon6/0;Monster/Dungeon/Dungeon6/1;Monster/Dungeon/Dungeon6/2,3008,0,0,0,0,0,FALSE,0
-3033,7,던전-마계 중심부,MonsterName/3033,16777216,1400,50,1,1,basic,Monster/Dungeon/Dungeon6/0;Monster/Dungeon/Dungeon6/1;Monster/Dungeon/Dungeon6/2,3008,0,0,0,0,0,FALSE,0
-3034,7,던전-마계 중심부,MonsterName/3034,16777216,1400,50,1,1,basic,Monster/Dungeon/Dungeon6/0;Monster/Dungeon/Dungeon6/1;Monster/Dungeon/Dungeon6/2,3008,0,0,0,0,0,FALSE,0
-3035,7,던전-마계 중심부,MonsterName/3035,16777216,1400,50,1,1,basic,Monster/Dungeon/Dungeon6/3;Monster/Dungeon/Dungeon6/4;Monster/Dungeon/Dungeon6/5,3008,0,0,0,0,0,FALSE,0
-3036,7,던전-마계 중심부,MonsterName/3036,16777216,1400,50,1,1,basic,Monster/Dungeon/Dungeon6/3;Monster/Dungeon/Dungeon6/4;Monster/Dungeon/Dungeon6/5,3008,0,0,0,0,0,FALSE,0
-3037,7,던전-마계 중심부,MonsterName/3037,16777216,1400,50,1,1,basic,Monster/Dungeon/Dungeon6/3;Monster/Dungeon/Dungeon6/4;Monster/Dungeon/Dungeon6/5,3008,0,0,0,0,0,FALSE,0
-3038,7,던전-마계 중심부,MonsterName/3038,16777216,1400,50,1,1,basic,Monster/Dungeon/Dungeon6/6;Monster/Dungeon/Dungeon6/5,3008,0,0,0,0,0,FALSE,0
-3039,7,던전-마계 중심부 보스,MonsterName/3039,16777216,3000,50,1,1,boss,Monster/Dungeon/Dungeon6/7,0,3009,200,5,8,1.5,FALSE,0
-3040,10,던전-루펜시아,MonsterName/3040,308435456,8000,50,1,1,basic,Monster/Dungeon/Dungeon7/0;Monster/Dungeon/Dungeon7/1;Monster/Dungeon/Dungeon7/2,3010,0,0,0,0,0,FALSE,0
-3041,10,던전-루펜시아,MonsterName/3041,308435456,8000,50,1,1,basic,Monster/Dungeon/Dungeon7/0;Monster/Dungeon/Dungeon7/1;Monster/Dungeon/Dungeon7/2,3010,0,0,0,0,0,FALSE,0
-3042,10,던전-루펜시아,MonsterName/3042,308435456,8000,50,1,1,basic,Monster/Dungeon/Dungeon7/0;Monster/Dungeon/Dungeon7/1;Monster/Dungeon/Dungeon7/2,3010,0,0,0,0,0,FALSE,0
-3043,10,던전-루펜시아,MonsterName/3043,308435456,8000,50,1,1,basic,Monster/Dungeon/Dungeon7/3;Monster/Dungeon/Dungeon7/4;Monster/Dungeon/Dungeon7/5,3010,0,0,0,0,0,FALSE,0
-3044,10,던전-루펜시아,MonsterName/3044,308435456,8000,50,1,1,basic,Monster/Dungeon/Dungeon7/3;Monster/Dungeon/Dungeon7/4;Monster/Dungeon/Dungeon7/5,3010,0,0,0,0,0,FALSE,0
-3045,10,던전-루펜시아,MonsterName/3045,308435456,8000,50,1,1,basic,Monster/Dungeon/Dungeon7/3;Monster/Dungeon/Dungeon7/4;Monster/Dungeon/Dungeon7/5,3010,0,0,0,0,0,FALSE,0
-3046,10,던전-루펜시아,MonsterName/3046,308435456,8000,50,1,1,basic,Monster/Dungeon/Dungeon7/6;Monster/Dungeon/Dungeon7/5,3010,0,0,0,0,0,FALSE,0
-3047,10,던전-루펜시아 보스,MonsterName/3047,308435456,8000,50,1,1,boss,Monster/Dungeon/Dungeon7/7,0,3011,200,5,8,1.5,FALSE,0
-3048,11,던전-죽은용의동굴,MonsterName/3048,1708312781,30000,50,1,1,basic,Monster/Dungeon/Dungeon8/0;Monster/Dungeon/Dungeon8/1;Monster/Dungeon/Dungeon8/2,3012,0,0,0,0,0,FALSE,0
-3049,11,던전-죽은용의동굴,MonsterName/3049,1708312781,30000,50,1,1,basic,Monster/Dungeon/Dungeon8/0;Monster/Dungeon/Dungeon8/1;Monster/Dungeon/Dungeon8/2,3012,0,0,0,0,0,FALSE,0
-3050,11,던전-죽은용의동굴,MonsterName/3050,1708312781,30000,50,1,1,basic,Monster/Dungeon/Dungeon8/0;Monster/Dungeon/Dungeon8/1;Monster/Dungeon/Dungeon8/2,3012,0,0,0,0,0,FALSE,0
-3051,11,던전-죽은용의동굴,MonsterName/3051,1708312781,30000,50,1,1,basic,Monster/Dungeon/Dungeon8/3;Monster/Dungeon/Dungeon8/4;Monster/Dungeon/Dungeon8/5,3012,0,0,0,0,0,FALSE,0
-3052,11,던전-죽은용의동굴,MonsterName/3052,1708312781,30000,50,1,1,basic,Monster/Dungeon/Dungeon8/3;Monster/Dungeon/Dungeon8/4;Monster/Dungeon/Dungeon8/5,3012,0,0,0,0,0,FALSE,0
-3053,11,던전-죽은용의동굴,MonsterName/3053,1708312781,30000,50,1,1,basic,Monster/Dungeon/Dungeon8/3;Monster/Dungeon/Dungeon8/4;Monster/Dungeon/Dungeon8/5,3012,0,0,0,0,0,FALSE,0
-3054,11,던전-죽은용의동굴,MonsterName/3054,1708312781,30000,50,1,1,basic,Monster/Dungeon/Dungeon8/6;Monster/Dungeon/Dungeon8/5,3012,0,0,0,0,0,FALSE,0
-3055,11,던전-죽은용의동굴 보스,MonsterName/3055,1708312781,30000,50,1,1,boss,Monster/Dungeon/Dungeon8/7,0,3013,300,5,8,1.5,FALSE,0
-3056,12,던전-대제국,MonsterName/3056,10666502250,55000,30,1,1,basic,Monster/Dungeon/Dungeon9/0;Monster/Dungeon/Dungeon9/1;Monster/Dungeon/Dungeon9/2,3014,0,0,0,0,0,FALSE,0
-3057,12,던전-대제국,MonsterName/3057,10666502250,55000,30,1,1,basic,Monster/Dungeon/Dungeon9/0;Monster/Dungeon/Dungeon9/1;Monster/Dungeon/Dungeon9/2,3014,0,0,0,0,0,FALSE,0
-3058,12,던전-대제국,MonsterName/3058,10666502250,55000,30,1,1,basic,Monster/Dungeon/Dungeon9/0;Monster/Dungeon/Dungeon9/1;Monster/Dungeon/Dungeon9/2,3014,0,0,0,0,0,FALSE,0
-3059,12,던전-대제국,MonsterName/3059,10666502250,55000,30,1,1,basic,Monster/Dungeon/Dungeon9/3;Monster/Dungeon/Dungeon9/4;Monster/Dungeon/Dungeon9/5,3014,0,0,0,0,0,FALSE,0
-3060,12,던전-대제국,MonsterName/3060,10666502250,55000,30,1,1,basic,Monster/Dungeon/Dungeon9/3;Monster/Dungeon/Dungeon9/4;Monster/Dungeon/Dungeon9/5,3014,0,0,0,0,0,FALSE,0
-3061,12,던전-대제국,MonsterName/3061,10666502250,55000,30,1,1,basic,Monster/Dungeon/Dungeon9/3;Monster/Dungeon/Dungeon9/4;Monster/Dungeon/Dungeon9/5,3014,0,0,0,0,0,FALSE,0
-3062,12,던전-대제국,MonsterName/3062,10666502250,55000,30,1,1,basic,Monster/Dungeon/Dungeon9/6;Monster/Dungeon/Dungeon9/5,3014,0,0,0,0,0,FALSE,0
-3063,12,던전-대제국 보스,MonsterName/3063,10666502250,55000,30,1,1,boss,Monster/Dungeon/Dungeon9/7,0,3015,0,0,0,0,FALSE,0
-3064,13,던전-마력의 땅 - 티아,MonsterName/3064,114618822656,110000,30,1,1,basic,Monster/Dungeon/Dungeon11/0;Monster/Dungeon/Dungeon11/1;Monster/Dungeon/Dungeon11/2,3016,0,0,0,0,0,FALSE,0
-3065,13,던전-마력의 땅 - 티아,MonsterName/3065,114618822656,110000,30,1,1,basic,Monster/Dungeon/Dungeon11/0;Monster/Dungeon/Dungeon11/1;Monster/Dungeon/Dungeon11/2,3016,0,0,0,0,0,FALSE,0
-3066,13,던전-마력의 땅 - 티아,MonsterName/3066,114618822656,110000,30,1,1,basic,Monster/Dungeon/Dungeon11/0;Monster/Dungeon/Dungeon11/1;Monster/Dungeon/Dungeon11/2,3016,0,0,0,0,0,FALSE,0
-3067,13,던전-마력의 땅 - 티아,MonsterName/3067,114618822656,110000,30,1,1,basic,Monster/Dungeon/Dungeon11/3;Monster/Dungeon/Dungeon11/4;Monster/Dungeon/Dungeon11/5,3016,0,0,0,0,0,FALSE,0
-3068,13,던전-마력의 땅 - 티아,MonsterName/3068,114618822656,110000,30,1,1,basic,Monster/Dungeon/Dungeon11/3;Monster/Dungeon/Dungeon11/4;Monster/Dungeon/Dungeon11/5,3016,0,0,0,0,0,FALSE,0
-3069,13,던전-마력의 땅 - 티아,MonsterName/3069,114618822656,110000,30,1,1,basic,Monster/Dungeon/Dungeon11/3;Monster/Dungeon/Dungeon11/4;Monster/Dungeon/Dungeon11/5,3016,0,0,0,0,0,FALSE,0
-3070,13,던전-마력의 땅 - 티아,MonsterName/3070,114618822656,110000,30,1,1,basic,Monster/Dungeon/Dungeon11/6;Monster/Dungeon/Dungeon11/5,3016,0,0,0,0,0,FALSE,0
-3071,13,던전-마력의 땅 - 티아 보스,MonsterName/3071,114618822656,110000,50,1,1,boss,Monster/Dungeon/Dungeon11/7,0,3017,350,5,8,1.5,FALSE,0
-3072,14,던전-노스 테라,MonsterName/3072,773901162496,135000,30,1,1,basic,Monster/Dungeon/Dungeon12/0;Monster/Dungeon/Dungeon12/1;Monster/Dungeon/Dungeon12/2,3018,0,0,0,0,0,FALSE,0
-3073,14,던전-노스 테라,MonsterName/3073,773901162496,135000,30,1,1,basic,Monster/Dungeon/Dungeon12/0;Monster/Dungeon/Dungeon12/1;Monster/Dungeon/Dungeon12/2,3018,0,0,0,0,0,FALSE,0
-3074,14,던전-노스 테라,MonsterName/3074,773901162496,135000,30,1,1,basic,Monster/Dungeon/Dungeon12/0;Monster/Dungeon/Dungeon12/1;Monster/Dungeon/Dungeon12/2,3018,0,0,0,0,0,FALSE,0
-3075,14,던전-노스 테라,MonsterName/3075,773901162496,135000,30,1,1,basic,Monster/Dungeon/Dungeon12/3;Monster/Dungeon/Dungeon12/4;Monster/Dungeon/Dungeon12/5,3018,0,0,0,0,0,FALSE,0
-3076,14,던전-노스 테라,MonsterName/3076,773901162496,135000,30,1,1,basic,Monster/Dungeon/Dungeon12/3;Monster/Dungeon/Dungeon12/4;Monster/Dungeon/Dungeon12/5,3018,0,0,0,0,0,FALSE,0
-3077,14,던전-노스 테라,MonsterName/3077,773901162496,135000,30,1,1,basic,Monster/Dungeon/Dungeon12/3;Monster/Dungeon/Dungeon12/4;Monster/Dungeon/Dungeon12/5,3018,0,0,0,0,0,FALSE,0
-3078,14,던전-노스 테라,MonsterName/3078,773901162496,135000,30,1,1,basic,Monster/Dungeon/Dungeon12/6;Monster/Dungeon/Dungeon12/5,3018,0,0,0,0,0,FALSE,0
-3079,14,던전-노스 테라 보스,MonsterName/3079,773901162496,135000,30,1,1,boss,Monster/Dungeon/Dungeon12/7,0,3019,400,5,8,1.5,FALSE,0
-3080,15,던전-잊혀진 공허,MonsterName/3080,2595604649984,165000,30,1,1,basic,Monster/Dungeon/Dungeon13/0;Monster/Dungeon/Dungeon13/1;Monster/Dungeon/Dungeon13/2,3020,0,0,0,0,0,FALSE,0
-3081,15,던전-잊혀진 공허,MonsterName/3081,2595604649984,165000,30,1,1,basic,Monster/Dungeon/Dungeon13/0;Monster/Dungeon/Dungeon13/1;Monster/Dungeon/Dungeon13/2,3020,0,0,0,0,0,FALSE,0
-3082,15,던전-잊혀진 공허,MonsterName/3082,2595604649984,165000,30,1,1,basic,Monster/Dungeon/Dungeon13/0;Monster/Dungeon/Dungeon13/1;Monster/Dungeon/Dungeon13/2,3020,0,0,0,0,0,FALSE,0
-3083,15,던전-잊혀진 공허,MonsterName/3083,2595604649984,165000,30,1,1,basic,Monster/Dungeon/Dungeon13/3;Monster/Dungeon/Dungeon13/4;Monster/Dungeon/Dungeon13/5,3020,0,0,0,0,0,FALSE,0
-3084,15,던전-잊혀진 공허,MonsterName/3084,2595604649984,165000,30,1,1,basic,Monster/Dungeon/Dungeon13/3;Monster/Dungeon/Dungeon13/4;Monster/Dungeon/Dungeon13/5,3020,0,0,0,0,0,FALSE,0
-3085,15,던전-잊혀진 공허,MonsterName/3085,2595604649984,165000,30,1,1,basic,Monster/Dungeon/Dungeon13/3;Monster/Dungeon/Dungeon13/4;Monster/Dungeon/Dungeon13/5,3020,0,0,0,0,0,FALSE,0
-3086,15,던전-잊혀진 공허,MonsterName/3086,2595604649984,165000,30,1,1,basic,Monster/Dungeon/Dungeon13/6;Monster/Dungeon/Dungeon13/5,3020,0,0,0,0,0,FALSE,0
-3087,15,던전-잊혀진 공허 보스,MonsterName/3087,2595604649984,165000,30,1,1,boss,Monster/Dungeon/Dungeon13/7,0,3021,400,5,8,1.5,FALSE,0
-3088,20,던전-죽음의 해역,MonsterName/3088,64301828722747,330000,30,1,1,basic,Monster/Dungeon/Dungeon14/0;Monster/Dungeon/Dungeon14/1;Monster/Dungeon/Dungeon14/2,3022,0,0,0,0,0,FALSE,0
-3089,20,던전-죽음의 해역,MonsterName/3089,64301828722747,330000,30,1,1,basic,Monster/Dungeon/Dungeon14/0;Monster/Dungeon/Dungeon14/1;Monster/Dungeon/Dungeon14/2,3022,0,0,0,0,0,FALSE,0
-3090,20,던전-죽음의 해역,MonsterName/3090,64301828722747,330000,30,1,1,basic,Monster/Dungeon/Dungeon14/0;Monster/Dungeon/Dungeon14/1;Monster/Dungeon/Dungeon14/2,3022,0,0,0,0,0,FALSE,0
-3091,20,던전-죽음의 해역,MonsterName/3091,64301828722747,330000,30,1,1,basic,Monster/Dungeon/Dungeon14/3;Monster/Dungeon/Dungeon14/4;Monster/Dungeon/Dungeon14/5,3022,0,0,0,0,0,FALSE,0
-3092,20,던전-죽음의 해역,MonsterName/3092,64301828722747,330000,30,1,1,basic,Monster/Dungeon/Dungeon14/3;Monster/Dungeon/Dungeon14/4;Monster/Dungeon/Dungeon14/5,3022,0,0,0,0,0,FALSE,0
-3093,20,던전-죽음의 해역,MonsterName/3093,64301828722747,330000,30,1,1,basic,Monster/Dungeon/Dungeon14/3;Monster/Dungeon/Dungeon14/4;Monster/Dungeon/Dungeon14/5,3022,0,0,0,0,0,FALSE,0
-3094,20,던전-죽음의 해역,MonsterName/3094,64301828722747,330000,30,1,1,basic,Monster/Dungeon/Dungeon14/6;Monster/Dungeon/Dungeon14/5,3022,0,0,0,0,0,FALSE,0
-3095,20,던전-죽음의 해역 보스,MonsterName/3095,64301828722747,330000,30,1,1,boss,Monster/Dungeon/Dungeon14/7,0,3023,400,5,8,1.5,FALSE,0
-3096,21,던전-던전-투통가,MonsterName/3096,147726809754242,355000,30,1,1,basic,Monster/Dungeon/Dungeon15/0;Monster/Dungeon/Dungeon15/1;Monster/Dungeon/Dungeon15/2,3024,0,0,0,0,0,FALSE,0
-3097,21,던전-던전-투통가,MonsterName/3097,147726809754242,355000,30,1,1,basic,Monster/Dungeon/Dungeon15/0;Monster/Dungeon/Dungeon15/1;Monster/Dungeon/Dungeon15/2,3024,0,0,0,0,0,FALSE,0
-3098,21,던전-던전-투통가,MonsterName/3098,147726809754242,355000,30,1,1,basic,Monster/Dungeon/Dungeon15/0;Monster/Dungeon/Dungeon15/1;Monster/Dungeon/Dungeon15/2,3024,0,0,0,0,0,FALSE,0
-3099,21,던전-던전-투통가,MonsterName/3099,147726809754242,355000,30,1,1,basic,Monster/Dungeon/Dungeon15/3;Monster/Dungeon/Dungeon15/4;Monster/Dungeon/Dungeon15/5,3024,0,0,0,0,0,FALSE,0
-3100,21,던전-던전-투통가,MonsterName/3100,147726809754242,355000,30,1,1,basic,Monster/Dungeon/Dungeon15/3;Monster/Dungeon/Dungeon15/4;Monster/Dungeon/Dungeon15/5,3024,0,0,0,0,0,FALSE,0
-3101,21,던전-던전-투통가,MonsterName/3101,147726809754242,355000,30,1,1,basic,Monster/Dungeon/Dungeon15/3;Monster/Dungeon/Dungeon15/4;Monster/Dungeon/Dungeon15/5,3024,0,0,0,0,0,FALSE,0
-3102,21,던전-던전-투통가,MonsterName/3102,147726809754242,355000,30,1,1,basic,Monster/Dungeon/Dungeon15/6;Monster/Dungeon/Dungeon15/5,3024,0,0,0,0,0,FALSE,0
-3103,21,던전-던전-투통가 보스,MonsterName/3103,147726809754242,355000,30,1,1,boss,Monster/Dungeon/Dungeon15/7,0,3025,400,5,8,1.5,FALSE,0
-3104,22,마계-마몬의 금고,MonsterName/3104,590907239017007,375000,30,1,1,basic,Monster/Dungeon/Dungeon16/0;Monster/Dungeon/Dungeon16/1;Monster/Dungeon/Dungeon16/2,3026,0,0,0,0,0,FALSE,0
-3105,22,마계-마몬의 금고,MonsterName/3105,590907239017007,375000,30,1,1,basic,Monster/Dungeon/Dungeon16/0;Monster/Dungeon/Dungeon16/1;Monster/Dungeon/Dungeon16/2,3026,0,0,0,0,0,FALSE,0
-3106,22,마계-마몬의 금고,MonsterName/3106,590907239017007,375000,30,1,1,basic,Monster/Dungeon/Dungeon16/0;Monster/Dungeon/Dungeon16/1;Monster/Dungeon/Dungeon16/2,3026,0,0,0,0,0,FALSE,0
-3107,22,마계-마몬의 금고,MonsterName/3107,590907239017007,375000,30,1,1,basic,Monster/Dungeon/Dungeon16/3;Monster/Dungeon/Dungeon16/4;Monster/Dungeon/Dungeon16/5,3026,0,0,0,0,0,FALSE,0
-3108,22,마계-마몬의 금고,MonsterName/3108,590907239017007,375000,30,1,1,basic,Monster/Dungeon/Dungeon16/3;Monster/Dungeon/Dungeon16/4;Monster/Dungeon/Dungeon16/5,3026,0,0,0,0,0,FALSE,0
-3109,22,마계-마몬의 금고,MonsterName/3109,590907239017007,375000,30,1,1,basic,Monster/Dungeon/Dungeon16/3;Monster/Dungeon/Dungeon16/4;Monster/Dungeon/Dungeon16/5,3026,0,0,0,0,0,FALSE,0
-3110,22,마계-마몬의 금고,MonsterName/3110,590907239017007,375000,30,1,1,basic,Monster/Dungeon/Dungeon16/6;Monster/Dungeon/Dungeon16/5,3026,0,0,0,0,0,FALSE,0
-3111,22,마계-마몬의 금고 보스,MonsterName/3111,590907239017007,375000,30,1,1,boss,Monster/Dungeon/Dungeon16/7,0,3027,400,5,8,1.5,FALSE,0
-3112,23,던전-칸의 비밀 연구소,MonsterName/3112,1791295782898000,395000,30,1,1,basic,Monster/Dungeon/Dungeon18/0;Monster/Dungeon/Dungeon18/1;Monster/Dungeon/Dungeon18/2,3028,0,0,0,0,0,FALSE,0
-3113,23,던전-칸의 비밀 연구소,MonsterName/3113,1791295782898000,395000,30,1,1,basic,Monster/Dungeon/Dungeon18/0;Monster/Dungeon/Dungeon18/1;Monster/Dungeon/Dungeon18/2,3028,0,0,0,0,0,FALSE,0
-3114,23,던전-칸의 비밀 연구소,MonsterName/3114,1791295782898000,395000,30,1,1,basic,Monster/Dungeon/Dungeon18/0;Monster/Dungeon/Dungeon18/1;Monster/Dungeon/Dungeon18/2,3028,0,0,0,0,0,FALSE,0
-3115,23,던전-칸의 비밀 연구소,MonsterName/3115,1791295782898000,395000,30,1,1,basic,Monster/Dungeon/Dungeon18/3;Monster/Dungeon/Dungeon18/4;Monster/Dungeon/Dungeon18/5,3028,0,0,0,0,0,FALSE,0
-3116,23,던전-칸의 비밀 연구소,MonsterName/3116,1791295782898000,395000,30,1,1,basic,Monster/Dungeon/Dungeon18/3;Monster/Dungeon/Dungeon18/4;Monster/Dungeon/Dungeon18/5,3028,0,0,0,0,0,FALSE,0
-3117,23,던전-칸의 비밀 연구소,MonsterName/3117,1791295782898000,395000,30,1,1,basic,Monster/Dungeon/Dungeon18/3;Monster/Dungeon/Dungeon18/4;Monster/Dungeon/Dungeon18/5,3028,0,0,0,0,0,FALSE,0
-3118,23,던전-칸의 비밀 연구소,MonsterName/3118,1791295782898000,395000,30,1,1,basic,Monster/Dungeon/Dungeon18/6;Monster/Dungeon/Dungeon18/5,3028,0,0,0,0,0,FALSE,0
-3119,23,던전-칸의 비밀 연구소 보스,MonsterName/3119,1791295782898000,395000,30,1,1,boss,Monster/Dungeon/Dungeon18/7,0,3029,400,5,8,1.5,FALSE,0
-3120,24,던전-멸망한 해저 도시,MonsterName/3120,4115317038256120,510000,30,1,1,basic,Monster/Dungeon/Dungeon19/0;Monster/Dungeon/Dungeon19/1;Monster/Dungeon/Dungeon19/2,3030,0,0,0,0,0,FALSE,0
-3121,24,던전-멸망한 해저 도시,MonsterName/3121,4115317038256120,510000,30,1,1,basic,Monster/Dungeon/Dungeon19/0;Monster/Dungeon/Dungeon19/1;Monster/Dungeon/Dungeon19/2,3030,0,0,0,0,0,FALSE,0
-3122,24,던전-멸망한 해저 도시,MonsterName/3122,4115317038256120,510000,30,1,1,basic,Monster/Dungeon/Dungeon19/0;Monster/Dungeon/Dungeon19/1;Monster/Dungeon/Dungeon19/2,3030,0,0,0,0,0,FALSE,0
-3123,24,던전-멸망한 해저 도시,MonsterName/3123,4115317038256120,510000,30,1,1,basic,Monster/Dungeon/Dungeon19/3;Monster/Dungeon/Dungeon19/4;Monster/Dungeon/Dungeon19/5,3030,0,0,0,0,0,FALSE,0
-3124,24,던전-멸망한 해저 도시,MonsterName/3124,4115317038256120,510000,30,1,1,basic,Monster/Dungeon/Dungeon19/3;Monster/Dungeon/Dungeon19/4;Monster/Dungeon/Dungeon19/5,3030,0,0,0,0,0,FALSE,0
-3125,24,던전-멸망한 해저 도시,MonsterName/3125,4115317038256120,510000,30,1,1,basic,Monster/Dungeon/Dungeon19/3;Monster/Dungeon/Dungeon19/4;Monster/Dungeon/Dungeon19/5,3030,0,0,0,0,0,FALSE,0
-3126,24,던전-멸망한 해저 도시,MonsterName/3126,4115317038256120,510000,30,1,1,basic,Monster/Dungeon/Dungeon19/6;Monster/Dungeon/Dungeon19/5,3030,0,0,0,0,0,FALSE,0
-3127,24,던전-멸망한 해저 도시 보스,MonsterName/3127,4115317038256120,510000,30,1,1,boss,Monster/Dungeon/Dungeon19/7,0,3031,400,5,8,1.5,FALSE,0
-3128,25,던전-진'진하감옥,MonsterName/3128,9454515824272770,630000,30,1,1,basic,Monster/Dungeon/Dungeon4/0;Monster/Dungeon/Dungeon4/1;Monster/Dungeon/Dungeon4/2,3032,0,0,0,0,0,FALSE,0
-3129,25,던전-진'진하감옥,MonsterName/3129,9454515824272770,630000,30,1,1,basic,Monster/Dungeon/Dungeon4/0;Monster/Dungeon/Dungeon4/1;Monster/Dungeon/Dungeon4/2,3032,0,0,0,0,0,FALSE,0
-3130,25,던전-진'진하감옥,MonsterName/3130,9454515824272770,630000,30,1,1,basic,Monster/Dungeon/Dungeon4/0;Monster/Dungeon/Dungeon4/1;Monster/Dungeon/Dungeon4/2,3032,0,0,0,0,0,FALSE,0
-3131,25,던전-진'진하감옥,MonsterName/3131,9454515824272770,630000,30,1,1,basic,Monster/Dungeon/Dungeon4/3;Monster/Dungeon/Dungeon4/4;Monster/Dungeon/Dungeon4/5,3032,0,0,0,0,0,FALSE,0
-3132,25,던전-진'진하감옥,MonsterName/3132,9454515824272770,630000,30,1,1,basic,Monster/Dungeon/Dungeon4/3;Monster/Dungeon/Dungeon4/4;Monster/Dungeon/Dungeon4/5,3032,0,0,0,0,0,FALSE,0
-3133,25,던전-진'진하감옥,MonsterName/3133,9454515824272770,630000,30,1,1,basic,Monster/Dungeon/Dungeon4/3;Monster/Dungeon/Dungeon4/4;Monster/Dungeon/Dungeon4/5,3032,0,0,0,0,0,FALSE,0
-3134,25,던전-진'진하감옥,MonsterName/3134,9454515824272770,630000,30,1,1,basic,Monster/Dungeon/Dungeon4/6;Monster/Dungeon/Dungeon4/5,3032,0,0,0,0,0,FALSE,0
-3135,25,던전-진'진하감옥,MonsterName/3135,9454515824272770,630000,30,1,1,boss,Monster/Dungeon/Dungeon4/7,0,3033,400,5,8,1.5,FALSE,0
-3136,26,던전-진'화산,MonsterName/3136,26741409008715200,780000,30,1,1,basic,Monster/Dungeon/Dungeon5/0;Monster/Dungeon/Dungeon5/1;Monster/Dungeon/Dungeon5/2,3034,0,0,0,0,0,FALSE,0
-3137,26,던전-진'화산,MonsterName/3137,26741409008715200,780000,30,1,1,basic,Monster/Dungeon/Dungeon5/0;Monster/Dungeon/Dungeon5/1;Monster/Dungeon/Dungeon5/2,3034,0,0,0,0,0,FALSE,0
-3138,26,던전-진'화산,MonsterName/3138,26741409008715200,780000,30,1,1,basic,Monster/Dungeon/Dungeon5/0;Monster/Dungeon/Dungeon5/1;Monster/Dungeon/Dungeon5/2,3034,0,0,0,0,0,FALSE,0
-3139,26,던전-진'화산,MonsterName/3139,26741409008715200,780000,30,1,1,basic,Monster/Dungeon/Dungeon5/3;Monster/Dungeon/Dungeon5/4;Monster/Dungeon/Dungeon5/5,3034,0,0,0,0,0,FALSE,0
-3140,26,던전-진'화산,MonsterName/3140,26741409008715200,780000,30,1,1,basic,Monster/Dungeon/Dungeon5/3;Monster/Dungeon/Dungeon5/4;Monster/Dungeon/Dungeon5/5,3034,0,0,0,0,0,FALSE,0
-3141,26,던전-진'화산,MonsterName/3141,26741409008715200,780000,30,1,1,basic,Monster/Dungeon/Dungeon5/3;Monster/Dungeon/Dungeon5/4;Monster/Dungeon/Dungeon5/5,3034,0,0,0,0,0,FALSE,0
-3142,26,던전-진'화산,MonsterName/3142,26741409008715200,780000,30,1,1,basic,Monster/Dungeon/Dungeon5/6;Monster/Dungeon/Dungeon5/5,3034,0,0,0,0,0,FALSE,0
-3143,26,던전-진'화산,MonsterName/3143,26741409008715200,780000,30,1,1,boss,Monster/Dungeon/Dungeon5/7,0,3035,400,5,8,1.5,FALSE,0
-3144,27,던전-진'마계중심부,MonsterName/3144,141142002928863000,960000,30,1,1,basic,Monster/Dungeon/Dungeon6/0;Monster/Dungeon/Dungeon6/1;Monster/Dungeon/Dungeon6/2,3036,0,0,0,0,0,FALSE,0
-3145,27,던전-진'마계중심부,MonsterName/3145,141142002928863000,960000,30,1,1,basic,Monster/Dungeon/Dungeon6/0;Monster/Dungeon/Dungeon6/1;Monster/Dungeon/Dungeon6/2,3036,0,0,0,0,0,FALSE,0
-3146,27,던전-진'마계중심부,MonsterName/3146,141142002928863000,960000,30,1,1,basic,Monster/Dungeon/Dungeon6/0;Monster/Dungeon/Dungeon6/1;Monster/Dungeon/Dungeon6/2,3036,0,0,0,0,0,FALSE,0
-3147,27,던전-진'마계중심부,MonsterName/3147,141142002928863000,960000,30,1,1,basic,Monster/Dungeon/Dungeon6/3;Monster/Dungeon/Dungeon6/4;Monster/Dungeon/Dungeon6/5,3036,0,0,0,0,0,FALSE,0
-3148,27,던전-진'마계중심부,MonsterName/3148,141142002928863000,960000,30,1,1,basic,Monster/Dungeon/Dungeon6/3;Monster/Dungeon/Dungeon6/4;Monster/Dungeon/Dungeon6/5,3036,0,0,0,0,0,FALSE,0
-3149,27,던전-진'마계중심부,MonsterName/3149,141142002928863000,960000,30,1,1,basic,Monster/Dungeon/Dungeon6/3;Monster/Dungeon/Dungeon6/4;Monster/Dungeon/Dungeon6/5,3036,0,0,0,0,0,FALSE,0
-3150,27,던전-진'마계중심부,MonsterName/3150,141142002928863000,960000,30,1,1,basic,Monster/Dungeon/Dungeon6/6;Monster/Dungeon/Dungeon6/5,3036,0,0,0,0,0,FALSE,0
-3151,27,던전-진'마계중심부,MonsterName/3151,141142002928863000,960000,30,1,1,boss,Monster/Dungeon/Dungeon6/7,0,3037,400,5,8,1.5,FALSE,0
-3152,28,던전-진'샤이아,MonsterName/3152,605089012753541000,1050000,30,1,1,basic,Monster/Dungeon/Dungeon7/0;Monster/Dungeon/Dungeon7/1;Monster/Dungeon/Dungeon7/2,3038,0,0,0,0,0,FALSE,0
-3153,28,던전-진'샤이아,MonsterName/3153,605089012753541000,1050000,30,1,1,basic,Monster/Dungeon/Dungeon7/0;Monster/Dungeon/Dungeon7/1;Monster/Dungeon/Dungeon7/2,3038,0,0,0,0,0,FALSE,0
-3154,28,던전-진'샤이아,MonsterName/3154,605089012753541000,1050000,30,1,1,basic,Monster/Dungeon/Dungeon7/0;Monster/Dungeon/Dungeon7/1;Monster/Dungeon/Dungeon7/2,3038,0,0,0,0,0,FALSE,0
-3155,28,던전-진'샤이아,MonsterName/3155,605089012753541000,1050000,30,1,1,basic,Monster/Dungeon/Dungeon7/3;Monster/Dungeon/Dungeon7/4;Monster/Dungeon/Dungeon7/5,3038,0,0,0,0,0,FALSE,0
-3156,28,던전-진'샤이아,MonsterName/3156,605089012753541000,1050000,30,1,1,basic,Monster/Dungeon/Dungeon7/3;Monster/Dungeon/Dungeon7/4;Monster/Dungeon/Dungeon7/5,3038,0,0,0,0,0,FALSE,0
-3157,28,던전-진'샤이아,MonsterName/3157,605089012753541000,1050000,30,1,1,basic,Monster/Dungeon/Dungeon7/3;Monster/Dungeon/Dungeon7/4;Monster/Dungeon/Dungeon7/5,3038,0,0,0,0,0,FALSE,0
-3158,28,던전-진'샤이아,MonsterName/3158,605089012753541000,1050000,30,1,1,basic,Monster/Dungeon/Dungeon7/6;Monster/Dungeon/Dungeon7/5,3038,0,0,0,0,0,FALSE,0
-3159,28,던전-진'샤이아,MonsterName/3159,1129136023430980000,1050000,30,1,1,boss,Monster/Dungeon/Dungeon7/7,0,3039,400,5,8,1.5,FALSE,0
-3160,29,던전-진'죽은용의 동굴,MonsterName/3160,1129136023430980000,1230000,30,1,1,basic,Monster/Dungeon/Dungeon8/0;Monster/Dungeon/Dungeon8/1;Monster/Dungeon/Dungeon8/2,3040,0,0,0,0,0,FALSE,0
-3161,29,던전-진'죽은용의 동굴,MonsterName/3161,1129136023430980000,1230000,30,1,1,basic,Monster/Dungeon/Dungeon8/0;Monster/Dungeon/Dungeon8/1;Monster/Dungeon/Dungeon8/2,3040,0,0,0,0,0,FALSE,0
-3162,29,던전-진'죽은용의 동굴,MonsterName/3162,1129136023430980000,1230000,30,1,1,basic,Monster/Dungeon/Dungeon8/0;Monster/Dungeon/Dungeon8/1;Monster/Dungeon/Dungeon8/2,3040,0,0,0,0,0,FALSE,0
-3163,29,던전-진'죽은용의 동굴,MonsterName/3163,1129136023430980000,1230000,30,1,1,basic,Monster/Dungeon/Dungeon8/3;Monster/Dungeon/Dungeon8/4;Monster/Dungeon/Dungeon8/5,3040,0,0,0,0,0,FALSE,0
-3164,29,던전-진'죽은용의 동굴,MonsterName/3164,1129136023430980000,1230000,30,1,1,basic,Monster/Dungeon/Dungeon8/3;Monster/Dungeon/Dungeon8/4;Monster/Dungeon/Dungeon8/5,3040,0,0,0,0,0,FALSE,0
-3165,29,던전-진'죽은용의 동굴,MonsterName/3165,1129136023430980000,1230000,30,1,1,basic,Monster/Dungeon/Dungeon8/3;Monster/Dungeon/Dungeon8/4;Monster/Dungeon/Dungeon8/5,3040,0,0,0,0,0,FALSE,0
-3166,29,던전-진'죽은용의 동굴,MonsterName/3166,1129136023430980000,1230000,30,1,1,basic,Monster/Dungeon/Dungeon8/6;Monster/Dungeon/Dungeon8/5,3040,0,0,0,0,0,FALSE,0
-3167,29,진'죽은용의 동굴,MonsterName/3167,1129136023430980000,1230000,30,1,1,boss,Monster/Dungeon/Dungeon8/7,0,3041,400,5,8,1.5,FALSE,0
-3168,30,진'투통가,MonsterName/3168,2107042323587570000,1410000,30,1,1,basic,Monster/Dungeon/Dungeon15/0;Monster/Dungeon/Dungeon15/1;Monster/Dungeon/Dungeon15/2,3042,0,0,0,0,0,FALSE,0
-3169,30,진'투통가,MonsterName/3169,2107042323587570000,1410000,30,1,1,basic,Monster/Dungeon/Dungeon15/0;Monster/Dungeon/Dungeon15/1;Monster/Dungeon/Dungeon15/2,3042,0,0,0,0,0,FALSE,0
-3170,30,진'투통가,MonsterName/3170,2107042323587570000,1410000,30,1,1,basic,Monster/Dungeon/Dungeon15/0;Monster/Dungeon/Dungeon15/1;Monster/Dungeon/Dungeon15/2,3042,0,0,0,0,0,FALSE,0
-3171,30,진'투통가,MonsterName/3171,2107042323587570000,1410000,30,1,1,basic,Monster/Dungeon/Dungeon15/3;Monster/Dungeon/Dungeon15/4;Monster/Dungeon/Dungeon15/5,3042,0,0,0,0,0,FALSE,0
-3172,30,진'투통가,MonsterName/3172,2107042323587570000,1410000,30,1,1,basic,Monster/Dungeon/Dungeon15/3;Monster/Dungeon/Dungeon15/4;Monster/Dungeon/Dungeon15/5,3042,0,0,0,0,0,FALSE,0
-3173,30,진'투통가,MonsterName/3173,2107042323587570000,1410000,30,1,1,basic,Monster/Dungeon/Dungeon15/3;Monster/Dungeon/Dungeon15/4;Monster/Dungeon/Dungeon15/5,3042,0,0,0,0,0,FALSE,0
-3174,30,진'투통가,MonsterName/3174,2107042323587570000,1410000,30,1,1,basic,Monster/Dungeon/Dungeon15/6;Monster/Dungeon/Dungeon15/5,3042,0,0,0,0,0,FALSE,0
-3175,30,진'투통가,MonsterName/3175,2107042323587570000,1410000,30,1,1,boss,Monster/Dungeon/Dungeon15/7,0,3043,400,5,8,1.5,FALSE,0
-,,,,,,,,,,,,,,,,,,
-,,,,,,30,,,,,,,,,,,FALSE,
-,,,,,,,,,,,,,,,,,FALSE,0
-6000,대마법사의묘,1,,114618822656,140000,30,1,1,basic,Monster/Content/mage/0;Monster/Content/mage/1;Monster/Content/mage/2;Monster/Content/mage/3;Monster/Content/mage/4;Monster/Content/mage/5,0,0,0,0,0,0,FALSE,0
-6001,대마법사의묘,1,,114618822656,140000,30,1,1,basic,Monster/Content/mage/0;Monster/Content/mage/1;Monster/Content/mage/2;Monster/Content/mage/3;Monster/Content/mage/4;Monster/Content/mage/5,0,0,0,0,0,0,FALSE,0
-6002,대마법사의묘,1,,114618822656,140000,30,1,1,basic,Monster/Content/mage/0;Monster/Content/mage/1;Monster/Content/mage/2;Monster/Content/mage/3;Monster/Content/mage/4;Monster/Content/mage/5,0,0,0,0,0,0,FALSE,0
-6003,대마법사의묘,1,,114618822656,140000,30,1,1,basic,Monster/Content/mage/0;Monster/Content/mage/1;Monster/Content/mage/2;Monster/Content/mage/3;Monster/Content/mage/4;Monster/Content/mage/5,0,0,0,0,0,0,FALSE,0
-6004,대마법사의묘,1,,114618822656,140000,30,1,1,basic,Monster/Content/mage/0;Monster/Content/mage/1;Monster/Content/mage/2;Monster/Content/mage/3;Monster/Content/mage/4;Monster/Content/mage/5,0,0,0,0,0,0,FALSE,0
-6005,대마법사의묘,1,,114618822656,140000,30,1,1,basic,Monster/Content/mage/0;Monster/Content/mage/1;Monster/Content/mage/2;Monster/Content/mage/3;Monster/Content/mage/4;Monster/Content/mage/5,0,0,0,0,0,0,FALSE,0
-6006,대마법사의묘,1,,114618822656,140000,30,1,1,basic,Monster/Content/mage/0;Monster/Content/mage/1;Monster/Content/mage/2;Monster/Content/mage/3;Monster/Content/mage/4;Monster/Content/mage/5,0,0,0,0,0,0,FALSE,0
-6007,대마법사의묘,2,,114618822656,140000,50,1,1,boss,Monster/Content/mage/7,0,0,350,5,8,1.5,FALSE,0
-골드,,,,,,,,,,,,,,,,,FALSE,0
-6008,골드 던전,1,천만 20~50,154618822656,140000,30,1,1,basic,Monster/Content/gold/0;Monster/Content/gold/1;Monster/Content/gold/2;Monster/Content/gold/3;Monster/Content/gold/4;Monster/Content/gold/5,0,0,0,0,0,0,FALSE,0
-6009,골드 던전,1,60~85,154618822656,140000,30,1,1,basic,Monster/Content/gold/0;Monster/Content/gold/1;Monster/Content/gold/2;Monster/Content/gold/3;Monster/Content/gold/4;Monster/Content/gold/5,0,0,0,0,0,0,FALSE,0
-6010,골드 던전,1,90~120,154618822656,140000,30,1,1,basic,Monster/Content/gold/0;Monster/Content/gold/1;Monster/Content/gold/2;Monster/Content/gold/3;Monster/Content/gold/4;Monster/Content/gold/5,0,0,0,0,0,0,FALSE,0
-6011,골드 던전,1,130~160,154618822656,140000,30,1,1,basic,Monster/Content/gold/0;Monster/Content/gold/1;Monster/Content/gold/2;Monster/Content/gold/3;Monster/Content/gold/4;Monster/Content/gold/5,0,0,0,0,0,0,FALSE,0
-6012,골드 던전,1,170~220,154618822656,140000,30,1,1,basic,Monster/Content/gold/0;Monster/Content/gold/1;Monster/Content/gold/2;Monster/Content/gold/3;Monster/Content/gold/4;Monster/Content/gold/5,0,0,0,0,0,0,FALSE,0
-6013,골드 던전,1,230~260,154618822656,140000,30,1,1,basic,Monster/Content/gold/0;Monster/Content/gold/1;Monster/Content/gold/2;Monster/Content/gold/3;Monster/Content/gold/4;Monster/Content/gold/5,0,0,0,0,0,0,FALSE,0
-6014,골드 던전,1,270~300,154618822656,140000,30,1,1,basic,Monster/Content/gold/0;Monster/Content/gold/1;Monster/Content/gold/2;Monster/Content/gold/3;Monster/Content/gold/4;Monster/Content/gold/5,0,0,0,0,0,0,FALSE,0
-6015,골드 던전,2,310~350,154618822656,140000,50,1,1,boss,Monster/Content/gold/7,0,0,350,5,8,1.5,FALSE,0
-경험치,,,,,,,,,,,,,,,,,FALSE,0
-6016,경험치 던전,1,,154618822656,140000,30,1,1,basic,Monster/Content/exp/0;Monster/Content/exp/1;Monster/Content/exp/2;Monster/Content/exp/3;Monster/Content/exp/4;Monster/Content/exp/5,0,0,0,0,0,0,FALSE,0
-6017,경험치 던전,1,,154618822656,140000,30,1,1,basic,Monster/Content/exp/0;Monster/Content/exp/1;Monster/Content/exp/2;Monster/Content/exp/3;Monster/Content/exp/4;Monster/Content/exp/5,0,0,0,0,0,0,FALSE,0
-6018,경험치 던전,1,,154618822656,140000,30,1,1,basic,Monster/Content/exp/0;Monster/Content/exp/1;Monster/Content/exp/2;Monster/Content/exp/3;Monster/Content/exp/4;Monster/Content/exp/5,0,0,0,0,0,0,FALSE,0
-6019,경험치 던전,1,,154618822656,140000,30,1,1,basic,Monster/Content/exp/0;Monster/Content/exp/1;Monster/Content/exp/2;Monster/Content/exp/3;Monster/Content/exp/4;Monster/Content/exp/5,0,0,0,0,0,0,FALSE,0
-6020,경험치 던전,1,,154618822656,140000,30,1,1,basic,Monster/Content/exp/0;Monster/Content/exp/1;Monster/Content/exp/2;Monster/Content/exp/3;Monster/Content/exp/4;Monster/Content/exp/5,0,0,0,0,0,0,FALSE,0
-6021,경험치 던전,1,,154618822656,140000,30,1,1,basic,Monster/Content/exp/0;Monster/Content/exp/1;Monster/Content/exp/2;Monster/Content/exp/3;Monster/Content/exp/4;Monster/Content/exp/5,0,0,0,0,0,0,FALSE,0
-6022,경험치 던전,1,,154618822656,140000,30,1,1,basic,Monster/Content/exp/0;Monster/Content/exp/1;Monster/Content/exp/2;Monster/Content/exp/3;Monster/Content/exp/4;Monster/Content/exp/5,0,0,0,0,0,0,FALSE,0
-6023,경험치 던전,2,,154618822656,140000,50,1,1,boss,Monster/Content/exp/7,0,0,350,5,8,1.5,FALSE,0
-비법서,,,,,,,,,,,,,,,,,FALSE,0
-6024,비법서 던전,1,,154618822656,140000,30,1,1,basic,Monster/Content/scroll/0;Monster/Content/scroll/1;Monster/Content/scroll/2;Monster/Content/scroll/3;Monster/Content/scroll/4;Monster/Content/scroll/5,0,0,0,0,0,0,FALSE,0
-6025,비법서 던전,1,,154618822656,140000,30,1,1,basic,Monster/Content/scroll/0;Monster/Content/scroll/1;Monster/Content/scroll/2;Monster/Content/scroll/3;Monster/Content/scroll/4;Monster/Content/scroll/5,0,0,0,0,0,0,FALSE,0
-6026,비법서 던전,1,,154618822656,140000,30,1,1,basic,Monster/Content/scroll/0;Monster/Content/scroll/1;Monster/Content/scroll/2;Monster/Content/scroll/3;Monster/Content/scroll/4;Monster/Content/scroll/5,0,0,0,0,0,0,FALSE,0
-6027,비법서 던전,1,,154618822656,140000,30,1,1,basic,Monster/Content/scroll/0;Monster/Content/scroll/1;Monster/Content/scroll/2;Monster/Content/scroll/3;Monster/Content/scroll/4;Monster/Content/scroll/5,0,0,0,0,0,0,FALSE,0
-6028,비법서 던전,1,,154618822656,140000,30,1,1,basic,Monster/Content/scroll/0;Monster/Content/scroll/1;Monster/Content/scroll/2;Monster/Content/scroll/3;Monster/Content/scroll/4;Monster/Content/scroll/5,0,0,0,0,0,0,FALSE,0
-6029,비법서 던전,1,,154618822656,140000,30,1,1,basic,Monster/Content/scroll/0;Monster/Content/scroll/1;Monster/Content/scroll/2;Monster/Content/scroll/3;Monster/Content/scroll/4;Monster/Content/scroll/5,0,0,0,0,0,0,FALSE,0
-6030,비법서 던전,1,,154618822656,140000,30,1,1,basic,Monster/Content/scroll/0;Monster/Content/scroll/1;Monster/Content/scroll/2;Monster/Content/scroll/3;Monster/Content/scroll/4;Monster/Content/scroll/5,0,0,0,0,0,0,FALSE,0
-6031,비법서 던전,2,,154618822656,140000,50,1,1,boss,Monster/Content/scroll/7,0,0,350,5,8,1.5,FALSE,0
-비법서,,,,,,,,,,,,,,,,,FALSE,0
-6032,유물 던전,1,,204618822656,180000,30,1,1,basic,Monster/Content/artifact/0;Monster/Content/artifact/1;Monster/Content/artifact/2;Monster/Content/artifact/3;Monster/Content/artifact/4;Monster/Content/artifact/5,0,0,0,0,0,0,FALSE,0
-6033,유물 던전,1,,204618822656,180000,30,1,1,basic,Monster/Content/artifact/0;Monster/Content/artifact/1;Monster/Content/artifact/2;Monster/Content/artifact/3;Monster/Content/artifact/4;Monster/Content/artifact/5,0,0,0,0,0,0,FALSE,0
-6034,유물 던전,1,,204618822656,180000,30,1,1,basic,Monster/Content/artifact/0;Monster/Content/artifact/1;Monster/Content/artifact/2;Monster/Content/artifact/3;Monster/Content/artifact/4;Monster/Content/artifact/5,0,0,0,0,0,0,FALSE,0
-6035,유물 던전,1,,204618822656,180000,30,1,1,basic,Monster/Content/artifact/0;Monster/Content/artifact/1;Monster/Content/artifact/2;Monster/Content/artifact/3;Monster/Content/artifact/4;Monster/Content/artifact/5,0,0,0,0,0,0,FALSE,0
-6036,유물 던전,1,,204618822656,180000,30,1,1,basic,Monster/Content/artifact/0;Monster/Content/artifact/1;Monster/Content/artifact/2;Monster/Content/artifact/3;Monster/Content/artifact/4;Monster/Content/artifact/5,0,0,0,0,0,0,FALSE,0
-6037,유물 던전,1,,204618822656,180000,30,1,1,basic,Monster/Content/artifact/0;Monster/Content/artifact/1;Monster/Content/artifact/2;Monster/Content/artifact/3;Monster/Content/artifact/4;Monster/Content/artifact/5,0,0,0,0,0,0,FALSE,0
-6038,유물 던전,1,,204618822656,180000,30,1,1,basic,Monster/Content/artifact/0;Monster/Content/artifact/1;Monster/Content/artifact/2;Monster/Content/artifact/3;Monster/Content/artifact/4;Monster/Content/artifact/5,0,0,0,0,0,0,FALSE,0
-6039,유물 던전,2,,204618822656,180000,50,1,1,boss,Monster/Content/artifact/7,0,0,350,5,8,1.5,FALSE,0
-,,,,,,,,,,,,,,,,,FALSE,0
-,,,,,,,,,,,,,,,,,FALSE,0
-700000,월드 보스,,MonsterName/700000,640000000000000000,75000,30,1,1,boss,Monster/Raven Fantasy2/WB1,5020,5020,3000,12,2,3,TRUE,0.1
-700001,월드 보스,,MonsterName/700001,2980000000000000000,150000,30,1,1,boss,Monster/Raven Fantasy2/WB2,5020,5020,3000,12,2,3,TRUE,0.1
-700002,월드 보스,,MonsterName/700002,11400000000000000000,210000,30,1,1,boss,Monster/Raven Fantasy2/WB3,5020,5020,3000,12,2,3,TRUE,0.1
-700003,월드 보스,,MonsterName/700003,36000000000000000000,310000,30,1,1,boss,Monster/Raven Fantasy2/WB4,5020,5020,3000,12,2,3,TRUE,0.1
-700004,월드 보스,,MonsterName/700004,70000000000000000000,450000,30,1,1,boss,Monster/Raven Fantasy2/WB5,5020,5020,3000,12,2,3,TRUE,0.1
-700005,월드 보스,,MonsterName/700005,120000000000000000000,580000,30,1,1,boss,Monster/Raven Fantasy2/WB6,5020,5020,3000,12,2,3,TRUE,0.1
-700006,월드 보스,,MonsterName/700006,550000000000000000000,720000,30,1,1,boss,Monster/Raven Fantasy2/WB7,5020,5020,3000,12,2,3,TRUE,0.1
-700007,월드 보스,,MonsterName/700007,680000000000000000000,800000,30,1,1,boss,Monster/Raven Fantasy2/WB8,5020,5020,3000,12,2,3,TRUE,0.1
-700008,,,,,,,,,,,,,,,,,,
-700009,,,,,,,,,,,,,,,,,,
-700010,,,,,,,,,,,,,,,,,,
-700011,,,,,,,,,,,,,,,,,,
-700012,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-20000,파티레이드-파괴된 신전,,MonsterName/20000,36000000000000000000,450000,30,1,1,boss,Monster/PartyRaid/0/7,5020,5020,3000,12,5,3,TRUE,0.1
-20001,파티레이드-파괴된 신전,,MonsterName/20001,18000000000000000000,250000,30,1,1,boss,Monster/PartyRaid/0/0,0,0,1500,8,3,3,TRUE,0.1
-20002,파티레이드-파괴된 신전,,MonsterName/20002,18000000000000000000,250000,30,1,1,boss,Monster/PartyRaid/0/1,0,0,1500,8,3,3,TRUE,0.1
-20003,파티레이드-파괴된 신전,,MonsterName/20003,18000000000000000000,250000,30,1,1,boss,Monster/PartyRaid/0/2,0,0,1500,8,3,3,TRUE,0.1
-20004,파티레이드-파괴된 신전,,MonsterName/20004,18000000000000000000,250000,30,1,1,boss,Monster/PartyRaid/0/3,0,0,1500,8,3,3,TRUE,0.1
-20005,파티레이드-파괴된 신전,,MonsterName/20005,18000000000000000000,250000,30,1,1,boss,Monster/PartyRaid/0/4,0,0,1500,8,3,3,TRUE,0.1
-20006,파티레이드-파괴된 신전,,MonsterName/20006,18000000000000000000,250000,30,1,1,boss,Monster/PartyRaid/0/5,0,0,1500,8,3,3,TRUE,0.1
-20006,파티레이드-파괴된 신전,,MonsterName/20007,18000000000000000000,250000,30,1,1,boss,Monster/PartyRaid/0/6,0,0,1500,8,3,3,TRUE,0.1
+id,DescriptionKor,mapname,name,hp,dmg,crit,attackcount,attacktime,montype,sprite,dropid,bossdrop,breakPoint,breakTime,breaknewstart,breakadddmg,israge,ragepercent,ispenalty
+아이디,,,이름,체력,데미지,크리확률,공격횟수,공격시간,몬스터 타입,이미지,드롭아이디,보스 드롭 아이디,무력화 점수,무력화 시간,무력화다시시작시간,무력화 시 추가딜,움직이는가?,,
+100,승급 시험2,,MonsterName/100,70000,150,30,1,1,basic,Monster/Boss/100,100,100,100,5,8,2,FALSE,0,FALSE
+101,승급 시험3,,MonsterName/101,250000,250,30,1,1,basic,Monster/Boss/101,101,101,150,5,8,2,FALSE,0,FALSE
+102,승급 시험4,,MonsterName/102,4000000,500,30,1,1,basic,Monster/Boss/102,102,102,200,5,8,2,FALSE,0,FALSE
+103,승급 시험5,,MonsterName/103,20000000,1000,30,1,1,basic,Monster/Boss/103,103,103,250,5,8,2,FALSE,0,FALSE
+104,승급 시험6,,MonsterName/104,102000000,3000,30,1,1,basic,Monster/Boss/104,104,104,300,5,8,2,FALSE,0,FALSE
+105,승급 시험7,,MonsterName/105,300000000,5000,30,1,1,basic,Monster/Boss/105,105,105,500,5,8,2,FALSE,0,FALSE
+106,승급 시험8,,MonsterName/106,800000000,7500,30,1,1,basic,Monster/Boss/106,106,106,500,5,8,2,FALSE,0,FALSE
+107,승급 시험9,,MonsterName/107,2000000000,15000,30,1,1,basic,Monster/Boss/107,107,107,500,5,8,2,FALSE,0,FALSE
+108,승급 시험10,,MonsterName/108,10000000000,30000,30,1,1,basic,Monster/Boss/108,108,108,500,5,8,2,FALSE,0,FALSE
+109,승급 시험11,,MonsterName/109,250000000000,45000,30,1,1,basic,Monster/Boss/109,109,109,550,5,8,2,FALSE,0,FALSE
+110,승급 시험12,,MonsterName/110,500000000000,55000,30,1,1,basic,Monster/Boss/110,110,110,550,5,8,2,FALSE,0,FALSE
+111,승급 시험13,,MonsterName/111,1500000000000,80000,30,1,1,basic,Monster/Boss/111,111,111,550,5,8,2,FALSE,0,FALSE
+112,승급 시험14,,MonsterName/112,7000000000000,130000,30,1,1,basic,Monster/Boss/112,112,112,550,5,8,2,FALSE,0,FALSE
+113,승급 시험15,,MonsterName/113,18000000000000,170000,30,1,1,basic,Monster/Boss/113,113,113,550,5,8,2,FALSE,0,FALSE
+114,승급 시험16,,MonsterName/114,101000000000000,210000,30,1,1,basic,Monster/Boss/114,114,114,550,5,8,2,FALSE,0,FALSE
+115,승급 시험17,,MonsterName/115,310000000000000,250000,30,1,1,basic,Monster/Boss/115,115,115,550,5,8,2,FALSE,0,FALSE
+116,승급 시험18,,MonsterName/116,989000000000000,290000,30,1,1,basic,Monster/Boss/116,116,116,550,5,8,2,FALSE,0,FALSE
+117,승급 시험19,,MonsterName/117,2268000000000000,330000,30,1,1,basic,Monster/Boss/117,117,117,550,5,8,2,FALSE,0,FALSE
+118,승급 시험20,,MonsterName/118,4568000000000000,370000,30,1,1,basic,Monster/Boss/118,118,118,550,5,8,2,FALSE,0,FALSE
+119,승급 시험21,,MonsterName/119,15868000000000000,410000,30,1,1,basic,Monster/Boss/119,119,119,550,5,8,2,FALSE,0,FALSE
+120,승급 시험22,,MonsterName/120,30068000000000000,450000,30,1,1,basic,Monster/Boss/120,120,120,550,5,8,2,FALSE,0,FALSE
+121,승급 시험23,,MonsterName/121,78635870242928600,570000,30,1,1,basic,Monster/Boss/121,121,121,550,5,8,2,FALSE,0,FALSE
+122,승급 시험24,,MonsterName/122,240000000000000000,690000,30,1,1,basic,Monster/Boss/122,122,122,550,5,8,2,FALSE,0,FALSE
+123,승급 시험25,,MonsterName/123,850000000000000000,810000,30,1,1,basic,Monster/Boss/123,123,123,550,5,8,2,FALSE,0,FALSE
+124,승급 시험26,,MonsterName/124,1550000000000000000,930000,30,1,1,basic,Monster/Boss/124,124,124,550,5,8,2,FALSE,0,FALSE
+125,승급 시험27,,MonsterName/125,3000000000000000000,1050000,30,1,1,basic,Monster/Boss/125,125,125,550,5,8,2,FALSE,0,FALSE
+126,승급 시험28,,MonsterName/126,4500000000000000000,1110000,30,1,1,basic,Monster/Boss/126,126,126,550,5,8,2,FALSE,0,FALSE
+127,승급 시험29,,MonsterName/127,6500000000000000000,1590000,30,1,1,basic,Monster/Boss/127,127,127,550,5,8,2,FALSE,0,FALSE
+128,승급 시험30,,MonsterName/128,9000000000000000000,2270000,30,1,1,basic,Monster/Boss/128,128,128,550,5,8,2,FALSE,0,FALSE
+129,승급 시험31,,MonsterName/129,155000000000000000000,2950000,30,1,1,basic,Monster/Boss/129,129,129,550,5,8,2,FALSE,0,FALSE
+130,승급 시험32,,MonsterName/130,355000000000000000000,3630000,30,1,1,basic,Monster/Boss/130,130,130,550,5,8,2,FALSE,0,FALSE
+131,승급 시험33,,MonsterName/131,355000000000000000000,4310000,30,1,1,basic,Monster/Boss/131,131,131,550,5,8,2,FALSE,0,FALSE
+,,,,,,,,,,,,,,,,,,,FALSE
+,,,,,,,,,,,,,,,,,FALSE,0,FALSE
+99,허수아비,,MonsterName/113,0,0,0,1,1,boss,Monster/Field/Training,0,0,500,10,8,2,FALSE,0,FALSE
+98,개미굴여왕,,MonsterName/98,2000000000000,0,0,1,1,boss,Monster/Field/Training,0,0,500,10,8,2,FALSE,0,FALSE
+,,,,13409502308809,40,,,,,,,,,,,,FALSE,0,FALSE
+,,,,,,,,,,,,,,,,,FALSE,0,FALSE
+4999,황금박쥐,이벤트 몹,MonsterName/4999,,0,0,1,1,boss,Monster/Event/산타,99999,99999,15,30,8,0,FALSE,0,FALSE
+레이드,,,,,,,,,,,,,,,,,FALSE,0,FALSE
+5000,전기 뱀장어,레이드 지역,MonsterName/5000,25000000,0,0,1,1,boss,Monster/Field/54/0,5000,5000,400,12,8,2.5,FALSE,0,FALSE
+5001,심해어,레이드 지역,MonsterName/5001,120000000,0,0,1,1,boss,Monster/Field/54/1,5001,5001,400,12,8,2.5,FALSE,0,FALSE
+5002,공허 촉수,레이드 지역,MonsterName/5002,700000000,0,0,1,1,boss,Monster/Field/48/0,5002,5002,400,12,8,2.5,FALSE,0,FALSE
+5003,재앙의 씨앗,레이드 지역,MonsterName/5003,8000000000,0,0,1,1,boss,Monster/Field/48/1,5003,5003,400,12,8,2.5,FALSE,0,FALSE
+5004,스컬 피쉬,레이드 지역,MonsterName/5004,40000000000,0,0,1,1,boss,Monster/Dungeon/Dungeon8/1,5004,5004,400,12,8,2.5,FALSE,0,FALSE
+5005,스컬 하이드라,레이드 지역,MonsterName/5005,80000000000,0,0,1,1,boss,Monster/Dungeon/Dungeon8/2,5005,5005,400,12,8,2.5,FALSE,0,FALSE
+5006,팬텀,레이드 지역,MonsterName/5006,160000000000,0,0,1,1,boss,Monster/Dungeon/Dungeon8/5,5006,5006,400,12,8,2.5,FALSE,0,FALSE
+5007,엘더 본 드래곤,레이드 지역,MonsterName/5007,320000000000,0,0,1,1,boss,Monster/Dungeon/Dungeon8/7,5007,5007,400,12,8,2.5,FALSE,0,FALSE
+5008,홀리 티탄,레이드 지역,MonsterName/5008,9800000000000,0,0,1,1,boss,Monster/Dungeon/Dungeon17/3,5008,5008,600,12,8,2.5,FALSE,0,FALSE
+5009,홀리 그리폰,레이드 지역,MonsterName/5009,19000000000000,0,0,1,1,boss,Monster/Dungeon/Dungeon17/1,5009,5009,600,12,8,2.5,FALSE,0,FALSE
+5010,홀리 아피스,레이드 지역,MonsterName/5010,79000000000000,0,0,1,1,boss,Monster/Dungeon/Dungeon17/5,5010,5010,600,12,8,2.5,FALSE,0,FALSE
+5011,홀리 아켄젤,레이드 지역,MonsterName/5011,250000000000000,0,0,1,1,boss,Monster/Dungeon/Dungeon17/7,5011,5011,600,12,8,2.5,FALSE,0,FALSE
+5012,홀리 엔트로 위버,레이드 지역,MonsterName/5012,850000000000000,0,0,1,1,boss,Monster/Dungeon/Dungeon17/8,5012,5012,600,12,8,2.5,FALSE,0,FALSE
+5013,저거넛,레이드 지역,MonsterName/5013,2715096693658710,0,0,1,1,boss,Monster/Dungeon/Dungeon18/0,5013,5013,600,12,8,2.5,FALSE,0,FALSE
+5014,거인,레이드 지역,MonsterName/5014,4580193387317420,0,0,1,1,boss,Monster/Dungeon/Dungeon18/5,5014,5014,600,12,8,2.5,FALSE,0,FALSE
+5015,히포그리프,레이드 지역,MonsterName/5015,6445290080976130,0,0,1,1,boss,Monster/Dungeon/Dungeon18/3,5015,5015,600,12,8,2.5,FALSE,0,FALSE
+5016,칸,레이드 지역,MonsterName/5016,8310386774634840,0,0,1,1,boss,Monster/Dungeon/Dungeon18/7,5016,5016,600,12,8,2.5,FALSE,0,FALSE
+5017,퍼지,레이드 지역,MonsterName/5017,15175483468293600,0,0,1,1,boss,Monster/Raven Fantasy/a5,5017,5017,900,12,8,2.5,FALSE,0,FALSE
+5018,할로우 나이트,레이드 지역,MonsterName/5018,22040580161952400,0,0,1,1,boss,Monster/Raven Fantasy/a28,5018,5018,900,12,8,2.5,FALSE,0,FALSE
+5019,스컬 데몬,레이드 지역,MonsterName/5019,28905676855611100,0,0,1,1,boss,Monster/Raven Fantasy/a10,5019,5019,900,12,8,2.5,FALSE,0,FALSE
+5020,리퍼,레이드 지역,MonsterName/5020,35770773549269900,0,0,1,1,boss,Monster/Raven Fantasy/a16,5020,5020,900,12,8,2.5,FALSE,0,FALSE
+5021,기간테스,레이드 지역,MonsterName/5021,78635870242928600,0,0,1,1,boss,Monster/WorldBoss/기간테스,5021,5021,900,12,8,2.5,FALSE,0,FALSE
+5022,모레그,레이드 지역,MonsterName/5022,240000000000000000,0,0,1,1,boss,Monster/WorldBoss/모레그,5022,5022,900,12,8,2.5,FALSE,0,FALSE
+5023,허수아비,레이드 지역,MonsterName/5023,850000000000000000,0,0,1,1,boss,Monster/WorldBoss/허수아비,5023,5023,900,12,8,2.5,FALSE,0,FALSE
+5024,헬나이트,레이드 지역,MonsterName/5024,1550000000000000000,0,0,1,1,boss,Monster/WorldBoss/헬나이트,5024,5024,900,12,8,2.5,FALSE,0,FALSE
+5025,심연의 주술사,레이드 지역,MonsterName/5025,3000000000000000000,0,0,1,1,boss,Monster/Raven Fantasy/a20,5025,5025,900,12,8,2.5,FALSE,0,FALSE
+5026,악의,레이드 지역,MonsterName/5026,4500000000000000000,0,0,1,1,boss,Monster/Raven Fantasy/a11,5026,5026,900,12,8,2.5,FALSE,0,FALSE
+5027,미믹,레이드 지역,MonsterName/5027,6500000000000000000,0,0,1,1,boss,Monster/Field2/Outline22,5027,5027,900,12,8,2.5,FALSE,0,FALSE
+5028,웨어울프,레이드 지역,MonsterName/5028,9000000000000000000,0,0,1,1,boss,Monster/Field2/Outline9,5028,5028,900,12,8,2.5,FALSE,0,FALSE
+,,,,,,,,,,,,,,,,,FALSE,0,FALSE
+,,,,,,,,,,,,,,,,,FALSE,0,FALSE
+,,,,,,,,,,,,,,,,,FALSE,0,FALSE
+,,,,,,,,,,,,,,,,,FALSE,0,FALSE
+5022,,,,,,,,,,,,,,,,,FALSE,0,FALSE
+5023,,,,,,,,,,,,,,,,,FALSE,0,FALSE
+5024,,,,,,,,,,,,,,,,,FALSE,0,FALSE
+5025,,,,,,,,,,,,,,,,,FALSE,0,FALSE
+,,,,,,,,,,,,,,,,,FALSE,0,FALSE
+,,,,,,,,,,,,,,,,,FALSE,0,FALSE
+,,,,,,,,,,,,,,,,,FALSE,0,FALSE
+,,레이드 지역,MonsterName/5010,,,,,,,,,,,,,,FALSE,0,FALSE
+9999,개미굴,콘텐츠,MonsterName/9999,3000000000,0,0,0,0,boss,Monster/Ant/orb_guardian,0,0,1000,10,8,2,FALSE,0,FALSE
+10000,성물,콘텐츠,MonsterName/10000,0,0,0,0,0,boss,TotemImage/35,5003,5003,500,10,8,2,FALSE,0,FALSE
+10001,골드러쉬,콘텐츠,MonsterName/10001,100000,0,0,0,0,boss,Item/ETC/goldsafe2,5003,5003,500,10,8,2,FALSE,0,FALSE
+10002,도적단 섬멸,콘텐츠,MonsterName/10002,100000,1000,30,1,1,boss,Monster/Field/48/1,5003,5003,500,10,8,2,FALSE,0,FALSE
+,,,,,,,,,,,,길드레이드 보상,,,,,FALSE,0,FALSE
+10003,,길드레이드 1단계,,100000000,0,0,0,0,boss,Monster/GuildRaid/0,0,6000,1000,12,20,4,FALSE,0,FALSE
+10004,,길드레이드 2단계,,10000000000,0,0,0,0,boss,Monster/GuildRaid/1,0,6001,1000,12,20,4,FALSE,0,FALSE
+10005,,길드레이드 3단계,,1000000000000,0,0,0,0,boss,Monster/GuildRaid/2,0,6002,1000,12,20,4,FALSE,0,FALSE
+10006,,길드레이드 4단계,,100000000000000,0,0,0,0,boss,Monster/GuildRaid/3,0,6003,1000,12,20,4,FALSE,0,FALSE
+10007,,길드레이드 5단계,,5000000000000000,0,0,0,0,boss,Monster/GuildRaid/4,0,6004,1000,12,20,4,FALSE,0,FALSE
+10008,,길드레이드 6단계,,20000000000000000,0,0,0,0,boss,Monster/GuildRaid/5,0,6005,1000,12,20,4,FALSE,0,FALSE
+10009,,길드레이드 7단계,,50000000000000000,0,0,0,0,boss,Monster/GuildRaid/6,0,6006,1000,12,20,4,FALSE,0,FALSE
+10010,,길드레이드 8단계,,80000000000000000,0,0,0,0,boss,Monster/GuildRaid/7,0,6007,1000,12,20,4,FALSE,0,FALSE
+10011,,길드레이드 9단계,,110000000000000000,0,0,0,0,boss,Monster/Dungeon/Dungeon33/7,0,6008,1000,12,20,4,FALSE,0,FALSE
+10012,,길드레이드 10단계,,140000000000000000,0,0,0,0,boss,Monster/Dungeon/Dungeon32/5,0,6009,1000,12,20,4,FALSE,0,FALSE
+10013,,길드레이드 11,,170000000000000000,0,0,0,0,boss,Monster/Dungeon/Dungeon32/7,0,6010,1000,12,20,4,FALSE,0,FALSE
+10014,,길드레이드 12,,200000000000000000,0,0,0,0,boss,Monster/Dungeon/Runway/2,0,6011,1000,12,20,4,FALSE,0,FALSE
+10015,,길드레이드 13,,270000000000000000,0,0,0,0,boss,Monster/Raven Fantasy/gr1,0,6012,1000,12,20,4,FALSE,0,FALSE
+10016,,길드레이드 14,,360000000000000000,0,0,0,0,boss,Monster/Raven Fantasy/gr2,0,6013,1000,12,20,4,FALSE,0,FALSE
+10017,,길드레이드 15,,450000000000000000,0,0,0,0,boss,Monster/Raven Fantasy/gr3,0,6014,1000,12,20,4,FALSE,0,FALSE
+10018,,길드레이드 16,,540000000000000000,0,0,0,0,boss,Monster/Raven Fantasy/gr4,0,6015,1000,12,20,4,FALSE,0,FALSE
+10019,,길드레이드 17,,800000000000000000,0,0,0,0,boss,Monster/Raven Fantasy/gr5,0,6016,1000,12,20,4,FALSE,0,FALSE
+10020,,길드레이드 18,,1200000000000000000,0,0,0,0,boss,Monster/Raven Fantasy/gr6,0,6017,1000,12,20,4,FALSE,0,FALSE
+10021,,길드레이드 19,,3500000000000000000,0,0,0,0,boss,Monster/Raven Fantasy/gr7,0,6018,1000,12,20,4,FALSE,0,FALSE
+10022,,길드레이드 20,,7500000000000000000,0,0,0,0,boss,Monster/Raven Fantasy/gr8,0,6019,1000,12,20,4,FALSE,0,FALSE
+10023,,길드레이드 21,,12000000000000000000,0,0,0,0,boss,Monster/Raven Fantasy/gr9,0,6020,1000,12,20,4,FALSE,0,FALSE
+10024,,길드레이드 22,,22000000000000000000,0,0,0,0,boss,Monster/Raven Fantasy/gr10,0,6021,1000,12,20,4,FALSE,0,FALSE
+,,,,,,,,,,,,,,,,,,,FALSE
+,,,,,,,,,,,,,,,,,,,FALSE
+,,,,,,,,,,,,,,,,,,,FALSE
+,,,,,,,,,,,,,,,,,,,FALSE
+1000,1,들판,MonsterName/1000,"4,096",14,30,1,1,basic,Monster/Animal/0_Sheep;Monster/Animal/0_Yak;Monster/Animal/0_Oldyak,1000,1001,0,0,0,0,FALSE,0,FALSE
+1001,1,초원,MonsterName/1001,5793,21,30,1,1,basic,Monster/Animal/1_Pig;Monster/Animal/1_OldPig,1002,1003,0,0,0,0,FALSE,0,FALSE
+1002,2,산,MonsterName/1002,8192,42,30,1,1,basic,Monster/Animal/2_Naga;Monster/Animal/2_Bat;Monster/Animal/2_Wolf,1004,1005,0,0,0,0,FALSE,0,FALSE
+1003,2,뱀굴,MonsterName/1003,11585,49,30,1,1,basic,Monster/Animal/3_Snake3;Monster/Animal/3_Snake1;Monster/Animal/3_Snake,1006,1007,0,0,0,0,FALSE,0,FALSE
+1004,3,켄타 부락,MonsterName/1004,16384,210,30,1,1,basic,Monster/Field/0/0_mob2;Monster/Field/0/0_mob1;Monster/Field/0/0_mob0,1008,1009,0,0,0,0,FALSE,0,FALSE
+1005,3,트롤족 주둔지,MonsterName/1005,23170,105,30,1,1,basic,Monster/Field/1/1_mob3;Monster/Field/1/1_mob2;Monster/Field/1/1_mob1,1010,1011,0,0,0,0,FALSE,0,FALSE
+1006,4,협곡,MonsterName/1006,32768,210,30,1,1,basic,Monster/Field/2/2_mob3;Monster/Field/2/2_mob2;Monster/Field/2/2_mob1,1012,1013,0,0,0,0,FALSE,0,FALSE
+1007,4,폐허,MonsterName/1007,46341,238,30,1,1,basic,Monster/Field/3/3_mob3;Monster/Field/3/3_mob2;Monster/Field/3/3_mob1,1014,1015,0,0,0,0,FALSE,0,FALSE
+1008,4,묘지,MonsterName/1008,65536,350,30,1,1,basic,Monster/Field/4/mob3;Monster/Field/4/mob2;Monster/Field/4/mob1,1016,1017,0,0,0,0,FALSE,0,FALSE
+1009,5,차원의 갈림길,MonsterName/1009,92682,700,30,1,1,basic,Monster/Field/5/mob4;Monster/Field/5/mob3;Monster/Field/5/mob42,1018,1019,0,0,0,0,FALSE,0,FALSE
+1010,5,마계 외부,MonsterName/1010,131072,784,30,1,1,basic,Monster/Field/6/mob4;Monster/Field/6/mob3;Monster/Field/6/mob2,1020,1021,0,0,0,0,FALSE,0,FALSE
+1011,6,마계 내부,MonsterName/1011,185364,980,30,1,1,basic,Monster/Field/7/mob4;Monster/Field/7/mob3;Monster/Field/7/mob2,1022,1023,0,0,0,0,FALSE,0,FALSE
+1012,6,천계 입구,MonsterName/1012,262144,1106,30,1,1,basic,Monster/Field/8/mob4;Monster/Field/8/mob3;Monster/Field/8/mob2,1024,1025,0,0,0,0,FALSE,0,FALSE
+1013,6,죽음의 땅,MonsterName/1013,370728,1260,30,1,1,basic,Monster/Field/9/mob4;Monster/Field/9/mob3;Monster/Field/9/mob2,1026,1027,0,0,0,0,FALSE,0,FALSE
+1014,7,제국,MonsterName/1014,524288,1330,30,1,1,basic,Monster/Field/10/mob4;Monster/Field/10/mob3;Monster/Field/10/mob2,1028,1029,0,0,0,0,FALSE,0,FALSE
+1015,7,밀림,MonsterName/1015,741455,1400,30,1,1,basic,Monster/Field/11/mob4;Monster/Field/11/mob3;Monster/Field/11/mob2,1030,1031,0,0,0,0,FALSE,0,FALSE
+1016,7,드래고니아,MonsterName/1016,1048576,1470,30,1,1,basic,Monster/Field/12/mob4;Monster/Field/12/mob3;Monster/Field/12/mob2,1032,1033,0,0,0,0,FALSE,0,FALSE
+1017,8,실험실,MonsterName/1017,1482910,1680,30,1,1,basic,Monster/Field/13/mob4;Monster/Field/13/mob3;Monster/Field/13/mob2,1034,1035,0,0,0,0,FALSE,0,FALSE
+1018,8,검은대지,MonsterName/1018,2097152,1680,30,1,1,basic,Monster/Field/14/mob4;Monster/Field/14/mob3;Monster/Field/14/mob2,1036,1037,0,0,0,0,FALSE,0,FALSE
+1019,8,빙결지대,MonsterName/1019,2965821,1820,30,1,1,basic,Monster/Field/15/mob4;Monster/Field/15/mob3;Monster/Field/15/mob2,1038,1039,0,0,0,0,FALSE,0,FALSE
+1020,8,신비로운 숲,MonsterName/1020,4194304,1960,30,1,1,basic,Monster/Field/16/mob4;Monster/Field/16/mob3;Monster/Field/16/mob2,1040,1041,0,0,0,0,FALSE,0,FALSE
+1021,9,공허,MonsterName/1021,5931642,2100,30,1,1,basic,Monster/Field/17/mob4;Monster/Field/17/mob3;Monster/Field/17/mob2,1042,1043,0,0,0,0,FALSE,0,FALSE
+1022,9,오즈니아,MonsterName/1022,8388608,2240,30,1,1,basic,Monster/Field/18/mob4;Monster/Field/18/mob3;Monster/Field/18/mob2,1044,1045,0,0,0,0,FALSE,0,FALSE
+1023,9,마왕성 입구,MonsterName/1023,11863283,2380,30,1,1,basic,Monster/Field/19/mob4;Monster/Field/19/mob3;Monster/Field/19/mob2,1046,1047,0,0,0,0,FALSE,0,FALSE
+1024,9,오염 지역,MonsterName/1024,16777216,2520,30,1,1,basic,Monster/Field/20/mob4;Monster/Field/20/mob3;Monster/Field/20/mob2,1048,1049,0,0,0,0,FALSE,0,FALSE
+1025,10,용의 나라,MonsterName/1025,23726566,4900,30,1,1,basic,Monster/Field/21/mob4;Monster/Field/21/mob3;Monster/Field/21/mob2,1050,1051,0,0,0,0,FALSE,0,FALSE
+1026,10,칸의 연구소,MonsterName/1026,33554432,5600,30,1,1,basic,Monster/Field/24/mob4;Monster/Field/24/mob3;Monster/Field/24/mob2,1052,1053,0,0,0,0,FALSE,0,FALSE
+1027,10,망령의 숲,MonsterName/1027,47453133,6300,30,1,1,basic,Monster/Field/25/mob4;Monster/Field/25/mob3;Monster/Field/25/mob2,1054,1055,0,0,0,0,FALSE,0,FALSE
+1028,10,고르곤의 동굴,MonsterName/1028,67108864,7000,30,1,1,basic,Monster/Field/26/mob4;Monster/Field/26/mob3;Monster/Field/26/mob2,1056,1057,0,0,0,0,FALSE,0,FALSE
+1029,10,운명의 틈,MonsterName/1029,94906266,7700,30,1,1,basic,Monster/Field/27/mob4;Monster/Field/27/mob3;Monster/Field/27/mob2,1058,1059,0,0,0,0,FALSE,0,FALSE
+1030,10,사막,MonsterName/1030,134217728,8400,30,1,1,basic,Monster/Field/28/mob4;Monster/Field/28/mob3;Monster/Field/28/mob2,1060,1061,0,0,0,0,FALSE,0,FALSE
+1031,10,엘프의 마을,MonsterName/1031,189812531,9100,30,1,1,basic,Monster/Field/29/mob4;Monster/Field/29/mob3;Monster/Field/29/mob2,1062,1063,0,0,0,0,FALSE,0,FALSE
+1032,10,광신도 마을,MonsterName/1032,268435456,9800,30,1,1,basic,Monster/Field/30/mob4;Monster/Field/30/mob3;Monster/Field/30/mob2,1064,1065,0,0,0,0,FALSE,0,FALSE
+1033,11,마법도시,MonsterName/1033,854156391,25000,30,1,1,basic,Monster/Field/31/3;Monster/Field/31/2;Monster/Field/31/1,1070,1071,0,0,0,0,FALSE,0,FALSE
+1034,11,불타는 평야,MonsterName/1034,1708312781,30000,30,1,1,basic,Monster/Field/32/2;Monster/Field/32/3;Monster/Field/32/1,1072,1073,0,0,0,0,FALSE,0,FALSE
+1035,11,아마존,MonsterName/1035,2415919104,35000,30,1,1,basic,Monster/Field/33/3;Monster/Field/33/2;Monster/Field/33/1,1074,1075,0,0,0,0,FALSE,0,FALSE
+1036,11,나가랜드,MonsterName/1036,3416625562,40000,30,1,1,basic,Monster/Field/34/3;Monster/Field/34/2;Monster/Field/34/1,1076,1077,0,0,0,0,FALSE,0,FALSE
+1037,11,코볼트 주둔지,MonsterName/1037,4831838208,45000,30,1,1,basic,Monster/Field/35/3;Monster/Field/35/2;Monster/Field/35/1,1078,1079,0,0,0,0,FALSE,0,FALSE
+1038,12,음산한 마을,MonsterName/1038,9663676416,50000,30,1,1,basic,Monster/Field/36/3;Monster/Field/36/2;Monster/Field/36/1,1080,1081,0,0,0,0,FALSE,0,FALSE
+1039,12,아인 약탈지,MonsterName/1039,13666502250,55000,30,1,1,basic,Monster/Field/38/3;Monster/Field/38/2;Monster/Field/38/1,1082,1083,0,0,0,0,FALSE,0,FALSE
+1040,12,카지노,MonsterName/1040,19327352832,60000,30,1,1,basic,Monster/Field/40/3;Monster/Field/40/2;Monster/Field/40/1,1084,1085,0,0,0,0,FALSE,0,FALSE
+1041,12,버려진 숲,MonsterName/1041,27333004500,65000,30,1,1,basic,Monster/Field/41/3;Monster/Field/41/2;Monster/Field/41/1,1086,1087,0,0,0,0,FALSE,0,FALSE
+1042,12,미지의 드래고니아,MonsterName/1042,38654705664,70000,30,1,1,basic,Monster/Field/42/3;Monster/Field/42/2;Monster/Field/42/1,1088,1089,0,0,0,0,FALSE,0,FALSE
+1043,12,미지의 공허,MonsterName/1043,54666009000,75000,30,1,1,basic,Monster/Field/43/3;Monster/Field/43/2;Monster/Field/43/1,1090,1091,0,0,0,0,FALSE,0,FALSE
+1044,13,미지의 용의 나라,MonsterName/1044,109332017999,80000,30,1,1,basic,Monster/Field/44/3;Monster/Field/44/2;Monster/Field/44/1,1092,1093,0,0,0,0,FALSE,0,FALSE
+1045,13,뱀파이어의 성,MonsterName/1045,154618822656,85000,30,1,1,basic,Monster/Field/45/3;Monster/Field/45/2;Monster/Field/45/1,1094,1095,0,0,0,0,FALSE,0,FALSE
+1046,13,끝없는 미로,MonsterName/1046,218664035998,90000,30,1,1,basic,Monster/Field/46/3;Monster/Field/46/2;Monster/Field/46/1,1096,1097,0,0,0,0,FALSE,0,FALSE
+1047,13,소서러 길드,MonsterName/1047,309237645312,95000,30,1,1,basic,Monster/Field/47/3;Monster/Field/47/2;Monster/Field/47/1,1098,1099,0,0,0,0,FALSE,0,FALSE
+1048,13,심해,MonsterName/1048,437328071997,100000,30,1,1,basic,Monster/Field/48/3;Monster/Field/48/2;Monster/Field/48/1,1100,1101,0,0,0,0,FALSE,0,FALSE
+1049,13,폭염지대,MonsterName/1049,618475290624,105000,30,1,1,basic,Monster/Field/49/3;Monster/Field/49/2;Monster/Field/49/1,1102,1103,0,0,0,0,FALSE,0,FALSE
+1050,13,언데드 출몰지역,MonsterName/1050,874656143993,110000,30,1,1,basic,Monster/Field/50/3;Monster/Field/50/2;Monster/Field/50/1,1104,1105,0,0,0,0,FALSE,0,FALSE
+1051,14,아이언헤븐,MonsterName/1051,1076828025275,115000,30,1,1,basic,Monster/Field/51/3;Monster/Field/51/2;Monster/Field/51/1,1106,1107,0,0,0,0,FALSE,0,FALSE
+1052,14,모험가의 서,MonsterName/1052,1325730807450,120000,30,1,1,basic,Monster/Field/52/3;Monster/Field/52/2;Monster/Field/52/1,1108,1109,0,0,0,0,FALSE,0,FALSE
+1053,14,마티노 초원,MonsterName/1053,1632166077192,125000,30,1,1,basic,Monster/Field/53/3;Monster/Field/53/2;Monster/Field/53/1,1110,1111,0,0,0,0,FALSE,0,FALSE
+1054,14,마티노 앞 바다,MonsterName/1054,2009432147586,130000,30,1,1,basic,Monster/Field/54/3;Monster/Field/54/2;Monster/Field/54/1,1112,1113,0,0,0,0,FALSE,0,FALSE
+1055,14,진'나가 랜드,MonsterName/1055,2473901162496,135000,30,1,1,basic,Monster/Field/34/3;Monster/Field/34/2;Monster/Field/34/1,1114,1115,0,0,0,0,FALSE,0,FALSE
+1056,14,진'코볼트 주둔지,MonsterName/1056,3045729595374,140000,30,1,1,basic,Monster/Field/35/3;Monster/Field/35/2;Monster/Field/35/1,1116,1117,0,0,0,0,FALSE,0,FALSE
+1057,14,진'음산한 마을,MonsterName/1057,3749732975905,145000,30,1,1,basic,Monster/Field/36/3;Monster/Field/36/2;Monster/Field/36/1,1118,1119,0,0,0,0,FALSE,0,FALSE
+1058,14,진'아인 약탈지,MonsterName/1058,4616462804820,150000,30,1,1,basic,Monster/Field/38/3;Monster/Field/38/2;Monster/Field/38/1,1120,1121,0,0,0,0,FALSE,0,FALSE
+1059,14,진'카지노,MonsterName/1059,5683532391569,155000,30,1,1,basic,Monster/Field/40/3;Monster/Field/40/2;Monster/Field/40/1,1122,1123,0,0,0,0,FALSE,0,FALSE
+1060,15,진'버려진 숲,MonsterName/1060,6997249151945,160000,30,1,1,basic,Monster/Field/41/3;Monster/Field/41/2;Monster/Field/41/1,1124,1125,0,0,0,0,FALSE,0,FALSE
+1061,15,고블린 숲 입구,MonsterName/1061,8614624202199,165000,30,1,1,basic,Monster/Field/55/3;Monster/Field/55/2;Monster/Field/55/1,1126,1127,0,0,0,0,FALSE,0,FALSE
+1062,15,고블린 숲,MonsterName/1062,10605846459604,170000,30,1,1,basic,Monster/Field/56/3;Monster/Field/56/2;Monster/Field/56/1,1128,1129,0,0,0,0,FALSE,0,FALSE
+1063,15,바닷가,MonsterName/1063,13057328617535,175000,30,1,1,basic,Monster/Field/57/3;Monster/Field/57/2;Monster/Field/57/1,1130,1131,0,0,0,0,FALSE,0,FALSE
+1064,15,음산한 묘지,MonsterName/1064,16075457180687,180000,30,1,1,basic,Monster/Field/4/mob3;Monster/Field/4/mob2;Monster/Field/4/mob1,1132,1133,0,0,0,0,FALSE,0,FALSE
+1065,15,뒤틀린 차원,MonsterName/1065,19791209299968,185000,30,1,1,basic,Monster/Field/5/mob4;Monster/Field/5/mob3;Monster/Field/5/mob42,1134,1135,0,0,0,0,FALSE,0,FALSE
+1066,15,마족 집결지,MonsterName/1066,24365836762996,190000,30,1,1,basic,Monster/Field/6/mob1;Monster/Field/6/mob2;Monster/Field/6/mob5,1136,1137,0,0,0,0,FALSE,0,FALSE
+,,,,,,,,,,,,,,,,,FALSE,0,FALSE
+1067,16,마법도시,MonsterName/1067,27988996607779,250000,30,1,1,basic,Monster/Field/31/3;Monster/Field/31/2;Monster/Field/31/1,1138,1139,0,0,0,0,FALSE,0,FALSE
+1068,16,불타는 평야,MonsterName/1068,32150914361374,255000,30,1,1,basic,Monster/Field/32/2;Monster/Field/32/3;Monster/Field/32/1,1140,1141,0,0,0,0,FALSE,0,FALSE
+1069,16,아마존,MonsterName/1069,36931702438560,260000,30,1,1,basic,Monster/Field/33/3;Monster/Field/33/2;Monster/Field/33/1,1142,1143,0,0,0,0,FALSE,0,FALSE
+1070,16,나가랜드,MonsterName/1070,42423385838414,265000,30,1,1,basic,Monster/Field/34/3;Monster/Field/34/2;Monster/Field/34/1,1144,1145,0,0,0,0,FALSE,0,FALSE
+1071,16,코볼트 주둔지,MonsterName/1071,48731673525991,270000,30,1,1,basic,Monster/Field/35/3;Monster/Field/35/2;Monster/Field/35/1,1146,1147,0,0,0,0,FALSE,0,FALSE
+1072,12,음산한 마을,MonsterName/1072,55977993215559,275000,30,1,1,basic,Monster/Field/36/3;Monster/Field/36/2;Monster/Field/36/1,1148,1149,0,0,0,0,FALSE,0,FALSE
+1073,12,아인 약탈지,MonsterName/1073,64301828722747,280000,30,1,1,basic,Monster/Field/38/3;Monster/Field/38/2;Monster/Field/38/1,1150,1151,0,0,0,0,FALSE,0,FALSE
+1074,12,카지노,MonsterName/1074,73863404877121,285000,30,1,1,basic,Monster/Field/40/3;Monster/Field/40/2;Monster/Field/40/1,1152,1153,0,0,0,0,FALSE,0,FALSE
+1075,12,버려진 숲,MonsterName/1075,84846771676829,290000,30,1,1,basic,Monster/Field/41/3;Monster/Field/41/2;Monster/Field/41/1,1154,1155,0,0,0,0,FALSE,0,FALSE
+1076,12,미지의 드래고니아,MonsterName/1076,97463347051982,295000,30,1,1,basic,Monster/Field/42/3;Monster/Field/42/2;Monster/Field/42/1,1156,1157,0,0,0,0,FALSE,0,FALSE
+1077,12,미지의 공허,MonsterName/1077,111955986431117,300000,30,1,1,basic,Monster/Field/43/3;Monster/Field/43/2;Monster/Field/43/1,1158,1159,0,0,0,0,FALSE,0,FALSE
+1078,13,미지의 용의 나라,MonsterName/1078,128603657445495,305000,30,1,1,basic,Monster/Field/44/3;Monster/Field/44/2;Monster/Field/44/1,1160,1161,0,0,0,0,FALSE,0,FALSE
+1079,13,뱀파이어의 성,MonsterName/1079,147726809754242,310000,30,1,1,basic,Monster/Field/45/3;Monster/Field/45/2;Monster/Field/45/1,1162,1163,0,0,0,0,FALSE,0,FALSE
+1080,13,끝없는 미로,MonsterName/1080,169693543353658,315000,30,1,1,basic,Monster/Field/46/3;Monster/Field/46/2;Monster/Field/46/1,1164,1165,0,0,0,0,FALSE,0,FALSE
+1081,13,소서러 길드,MonsterName/1081,194926694103964,320000,30,1,1,basic,Monster/Field/47/3;Monster/Field/47/2;Monster/Field/47/1,1166,1167,0,0,0,0,FALSE,0,FALSE
+1082,13,심해,MonsterName/1082,223911972862234,325000,30,1,1,basic,Monster/Field/48/3;Monster/Field/48/2;Monster/Field/48/1,1168,1169,0,0,0,0,FALSE,0,FALSE
+1083,13,폭염지대,MonsterName/1083,257207314890990,330000,30,1,1,basic,Monster/Field/49/3;Monster/Field/49/2;Monster/Field/49/1,1170,1171,0,0,0,0,FALSE,0,FALSE
+1084,13,언데드 출몰지역,MonsterName/1084,295453619508504,335000,30,1,1,basic,Monster/Field/50/3;Monster/Field/50/2;Monster/Field/50/1,1172,1173,0,0,0,0,FALSE,0,FALSE
+1085,14,아이언헤븐,MonsterName/1085,339387086707339,340000,30,1,1,basic,Monster/Field/51/3;Monster/Field/51/2;Monster/Field/51/1,1174,1175,0,0,0,0,FALSE,0,FALSE
+1086,14,모험가의 서,MonsterName/1086,389853388207955,345000,30,1,1,basic,Monster/Field/52/3;Monster/Field/52/2;Monster/Field/52/1,1176,1177,0,0,0,0,FALSE,0,FALSE
+1087,14,마티노 초원,MonsterName/1087,447823945724499,350000,30,1,1,basic,Monster/Field/53/3;Monster/Field/53/2;Monster/Field/53/1,1178,1179,0,0,0,0,FALSE,0,FALSE
+1088,14,마티노 앞 바다,MonsterName/1088,514414629782015,355000,30,1,1,basic,Monster/Field/54/3;Monster/Field/54/2;Monster/Field/54/1,1180,1181,0,0,0,0,FALSE,0,FALSE
+1089,14,진'나가 랜드,MonsterName/1089,590907239017007,360000,30,1,1,basic,Monster/Field/34/3;Monster/Field/34/2;Monster/Field/34/1,1182,1183,0,0,0,0,FALSE,0,FALSE
+1090,14,진'코볼트 주둔지,MonsterName/1090,678774173414678,365000,30,1,1,basic,Monster/Field/35/3;Monster/Field/35/2;Monster/Field/35/1,1184,1185,0,0,0,0,FALSE,0,FALSE
+1091,14,진'음산한 마을,MonsterName/1091,779706776415910,370000,30,1,1,basic,Monster/Field/36/3;Monster/Field/36/2;Monster/Field/36/1,1186,1187,0,0,0,0,FALSE,0,FALSE
+1092,14,진'아인 약탈지,MonsterName/1092,895647891448999,375000,30,1,1,basic,Monster/Field/38/3;Monster/Field/38/2;Monster/Field/38/1,1188,1189,0,0,0,0,FALSE,0,FALSE
+1093,14,진'카지노,MonsterName/1093,1028829259564030,380000,30,1,1,basic,Monster/Field/40/3;Monster/Field/40/2;Monster/Field/40/1,1190,1191,0,0,0,0,FALSE,0,FALSE
+1094,15,진'버려진 숲,MonsterName/1094,1181814478034010,385000,30,1,1,basic,Monster/Field/41/3;Monster/Field/41/2;Monster/Field/41/1,1192,1193,0,0,0,0,FALSE,0,FALSE
+1095,15,고블린 숲 입구,MonsterName/1095,1357548346829360,390000,30,1,1,basic,Monster/Field/55/3;Monster/Field/55/2;Monster/Field/55/1,1194,1195,0,0,0,0,FALSE,0,FALSE
+1096,15,고블린 숲,MonsterName/1096,1559413552831820,395000,30,1,1,basic,Monster/Field/56/3;Monster/Field/56/2;Monster/Field/56/1,1196,1197,0,0,0,0,FALSE,0,FALSE
+1097,15,바닷가,MonsterName/1097,1791295782898000,400000,30,1,1,basic,Monster/Field/57/3;Monster/Field/57/2;Monster/Field/57/1,1198,1199,0,0,0,0,FALSE,0,FALSE
+1098,15,음산한 묘지,MonsterName/1098,2057658519128060,405000,30,1,1,basic,Monster/Field/4/mob3;Monster/Field/4/mob2;Monster/Field/4/mob1,1200,1201,0,0,0,0,FALSE,0,FALSE
+1099,15,뒤틀린 차원,MonsterName/1099,2363628956068030,410000,30,1,1,basic,Monster/Field/5/mob4;Monster/Field/5/mob3;Monster/Field/5/mob42,1202,1203,0,0,0,0,FALSE,0,FALSE
+1100,15,마족 집결지,MonsterName/1100,2715096693658710,415000,30,1,1,basic,Monster/Field/6/mob1;Monster/Field/6/mob2;Monster/Field/6/mob5,1204,1205,0,0,0,0,FALSE,0,FALSE
+,지옥2,,,,,,,,,,,,,,,,FALSE,0,FALSE
+1101,22,마법도시,MonsterName/1101,3342676126089170,450000,30,1,1,basic,Monster/Field/31/3;Monster/Field/31/2;Monster/Field/31/1,1206,1207,0,0,0,0,FALSE,0,FALSE
+1102,22,불타는 평야,MonsterName/1102,4115317038256120,480000,30,1,1,basic,Monster/Field/32/2;Monster/Field/32/3;Monster/Field/32/1,1208,1209,0,0,0,0,FALSE,0,FALSE
+1103,22,아마존,MonsterName/1103,5066549580792160,510000,30,1,1,basic,Monster/Field/33/3;Monster/Field/33/2;Monster/Field/33/1,1210,1211,0,0,0,0,FALSE,0,FALSE
+1104,22,나가랜드,MonsterName/1104,6237654211327280,540000,30,1,1,basic,Monster/Field/34/3;Monster/Field/34/2;Monster/Field/34/1,1212,1213,0,0,0,0,FALSE,0,FALSE
+1105,22,코볼트 주둔지,MonsterName/1105,7679453134652990,570000,30,1,1,basic,Monster/Field/35/3;Monster/Field/35/2;Monster/Field/35/1,1214,1215,0,0,0,0,FALSE,0,FALSE
+1106,23,음산한 마을,MonsterName/1106,9454515824272770,600000,30,1,1,basic,Monster/Field/36/3;Monster/Field/36/2;Monster/Field/36/1,1216,1217,0,0,0,0,FALSE,0,FALSE
+1107,23,아인 약탈지,MonsterName/1107,11639874337934600,630000,30,1,1,basic,Monster/Field/38/3;Monster/Field/38/2;Monster/Field/38/1,1218,1219,0,0,0,0,FALSE,0,FALSE
+1108,23,카지노,MonsterName/1108,14330366263185000,660000,30,1,1,basic,Monster/Field/40/3;Monster/Field/40/2;Monster/Field/40/1,1220,1221,0,0,0,0,FALSE,0,FALSE
+1109,23,버려진 숲,MonsterName/1109,17642750366106700,690000,30,1,1,basic,Monster/Field/41/3;Monster/Field/41/2;Monster/Field/41/1,1222,1223,0,0,0,0,FALSE,0,FALSE
+1110,23,미지의 드래고니아,MonsterName/1110,21720773549271200,720000,30,1,1,basic,Monster/Field/42/3;Monster/Field/42/2;Monster/Field/42/1,1224,1225,0,0,0,0,FALSE,0,FALSE
+1111,23,미지의 공허,MonsterName/1111,26741409008715200,750000,30,1,1,basic,Monster/Field/43/3;Monster/Field/43/2;Monster/Field/43/1,1226,1227,0,0,0,0,FALSE,0,FALSE
+1112,24,미지의 용의 나라,MonsterName/1112,32922536306051200,780000,30,1,1,basic,Monster/Field/44/3;Monster/Field/44/2;Monster/Field/44/1,1228,1229,0,0,0,0,FALSE,0,FALSE
+1113,24,뱀파이어의 성,MonsterName/1113,40532396646340100,810000,30,1,1,basic,Monster/Field/45/3;Monster/Field/45/2;Monster/Field/45/1,1230,1231,0,0,0,0,FALSE,0,FALSE
+1114,24,끝없는 미로,MonsterName/1114,49901233690621900,840000,30,1,1,basic,Monster/Field/46/3;Monster/Field/46/2;Monster/Field/46/1,1232,1233,0,0,0,0,FALSE,0,FALSE
+1115,24,소서러 길드,MonsterName/1115,61435625077232400,870000,30,1,1,basic,Monster/Field/47/3;Monster/Field/47/2;Monster/Field/47/1,1234,1235,0,0,0,0,FALSE,0,FALSE
+1116,24,심해,MonsterName/1116,75636126594187400,900000,30,1,1,basic,Monster/Field/48/3;Monster/Field/48/2;Monster/Field/48/1,1236,1237,0,0,0,0,FALSE,0,FALSE
+1117,24,폭염지대,MonsterName/1117,93118994703482900,930000,30,1,1,basic,Monster/Field/49/3;Monster/Field/49/2;Monster/Field/49/1,1238,1239,0,0,0,0,FALSE,0,FALSE
+1118,25,언데드 출몰지역,MonsterName/1118,114642930105488000,960000,30,1,1,basic,Monster/Field/50/3;Monster/Field/50/2;Monster/Field/50/1,1240,1241,0,0,0,0,FALSE,0,FALSE
+1119,25,아이언헤븐,MonsterName/1119,141142002928863000,990000,30,1,1,basic,Monster/Field/51/3;Monster/Field/51/2;Monster/Field/51/1,1242,1243,0,0,0,0,FALSE,0,FALSE
+1120,25,모험가의 서,MonsterName/1120,173766188394181000,1020000,30,1,1,basic,Monster/Field/52/3;Monster/Field/52/2;Monster/Field/52/1,1244,1245,0,0,0,0,FALSE,0,FALSE
+1121,25,마티노 초원,MonsterName/1121,213931272069736000,1050000,30,1,1,basic,Monster/Field/53/3;Monster/Field/53/2;Monster/Field/53/1,1246,1247,0,0,0,0,FALSE,0,FALSE
+1122,25,마티노 앞 바다,MonsterName/1122,263380290448428000,1080000,30,1,1,basic,Monster/Field/54/3;Monster/Field/54/2;Monster/Field/54/1,1248,1249,0,0,0,0,FALSE,0,FALSE
+1123,25,진'나가 랜드,MonsterName/1123,324259173170743000,1110000,30,1,1,basic,Monster/Field/34/3;Monster/Field/34/2;Monster/Field/34/1,1250,1251,0,0,0,0,FALSE,0,FALSE
+1124,26,진'코볼트 주둔지,MonsterName/1124,399209869525030000,1140000,30,1,1,basic,Monster/Field/35/3;Monster/Field/35/2;Monster/Field/35/1,1252,1253,0,0,0,0,FALSE,0,FALSE
+1125,26,진'음산한 마을,MonsterName/1125,491485000617893000,1170000,30,1,1,basic,Monster/Field/36/3;Monster/Field/36/2;Monster/Field/36/1,1254,1255,0,0,0,0,FALSE,0,FALSE
+1126,26,진'아인 약탈지,MonsterName/1126,605089012753541000,1200000,30,1,1,basic,Monster/Field/38/3;Monster/Field/38/2;Monster/Field/38/1,1256,1257,0,0,0,0,FALSE,0,FALSE
+1127,26,진'카지노,MonsterName/1127,744951957627915000,1230000,30,1,1,basic,Monster/Field/40/3;Monster/Field/40/2;Monster/Field/40/1,1258,1259,0,0,0,0,FALSE,0,FALSE
+1128,27,진'버려진 숲,MonsterName/1128,917143440843964000,1260000,30,1,1,basic,Monster/Field/41/3;Monster/Field/41/2;Monster/Field/41/1,1260,1261,0,0,0,0,FALSE,0,FALSE
+1129,27,고블린 숲 입구,MonsterName/1129,1129136023430980000,1290000,30,1,1,basic,Monster/Field/55/3;Monster/Field/55/2;Monster/Field/55/1,1262,1263,0,0,0,0,FALSE,0,FALSE
+1130,27,고블린 숲,MonsterName/1130,1390129507153550000,1320000,30,1,1,basic,Monster/Field/56/3;Monster/Field/56/2;Monster/Field/56/1,1264,1265,0,0,0,0,FALSE,0,FALSE
+1131,28,바닷가,MonsterName/1131,1711450176558010000,1350000,30,1,1,basic,Monster/Field/57/3;Monster/Field/57/2;Monster/Field/57/1,1266,1267,0,0,0,0,FALSE,0,FALSE
+1132,28,음산한 묘지,MonsterName/1132,2107042323587570000,1380000,30,1,1,basic,Monster/Field/4/mob3;Monster/Field/4/mob2;Monster/Field/4/mob1,1268,1269,0,0,0,0,FALSE,0,FALSE
+1133,28,뒤틀린 차원,MonsterName/1133,2594073385366120000,1410000,30,1,1,basic,Monster/Field/5/mob4;Monster/Field/5/mob3;Monster/Field/5/mob42,1270,1271,0,0,0,0,FALSE,0,FALSE
+1134,28,마족 집결지,MonsterName/1134,3193678956200240000,1440000,30,1,1,basic,Monster/Field/6/mob1;Monster/Field/6/mob2;Monster/Field/6/mob5,1272,1273,0,0,0,0,FALSE,0,FALSE
+,,,,,,,,,,,,,,,,,,,FALSE
+,,,,,,,,,,,,,,,,,,,FALSE
+,,,,,,,,,,,,,,,,,,,FALSE
+,,,,,,,,,,,,,,,,,,,FALSE
+,,,,,,,,,,,,,,,,,,,FALSE
+,,,,,,,,,,,,,,,,,,,FALSE
+,,,,,,,,,,,,,,,,,,,FALSE
+,,,,,,,,,,,,,,,,,,,FALSE
+,,,,,,,,,,,,,,,,,,,FALSE
+,,,,,,,,,,,,,,,,,,,FALSE
+,,,,,,,,,,,,,,,,,,,FALSE
+,,,,,,,,,,,,,,,,,,,FALSE
+,,,,,,,,,,,,,,,,,,,FALSE
+,,,,,,,,,,,,,,,,,,,FALSE
+,,,,,,,,,,,,,,,,,,,FALSE
+던전,,,,,,,,,,,,,,,,,FALSE,0,FALSE
+3000,3,던전-감염된 농장,MonsterName/3000,23170,150,50,1,1,basic,Monster/Dungeon/Dungeon1/0;Monster/Dungeon/Dungeon1/1;Monster/Dungeon/Dungeon1/2,3000,0,0,0,0,0,FALSE,0,FALSE
+3001,3,던전-감염된 농장,MonsterName/3001,23170,150,50,1,1,basic,Monster/Dungeon/Dungeon1/0;Monster/Dungeon/Dungeon1/1;Monster/Dungeon/Dungeon1/2,3000,0,0,0,0,0,FALSE,0,FALSE
+3002,3,던전-감염된 농장,MonsterName/3002,23170,150,50,1,1,basic,Monster/Dungeon/Dungeon1/0;Monster/Dungeon/Dungeon1/1;Monster/Dungeon/Dungeon1/2,3000,0,0,0,0,0,FALSE,0,FALSE
+3003,3,던전-감염된 농장,MonsterName/3003,23170,150,50,1,1,basic,Monster/Dungeon/Dungeon1/3;Monster/Dungeon/Dungeon1/4;Monster/Dungeon/Dungeon1/5,3000,0,0,0,0,0,FALSE,0,FALSE
+3004,3,던전-감염된 농장,MonsterName/3004,23170,150,50,1,1,basic,Monster/Dungeon/Dungeon1/3;Monster/Dungeon/Dungeon1/4;Monster/Dungeon/Dungeon1/5,3000,0,0,0,0,0,FALSE,0,FALSE
+3005,3,던전-감염된 농장,MonsterName/3005,23170,150,50,1,1,basic,Monster/Dungeon/Dungeon1/3;Monster/Dungeon/Dungeon1/4;Monster/Dungeon/Dungeon1/5,3000,0,0,0,0,0,FALSE,0,FALSE
+3006,3,던전-감염된 농장,MonsterName/3006,23170,150,50,1,1,basic,Monster/Dungeon/Dungeon1/6;Monster/Dungeon/Dungeon1/5,3000,0,0,0,0,0,FALSE,0,FALSE
+3007,3,던전-감염된 농장 보스,MonsterName/3007,23170,450,50,1,1,boss,Monster/Dungeon/Dungeon1/7,0,3001,100,5,8,1.5,FALSE,0,FALSE
+3008,4,던전-늪 지대,MonsterName/3008,92682,250,50,1,1,basic,Monster/Dungeon/Dungeon2/0;Monster/Dungeon/Dungeon2/1;Monster/Dungeon/Dungeon2/2,3002,0,0,0,0,0,FALSE,0,FALSE
+3009,4,던전-늪 지대,MonsterName/3009,92682,250,50,1,1,basic,Monster/Dungeon/Dungeon2/0;Monster/Dungeon/Dungeon2/1;Monster/Dungeon/Dungeon2/2,3002,0,0,0,0,0,FALSE,0,FALSE
+3010,4,던전-늪 지대,MonsterName/3010,92682,250,50,1,1,basic,Monster/Dungeon/Dungeon2/0;Monster/Dungeon/Dungeon2/1;Monster/Dungeon/Dungeon2/2,3002,0,0,0,0,0,FALSE,0,FALSE
+3011,4,던전-늪 지대,MonsterName/3011,92682,250,50,1,1,basic,Monster/Dungeon/Dungeon2/3;Monster/Dungeon/Dungeon2/4;Monster/Dungeon/Dungeon2/5,3002,0,0,0,0,0,FALSE,0,FALSE
+3012,4,던전-늪 지대,MonsterName/3012,92682,250,50,1,1,basic,Monster/Dungeon/Dungeon2/3;Monster/Dungeon/Dungeon2/4;Monster/Dungeon/Dungeon2/5,3002,0,0,0,0,0,FALSE,0,FALSE
+3013,4,던전-늪 지대,MonsterName/3013,92682,250,50,1,1,basic,Monster/Dungeon/Dungeon2/3;Monster/Dungeon/Dungeon2/4;Monster/Dungeon/Dungeon2/5,3002,0,0,0,0,0,FALSE,0,FALSE
+3014,4,던전-늪 지대,MonsterName/3014,92682,250,50,1,1,basic,Monster/Dungeon/Dungeon2/6;Monster/Dungeon/Dungeon2/5,3002,0,0,0,0,0,FALSE,0,FALSE
+3015,4,던전-늪 지대 보스,MonsterName/3015,92682,700,50,1,1,boss,Monster/Dungeon/Dungeon2/7,0,3003,100,5,8,1.5,FALSE,0,FALSE
+3016,5,던전-지하 감옥,MonsterName/3016,524288,700,50,1,1,basic,Monster/Dungeon/Dungeon4/0;Monster/Dungeon/Dungeon4/1;Monster/Dungeon/Dungeon4/2,3004,0,0,0,0,0,FALSE,0,FALSE
+3017,5,던전-지하 감옥,MonsterName/3017,524288,700,50,1,1,basic,Monster/Dungeon/Dungeon4/0;Monster/Dungeon/Dungeon4/1;Monster/Dungeon/Dungeon4/2,3004,0,0,0,0,0,FALSE,0,FALSE
+3018,5,던전-지하 감옥,MonsterName/3018,524288,700,50,1,1,basic,Monster/Dungeon/Dungeon4/0;Monster/Dungeon/Dungeon4/1;Monster/Dungeon/Dungeon4/2,3004,0,0,0,0,0,FALSE,0,FALSE
+3019,5,던전-지하 감옥,MonsterName/3019,524288,700,50,1,1,basic,Monster/Dungeon/Dungeon4/3;Monster/Dungeon/Dungeon4/4;Monster/Dungeon/Dungeon4/5,3004,0,0,0,0,0,FALSE,0,FALSE
+3020,5,던전-지하 감옥,MonsterName/3020,524288,700,50,1,1,basic,Monster/Dungeon/Dungeon4/3;Monster/Dungeon/Dungeon4/4;Monster/Dungeon/Dungeon4/5,3004,0,0,0,0,0,FALSE,0,FALSE
+3021,5,던전-지하 감옥,MonsterName/3021,524288,700,50,1,1,basic,Monster/Dungeon/Dungeon4/3;Monster/Dungeon/Dungeon4/4;Monster/Dungeon/Dungeon4/5,3004,0,0,0,0,0,FALSE,0,FALSE
+3022,5,던전-지하 감옥,MonsterName/3022,524288,700,50,1,1,basic,Monster/Dungeon/Dungeon4/6;Monster/Dungeon/Dungeon4/5,3004,0,0,0,0,0,FALSE,0,FALSE
+3023,5,던전-지하감옥 보스,MonsterName/3023,524288,1400,50,1,1,boss,Monster/Dungeon/Dungeon4/7,0,3005,100,5,8,1.5,FALSE,0,FALSE
+3024,6,던전-화산,MonsterName/3024,8388608,1000,50,1,1,basic,Monster/Dungeon/Dungeon5/0;Monster/Dungeon/Dungeon5/1;Monster/Dungeon/Dungeon5/2,3006,0,0,0,0,0,FALSE,0,FALSE
+3025,6,던전-화산,MonsterName/3025,8388608,1000,50,1,1,basic,Monster/Dungeon/Dungeon5/0;Monster/Dungeon/Dungeon5/1;Monster/Dungeon/Dungeon5/2,3006,0,0,0,0,0,FALSE,0,FALSE
+3026,6,던전-화산,MonsterName/3026,8388608,1000,50,1,1,basic,Monster/Dungeon/Dungeon5/0;Monster/Dungeon/Dungeon5/1;Monster/Dungeon/Dungeon5/2,3006,0,0,0,0,0,FALSE,0,FALSE
+3027,6,던전-화산,MonsterName/3027,8388608,1000,50,1,1,basic,Monster/Dungeon/Dungeon5/3;Monster/Dungeon/Dungeon5/4;Monster/Dungeon/Dungeon5/5,3006,0,0,0,0,0,FALSE,0,FALSE
+3028,6,던전-화산,MonsterName/3028,8388608,1000,50,1,1,basic,Monster/Dungeon/Dungeon5/3;Monster/Dungeon/Dungeon5/4;Monster/Dungeon/Dungeon5/5,3006,0,0,0,0,0,FALSE,0,FALSE
+3029,6,던전-화산,MonsterName/3029,8388608,1000,50,1,1,basic,Monster/Dungeon/Dungeon5/3;Monster/Dungeon/Dungeon5/4;Monster/Dungeon/Dungeon5/5,3006,0,0,0,0,0,FALSE,0,FALSE
+3030,6,던전-화산,MonsterName/3030,8388608,1000,50,1,1,basic,Monster/Dungeon/Dungeon5/6;Monster/Dungeon/Dungeon5/5,3006,0,0,0,0,0,FALSE,0,FALSE
+3031,6,던전-화산 보스,MonsterName/3031,8388608,2000,50,1,1,boss,Monster/Dungeon/Dungeon5/7,0,3007,150,5,8,1.5,FALSE,0,FALSE
+3032,7,던전-마계 중심부,MonsterName/3032,16777216,1400,50,1,1,basic,Monster/Dungeon/Dungeon6/0;Monster/Dungeon/Dungeon6/1;Monster/Dungeon/Dungeon6/2,3008,0,0,0,0,0,FALSE,0,FALSE
+3033,7,던전-마계 중심부,MonsterName/3033,16777216,1400,50,1,1,basic,Monster/Dungeon/Dungeon6/0;Monster/Dungeon/Dungeon6/1;Monster/Dungeon/Dungeon6/2,3008,0,0,0,0,0,FALSE,0,FALSE
+3034,7,던전-마계 중심부,MonsterName/3034,16777216,1400,50,1,1,basic,Monster/Dungeon/Dungeon6/0;Monster/Dungeon/Dungeon6/1;Monster/Dungeon/Dungeon6/2,3008,0,0,0,0,0,FALSE,0,FALSE
+3035,7,던전-마계 중심부,MonsterName/3035,16777216,1400,50,1,1,basic,Monster/Dungeon/Dungeon6/3;Monster/Dungeon/Dungeon6/4;Monster/Dungeon/Dungeon6/5,3008,0,0,0,0,0,FALSE,0,FALSE
+3036,7,던전-마계 중심부,MonsterName/3036,16777216,1400,50,1,1,basic,Monster/Dungeon/Dungeon6/3;Monster/Dungeon/Dungeon6/4;Monster/Dungeon/Dungeon6/5,3008,0,0,0,0,0,FALSE,0,FALSE
+3037,7,던전-마계 중심부,MonsterName/3037,16777216,1400,50,1,1,basic,Monster/Dungeon/Dungeon6/3;Monster/Dungeon/Dungeon6/4;Monster/Dungeon/Dungeon6/5,3008,0,0,0,0,0,FALSE,0,FALSE
+3038,7,던전-마계 중심부,MonsterName/3038,16777216,1400,50,1,1,basic,Monster/Dungeon/Dungeon6/6;Monster/Dungeon/Dungeon6/5,3008,0,0,0,0,0,FALSE,0,FALSE
+3039,7,던전-마계 중심부 보스,MonsterName/3039,16777216,3000,50,1,1,boss,Monster/Dungeon/Dungeon6/7,0,3009,200,5,8,1.5,FALSE,0,FALSE
+3040,10,던전-루펜시아,MonsterName/3040,308435456,8000,50,1,1,basic,Monster/Dungeon/Dungeon7/0;Monster/Dungeon/Dungeon7/1;Monster/Dungeon/Dungeon7/2,3010,0,0,0,0,0,FALSE,0,FALSE
+3041,10,던전-루펜시아,MonsterName/3041,308435456,8000,50,1,1,basic,Monster/Dungeon/Dungeon7/0;Monster/Dungeon/Dungeon7/1;Monster/Dungeon/Dungeon7/2,3010,0,0,0,0,0,FALSE,0,FALSE
+3042,10,던전-루펜시아,MonsterName/3042,308435456,8000,50,1,1,basic,Monster/Dungeon/Dungeon7/0;Monster/Dungeon/Dungeon7/1;Monster/Dungeon/Dungeon7/2,3010,0,0,0,0,0,FALSE,0,FALSE
+3043,10,던전-루펜시아,MonsterName/3043,308435456,8000,50,1,1,basic,Monster/Dungeon/Dungeon7/3;Monster/Dungeon/Dungeon7/4;Monster/Dungeon/Dungeon7/5,3010,0,0,0,0,0,FALSE,0,FALSE
+3044,10,던전-루펜시아,MonsterName/3044,308435456,8000,50,1,1,basic,Monster/Dungeon/Dungeon7/3;Monster/Dungeon/Dungeon7/4;Monster/Dungeon/Dungeon7/5,3010,0,0,0,0,0,FALSE,0,FALSE
+3045,10,던전-루펜시아,MonsterName/3045,308435456,8000,50,1,1,basic,Monster/Dungeon/Dungeon7/3;Monster/Dungeon/Dungeon7/4;Monster/Dungeon/Dungeon7/5,3010,0,0,0,0,0,FALSE,0,FALSE
+3046,10,던전-루펜시아,MonsterName/3046,308435456,8000,50,1,1,basic,Monster/Dungeon/Dungeon7/6;Monster/Dungeon/Dungeon7/5,3010,0,0,0,0,0,FALSE,0,FALSE
+3047,10,던전-루펜시아 보스,MonsterName/3047,308435456,8000,50,1,1,boss,Monster/Dungeon/Dungeon7/7,0,3011,200,5,8,1.5,FALSE,0,FALSE
+3048,11,던전-죽은용의동굴,MonsterName/3048,1708312781,30000,50,1,1,basic,Monster/Dungeon/Dungeon8/0;Monster/Dungeon/Dungeon8/1;Monster/Dungeon/Dungeon8/2,3012,0,0,0,0,0,FALSE,0,FALSE
+3049,11,던전-죽은용의동굴,MonsterName/3049,1708312781,30000,50,1,1,basic,Monster/Dungeon/Dungeon8/0;Monster/Dungeon/Dungeon8/1;Monster/Dungeon/Dungeon8/2,3012,0,0,0,0,0,FALSE,0,FALSE
+3050,11,던전-죽은용의동굴,MonsterName/3050,1708312781,30000,50,1,1,basic,Monster/Dungeon/Dungeon8/0;Monster/Dungeon/Dungeon8/1;Monster/Dungeon/Dungeon8/2,3012,0,0,0,0,0,FALSE,0,FALSE
+3051,11,던전-죽은용의동굴,MonsterName/3051,1708312781,30000,50,1,1,basic,Monster/Dungeon/Dungeon8/3;Monster/Dungeon/Dungeon8/4;Monster/Dungeon/Dungeon8/5,3012,0,0,0,0,0,FALSE,0,FALSE
+3052,11,던전-죽은용의동굴,MonsterName/3052,1708312781,30000,50,1,1,basic,Monster/Dungeon/Dungeon8/3;Monster/Dungeon/Dungeon8/4;Monster/Dungeon/Dungeon8/5,3012,0,0,0,0,0,FALSE,0,FALSE
+3053,11,던전-죽은용의동굴,MonsterName/3053,1708312781,30000,50,1,1,basic,Monster/Dungeon/Dungeon8/3;Monster/Dungeon/Dungeon8/4;Monster/Dungeon/Dungeon8/5,3012,0,0,0,0,0,FALSE,0,FALSE
+3054,11,던전-죽은용의동굴,MonsterName/3054,1708312781,30000,50,1,1,basic,Monster/Dungeon/Dungeon8/6;Monster/Dungeon/Dungeon8/5,3012,0,0,0,0,0,FALSE,0,FALSE
+3055,11,던전-죽은용의동굴 보스,MonsterName/3055,1708312781,30000,50,1,1,boss,Monster/Dungeon/Dungeon8/7,0,3013,300,5,8,1.5,FALSE,0,FALSE
+3056,12,던전-대제국,MonsterName/3056,10666502250,55000,30,1,1,basic,Monster/Dungeon/Dungeon9/0;Monster/Dungeon/Dungeon9/1;Monster/Dungeon/Dungeon9/2,3014,0,0,0,0,0,FALSE,0,FALSE
+3057,12,던전-대제국,MonsterName/3057,10666502250,55000,30,1,1,basic,Monster/Dungeon/Dungeon9/0;Monster/Dungeon/Dungeon9/1;Monster/Dungeon/Dungeon9/2,3014,0,0,0,0,0,FALSE,0,FALSE
+3058,12,던전-대제국,MonsterName/3058,10666502250,55000,30,1,1,basic,Monster/Dungeon/Dungeon9/0;Monster/Dungeon/Dungeon9/1;Monster/Dungeon/Dungeon9/2,3014,0,0,0,0,0,FALSE,0,FALSE
+3059,12,던전-대제국,MonsterName/3059,10666502250,55000,30,1,1,basic,Monster/Dungeon/Dungeon9/3;Monster/Dungeon/Dungeon9/4;Monster/Dungeon/Dungeon9/5,3014,0,0,0,0,0,FALSE,0,FALSE
+3060,12,던전-대제국,MonsterName/3060,10666502250,55000,30,1,1,basic,Monster/Dungeon/Dungeon9/3;Monster/Dungeon/Dungeon9/4;Monster/Dungeon/Dungeon9/5,3014,0,0,0,0,0,FALSE,0,FALSE
+3061,12,던전-대제국,MonsterName/3061,10666502250,55000,30,1,1,basic,Monster/Dungeon/Dungeon9/3;Monster/Dungeon/Dungeon9/4;Monster/Dungeon/Dungeon9/5,3014,0,0,0,0,0,FALSE,0,FALSE
+3062,12,던전-대제국,MonsterName/3062,10666502250,55000,30,1,1,basic,Monster/Dungeon/Dungeon9/6;Monster/Dungeon/Dungeon9/5,3014,0,0,0,0,0,FALSE,0,FALSE
+3063,12,던전-대제국 보스,MonsterName/3063,10666502250,55000,30,1,1,boss,Monster/Dungeon/Dungeon9/7,0,3015,0,0,0,0,FALSE,0,FALSE
+3064,13,던전-마력의 땅 - 티아,MonsterName/3064,114618822656,110000,30,1,1,basic,Monster/Dungeon/Dungeon11/0;Monster/Dungeon/Dungeon11/1;Monster/Dungeon/Dungeon11/2,3016,0,0,0,0,0,FALSE,0,FALSE
+3065,13,던전-마력의 땅 - 티아,MonsterName/3065,114618822656,110000,30,1,1,basic,Monster/Dungeon/Dungeon11/0;Monster/Dungeon/Dungeon11/1;Monster/Dungeon/Dungeon11/2,3016,0,0,0,0,0,FALSE,0,FALSE
+3066,13,던전-마력의 땅 - 티아,MonsterName/3066,114618822656,110000,30,1,1,basic,Monster/Dungeon/Dungeon11/0;Monster/Dungeon/Dungeon11/1;Monster/Dungeon/Dungeon11/2,3016,0,0,0,0,0,FALSE,0,FALSE
+3067,13,던전-마력의 땅 - 티아,MonsterName/3067,114618822656,110000,30,1,1,basic,Monster/Dungeon/Dungeon11/3;Monster/Dungeon/Dungeon11/4;Monster/Dungeon/Dungeon11/5,3016,0,0,0,0,0,FALSE,0,FALSE
+3068,13,던전-마력의 땅 - 티아,MonsterName/3068,114618822656,110000,30,1,1,basic,Monster/Dungeon/Dungeon11/3;Monster/Dungeon/Dungeon11/4;Monster/Dungeon/Dungeon11/5,3016,0,0,0,0,0,FALSE,0,FALSE
+3069,13,던전-마력의 땅 - 티아,MonsterName/3069,114618822656,110000,30,1,1,basic,Monster/Dungeon/Dungeon11/3;Monster/Dungeon/Dungeon11/4;Monster/Dungeon/Dungeon11/5,3016,0,0,0,0,0,FALSE,0,FALSE
+3070,13,던전-마력의 땅 - 티아,MonsterName/3070,114618822656,110000,30,1,1,basic,Monster/Dungeon/Dungeon11/6;Monster/Dungeon/Dungeon11/5,3016,0,0,0,0,0,FALSE,0,FALSE
+3071,13,던전-마력의 땅 - 티아 보스,MonsterName/3071,114618822656,110000,50,1,1,boss,Monster/Dungeon/Dungeon11/7,0,3017,350,5,8,1.5,FALSE,0,FALSE
+3072,14,던전-노스 테라,MonsterName/3072,773901162496,135000,30,1,1,basic,Monster/Dungeon/Dungeon12/0;Monster/Dungeon/Dungeon12/1;Monster/Dungeon/Dungeon12/2,3018,0,0,0,0,0,FALSE,0,FALSE
+3073,14,던전-노스 테라,MonsterName/3073,773901162496,135000,30,1,1,basic,Monster/Dungeon/Dungeon12/0;Monster/Dungeon/Dungeon12/1;Monster/Dungeon/Dungeon12/2,3018,0,0,0,0,0,FALSE,0,FALSE
+3074,14,던전-노스 테라,MonsterName/3074,773901162496,135000,30,1,1,basic,Monster/Dungeon/Dungeon12/0;Monster/Dungeon/Dungeon12/1;Monster/Dungeon/Dungeon12/2,3018,0,0,0,0,0,FALSE,0,FALSE
+3075,14,던전-노스 테라,MonsterName/3075,773901162496,135000,30,1,1,basic,Monster/Dungeon/Dungeon12/3;Monster/Dungeon/Dungeon12/4;Monster/Dungeon/Dungeon12/5,3018,0,0,0,0,0,FALSE,0,FALSE
+3076,14,던전-노스 테라,MonsterName/3076,773901162496,135000,30,1,1,basic,Monster/Dungeon/Dungeon12/3;Monster/Dungeon/Dungeon12/4;Monster/Dungeon/Dungeon12/5,3018,0,0,0,0,0,FALSE,0,FALSE
+3077,14,던전-노스 테라,MonsterName/3077,773901162496,135000,30,1,1,basic,Monster/Dungeon/Dungeon12/3;Monster/Dungeon/Dungeon12/4;Monster/Dungeon/Dungeon12/5,3018,0,0,0,0,0,FALSE,0,FALSE
+3078,14,던전-노스 테라,MonsterName/3078,773901162496,135000,30,1,1,basic,Monster/Dungeon/Dungeon12/6;Monster/Dungeon/Dungeon12/5,3018,0,0,0,0,0,FALSE,0,FALSE
+3079,14,던전-노스 테라 보스,MonsterName/3079,773901162496,135000,30,1,1,boss,Monster/Dungeon/Dungeon12/7,0,3019,400,5,8,1.5,FALSE,0,FALSE
+3080,15,던전-잊혀진 공허,MonsterName/3080,2595604649984,165000,30,1,1,basic,Monster/Dungeon/Dungeon13/0;Monster/Dungeon/Dungeon13/1;Monster/Dungeon/Dungeon13/2,3020,0,0,0,0,0,FALSE,0,FALSE
+3081,15,던전-잊혀진 공허,MonsterName/3081,2595604649984,165000,30,1,1,basic,Monster/Dungeon/Dungeon13/0;Monster/Dungeon/Dungeon13/1;Monster/Dungeon/Dungeon13/2,3020,0,0,0,0,0,FALSE,0,FALSE
+3082,15,던전-잊혀진 공허,MonsterName/3082,2595604649984,165000,30,1,1,basic,Monster/Dungeon/Dungeon13/0;Monster/Dungeon/Dungeon13/1;Monster/Dungeon/Dungeon13/2,3020,0,0,0,0,0,FALSE,0,FALSE
+3083,15,던전-잊혀진 공허,MonsterName/3083,2595604649984,165000,30,1,1,basic,Monster/Dungeon/Dungeon13/3;Monster/Dungeon/Dungeon13/4;Monster/Dungeon/Dungeon13/5,3020,0,0,0,0,0,FALSE,0,FALSE
+3084,15,던전-잊혀진 공허,MonsterName/3084,2595604649984,165000,30,1,1,basic,Monster/Dungeon/Dungeon13/3;Monster/Dungeon/Dungeon13/4;Monster/Dungeon/Dungeon13/5,3020,0,0,0,0,0,FALSE,0,FALSE
+3085,15,던전-잊혀진 공허,MonsterName/3085,2595604649984,165000,30,1,1,basic,Monster/Dungeon/Dungeon13/3;Monster/Dungeon/Dungeon13/4;Monster/Dungeon/Dungeon13/5,3020,0,0,0,0,0,FALSE,0,FALSE
+3086,15,던전-잊혀진 공허,MonsterName/3086,2595604649984,165000,30,1,1,basic,Monster/Dungeon/Dungeon13/6;Monster/Dungeon/Dungeon13/5,3020,0,0,0,0,0,FALSE,0,FALSE
+3087,15,던전-잊혀진 공허 보스,MonsterName/3087,2595604649984,165000,30,1,1,boss,Monster/Dungeon/Dungeon13/7,0,3021,400,5,8,1.5,FALSE,0,FALSE
+3088,20,던전-죽음의 해역,MonsterName/3088,64301828722747,330000,30,1,1,basic,Monster/Dungeon/Dungeon14/0;Monster/Dungeon/Dungeon14/1;Monster/Dungeon/Dungeon14/2,3022,0,0,0,0,0,FALSE,0,FALSE
+3089,20,던전-죽음의 해역,MonsterName/3089,64301828722747,330000,30,1,1,basic,Monster/Dungeon/Dungeon14/0;Monster/Dungeon/Dungeon14/1;Monster/Dungeon/Dungeon14/2,3022,0,0,0,0,0,FALSE,0,FALSE
+3090,20,던전-죽음의 해역,MonsterName/3090,64301828722747,330000,30,1,1,basic,Monster/Dungeon/Dungeon14/0;Monster/Dungeon/Dungeon14/1;Monster/Dungeon/Dungeon14/2,3022,0,0,0,0,0,FALSE,0,FALSE
+3091,20,던전-죽음의 해역,MonsterName/3091,64301828722747,330000,30,1,1,basic,Monster/Dungeon/Dungeon14/3;Monster/Dungeon/Dungeon14/4;Monster/Dungeon/Dungeon14/5,3022,0,0,0,0,0,FALSE,0,FALSE
+3092,20,던전-죽음의 해역,MonsterName/3092,64301828722747,330000,30,1,1,basic,Monster/Dungeon/Dungeon14/3;Monster/Dungeon/Dungeon14/4;Monster/Dungeon/Dungeon14/5,3022,0,0,0,0,0,FALSE,0,FALSE
+3093,20,던전-죽음의 해역,MonsterName/3093,64301828722747,330000,30,1,1,basic,Monster/Dungeon/Dungeon14/3;Monster/Dungeon/Dungeon14/4;Monster/Dungeon/Dungeon14/5,3022,0,0,0,0,0,FALSE,0,FALSE
+3094,20,던전-죽음의 해역,MonsterName/3094,64301828722747,330000,30,1,1,basic,Monster/Dungeon/Dungeon14/6;Monster/Dungeon/Dungeon14/5,3022,0,0,0,0,0,FALSE,0,FALSE
+3095,20,던전-죽음의 해역 보스,MonsterName/3095,64301828722747,330000,30,1,1,boss,Monster/Dungeon/Dungeon14/7,0,3023,400,5,8,1.5,FALSE,0,FALSE
+3096,21,던전-던전-투통가,MonsterName/3096,147726809754242,355000,30,1,1,basic,Monster/Dungeon/Dungeon15/0;Monster/Dungeon/Dungeon15/1;Monster/Dungeon/Dungeon15/2,3024,0,0,0,0,0,FALSE,0,FALSE
+3097,21,던전-던전-투통가,MonsterName/3097,147726809754242,355000,30,1,1,basic,Monster/Dungeon/Dungeon15/0;Monster/Dungeon/Dungeon15/1;Monster/Dungeon/Dungeon15/2,3024,0,0,0,0,0,FALSE,0,FALSE
+3098,21,던전-던전-투통가,MonsterName/3098,147726809754242,355000,30,1,1,basic,Monster/Dungeon/Dungeon15/0;Monster/Dungeon/Dungeon15/1;Monster/Dungeon/Dungeon15/2,3024,0,0,0,0,0,FALSE,0,FALSE
+3099,21,던전-던전-투통가,MonsterName/3099,147726809754242,355000,30,1,1,basic,Monster/Dungeon/Dungeon15/3;Monster/Dungeon/Dungeon15/4;Monster/Dungeon/Dungeon15/5,3024,0,0,0,0,0,FALSE,0,FALSE
+3100,21,던전-던전-투통가,MonsterName/3100,147726809754242,355000,30,1,1,basic,Monster/Dungeon/Dungeon15/3;Monster/Dungeon/Dungeon15/4;Monster/Dungeon/Dungeon15/5,3024,0,0,0,0,0,FALSE,0,FALSE
+3101,21,던전-던전-투통가,MonsterName/3101,147726809754242,355000,30,1,1,basic,Monster/Dungeon/Dungeon15/3;Monster/Dungeon/Dungeon15/4;Monster/Dungeon/Dungeon15/5,3024,0,0,0,0,0,FALSE,0,FALSE
+3102,21,던전-던전-투통가,MonsterName/3102,147726809754242,355000,30,1,1,basic,Monster/Dungeon/Dungeon15/6;Monster/Dungeon/Dungeon15/5,3024,0,0,0,0,0,FALSE,0,FALSE
+3103,21,던전-던전-투통가 보스,MonsterName/3103,147726809754242,355000,30,1,1,boss,Monster/Dungeon/Dungeon15/7,0,3025,400,5,8,1.5,FALSE,0,FALSE
+3104,22,마계-마몬의 금고,MonsterName/3104,590907239017007,375000,30,1,1,basic,Monster/Dungeon/Dungeon16/0;Monster/Dungeon/Dungeon16/1;Monster/Dungeon/Dungeon16/2,3026,0,0,0,0,0,FALSE,0,FALSE
+3105,22,마계-마몬의 금고,MonsterName/3105,590907239017007,375000,30,1,1,basic,Monster/Dungeon/Dungeon16/0;Monster/Dungeon/Dungeon16/1;Monster/Dungeon/Dungeon16/2,3026,0,0,0,0,0,FALSE,0,FALSE
+3106,22,마계-마몬의 금고,MonsterName/3106,590907239017007,375000,30,1,1,basic,Monster/Dungeon/Dungeon16/0;Monster/Dungeon/Dungeon16/1;Monster/Dungeon/Dungeon16/2,3026,0,0,0,0,0,FALSE,0,FALSE
+3107,22,마계-마몬의 금고,MonsterName/3107,590907239017007,375000,30,1,1,basic,Monster/Dungeon/Dungeon16/3;Monster/Dungeon/Dungeon16/4;Monster/Dungeon/Dungeon16/5,3026,0,0,0,0,0,FALSE,0,FALSE
+3108,22,마계-마몬의 금고,MonsterName/3108,590907239017007,375000,30,1,1,basic,Monster/Dungeon/Dungeon16/3;Monster/Dungeon/Dungeon16/4;Monster/Dungeon/Dungeon16/5,3026,0,0,0,0,0,FALSE,0,FALSE
+3109,22,마계-마몬의 금고,MonsterName/3109,590907239017007,375000,30,1,1,basic,Monster/Dungeon/Dungeon16/3;Monster/Dungeon/Dungeon16/4;Monster/Dungeon/Dungeon16/5,3026,0,0,0,0,0,FALSE,0,FALSE
+3110,22,마계-마몬의 금고,MonsterName/3110,590907239017007,375000,30,1,1,basic,Monster/Dungeon/Dungeon16/6;Monster/Dungeon/Dungeon16/5,3026,0,0,0,0,0,FALSE,0,FALSE
+3111,22,마계-마몬의 금고 보스,MonsterName/3111,590907239017007,375000,30,1,1,boss,Monster/Dungeon/Dungeon16/7,0,3027,400,5,8,1.5,FALSE,0,FALSE
+3112,23,던전-칸의 비밀 연구소,MonsterName/3112,1791295782898000,395000,30,1,1,basic,Monster/Dungeon/Dungeon18/0;Monster/Dungeon/Dungeon18/1;Monster/Dungeon/Dungeon18/2,3028,0,0,0,0,0,FALSE,0,FALSE
+3113,23,던전-칸의 비밀 연구소,MonsterName/3113,1791295782898000,395000,30,1,1,basic,Monster/Dungeon/Dungeon18/0;Monster/Dungeon/Dungeon18/1;Monster/Dungeon/Dungeon18/2,3028,0,0,0,0,0,FALSE,0,FALSE
+3114,23,던전-칸의 비밀 연구소,MonsterName/3114,1791295782898000,395000,30,1,1,basic,Monster/Dungeon/Dungeon18/0;Monster/Dungeon/Dungeon18/1;Monster/Dungeon/Dungeon18/2,3028,0,0,0,0,0,FALSE,0,FALSE
+3115,23,던전-칸의 비밀 연구소,MonsterName/3115,1791295782898000,395000,30,1,1,basic,Monster/Dungeon/Dungeon18/3;Monster/Dungeon/Dungeon18/4;Monster/Dungeon/Dungeon18/5,3028,0,0,0,0,0,FALSE,0,FALSE
+3116,23,던전-칸의 비밀 연구소,MonsterName/3116,1791295782898000,395000,30,1,1,basic,Monster/Dungeon/Dungeon18/3;Monster/Dungeon/Dungeon18/4;Monster/Dungeon/Dungeon18/5,3028,0,0,0,0,0,FALSE,0,FALSE
+3117,23,던전-칸의 비밀 연구소,MonsterName/3117,1791295782898000,395000,30,1,1,basic,Monster/Dungeon/Dungeon18/3;Monster/Dungeon/Dungeon18/4;Monster/Dungeon/Dungeon18/5,3028,0,0,0,0,0,FALSE,0,FALSE
+3118,23,던전-칸의 비밀 연구소,MonsterName/3118,1791295782898000,395000,30,1,1,basic,Monster/Dungeon/Dungeon18/6;Monster/Dungeon/Dungeon18/5,3028,0,0,0,0,0,FALSE,0,FALSE
+3119,23,던전-칸의 비밀 연구소 보스,MonsterName/3119,1791295782898000,395000,30,1,1,boss,Monster/Dungeon/Dungeon18/7,0,3029,400,5,8,1.5,FALSE,0,FALSE
+3120,24,던전-멸망한 해저 도시,MonsterName/3120,4115317038256120,510000,30,1,1,basic,Monster/Dungeon/Dungeon19/0;Monster/Dungeon/Dungeon19/1;Monster/Dungeon/Dungeon19/2,3030,0,0,0,0,0,FALSE,0,FALSE
+3121,24,던전-멸망한 해저 도시,MonsterName/3121,4115317038256120,510000,30,1,1,basic,Monster/Dungeon/Dungeon19/0;Monster/Dungeon/Dungeon19/1;Monster/Dungeon/Dungeon19/2,3030,0,0,0,0,0,FALSE,0,FALSE
+3122,24,던전-멸망한 해저 도시,MonsterName/3122,4115317038256120,510000,30,1,1,basic,Monster/Dungeon/Dungeon19/0;Monster/Dungeon/Dungeon19/1;Monster/Dungeon/Dungeon19/2,3030,0,0,0,0,0,FALSE,0,FALSE
+3123,24,던전-멸망한 해저 도시,MonsterName/3123,4115317038256120,510000,30,1,1,basic,Monster/Dungeon/Dungeon19/3;Monster/Dungeon/Dungeon19/4;Monster/Dungeon/Dungeon19/5,3030,0,0,0,0,0,FALSE,0,FALSE
+3124,24,던전-멸망한 해저 도시,MonsterName/3124,4115317038256120,510000,30,1,1,basic,Monster/Dungeon/Dungeon19/3;Monster/Dungeon/Dungeon19/4;Monster/Dungeon/Dungeon19/5,3030,0,0,0,0,0,FALSE,0,FALSE
+3125,24,던전-멸망한 해저 도시,MonsterName/3125,4115317038256120,510000,30,1,1,basic,Monster/Dungeon/Dungeon19/3;Monster/Dungeon/Dungeon19/4;Monster/Dungeon/Dungeon19/5,3030,0,0,0,0,0,FALSE,0,FALSE
+3126,24,던전-멸망한 해저 도시,MonsterName/3126,4115317038256120,510000,30,1,1,basic,Monster/Dungeon/Dungeon19/6;Monster/Dungeon/Dungeon19/5,3030,0,0,0,0,0,FALSE,0,FALSE
+3127,24,던전-멸망한 해저 도시 보스,MonsterName/3127,4115317038256120,510000,30,1,1,boss,Monster/Dungeon/Dungeon19/7,0,3031,400,5,8,1.5,FALSE,0,FALSE
+3128,25,던전-진'진하감옥,MonsterName/3128,9454515824272770,630000,30,1,1,basic,Monster/Dungeon/Dungeon4/0;Monster/Dungeon/Dungeon4/1;Monster/Dungeon/Dungeon4/2,3032,0,0,0,0,0,FALSE,0,FALSE
+3129,25,던전-진'진하감옥,MonsterName/3129,9454515824272770,630000,30,1,1,basic,Monster/Dungeon/Dungeon4/0;Monster/Dungeon/Dungeon4/1;Monster/Dungeon/Dungeon4/2,3032,0,0,0,0,0,FALSE,0,FALSE
+3130,25,던전-진'진하감옥,MonsterName/3130,9454515824272770,630000,30,1,1,basic,Monster/Dungeon/Dungeon4/0;Monster/Dungeon/Dungeon4/1;Monster/Dungeon/Dungeon4/2,3032,0,0,0,0,0,FALSE,0,FALSE
+3131,25,던전-진'진하감옥,MonsterName/3131,9454515824272770,630000,30,1,1,basic,Monster/Dungeon/Dungeon4/3;Monster/Dungeon/Dungeon4/4;Monster/Dungeon/Dungeon4/5,3032,0,0,0,0,0,FALSE,0,FALSE
+3132,25,던전-진'진하감옥,MonsterName/3132,9454515824272770,630000,30,1,1,basic,Monster/Dungeon/Dungeon4/3;Monster/Dungeon/Dungeon4/4;Monster/Dungeon/Dungeon4/5,3032,0,0,0,0,0,FALSE,0,FALSE
+3133,25,던전-진'진하감옥,MonsterName/3133,9454515824272770,630000,30,1,1,basic,Monster/Dungeon/Dungeon4/3;Monster/Dungeon/Dungeon4/4;Monster/Dungeon/Dungeon4/5,3032,0,0,0,0,0,FALSE,0,FALSE
+3134,25,던전-진'진하감옥,MonsterName/3134,9454515824272770,630000,30,1,1,basic,Monster/Dungeon/Dungeon4/6;Monster/Dungeon/Dungeon4/5,3032,0,0,0,0,0,FALSE,0,FALSE
+3135,25,던전-진'진하감옥,MonsterName/3135,9454515824272770,630000,30,1,1,boss,Monster/Dungeon/Dungeon4/7,0,3033,400,5,8,1.5,FALSE,0,FALSE
+3136,26,던전-진'화산,MonsterName/3136,26741409008715200,780000,30,1,1,basic,Monster/Dungeon/Dungeon5/0;Monster/Dungeon/Dungeon5/1;Monster/Dungeon/Dungeon5/2,3034,0,0,0,0,0,FALSE,0,FALSE
+3137,26,던전-진'화산,MonsterName/3137,26741409008715200,780000,30,1,1,basic,Monster/Dungeon/Dungeon5/0;Monster/Dungeon/Dungeon5/1;Monster/Dungeon/Dungeon5/2,3034,0,0,0,0,0,FALSE,0,FALSE
+3138,26,던전-진'화산,MonsterName/3138,26741409008715200,780000,30,1,1,basic,Monster/Dungeon/Dungeon5/0;Monster/Dungeon/Dungeon5/1;Monster/Dungeon/Dungeon5/2,3034,0,0,0,0,0,FALSE,0,FALSE
+3139,26,던전-진'화산,MonsterName/3139,26741409008715200,780000,30,1,1,basic,Monster/Dungeon/Dungeon5/3;Monster/Dungeon/Dungeon5/4;Monster/Dungeon/Dungeon5/5,3034,0,0,0,0,0,FALSE,0,FALSE
+3140,26,던전-진'화산,MonsterName/3140,26741409008715200,780000,30,1,1,basic,Monster/Dungeon/Dungeon5/3;Monster/Dungeon/Dungeon5/4;Monster/Dungeon/Dungeon5/5,3034,0,0,0,0,0,FALSE,0,FALSE
+3141,26,던전-진'화산,MonsterName/3141,26741409008715200,780000,30,1,1,basic,Monster/Dungeon/Dungeon5/3;Monster/Dungeon/Dungeon5/4;Monster/Dungeon/Dungeon5/5,3034,0,0,0,0,0,FALSE,0,FALSE
+3142,26,던전-진'화산,MonsterName/3142,26741409008715200,780000,30,1,1,basic,Monster/Dungeon/Dungeon5/6;Monster/Dungeon/Dungeon5/5,3034,0,0,0,0,0,FALSE,0,FALSE
+3143,26,던전-진'화산,MonsterName/3143,26741409008715200,780000,30,1,1,boss,Monster/Dungeon/Dungeon5/7,0,3035,400,5,8,1.5,FALSE,0,FALSE
+3144,27,던전-진'마계중심부,MonsterName/3144,141142002928863000,960000,30,1,1,basic,Monster/Dungeon/Dungeon6/0;Monster/Dungeon/Dungeon6/1;Monster/Dungeon/Dungeon6/2,3036,0,0,0,0,0,FALSE,0,FALSE
+3145,27,던전-진'마계중심부,MonsterName/3145,141142002928863000,960000,30,1,1,basic,Monster/Dungeon/Dungeon6/0;Monster/Dungeon/Dungeon6/1;Monster/Dungeon/Dungeon6/2,3036,0,0,0,0,0,FALSE,0,FALSE
+3146,27,던전-진'마계중심부,MonsterName/3146,141142002928863000,960000,30,1,1,basic,Monster/Dungeon/Dungeon6/0;Monster/Dungeon/Dungeon6/1;Monster/Dungeon/Dungeon6/2,3036,0,0,0,0,0,FALSE,0,FALSE
+3147,27,던전-진'마계중심부,MonsterName/3147,141142002928863000,960000,30,1,1,basic,Monster/Dungeon/Dungeon6/3;Monster/Dungeon/Dungeon6/4;Monster/Dungeon/Dungeon6/5,3036,0,0,0,0,0,FALSE,0,FALSE
+3148,27,던전-진'마계중심부,MonsterName/3148,141142002928863000,960000,30,1,1,basic,Monster/Dungeon/Dungeon6/3;Monster/Dungeon/Dungeon6/4;Monster/Dungeon/Dungeon6/5,3036,0,0,0,0,0,FALSE,0,FALSE
+3149,27,던전-진'마계중심부,MonsterName/3149,141142002928863000,960000,30,1,1,basic,Monster/Dungeon/Dungeon6/3;Monster/Dungeon/Dungeon6/4;Monster/Dungeon/Dungeon6/5,3036,0,0,0,0,0,FALSE,0,FALSE
+3150,27,던전-진'마계중심부,MonsterName/3150,141142002928863000,960000,30,1,1,basic,Monster/Dungeon/Dungeon6/6;Monster/Dungeon/Dungeon6/5,3036,0,0,0,0,0,FALSE,0,FALSE
+3151,27,던전-진'마계중심부,MonsterName/3151,141142002928863000,960000,30,1,1,boss,Monster/Dungeon/Dungeon6/7,0,3037,400,5,8,1.5,FALSE,0,FALSE
+3152,28,던전-진'샤이아,MonsterName/3152,605089012753541000,1050000,30,1,1,basic,Monster/Dungeon/Dungeon7/0;Monster/Dungeon/Dungeon7/1;Monster/Dungeon/Dungeon7/2,3038,0,0,0,0,0,FALSE,0,FALSE
+3153,28,던전-진'샤이아,MonsterName/3153,605089012753541000,1050000,30,1,1,basic,Monster/Dungeon/Dungeon7/0;Monster/Dungeon/Dungeon7/1;Monster/Dungeon/Dungeon7/2,3038,0,0,0,0,0,FALSE,0,FALSE
+3154,28,던전-진'샤이아,MonsterName/3154,605089012753541000,1050000,30,1,1,basic,Monster/Dungeon/Dungeon7/0;Monster/Dungeon/Dungeon7/1;Monster/Dungeon/Dungeon7/2,3038,0,0,0,0,0,FALSE,0,FALSE
+3155,28,던전-진'샤이아,MonsterName/3155,605089012753541000,1050000,30,1,1,basic,Monster/Dungeon/Dungeon7/3;Monster/Dungeon/Dungeon7/4;Monster/Dungeon/Dungeon7/5,3038,0,0,0,0,0,FALSE,0,FALSE
+3156,28,던전-진'샤이아,MonsterName/3156,605089012753541000,1050000,30,1,1,basic,Monster/Dungeon/Dungeon7/3;Monster/Dungeon/Dungeon7/4;Monster/Dungeon/Dungeon7/5,3038,0,0,0,0,0,FALSE,0,FALSE
+3157,28,던전-진'샤이아,MonsterName/3157,605089012753541000,1050000,30,1,1,basic,Monster/Dungeon/Dungeon7/3;Monster/Dungeon/Dungeon7/4;Monster/Dungeon/Dungeon7/5,3038,0,0,0,0,0,FALSE,0,FALSE
+3158,28,던전-진'샤이아,MonsterName/3158,605089012753541000,1050000,30,1,1,basic,Monster/Dungeon/Dungeon7/6;Monster/Dungeon/Dungeon7/5,3038,0,0,0,0,0,FALSE,0,FALSE
+3159,28,던전-진'샤이아,MonsterName/3159,1129136023430980000,1050000,30,1,1,boss,Monster/Dungeon/Dungeon7/7,0,3039,400,5,8,1.5,FALSE,0,FALSE
+3160,29,던전-진'죽은용의 동굴,MonsterName/3160,1129136023430980000,1230000,30,1,1,basic,Monster/Dungeon/Dungeon8/0;Monster/Dungeon/Dungeon8/1;Monster/Dungeon/Dungeon8/2,3040,0,0,0,0,0,FALSE,0,FALSE
+3161,29,던전-진'죽은용의 동굴,MonsterName/3161,1129136023430980000,1230000,30,1,1,basic,Monster/Dungeon/Dungeon8/0;Monster/Dungeon/Dungeon8/1;Monster/Dungeon/Dungeon8/2,3040,0,0,0,0,0,FALSE,0,FALSE
+3162,29,던전-진'죽은용의 동굴,MonsterName/3162,1129136023430980000,1230000,30,1,1,basic,Monster/Dungeon/Dungeon8/0;Monster/Dungeon/Dungeon8/1;Monster/Dungeon/Dungeon8/2,3040,0,0,0,0,0,FALSE,0,FALSE
+3163,29,던전-진'죽은용의 동굴,MonsterName/3163,1129136023430980000,1230000,30,1,1,basic,Monster/Dungeon/Dungeon8/3;Monster/Dungeon/Dungeon8/4;Monster/Dungeon/Dungeon8/5,3040,0,0,0,0,0,FALSE,0,FALSE
+3164,29,던전-진'죽은용의 동굴,MonsterName/3164,1129136023430980000,1230000,30,1,1,basic,Monster/Dungeon/Dungeon8/3;Monster/Dungeon/Dungeon8/4;Monster/Dungeon/Dungeon8/5,3040,0,0,0,0,0,FALSE,0,FALSE
+3165,29,던전-진'죽은용의 동굴,MonsterName/3165,1129136023430980000,1230000,30,1,1,basic,Monster/Dungeon/Dungeon8/3;Monster/Dungeon/Dungeon8/4;Monster/Dungeon/Dungeon8/5,3040,0,0,0,0,0,FALSE,0,FALSE
+3166,29,던전-진'죽은용의 동굴,MonsterName/3166,1129136023430980000,1230000,30,1,1,basic,Monster/Dungeon/Dungeon8/6;Monster/Dungeon/Dungeon8/5,3040,0,0,0,0,0,FALSE,0,FALSE
+3167,29,진'죽은용의 동굴,MonsterName/3167,1129136023430980000,1230000,30,1,1,boss,Monster/Dungeon/Dungeon8/7,0,3041,400,5,8,1.5,FALSE,0,FALSE
+3168,30,진'투통가,MonsterName/3168,2107042323587570000,1410000,30,1,1,basic,Monster/Dungeon/Dungeon15/0;Monster/Dungeon/Dungeon15/1;Monster/Dungeon/Dungeon15/2,3042,0,0,0,0,0,FALSE,0,FALSE
+3169,30,진'투통가,MonsterName/3169,2107042323587570000,1410000,30,1,1,basic,Monster/Dungeon/Dungeon15/0;Monster/Dungeon/Dungeon15/1;Monster/Dungeon/Dungeon15/2,3042,0,0,0,0,0,FALSE,0,FALSE
+3170,30,진'투통가,MonsterName/3170,2107042323587570000,1410000,30,1,1,basic,Monster/Dungeon/Dungeon15/0;Monster/Dungeon/Dungeon15/1;Monster/Dungeon/Dungeon15/2,3042,0,0,0,0,0,FALSE,0,FALSE
+3171,30,진'투통가,MonsterName/3171,2107042323587570000,1410000,30,1,1,basic,Monster/Dungeon/Dungeon15/3;Monster/Dungeon/Dungeon15/4;Monster/Dungeon/Dungeon15/5,3042,0,0,0,0,0,FALSE,0,FALSE
+3172,30,진'투통가,MonsterName/3172,2107042323587570000,1410000,30,1,1,basic,Monster/Dungeon/Dungeon15/3;Monster/Dungeon/Dungeon15/4;Monster/Dungeon/Dungeon15/5,3042,0,0,0,0,0,FALSE,0,FALSE
+3173,30,진'투통가,MonsterName/3173,2107042323587570000,1410000,30,1,1,basic,Monster/Dungeon/Dungeon15/3;Monster/Dungeon/Dungeon15/4;Monster/Dungeon/Dungeon15/5,3042,0,0,0,0,0,FALSE,0,FALSE
+3174,30,진'투통가,MonsterName/3174,2107042323587570000,1410000,30,1,1,basic,Monster/Dungeon/Dungeon15/6;Monster/Dungeon/Dungeon15/5,3042,0,0,0,0,0,FALSE,0,FALSE
+3175,30,진'투통가,MonsterName/3175,2107042323587570000,1410000,30,1,1,boss,Monster/Dungeon/Dungeon15/7,0,3043,400,5,8,1.5,FALSE,0,FALSE
+,,,,,,,,,,,,,,,,,,,FALSE
+,,,,,,30,,,,,,,,,,,FALSE,,FALSE
+,,,,,,,,,,,,,,,,,FALSE,0,FALSE
+6000,대마법사의묘,1,,114618822656,140000,30,1,1,basic,Monster/Content/mage/0;Monster/Content/mage/1;Monster/Content/mage/2;Monster/Content/mage/3;Monster/Content/mage/4;Monster/Content/mage/5,0,0,0,0,0,0,FALSE,0,FALSE
+6001,대마법사의묘,1,,114618822656,140000,30,1,1,basic,Monster/Content/mage/0;Monster/Content/mage/1;Monster/Content/mage/2;Monster/Content/mage/3;Monster/Content/mage/4;Monster/Content/mage/5,0,0,0,0,0,0,FALSE,0,FALSE
+6002,대마법사의묘,1,,114618822656,140000,30,1,1,basic,Monster/Content/mage/0;Monster/Content/mage/1;Monster/Content/mage/2;Monster/Content/mage/3;Monster/Content/mage/4;Monster/Content/mage/5,0,0,0,0,0,0,FALSE,0,FALSE
+6003,대마법사의묘,1,,114618822656,140000,30,1,1,basic,Monster/Content/mage/0;Monster/Content/mage/1;Monster/Content/mage/2;Monster/Content/mage/3;Monster/Content/mage/4;Monster/Content/mage/5,0,0,0,0,0,0,FALSE,0,FALSE
+6004,대마법사의묘,1,,114618822656,140000,30,1,1,basic,Monster/Content/mage/0;Monster/Content/mage/1;Monster/Content/mage/2;Monster/Content/mage/3;Monster/Content/mage/4;Monster/Content/mage/5,0,0,0,0,0,0,FALSE,0,FALSE
+6005,대마법사의묘,1,,114618822656,140000,30,1,1,basic,Monster/Content/mage/0;Monster/Content/mage/1;Monster/Content/mage/2;Monster/Content/mage/3;Monster/Content/mage/4;Monster/Content/mage/5,0,0,0,0,0,0,FALSE,0,FALSE
+6006,대마법사의묘,1,,114618822656,140000,30,1,1,basic,Monster/Content/mage/0;Monster/Content/mage/1;Monster/Content/mage/2;Monster/Content/mage/3;Monster/Content/mage/4;Monster/Content/mage/5,0,0,0,0,0,0,FALSE,0,FALSE
+6007,대마법사의묘,2,,114618822656,140000,50,1,1,boss,Monster/Content/mage/7,0,0,350,5,8,1.5,FALSE,0,FALSE
+골드,,,,,,,,,,,,,,,,,FALSE,0,FALSE
+6008,골드 던전,1,천만 20~50,154618822656,140000,30,1,1,basic,Monster/Content/gold/0;Monster/Content/gold/1;Monster/Content/gold/2;Monster/Content/gold/3;Monster/Content/gold/4;Monster/Content/gold/5,0,0,0,0,0,0,FALSE,0,FALSE
+6009,골드 던전,1,60~85,154618822656,140000,30,1,1,basic,Monster/Content/gold/0;Monster/Content/gold/1;Monster/Content/gold/2;Monster/Content/gold/3;Monster/Content/gold/4;Monster/Content/gold/5,0,0,0,0,0,0,FALSE,0,FALSE
+6010,골드 던전,1,90~120,154618822656,140000,30,1,1,basic,Monster/Content/gold/0;Monster/Content/gold/1;Monster/Content/gold/2;Monster/Content/gold/3;Monster/Content/gold/4;Monster/Content/gold/5,0,0,0,0,0,0,FALSE,0,FALSE
+6011,골드 던전,1,130~160,154618822656,140000,30,1,1,basic,Monster/Content/gold/0;Monster/Content/gold/1;Monster/Content/gold/2;Monster/Content/gold/3;Monster/Content/gold/4;Monster/Content/gold/5,0,0,0,0,0,0,FALSE,0,FALSE
+6012,골드 던전,1,170~220,154618822656,140000,30,1,1,basic,Monster/Content/gold/0;Monster/Content/gold/1;Monster/Content/gold/2;Monster/Content/gold/3;Monster/Content/gold/4;Monster/Content/gold/5,0,0,0,0,0,0,FALSE,0,FALSE
+6013,골드 던전,1,230~260,154618822656,140000,30,1,1,basic,Monster/Content/gold/0;Monster/Content/gold/1;Monster/Content/gold/2;Monster/Content/gold/3;Monster/Content/gold/4;Monster/Content/gold/5,0,0,0,0,0,0,FALSE,0,FALSE
+6014,골드 던전,1,270~300,154618822656,140000,30,1,1,basic,Monster/Content/gold/0;Monster/Content/gold/1;Monster/Content/gold/2;Monster/Content/gold/3;Monster/Content/gold/4;Monster/Content/gold/5,0,0,0,0,0,0,FALSE,0,FALSE
+6015,골드 던전,2,310~350,154618822656,140000,50,1,1,boss,Monster/Content/gold/7,0,0,350,5,8,1.5,FALSE,0,FALSE
+경험치,,,,,,,,,,,,,,,,,FALSE,0,FALSE
+6016,경험치 던전,1,,154618822656,140000,30,1,1,basic,Monster/Content/exp/0;Monster/Content/exp/1;Monster/Content/exp/2;Monster/Content/exp/3;Monster/Content/exp/4;Monster/Content/exp/5,0,0,0,0,0,0,FALSE,0,FALSE
+6017,경험치 던전,1,,154618822656,140000,30,1,1,basic,Monster/Content/exp/0;Monster/Content/exp/1;Monster/Content/exp/2;Monster/Content/exp/3;Monster/Content/exp/4;Monster/Content/exp/5,0,0,0,0,0,0,FALSE,0,FALSE
+6018,경험치 던전,1,,154618822656,140000,30,1,1,basic,Monster/Content/exp/0;Monster/Content/exp/1;Monster/Content/exp/2;Monster/Content/exp/3;Monster/Content/exp/4;Monster/Content/exp/5,0,0,0,0,0,0,FALSE,0,FALSE
+6019,경험치 던전,1,,154618822656,140000,30,1,1,basic,Monster/Content/exp/0;Monster/Content/exp/1;Monster/Content/exp/2;Monster/Content/exp/3;Monster/Content/exp/4;Monster/Content/exp/5,0,0,0,0,0,0,FALSE,0,FALSE
+6020,경험치 던전,1,,154618822656,140000,30,1,1,basic,Monster/Content/exp/0;Monster/Content/exp/1;Monster/Content/exp/2;Monster/Content/exp/3;Monster/Content/exp/4;Monster/Content/exp/5,0,0,0,0,0,0,FALSE,0,FALSE
+6021,경험치 던전,1,,154618822656,140000,30,1,1,basic,Monster/Content/exp/0;Monster/Content/exp/1;Monster/Content/exp/2;Monster/Content/exp/3;Monster/Content/exp/4;Monster/Content/exp/5,0,0,0,0,0,0,FALSE,0,FALSE
+6022,경험치 던전,1,,154618822656,140000,30,1,1,basic,Monster/Content/exp/0;Monster/Content/exp/1;Monster/Content/exp/2;Monster/Content/exp/3;Monster/Content/exp/4;Monster/Content/exp/5,0,0,0,0,0,0,FALSE,0,FALSE
+6023,경험치 던전,2,,154618822656,140000,50,1,1,boss,Monster/Content/exp/7,0,0,350,5,8,1.5,FALSE,0,FALSE
+비법서,,,,,,,,,,,,,,,,,FALSE,0,FALSE
+6024,비법서 던전,1,,154618822656,140000,30,1,1,basic,Monster/Content/scroll/0;Monster/Content/scroll/1;Monster/Content/scroll/2;Monster/Content/scroll/3;Monster/Content/scroll/4;Monster/Content/scroll/5,0,0,0,0,0,0,FALSE,0,FALSE
+6025,비법서 던전,1,,154618822656,140000,30,1,1,basic,Monster/Content/scroll/0;Monster/Content/scroll/1;Monster/Content/scroll/2;Monster/Content/scroll/3;Monster/Content/scroll/4;Monster/Content/scroll/5,0,0,0,0,0,0,FALSE,0,FALSE
+6026,비법서 던전,1,,154618822656,140000,30,1,1,basic,Monster/Content/scroll/0;Monster/Content/scroll/1;Monster/Content/scroll/2;Monster/Content/scroll/3;Monster/Content/scroll/4;Monster/Content/scroll/5,0,0,0,0,0,0,FALSE,0,FALSE
+6027,비법서 던전,1,,154618822656,140000,30,1,1,basic,Monster/Content/scroll/0;Monster/Content/scroll/1;Monster/Content/scroll/2;Monster/Content/scroll/3;Monster/Content/scroll/4;Monster/Content/scroll/5,0,0,0,0,0,0,FALSE,0,FALSE
+6028,비법서 던전,1,,154618822656,140000,30,1,1,basic,Monster/Content/scroll/0;Monster/Content/scroll/1;Monster/Content/scroll/2;Monster/Content/scroll/3;Monster/Content/scroll/4;Monster/Content/scroll/5,0,0,0,0,0,0,FALSE,0,FALSE
+6029,비법서 던전,1,,154618822656,140000,30,1,1,basic,Monster/Content/scroll/0;Monster/Content/scroll/1;Monster/Content/scroll/2;Monster/Content/scroll/3;Monster/Content/scroll/4;Monster/Content/scroll/5,0,0,0,0,0,0,FALSE,0,FALSE
+6030,비법서 던전,1,,154618822656,140000,30,1,1,basic,Monster/Content/scroll/0;Monster/Content/scroll/1;Monster/Content/scroll/2;Monster/Content/scroll/3;Monster/Content/scroll/4;Monster/Content/scroll/5,0,0,0,0,0,0,FALSE,0,FALSE
+6031,비법서 던전,2,,154618822656,140000,50,1,1,boss,Monster/Content/scroll/7,0,0,350,5,8,1.5,FALSE,0,FALSE
+비법서,,,,,,,,,,,,,,,,,FALSE,0,FALSE
+6032,유물 던전,1,,204618822656,180000,30,1,1,basic,Monster/Content/artifact/0;Monster/Content/artifact/1;Monster/Content/artifact/2;Monster/Content/artifact/3;Monster/Content/artifact/4;Monster/Content/artifact/5,0,0,0,0,0,0,FALSE,0,FALSE
+6033,유물 던전,1,,204618822656,180000,30,1,1,basic,Monster/Content/artifact/0;Monster/Content/artifact/1;Monster/Content/artifact/2;Monster/Content/artifact/3;Monster/Content/artifact/4;Monster/Content/artifact/5,0,0,0,0,0,0,FALSE,0,FALSE
+6034,유물 던전,1,,204618822656,180000,30,1,1,basic,Monster/Content/artifact/0;Monster/Content/artifact/1;Monster/Content/artifact/2;Monster/Content/artifact/3;Monster/Content/artifact/4;Monster/Content/artifact/5,0,0,0,0,0,0,FALSE,0,FALSE
+6035,유물 던전,1,,204618822656,180000,30,1,1,basic,Monster/Content/artifact/0;Monster/Content/artifact/1;Monster/Content/artifact/2;Monster/Content/artifact/3;Monster/Content/artifact/4;Monster/Content/artifact/5,0,0,0,0,0,0,FALSE,0,FALSE
+6036,유물 던전,1,,204618822656,180000,30,1,1,basic,Monster/Content/artifact/0;Monster/Content/artifact/1;Monster/Content/artifact/2;Monster/Content/artifact/3;Monster/Content/artifact/4;Monster/Content/artifact/5,0,0,0,0,0,0,FALSE,0,FALSE
+6037,유물 던전,1,,204618822656,180000,30,1,1,basic,Monster/Content/artifact/0;Monster/Content/artifact/1;Monster/Content/artifact/2;Monster/Content/artifact/3;Monster/Content/artifact/4;Monster/Content/artifact/5,0,0,0,0,0,0,FALSE,0,FALSE
+6038,유물 던전,1,,204618822656,180000,30,1,1,basic,Monster/Content/artifact/0;Monster/Content/artifact/1;Monster/Content/artifact/2;Monster/Content/artifact/3;Monster/Content/artifact/4;Monster/Content/artifact/5,0,0,0,0,0,0,FALSE,0,FALSE
+6039,유물 던전,2,,204618822656,180000,50,1,1,boss,Monster/Content/artifact/7,0,0,350,5,8,1.5,FALSE,0,FALSE
+,,,,,,,,,,,,,,,,,FALSE,0,FALSE
+,,,,,,,,,,,,,,,,,FALSE,0,FALSE
+700000,월드 보스,,MonsterName/700000,640000000000000000,75000,30,1,1,boss,Monster/Raven Fantasy2/WB1,5020,5020,3000,12,2,3,TRUE,0.1,FALSE
+700001,월드 보스,,MonsterName/700001,2980000000000000000,150000,30,1,1,boss,Monster/Raven Fantasy2/WB2,5020,5020,3000,12,2,3,TRUE,0.1,FALSE
+700002,월드 보스,,MonsterName/700002,11400000000000000000,210000,30,1,1,boss,Monster/Raven Fantasy2/WB3,5020,5020,3000,12,2,3,TRUE,0.1,FALSE
+700003,월드 보스,,MonsterName/700003,36000000000000000000,310000,30,1,1,boss,Monster/Raven Fantasy2/WB4,5020,5020,3000,12,2,3,TRUE,0.1,FALSE
+700004,월드 보스,,MonsterName/700004,70000000000000000000,450000,30,1,1,boss,Monster/Raven Fantasy2/WB5,5020,5020,3000,12,2,3,TRUE,0.1,FALSE
+700005,월드 보스,,MonsterName/700005,120000000000000000000,580000,30,1,1,boss,Monster/Raven Fantasy2/WB6,5020,5020,3000,12,2,3,TRUE,0.1,FALSE
+700006,월드 보스,,MonsterName/700006,550000000000000000000,720000,30,1,1,boss,Monster/Raven Fantasy2/WB7,5020,5020,3000,12,2,3,TRUE,0.1,FALSE
+700007,월드 보스,,MonsterName/700007,680000000000000000000,800000,30,1,1,boss,Monster/Raven Fantasy2/WB8,5020,5020,3000,12,2,3,TRUE,0.1,FALSE
+700008,,,,,,,,,,,,,,,,,,,FALSE
+700009,,,,,,,,,,,,,,,,,,,FALSE
+700010,,,,,,,,,,,,,,,,,,,FALSE
+700011,,,,,,,,,,,,,,,,,,,FALSE
+700012,,,,,,,,,,,,,,,,,,,FALSE
+,,,,,,,,,,,,,,,,,,,FALSE
+,,,,,,,,,,,,,,,,,,,FALSE
+20000,파티레이드-파괴된 신전,,MonsterName/20000,36000000000000000000,450000,30,1,1,boss,Monster/PartyRaid/0/7,5020,5020,3000,12,5,3,TRUE,0.1,TRUE
+20001,파티레이드-파괴된 신전,,MonsterName/20001,18000000000000000000,250000,30,1,1,boss,Monster/PartyRaid/0/0,0,0,1500,8,3,3,TRUE,0.1,TRUE
+20002,파티레이드-파괴된 신전,,MonsterName/20002,18000000000000000000,250000,30,1,1,boss,Monster/PartyRaid/0/1,0,0,1500,8,3,3,TRUE,0.1,TRUE
+20003,파티레이드-파괴된 신전,,MonsterName/20003,18000000000000000000,250000,30,1,1,boss,Monster/PartyRaid/0/2,0,0,1500,8,3,3,TRUE,0.1,TRUE
+20004,파티레이드-파괴된 신전,,MonsterName/20004,18000000000000000000,250000,30,1,1,boss,Monster/PartyRaid/0/3,0,0,1500,8,3,3,TRUE,0.1,TRUE
+20005,파티레이드-파괴된 신전,,MonsterName/20005,18000000000000000000,250000,30,1,1,boss,Monster/PartyRaid/0/4,0,0,1500,8,3,3,TRUE,0.1,TRUE
+20006,파티레이드-파괴된 신전,,MonsterName/20006,18000000000000000000,250000,30,1,1,boss,Monster/PartyRaid/0/5,0,0,1500,8,3,3,TRUE,0.1,TRUE
+20006,파티레이드-파괴된 신전,,MonsterName/20007,18000000000000000000,250000,30,1,1,boss,Monster/PartyRaid/0/6,0,0,1500,8,3,3,TRUE,0.1,TRUE

@@ -377,6 +377,21 @@ public class Enemy : MonoBehaviour
                 //mondropmanager.Instance.SetDropData(monid);
                 atk = float.Parse(mondata.dmg) * 5;
                 break;
+            case "12": //월드보스
+                mondata = monsterDB.Instance.Find_id(MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage)
+                    .monsterid);
+                monid = mondata.id;
+                if (EnemySprite.sprite == null)
+                    EnemySprite.sprite = SpriteManager.Instance.GetSprite(mondata.sprite);
+                 hpmanager.MaxHp = PartyRaidBattlemanager.Instance.NowBossMaxHp;
+                hpmanager.CurHp =  PartyRaidBattlemanager.Instance.NowBossMaxHp;
+                //무력화 점수
+                hpmanager.MaxBP = float.Parse(mondata.breakPoint);
+                hpmanager.CurBP = hpmanager.MaxBP;
+                mapmanager.Instance.breakadddmg = float.Parse(mondata.breakadddmg);
+                //mondropmanager.Instance.SetDropData(monid);
+                atk = float.Parse(mondata.dmg) * 5;
+                break;
         }
 
 

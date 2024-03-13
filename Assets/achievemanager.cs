@@ -472,6 +472,7 @@ public class achievemanager : MonoBehaviour
            alertmanager.Instance.NotiCheck_Pass();
            Savemanager.Instance.SaveAchieveDirect();
            Savemanager.Instance.Save();
+           LogManager.Log_CrystalEarn("¾÷Àû");
        }
    }
    

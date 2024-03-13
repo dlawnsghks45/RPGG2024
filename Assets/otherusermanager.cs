@@ -1028,7 +1028,7 @@ public class otherusermanager : MonoBehaviour
      public InputField ChatReportInput;
      public InputField ChatReportInput2;
      //채팅 유저 정보
-     public void Bt_ShowChatUserData(Sprite body,Sprite main,Sprite sub,string username)
+     public void Bt_ShowChatUserData(Sprite body,Sprite main,Sprite sub,string username,int adlv = 0)
      {
          if(username == PlayerBackendData.Instance.nickname)
              return; 
@@ -1059,10 +1059,13 @@ public class otherusermanager : MonoBehaviour
              bool ishave = false;
              for (int i = 0; i < PartyRaidRoommanager.Instance.PartyMember.Length; i++)
              {
-                 if (PartyRaidRoommanager.Instance.PartyMember[i].data.nickname == username)
+                 if (PartyRaidRoommanager.Instance.PartyMember[i].data != null)
                  {
-                     ishave = true;
-                     break;
+                     if (PartyRaidRoommanager.Instance.PartyMember[i].data.nickname == username)
+                     {
+                         ishave = true;
+                         break;
+                     }
                  }
              }
              if (ishave)
@@ -1071,7 +1074,8 @@ public class otherusermanager : MonoBehaviour
              }
              else
              {
-                 InviteButton.SetActive(true);
+                 if (PlayerBackendData.Instance.GetAdLv() >= 20 && adlv >= 20)
+                     InviteButton.SetActive(true);
              }
              //내 유저라면
          }

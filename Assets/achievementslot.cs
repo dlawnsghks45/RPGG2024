@@ -94,7 +94,7 @@ public class achievementslot : MonoBehaviour
             Savemanager.Instance
                 .Save();
         }
-       Debug.Log(data.Id);
+//       Debug.Log(data.Id);
         //½Â±ÞÀÌ¸é
         if (AchievementDB.Instance.Find_id(data.Id).type.Equals("adlvup"))
         {

@@ -1532,6 +1532,13 @@ public class Player : MonoBehaviour
                     pm.GetPassiveStat(Passivemanager.PassiveStatEnum.critup) + set_crit
                     + MyGuildManager.Instance.GetBuffStat(MyGuildManager.GuildBuffEnum.치명타확률증가);
 
+        if (mapmanager.Instance.BossPenalty[1].activeSelf)
+        {
+            Debug.Log("치명타 감소됨");
+            stat_crit -= 30f;
+        }
+
+
         stat_critdmg = 1.5f + gear_critdmg + buff_critdmg + ability_critdmg +
                        equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.critdmgper) +
                        pm.GetPassiveStat(Passivemanager.PassiveStatEnum.critdmgup) +

@@ -98,7 +98,6 @@ public class dpsmanager : MonoBehaviour
 
     public void EndDps()
     {
-        //DPSPanel.SetActive(true);
         Debug.Log("DPS³¡");
         isdpson = false;
         DPSButton.SetActive(false);
@@ -130,9 +129,15 @@ public class dpsmanager : MonoBehaviour
     public void AddDps(attacktype type, decimal dmg, string id,int atkcount)
     {
         if (type.Equals(attacktype.Length))
+        {
             return;
-        if(second + breaktime == 0)
+        }
+
+        if (second + breaktime == 0 && !Battlemanager.Instance.isbattle)
+        {
             return;
+        }
+
         TotalDmg += dmg;
         TotalDPSDmg = TotalDmg / (breaktime + second == 0 ? 1 : (decimal)(second + breaktime));
         TotalDmgText.text = convertNumber(TotalDmg); //  TotalDmg.ToString("N0");

@@ -207,6 +207,8 @@ public class WorldBossSlot : MonoBehaviour
                 WorldBossManager.Instance.SetDropDataDropId(WorldBossDB.Instance.Find_id(bossid).mondropid);
                 WorldBossManager.Instance.rewardtimetext.Refresh();
                 RewardObj.SetActive(false);
+                LogManager.Log_CrystalEarn("월드보스레이드");
+
             }
         }
         else

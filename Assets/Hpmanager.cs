@@ -186,7 +186,8 @@ public class Hpmanager : MonoBehaviour
     public void HealAll()
     {
         CurHp = MaxHp;
-        CurMp += MaxMp;
+        CurMp = MaxMp;
+        isdeath = false;
         RefreshHp();
     }
     public void MakeZero()
@@ -303,6 +304,56 @@ public class Hpmanager : MonoBehaviour
             Soundmanager.Instance.PlayerSound(sound);
         }
 
+
+        switch (MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage).maptype)
+        {
+            //파ㅣ티레이ㅐ드
+            case "12":
+                if (isenemy)
+                {
+                    //보스전
+                    if (mapmanager.Instance.BossPenalty[3].activeSelf)
+                    {
+                        if (attacktype == dpsmanager.attacktype.물리스킬공격)
+                        {
+                            dmg -= dmg * 0.3m;
+                        }
+                    }
+
+                    //보스전
+                    if (mapmanager.Instance.BossPenalty[4].activeSelf)
+                    {
+                        if (attacktype == dpsmanager.attacktype.상태이상)
+                        {
+                            dmg -= dmg * 0.3m;
+                        }
+                    }
+
+                    //보스전
+                    if (mapmanager.Instance.BossPenalty[0].activeSelf)
+                    {
+                        //피해 30% 감고
+                        dmg -= dmg * 0.3m;
+                    }
+
+                    //보스전
+                    if (PartyRaidBattlemanager.Instance.battledata.playerBuff[0] != 0)
+                    {
+                        decimal plus = PartyRaidBattlemanager.Instance.battledata.playerBuff[0] * 0.07m;
+                    }
+                    //보스전
+                    if (mapmanager.Instance.BossPenalty[5].activeSelf)
+                    {
+                        if (mapmanager.Instance.BreakLock.activeSelf)
+                        {
+                            dmg = 0;
+                            iscrit = false;
+                        }
+                    }
+                }
+                break;
+        }
+
         if (dotnum != -1)
         {
             if (iscrit)
@@ -367,20 +418,76 @@ public class Hpmanager : MonoBehaviour
         //DPS추가
         if (dpsmanager.Instance.isdpson && dpsmanager.Instance.DPSButton.activeSelf)
         {
-            dpsmanager.Instance.AddDps(attacktype,dmg,dpsid,atkcount);
+            if (!dmg.Equals(0))
+                dpsmanager.Instance.AddDps(attacktype, dmg, dpsid, atkcount);
         }
 
-        //라면
-        if (isenemy)
-        {
-        //    Debug.Log("피해량 계산 전 " +dmg);
-           // dmg = dmg + (dmg * );
-//            Debug.Log("피해량 계산 후 " +dmg);
-        }
-        
-        
+
         switch (MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage).maptype)
         {
+            //파ㅣ티레이ㅐ드
+               case "12":
+                   CurHp -= dmg;
+                   Debug.Log("피해를 받았다.");
+                if (CurHp <= 0 && !isdeath)
+                {
+                    isdeath = true;
+                    CurHp = 0;
+
+                    //적이라면
+                    if (isenemy)
+                    {
+                        // achievemanager.Instance.AddCount(Acheves.레이드격파);
+                        //현재 점수가 같다면. 처음으로 간다.
+                        EnemySpawnManager.Instance.NowStageindex = 0;
+                        EnemySpawnManager.Instance.spawnedmonstercur = 0;
+                        
+                      
+                        //메인보스 피해 저장
+                        if (PartyRaidRoommanager.Instance.partyroomdata.nowmap.Equals(PlayerBackendData.Instance
+                                .nowstage))
+                        {
+                            //보스방이면
+                            //TotalDmg
+                            PartyraidChatManager.Instance.Chat_MainBossRaidFinish(dpsmanager.Instance.TotalDmg);
+                            Debug.Log("피해넣기"+dpsmanager.Instance.TotalDmg);
+                            dpsmanager.Instance.EndDps();
+                        }
+                        else
+                        {
+                            PartyraidChatManager.Instance.Chat_MiddleRaidClear();
+                        }
+                        
+                        PlayerBackendData.Instance.spawncount = mapmanager.Instance.savespawncount;
+                        mapmanager.Instance.LocateMap(mapmanager.Instance.savemapid);
+                        //클리어 했다.
+                        PartyRaidRoommanager.Instance.PartyradPanel.Show(false);
+                        Savemanager.Instance.SaveAchieveDirect();
+                        Savemanager.Instance.Save();
+                    }
+                    else
+                    {
+                        //메인보스 피해 저장
+                        if (PartyRaidRoommanager.Instance.partyroomdata.nowmap.Equals(PlayerBackendData.Instance
+                                .nowstage))
+                        {
+                            //보스방이면
+                            //TotalDmg
+                            PartyraidChatManager.Instance.Chat_MainBossRaidFinish(dpsmanager.Instance.TotalDmg);
+                            dpsmanager.Instance.EndDps();
+                        }
+                        else
+                        {
+                            PartyraidChatManager.Instance.Chat_MiddleRaidFail();
+                        }
+                        dpsmanager.Instance.DPSButton.SetActive(false);
+                        dpsmanager.Instance.DpsPanel.gameObject.SetActive(false);
+                        PlayerBackendData.Instance.spawncount = mapmanager.Instance.savespawncount;
+                        mapmanager.Instance.LocateMap(mapmanager.Instance.savemapid);
+                        //alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI2/사망함"), alertmanager.alertenum.일반);
+                    }
+                }
+                break;
             case "11":
                 if (isenemy)
                 {
@@ -717,7 +824,7 @@ public class Hpmanager : MonoBehaviour
                                         mondropmanager.Instance.Mon_DropItemMaxHowmanyboss,
                                         mondropmanager.Instance.Mon_DropItemPercentboss);
                                     uimanager.Instance.ShowSuccAdventureLv();
-
+                                    LogManager.Log_CrystalEarn("승급");
                                     //가이드 퀘스트
                                     Tutorialmanager.Instance.CheckTutorial("adlvup");
                                     Tutorialmanager.Instance.CheckTutorial("adlvup3");

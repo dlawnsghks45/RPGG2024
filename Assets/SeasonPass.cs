@@ -264,6 +264,11 @@ public class SeasonPass : MonoBehaviour
                 Savemanager.Instance.SaveMoneyCashDirect();
                 Savemanager.Instance.Save();
                 alertmanager.Instance.NotiCheck_Pass();
+                LogManager.Log_CrystalEarn("시즌패스보상");
+            }
+            else
+            {
+                Application.Quit();
             }
         });
 
