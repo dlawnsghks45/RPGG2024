@@ -437,6 +437,33 @@ public class petmanager : MonoBehaviour
         });
     }
 
+    public void SavePet()
+    {
+        
+        PlayerBackendData userData = PlayerBackendData.Instance;
+        Param paramEquip = new Param();
+        
+        paramEquip.Add("CollectionNew", userData.RenewalCollectData);
+        paramEquip.Add("PetData", userData.PetData);
+        paramEquip.Add("PetCount", userData.PetCount);
+        paramEquip.Add("nowPetid", userData.nowPetid);
+        if (PlayerBackendData.Instance.nowPetid != "")
+        {
+            paramEquip.Add("nowPetData", userData.PetData[userData.nowPetid]);
+        }
+        Where where = new Where();
+        where.Equal("owner_inDate", PlayerBackendData.Instance.playerindate);
+
+        SendQueue.Enqueue(Backend.GameData.Update, "PlayerData", where, paramEquip, (callback) =>
+        {
+            // 이후 처리
+            if (callback.IsSuccess())
+            {
+            
+            }
+        });
+    }
+
     public GameObject openExitobj;
     public GameObject openbuyobj;
     public UIToggle[] Toggles;

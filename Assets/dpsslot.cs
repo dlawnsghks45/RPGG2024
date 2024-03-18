@@ -67,10 +67,11 @@ public class dpsslot : MonoBehaviour
 
                     break;
                 case dpsmanager.attacktype.특수효과:
+                    string ekid = dpsdata.id[1..];
                     DPSCount.text = dpsdata.count.ToString("N0");
                     TypeImage.color = Color.green;
                     DPSImage.enabled = false;
-                    string ekid = dpsdata.id[1..];
+//                    Debug.Log(ekid);
                     DPSName.text = Inventory.GetTranslate(EquipSkillDB.Instance.Find_id(ekid).name);
                   //  DAMAGE.text = $"{dpsmanager.convertNumber(dpsdata.totaldmg)}\n({dpsmanager.convertNumber(dpsdata.totaldmg/dpsdata.count)})";
 

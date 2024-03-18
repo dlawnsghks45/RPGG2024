@@ -231,7 +231,59 @@ public class Battlemanager : MonoBehaviour
    
    void equipskillbasicattack(Enemy target)
     {
-     
+        //적혼의 건틀릿
+        if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6141) != 0) 
+        {
+            
+            equipskillmanager.Instance.showequipslots("1312",
+                equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6141_rare)
+                    .ToString("N0"),
+                equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6141_lv).ToString("N0"));
+            bool iscrit1 = Random.Range(0, 101) <= mainplayer.stat_crit ? true : false;
+
+            Battlemanager.Instance.mainplayer.buffmanager.AddStack(1);
+            if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6159) > 0)
+            {
+                target.hpmanager.TakeDamage(dpsmanager.attacktype.특수효과,"E1312",
+                    (decimal)(mainplayer.stat_atk *
+                              equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6141)),
+                    iscrit1, mainplayer.stat_critdmg, "Attack/Magic/Fire3", 0, "Fire11");
+                if (Battlemanager.Instance.mainplayer.buffmanager.IsMaxStack())
+                {
+                    equipskillmanager.Instance.showequipslots("1312_2", equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6141_rare).ToString(),"10");
+                    bool iscrit = Random.Range(0, 101) <= mainplayer.stat_crit ? true : false;
+                    decimal totaldmg = (decimal)mainplayer.stat_atk *
+                                       (decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6141_2);
+                    Enemy enemy = GetTarget();
+                
+                    enemy.hpmanager.TakeDamage(dpsmanager.attacktype.특수효과,"E1312_2",totaldmg*2m, iscrit, mainplayer.stat_critdmg, "", 0, "Fire12");
+                    // ShootArrow_MainPlayer("Water1", enemy.hpmanager);
+                }
+            }
+            else
+            {
+                target.hpmanager.TakeDamage(dpsmanager.attacktype.특수효과,"E1312",
+                    (decimal)(mainplayer.stat_atk *
+                              equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6141)),
+                    iscrit1, mainplayer.stat_critdmg, "Attack/Magic/Fire3", 0, "Fire9");
+              
+                if (Battlemanager.Instance.mainplayer.buffmanager.IsMaxStack())
+                {
+                    equipskillmanager.Instance.showequipslots("1312_3", equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6141_rare).ToString(),"10");
+                    bool iscrit = Random.Range(0, 101) <= mainplayer.stat_crit ? true : false;
+                    decimal totaldmg = (decimal)mainplayer.stat_atk *
+                                       (decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6141_2);
+                    Enemy enemy = GetTarget();
+                
+                    enemy.hpmanager.TakeDamage(dpsmanager.attacktype.특수효과,"E1312_3",totaldmg, iscrit, mainplayer.stat_critdmg, "", 0, "Fire10");
+                    // ShootArrow_MainPlayer("Water1", enemy.hpmanager);
+                }
+            }
+            
+       
+        }
+        
+        
         //멸화도
         if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.legendaggerdmg) != 0)
         {
@@ -248,6 +300,25 @@ public class Battlemanager : MonoBehaviour
                 iscrit, mainplayer.stat_critdmg, "Attack/Magic/Fire3", 0, "Slash2");
             //   DamageManager.Instance.ShowEffect(NowTarget.hpmanager.Effecttrans,"Slash6");
         }
+        
+        //블러드커터
+        if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6144) != 0)
+        {
+            //마나드레인이라면
+            //찬다
+            equipskillmanager.Instance.showequipslots("1315",
+                equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6144_rare)
+                    .ToString("N0"),
+                equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6144_lv).ToString("N0"));
+            bool iscrit = Random.Range(0, 101) <= mainplayer.stat_crit ? true : false;
+            target.hpmanager.TakeDamage(dpsmanager.attacktype.특수효과,"E1315",
+                (decimal)(mainplayer.stat_atk *
+                          equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6144)),
+                iscrit, mainplayer.stat_critdmg, "Attack/Magic/Fire3", 0, "Moon1");
+            //   DamageManager.Instance.ShowEffect(NowTarget.hpmanager.Effecttrans,"Slash6");
+        }
+        
+        
         //강타
         if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.smitedmg) != 0)
         {
@@ -281,7 +352,22 @@ public class Battlemanager : MonoBehaviour
                 iscrit, mainplayer.stat_critdmg, "Attack/Magic/Fire3", 0, "Love");
             //   DamageManager.Instance.ShowEffect(NowTarget.hpmanager.Effecttrans,"Slash6");
         }
-        
+        //아폴론의 메이스
+        if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6148) != 0)
+        {
+            //마나드레인이라면
+            //찬다
+            equipskillmanager.Instance.showequipslots("1319",
+                equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6148_rare)
+                    .ToString("N0"),
+                equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6148_lv).ToString("N0"));
+            bool iscrit = Random.Range(0, 101) <= mainplayer.stat_crit ? true : false;
+            target.hpmanager.TakeDamage(dpsmanager.attacktype.특수효과,"E1319",
+                (decimal)(mainplayer.stat_matk *
+                          equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6148)),
+                iscrit, mainplayer.stat_critdmg, "Attack/Magic/Fire3", 0, "Light3");
+            //   DamageManager.Instance.ShowEffect(NowTarget.hpmanager.Effecttrans,"Slash6");
+        }
         
         //레이즈의 분노
         if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.razerage) != 0)
@@ -360,7 +446,7 @@ public class Battlemanager : MonoBehaviour
     public void BasicAttackAndSkillCrit()
     {
         //블리자드 
-        if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.legenbowdmg) == 0) return;
+        if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.legenbowdmg) != 0) 
         {
             equipskillmanager.Instance.showequipslots("1204", equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.legenbowrare).ToString("N0"),"10");
             bool iscrit = Random.Range(0, 101) <= mainplayer.stat_crit ? true : false;
@@ -372,7 +458,33 @@ public class Battlemanager : MonoBehaviour
             ShootArrow_MainPlayer("Water1", enemy.hpmanager);
         }
         
-        
+        //드래곤 보우
+        if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6143) != 0) 
+        {
+            Battlemanager.Instance.mainplayer.buffmanager.AddStack(1);
+            equipskillmanager.Instance.showequipslots("1314", equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6143_rare).ToString("N0"),"10");
+            bool iscrit = Random.Range(0, 101) <= mainplayer.stat_crit ? true : false;
+            decimal totaldmg = (decimal)mainplayer.stat_atk *
+                               (decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6143);
+            Enemy enemy = GetTarget();
+            
+            enemy.hpmanager.TakeDamage(dpsmanager.attacktype.특수효과,"E1314",totaldmg, iscrit, mainplayer.stat_critdmg, "", 0, "Buff2");
+            ShootArrow_MainPlayer("Water1", enemy.hpmanager);
+            
+            if (Battlemanager.Instance.mainplayer.buffmanager.IsMaxStack())
+            {
+                equipskillmanager.Instance.showequipslots("1314_2", equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6143_rare).ToString("N0"),"10");
+                enemy = GetTarget();
+                
+                totaldmg = (decimal)mainplayer.stat_atk *
+                                   (decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6143_2);
+                
+                Debug.Log("발사");
+                enemy.hpmanager.TakeDamage(dpsmanager.attacktype.특수효과,"E1314_2",totaldmg, iscrit, mainplayer.stat_critdmg, "", 0, "Buff2");
+               // ShootArrow_MainPlayer("Water1", enemy.hpmanager);
+               ShootArrow_MainPlayer_NoANi2("arrow/1040", enemy.hpmanager);
+            }
+        }
     }
     
     // ReSharper disable Unity.PerformanceAnalysis
@@ -460,7 +572,16 @@ public class Battlemanager : MonoBehaviour
             break;
         }
     }
-
+    public void ShootArrow_MainPlayer_NoANi2(string arrowpath, Hpmanager EnemyTransform)
+    {
+        foreach (var t in mainplayer.Arrow.Where(t => !t.gameObject.activeSelf))
+        {
+            //  if(mainplayer.Arrow[i].arrowsprite)
+            t.SetSprite(SpriteManager.Instance.GetSprite(arrowpath), 22, 2.2f, -135);
+            t.SetArrow(mainplayer.ArrowPos, EnemyTransform,-135);
+            break;
+        }
+    }
     public void ShootArrow_MainPlayer(Skillslot skilldata, Hpmanager EnemyTransform)
     {
         foreach (var t in mainplayer.AniArrow.Where(t => !t.gameObject.activeSelf))

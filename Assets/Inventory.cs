@@ -1040,6 +1040,9 @@ public class Inventory : MonoBehaviour
                     EquipSlots[nowsettype].data.KeyId1].IsEquip = false;
             }
         }
+        
+    
+        
 
         data.IsEquip = true;
         EquipSlots[nowsettype].SetItem(this.data);

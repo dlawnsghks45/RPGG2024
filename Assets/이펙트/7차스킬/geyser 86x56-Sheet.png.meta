@@ -115,7 +115,511 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: geyser 86x56-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 86
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecbe8af9f988aad4280eb5a35420206c
+      internalID: 1239620142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: geyser 86x56-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 224
+        width: 86
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afe62d56a7cbbb243b419f62c6142aea
+      internalID: -1812015565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: geyser 86x56-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 224
+        width: 86
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4404903f712a5a498caf897e9975278
+      internalID: -1023616430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: geyser 86x56-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 224
+        width: 86
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1675062dfc61f4f4c84c5261c5316c75
+      internalID: -1292138654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: geyser 86x56-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 224
+        width: 86
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50dd8979b93a7bc45970d91cd4f048a8
+      internalID: 303994006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: geyser 86x56-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 168
+        width: 86
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d089cc456c88524bb9cf42720676c2c
+      internalID: 1545653727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: geyser 86x56-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 168
+        width: 86
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f428ca48d46238243991a89575385e2d
+      internalID: 1969320054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: geyser 86x56-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 168
+        width: 86
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d6d283e9fbf08047a233b771cb0733a
+      internalID: -1264186141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: geyser 86x56-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 168
+        width: 86
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c040bd0960e5a24398face002791896
+      internalID: 1082250470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: geyser 86x56-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 168
+        width: 86
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a9ca4dc7c8a5714b94bfbf19c9cc48b
+      internalID: -797497623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: geyser 86x56-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112
+        width: 86
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4dc9daa9da5d1d4b9ff10a9799dd022
+      internalID: 779766671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: geyser 86x56-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 112
+        width: 86
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b92e682dd9868b341994ae4035378b7c
+      internalID: 1295172636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: geyser 86x56-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 112
+        width: 86
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b7811d000c89c44abdd1b99e8c1fe5a
+      internalID: -311396840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: geyser 86x56-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 112
+        width: 86
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efd9179b4852d9e4191b4c221cc264dd
+      internalID: 1700216878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: geyser 86x56-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 112
+        width: 86
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11dd674c49a89c84db11e011be1d8415
+      internalID: 93258883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: geyser 86x56-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 56
+        width: 86
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a21ca6f7cbbab0643a34c28ace7fbe4e
+      internalID: 958293773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: geyser 86x56-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 56
+        width: 86
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3839cb000644276439ef8384742d9836
+      internalID: -1805746513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: geyser 86x56-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 56
+        width: 86
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f57ea628abcea524189db76c2bdea9b3
+      internalID: 364451702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: geyser 86x56-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 56
+        width: 86
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7587095a56e4eb542be180e48a72ca9b
+      internalID: -8867556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: geyser 86x56-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 56
+        width: 86
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d799ec0a86fafd6498f1cd176397b795
+      internalID: 1796287314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: geyser 86x56-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 86
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9734c883a92c20c4cbe310feb101b9d8
+      internalID: 723786328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: geyser 86x56-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 0
+        width: 86
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d74b60fbdcbbf5744862cecb06e1d50e
+      internalID: -49335328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: geyser 86x56-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 0
+        width: 86
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6016170c2e1e3b40a14dd6f22cbd493
+      internalID: -464036654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: geyser 86x56-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 0
+        width: 86
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdddfc1804f0844429ddbc86486b576e
+      internalID: 1776331593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +630,31 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      geyser 86x56-Sheet_0: 1239620142
+      geyser 86x56-Sheet_1: -1812015565
+      geyser 86x56-Sheet_10: 779766671
+      geyser 86x56-Sheet_11: 1295172636
+      geyser 86x56-Sheet_12: -311396840
+      geyser 86x56-Sheet_13: 1700216878
+      geyser 86x56-Sheet_14: 93258883
+      geyser 86x56-Sheet_15: 958293773
+      geyser 86x56-Sheet_16: -1805746513
+      geyser 86x56-Sheet_17: 364451702
+      geyser 86x56-Sheet_18: -8867556
+      geyser 86x56-Sheet_19: 1796287314
+      geyser 86x56-Sheet_2: -1023616430
+      geyser 86x56-Sheet_20: 723786328
+      geyser 86x56-Sheet_21: -49335328
+      geyser 86x56-Sheet_22: -464036654
+      geyser 86x56-Sheet_23: 1776331593
+      geyser 86x56-Sheet_3: -1292138654
+      geyser 86x56-Sheet_4: 303994006
+      geyser 86x56-Sheet_5: 1545653727
+      geyser 86x56-Sheet_6: 1969320054
+      geyser 86x56-Sheet_7: -1264186141
+      geyser 86x56-Sheet_8: 1082250470
+      geyser 86x56-Sheet_9: -797497623
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

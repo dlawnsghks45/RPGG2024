@@ -20,7 +20,7 @@ public class achievementslot : MonoBehaviour
     public itemiconslot Reward;
     public Text Achname;
     public gaugebarslot gauge;
-    public GameObject[] RewardButtons; //0Àº ÁøÇà //1Àº ¿Ï·á
+    public GameObject[] RewardButtons; //0ì€ ì§„í–‰ //1ì€ ì™„ë£Œ
    
 
     private void Start()
@@ -95,7 +95,7 @@ public class achievementslot : MonoBehaviour
                 .Save();
         }
 //       Debug.Log(data.Id);
-        //½Â±ÞÀÌ¸é
+        //ìŠ¹ê¸‰ì´ë©´
         if (AchievementDB.Instance.Find_id(data.Id).type.Equals("adlvup"))
         {
             if (PlayerBackendData.Instance.GetAdLv() >= int.Parse(AchievementDB.Instance.Find_id(data.Id).count))
@@ -174,14 +174,14 @@ public class achievementslot : MonoBehaviour
         if (data.Curcount < data.Maxcount) return;
         if (AchievementDB.Instance.Find_id(data.Id).nextlevel != "0" && data.Achievetype == "forever")
         {
-//            Debug.Log("¿Ï·áÇß´Ù");
+//            Debug.Log("ì™„ë£Œí–ˆë‹¤");
             Inventory.Instance.AddItem(Reward.id, (int)Reward.count, isnotcsave);
 
             if (achievemanager.Instance.ispanel)
                 achievemanager.Instance.Additem(Reward.id, (int)Reward.count);
             
             data.LevelUp(isnotcsave);
-            //¿µ±¸ ¾÷ÀûÀÌ¸é
+            //ì˜êµ¬ ì—…ì ì´ë©´
             Refresh();
         }
         else if (AchievementDB.Instance.Find_id(data.Id).subtype == "daily")
@@ -189,7 +189,7 @@ public class achievementslot : MonoBehaviour
             Inventory.Instance.AddItem(Reward.id, (int)Reward.count, !isnotcsave);
             if (achievemanager.Instance.ispanel)
                 achievemanager.Instance.Additem(Reward.id, (int)Reward.count);
-            //¿µ±¸ ¾÷ÀûÀÌ¸é
+            //ì˜êµ¬ ì—…ì ì´ë©´
             data.Isfinish = true;
             Refresh();
         }

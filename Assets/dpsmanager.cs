@@ -13,7 +13,7 @@ using UnityEngine.UI;
 
 public class dpsmanager : MonoBehaviour
 {
-    //½Ì±ÛÅæ¸¸µé±â.
+    //????æ¸¸???.
     private static dpsmanager _instance = null;
 
     public static dpsmanager Instance
@@ -34,11 +34,11 @@ public class dpsmanager : MonoBehaviour
     }
 
     public GameObject DPSButton;
-//µµÆ®·ù
+//?????
     public Sprite[] spritedot;
 
     public bool isdpson;
-    public bool isrec; //ÀúÀå½ÃÀÛ
+    public bool isrec; //???????
 
 
     public float maxtime;
@@ -51,12 +51,12 @@ public class dpsmanager : MonoBehaviour
 
 
 
-    //ÃÑÇÇÇØ·®
+    //???????
     public decimal TotalDmg = 0;
     public decimal TotalDPSDmg = 0;
     public float second;
 
-    //ÇÇÇØ·® ÆĞ³Î
+    //????? ?Ğ³?
     public Text TotalDmgText;
     public Text DPSDmgText;
     public Text TimeText;
@@ -75,13 +75,13 @@ public class dpsmanager : MonoBehaviour
 
 
 
-    //ÇÇÇØ·® µñ¼Å³Ê¸®
+    //????? ?????
     public Dictionary<string, DPS> Dps = new Dictionary<string, DPS>();
 
 
 
 
-    //ÇÇÇØ·® Ç¥½Ã
+    //????? ???
     public dpsslot[] dpsslots;
     public GameObject DPSPanel;
 
@@ -98,12 +98,12 @@ public class dpsmanager : MonoBehaviour
 
     public void EndDps()
     {
-        Debug.Log("DPS³¡");
+        Debug.Log("DPS??");
         isdpson = false;
         DPSButton.SetActive(false);
         if (isrec)
         {
-            //ÀúÀå ÆĞ³Î ¿­¸²
+            //???? ?Ğ³? ????
             savepanel.SetActive(true);
         }
     }
@@ -125,7 +125,7 @@ public class dpsmanager : MonoBehaviour
         TotalDmgText.text = "0";
     }
 
-    //±âº»°ø°İ
+    //??????
     public void AddDps(attacktype type, decimal dmg, string id,int atkcount)
     {
         if (type.Equals(attacktype.Length))
@@ -144,22 +144,32 @@ public class dpsmanager : MonoBehaviour
         DPSDmgText.text = convertNumber(TotalDPSDmg); //.ToString("N0");
         if (Dps.ContainsKey(id))
         {
-            //¾ÆÀÌµğ°¡ ÀÖ´Ù¸é
-            //ÇØ´ç¾ÆÀÌµğ¿¡ Ãß°¡ 
+           
+            //????? ????
+            //??????? ??? 
             Dps[id].count++;
             Dps[id].countdivide = atkcount;
-            Dps[id].totaldmg += decimal.Truncate(dmg); //ÇÇÇØ Ãß°¡ 
-            Dps[id].dps = decimal.Truncate((Dps[id].totaldmg / (decimal)(second + breaktime)));
+            Dps[id].totaldmg += decimal.Truncate(dmg); //???? ??? 
+//            Debug.Log(id);
+            if ((decimal)(second + breaktime) <= 0)
+            {
+                Dps[id].dps = decimal.Truncate(Dps[id].totaldmg);
+            }
+            else
+            {
+                Dps[id].dps = decimal.Truncate((Dps[id].totaldmg / (decimal)(second + breaktime)));
+
+            }
             Dps[id].nowsecond = second;
         }
         else
         {
             DPS data = new DPS();
             data.id = id;
-            data.totaldmg = decimal.Truncate(dmg); //ÃÖÃÊ µî·ÏÀÌ´Ï
+            data.totaldmg = decimal.Truncate(dmg); //???? ??????
             data.dps = decimal.Truncate((data.totaldmg / (breaktime + second == 0 ? 1 : (decimal)(second + breaktime))));
             data.type = type;
-            data.count = 1; //1È¸ °ø°İÀÌ´Ï
+            data.count = 1; //1? ???????
             data.countdivide = atkcount;
             data.nowsecond = second;
 
@@ -172,7 +182,7 @@ public class dpsmanager : MonoBehaviour
     public void ShowDpsList(Dictionary<string, DPS> DpsData, dpsslot[] dpsslotss)
     {
 
-        DpsData = SortDictionary(DpsData); //Á¤·ÄÇØ¼­ ¹Ş´Â´Ù
+        DpsData = SortDictionary(DpsData); //??????? ??Â´?
         int num = 0;
         foreach (var VARIABLE in DpsData)
         {
@@ -191,13 +201,13 @@ public class dpsmanager : MonoBehaviour
         MapDB.Row mapdata_Now = MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage);
         if (mapdata_Now.maptype != "0")
         {
-            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI/»ç³ÉÅÍ¸¸°¡´É"), alertmanager.alertenum.ÁÖÀÇ);
+            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI/ì‚¬ëƒ¥í„°ë§Œê°€ëŠ¥"), alertmanager.alertenum.ì£¼ì˜);
             return;
         }
 
         if (mapmanager.Instance.islocating)
         {
-            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI2/¸ÊÀÌµ¿ÁßºÒ°¡"), alertmanager.alertenum.ÁÖÀÇ);
+            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI2/ë§µì´ë™ì¤‘ë¶ˆê°€"), alertmanager.alertenum.ì£¼ì˜);
             return;
         }
 
@@ -220,23 +230,39 @@ public class dpsmanager : MonoBehaviour
 
     public static Dictionary<string, DPS> SortDictionary(Dictionary<string, DPS> dict)
     {
-        // ³»¸²Â÷¼øÀº ascendingÀ» descendingÀ¸·Î º¯°æ
+        // ?????????? ascending?? descending???? ????
         var sortVar = from item in dict
             orderby item.Value.totaldmg descending
             select item;
 
         return sortVar.ToDictionary(x => x.Key, x => x.Value);
     }
-
+/*
+ *
+ *
+ *public enum attacktype
+    {
+        ??????,
+        ???????????,
+        ???????????,
+        ?Ğ½??,
+        ???????,
+        ??????,
+        ??????,
+        Length
+    }
+ * 
+ */
+    
     public enum attacktype
     {
-        ±âº»°ø°İ,
-        ¹°¸®½ºÅ³°ø°İ,
-        ¸¶¹ı½ºÅ³°ø°İ,
-        ÆĞ½Ãºê,
-        »óÅÂÀÌ»ó,
-        Æ¯¼öÈ¿°ú,
-        ¾îºô¸®Æ¼,
+        ê¸°ë³¸ê³µê²©,
+        ë¬¼ë¦¬ìŠ¤í‚¬ê³µê²©,
+        ë§ˆë²•ìŠ¤í‚¬ê³µê²©,
+        íŠ¹ìˆ˜íš¨ê³¼,
+        ì–´ë¹Œë¦¬í‹°,
+        ìƒíƒœì´ìƒ,
+        íŒ¨ì‹œë¸Œ,
         Length
     }
 
@@ -252,8 +278,8 @@ public class dpsmanager : MonoBehaviour
         {
             string num = $"{price:# #### #### #### #### #### #### ####}".TrimStart().Replace(" ", ",");
 
-//        Debug.Log("ÇÇÇØ·®" + price);
-            //  Debug.Log("ÇÇÇØ·®num" + num);
+//        Debug.Log("?????" + price);
+            //  Debug.Log("?????num" + num);
         
             string[] unit = new string[] {  " ", "A", "B", "C", "D", "E" ,"F" ,"G"};
             string[] str = num.Split(',');
@@ -279,10 +305,10 @@ public class dpsmanager : MonoBehaviour
         {
             string num = $"{price:# #### #### #### #### #### #### ####}".TrimStart().Replace(" ", ",");
 
-//        Debug.Log("ÇÇÇØ·®" + price);
-            //  Debug.Log("ÇÇÇØ·®num" + num);
+//        Debug.Log("?????" + price);
+            //  Debug.Log("?????num" + num);
         
-            string[] unit = new string[] {  " ", "¸¸", "¾ï", "Á¶", "°æ", "ÇØ" ,"ÀÚ" ,"¾ç"};
+            string[] unit = new string[] {  " ", "ë§Œ", "ì–µ", "ì¡°", "ê²½", "í•´" ,"ì" ,"ì–‘"};
             string[] str = num.Split(',');
             string result = "";
             int cnt = str.Length;
@@ -328,16 +354,16 @@ public class dpsmanager : MonoBehaviour
 
     }
 
-//ÇÇÇØ ÀúÀå 
-//Àåºñ,·¹º§,´É·ÂÄ¡,½ºÅ³
-//ÃÑ ÇÇÇØ·®,´Ù¸¥ ÇÇÇØ·®µé , ½Ã°£ÃÊ,¹«·ÂÈ­ ½Ã°£ÃÊ
+//???? ???? 
+//???,????,????,???
+//?? ?????,??? ??????? , ?Ã°???,????? ?Ã°???
 
     public void Bt_SaveDps()
     {
         Timemanager.Instance.RefreshNowTIme();
         PlayerBackendData userData = PlayerBackendData.Instance;
-        //µ¥ÀÌÅÍ´Â 3½Ã°£¿¡ ÇÑ¹ø ÀúÀåµÈ´Ù.
-        //ÃÖ±Ù ÀúÀå½Ã°£À» ±âÁØÀ¸·Î Àâ´À´Ù.
+        //??????? 3?Ã°??? ??? ??????.
+        //??? ????Ã°??? ???????? ?????.
         Param param = new Param
         {
             { "level_train", userData.GetLv() },
@@ -355,21 +381,19 @@ public class dpsmanager : MonoBehaviour
             { "TrainAbility", userData.Abilitys }
         };
 
-        // key ÄÃ·³ÀÇ °ªÀÌ keyCodeÀÎ µ¥ÀÌÅÍ °Ë»ö
         Where where = new Where();
         where.Equal("owner_inDate", PlayerBackendData.Instance.playerindate);
         SendQueue.Enqueue(Backend.GameData.Update, "PlayerData", where, param, (callback) =>
         {
-            // ÀÌÈÄ Ã³¸®
             if (!callback.IsSuccess())
             {
-                alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI3/Çã¼ö¾Æºñ·©Å·µî·Ï½ÇÆĞ"), alertmanager.alertenum.ÀÏ¹İ);
+                alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI3/?í—ˆìˆ˜ì•„ë¹„ë­í‚¹ë“±ë¡ì‹¤íŒ¨"), alertmanager.alertenum.ì¼ë°˜);
                 return;
             }
 
-            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI3/Çã¼ö¾Æºñ·©Å·µî·Ï¼º°ø"), alertmanager.alertenum.ÀÏ¹İ);
+            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI3/?í—ˆìˆ˜ì•„ë¹„ë­í‚¹ë“±ë¡ì„±ê³µ"), alertmanager.alertenum.ì¼ë°˜);
             savepanel.gameObject.SetActive(false);
-            RankingManager.Instance.RankInsert(TotalDmg.ToString(), RankingManager.RankEnum.Çã¼ö¾Æºñ60);
+            RankingManager.Instance.RankInsert(TotalDmg.ToString(), RankingManager.RankEnum.í—ˆìˆ˜ì•„ë¹„60);
         });
     }
 }

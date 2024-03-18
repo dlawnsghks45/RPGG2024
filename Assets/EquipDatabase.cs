@@ -23,6 +23,7 @@ public class EquipDatabase : IEquatable<object>
     private int SmeltFailCount; //성공횟수
     private int EnchantNum; //현재강화
     private int EnchantFail; //강화실패
+    private int Alldmg; //피해증가
     private bool islock;
     private bool ishaveEquipSkill;
     private List<string> EquipSkill = new List<string>();
@@ -62,6 +63,15 @@ public class EquipDatabase : IEquatable<object>
             EnchantFail1 = 0;
         }
         
+        if (data.ContainsKey("Alldmg1"))
+        {
+            Alldmg1 = int.Parse(data["Alldmg1"].ToString());
+        }
+        else
+        {
+            Alldmg1 = 0;
+        }
+        
         
         MaxStoneCount1 = int.Parse(data["MaxStoneCount1"].ToString());
 
@@ -86,6 +96,7 @@ public class EquipDatabase : IEquatable<object>
         this.islock = islock;
         EnchantNum1 = enchantnum;
         EnchantFail1 = 0;
+        Alldmg1 = 0;
         IshaveEquipSkill = haveequipskill;
         this.EquipSkill = Equipskill;
     }
@@ -190,7 +201,18 @@ public class EquipDatabase : IEquatable<object>
 
         //ㅁㅈㅇㅈㅁㅇㅁ
 
-
+        //고유스킬넣기
+        if (equipdata.MinAllDmg != "0")
+        {
+            //특수효과가있다
+            //민
+            int alldmg = UnityEngine.Random.Range(int.Parse(equipdata.MinAllDmg), int.Parse(equipdata.MaxAllDmg)+1);
+            Alldmg1 = alldmg;
+        }
+        else
+        {
+            Alldmg1 = 0;
+        }
 
             //고유스킬넣기
             if (equipdata.SpeMehodP != "0")
@@ -496,6 +518,7 @@ public class EquipDatabase : IEquatable<object>
         EnchantNum1 = data.EnchantNum1;
         EnchantFail = data.EnchantFail1;
         EquipSkill1 = data.EquipSkill1;
+        Alldmg = data.Alldmg1;
         IshaveEquipSkill = data.IshaveEquipSkill;
         SmeltStatCount1 = data.SmeltStatCount1;
     }
@@ -513,6 +536,8 @@ public class EquipDatabase : IEquatable<object>
     public int SmeltFailCount1 { get => SmeltFailCount; set => SmeltFailCount = value; }
     public int EnchantNum1 { get => EnchantNum; set => EnchantNum = value; }
     public int EnchantFail1 { get => EnchantFail; set => EnchantFail = value; }
+
+    public int Alldmg1 { get => Alldmg; set => Alldmg = value; }
     public bool IshaveEquipSkill { get => ishaveEquipSkill; set => ishaveEquipSkill = value; }
     public List<string> EquipSkill1 { get => EquipSkill; set => EquipSkill = value; }
 
@@ -1796,6 +1821,13 @@ case 10:
             Inventory.Instance.StringWrite("\n");
         }
 
+        if (Alldmg1 != 0)
+        {
+            float max = float.Parse(data.MaxAllDmg);
+            Inventory.Instance.StringWrite(string.Format(Inventory.GetTranslate("Stat/피해 증가"), Alldmg1.ToString("N0")));
+            Inventory.Instance.StringWrite("\n");
+        }
+
         return Inventory.Instance.StringEnd();
     }
 
@@ -2037,7 +2069,7 @@ case 10:
         {
             float atkspd = float.Parse(data.atkspeed);
 
-            Inventory.Instance.StringWrite($"{Inventory.GetTranslate("Stat/공격속도기본")} : {atkspd:N0}");
+            Inventory.Instance.StringWrite($"{Inventory.GetTranslate("Stat/공격속도기본")} : {atkspd*100:N0}%");
 
             Inventory.Instance.StringWrite("\n");
             //장비를 장착중이라면 해당 장비와 스탯을 비교한다.
@@ -2048,7 +2080,7 @@ case 10:
             float atkspd = float.Parse(data.castspeed);
 
 
-            Inventory.Instance.StringWrite($"{Inventory.GetTranslate("Stat/시전속도기본")} : {atkspd:N0}");
+            Inventory.Instance.StringWrite($"{Inventory.GetTranslate("Stat/시전속도기본")} : {atkspd*100f:N0}%");
 
             Inventory.Instance.StringWrite("\n");
             //장비를 장착중이라면 해당 장비와 스탯을 비교한다.
@@ -2094,6 +2126,20 @@ case 10:
             float str = float.Parse(data.CritDmg);
 
             Inventory.Instance.StringWrite($"{Inventory.GetTranslate("Stat/치명타피해기본")} : {(str * 100f):N0}%");
+
+            Inventory.Instance.StringWrite("\n");
+        }
+        
+        //체력
+        if (data.MinAllDmg != "0")
+        {
+            float min = float.Parse(data.MinAllDmg);
+            float max = float.Parse(data.MaxAllDmg);
+
+            
+            //~가 있다
+            Inventory.Instance.StringWrite(
+                $"{Inventory.GetTranslate("Stat/피해 증가기본")} : {min:N0}% ~ {max:N0}%");
 
             Inventory.Instance.StringWrite("\n");
         }

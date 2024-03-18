@@ -48,7 +48,7 @@ public class CollectionRenewalManager : MonoBehaviour
          }
       }
 
-      //°³¼ö Ã¼Å© ¾È¸ÂÀ¸¸é ´Ã¸²
+      //ê°œìˆ˜ ì²´í¬ ì•ˆë§ìœ¼ë©´ ëŠ˜ë¦¼
       if (collections.Count < str.Count)
       {
          for (int i = 0; i < str.Count; i++)
@@ -60,7 +60,7 @@ public class CollectionRenewalManager : MonoBehaviour
          }
       }
 
-      //Á¦ÀÛ½½¸©º¸¿©ÁÖ±â
+      //ì œì‘ìŠ¬ë¦‡ë³´ì—¬ì£¼ê¸°
       for (int i = 0; i < collections.Count; i++)
       {
          if (str.Count > i)
@@ -91,7 +91,7 @@ public class CollectionRenewalManager : MonoBehaviour
       SubObj[num].SetActive(true);
    }
 
-   //ÀÀ
+   //ì‘
    public Image SelectImage;
    public Text SelectText;
    public Text SelectStat;
@@ -135,7 +135,7 @@ public class CollectionRenewalManager : MonoBehaviour
          $"{num.ToString()} / {CollectionRenewalDB.Instance.NumRows()}\n(<color=yellow>{(((float)num / CollectionRenewalDB.Instance.NumRows()) * 100f):N2}%)</color>";
       RefreshStat();
       StatText.text = $"+{Battlemanager.Instance.mainplayer.Stat_collection}";
-      //NotiÃ¼Å©
+      //Notiì²´í¬
       foreach (var t in alertmanager.Instance.Alert_Collect)
          t.SetActive(false);
       foreach (var t in NotiMain)
@@ -156,7 +156,7 @@ public class CollectionRenewalManager : MonoBehaviour
          {
             EquipItemDB.Row ed = EquipItemDB.Instance.Find_id(data.itemid);
             string type = ed.Type;
-            //Àåºñ
+            //ì¥ë¹„
             if (PlayerBackendData.Instance.GetTypeEquipment(type).Any(VARIABLE =>
                    VARIABLE.Value.Itemid.Equals(data.itemid) && !VARIABLE.Value.IsEquip && !VARIABLE.Value.IsLock))
             {
@@ -241,7 +241,7 @@ public class CollectionRenewalManager : MonoBehaviour
          }
          else
          {
-            //¾ÆÀÌÅÛ
+            //ì•„ì´í…œ
             if (PlayerBackendData.Instance.CheckItemCount(data.itemid) >= int.Parse(data.hw))
             {
                int a = int.Parse(data.type);
@@ -249,8 +249,8 @@ public class CollectionRenewalManager : MonoBehaviour
                if (NotiSub_Item[a].activeSelf)
                   continue;
 
-               NotiMain[0].SetActive(true); //¾ÆÀÌÅÛ
-               NotiSub_Item[a].SetActive(true); //´øÀü
+               NotiMain[0].SetActive(true); //ì•„ì´í…œ
+               NotiSub_Item[a].SetActive(true); //ë˜ì „
                MenuNoti.SetActive(true);
                if (!alertmanager.Instance.Alert_Menu.activeSelf)
                   alertmanager.Instance.Alert_Menu.SetActive(true);
@@ -297,14 +297,14 @@ public class CollectionRenewalManager : MonoBehaviour
          SelectText.text =
             $"{Inventory.GetTranslate(ItemdatabasecsvDB.Instance.Find_id(data.itemid).name)} X {data.hw}";
          SelectText.color = Inventory.Instance.GetRareColor(ItemdatabasecsvDB.Instance.Find_id(data.itemid).rare);
-         haveitem.text = string.Format(Inventory.GetTranslate("UI6/¼öÁı_º¸À¯"),
+         haveitem.text = string.Format(Inventory.GetTranslate("UI6/ìˆ˜ì§‘_ë³´ìœ "),
             PlayerBackendData.Instance.CheckItemCount(data.itemid));
 
       }
 
       if (PlayerBackendData.Instance.RenewalCollectData[int.Parse(data.num)])
       {
-         //¼öÁıÇÔ
+         //ìˆ˜ì§‘í•¨
          FinishButton.SetActive(false);
          AlreadyFinishButton.SetActive(true);
          SelectStat.text = string.Format(Inventory.GetTranslate("collectinfoone2/1"), data.stat);
@@ -312,7 +312,7 @@ public class CollectionRenewalManager : MonoBehaviour
       }
       else
       {
-         //¼öÁı¾ÈÇÔ
+         //ìˆ˜ì§‘ì•ˆí•¨
          FinishButton.SetActive(true);
          AlreadyFinishButton.SetActive(false);
          SelectStat.text = string.Format(Inventory.GetTranslate("collectinfoone2/1"), data.stat);
@@ -363,15 +363,15 @@ public class CollectionRenewalManager : MonoBehaviour
             Savemanager.Instance.SaveInventory();
             Savemanager.Instance.Save();
             SaveCollection_INven();
-            //·Î±×
+            //ë¡œê·¸
             PlayerData.Instance.RefreshPlayerstat();
             LogManager.CollectionLog(data.id, false, data.itemid);
 
          }
          else
          {
-            //¾ø´Ù
-            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI6/¼öÁı_¾øÀ½"), alertmanager.alertenum.ÁÖÀÇ);
+            //ì—†ë‹¤
+            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI6/ìˆ˜ì§‘_ì—†ìŒ"), alertmanager.alertenum.ì£¼ì˜);
             return;
          }
       }
@@ -406,8 +406,8 @@ public class CollectionRenewalManager : MonoBehaviour
 
       if (equipdatabase.Count == 0)
       {
-         //¼öÁı ºÒ°¡
-         alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI6/¼öÁı_¾øÀ½"), alertmanager.alertenum.ÁÖÀÇ);
+         //ìˆ˜ì§‘ ë¶ˆê°€
+         alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI6/ìˆ˜ì§‘_ì—†ìŒ"), alertmanager.alertenum.ì£¼ì˜);
          return;
       }
 
@@ -516,7 +516,7 @@ public class CollectionRenewalManager : MonoBehaviour
       Param paramB = new Param
       {
          { "CollectionNew", PlayerBackendData.Instance.RenewalCollectData },
-         //°¡¹æ
+         //ê°€ë°©
          { "equipment_Weapon", userData.Equiptment0 },
          { "equipment_SubWeapon", userData.Equiptment1 },
          { "equipment_Helmet", userData.Equiptment2 },

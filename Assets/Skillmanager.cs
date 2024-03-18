@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Skillmanager : MonoBehaviour
 {
-    //½Ì±ÛÅæ¸¸µé±â.
+    //ì‹±ê¸€í†¤ë§Œë“¤ê¸°.
     private static Skillmanager _instance = null;
     public static Skillmanager Instance
     {
@@ -77,10 +77,10 @@ public class Skillmanager : MonoBehaviour
 
     }
 
-    #region ¹öÇÁ »èÁ¦°ü·Ã
+    #region ë²„í”„ ì‚­ì œê´€ë ¨
     void OffAtkPercentBuff()
     {
-        //Á¦ÀÏ ¸ÕÀú ³ÖÀº °ÍÀÌ ³¡³ª´Ï±ñ ¸ÕÀú ³¡³¿.
+        //ì œì¼ ë¨¼ì € ë„£ì€ ê²ƒì´ ëë‚˜ë‹ˆê¹ ë¨¼ì € ëëƒ„.
         mainplayer.buff_atkPercent = 0;
         mainplayer.buffmanager.EndBuff(0);
         PlayerData.Instance.RefreshPlayerstat();
@@ -88,7 +88,7 @@ public class Skillmanager : MonoBehaviour
     }
     void OffMAtkPercentBuff()
     {
-        //Á¦ÀÏ ¸ÕÀú ³ÖÀº °ÍÀÌ ³¡³ª´Ï±ñ ¸ÕÀú ³¡³¿.
+        //ì œì¼ ë¨¼ì € ë„£ì€ ê²ƒì´ ëë‚˜ë‹ˆê¹ ë¨¼ì € ëëƒ„.
         mainplayer.buffmanager.EndBuff(1);
 
         mainplayer.buff_matkPercent = 0;
@@ -97,7 +97,7 @@ public class Skillmanager : MonoBehaviour
     
     void OffCritBuff()
     {
-        //Á¦ÀÏ ¸ÕÀú ³ÖÀº °ÍÀÌ ³¡³ª´Ï±ñ ¸ÕÀú ³¡³¿.
+        //ì œì¼ ë¨¼ì € ë„£ì€ ê²ƒì´ ëë‚˜ë‹ˆê¹ ë¨¼ì € ëëƒ„.
         mainplayer.buff_crit = 0;
         mainplayer.buffmanager.EndBuff(2);
         PlayerData.Instance.RefreshPlayerstat();
@@ -105,7 +105,7 @@ public class Skillmanager : MonoBehaviour
     
     void OffCritDmgBuff()
     {
-        //Á¦ÀÏ ¸ÕÀú ³ÖÀº °ÍÀÌ ³¡³ª´Ï±ñ ¸ÕÀú ³¡³¿.
+        //ì œì¼ ë¨¼ì € ë„£ì€ ê²ƒì´ ëë‚˜ë‹ˆê¹ ë¨¼ì € ëëƒ„.
         mainplayer.buffmanager.EndBuff(3);
 
         mainplayer.buff_critdmg = 0;
@@ -156,11 +156,11 @@ public class Skillmanager : MonoBehaviour
         decimal totaldmg;
         switch (skilldata.Skilltype)
         {
-            //¹öÇÁ
+            //ë²„í”„
             case "Buff":
                 break;
 
-            //µµÆ® ÀÍ½ºÇÃ·ÎÀü
+            //ë„íŠ¸ ìµìŠ¤í”Œë¡œì „
             case "DotAttack":
                 Soundmanager.Instance.PlayerSound(skilldata.sound);
                 
@@ -181,52 +181,52 @@ public class Skillmanager : MonoBehaviour
                 switch (skilldata.skilldata.BuffType)
                 {
                        
-                    //µ¶°¨Àü
+                    //ë…ê°ì „
                     case "A":
                          admg = targethp.Dot_Stat[2] * targethp.Dot_Stack[2];
                         admg = admg *(decimal)skilldata.Matk;
                          bdmg = targethp.Dot_Stat[3] * targethp.Dot_Stack[3];
                         bdmg = bdmg *(decimal)skilldata.Matk;
                         totaldmg = admg+bdmg;
-//                        Debug.Log("ÇÇÇØ´Â" + totaldmg);
-                       //  Debug.Log(totaldmg + "ºí·ç ÇÇÇØ");
+//                        Debug.Log("í”¼í•´ëŠ”" + totaldmg);
+                       //  Debug.Log(totaldmg + "ë¸”ë£¨ í”¼í•´");
                          if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.dotexplosiondmg7) >
                              0)
                          {
                              totaldmg += totaldmg * 0.5m;
-                         //    Debug.Log(totaldmg + "ºí·ç ÇÇÇØÁøÈ­");
+                         //    Debug.Log(totaldmg + "ë¸”ë£¨ í”¼í•´ì§„í™”");
                          }
                         break;
-                    //È­»óÃâÇ÷
+                    //í™”ìƒì¶œí˜ˆ
                     case "B":
                          admg = targethp.Dot_Stat[0] * targethp.Dot_Stack[0];
                         admg = admg *(decimal)skilldata.Matk;
                          bdmg = targethp.Dot_Stat[1] * targethp.Dot_Stack[1];
                         bdmg = bdmg *(decimal)skilldata.Matk;
                         totaldmg = admg+bdmg;
-                      //   Debug.Log(totaldmg + "·¹µå ÇÇÇØ");
+                      //   Debug.Log(totaldmg + "ë ˆë“œ í”¼í•´");
                          if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.dotexplosiondmg7) >
                              0)
                          {
                              totaldmg += totaldmg * 0.5m;
-                       //      Debug.Log(totaldmg + "·¹µå ÇÇÇØÁøÈ­");
+                       //      Debug.Log(totaldmg + "ë ˆë“œ í”¼í•´ì§„í™”");
                          }
-                       // Debug.Log("ÇÇÇØ´Â" + totaldmg);
+                       // Debug.Log("í”¼í•´ëŠ”" + totaldmg);
 
                         break;
-                    //ÀúÁÖ                    
+                    //ì €ì£¼                    
                     case "C":
                         bdmg = targethp.Dot_Stat[4] * targethp.Dot_Stack[4];
                         bdmg = bdmg *(decimal)skilldata.Matk;
                         totaldmg = admg+bdmg;
-                     //   Debug.Log(totaldmg + "ÆÛÇÃ ÇÇÇØ");
+                     //   Debug.Log(totaldmg + "í¼í”Œ í”¼í•´");
                         if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.dotexplosiondmg7) >
                             0)
                         {
                             totaldmg += totaldmg * 0.5m;
-                        //    Debug.Log(totaldmg + "ÆÛÇÃ ÇÇÇØÁøÈ­");
+                        //    Debug.Log(totaldmg + "í¼í”Œ í”¼í•´ì§„í™”");
                         }
-//                        Debug.Log("ÇÇÇØ´Â" + totaldmg);
+//                        Debug.Log("í”¼í•´ëŠ”" + totaldmg);
                         break;
                     case "D":
                         admg = targethp.Dot_Stat[0] * targethp.Dot_Stack[0];
@@ -240,39 +240,53 @@ public class Skillmanager : MonoBehaviour
                         edmg = targethp.Dot_Stat[4] * targethp.Dot_Stack[4];
                         edmg = edmg *(decimal)skilldata.Matk;
                         totaldmg = admg+bdmg+cdmg+ddmg+edmg;
-//                        Debug.Log(totaldmg + "Æ÷ÀÌÁğ ½ºÆ®¸² ÇÇÇØ");
+//                        Debug.Log(totaldmg + "í¬ì´ì¦Œ ìŠ¤íŠ¸ë¦¼ í”¼í•´");
                         break;
                 }
-                
-//              Debug.Log("Æø¹ß ÇÇÇØÀü"  + totaldmg);
-                //7Â÷ ³×Å© ½ºÅ³
+
+                decimal dmgup = 0m;
+//              Debug.Log("í­ë°œ í”¼í•´ì „"  + totaldmg);
+                //7ì°¨ ë„¤í¬ ìŠ¤í‚¬
                 if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.dotexplosiondmg7) > 0)
+                {
+                    dmgup = 0.5m;
+                }
+                if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6149) > 0)
+                {
+                    dmgup = (decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6149);
+                }
+
+                if (dmgup != 0)
                 {
                     totaldmg += totaldmg * 0.5m;
                 }
-            //    Debug.Log("Æø¹ß ÇÇÇØÈÄ"  + totaldmg);
+
+                //    Debug.Log("í­ë°œ í”¼í•´í›„"  + totaldmg);
                 StartCoroutine(DamageChecker(targethp, totaldmg, playerdata.stat_crit, playerdata.stat_critdmg,
                     skilldata.AttackCount, skilldata, effectenemy));
                 equipskillattack_Magic();
 
                 break;
-            //ÀÏ¹İ ¸¶¹ı °ø°İ
+            //ì¼ë°˜ ë§ˆë²• ê³µê²©
             case "MagicAttack":
                 totaldmg = (decimal)(playerdata.stat_matk * skilldata.Matk);
                 Soundmanager.Instance.PlayerSound(skilldata.sound);
-                //´ëÀÚ¿¬ÀÇ Èû
+                //ëŒ€ìì—°ì˜ í˜
                 if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.legenstaffdmg) != 0)
                 {
                     totaldmg = totaldmg + (totaldmg *
                                            (decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager
                                                .EquipStatFloat
                                                .legenstaffdmg));
-                    equipskillmanager.Instance.showequipslots("1205",
-                        equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.legenstaffrare)
-                            .ToString("N0"),
-                        equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.legenstafflv)
-                            .ToString("N0"));
-                    //  Debug.Log("ÀÌ±×´Ï½Ã¾Æ¸¦ Àû¿ëÇß´Ù");
+                    if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6146) == 0 &&
+                        equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6147) == 0  )
+                    {
+                        equipskillmanager.Instance.showequipslots("1205",
+                            equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.legenstaffrare)
+                                .ToString("N0"),
+                            equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.legenstafflv)
+                                .ToString("N0"));
+                    }
                 }
 
 
@@ -294,7 +308,7 @@ public class Skillmanager : MonoBehaviour
 
                 break;
 
-            //ÀÏ¹İ ¹°¸® °ø°İ
+            //ì¼ë°˜ ë¬¼ë¦¬ ê³µê²©
             case "Attack":
                 totaldmg = (decimal)(playerdata.stat_atk * skilldata.Atk);
                 Soundmanager.Instance.PlayerSound(skilldata.sound);
@@ -306,7 +320,7 @@ public class Skillmanager : MonoBehaviour
                         Battlemanager.Instance.ShootArrow_MainPlayer(skilldata, targethp);
                     }
                 }
-                //±âº»È­»ì
+                //ê¸°ë³¸í™”ì‚´
                 else if (skilldata.skilldata.JustArrow != "0")
                 {
                     Battlemanager.Instance.ShootArrow_MainPlayer_NoANi(skilldata, targethp);
@@ -333,10 +347,10 @@ public class Skillmanager : MonoBehaviour
     public enum 
         BuffFloat
     {
-        AtkPercent, //¹°°ø
-        MAtkPercent, //¸¶°ø
-        Crit, //Ä¡¸íÅ¸È®·ü
-        Critdmg, //Ä¡¸íÅ¸ ÇÇÇØ
+        AtkPercent, //ë¬¼ê³µ
+        MAtkPercent, //ë§ˆê³µ
+        Crit, //ì¹˜ëª…íƒ€í™•ë¥ 
+        Critdmg, //ì¹˜ëª…íƒ€ í”¼í•´
         BasicAtk,
         Crit_P,
         AtkPercent_P,
@@ -375,21 +389,21 @@ public class Skillmanager : MonoBehaviour
         return;
         if (PlayerBuff[i] <= 0)
         {
-            //¹öÇÁ³¡
+            //ë²„í”„ë
             PlayerBuff[i] = 0;
             PlayerBuffImage[i].SetActive(false);
             switch (i)
             {
-                case 0: //¹°°ø
+                case 0: //ë¬¼ê³µ
                     OffAtkPercentBuff();
                     break;
-                case 1: //¸¶°ø
+                case 1: //ë§ˆê³µ
                     OffMAtkPercentBuff();
                     break;
-                case 2: //Ä¡È®
+                case 2: //ì¹˜í™•
                     OffCritBuff();
                     break;
-                case 3: //Ä¡ÇÇ
+                case 3: //ì¹˜í”¼
                     OffCritDmgBuff();
                     break;
                 case 4:
@@ -398,11 +412,11 @@ public class Skillmanager : MonoBehaviour
         }
     }
     
-    //½ºÅ³»ç¿ë½Ã ¹ßµ¿µÇ´Â°Í °ø°İ½ºÅ³¸¸ ÇØ´ç.
+    //ìŠ¤í‚¬ì‚¬ìš©ì‹œ ë°œë™ë˜ëŠ”ê²ƒ ê³µê²©ìŠ¤í‚¬ë§Œ í•´ë‹¹.
     // ReSharper disable Unity.PerformanceAnalysis
     void equipskillattack_Magic()
     {
-        //¶ó±×³ª·ÎÅ©
+        //ë¼ê·¸ë‚˜ë¡œí¬
         if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.legenwandhitper) != 0)
         {
             if ((Random.Range(0, 100) <
@@ -420,7 +434,7 @@ public class Skillmanager : MonoBehaviour
                 foreach (var VARIABLE in enemymany)
                 {
                     VARIABLE.hpmanager.TakeDamage(
-                        dpsmanager.attacktype.Æ¯¼öÈ¿°ú,"E1250",
+                        dpsmanager.attacktype.íŠ¹ìˆ˜íš¨ê³¼,"E1250",
                         (decimal)(mainplayer.stat_matk *
                                   equipskillmanager.Instance.GetStats(
                                       (int)equipskillmanager.EquipStatFloat.legenwanddmg)),
@@ -429,20 +443,67 @@ public class Skillmanager : MonoBehaviour
             }
         }
         
-        //ÀÍ½ºÇÃ·ÎÀü
+        //ì œìš°ìŠ¤ì˜ ì§€íŒ¡ì´
+        if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6146) != 0)
+        {
+            equipskillmanager.Instance.showequipslots("1317",
+                equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6146_rare)
+                    .ToString("N0")
+                , equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6146_lv).ToString("N0"));
+
+
+            bool iscrit = Random.Range(0, 101) <= mainplayer.stat_crit ? true : false;
+            enemymany = EnemySpawnManager.Instance.gettarget(1);
+
+            foreach (var VARIABLE in enemymany)
+            {
+                VARIABLE.hpmanager.TakeDamage(
+                    dpsmanager.attacktype.íŠ¹ìˆ˜íš¨ê³¼, "E1317",
+                    (decimal)(mainplayer.stat_matk *
+                              equipskillmanager.Instance.GetStats(
+                                  (int)equipskillmanager.EquipStatFloat.E6146)),
+                    iscrit, mainplayer.stat_critdmg, "Attack/Magic/Spell_Fire_Critical_03", 0, "Thunder7");
+            }
+        }
+
+        
+        //í¬ì„¸ì´ëˆì˜ ì§€íŒ¡ì´
+        if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6147) != 0)
+        {
+            equipskillmanager.Instance.showequipslots("1318",
+                equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6147_rare)
+                    .ToString("N0")
+                , equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6147_lv).ToString("N0"));
+
+
+            bool iscrit = Random.Range(0, 101) <= mainplayer.stat_crit ? true : false;
+            enemymany = EnemySpawnManager.Instance.gettarget(3);
+
+            foreach (var VARIABLE in enemymany)
+            {
+                VARIABLE.hpmanager.TakeDamage(
+                    dpsmanager.attacktype.íŠ¹ìˆ˜íš¨ê³¼, "E1318",
+                    (decimal)(mainplayer.stat_matk *
+                              equipskillmanager.Instance.GetStats(
+                                  (int)equipskillmanager.EquipStatFloat.E6147)),
+                    iscrit, mainplayer.stat_critdmg, "Attack/Magic/Spell_Fire_Critical_03", 0, "Water6");
+            }
+        }
+        
+        //ìµìŠ¤í”Œë¡œì „
         if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.explosion) != 0)
         {
             if ((Random.Range(0, 100) <
                   equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.explosionhitper)))
             {
-                //Âù´Ù
+                //ì°¬ë‹¤
                 equipskillmanager.Instance.showequipslots("1150",
                     equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.explosionrare)
                         .ToString("N0"),
                     equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.explosionlv)
                         .ToString("N0"));
                 bool iscrit = Random.Range(0, 101) <= mainplayer.stat_crit ? true : false;
-                Battlemanager.Instance.GetTarget().hpmanager.TakeDamage(dpsmanager.attacktype.Æ¯¼öÈ¿°ú, "E1150",
+                Battlemanager.Instance.GetTarget().hpmanager.TakeDamage(dpsmanager.attacktype.íŠ¹ìˆ˜íš¨ê³¼, "E1150",
                     (decimal)(mainplayer.stat_matk *
                               equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.explosion)),
                     iscrit,
@@ -450,40 +511,40 @@ public class Skillmanager : MonoBehaviour
             }
         }
 
-        //¾îºô¸®Æ¼ ¸¶¹ı »ç¿ë ½Ã 
+        //ì–´ë¹Œë¦¬í‹° ë§ˆë²• ì‚¬ìš© ì‹œ 
         if (PlayerBackendData.Instance.Abilitys[4].Equals("1018"))
         {
             if (Random.Range(1, 101) <=
                 (int)mainplayer.ability_magicskillper)
             {
-                //Âù´Ù
+                //ì°¬ë‹¤
                 bool iscrit = Random.Range(0, 101) <= mainplayer.stat_crit ? true : false;
-                Battlemanager.Instance.GetTarget().hpmanager.TakeDamage(dpsmanager.attacktype.¾îºô¸®Æ¼,"A1018",
+                Battlemanager.Instance.GetTarget().hpmanager.TakeDamage(dpsmanager.attacktype.ì–´ë¹Œë¦¬í‹°,"A1018",
                     (decimal)(mainplayer.stat_matk *
                               mainplayer.ability_magicskilldmg),
                     iscrit, mainplayer.stat_critdmg, "", 0, "Fire5");
             }
         }
 
-        //ÀÍ½ºÇÃ·ÎÀü
+        //ìµìŠ¤í”Œë¡œì „
     }
 
     // ReSharper disable Unity.PerformanceAnalysis
     void equipskillattack_Physic_Melee()
     {
-        //ÃµµÕ¹ø°³
+        //ì²œë‘¥ë²ˆê°œ
         if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.thundersmashhitper) != 0)
         {
             if ((Random.Range(0, 100) <
                   equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.thundersmashhitper)))
             {
-                //Âù´Ù
+                //ì°¬ë‹¤
                 equipskillmanager.Instance.showequipslots("1020",
                     equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.thundersmashrare)
                         .ToString("N0")
                     , equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.thundersmashlv).ToString("N0"));
                 bool iscrit = Random.Range(0, 101) <= mainplayer.stat_crit ? true : false;
-                Battlemanager.Instance.GetTarget().hpmanager.TakeDamage(dpsmanager.attacktype.Æ¯¼öÈ¿°ú,"E1020",
+                Battlemanager.Instance.GetTarget().hpmanager.TakeDamage(dpsmanager.attacktype.íŠ¹ìˆ˜íš¨ê³¼,"E1020",
                     (decimal)(mainplayer.stat_atk *
                               equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat
                                   .thundersmashlv)),
@@ -497,15 +558,15 @@ public class Skillmanager : MonoBehaviour
     public void EquipSkillOneMelee(string type)
     {
         if (!type.Equals("Attack")) return;
-        
-        //ÀÏ··ÀÌ´Â ºÒ²É ¿°È­°Ë
+
+        //ì¼ë ì´ëŠ” ë¶ˆê½ƒ ì—¼í™”ê²€
         if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.legenswordhitper) != 0)
         {
-            //¸¶³ªµå·¹ÀÎÀÌ¶ó¸é
+            //ë§ˆë‚˜ë“œë ˆì¸ì´ë¼ë©´
             if ((Random.Range(0, 100) <
                  equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.legenswordhitper)))
             {
-                //Âù´Ù
+                //ì°¬ë‹¤
                 equipskillmanager.Instance.showequipslots("1202",
                     equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.legenswordrare)
                         .ToString("N0")
@@ -518,7 +579,7 @@ public class Skillmanager : MonoBehaviour
                 foreach (var VARIABLE in enemymany)
                 {
                     VARIABLE.hpmanager.TakeDamage(
-                        dpsmanager.attacktype.Æ¯¼öÈ¿°ú,"E1202",
+                        dpsmanager.attacktype.íŠ¹ìˆ˜íš¨ê³¼, "E1202",
                         (decimal)(mainplayer.stat_atk *
                                   equipskillmanager.Instance.GetStats(
                                       (int)equipskillmanager.EquipStatFloat.legensworddmg)),
@@ -526,6 +587,60 @@ public class Skillmanager : MonoBehaviour
                 }
             }
         }
+
+        //ì¼1313
+        if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6142) != 0)
+        {
+
+            //ì°¬ë‹¤
+            equipskillmanager.Instance.showequipslots("1313",
+                equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6142_rare)
+                    .ToString("N0")
+                , equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6142_lv).ToString("N0"));
+
+
+            bool iscrit = Random.Range(0, 101) <= mainplayer.stat_crit ? true : false;
+            enemymany = EnemySpawnManager.Instance.gettarget(3);
+
+            foreach (var VARIABLE in enemymany)
+            {
+                VARIABLE.hpmanager.TakeDamage(
+                    dpsmanager.attacktype.íŠ¹ìˆ˜íš¨ê³¼, "E1313",
+                    (decimal)(mainplayer.stat_atk *
+                              equipskillmanager.Instance.GetStats(
+                                  (int)equipskillmanager.EquipStatFloat.E6142)),
+                    iscrit, mainplayer.stat_critdmg, "", 0, "Hit1");
+            }
+        }
+        
+            //ì¼1313
+                if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6145) != 0)
+                {
+                    Battlemanager.Instance.mainplayer.buffmanager.AddStack(1);
+
+                    if (Battlemanager.Instance.mainplayer.buffmanager.IsMaxStack())
+                    {
+                   
+                        bool iscrit = Random.Range(0, 101) <= mainplayer.stat_crit ? true : false;
+                        enemymany = EnemySpawnManager.Instance.gettarget(3);
+
+                        //ì°¬ë‹¤
+                        equipskillmanager.Instance.showequipslots("1316",
+                            equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6145_rare)
+                                .ToString("N0")
+                            , equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6145_lv).ToString("N0"));
+                        
+                        foreach (var VARIABLE in enemymany)
+                        {
+                            VARIABLE.hpmanager.TakeDamage(
+                                dpsmanager.attacktype.íŠ¹ìˆ˜íš¨ê³¼, "E1316",
+                                (decimal)(mainplayer.stat_atk *
+                                          equipskillmanager.Instance.GetStats(
+                                              (int)equipskillmanager.EquipStatFloat.E6145_2)),
+                                iscrit, mainplayer.stat_critdmg, "", 0, "Hit1");
+                        }
+                    }
+                }
     }
 
     readonly WaitForSeconds waitattack = new WaitForSeconds(0.05f);
@@ -561,35 +676,35 @@ public class Skillmanager : MonoBehaviour
 
         
             
-            //7Â÷ ¸¶¹ı»ç ½ºÅ³
+            //7ì°¨ ë§ˆë²•ì‚¬ ìŠ¤í‚¬
             if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.magicdmg7) > 0)
             {
                 if (skilldata.Skilltype.Equals("MagicAttack"))
                 {
-//                    Debug.Log("Ãß°¡ ÇÇÇØ ¸¶¹ı");
-                    targethp.TakeDamage( dpsmanager.attacktype.¸¶¹ı½ºÅ³°ø°İ,skilldata.skillid,totaldmg * 0.5m, iscrit , critdmg + skilldata.Critdmg, "", skilldata.BreakDmg, "",0);
+//                    Debug.Log("ì¶”ê°€ í”¼í•´ ë§ˆë²•");
+                    targethp.TakeDamage( dpsmanager.attacktype.ë§ˆë²•ìŠ¤í‚¬ê³µê²©,skilldata.skillid,totaldmg * 0.5m, iscrit , critdmg + skilldata.Critdmg, "", skilldata.BreakDmg, "",0);
                 }
             }
-            targethp.TakeDamage(dpsmanager.attacktype.¸¶¹ı½ºÅ³°ø°İ,skilldata.skillid,totaldmg, iscrit , critdmg + skilldata.Critdmg, "", skilldata.BreakDmg, "",-1,attackcount + addcount);
+            targethp.TakeDamage(dpsmanager.attacktype.ë§ˆë²•ìŠ¤í‚¬ê³µê²©,skilldata.skillid,totaldmg, iscrit , critdmg + skilldata.Critdmg, "", skilldata.BreakDmg, "",-1,attackcount + addcount);
             yield return waitattack;
         }
     }
 
     public void PhyiscSkillCrit()
     {
-        //¾îºô¸®Æ¼ ¸¶¹ı »ç¿ë ½Ã 
+        //ì–´ë¹Œë¦¬í‹° ë§ˆë²• ì‚¬ìš© ì‹œ 
         if (PlayerBackendData.Instance.Abilitys[4].Equals("1019"))
         {
             if (Random.Range(1, 101) <=
                 (int)mainplayer.ability_critskillper)
             {
-                //Âù´Ù
+                //ì°¬ë‹¤
                 bool iscrit = Random.Range(0, 101) <= mainplayer.stat_crit ? true : false;
-                Battlemanager.Instance.GetTarget().hpmanager.TakeDamage(dpsmanager.attacktype.¾îºô¸®Æ¼,"A1019",
+                Battlemanager.Instance.GetTarget().hpmanager.TakeDamage(dpsmanager.attacktype.ì–´ë¹Œë¦¬í‹°,"A1019",
                     (decimal)(mainplayer.stat_atk *
                               mainplayer.ability_critskilldmg),
                     iscrit, mainplayer.stat_critdmg, "", 0, "Slash5");
-             //   Debug.Log("Å©¸® ¹ßµ¿");
+             //   Debug.Log("í¬ë¦¬ ë°œë™");
                 
             }
             
@@ -606,65 +721,65 @@ public class Skillmanager : MonoBehaviour
             decimal dmg = 0;
             switch (t)
             {
-                case "Bleed": //ÃâÇ÷
-                    //ÃâÇ÷ Èû * Áö´É * ÁöÇı * 20
+                case "Bleed": //ì¶œí˜ˆ
+                    //ì¶œí˜ˆ í˜ * ì§€ëŠ¥ * ì§€í˜œ * 20
                     dmg = (decimal)((mainplayer.stat_str + mainplayer.stat_int + (mainplayer.stat_wis * 1.8f)) * 12);
                     dmg = dmg + (dmg * (decimal)mainplayer.Stat_DotDmgUp);
                     if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.dotdouble) != 0)
                         dmg *= 4m;
-                    target.AddDot(Hpmanager.DotType.ÃâÇ÷,
+                    target.AddDot(Hpmanager.DotType.ì¶œí˜ˆ,
                         int.Parse(skilldata.skilldata.DotCount) + mainplayer.Stat_AddStack, dmg, mainplayer.stat_crit,
                         mainplayer.stat_critdmg, mainplayer.Stat_MaxDotCount);
                     break;
-                case "Fire": //È­»ó
-                    //È­»ó Èû * Áö´É * ÁöÇı * 20
+                case "Fire": //í™”ìƒ
+                    //í™”ìƒ í˜ * ì§€ëŠ¥ * ì§€í˜œ * 20
                     dmg = (decimal)((mainplayer.stat_str + mainplayer.stat_int + (mainplayer.stat_wis * 1.8f)) * 12);
                     dmg = dmg + (dmg * (decimal)mainplayer.Stat_DotDmgUp);
                     if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.dotdouble) != 0)
                         dmg *= 4m;
 
-                    target.AddDot(Hpmanager.DotType.È­»ó,
+                    target.AddDot(Hpmanager.DotType.í™”ìƒ,
                         int.Parse(skilldata.skilldata.DotCount) + mainplayer.Stat_AddStack, dmg, mainplayer.stat_crit,
                         mainplayer.stat_critdmg, mainplayer.Stat_MaxDotCount);
 
                     break;
-                case "Shock": //°¨Àü
-                    //È­»ó ¹ÎÃ¸ * Áö´É * ÁöÇı * 20
+                case "Shock": //ê°ì „
+                    //í™”ìƒ ë¯¼ì²© * ì§€ëŠ¥ * ì§€í˜œ * 20
                     dmg = (decimal)(mainplayer.stat_dex + mainplayer.stat_int + (mainplayer.stat_wis * 1.8f)) * 12;
                     dmg = dmg + (dmg * (decimal)mainplayer.Stat_DotDmgUp);
                     if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.dotdouble) != 0)
                         dmg *= 4m;
 
-                    target.AddDot(Hpmanager.DotType.°¨Àü,
+                    target.AddDot(Hpmanager.DotType.ê°ì „,
                         int.Parse(skilldata.skilldata.DotCount) + mainplayer.Stat_AddStack, dmg, mainplayer.stat_crit,
                         mainplayer.stat_critdmg, mainplayer.Stat_MaxDotCount);
                     break;
                 case "Poison": //
-                    //È­»ó ¹ÎÃ¸ * Áö´É * ÁöÇı * 20
+                    //í™”ìƒ ë¯¼ì²© * ì§€ëŠ¥ * ì§€í˜œ * 20
                     dmg = (decimal)(mainplayer.stat_dex + mainplayer.stat_int + (mainplayer.stat_wis * 1.8f)) * 12;
                     dmg = dmg + (dmg * (decimal)mainplayer.Stat_DotDmgUp);
                     if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.dotdouble) != 0)
                         dmg *= 4m;
 
-                    target.AddDot(Hpmanager.DotType.Áßµ¶,
+                    target.AddDot(Hpmanager.DotType.ì¤‘ë…,
                         int.Parse(skilldata.skilldata.DotCount) + mainplayer.Stat_AddStack, dmg, mainplayer.stat_crit,
                         mainplayer.stat_critdmg, mainplayer.Stat_MaxDotCount);
                     break;
                 case "Death":
-                    //Á×À½ ÁöÇìÀÇ ¸ğµç ½ºÅÈÀÇ * 30 ¸¸Å­ ÇÇÇØ¸¦ ÁØ´Ù. 0.5ÃÊ ¸¶´Ù
+                    //ì£½ìŒ ì§€í—¤ì˜ ëª¨ë“  ìŠ¤íƒ¯ì˜ * 30 ë§Œí¼ í”¼í•´ë¥¼ ì¤€ë‹¤. 0.5ì´ˆ ë§ˆë‹¤
                     dmg = (decimal)(mainplayer.stat_str + mainplayer.stat_dex + mainplayer.stat_int +
                                     (mainplayer.stat_wis * 1.8f)) * 15;
                     dmg = dmg + (dmg * (decimal)mainplayer.Stat_DotDmgUp);
                     if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.dotdouble) != 0)
                         dmg *= 4m;
 
-                    target.AddDot(Hpmanager.DotType.Á×À½,
+                    target.AddDot(Hpmanager.DotType.ì£½ìŒ,
                         int.Parse(skilldata.skilldata.DotCount) + mainplayer.Stat_AddStack, dmg, mainplayer.stat_crit,
                         mainplayer.stat_critdmg, mainplayer.Stat_MaxDotCount);
                     break;
             }
         }
-        //µµÆ®´Â °»½ÅÀÌ µÈ´Ù.
+        //ë„íŠ¸ëŠ” ê°±ì‹ ì´ ëœë‹¤.
 
     }
 

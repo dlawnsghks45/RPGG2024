@@ -878,7 +878,7 @@ public class mapmanager : MonoBehaviour
     public void Bt_LocateMap()
     {
         MapDB.Row mapdata_Now = MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage);
-        if (mapdata_Now.maptype == "12")
+        if (mapdata_Now.maptype != "0")
         {
             alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI7/콘텐츠 중 불가"), alertmanager.alertenum.주의);
             return;

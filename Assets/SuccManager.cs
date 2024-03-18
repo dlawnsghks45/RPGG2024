@@ -154,6 +154,10 @@ public class SuccManager : MonoBehaviour
         LastSlot.data.EquipSkill1 = ResourceSlot.data.EquipSkill1;
         LastSlot.data.IshaveEquipSkill = ResourceSlot.data.IshaveEquipSkill;
 
+        LastSlot.data.EnchantNum1 = ResourceSlot.data.EnchantNum1;
+        LastSlot.data.EnchantFail1 = ResourceSlot.data.EnchantFail1;
+        
+        
         LastSlot.Refresh(LastSlot.data);
         maxcount = 5;
     }
@@ -433,7 +437,7 @@ public class SuccManager : MonoBehaviour
                         .ToString())[ResultsEquipKeyId.KeyId1].EnchantNum1 = LastSlot.data.EnchantNum1;
                     PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
                         .ToString())[ResultsEquipKeyId.KeyId1].EnchantFail1 = LastSlot.data.EnchantFail1;
-
+                    
                     
                     Savemanager.Instance.SaveInventory();
                     Savemanager.Instance.SaveTypeEquip();

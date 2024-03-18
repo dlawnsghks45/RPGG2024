@@ -11,7 +11,7 @@ using Random = UnityEngine.Random;
 
 public class Test : MonoBehaviour
 {
-    //½Ì±ÛÅæ¸¸µé±â.
+    //ì‹±ê¸€í†¤ë§Œë“¤ê¸°.
     private static Test _instance = null;
     public static Test Instance
     {
@@ -42,11 +42,11 @@ public class Test : MonoBehaviour
     {
         SendQueue.Enqueue(Backend.Guild.ApplyGuildV3,"2023-06-08T15:12:35.508Z", ( callback ) => 
         {
-            // ÀÌÈÄ Ã³¸®
+            // ì´í›„ ì²˜ë¦¬
             if (callback.IsSuccess())
             {
-                Debug.Log("°¡ÀÔ½ÅÃ»¼º°ø");
-                //Áï½Ã°¡ÀÔ¿©ºÎ È®¤·ÀÎ 
+                Debug.Log("ê°€ì…ì‹ ì²­ì„±ê³µ");
+                //ì¦‰ì‹œê°€ì…ì—¬ë¶€ í™•ã…‡ì¸ 
                 GuildManager.Instance.GuildJoinSucc();
                     
             }
@@ -55,7 +55,7 @@ public class Test : MonoBehaviour
     
     public void bt_guildjoinOn()
     {
-        Backend.Guild.SetRegistrationValueV3(true); // Áï½Ã °¡ÀÔ ¼³Á¤
+        Backend.Guild.SetRegistrationValueV3(true); // ì¦‰ì‹œ ê°€ì… ì„¤ì •
     }
     
     public void btUptime(float time)
@@ -69,9 +69,9 @@ public class Test : MonoBehaviour
         {
             if (callback.IsSuccess())
             {
-                Debug.Log("³»±æµå¿¡ ³Ö±â ¼º°ø");   
+                Debug.Log("ë‚´ê¸¸ë“œì— ë„£ê¸° ì„±ê³µ");   
             }
-            // ÀÌÈÄ Ã³¸®
+            // ì´í›„ ì²˜ë¦¬
         });
     }
     public void Bt_GiveItem()
@@ -87,7 +87,7 @@ public class Test : MonoBehaviour
 
     public GameObject Testobj;
     
-    [Title("ÀúÀå")]
+    [Title("ì €ì¥")]
     [Button(ButtonSizes.Large),GUIColor(0,1,0)]
     public void Contribute()
     {
@@ -98,8 +98,8 @@ public class Test : MonoBehaviour
     {
         if (itemid.text.Contains("E"))
         {
-            //Àåºñ
-            PlayerBackendData.Instance.MakeEquipment(itemid.text¤Ä);
+            //ì¥ë¹„
+            PlayerBackendData.Instance.MakeEquipment(itemid.text);
         }
         else
         {
@@ -114,40 +114,40 @@ public class Test : MonoBehaviour
         
         //example
         string gamerIndate = bro2.GetReturnValuetoJSON()["row"]["inDate"].ToString();
-        // key ÄÃ·³ÀÇ °ªÀÌ keyCodeÀÎ µ¥ÀÌÅÍ °Ë»ö
+        // key ì»¬ëŸ¼ì˜ ê°’ì´ keyCodeì¸ ë°ì´í„° ê²€ìƒ‰
         Where where = new Where();
         where.Equal("owner_inDate",gamerIndate);
         
         
-        // Step 3. °ÔÀÓÁ¤º¸ ºÒ·¯¿À±â ±¸ÇöÇÏ±â
-        Debug.Log("°ÔÀÓ Á¤º¸ Á¶È¸ ÇÔ¼ö¸¦ È£ÃâÇÕ´Ï´Ù.");
+        // Step 3. ê²Œì„ì •ë³´ ë¶ˆëŸ¬ì˜¤ê¸° êµ¬í˜„í•˜ê¸°
+        Debug.Log("ê²Œì„ ì •ë³´ ì¡°íšŒ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•©ë‹ˆë‹¤.");
         var bro = Backend.GameData.Get("PlayerData", where);
         if (bro.IsSuccess())
         {
-            Debug.Log("°ÔÀÓ Á¤º¸ Á¶È¸¿¡ ¼º°øÇß½À´Ï´Ù. : " + bro);
+            Debug.Log("ê²Œì„ ì •ë³´ ì¡°íšŒì— ì„±ê³µí–ˆìŠµë‹ˆë‹¤. : " + bro);
 
             PlayerBackendData userData = PlayerBackendData.Instance;
-            LitJson.JsonData gameDataJson = bro.FlattenRows(); // JsonÀ¸·Î ¸®ÅÏµÈ µ¥ÀÌÅÍ¸¦ ¹Ş¾Æ¿É´Ï´Ù.
+            LitJson.JsonData gameDataJson = bro.FlattenRows(); // Jsonìœ¼ë¡œ ë¦¬í„´ëœ ë°ì´í„°ë¥¼ ë°›ì•„ì˜µë‹ˆë‹¤.
 
-            // ¹Ş¾Æ¿Â µ¥ÀÌÅÍÀÇ °¹¼ö°¡ 0ÀÌ¶ó¸é µ¥ÀÌÅÍ°¡ Á¸ÀçÇÏÁö ¾Ê´Â °ÍÀÔ´Ï´Ù.
+            // ë°›ì•„ì˜¨ ë°ì´í„°ì˜ ê°¯ìˆ˜ê°€ 0ì´ë¼ë©´ ë°ì´í„°ê°€ ì¡´ì¬í•˜ì§€ ì•ŠëŠ” ê²ƒì…ë‹ˆë‹¤.
             if (gameDataJson.Count <= 0)
             {
-                Debug.LogWarning("µ¥ÀÌÅÍ°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+                Debug.LogWarning("ë°ì´í„°ê°€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
             }
             else
             {
-                //·¹º§
+                //ë ˆë²¨
                 userData.SetLv(int.Parse(gameDataJson[0]["level"].ToString()));
                 userData.AddExp(decimal.Parse(gameDataJson[0]["levelExp"].ToString()));
                 userData.SetAchLv(int.Parse(gameDataJson[0]["level_ach"].ToString()));
                 userData.AddAchExp(decimal.Parse(gameDataJson[0]["level_achExp"].ToString()));
-                //Á¦´Ü
+                //ì œë‹¨
                 if (gameDataJson[0].ContainsKey("Altar_Lvs"))
                 {
-                    //Å¬·¡½º µ¥ÀÌÅÍ
+                    //í´ë˜ìŠ¤ ë°ì´í„°
                     for (int i = 0; i < gameDataJson[0]["Altar_Lvs"].Count; i++)
                     {
-                        //  Debug.Log("Á÷¾÷ÀÔ·Â" + key);
+                        //  Debug.Log("ì§ì—…ì…ë ¥" + key);
                         PlayerBackendData.Instance.Altar_Lvs[i] = int.Parse(gameDataJson[0]["Altar_Lvs"][i].ToString());
                     }
                 }
@@ -164,7 +164,7 @@ public class Test : MonoBehaviour
 
                 //Debug.Log(gameDataJson[0]["inventory"]);
 
-                //ÀÎº¥Åä¸® °¡Á®¿À±â
+                //ì¸ë²¤í† ë¦¬ ê°€ì ¸ì˜¤ê¸°
                 userData.ItemInventory.Clear();
                 for (int i = 0; i < gameDataJson[0]["inventory"].Count; i++)
                 {
@@ -175,10 +175,10 @@ public class Test : MonoBehaviour
 
                 if (gameDataJson[0].ContainsKey("CollectionNew"))
                 {
-                    //Å¬·¡½º µ¥ÀÌÅÍ
+                    //í´ë˜ìŠ¤ ë°ì´í„°
                     for (int i = 0; i < gameDataJson[0]["CollectionNew"].Count; i++)
                     {
-                        //  Debug.Log("Á÷¾÷ÀÔ·Â" + key);
+                        //  Debug.Log("ì§ì—…ì…ë ¥" + key);
                         PlayerBackendData.Instance.RenewalCollectData[i]
                             = bool.Parse(gameDataJson[0]["CollectionNew"][i].ToString());
                     }
@@ -190,7 +190,7 @@ public class Test : MonoBehaviour
                     {
                         try
                         {
-                            //Debug.Log("Å°´Â");
+                            //Debug.Log("í‚¤ëŠ”");
                             //Debug.Log(gameDataJson[0]["EquipmentNow"][i]["Itemid"].ToString());
                             userData.EquipEquiptment0[i] = new EquipDatabase(gameDataJson[0]["EquipmentNow"][i]);
                         }
@@ -203,7 +203,7 @@ public class Test : MonoBehaviour
 
 
 
-                //Àåºñ °¡Á®¿À±â
+                //ì¥ë¹„ ê°€ì ¸ì˜¤ê¸°
                 userData.Equiptment0.Clear();
                 foreach (string key in gameDataJson[0]["equipment_Weapon"].Keys)
                 {
@@ -289,18 +289,18 @@ public class Test : MonoBehaviour
                     }
                 }
 
-                //½ºÅ³
+                //ìŠ¤í‚¬
                 if (gameDataJson[0].ContainsKey("SkillInven"))
                 {
-                    //Å¬·¡½º µ¥ÀÌÅÍ
+                    //í´ë˜ìŠ¤ ë°ì´í„°
                     for(int i = 0 ; i < gameDataJson[0]["SkillInven"].Count;i++)
                     {
-                        //  Debug.Log("Á÷¾÷ÀÔ·Â" + key);
+                        //  Debug.Log("ì§ì—…ì…ë ¥" + key);
                         PlayerBackendData.Instance.Skills.Add(gameDataJson[0]["SkillInven"][i].ToString());
                     }
                 }
 
-                //¹ö±×·Î ¾ø´Ù¸é
+                //ë²„ê·¸ë¡œ ì—†ë‹¤ë©´
                 if (PlayerBackendData.Instance.Skills.Count == 0)
                 {
                     foreach (var VARIABLE in PlayerBackendData.Instance.ClassData)
@@ -312,11 +312,11 @@ public class Test : MonoBehaviour
                 }
 
                 
-                //¤¡1È¸ ±¸¸Å »óÁ¡
+                //ã„±1íšŒ êµ¬ë§¤ ìƒì 
                 if (gameDataJson[0].ContainsKey("Ability"))
                 {
-                    Debug.Log("¾îºô¸®Æ¼ ºÒ·¯¿È");
-                    //Å¬·¡½º µ¥ÀÌÅÍ
+                    Debug.Log("ì–´ë¹Œë¦¬í‹° ë¶ˆëŸ¬ì˜´");
+                    //í´ë˜ìŠ¤ ë°ì´í„°
                     for(int i = 0 ; i < gameDataJson[0]["Ability"].Count;i++)
                     {
                         PlayerBackendData.Instance.Abilitys[i] = gameDataJson[0]["Ability"][i].ToString();
@@ -325,11 +325,11 @@ public class Test : MonoBehaviour
                 
                 if (gameDataJson[0].ContainsKey("PetData"))
                 {
-                    Debug.Log("ÆêºÒ·¯¿È");
-                    //Å¬·¡½º µ¥ÀÌÅÍ
+                    Debug.Log("í«ë¶ˆëŸ¬ì˜´");
+                    //í´ë˜ìŠ¤ ë°ì´í„°
                     foreach (string key in gameDataJson[0]["PetData"].Keys)
                     {
-//                Debug.Log("Æê ºÒ·¯¿È" + gameDataJson[0]["PetData"][key].Count);
+//                Debug.Log("í« ë¶ˆëŸ¬ì˜´" + gameDataJson[0]["PetData"][key].Count);
                         PlayerBackendData.Instance.PetData[key] = new petdatabase(gameDataJson[0]["PetData"][key]);
                     }
 
@@ -343,37 +343,26 @@ public class Test : MonoBehaviour
                     PlayerBackendData.Instance.nowPetid = gameDataJson[0]["nowPetid"].ToString();
                 }
                 
-                //Å¬·¡½º µ¥ÀÌÅÍ
+                //í´ë˜ìŠ¤ ë°ì´í„°
                 foreach (string key in gameDataJson[0]["Class"].Keys)
                 {
-                    //  Debug.Log("Á÷¾÷ÀÔ·Â" + key);
+                    //  Debug.Log("ì§ì—…ì…ë ¥" + key);
                     PlayerBackendData.Instance.ClassData[key] = new ClassDatabase(gameDataJson[0]["Class"][key]);
                 }
 
 
-                if (gameDataJson[0].ContainsKey("CollectionR"))
-                {
-                    //Å¬·¡½º µ¥ÀÌÅÍ
-                    foreach (string key in gameDataJson[0]["CollectionR"].Keys)
-                    {
-                        //  Debug.Log("Á÷¾÷ÀÔ·Â" + key);
-                        PlayerBackendData.Instance.CollectData[key] = new CollectDatabase(gameDataJson[0]["CollectionR"][key]);
-                    }
-                
-                }
-
-                //¾÷Àû
+                //ì—…ì 
                 if (gameDataJson[0].ContainsKey("Achievement"))
                 {
                     foreach (string key in gameDataJson[0]["Achievement"].Keys)
                     {
-                        //  Debug.Log("Á÷¾÷ÀÔ·Â" + key);
+                        //  Debug.Log("ì§ì—…ì…ë ¥" + key);
                         PlayerBackendData.Instance.PlayerAchieveData[key] = new Achievedata(gameDataJson[0]["Achievement"][key]);
                     }
                 }
 
 
-                //  Debug.Log("Å¬·¡½º ¾ÆÀÌµğ" + gameDataJson[0]["NowClass"]["ClassId1"].ToString());
+                //  Debug.Log("í´ë˜ìŠ¤ ì•„ì´ë””" + gameDataJson[0]["NowClass"]["ClassId1"].ToString());
                 PlayerBackendData.Instance.ClassId = gameDataJson[0]["NowClass"]["ClassId1"].ToString();
 
                 if (gameDataJson[0].ContainsKey("Stage"))
@@ -395,23 +384,23 @@ public class Test : MonoBehaviour
                     
                 }
                 
-                //¤¡1È¸ ±¸¸Å »óÁ¡
+                //ã„±1íšŒ êµ¬ë§¤ ìƒì 
                 if (gameDataJson[0].ContainsKey("OnceShopData"))
                 {
-                    //Å¬·¡½º µ¥ÀÌÅÍ
+                    //í´ë˜ìŠ¤ ë°ì´í„°
                     for(int i = 0 ; i < gameDataJson[0]["OnceShopData"].Count;i++)
                     {
-                        //  Debug.Log("Á÷¾÷ÀÔ·Â" + key);
+                        //  Debug.Log("ì§ì—…ì…ë ¥" + key);
                         Timemanager.Instance.OncePremiumPackage.Add(gameDataJson[0]["OnceShopData"][i].ToString());
                     }
                 }
-                //¤¡1È¸ ±¸¸Å »óÁ¡
+                //ã„±1íšŒ êµ¬ë§¤ ìƒì 
                 if (gameDataJson[0].ContainsKey("OnceTradeData"))
                 {
-                    //Å¬·¡½º µ¥ÀÌÅÍ
+                    //í´ë˜ìŠ¤ ë°ì´í„°
                     for(int i = 0 ; i < gameDataJson[0]["OnceTradeData"].Count;i++)
                     {
-                        //  Debug.Log("Á÷¾÷ÀÔ·Â" + key);
+                        //  Debug.Log("ì§ì—…ì…ë ¥" + key);
                         Timemanager.Instance.OnceTradePackage.Add(gameDataJson[0]["OnceTradeData"][i].ToString());
                     }
                 }
@@ -419,19 +408,19 @@ public class Test : MonoBehaviour
                 //TutoId
                 if (gameDataJson[0].ContainsKey("tutoguideid"))
                 {
-                    //Å¬·¡½º µ¥ÀÌÅÍ
+                    //í´ë˜ìŠ¤ ë°ì´í„°
                     PlayerBackendData.Instance.tutoguideid = int.Parse(gameDataJson[0]["tutoguideid"].ToString());
                 }
                 //TutoId
                 if (gameDataJson[0].ContainsKey("tutoguideisfinish"))
                 {
-                    //Å¬·¡½º µ¥ÀÌÅÍ
+                    //í´ë˜ìŠ¤ ë°ì´í„°
                     PlayerBackendData.Instance.tutoguideisfinish = bool.Parse(gameDataJson[0]["tutoguideisfinish"].ToString());
                 }
                 //TutoId
                 if (gameDataJson[0].ContainsKey("tutoguidepremium"))
                 {
-                    //Å¬·¡½º µ¥ÀÌÅÍ
+                    //í´ë˜ìŠ¤ ë°ì´í„°
                     PlayerBackendData.Instance.tutoguidepremium = bool.Parse(gameDataJson[0]["tutoguidepremium"].ToString());
                 }  
                 
@@ -439,30 +428,30 @@ public class Test : MonoBehaviour
                 //TutoId
                 if (gameDataJson[0].ContainsKey("Tutoid"))
                 {
-                    //Å¬·¡½º µ¥ÀÌÅÍ
+                    //í´ë˜ìŠ¤ ë°ì´í„°
                     PlayerBackendData.Instance.tutoid = gameDataJson[0]["Tutoid"].ToString();
                 }
      
-                //µ¥ÀÌÅÍ ÀúÀå½Ã°£
+                //ë°ì´í„° ì €ì¥ì‹œê°„
                 if (gameDataJson[0].ContainsKey("SavedCheckTime"))
                 {
-                    //Å¬·¡½º µ¥ÀÌÅÍ
+                    //í´ë˜ìŠ¤ ë°ì´í„°
                     PlayerBackendData.Instance.SavedCheckTime = gameDataJson[0]["SavedCheckTime"].ToString();
                 }
-                //±¤°í
+                //ê´‘ê³ 
                 if (gameDataJson[0].ContainsKey("AdsFree"))
                 {
-                    //Å¬·¡½º µ¥ÀÌÅÍ
+                    //í´ë˜ìŠ¤ ë°ì´í„°
                     PlayerBackendData.Instance.isadsfree = bool.Parse(gameDataJson[0]["AdsFree"].ToString());
                 }
                 /*
-                //½Ã°£
+                //ì‹œê°„
                 if (gameDataJson[0].ContainsKey("PlayerTimes"))
                 {
-                    //Å¬·¡½º µ¥ÀÌÅÍ
+                    //í´ë˜ìŠ¤ ë°ì´í„°
                     for(int i = 0 ; i < gameDataJson[0]["PlayerTimes"].Count;i++)
                     {
-                        //  Debug.Log("Á÷¾÷ÀÔ·Â" + key);
+                        //  Debug.Log("ì§ì—…ì…ë ¥" + key);
                         PlayerBackendData.Instance.PlayerTimes[i] = DateTime.Parse(gameDataJson[0]["PlayerTimes"][i].ToString());
                     }
                 }*/
@@ -470,7 +459,7 @@ public class Test : MonoBehaviour
                 PlayerBackendData.Instance.PassiveClassId.Initialize();
                 if (gameDataJson[0].ContainsKey("Passive"))
                 {
-                    //Å¬·¡½º µ¥ÀÌÅÍ
+                    //í´ë˜ìŠ¤ ë°ì´í„°
                     for(int i = 0 ; i < gameDataJson[0]["Passive"].Count;i++)
                     {
                         try
@@ -482,13 +471,13 @@ public class Test : MonoBehaviour
                             Console.WriteLine(e);
                             throw;
                         }
-                        //  Debug.Log("Á÷¾÷ÀÔ·Â" + key);
+                        //  Debug.Log("ì§ì—…ì…ë ¥" + key);
                     }
                 }
                 
                 if ((gameDataJson[0].ContainsKey("craftmakingid")))
                 {
-                    //ÀúÀå±â´É
+                    //ì €ì¥ê¸°ëŠ¥
                     for (int i = 0; i < gameDataJson[0]["craftmakingid"].Count; i++)
                     {
                         if (gameDataJson[0]["craftmakingid"][i] != null)
@@ -515,11 +504,11 @@ public class Test : MonoBehaviour
                 string loadstring = Timemanager.Instance.GetServerTime().ToString();
                 Param param = new Param
                 {
-                    //·¹º§
+                    //ë ˆë²¨
                     { "PlayerCanLoadBool", "false" },
                     { "PlayerLoadUID", SystemInfo.deviceUniqueIdentifier }, 
-                    { "PlayerLoadModel", SystemInfo.deviceModel }, //¸ğµ¨
-                    { "PlayerLoadTime", loadstring} //ºÒ·¯¿Â½Ã°£
+                    { "PlayerLoadModel", SystemInfo.deviceModel }, //ëª¨ë¸
+                    { "PlayerLoadTime", loadstring} //ë¶ˆëŸ¬ì˜¨ì‹œê°„
                 };
                 
                 PlayerBackendData.Instance.playersaveindate = loadstring;
@@ -540,16 +529,17 @@ public class Test : MonoBehaviour
                Savemanager.Instance. SaveShopData();
                Savemanager.Instance.  SaveadsFree();
                Savemanager.Instance.Save();
-        // key ÄÃ·³ÀÇ °ªÀÌ keyCodeÀÎ µ¥ÀÌÅÍ °Ë»ö
+        // key ì»¬ëŸ¼ì˜ ê°’ì´ keyCodeì¸ ë°ì´í„° ê²€ìƒ‰
+        
                 Where where2 = new Where();
                 where2.Equal("owner_inDate", PlayerBackendData.Instance.playerindate);
             
                 SendQueue.Enqueue(Backend.GameData.Update, "PlayerData", where2, param, ( callback ) =>
                 {
                     Debug.Log(callback);
-                    // ÀÌÈÄ Ã³¸®
+                    // ì´í›„ ì²˜ë¦¬
                     if (!callback.IsSuccess()) return;
-
+                    petmanager.Instance.SavePet();
                 });
                 
 
@@ -558,7 +548,7 @@ public class Test : MonoBehaviour
         }
         else
         {
-            Debug.LogError("°ÔÀÓ Á¤º¸ Á¶È¸¿¡ ½ÇÆĞÇß½À´Ï´Ù. : " + bro);
+            Debug.LogError("ê²Œì„ ì •ë³´ ì¡°íšŒì— ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤. : " + bro);
         }
         
         
@@ -567,40 +557,40 @@ public class Test : MonoBehaviour
         PlayerData.Instance.RefreshMyBattlePoint();
         Inventory.Instance.RefreshInventory();
     }
-    [Button(Name = "¾÷Àû")]
+    [Button(Name = "ì—…ì ")]
     public void Up()
     {
-        achievemanager.Instance.AddCount(Acheves.¸ó½ºÅÍÃ³Ä¡,10000000);
+        achievemanager.Instance.AddCount(Acheves.ëª¬ìŠ¤í„°ì²˜ì¹˜,10000000);
     }
 
     
-    [Button(Name = "»óÁ¡¿­¸®±â")]
+    [Button(Name = "ìƒì ì—´ë¦¬ê¸°")]
     public void ShopGive()
     {
         Levelshop.Instance.GiveTime2(21, 2);
     }
     
-    [Button(Name = "»óÁ¡¿­¸®±â2")]
+    [Button(Name = "ìƒì ì—´ë¦¬ê¸°2")]
     public void ShopGive2()
     {
         Levelshop.Instance.GiveTime2(4,3);
 
     }
     
-    [Button(Name = "Á¦·ÃÅ×½º¤Ñ")]
+    [Button(Name = "ì œë ¨í…ŒìŠ¤ã…¡")]
     public void Test1()
     {
         chatmanager.Instance.ChattoSmeltUp(7,"E1000","6");
 
     }
 
-    [Button(Name = "Æê")]
+    [Button(Name = "í«")]
     public void GetPet()
     {
        petmanager.Instance.OpenStartPetBox(10);
     }
     public string username;
-    [Button(Name = "Á¶È¸")] 
+    [Button(Name = "ì¡°íšŒ")] 
     public void Bt_1123()
     {
         otherusermanager.Instance.ShowPlayerData(username);

@@ -340,6 +340,7 @@ public class Hpmanager : MonoBehaviour
                     if (PartyRaidBattlemanager.Instance.battledata.playerBuff[0] != 0)
                     {
                         decimal plus = PartyRaidBattlemanager.Instance.battledata.playerBuff[0] * 0.07m;
+                        dmg += dmg * plus;
                     }
                     //보스전
                     if (mapmanager.Instance.BossPenalty[5].activeSelf)

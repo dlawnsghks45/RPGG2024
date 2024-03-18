@@ -4,7 +4,7 @@ using UnityEngine;
 namespace ES3Types
 {
 	[UnityEngine.Scripting.Preserve]
-	[ES3PropertiesAttribute("isEquip", "itemid", "KeyId", "CraftRare", "itemrare", "PrefixId", "MaxStoneCount", "StoneCount", "SmeltStatCount", "SmeltSuccCount", "SmeltFailCount", "EnchantNum", "EnchantFail", "islock", "ishaveEquipSkill", "EquipSkill", "Itemid", "KeyId1", "CraftRare1", "Itemrare", "PrefixId1", "MaxStoneCount1", "StoneCount1", "SmeltStatCount1", "IsEquip", "IsLock", "SmeltSuccCount1", "SmeltFailCount1", "EnchantNum1", "EnchantFail1", "IshaveEquipSkill", "EquipSkill1")]
+	[ES3PropertiesAttribute("isEquip", "itemid", "KeyId", "CraftRare", "itemrare", "PrefixId", "MaxStoneCount", "StoneCount", "SmeltStatCount", "SmeltSuccCount", "SmeltFailCount", "EnchantNum", "EnchantFail", "Alldmg", "islock", "ishaveEquipSkill", "EquipSkill", "Itemid", "KeyId1", "CraftRare1", "Itemrare", "PrefixId1", "MaxStoneCount1", "StoneCount1", "SmeltStatCount1", "IsEquip", "IsLock", "SmeltSuccCount1", "SmeltFailCount1", "EnchantNum1", "EnchantFail1", "Alldmg1", "IshaveEquipSkill", "EquipSkill1")]
 	public class ES3UserType_EquipDatabase : ES3ObjectType
 	{
 		public static ES3Type Instance = null;
@@ -29,6 +29,7 @@ namespace ES3Types
 			writer.WritePrivateField("SmeltFailCount", instance);
 			writer.WritePrivateField("EnchantNum", instance);
 			writer.WritePrivateField("EnchantFail", instance);
+			writer.WritePrivateField("Alldmg", instance);
 			writer.WritePrivateField("islock", instance);
 			writer.WritePrivateField("ishaveEquipSkill", instance);
 			writer.WritePrivateField("EquipSkill", instance);
@@ -46,6 +47,7 @@ namespace ES3Types
 			writer.WriteProperty("SmeltFailCount1", instance.SmeltFailCount1, ES3Type_int.Instance);
 			writer.WriteProperty("EnchantNum1", instance.EnchantNum1, ES3Type_int.Instance);
 			writer.WriteProperty("EnchantFail1", instance.EnchantFail1, ES3Type_int.Instance);
+			writer.WriteProperty("Alldmg1", instance.Alldmg1, ES3Type_int.Instance);
 			writer.WriteProperty("IshaveEquipSkill", instance.IshaveEquipSkill, ES3Type_bool.Instance);
 			writer.WriteProperty("EquipSkill1", instance.EquipSkill1, ES3Internal.ES3TypeMgr.GetES3Type(typeof(System.Collections.Generic.List<System.String>)));
 		}
@@ -97,6 +99,9 @@ namespace ES3Types
 					case "EnchantFail":
 					reader.SetPrivateField("EnchantFail", reader.Read<System.Int32>(), instance);
 					break;
+					case "Alldmg":
+					reader.SetPrivateField("Alldmg", reader.Read<System.Int32>(), instance);
+					break;
 					case "islock":
 					reader.SetPrivateField("islock", reader.Read<System.Boolean>(), instance);
 					break;
@@ -147,6 +152,9 @@ namespace ES3Types
 						break;
 					case "EnchantFail1":
 						instance.EnchantFail1 = reader.Read<System.Int32>(ES3Type_int.Instance);
+						break;
+					case "Alldmg1":
+						instance.Alldmg1 = reader.Read<System.Int32>(ES3Type_int.Instance);
 						break;
 					case "IshaveEquipSkill":
 						instance.IshaveEquipSkill = reader.Read<System.Boolean>(ES3Type_bool.Instance);

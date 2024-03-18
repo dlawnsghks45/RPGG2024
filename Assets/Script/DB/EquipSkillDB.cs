@@ -52,6 +52,7 @@ public class EquipSkillDB : MonoBehaviour
 		public string rare;
 		public string isstack;
 		public string isset;
+		public string isusebar;
 
 	}
 
@@ -91,6 +92,7 @@ public class EquipSkillDB : MonoBehaviour
 			row.rare = grid[i][13];
 			row.isstack = grid[i][14];
 			row.isset = grid[i][15];
+			row.isusebar = grid[i][16];
 
 			rowList.Add(row);
 		}
@@ -236,6 +238,14 @@ public class EquipSkillDB : MonoBehaviour
 	public List<Row> FindAll_isset(string find)
 	{
 		return rowList.FindAll(x => x.isset == find);
+	}
+	public Row Find_isusebar(string find)
+	{
+		return rowList.Find(x => x.isusebar == find);
+	}
+	public List<Row> FindAll_isusebar(string find)
+	{
+		return rowList.FindAll(x => x.isusebar == find);
 	}
 
 }

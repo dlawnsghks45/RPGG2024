@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class equipskillmanager : MonoBehaviour
 {
-    //½Ì±ÛÅæ¸¸µé±â.
+    //ì‹±ê¸€í†¤ë§Œë“¤ê¸°.
     private static equipskillmanager _instance = null;
     public static equipskillmanager Instance
     {
@@ -31,12 +31,12 @@ public class equipskillmanager : MonoBehaviour
 
     public enum EquipStatFloat
     {
-        //±âº» °ø°İ
+        //ê¸°ë³¸ ê³µê²©
         manadrain,
         manadrainhitper,
         manadrainlv,
         manadrainrare,
-        //½ºÅ³ »ç¿ë
+        //ìŠ¤í‚¬ ì‚¬ìš©
         smitedmg,
         smitehitper,
         smitelv,
@@ -49,33 +49,33 @@ public class equipskillmanager : MonoBehaviour
         explosionhitper,
         explosionlv,
         explosionrare,
-        //¿°È­°Ë
+        //ì—¼í™”ê²€
         legensworddmg,
         legenswordhitper,
         legenswordlv,
         legenswordrare,
-        //¸êÈ­µµ
+        //ë©¸í™”ë„
         legendaggerdmg,
         legendaggerhitper,
         legendaggerlv,
         legendaggerrare,
-        //ºí¸®ÀÚµå
+        //ë¸”ë¦¬ìë“œ
         legenbowdmg,
         legenbowhitper,
         legenbowwlv,
         legenbowrare,
-        //´ëÀÚ¿¬ÀÇ ÁöÆÎÀÌ
-        legenstaffdmg, //ÇÇÇØ Áõ°¡·®
-        legenstaffhitper, //¸¶³ª¼Ò¸ğ·®
+        //ëŒ€ìì—°ì˜ ì§€íŒ¡ì´
+        legenstaffdmg, //í”¼í•´ ì¦ê°€ëŸ‰
+        legenstaffhitper, //ë§ˆë‚˜ì†Œëª¨ëŸ‰
         legenstafflv,
         legenstaffrare,
-        //»ç½ÅÀÇ³´
-        legendotmaxstack, //ÇÇÇØ Áõ°¡·®
-        legendotaddstack, //¸¶³ª¼Ò¸ğ·®
+        //ì‚¬ì‹ ì˜ë‚«
+        legendotmaxstack, //í”¼í•´ ì¦ê°€ëŸ‰
+        legendotaddstack, //ë§ˆë‚˜ì†Œëª¨ëŸ‰
         legendotlv,
         legendotrare,
-        //´É·ÂÄ¡ ÆÛ¼¾Æ®
-        //´É·ÂÄ¡ 
+        //ëŠ¥ë ¥ì¹˜ í¼ì„¼íŠ¸
+        //ëŠ¥ë ¥ì¹˜ 
         strup,
         strperup,
         dexup,
@@ -84,7 +84,7 @@ public class equipskillmanager : MonoBehaviour
         intperup,
         wisup,
         wisperup,
-        //Ä¡È® Ä¡ÇÇ
+        //ì¹˜í™• ì¹˜í”¼
         critper,
         critdmgper,
         physicperup,
@@ -92,7 +92,7 @@ public class equipskillmanager : MonoBehaviour
         dotperup,
         basicatk,
         potionup,
-        //·¹ÀÌÁîÀÇ ºĞ³ë
+        //ë ˆì´ì¦ˆì˜ ë¶„ë…¸
         razerage,
         razeragehitper,
         razeragelv,
@@ -105,53 +105,75 @@ public class equipskillmanager : MonoBehaviour
         reskilrare,
         maxhpupper,
         maxmpupper,
-        //½½·¹ÀÌ¾î,
-        legendaxehp, //»ı¸í·Â Áõ°¡·®
-        legendaxecritdmg, //Ä¡¸íÅ¸ ÇÇÇØ·®
-        //¸êÈ­µµ
+        //ìŠ¬ë ˆì´ì–´,
+        legendaxehp, //ìƒëª…ë ¥ ì¦ê°€ëŸ‰
+        legendaxecritdmg, //ì¹˜ëª…íƒ€ í”¼í•´ëŸ‰
+        //ëŸ¬ë¸Œ
         legenmacedmg,
         legenmacehitper,
         legenmacelv,
         legenmacerare,
-        //¶ó±×³ª·ÎÅ©
+        //ë¼ê·¸ë‚˜ë¡œí¬
         legenwanddmg,
         legenwandhitper,
         legenwandlv,
         legenwandrare,
-        //»óÀú
+        //ìƒì €
         warriorrune,
         magerune,
         destroyervalue,
         scarvalue,
         basicmonsterdmg,
         goldexp,
-        //2Â÷½ÃÁğ¹«±â
-        E6138, //ÆÄ¸êÀÇ °Ë
-        E6138_2, //ÆÄ¸êÀÇ °Ë
-        E6139, //ÇÏµ¥½ºÀÇ µµ³¢
-        E6139_2, //ÇÏµ¥½ºÀÇ µµ³¢
-        E6140, //°ÅÀÎ ºĞ¼â±â
-        E6140_2, //°ÅÀÎ ºĞ¼â±â
-        E6141, //ÀûÈ­ÀÇ °ÇÆ²¸´
-        E6141_2, //ÀûÈ­ÀÇ °ÇÆ²¸´
-        E6142, //·¹ÀÏ °Ç
-        E6142_2, //·¹ÀÏ °Ç
-        E6143, //µå·¡°ï º¸¿ì
-        E6143_2, //µå·¡°ï º¸¿ì
-        E6144, //ºí·¯µå Ä¿ÅÍ
-        E6144_2, //ºí·¯µå Ä¿ÅÍ
-        E6145, //´ÜÅ×ÀÇ ¼®±Ã
-        E6145_2, //´ÜÅ×ÀÇ ¼®±Ã
-        E6146, //Á¦¿ì½ºÀÇ ÁöÆÎÀÌ
-        E6146_2, //Á¦¿ì½ºÀÇ ÁöÆÎÀÌ
-        E6147, //Æ÷¼¼ÀÌµ·ÀÇ ÁöÆÎÀÌ
-        E6147_2, //Æ÷¼¼ÀÌµ·ÀÇ ÁöÆÎÀÌ
-        E6148, //¾ÆÆú·ĞÀÇ ¸ŞÀÌ½º
-        E6148_2, //¾ÆÆú·ĞÀÇ ¸ŞÀÌ½º
-        E6149, //Ã³´ÜÀÚ
-        E6149_2, //Ã³´ÜÀÚ
-        E6150, //°íÅë
-        E6150_2, //°íÅë
+        //2ì°¨ì‹œì¦Œë¬´ê¸°
+        E6138, //íŒŒë©¸ì˜ ê²€
+        E6138_2, //íŒŒë©¸ì˜ ê²€
+        E6139, //í•˜ë°ìŠ¤ì˜ ë„ë¼
+        E6139_2, //í•˜ë°ìŠ¤ì˜ ë„ë¼
+        E6140, //ê±°ì¸ ë¶„ì‡„ê¸°
+        E6140_2, //ê±°ì¸ ë¶„ì‡„ê¸°
+        E6141, //ì í™”ì˜ ê±´í‹€ë¦¿
+        E6141_2, //ì í™”ì˜ ê±´í‹€ë¦¿
+        E6141_rare, //ì í™”ì˜ ê±´í‹€ë¦¿
+        E6141_lv, //ì í™”ì˜ ê±´í‹€ë¦¿
+        E6142, //ë ˆì¼ ê±´
+        E6142_2, //ë ˆì¼ ê±´
+        E6142_rare, //ë ˆì¼ ê±´
+        E6142_lv, //ë ˆì¼ ê±´
+        E6143, //ë“œë˜ê³¤ ë³´ìš°
+        E6143_2, //ë“œë˜ê³¤ ë³´ìš°
+        E6143_lv, //ë“œë˜ê³¤ ë³´ìš°
+        E6143_rare, //ë“œë˜ê³¤ ë³´ìš°
+        E6144, //ë¸”ëŸ¬ë“œ ì»¤í„°
+        E6144_2, //ë¸”ëŸ¬ë“œ ì»¤í„°
+        E6144_3, //ë¸”ëŸ¬ë“œ ì»¤í„°
+        E6144_lv, //ë¸”ëŸ¬ë“œ ì»¤í„°
+        E6144_rare, //ë¸”ëŸ¬ë“œ ì»¤í„°
+        E6145, //ë‹¨í…Œì˜ ì„ê¶
+        E6145_2, //ë‹¨í…Œì˜ ì„ê¶
+        E6145_3, //ë‹¨í…Œì˜ ì„ê¶
+        E6145_lv, //ë‹¨í…Œì˜ ì„ê¶
+        E6145_rare, //ë‹¨í…Œì˜ ì„ê¶
+        E6146, //ì œìš°ìŠ¤ì˜ ì§€íŒ¡ì´
+        E6146_2, //ì œìš°ìŠ¤ì˜ ì§€íŒ¡ì´
+        E6146_lv, //ì œìš°ìŠ¤ì˜ ì§€íŒ¡ì´
+        E6146_rare, //ì œìš°ìŠ¤ì˜ ì§€íŒ¡ì´
+        E6147, //í¬ì„¸ì´ëˆì˜ ì§€íŒ¡ì´
+        E6147_2, //í¬ì„¸ì´ëˆì˜ ì§€íŒ¡ì´
+        E6147_lv, //í¬ì„¸ì´ëˆì˜ ì§€íŒ¡ì´
+        E6147_rare, //í¬ì„¸ì´ëˆì˜ ì§€íŒ¡ì´
+        E6148, //ì•„í´ë¡ ì˜ ë©”ì´ìŠ¤
+        E6148_2, //ì•„í´ë¡ ì˜ ë©”ì´ìŠ¤
+        E6148_3, //ì•„í´ë¡ ì˜ ë©”ì´ìŠ¤
+        E6148_lv, //ì•„í´ë¡ ì˜ ë©”ì´ìŠ¤
+        E6148_rare, //ì•„í´ë¡ ì˜ ë©”ì´ìŠ¤
+        E6149, //ì²˜ë‹¨ì
+        E6149_2, //ì²˜ë‹¨ì
+        E6150, //ê³ í†µ
+        E6150_2, //ê³ í†µ,
+        E6159,//ì²­í˜¼ì˜ ê±´í‹€ë¦¿
+        E6159_2,//ì²­í˜¼ì˜ ê±´í‹€ë¦¿
+        E6160,//ë“œë˜ê³¤ ì• ë¡œìš°
         Length
     }
 

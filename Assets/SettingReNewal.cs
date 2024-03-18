@@ -144,9 +144,7 @@ public class SettingReNewal : MonoBehaviour
     void SetEffectColor()
     {
         float a = 1f;
-
-        
-        
+        Debug.Log("이펙트 컬러는" + PlayerBackendData.Instance.settingdata.EffectColor);
         switch (PlayerBackendData.Instance.settingdata.EffectColor)
         {
             case 0:

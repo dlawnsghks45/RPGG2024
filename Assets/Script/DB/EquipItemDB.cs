@@ -82,6 +82,8 @@ public class EquipItemDB : MonoBehaviour
 		public string Mp;
 		public string Crit;
 		public string CritDmg;
+		public string MinAllDmg;
+		public string MaxAllDmg;
 		public string RanStatId;
 		public string SetID;
 		public string SpeMehod;
@@ -168,23 +170,25 @@ public class EquipItemDB : MonoBehaviour
 			row.Mp = grid[i][43];
 			row.Crit = grid[i][44];
 			row.CritDmg = grid[i][45];
-			row.RanStatId = grid[i][46];
-			row.SetID = grid[i][47];
-			row.SpeMehod = grid[i][48];
-			row.SpeMehodP = grid[i][49];
-			row.SuccSpe = grid[i][50];
-			row.istwohand = grid[i][51];
-			row.smeltid = grid[i][52];
-			row.smeltcount = grid[i][53];
-			row.maxdotcount = grid[i][54];
-			row.dotdmgup = grid[i][55];
-			row.AdvanEquipID = grid[i][56];
-			row.AdvanNeedItem = grid[i][57];
-			row.AdvanNeedItemHowmany = grid[i][58];
-			row.AdvanGold = grid[i][59];
-			row.AdvanPercent = grid[i][60];
-			row.ChangeId = grid[i][61];
-			row.UpgradeNeedID = grid[i][62];
+			row.MinAllDmg = grid[i][46];
+			row.MaxAllDmg = grid[i][47];
+			row.RanStatId = grid[i][48];
+			row.SetID = grid[i][49];
+			row.SpeMehod = grid[i][50];
+			row.SpeMehodP = grid[i][51];
+			row.SuccSpe = grid[i][52];
+			row.istwohand = grid[i][53];
+			row.smeltid = grid[i][54];
+			row.smeltcount = grid[i][55];
+			row.maxdotcount = grid[i][56];
+			row.dotdmgup = grid[i][57];
+			row.AdvanEquipID = grid[i][58];
+			row.AdvanNeedItem = grid[i][59];
+			row.AdvanNeedItemHowmany = grid[i][60];
+			row.AdvanGold = grid[i][61];
+			row.AdvanPercent = grid[i][62];
+			row.ChangeId = grid[i][63];
+			row.UpgradeNeedID = grid[i][64];
 
 			rowList.Add(row);
 		}
@@ -570,6 +574,22 @@ public class EquipItemDB : MonoBehaviour
 	public List<Row> FindAll_CritDmg(string find)
 	{
 		return rowList.FindAll(x => x.CritDmg == find);
+	}
+	public Row Find_MinAllDmg(string find)
+	{
+		return rowList.Find(x => x.MinAllDmg == find);
+	}
+	public List<Row> FindAll_MinAllDmg(string find)
+	{
+		return rowList.FindAll(x => x.MinAllDmg == find);
+	}
+	public Row Find_MaxAllDmg(string find)
+	{
+		return rowList.Find(x => x.MaxAllDmg == find);
+	}
+	public List<Row> FindAll_MaxAllDmg(string find)
+	{
+		return rowList.FindAll(x => x.MaxAllDmg == find);
 	}
 	public Row Find_RanStatId(string find)
 	{
