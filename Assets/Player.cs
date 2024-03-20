@@ -749,49 +749,65 @@ public class Player : MonoBehaviour
                                     float.Parse(skilldata.lv));
                                 break;
                             case "1030": //������
-                                equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.strup,
+                            case "1050": //��ø����
+                            case "1070": //��������
+                            case "1090": //��������
+                                equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.allstat,
                                     float.Parse(skilldata.value));
                                 break;
                             case "1040": //������ �ۼ�Ʈ
+                            case "1060": //��ø���� �ۼ�Ʈ
+                            case "1080": //�������� �ۼ�Ʈ
+                            case "1100": //�������� �ۼ�Ʈ
+
+                                equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.allstatperup,
+                                    float.Parse(skilldata.value));
+                                break;
+                        
+                               case "1374": //������
+                                equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.strup,
+                                    float.Parse(skilldata.value));
+                                break;
+                            case "1384": //������ �ۼ�Ʈ
                                 equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.strperup,
                                     float.Parse(skilldata.value));
                                 break;
-                            case "1050": //��ø����
+                            case "1394": //��ø����
                                 equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.dexup,
                                     float.Parse(skilldata.value));
                                 break;
-                            case "1060": //��ø���� �ۼ�Ʈ
+                            case "1404": //��ø���� �ۼ�Ʈ
                                 equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.dexperup,
                                     float.Parse(skilldata.value));
                                 break;
 
-                            case "1070": //��������
+                            case "1414": //��������
                                 equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.intup,
                                     float.Parse(skilldata.value));
                                 break;
-                            case "1080": //�������� �ۼ�Ʈ
+                            case "1424": //�������� �ۼ�Ʈ
                                 equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.intperup,
                                     float.Parse(skilldata.value));
                                 break;
 
-                            case "1090": //��������
+                            case "1434": //��������
                                 equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.wisup,
                                     float.Parse(skilldata.value));
                                 break;
-                            case "1100": //�������� �ۼ�Ʈ
+                            case "1444": //�������� �ۼ�Ʈ
                                 equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.wisperup,
                                     float.Parse(skilldata.value));
                                 break;
-                            case "1110": //��������
+                            case "1354": //��������
                                 equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.physicperup,
                                     float.Parse(skilldata.value));
 //                            Debug.Log("물공증가횟수");
                                 break;
-                            case "1120": //마법공격력
+                            case "1364": //마법공격력
                                 equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.magicperup,
                                     float.Parse(skilldata.value));
                                 break;
-                            case "1130": //��������
+                            case "1130": //
                                 equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.critper,
                                     float.Parse(skilldata.value));
                                 break;
@@ -837,7 +853,7 @@ public class Player : MonoBehaviour
                                 equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.balrockragelv,
                                     float.Parse(skilldata.rare));
                                 break;
-                            case "1172": //�����̻�����
+                            case "1464": //�����̻�����
                                 equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.dotperup,
                                     float.Parse(skilldata.value));
                                 break;
@@ -1094,13 +1110,6 @@ public class Player : MonoBehaviour
                                     float.Parse(skilldata.value));
                                 break;
                             
-                            
-                            
-                            
-                            
-                            
-                            
-                            
                             case "1309" : //파멸의 검
                                 equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.legensworddmg,
                                     float.Parse(skilldata.value));
@@ -1314,6 +1323,33 @@ public class Player : MonoBehaviour
                                     (int)equipskillmanager.EquipStatFloat.E6160,
                                     float.Parse(skilldata.value));
                                 break;
+                            
+                            //피해 증가
+                            case "1172":
+                            case "1110":
+                            case "1120":
+                            case "1454":
+
+                                switch (data.SubType)
+                                {
+                                    case "Physic":
+                                        equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.physicperup,
+                                            float.Parse(skilldata.value));
+                                        break;
+                                    case "Magic":
+                                        equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.magicperup,
+                                            float.Parse(skilldata.value));
+                                        break;
+                                    case "Dot":
+                                        equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.dotperup,
+                                            float.Parse(skilldata.c));
+                                        break;
+                                }
+                                
+                                
+                                break;
+                            
+                            
                         }
                     }
                     catch (Exception e)
@@ -1674,20 +1710,28 @@ public class Player : MonoBehaviour
         float dex_allstat = 0;
         float int_allstat = 0;
         float wis_allstat = 0;
+        float str_allstatper = 0;
+        float dex_allstatper = 0;
+        float int_allstatper = 0;
+        float wis_allstatper = 0;
 
         switch (classdata.mainstat)
         {
             case "str":
-                str_allstat = gear_allstat+ Stat_collection;
+                str_allstat = gear_allstat+ Stat_collection + equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstat);
+                str_allstatper = equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstatperup);
                 break;
             case "dex":
-                dex_allstat = gear_allstat+ Stat_collection;
+                dex_allstat = gear_allstat+ Stat_collection + equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstat);
+                dex_allstatper = equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstatperup);
                 break;
             case "int":
-                int_allstat = gear_allstat + Stat_collection;
+                int_allstat = gear_allstat + Stat_collection + equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstat);
+                int_allstatper = equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstatperup);
                 break;
             case "wis":
-                wis_allstat = gear_allstat + Stat_collection;
+                wis_allstat = gear_allstat + Stat_collection + equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstat);
+                wis_allstatper  = equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstatperup);
                 break;
         }
 
@@ -1711,25 +1755,25 @@ public class Player : MonoBehaviour
         
         
         
-        float allstatper = pm.GetPassiveStat(Passivemanager.PassiveStatEnum.allstatperup);
+        float allstatper = pm.GetPassiveStat(Passivemanager.PassiveStatEnum.allstatperup) ;
 
 
-        stat_str += stat_str * (advenper +
+        stat_str += stat_str * (advenper + str_allstatper +
                                 equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.strperup) +
                                 pm.GetPassiveStat(Passivemanager.PassiveStatEnum.strperup) + allstatper + ability_str
                                 + MyGuildManager.Instance.GetBuffStat(MyGuildManager.GuildBuffEnum.모든능력치증가) + ability_allstat);
 
-        stat_dex += stat_dex * (advenper +
+        stat_dex += stat_dex * (advenper + dex_allstatper +
                                 equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.dexperup) +
                                 pm.GetPassiveStat(Passivemanager.PassiveStatEnum.dexperup) + allstatper + ability_dex
                                 + MyGuildManager.Instance.GetBuffStat(MyGuildManager.GuildBuffEnum.모든능력치증가) + ability_allstat
                                 + equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6145_2));
 
-        stat_int += stat_int * (advenper +
+        stat_int += stat_int * (advenper + int_allstatper +
                                 equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.intperup) +
                                 pm.GetPassiveStat(Passivemanager.PassiveStatEnum.intwisperup) + allstatper + ability_int
                                 + MyGuildManager.Instance.GetBuffStat(MyGuildManager.GuildBuffEnum.모든능력치증가) + ability_allstat);
-        stat_wis += stat_wis * (advenper +
+        stat_wis += stat_wis * (advenper + wis_allstatper +
                                 equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.wisperup) +
                                 pm.GetPassiveStat(Passivemanager.PassiveStatEnum.intwisperup) + allstatper + ability_wis
                                 + MyGuildManager.Instance.GetBuffStat(MyGuildManager.GuildBuffEnum.모든능력치증가) + ability_allstat);
@@ -1747,7 +1791,6 @@ public class Player : MonoBehaviour
         if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6139) >= 1)
         {
             int mix = (int)((stat_int + stat_wis));
-            Debug.Log("믹스는" + mix);
             stat_str += mix;
             stat_int = 0;
             stat_wis = 0;

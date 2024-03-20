@@ -84,6 +84,8 @@ public class equipskillmanager : MonoBehaviour
         intperup,
         wisup,
         wisperup,
+        allstat,
+        allstatperup,
         //치확 치피
         critper,
         critdmgper,
