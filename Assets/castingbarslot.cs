@@ -123,6 +123,25 @@ public class castingbarslot : MonoBehaviour
                             dpsmanager.Instance.AddDps(dpsmanager.attacktype.특수효과, 0, "E1211",1);
                     }
                 }
+                //태양의 목걸이
+                if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.reskillhitper2) != 0)
+                {
+                    if (Random.Range(0, 100) <
+                        equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.reskillhitper2))
+                    {
+                        yield return castingsecond2;
+                        // Debug.Log("스킬발동");
+                        Skillmanager.Instance.UseSkill_Mainplayer(nowskill);
+                        equipskillmanager.Instance.showequipslots("1333",
+                            equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.reskilrare2)
+                                .ToString("N0"),
+                            equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.reskilllv2)
+                                .ToString("N0"));
+                        DamageManager.Instance.ShowEffect(Battlemanager.Instance.mainplayer.transform, "Buff7");
+                        if (dpsmanager.Instance.isdpson)
+                            dpsmanager.Instance.AddDps(dpsmanager.attacktype.특수효과, 0, "E1333",1);
+                    }
+                }
             }
 
             canvas.alpha = 0;

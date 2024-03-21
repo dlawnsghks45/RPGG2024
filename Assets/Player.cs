@@ -857,7 +857,7 @@ public class Player : MonoBehaviour
                                 equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.dotperup,
                                     float.Parse(skilldata.value));
                                 break;
-                            case "1182": //�����̻�����
+                            case "1474": //�����̻�����
                                 equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.basicatk,
                                     float.Parse(skilldata.value));
                                 break;
@@ -927,6 +927,7 @@ public class Player : MonoBehaviour
                                     float.Parse(skilldata.rare));
                                 break;
                             case "1207": //제왕의 반지
+                            case "1328": //제왕의 반지
                                 equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.strperup,
                                     float.Parse(skilldata.value));
                                 equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.dexperup,
@@ -937,6 +938,7 @@ public class Player : MonoBehaviour
                                     float.Parse(skilldata.value));
                                 break;
                             case "1208": //절대 마력의 반지
+                            case "1329": //절대 마력의 반지
                                 equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.physicperup,
                                     float.Parse(skilldata.value));
                                 equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.magicperup,
@@ -958,24 +960,44 @@ public class Player : MonoBehaviour
                                 equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.reskilrare,
                                     float.Parse(skilldata.rare));
                                 break;
+                            case "1333": //봉인된 고대 드래곤의 목걸이
+                                equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.reskilllv2,
+                                    float.Parse(skilldata.lv));
+                                equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.reskillhitper2,
+                                    float.Parse(skilldata.probability));
+                                equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.reskilrare2,
+                                    float.Parse(skilldata.rare));
+                                break;
+                            case "1332": //골드 획득량
+                                equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.gold,
+                                    float.Parse(skilldata.value));
+                              
+                                break;
                             case "1212": //핏빛 칼날 목걸이
                                 equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.dotperup,
                                     float.Parse(skilldata.value));
                                 break;
-
-                            case "1213": //마나번
+                            case "1330": //독사의 반지
+                                equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.legendotaddstack,
+                                    float.Parse(skilldata.value));
+                                break;
+                            case "1331": //성기사의 목걸이
+                                equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.totaldmg,
+                                    float.Parse(skilldata.value));
+                                break;
+                            case "1494": //마나번
                                 equipskillmanager.Instance.SetStats(
                                     (int)equipskillmanager.EquipStatFloat.legenstaffhitper,
                                     float.Parse(skilldata.c));
                                 equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.magicperup,
                                     float.Parse(skilldata.value));
                                 break;
-                            case "1223": //부패
+                            case "1504": //부패
                                 equipskillmanager.Instance.SetStats(
                                     (int)equipskillmanager.EquipStatFloat.legendotmaxstack,
                                     float.Parse(skilldata.value));
                                 break;
-                            case "1233": //광적인 분노
+                            case "1514": //광적인 분노
                                 equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.maxhpupper,
                                     -float.Parse(skilldata.c));
                                 equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.physicperup,
@@ -1329,24 +1351,57 @@ public class Player : MonoBehaviour
                             case "1110":
                             case "1120":
                             case "1454":
+                            case "1182":
 
                                 switch (data.SubType)
                                 {
                                     case "Physic":
                                         equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.physicperup,
                                             float.Parse(skilldata.value));
+                                        equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.basicatk,
+                                            float.Parse(skilldata.value));
                                         break;
                                     case "Magic":
                                         equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.magicperup,
                                             float.Parse(skilldata.value));
+                                        Debug.Log("성불2");
                                         break;
                                     case "Dot":
                                         equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.dotperup,
                                             float.Parse(skilldata.c));
+                                        Debug.Log("성불3");
                                         break;
                                 }
                                 
+                                break;
+                            //피해 증가
+                            case "1213":
+                            case "1223":
+                            case "1233":
+                            case "1524":
                                 
+                                switch (data.SubType)
+                                {
+                                    case "Physic":
+                                        equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.maxhpupper,
+                                            -float.Parse(skilldata.subtype));
+                                        equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.physicperup,
+                                            float.Parse(skilldata.type));
+                                        break;
+                                    case "Magic":
+                                        equipskillmanager.Instance.SetStats(
+                                            (int)equipskillmanager.EquipStatFloat.legenstaffhitper,
+                                            float.Parse(skilldata.value));
+                                        equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.magicperup,
+                                            float.Parse(skilldata.probability));
+                                        break;
+                                    case "Dot":
+                                        equipskillmanager.Instance.SetStats(
+                                            (int)equipskillmanager.EquipStatFloat.legendotmaxstack,
+                                            float.Parse(skilldata.c));
+                                        break;
+                                }
+
                                 break;
                             
                             
@@ -1961,14 +2016,11 @@ public class Player : MonoBehaviour
 ////        Debug.Log(pm.GetPassiveStat(Passivemanager.PassiveStatEnum.basicatkdmg) + "기본공격피해");
 //        Debug.Log(Stat_ExtraExp);
 //        Debug.Log(Stat_ExtraGold);
-        if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.goldexp) != 0)
-        {
-            Stat_ExtraExp += equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.goldexp);
-            Stat_ExtraGold += equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.goldexp);
-//            Debug.Log("골경");
-//            Debug.Log(Stat_ExtraExp);
-//            Debug.Log(Stat_ExtraGold);
-        }
+       
+            Stat_ExtraExp += equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.goldexp)+
+                             equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.gold);
+            Stat_ExtraGold += equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.goldexp)+
+                              equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.exp);
         
         //물약효율
         stat_potionup = gear_potionup + equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat
@@ -1986,7 +2038,7 @@ public class Player : MonoBehaviour
             stat_basicatkup += basicdmg;
         }
 
-        AlldmgUp += buff_alldmgup + gear_alldmg;
+        AlldmgUp += buff_alldmgup + gear_alldmg + equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.totaldmg);
 
     }
 

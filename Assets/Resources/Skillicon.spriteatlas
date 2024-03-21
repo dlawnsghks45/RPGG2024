@@ -744,6 +744,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 90f77ae6fff67f24384f3529e79ee183, type: 3}
   - {fileID: 21300000, guid: cab8fbe62028a304ea2dd6d57bb79e42, type: 3}
   - {fileID: 21300000, guid: bbe67fe6f3c7a1141981324fde7f3090, type: 3}
+  - {fileID: 21300000, guid: 6b089fe6d9198864fb12d06f62a0b8a8, type: 3}
   - {fileID: 21300000, guid: ba87c3f6eb34fad42ba23815d5377a92, type: 3}
   - {fileID: 21300000, guid: d916e3f640cd2f04698c4d2d646dcb4d, type: 3}
   - {fileID: 21300000, guid: ea3877f65453ea24ba3023aae111ec87, type: 3}
@@ -978,7 +979,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: aa2a8679b40358949936f7505f54d350, type: 3}
   - {fileID: 21300000, guid: c382c6799a70cea43ad2bba8e84c4791, type: 3}
   - {fileID: 21300000, guid: 36dcea79bb5e4c64eb72426bf8462536, type: 3}
-  - {fileID: 21300000, guid: bb080d79db0aa3b4e8be4eee20d0e0f8, type: 3}
   - {fileID: 21300000, guid: 5e4a5d796a3406a45a794987e6b8161f, type: 3}
   - {fileID: 21300000, guid: f7bdfd7949a80b140b6e2df9ab8f5591, type: 3}
   - {fileID: 21300000, guid: 15aa32896f5a73746a30f1a93f6fc6e9, type: 3}
@@ -1017,6 +1017,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: dcf23ec953c0dbc4cb0eb554cb0edfb8, type: 3}
   - {fileID: 21300000, guid: 405fc0d99f5bd0e4192b895847159aad, type: 3}
   - {fileID: 21300000, guid: 1cd451d96ebfb9642b17b4d4ddca5583, type: 3}
+  - {fileID: 21300000, guid: 3b6e3ad9653f1ff4992f9d78ca2a6867, type: 3}
   - {fileID: 21300000, guid: 665bdad977a2c5e4eb58c6aaeaf6f218, type: 3}
   - {fileID: 21300000, guid: a52fecd99511de845aef27547db1a6a0, type: 3}
   - {fileID: 21300000, guid: f3edded9496067e449e29e3c4ec5b93f, type: 3}
@@ -1414,6 +1415,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 1c388bed1ad92b547bcb455ec8810350, type: 3}
   - {fileID: 21300000, guid: 78aa6eedf220d50499479c3c9e3c9397, type: 3}
   - {fileID: 21300000, guid: e0da97fdc9fc63e4db2175484f851bdf, type: 3}
+  - {fileID: 21300000, guid: 65443afdb091b9c4c98c8e56e8b50dd8, type: 3}
   - {fileID: 21300000, guid: 62becafd69bb7f44aae825249ce4d206, type: 3}
   - {fileID: 21300000, guid: cb1a0bfd3a9d322438cbcea512519259, type: 3}
   - {fileID: 21300000, guid: af505efdb9b00e1409134b3b253c69b3, type: 3}
@@ -1496,6 +1498,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: e68bf1ce1052215409025adee9597cf1, type: 3}
   - {fileID: 21300000, guid: 175575ce3ab54954b89b6088dced175d, type: 3}
   - {fileID: 21300000, guid: 4b2ec6ce4c3d7e24e929c7dfeb7dcb4b, type: 3}
+  - {fileID: 21300000, guid: 7f20d9ceacbd34e46a30bb2faa42d8da, type: 3}
   - {fileID: 21300000, guid: a6b8abcef208ca64ea6cf85e941bfbea, type: 3}
   - {fileID: 21300000, guid: 54c75dced75dfeb4cb95da53132e229b, type: 3}
   - {fileID: 21300000, guid: 24f2bfced80537c42b27eedbc39d0b3b, type: 3}
@@ -2294,6 +2297,7 @@ SpriteAtlas:
   - scythe1
   - "\uBE68\uAC04\uBB3C\uC57D"
   - quest_104
+  - 2
   - punch
   - 1060
   - 9998
@@ -2528,7 +2532,6 @@ SpriteAtlas:
   - 7
   - "\uD478\uB978 \uC6A9\uC758 \uBC18\uC9C0-\uBBFC\uCCA9"
   - Icon19
-  - "\uCD08\uC6D4\uBB34\uAE30\uACB0\uC815"
   - 1031
   - material_164
   - quest_192
@@ -2567,6 +2570,7 @@ SpriteAtlas:
   - LongSword3
   - 1004
   - "\uCD5C\uC0C1\uAE09\uC2A4\uD0AC\uACB0\uC815"
+  - 1
   - "\uB8EC\uC758\uAE30\uC5B5"
   - 11
   - skull
@@ -2964,6 +2968,7 @@ SpriteAtlas:
   - material_70
   - 4
   - 2
+  - 3
   - fire
   - 1103
   - LongSword8
@@ -3046,6 +3051,7 @@ SpriteAtlas:
   - "\uC2E0\uC758\uBCF4\uC870\uBB34\uAE30\uC0C1\uD0DC1"
   - 1026
   - 1231
+  - 0
   - 1019
   - Fire1
   - vellum_new

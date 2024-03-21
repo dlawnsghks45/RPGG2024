@@ -662,7 +662,6 @@ public class chatmanager : MonoBehaviour
                                 break;
                             //시스;PRMS;리더;자리
                             //보스의 버프를
-                            Debug.Log("여기서 보상지급");
 
                             string[] datas = args.Message.Split('&');
                             stringdata = datas[0].Split(';');
@@ -1656,7 +1655,7 @@ public class chatmanager : MonoBehaviour
         LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)ChatTrans_PartyRaid);
         LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)ChatTrans_PartyRaid);
         RefreshPartyRaidChatPanel();
-        //lobbyText.text = $"{Inventory.GetTranslate("UI6/채팅_시스템")} {message}";
+        lobbyText.text = $"{string.Format(Inventory.GetTranslate("UI6/채팅_파티"),nickname,message)}";
         partyraidchatslot[party_num].transform.SetAsLastSibling();
         party_num++;
         if (party_num >= partyraidchatslot.Length)
@@ -1699,6 +1698,7 @@ public class chatmanager : MonoBehaviour
         LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)ChatTrans_PartyRaid);
         LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)ChatTrans_PartyRaid);
         RefreshPartyRaidChatPanel();
+        lobbyText.text = $"{Inventory.GetTranslate("UI6/채팅_시스템파티")} {message}";
         partyraidSystemchatslot[partySystem_num].transform.SetAsLastSibling();
         partySystem_num++;
         if (partySystem_num >= partyraidSystemchatslot.Length)

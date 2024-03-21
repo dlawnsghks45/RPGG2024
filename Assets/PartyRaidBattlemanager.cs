@@ -163,7 +163,7 @@ public class PartyRaidBattlemanager : MonoBehaviour
 
         
         RefreshBossPenaly();
-
+        PartyRaidRoommanager.Instance.ExitButtons.SetActive(false);
     }
 
     public Text TryCountText;

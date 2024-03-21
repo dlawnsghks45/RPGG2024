@@ -105,6 +105,9 @@ public class equipskillmanager : MonoBehaviour
         reskilllv,
         reskillhitper,
         reskilrare,
+        reskilllv2,
+        reskillhitper2,
+        reskilrare2,
         maxhpupper,
         maxmpupper,
         //슬레이어,
@@ -127,6 +130,8 @@ public class equipskillmanager : MonoBehaviour
         scarvalue,
         basicmonsterdmg,
         goldexp,
+        gold,
+        exp,
         //2차시즌무기
         E6138, //파멸의 검
         E6138_2, //파멸의 검
@@ -176,6 +181,7 @@ public class equipskillmanager : MonoBehaviour
         E6159,//청혼의 건틀릿
         E6159_2,//청혼의 건틀릿
         E6160,//드래곤 애로우
+        totaldmg, //피해증가
         Length
     }
 

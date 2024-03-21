@@ -32,6 +32,30 @@ id,descriptionKor,sprite,name,description,itemtype,itemsubtype,rare,droprare,buy
 ,,,,,,,,,,,,,,,,,,,
 21,룬 파편,Item/룬/Icon30,Itemname/21,Itemdescript/21,1,111,5,FALSE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 22,룬 완성석,Item/룬/Icon36,Itemname/22,Itemdescript/22,1,111,6,FALSE,0,2000000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,
+,시즌 2,,,,,,,,,,,,,,,,,,
+23,불지옥 파편,,Itemname/23,Itemdescript/23,1,111,5,FALSE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+24,지옥 레이드 결정,Item/Resource/신화악세파편,Itemname/24,Itemdescript/24,1,111,5,FALSE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+25,,,Itemname/25,Itemdescript/25,1,111,5,FALSE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+26,신 장비 파편,Item/Season2/0,Itemname/26,Itemdescript/26,1,111,5,FALSE,0,5000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+27,신 장비 제작석,Item/Season2/1,Itemname/27,Itemdescript/27,1,111,6,FALSE,0,100000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+28,신전의 보옥,Item/Season2/2,Itemname/28,Itemdescript/28,1,111,7,FALSE,0,500000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+29,정제된 신의 힘,Item/Season2/3,Itemname/29,Itemdescript/29,1,111,7,FALSE,0,1000000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
 40000,100만골드,Item/유물/bag1,Itemname/40000,Itemdescript/40000,1,111,4,TRUE,0,1000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 40001,1천만골드,Item/유물/bag2,Itemname/40001,Itemdescript/40001,1,111,5,TRUE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 40002,1억 골드,Item/유물/bag3,Itemname/40002,Itemdescript/40002,1,111,6,TRUE,0,100000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
@@ -139,15 +163,15 @@ id,descriptionKor,sprite,name,description,itemtype,itemsubtype,rare,droprare,buy
 200007,700레벨 경험치 스크롤,Item/Consume/Paper/quest_08,Itemname/200007,Itemdescript/200007,2,402,6,FALSE,0,1,FALSE,1,30025920881,0,0,0,TRUE,0,FALSE
 200008,500~700레벨 경험치 스크롤,Item/Consume/Paper/quest_08,Itemname/200008,Itemdescript/200008,2,402,6,FALSE,0,1,FALSE,1,20169850000,0,0,0,TRUE,0,FALSE
 ,,,,,,,,,,,,,,,,,,,
-200009,제단 강화 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200009,Itemdescript/200009,2,405,6,TRUE,0,1,FALSE,1,0,1,daily,0,TRUE,0,FALSE
-200010,스킬북 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200010,Itemdescript/200010,2,405,6,TRUE,0,1,FALSE,1,3,1,daily,0,TRUE,0,FALSE
-200011,개미굴 제단 강화석 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200011,Itemdescript/200011,2,405,6,TRUE,0,1,FALSE,1,6,1,daily,0,TRUE,0,FALSE
-200012,룰렛 열쇠 - 프리미엄 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200012,Itemdescript/200012,2,405,6,TRUE,0,1,FALSE,1,9,1,daily,0,TRUE,0,FALSE
-200013,성장 콘텐츠 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200013,Itemdescript/200013,2,405,6,TRUE,0,1,FALSE,1,12,1,daily,0,TRUE,0,FALSE
-200014,악몽 장비 승급석 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200014,Itemdescript/200014,2,405,6,TRUE,0,1,FALSE,1,15,1,daily,0,TRUE,0,FALSE
-200015,유물 수집 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200015,Itemdescript/200015,2,405,6,TRUE,0,1,FALSE,1,18,1,daily,0,TRUE,0,FALSE
-200016,룬 제련 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200016,Itemdescript/200016,2,405,6,TRUE,0,1,FALSE,1,21,1,daily,0,TRUE,0,FALSE
-200017,펫 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200017,Itemdescript/200017,2,405,6,TRUE,0,1,FALSE,1,24,1,daily,0,TRUE,0,FALSE
+200009,제단 강화 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200009,Itemdescript/200009,2,405,6,TRUE,0,1,FALSE,1,0,0,0,0,TRUE,0,FALSE
+200010,스킬북 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200010,Itemdescript/200010,2,405,6,TRUE,0,1,FALSE,1,3,0,0,0,TRUE,0,FALSE
+200011,개미굴 제단 강화석 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200011,Itemdescript/200011,2,405,6,TRUE,0,1,FALSE,1,6,0,0,0,TRUE,0,FALSE
+200012,룰렛 열쇠 - 프리미엄 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200012,Itemdescript/200012,2,405,6,TRUE,0,1,FALSE,1,9,0,0,0,TRUE,0,FALSE
+200013,성장 콘텐츠 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200013,Itemdescript/200013,2,405,6,TRUE,0,1,FALSE,1,12,0,0,0,TRUE,0,FALSE
+200014,악몽 장비 승급석 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200014,Itemdescript/200014,2,405,6,TRUE,0,1,FALSE,1,15,0,0,0,TRUE,0,FALSE
+200015,유물 수집 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200015,Itemdescript/200015,2,405,6,TRUE,0,1,FALSE,1,18,0,0,0,TRUE,0,FALSE
+200016,룬 제련 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200016,Itemdescript/200016,2,405,6,TRUE,0,1,FALSE,1,21,0,0,0,TRUE,0,FALSE
+200017,펫 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200017,Itemdescript/200017,2,405,6,TRUE,0,1,FALSE,1,24,0,0,0,TRUE,0,FALSE
 ,,,,,,,,,,,,,,,,,,,
 500,아이템 상자,Item/Consume/Box/골드유물,Itemname/500,Itemdescript/500,2,400,5,FALSE,0,1,FALSE,0,10;11;12;13;14;15;1000,10;100;1000;10000;100000;1000000;200000000,All,0,TRUE,FALSE,FALSE
 501,장비 상자,Item/Consume/Box/드래곤체스트,Itemname/501,Itemdescript/501,2,400,6,FALSE,0,1,FALSE,0,E1003;E2002;E3004;E4007;E5005;E1015;E5513;E5522;E5529;E5532,0,All,0,TRUE,FALSE,TRUE
