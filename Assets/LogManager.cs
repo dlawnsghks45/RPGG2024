@@ -678,4 +678,18 @@ public class LogManager : MonoBehaviour
             }
         });
     }
+    
+    public static void Log_ClearRaid(string level)
+    {
+        Param param = new Param();
+        param.Add("난이도", level);
+        param.Add("레벨",PlayerBackendData.Instance.GetLv());
+        SendQueue.Enqueue(Backend.GameLog.InsertLogV2, "파티레이드보상획득", param, (callback) =>
+        {
+            // 이후 처리
+            if (callback.IsSuccess())
+            {
+            }
+        });
+    }
 }

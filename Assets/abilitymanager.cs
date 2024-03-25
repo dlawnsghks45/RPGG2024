@@ -92,11 +92,20 @@ public class abilitymanager : MonoBehaviour
     public void Bt_select()
     {
         MapDB.Row mapdata_Now = MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage);
+        
+        if (PartyRaidRoommanager.Instance.partyroomdata.isstart)
+        {
+            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI7/콘텐츠 중 불가능"), alertmanager.alertenum.주의);
+            return;
+        }
+        
         if (mapdata_Now.maptype != "0")
         {
             alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI/사냥터만가능"), alertmanager.alertenum.주의);
             return;
         }
+
+        
         
         if (int.Parse(nowdata.Maxlv) <= PlayerBackendData.Instance.GetLv())
         {

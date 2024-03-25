@@ -868,7 +868,7 @@ public class Inventory : MonoBehaviour
         //특수효과
         if (data.IshaveEquipSkill)
         {
-//            Debug.Log("이쿠비 개수" + data.EquipSkill1.Count);
+//           Debug.Log("이쿠비 개수" + data.EquipSkill1.Count);
             for (int i = 0; i < data.EquipSkill1.Count; i++)
             {
                 EquipSkills[i].SetEquipSkill(data.EquipSkill1[i]);
@@ -1021,13 +1021,22 @@ public class Inventory : MonoBehaviour
     //장비장착
     public void Bt_EquipItem()
     {
+        
         MapDB.Row mapdata_Now = MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage);
+        
+        
+        if (PartyRaidRoommanager.Instance.partyroomdata.isstart)
+        {
+            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI7/콘텐츠 중 불가능"), alertmanager.alertenum.주의);
+            return;
+        }
+        
         if (mapdata_Now.maptype != "0")
         {
             alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI/사냥터만가능"), alertmanager.alertenum.주의);
             return;
         }
-        
+       
         //현재 장비를 장착
         //아이템이있다
         if (EquipSlots[nowsettype].data != null)
@@ -1047,12 +1056,14 @@ public class Inventory : MonoBehaviour
         data.IsEquip = true;
         EquipSlots[nowsettype].SetItem(this.data);
         PlayerBackendData.Instance.GetEquipData()[nowsettype] = this.data;
+        
         switch (EquipItemDB.Instance.Find_id(data.Itemid).Type)
         {
             case "Weapon":
                 PlayerData.Instance.SetWeaponImage(SpriteManager.Instance.GetSprite(EquipItemDB.Instance.Find_id(data.Itemid).EquipSprite), EquipItemDB.Instance.Find_id(data.Itemid).EquipSprite);
                 PlayerData.Instance.SetMainWeaponRare(data.CraftRare1);
                 mainplayer.InitAttackData(); //공격 횟수 설정
+                PartyraidChatManager.Instance.Chat_ChangeVisual();
 
                 switch (EquipItemDB.Instance.Find_id(data.Itemid).attacktype)
                 {
@@ -1080,6 +1091,7 @@ public class Inventory : MonoBehaviour
             case "SWeapon":
                 PlayerData.Instance.SetSubWeaponImage(SpriteManager.Instance.GetSprite(EquipItemDB.Instance.Find_id(data.Itemid).EquipSprite), EquipItemDB.Instance.Find_id(data.Itemid).EquipSprite);
                 PlayerData.Instance.SetSubWeaponRare(data.CraftRare1);
+                PartyraidChatManager.Instance.Chat_ChangeVisual();
 
                 break;
         }
@@ -1624,6 +1636,8 @@ public class Inventory : MonoBehaviour
 
         mainplayer.ClassStat();
         PlayerData.Instance.RefreshPlayerstat_Equip();
+        PartyraidChatManager.Instance.Chat_ChangeVisual();
+
         if (ItemObj.isActiveAndEnabled)
             ItemObj.Hide(false);
         if (EquipInventoryObj.isActiveAndEnabled)
@@ -2663,8 +2677,8 @@ public class Inventory : MonoBehaviour
     }
      void ShowBox(bool ismine,string itemid)
      {
-         Debug.Log(itemid);
-         Debug.Log(ismine);
+//         Debug.Log(itemid);
+  //       Debug.Log(ismine);
          //초이스 박스라면 초이스 개수를 0으로만들어야함.
         BoxGetButton.Interactable = true;
         BoxPanel.transform.SetAsLastSibling();

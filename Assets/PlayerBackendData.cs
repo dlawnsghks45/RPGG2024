@@ -209,7 +209,7 @@ public string petrare;
    public string avata_avata;
    public string avata_weapon;
    public string avata_subweapon;
-   public bool[] playeravata = new bool[60];
+   public bool[] playeravata = new bool[100];
 
 
    //시간제 패키지

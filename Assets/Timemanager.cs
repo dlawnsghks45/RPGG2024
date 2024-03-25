@@ -181,6 +181,7 @@ public class Timemanager : MonoBehaviour
         프상주간펫패키지1,
         프상주간펫패키지2,
         파티레이드주간횟수,
+        프상주간파티레이드충전권,
         Length
     }
     public enum ContentEnumMonthly

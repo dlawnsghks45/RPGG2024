@@ -294,7 +294,7 @@ public class EquipDatabase : IEquatable<object>
                 SuccManager.Instance.lockcountEs++;
         }
         
-//        Debug.Log(EquipSkill1.Count);
+        Debug.Log(EquipSkill1.Count);
         EquipItemDB.Row equipdata = EquipItemDB.Instance.Find_id(itemid);
         List<string> skilloption = new List<string>();
         List<string> selectedskill = new List<string>();
@@ -414,16 +414,16 @@ public class EquipDatabase : IEquatable<object>
             upcount = 0;
         //옵션나온다 옵션의 개수
         int oc = curcount + upcount+pluscount;
-       // Debug.Log("oc는" + oc);
+//        Debug.Log("oc는" + oc);
         for (int i = 0; i < oc; i++)
         {
-//            Debug.Log(i);
+             Debug.Log(i);
             if (!SuccManager.Instance.IsSucc && equipoptionchanger.Instance.eskillnowpanel[i].LockEs.IsOn)
             {
                 //잠금이라면     
                // Debug.Log("잠금"+i);
-//                Debug.Log("개수"+LockSkill.Count);
-              //  Debug.Log(LockSkill[i]);
+                Debug.Log("개수"+LockSkill.Count);
+               Debug.Log(LockSkill[i]);
                     selectedskill.Add(LockSkill[i]);
                 //스택형이 아니라면 뺀다
                 if (!bool.Parse(EquipSkillDB.Instance.Find_id(LockSkill[i]).isstack))
@@ -432,7 +432,7 @@ public class EquipDatabase : IEquatable<object>
             else if (SuccManager.Instance.IsSucc && SuccManager.Instance.EquipSkills[i].LockEs.IsOn)
             {
                 for (int j = 0; j < LockSkill.Count; j++)
-                    Debug.Log(LockSkill[j]);
+//                    Debug.Log(LockSkill[j]);
                 //잠금이라면     
 //                Debug.Log(i);
             //    Debug.Log(LockSkill[i]);
@@ -490,6 +490,7 @@ public class EquipDatabase : IEquatable<object>
     public void SetEquipSkills(string[] giveskill)
     {
         EquipSkill1.Clear();
+        Debug.Log(giveskill.Length +"옮긴거");
         for (int i = 0; i < giveskill.Length; i++)
         {
 //            Debug.Log("넣었다" + giveskill[i]);

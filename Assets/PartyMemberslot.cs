@@ -23,8 +23,14 @@ public class PartyMemberslot : MonoBehaviour
    public GameObject BattleObj;
    public Text BattleText;
 
+   public GameObject BufferObj;
+   public Text BufferText;
+
+   
    public GameObject[] BuffObj;
    public Text[] BuffObjText;
+
+   public float BuffPercent = 0; 
    
    public void Set_Battle(string mapname)
    {
@@ -61,11 +67,12 @@ public class PartyMemberslot : MonoBehaviour
 
    public void SetPlayerData(string playerdata,int num)
    {
+      BuffPercent = 0;
+      BufferObj.SetActive(false);
       data = new playerdata();
       data.GetPlayerData(playerdata);
       if (data.nickname == PlayerBackendData.Instance.nickname)
       {
-         Debug.Log("내자리는" + num);
          PartyRaidRoommanager.Instance.mypartynum = num;
       }
       
@@ -84,6 +91,18 @@ public class PartyMemberslot : MonoBehaviour
       HaveUserObj.SetActive(true);
       BattleObj.SetActive(false);
    }
+   public void SetPlayerData(string playerdata)
+   {
+      BuffPercent = 0;
+      BufferObj.SetActive(false);
+      data = new playerdata();
+      data.GetPlayerData(playerdata);
+      data.GetPlayerData(playerdata);
+      ShowPlayer();
+      NoUserObj.SetActive(false);
+      HaveUserObj.SetActive(true);
+      BattleObj.SetActive(false);
+   }
 
    public void Bt_ShowPlayerData()
    {
@@ -94,6 +113,7 @@ public class PartyMemberslot : MonoBehaviour
    void ShowPlayer()
    {
       avata.sprite = SpriteManager.Instance.GetSprite(data.avatapath);
+      BufferObj.SetActive(false);
 
 
       if (data.petpath != "")
@@ -118,7 +138,6 @@ public class PartyMemberslot : MonoBehaviour
          if (data.subweaponrare != "0")
          {
             playermaterial[0].SetFloat(Shader.PropertyToID("_OuterOutlineFade"), 1f);
-            Debug.Log(data.weaponrare);
             playermaterial[0].SetColor(Shader.PropertyToID("_OuterOutlineColor"),
                Inventory.Instance.GetRareColor(data.weaponrare));
          }

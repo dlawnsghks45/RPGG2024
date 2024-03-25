@@ -558,7 +558,7 @@ public class BackendFerderationAuth : MonoBehaviour
         
         if (jdata.ContainsKey("PresetData"))
         {
-            Debug.Log("프리셋 불러오자");
+//            Debug.Log("프리셋 불러오자");
             for (int i = 0; i < jdata["PresetData"].Count; i++)
             {
                 PresetItem temp = new PresetItem();
@@ -604,7 +604,7 @@ public class BackendFerderationAuth : MonoBehaviour
 
         if (jdata.ContainsKey("SeasonPassPremium"))
         {
-            Debug.Log("패스 불러옴");
+//            Debug.Log("패스 불러옴");
             for (int i = 0; i < jdata["SeasonPassBasicReward"].Count; i++)
             {
                 PlayerBackendData.Instance.SeasonPassBasicReward[i] =
@@ -623,7 +623,7 @@ public class BackendFerderationAuth : MonoBehaviour
         
         if (jdata.ContainsKey("SeasonPassNum"))
         {
-            Debug.Log("패스 불러옴2");
+//            Debug.Log("패스 불러옴2");
 
             PlayerBackendData.Instance.SeasonPassNum = int.Parse(jdata["SeasonPassNum"].ToString());
         }

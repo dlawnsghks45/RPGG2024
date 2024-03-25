@@ -669,9 +669,7 @@ Debug.Log("추가 골드" + PlayerData.Instance.mainplayer.Stat_ExtraGold);
                  break;
          }
 
-         Debug.Log("A는" +a);
          double b = a / PlayerBackendData.Instance.Offlinedata.time;
-         Debug.Log("B는" + b);
          
          return (int)((TotalCount_Offline * b) * rate);
      }
@@ -804,7 +802,7 @@ Debug.Log("추가 골드" + PlayerData.Instance.mainplayer.Stat_ExtraGold);
                         //    Debug.Log("지급 아이템");
                         decimal total = (decimal)drophowmany_Offline[i] * GetCount_Offline(i);
 
-                        Debug.Log("개수는" + total);
+//                        Debug.Log("개수는" + total);
                         
                         switch (dropitemid_Offline[i])
                         {

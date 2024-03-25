@@ -898,6 +898,7 @@ public class equipoptionchanger : MonoBehaviour
          //Inventory.Instance.nowequipslot.Refresh(Inventory.Instance.data);
          EquipSetmanager.Instance.EquipSetItem();
          PlayerData.Instance.RefreshPlayerstat();
+         PartyraidChatManager.Instance.Chat_ChangeVisual();
       }
    }
 
@@ -1208,6 +1209,15 @@ public class equipoptionchanger : MonoBehaviour
       {
          PlayerBackendData.Instance.GetTypeEquipment(Data.Type)[Inventory.Instance.data.KeyId1].Itemid = AdvanData.id;
 
+
+         if (AdvanData.MinAllDmg != "0" && PlayerBackendData.Instance.GetTypeEquipment(Data.Type)[Inventory.Instance.data.KeyId1].Alldmg1 == 0)
+         {
+            int alldmg = UnityEngine.Random.Range(int.Parse(AdvanData.MinAllDmg), int.Parse(AdvanData.MaxAllDmg)+1);
+            PlayerBackendData.Instance.GetTypeEquipment(Data.Type)[Inventory.Instance.data.KeyId1].Alldmg1 = alldmg;
+            Debug.Log("피증 없어서 만든다");
+         }
+         
+         
          if (EquipItemDB.Instance
                 .Find_id(PlayerBackendData.Instance.GetTypeEquipment(Data.Type)[Inventory.Instance.data.KeyId1].Itemid)
                 .SpeMehodP != "0")
@@ -1275,6 +1285,7 @@ public class equipoptionchanger : MonoBehaviour
    {
       AdvanResultPanel.Show(false);
       EquipImage_advanresult.sprite = AdvanEquipPrevImage.sprite;
+      string resultimagepath = EquipItemDB.Instance.Find_id(AdvanData.id).Sprite; 
       if (issucc)
       {
          EquipNameText_advanresult.text = AdvanEquipText.text;
@@ -1299,6 +1310,7 @@ public class equipoptionchanger : MonoBehaviour
 
       if (issucc)
       {
+         EquipImage_advanresult.sprite = SpriteManager.Instance.GetSprite(resultimagepath);
          AdvanShowEffect_Succ.Play();
          AdvanShowEffect_Succ2.Play();
          Soundmanager.Instance.PlayerSound("Sound/강화성공");

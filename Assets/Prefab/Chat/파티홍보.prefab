@@ -3227,6 +3227,7 @@ GameObject:
   - component: {fileID: 4237882580829652833}
   - component: {fileID: 4237882580829652832}
   - component: {fileID: 4237882580829652834}
+  - component: {fileID: 7081828007870594435}
   m_Layer: 5
   m_Name: "\uD30C\uD2F0\uD64D\uBCF4"
   m_TagString: Untagged
@@ -3364,6 +3365,19 @@ MonoBehaviour:
   PartyRaidLevel: {fileID: 2085263469531607582}
   PartyRaidJoinlevel: {fileID: 2085263470393227676}
   adlvs: 0
+--- !u!114 &7081828007870594435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4237882580829652863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90a545f7a84d6e9469ee7a74d9696eda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  num: 600
 --- !u!1 &4237882582193755839
 GameObject:
   m_ObjectHideFlags: 0

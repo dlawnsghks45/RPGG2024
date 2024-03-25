@@ -337,12 +337,18 @@ public class presetmanager : MonoBehaviour
     public void Bt_LoadPreset()
     {
         MapDB.Row mapdata_Now = MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage);
+               
+        if (PartyRaidRoommanager.Instance.partyroomdata.isstart)
+        {
+            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI7/콘텐츠 중 불가능"), alertmanager.alertenum.주의);
+            return;
+        }
         if (mapdata_Now.maptype != "0")
         {
             alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI4/사냥터에서만변경가능"), alertmanager.alertenum.주의);
             return;
         }
-        
+ 
         
         
         PresetItem preset = PlayerBackendData.Instance.Presets[nowselectpreset];
@@ -368,6 +374,25 @@ public class presetmanager : MonoBehaviour
 
             PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Isequip = true;
             petmanager.Instance.listslot[PlayerBackendData.Instance.nowPetid].Init(PlayerBackendData.Instance.nowPetid);
+            
+            PlayerBackendData userData = PlayerBackendData.Instance;
+            Param paramEquip = new Param();
+            paramEquip.Add("PetData", userData.PetData);
+            paramEquip.Add("PetCount", userData.PetCount);
+            paramEquip.Add("nowPetid", userData.nowPetid);
+            if (PlayerBackendData.Instance.nowPetid != "")
+            {
+                paramEquip.Add("nowPetData", userData.PetData[userData.nowPetid]);
+            }
+            Where where = new Where();
+            where.Equal("owner_inDate", PlayerBackendData.Instance.playerindate);
+            SendQueue.Enqueue(Backend.GameData.Update, "PlayerData", where, paramEquip, (callback) =>
+            {
+                // 이후 처리
+                if (callback.IsSuccess())
+                {
+                }
+            });
         }
        
         //직업
@@ -408,6 +433,7 @@ public class presetmanager : MonoBehaviour
         Savemanager.Instance.SaveEquip();
         Savemanager.Instance.Save();
         alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI5/프리셋불러옴"), alertmanager.alertenum.일반);
+        PartyraidChatManager.Instance.Chat_ChangeVisual();
         SavePreset2();
         Panel.Hide(true);
     }

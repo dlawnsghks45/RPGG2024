@@ -83,9 +83,9 @@ enumname,maxcount,type
 프상주간패키지재설정1_2,2,weekly
 프상주간패키지재설정2_2,2,weekly
 프상주간패키지재설정3_2,2,weekly
-이벤트등급재설정2,20,weekly
-이벤트품질재설정2,20,weekly
-이벤트특효재설정2,20,weekly
+이벤트등급재설정2,40,weekly
+이벤트품질재설정2,40,weekly
+이벤트특효재설정2,40,weekly
 이벤트전설비법서2,3,weekly
 이벤트신화비법서2,3,weekly
 프상주간패키지레이드1,5,weekly
@@ -107,3 +107,4 @@ enumname,maxcount,type
 프상주간펫패키지1,2,weekly
 프상주간펫패키지2,1,weekly
 파티레이드주간횟수,10,weekly
+프상주간파티레이드충전권,2,weekly

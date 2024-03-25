@@ -77,7 +77,8 @@ public class Shopmanager : MonoBehaviour
             ShopItemSlots[i].gameObject.SetActive(true);
         }
         //아이템 설정끝
-        
+        Button.interactable = true;
+
         switch (ShopDB.Instance.Find_ids(shopid).producttype)
         {
             case "one":

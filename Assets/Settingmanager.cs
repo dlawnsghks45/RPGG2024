@@ -1382,8 +1382,8 @@ public class Settingmanager : MonoBehaviour
         };
         SendQueue.Enqueue(Backend.GameData.GetMyData, "PlayerData", where1, select, 1, bro =>
         {
-            Debug.Log("하이");
-            Debug.Log(bro);
+//            Debug.Log("하이");
+//            Debug.Log(bro);
             if (bro.IsSuccess())
             {
                 JsonData data = bro.FlattenRows()[0];

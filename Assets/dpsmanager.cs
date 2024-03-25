@@ -98,7 +98,6 @@ public class dpsmanager : MonoBehaviour
 
     public void EndDps()
     {
-        Debug.Log("DPS??");
         isdpson = false;
         DPSButton.SetActive(false);
         if (isrec)

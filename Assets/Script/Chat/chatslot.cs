@@ -166,6 +166,7 @@ public class chatslot : MonoBehaviour
     {
         if(nick == PlayerBackendData.Instance.nickname)
             return;
+        PartyRaidRoommanager.Instance.joinname = nick;
         PartyRaidRoommanager.Instance.rankjoin = ranknum;
         PartyRaidRoommanager.Instance.ShowAdmenPanel();
     }

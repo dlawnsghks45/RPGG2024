@@ -107,10 +107,10 @@ A50007,A1044,achievement/1001,던전 격파,dungeonclear,forever,37,A50008,1900,
 A50008,A1044,achievement/1001,던전 격파,dungeonclear,forever,38,A50009,2100,999,7400,forever,0
 A50009,A1044,achievement/1001,던전 격파,dungeonclear,forever,39,A50010,2300,999,7600,forever,0
 A50010,A1044,achievement/1001,던전 격파,dungeonclear,forever,40,0,2500,999,7800,forever,1
-E1000,E1000,achievement/E1000,이벤트 수집,killmonster,daily,0,0,2000,100012,600,event,0
-E1001,E1001,achievement/E1001,이벤트 수집,dungeonclear,daily,0,0,10,100012,600,event,0
-E1002,E1002,achievement/E1002,이벤트 수집,raidclear,daily,0,0,1,100013,200,event,0
-E1003,E1003,achievement/E1003,이벤트 수집,altarwar,daily,0,0,1,100014,1,event,0
+E1000,E1000,achievement/E1000,이벤트 수집,killmonster,daily,0,0,2000,100015,600,event,0
+E1001,E1001,achievement/E1001,이벤트 수집,dungeonclear,daily,0,0,10,100015,600,event,0
+E1002,E1002,achievement/E1002,이벤트 수집,raidclear,daily,0,0,1,100016,200,event,0
+E1003,E1003,achievement/E1003,이벤트 수집,altarwar,daily,0,0,1,100017,1,event,0
 A1074,A1074,achievement/2000,레이드 격파,raidclear,forever,0,A1075,3,999,200,forever,0
 A1075,A1074,achievement/2000,레이드 격파,raidclear,forever,1,A1076,10,999,200,forever,0
 A1076,A1074,achievement/2000,레이드 격파,raidclear,forever,2,A1077,17,999,200,forever,0
@@ -195,12 +195,12 @@ C1005,C1005,achievement/2000,레이드 격파,raidclear,daily,0,0,1,1001,200,cry
 C1006,C1006,achievement/2001,성물 격파,altarwar,daily,0,0,1,1001,200,crystal,0
 C1007,C1007,achievement/2002,길드레이드,guildraid,daily,0,0,1,1001,200,crystal,0
 C1008,C1008,achievement/2003,대마법사의묘,contentskill,daily,0,0,1,1001,200,crystal,0
-E1004,E1004,achievement/E1000,이벤트 수집,killmonster,daily,0,0,2000,100012,1000,event,0
-E1005,E1005,achievement/E1001,이벤트 수집,dungeonclear,daily,0,0,10,100012,1000,event,0
-E1006,E1006,achievement/E1002,이벤트 수집,raidclear,daily,0,0,1,100013,400,event,0
-E1007,E1007,achievement/E1003,이벤트 수집,altarwar,daily,0,0,1,100014,1,event,0
+E1004,E1004,achievement/E1000,이벤트 수집,killmonster,daily,0,0,2000,100015,1000,event,0
+E1005,E1005,achievement/E1001,이벤트 수집,dungeonclear,daily,0,0,10,100015,1000,event,0
+E1006,E1006,achievement/E1002,이벤트 수집,raidclear,daily,0,0,1,100016,400,event,0
+E1007,E1007,achievement/E1003,이벤트 수집,altarwar,daily,0,0,1,100017,1,event,0
 E1008,E1008,achievement/E1008,대마법사의묘,contentskill,daily,0,0,1,40003,3,event,0
-E1009,E1009,achievement/E1000,이벤트 수집,killmonster,daily,0,0,5000,565,2,event,0
+E1009,E1009,achievement/E1000,이벤트 수집,killmonster,daily,0,0,5000,567,2,event,0
 A1144,A1005,achievement/1000,몬스터처치,killmonster,forever,30,A1145,73000,999,5800,forever,0
 A1145,A1005,achievement/1000,몬스터처치,killmonster,forever,31,A1146,76000,999,6000,forever,0
 A1146,A1005,achievement/1000,몬스터처치,killmonster,forever,32,A1147,79000,999,6200,forever,0

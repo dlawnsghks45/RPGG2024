@@ -268,6 +268,13 @@ public class NewIAPManager : MonoBehaviour
                 case EM_IAPConstants.Product_rpgg2_package2024_ny2:
                 case EM_IAPConstants.Product_rpgg2_package2024_ny3:
                 case EM_IAPConstants.Product_rpgg2_package2024_ny4:
+                case EM_IAPConstants.Product_rpgg2_package2024_fire1:
+                case EM_IAPConstants.Product_rpgg2_package2024_fire2:
+                case EM_IAPConstants.Product_rpgg2_package2024_fire3:
+                case EM_IAPConstants.Product_rpgg2_package2024_fire4:
+                case EM_IAPConstants.Product_rpgg2_package2024_party1:
+                case EM_IAPConstants.Product_rpgg2_package2024_party2:
+                case EM_IAPConstants.Product_rpgg2_package2024_party3:
                 case EM_IAPConstants.Product_rpgg2_package_up_1:
                 case EM_IAPConstants.Product_rpgg2_package_pet_1:
                 case EM_IAPConstants.Product_rpgg2_package_pet_2:

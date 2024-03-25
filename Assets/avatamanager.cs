@@ -234,7 +234,7 @@ public class avatamanager : MonoBehaviour
         {
             VARIABLE.Value.Refresh();
         }
-
+        PartyraidChatManager.Instance.Chat_ChangeVisual();
         Savemanager.Instance.SaveAvataData();
         Savemanager.Instance.Save();
     }
@@ -260,7 +260,7 @@ public class avatamanager : MonoBehaviour
         {
             VARIABLE.Value.Refresh();
         }
-
+        PartyraidChatManager.Instance.Chat_ChangeVisual();
         Savemanager.Instance.SaveAvataData();
         Savemanager.Instance.Save();
 
@@ -277,7 +277,7 @@ public class avatamanager : MonoBehaviour
         {
             VARIABLE.Value.Refresh();
         }
-
+        PartyraidChatManager.Instance.Chat_ChangeVisual();
         Savemanager.Instance.SaveAvataData();
         Savemanager.Instance.Save();
     }

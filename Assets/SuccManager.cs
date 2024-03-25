@@ -345,6 +345,8 @@ public class SuccManager : MonoBehaviour
                     Debug.Log(plusnum);
                     LastSlot.data.EquipSkill1 = LastSlot.data.GetESkill(plusnum);
                     Inventory.Instance.RemoveItem(ResourceEquipKeyId.KeyId1);
+                    
+                    
                     PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
                         .ToString())[ResultsEquipKeyId.KeyId1].SetEquipSkills(LastSlot.data.EquipSkill1.ToArray());
                     
@@ -355,6 +357,15 @@ public class SuccManager : MonoBehaviour
 
                     
                     
+                    if (Inventory.Instance.EquipSlots[Inventory.Instance.nowsettype].data.KeyId1.Equals(
+                            PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
+                                .ToString())[ResultsEquipKeyId.KeyId1].KeyId1))
+                    {
+                        Inventory.Instance.EquipSlots[Inventory.Instance.nowsettype].SetItem(PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
+                            .ToString())[ResultsEquipKeyId.KeyId1]);
+                    }
+
+                    
                     
                     Savemanager.Instance.SaveMoneyCashDirect();
                     yield return SpriteManager.Instance.GetWaitforSecond(1);
@@ -362,6 +373,7 @@ public class SuccManager : MonoBehaviour
                     Savemanager.Instance.SaveTypeEquip();
                     Soundmanager.Instance.PlayerSound("Sound/Special Click 05");
 
+                    
                     yield return SpriteManager.Instance.GetWaitforSecond(1);
                     blockifdoing.SetActive(false);
                     Inventory.Instance.ShowEquipInventory(Inventory.Instance.nowsettype);
@@ -437,6 +449,15 @@ public class SuccManager : MonoBehaviour
                         .ToString())[ResultsEquipKeyId.KeyId1].EnchantNum1 = LastSlot.data.EnchantNum1;
                     PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
                         .ToString())[ResultsEquipKeyId.KeyId1].EnchantFail1 = LastSlot.data.EnchantFail1;
+
+
+                    if (Inventory.Instance.EquipSlots[Inventory.Instance.nowsettype].data.KeyId1.Equals(
+                            PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
+                                .ToString())[ResultsEquipKeyId.KeyId1].KeyId1))
+                    {
+                        Inventory.Instance.EquipSlots[Inventory.Instance.nowsettype].SetItem(PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
+                            .ToString())[ResultsEquipKeyId.KeyId1]);
+                    }
                     
                     
                     Savemanager.Instance.SaveInventory();
@@ -457,6 +478,8 @@ public class SuccManager : MonoBehaviour
                     //골드부족
                     alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI/재료부족"), alertmanager.alertenum.일반);
                 }
+
+             
 
                 //전승석전승
                 break;

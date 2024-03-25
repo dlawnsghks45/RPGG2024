@@ -85,6 +85,13 @@ public class PartyRaidRoommanager : MonoBehaviour
     //파티초대
     public void ShowInvitePanel()
     {
+        if (nowmyleadernickname != PlayerBackendData.Instance.nickname)
+        {
+            alertmanager.Instance.ShowAlert(
+                Inventory.GetTranslate("UI7/파장아님"),
+                alertmanager.alertenum.일반);
+            return;
+        }
         InvitePanel.Show(false);
         InviteNicknameinput.text = "";
     }
@@ -137,6 +144,7 @@ public class PartyRaidRoommanager : MonoBehaviour
 
     public void ShowRaidReadyPanel()
     {
+        PartyradPanel.Show(false);
         for (int i = 0; i < readyslots.Length; i++)
         {
             readyslots[i].gameObject.SetActive(false);
@@ -271,7 +279,7 @@ public class PartyRaidRoommanager : MonoBehaviour
 
     public void Bt_MakeRoom()
     {
-        Debug.Log("파티를 만든다");
+//        Debug.Log("파티를 만든다");
 
         foreach (var t in chatmanager.Instance.partyraidchatslot)
         {
@@ -306,7 +314,7 @@ public class PartyRaidRoommanager : MonoBehaviour
     }
 
 
-    public int MinAdLv = 15;
+    public int MinAdLv = 20;
     
     //플레이어 이미지 정보를 줌.
     public string GiveMyPartyData()
@@ -484,7 +492,7 @@ public class PartyRaidRoommanager : MonoBehaviour
     {
         decimal a =
             (decimal.Parse(monsterDB.Instance.Find_id(MapDB.Instance.Find_id(partyroomdata.nowmap).monsterid).hp) *
-             (decimal)math.pow(2.2f, partyroomdata.level));
+             (decimal)math.pow(2.7f, partyroomdata.level));
         return a;
     }
 
@@ -586,10 +594,9 @@ public class PartyRaidRoommanager : MonoBehaviour
         }
         Adpanel.Hide(false);
         PartyraidChatManager.Instance.Chat_Admentise(adstring,AdRankInputText.text);
-        
-        
     }
 
+    public string joinname;
     public int rankjoin;
     public GameObject JoinPanel;
     public void ShowAdmenPanel()

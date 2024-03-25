@@ -62,7 +62,7 @@ public class PartyraidChatManager : MonoBehaviour
         {
             //system;PRSJ;내이름;레벨;랭크레벨;위장;무기;갑옷
             Backend.Chat.ChatToChannel(ChannelType.Public,
-                $"{publicsystem};PRSJ;{PlayerBackendData.Instance.nickname};{PlayerBackendData.Instance.GetLv()};{PlayerBackendData.Instance.GetAdLv()};{chatmanager.Instance.GetUserVisualData()}");
+                $"{publicsystem};PRSJ;{PartyRaidRoommanager.Instance.joinname};{PlayerBackendData.Instance.GetLv()};{PlayerBackendData.Instance.GetAdLv()};{chatmanager.Instance.GetUserVisualData()}");
         }
     }
     //가입신청자 해당 유저를 받았다.
@@ -91,15 +91,40 @@ public class PartyraidChatManager : MonoBehaviour
         bool isConnect = Backend.Chat.IsChatConnect(ChannelType.Public);
         if (isConnect)
         {
+            if (PartyRaidRoommanager.Instance.partyroomdata.isstart)
+            {
+                return;
+            }
             Debug.Log("초대를 보냈다");
             Backend.Chat.ChatToChannel(ChannelType.Public,
                 $"{publicsystem};PI;{PlayerBackendData.Instance.nickname};{invited};{PartyRaidRoommanager.Instance.partyroomdata.nowmap};{PartyRaidRoommanager.Instance.partyroomdata.level}");
         }
     }
 
+    public void Chat_ChangeVisual()
+    {
+        if (PartyRaidRoommanager.Instance.partyroomdata.usercount == 1)
+        {
+//            Debug.Log("유저카운트는  " + PartyRaidRoommanager.Instance.partyroomdata.usercount);
+            PartyRaidRoommanager.Instance.PartyMember[0].SetPlayerData(PartyRaidRoommanager.Instance.GiveMyPartyData(), 0);
+            return;
+        }
+        //수락한다는걸 보낸다.
+        //system;PA;내이름;내데이터
+        bool isConnect = Backend.Chat.IsChatConnect(ChannelType.Public);
+        if (isConnect)
+        {
+            PartyRaidRoommanager.Instance.nowmyleadernickname = PartyRaidRoommanager.Instance.invitednickname;
+            Backend.Chat.ChatToChannel(ChannelType.Public,
+                $"{publicsystem};PCA;{PartyRaidRoommanager.Instance.nowmyleadernickname};{PartyRaidRoommanager.Instance.mypartynum}&{PartyRaidRoommanager.Instance.GiveMyPartyData()}");
+        }
+    }
+    
     //초대를 수락해서 파장에게 수락여부를 보냄.
     public void Chat_AcceptInvite()
     {
+        if(PlayerBackendData.Instance.GetAdLv() < 20)
+            return;
         //수락한다는걸 보낸다.
         //system;PA;내이름;내데이터
         bool isConnect = Backend.Chat.IsChatConnect(ChannelType.Public);
@@ -235,7 +260,7 @@ public class PartyraidChatManager : MonoBehaviour
             Debug.Log("레이드시작을 알린다.");
             //system;PRC;파티장이름;
             Backend.Chat.ChatToChannel(ChannelType.Public,
-                $"{publicsystem};PRC;{PartyRaidRoommanager.Instance.nowmyleadernickname}");
+                $"{publicsystem};PRC;{PartyRaidRoommanager.Instance.nowmyleadernickname};{Battlemanager.Instance.mainplayer.Stat_totalbuff}");
         }
     }
 
@@ -246,9 +271,9 @@ public class PartyraidChatManager : MonoBehaviour
         {
             PartyRaidRoommanager.Instance.readyyesnopanel.SetActive(false);
             Debug.Log("준비");
-            //system;PRYR;파티장이름;내이름;내자리
+            //system;PRYR;파티장이름;내이름;내자리;버프
             Backend.Chat.ChatToChannel(ChannelType.Public,
-                $"{publicsystem};PRYR;{PartyRaidRoommanager.Instance.nowmyleadernickname};{PlayerBackendData.Instance.nickname};{PartyRaidRoommanager.Instance.mypartynum}");
+                $"{publicsystem};PRYR;{PartyRaidRoommanager.Instance.nowmyleadernickname};{PlayerBackendData.Instance.nickname};{PartyRaidRoommanager.Instance.mypartynum};{Battlemanager.Instance.mainplayer.Stat_totalbuff}");
         }
     }
 
@@ -382,9 +407,9 @@ public class PartyraidChatManager : MonoBehaviour
         bool isConnect = Backend.Chat.IsChatConnect(ChannelType.Public);
         if (isConnect)
         {
-            //시스;PRMBS;리더;시작이름;내파티자리;드랍아이디&유저들;;;
+            //시스;PRGR;리더;시작이름;내파티자리;드랍아이디&유저들;;;
             Backend.Chat.ChatToChannel(ChannelType.Public,
-                $"{publicsystem};PRGR;{PartyRaidRoommanager.Instance.nowmyleadernickname};{PlayerBackendData.Instance.nickname};{dropid}&{GetPartyName()}");
+                $"{publicsystem};PRGR;{PartyRaidRoommanager.Instance.nowmyleadernickname};{PlayerBackendData.Instance.nickname};{dropid};{PartyRaidRoommanager.Instance.partyroomdata.level};{PartyRaidRoommanager.Instance.partyroomdata.nowmap}&{GetPartyName()}");
         }
     }
     

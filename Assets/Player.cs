@@ -93,10 +93,9 @@ public class Player : MonoBehaviour
     public float Stat_ExtraGold = 0; //�ִ� ��Ʈ ��  //�⺻ 10
     public float Stat_ExtraDrop = 0; //�ִ� ��Ʈ ��  //�⺻ 10
     //제련 점수
-    
     public int Stat_SmeltPoint = 0; //�ִ� ��Ʈ ��  //�⺻ 10
     public float Stat_SmeltDmg = 0; //�ִ� ��Ʈ ��  //�⺻ 10
-
+    public float Stat_totalbuff = 0; //�ִ� ��Ʈ ��  //�⺻ 10
 
 
     const int maxdotcount = 20;
@@ -388,6 +387,9 @@ public class Player : MonoBehaviour
         Stat_SmeltDmg = 0;
 
         
+        //버프효율증가
+        Stat_totalbuff = 0;
+        
         //수집
         Stat_collection = 0;
 
@@ -501,6 +503,7 @@ public class Player : MonoBehaviour
 
         for (int i = 0; i < AvartaDB.Instance.NumRows(); i++)
         {
+//            Debug.Log(i);
             if (PlayerBackendData.Instance.playeravata[i])
             {
                 switch (AvartaDB.Instance.GetAt(i).stattype)
@@ -514,10 +517,17 @@ public class Player : MonoBehaviour
                     case "exp":
                         Stat_ExtraExp += float.Parse(AvartaDB.Instance.GetAt(i).stat);
                         break;
+                    case "expdmg":
+                        Stat_ExtraExp += float.Parse(AvartaDB.Instance.GetAt(i).stat);
+                         AlldmgUp += float.Parse(AvartaDB.Instance.GetAt(i).stat2);
+                        break;
+                    case "golddmg":
+                        Stat_ExtraGold += float.Parse(AvartaDB.Instance.GetAt(i).stat);
+                        AlldmgUp += float.Parse(AvartaDB.Instance.GetAt(i).stat2);
+                        break;
                 }   
             }
         }
-
        // Debug.Log("펫 계산전" + ability_allstatnum);
 
         foreach (var VARIABLE in PlayerBackendData.Instance.PetData)
@@ -1605,6 +1615,17 @@ public class Player : MonoBehaviour
             t.SetActive(false);
         }
 
+        Stat_totalbuff = (Passivemanager.Instance.GetPassiveStat(Passivemanager
+            .PassiveStatEnum.buffup) + ability_buff);
+        
+        MapDB.Row mapdata_Now = MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage);
+       
+        if (mapdata_Now.maptype.Equals("12"))
+        {
+            alertmanager.Instance.ShowAlert2(string.Format(Inventory.GetTranslate("UI7/버퍼효과발동"),PartyRaidBattlemanager.Instance.buffmax * 100f), alertmanager.alertenum.일반);
+            Stat_totalbuff = PartyRaidBattlemanager.Instance.buffmax;
+           // Debug.Log("파티레이드임");
+        }
         string[] skills = PlayerBackendData.Instance.ClassData[PlayerBackendData.Instance.ClassId].Skills1;
         for (int s = 0; s < skills.Length; s++)
         {
@@ -1618,9 +1639,7 @@ public class Player : MonoBehaviour
                     case "Crit_P":
                         // Debug.Log("스킬을 사용");
                         buff_crit = float.Parse(skilldata.Atk);
-                        buff_crit += buff_crit *
-                                     (Passivemanager.Instance.GetPassiveStat(Passivemanager
-                                         .PassiveStatEnum.buffup) + ability_buff);
+                        buff_crit += buff_crit * Stat_totalbuff;
                         Skillmanager.Instance.PlayerBuffImage[2].SetActive(false);
                         Skillmanager.Instance.PlayerBuffImage[5].SetActive(true);
                         break;
@@ -1630,12 +1649,8 @@ public class Player : MonoBehaviour
                         buff_matkPercent = float.Parse(skilldata.Atk);
                         if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.buffup) != 0)
                         {
-                            buff_atkPercent += buff_atkPercent *
-                                               (Passivemanager.Instance.GetPassiveStat(Passivemanager
-                                                   .PassiveStatEnum.buffup) + ability_buff);
-                            buff_matkPercent += buff_matkPercent *
-                                                (Passivemanager.Instance.GetPassiveStat(Passivemanager
-                                                    .PassiveStatEnum.buffup) + ability_buff);
+                            buff_atkPercent += buff_atkPercent * Stat_totalbuff;
+                            buff_matkPercent += buff_matkPercent * Stat_totalbuff;
                         }
 
                         // Debug.Log("버프증가량");
@@ -1646,9 +1661,7 @@ public class Player : MonoBehaviour
                     //기본 공격력 증가
                     case "Critdmg_P":
                         buff_critdmg = float.Parse(skilldata.CritDmg);
-                        buff_critdmg += buff_critdmg *
-                                        (Passivemanager.Instance.GetPassiveStat(Passivemanager
-                                            .PassiveStatEnum.buffup) + ability_buff);
+                        buff_critdmg += buff_critdmg * Stat_totalbuff;
                         //   Invoke(nameof(OffCritDmgBuff), float.Parse(skilldata.skilldata.AttackCount));
                         Skillmanager.Instance.PlayerBuffImage[7].SetActive(true);
                         Skillmanager.Instance.PlayerBuffImage[3].SetActive(false);
@@ -1659,9 +1672,7 @@ public class Player : MonoBehaviour
                         buff_basicatkup = float.Parse(skilldata.Atk);
                         if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.buffup) != 0)
                         {
-                            buff_basicatkup += buff_basicatkup *
-                                               (Passivemanager.Instance.GetPassiveStat(Passivemanager
-                                                   .PassiveStatEnum.buffup) + ability_buff);
+                            buff_basicatkup += buff_basicatkup * Stat_totalbuff;
                         }
 
                         // Debug.Log("버프증가량");
@@ -1672,9 +1683,7 @@ public class Player : MonoBehaviour
                         buff_atkPercent = float.Parse(skilldata.Atk);
                         if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.buffup) != 0)
                         {
-                            buff_atkPercent += buff_atkPercent *
-                                               (Passivemanager.Instance.GetPassiveStat(Passivemanager
-                                                   .PassiveStatEnum.buffup) + ability_buff);
+                            buff_atkPercent += buff_atkPercent * Stat_totalbuff;
                         }
 
                         Skillmanager.Instance.PlayerBuffImage[0].SetActive(true);
@@ -1682,35 +1691,27 @@ public class Player : MonoBehaviour
                         break;
                     case "MAtkPercent": //마법공격력증가
                         buff_matkPercent = float.Parse(skilldata.Matk);
-                        buff_matkPercent += buff_matkPercent *
-                                            (Passivemanager.Instance.GetPassiveStat(Passivemanager
-                                                .PassiveStatEnum.buffup) + ability_buff);
+                        buff_matkPercent += buff_matkPercent * Stat_totalbuff;
                         Skillmanager.Instance.PlayerBuffImage[1].SetActive(true);
                         Skillmanager.Instance.PlayerBuffImage[6].SetActive(false);
                         break;
                     case "Crit": //크리티컬
                         // Debug.Log("스킬을 사용");
                         buff_crit = float.Parse(skilldata.Atk);
-                        buff_crit += buff_crit *
-                                     (Passivemanager.Instance.GetPassiveStat(Passivemanager
-                                         .PassiveStatEnum.buffup) + ability_buff);
+                        buff_crit += buff_crit * Stat_totalbuff;
                         Skillmanager.Instance.PlayerBuffImage[2].SetActive(true);
                         Skillmanager.Instance.PlayerBuffImage[5].SetActive(false);
                         break;
                     case "Critdmg": //크리티컬
                         buff_critdmg = float.Parse(skilldata.CritDmg);
-                        buff_critdmg += buff_critdmg *
-                                        (Passivemanager.Instance.GetPassiveStat(Passivemanager
-                                            .PassiveStatEnum.buffup) + ability_buff);
+                        buff_critdmg += buff_critdmg  * Stat_totalbuff;
                         //   Invoke(nameof(OffCritDmgBuff), float.Parse(skilldata.skilldata.AttackCount));
                         Skillmanager.Instance.PlayerBuffImage[3].SetActive(true);
                         Skillmanager.Instance.PlayerBuffImage[7].SetActive(false);
                         break;
                     case "Alldmgup": //크리티컬
                         buff_alldmgup = float.Parse(skilldata.Atk);
-                        buff_alldmgup += buff_alldmgup *
-                                         (Passivemanager.Instance.GetPassiveStat(Passivemanager
-                                             .PassiveStatEnum.buffup) + ability_buff);
+                        buff_alldmgup += buff_alldmgup * Stat_totalbuff;
                         //   Invoke(nameof(OffCritDmgBuff), float.Parse(skilldata.skilldata.AttackCount));
                         Skillmanager.Instance.PlayerBuffImage[8].SetActive(true);
                         break;
@@ -1896,7 +1897,7 @@ public class Player : MonoBehaviour
 
         if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6142) > 0)
         {
-            Debug.Log("레일건적용");
+////            Debug.Log("레일건적용");
             stat_critdmg +=
                 stat_crit * equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6142);
         }
@@ -2110,7 +2111,6 @@ public class Player : MonoBehaviour
         
         RefreshStat();
         ClassStat();
-
     }
 
 

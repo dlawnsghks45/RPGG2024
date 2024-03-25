@@ -72,8 +72,8 @@ public class Noticemanager : MonoBehaviour
         Loadingobj.SetActive(true);
         SendQueue.Enqueue(Backend.Notice.NoticeList, callback =>
         {
-            Debug.Log("공지가져오기");
-            Debug.Log(callback);
+//            Debug.Log("공지가져오기");
+//            Debug.Log(callback);
             if (!callback.IsSuccess()) return;
             Loadingobj.SetActive(false);
             JsonData jsonList = callback.FlattenRows();

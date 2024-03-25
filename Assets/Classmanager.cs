@@ -569,6 +569,19 @@ public class Classmanager : MonoBehaviour
     //클래스 선택
     public void Bt_SelectClass()
     {
+        MapDB.Row mapdata_Now = MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage);
+        if (PartyRaidRoommanager.Instance.partyroomdata.isstart)
+        {
+            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI7/콘텐츠 중 불가능"), alertmanager.alertenum.주의);
+            return;
+        }
+        
+        if (mapdata_Now.maptype != "0")
+        {
+            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI/사냥터만가능"), alertmanager.alertenum.주의);
+            return;
+        }
+        
         string[] skills = PlayerBackendData.Instance.ClassData[PlayerBackendData.Instance.ClassId].Skills1;
         PlayerBackendData.Instance.ClassId = PlayerBackendData.Instance.ClassData.ToList()[nowpage].Value.ClassId1;
 
@@ -601,6 +614,9 @@ public class Classmanager : MonoBehaviour
     }
     public void Bt_SelectClass(string classid,string[] skills)
     {
+   
+
+        
         PlayerBackendData.Instance.ClassId = classid;
 
         for (int i = 0;

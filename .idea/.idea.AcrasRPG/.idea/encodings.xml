@@ -10,12 +10,13 @@
     <file url="file://$PROJECT_DIR$/Assets/PlayerData.cs" charset="x-windows-949" />
     <file url="file://$PROJECT_DIR$/Assets/Roulette.cs" charset="x-windows-949" />
     <file url="file://$PROJECT_DIR$/Assets/SkillChangeSlot.cs" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/Assets/abilitymanager.cs" charset="x-windows-949" />
     <file url="file://$PROJECT_DIR$/Assets/achievemanager.cs" charset="x-windows-949" />
     <file url="file://$PROJECT_DIR$/Assets/altarwarmanager.cs" charset="x-windows-949" />
     <file url="file://$PROJECT_DIR$/Assets/dpsmanager.cs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Assets/equipoptionchanger.cs" charset="x-windows-949" />
     <file url="file://$PROJECT_DIR$/Assets/iteminventoryinfoslot.cs" charset="x-windows-949" />
     <file url="file://$PROJECT_DIR$/Assets/tradebuy.cs" charset="x-windows-949" />
-    <file url="PROJECT" charset="UTF-8" />
+    <file url="PROJECT" charset="x-windows-949" />
   </component>
 </project>

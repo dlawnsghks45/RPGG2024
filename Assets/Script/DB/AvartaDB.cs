@@ -48,6 +48,7 @@ public class AvartaDB : MonoBehaviour
 		public string equipsprite;
 		public string stattype;
 		public string stat;
+		public string stat2;
 		public string statinfo;
 		public string rare;
 		public string isshow;
@@ -88,11 +89,12 @@ public class AvartaDB : MonoBehaviour
 			row.equipsprite = grid[i][9];
 			row.stattype = grid[i][10];
 			row.stat = grid[i][11];
-			row.statinfo = grid[i][12];
-			row.rare = grid[i][13];
-			row.isshow = grid[i][14];
-			row.costtype = grid[i][15];
-			row.cost = grid[i][16];
+			row.stat2 = grid[i][12];
+			row.statinfo = grid[i][13];
+			row.rare = grid[i][14];
+			row.isshow = grid[i][15];
+			row.costtype = grid[i][16];
+			row.cost = grid[i][17];
 
 			rowList.Add(row);
 		}
@@ -206,6 +208,14 @@ public class AvartaDB : MonoBehaviour
 	public List<Row> FindAll_stat(string find)
 	{
 		return rowList.FindAll(x => x.stat == find);
+	}
+	public Row Find_stat2(string find)
+	{
+		return rowList.Find(x => x.stat2 == find);
+	}
+	public List<Row> FindAll_stat2(string find)
+	{
+		return rowList.FindAll(x => x.stat2 == find);
 	}
 	public Row Find_statinfo(string find)
 	{

@@ -556,7 +556,7 @@ public class Savemanager : MonoBehaviour
                 }
                 for (int i = 0; i < PlayerBackendData.Instance.PassiveClassId.Length; i++)
                 {
-                    Debug.Log(PlayerBackendData.Instance.PassiveClassId[i]);
+//                    Debug.Log(PlayerBackendData.Instance.PassiveClassId[i]);
                     if (PlayerBackendData.Instance.PassiveClassId[i] == ("True"))
                     {
                         PlayerBackendData.Instance.PassiveClassId[i] = "";
@@ -866,9 +866,9 @@ Save();
         {
             Timemanager.Instance.OnceTradePackage = _es3File.Load<List<string>>(
                 $"{PlayerBackendData.Instance.Id}OnceTradePackage");
-            Debug.Log("개수"+ Timemanager.Instance.OnceTradePackage.Count);
+       //     Debug.Log("개수"+ Timemanager.Instance.OnceTradePackage.Count);
             Timemanager.Instance.OnceTradePackage = Timemanager.Instance.OnceTradePackage.Distinct().ToList();
-            Debug.Log("개수"+ Timemanager.Instance.OnceTradePackage.Count);
+//            Debug.Log("개수"+ Timemanager.Instance.OnceTradePackage.Count);
         }
     }
 

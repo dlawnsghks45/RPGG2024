@@ -458,6 +458,8 @@ public class PlayerData : MonoBehaviour
         PlayerPet1.enabled = true;
         PlayerPet2.enabled = true;
         PlayerPet_sprite.enabled = true;
+        PartyraidChatManager.Instance.Chat_ChangeVisual();
+
     }
     
     public void SetWeaponImage_remove()
@@ -490,6 +492,8 @@ public class PlayerData : MonoBehaviour
         PlayerAvartaSubWeapon1.enabled = true;
         PlayerAvartaSubWeapon2.enabled = true;
         PlayerAvartaSubWeapon_Sprite.enabled = true;
+        PartyraidChatManager.Instance.Chat_ChangeVisual();
+
     }
 
     public void SetSubWeaponImage_remove()
@@ -544,6 +548,7 @@ public class PlayerData : MonoBehaviour
         PlayerAvartaWeapon1.enabled = true;
         PlayerAvartaWeapon2.enabled = true;
         PlayerAvartaWeapon_Sprite.enabled = true;
+        PartyraidChatManager.Instance.Chat_ChangeVisual();
     }
 
     public void SetAvartaImage(Image images ,Sprite image)
@@ -1021,7 +1026,9 @@ public class PlayerData : MonoBehaviour
         PlayerStat_info[(int)statenum.능력치총합].text = (mainplayer.stat_str + mainplayer.stat_dex + mainplayer.stat_int + mainplayer.stat_wis).ToString("N0"); 
 
         PlayerStat_info[(int)statenum.피해증가].text = $"{((mainplayer.AlldmgUp+mainplayer.Stat_SmeltDmg) * 100f):N0}%";
-        PlayerStat_info[(int)statenum.버프효율증가].text = $"{((Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.buffup) + mainplayer.ability_buff) * 100f):N0}%";
+        PlayerStat_info[(int)statenum.버프효율증가].text = $"{(mainplayer.Stat_totalbuff * 100f):N0}%";
+        PlayerStat_info[(int)statenum.버프효율증가].color = Color.white;
+        
         
         PlayerStat[(int)playerstatenum.힘].text = mainplayer.stat_str.ToString("N0");
         PlayerStat_info[(int)statenum.힘].text = PlayerStat[(int)playerstatenum.힘].text;
@@ -1387,7 +1394,7 @@ public class PlayerData : MonoBehaviour
         length
     }
     
-    enum statenum
+    public enum statenum
     {
         레벨,
         장비점수,

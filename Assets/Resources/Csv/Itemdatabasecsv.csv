@@ -41,7 +41,7 @@ id,descriptionKor,sprite,name,description,itemtype,itemsubtype,rare,droprare,buy
 27,신 장비 제작석,Item/Season2/1,Itemname/27,Itemdescript/27,1,111,6,FALSE,0,100000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 28,신전의 보옥,Item/Season2/2,Itemname/28,Itemdescript/28,1,111,7,FALSE,0,500000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 29,정제된 신의 힘,Item/Season2/3,Itemname/29,Itemdescript/29,1,111,7,FALSE,0,1000000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-,,,,,,,,,,,,,,,,,,,
+30,"파티 레이드 보상 횟수권,.",Item/Consume/Paper/quest_90,Itemname/30,Itemdescript/30,2,401,6,TRUE,0,1,FALSE,1,파티레이드주간횟수,1,weekly,0,TRUE,FALSE,FALSE
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
@@ -80,11 +80,11 @@ id,descriptionKor,sprite,name,description,itemtype,itemsubtype,rare,droprare,buy
 40017,설날위장이벤트(사또),Transform/사또,Itemname/40017,Itemdescript/40017,2,403,6,FALSE,0,1,FALSE,1,A2009,0,0,0,TRUE,0,FALSE
 40018,월도,Item/위장/36,Itemname/40018,Itemdescript/40018,2,403,6,FALSE,0,1,FALSE,1,A2049,0,0,0,TRUE,0,FALSE
 40019,망령 기사,Transform/망령기사,Itemname/40019,Itemdescript/40019,2,403,6,FALSE,0,1,FALSE,1,A2010,0,0,0,TRUE,0,FALSE
-,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,
+40020,디아블로,Transform/디아블로,Itemname/40020,Itemdescript/40020,2,403,6,FALSE,0,1,FALSE,1,A2050,0,0,0,TRUE,0,FALSE
+40021,겁화,Item/위장/37,Itemname/40021,Itemdescript/40021,2,403,6,FALSE,0,1,FALSE,1,A2051,0,0,0,TRUE,0,FALSE
+40022,프리미엄 위장,Transform/바이킹,Itemname/40022,Itemdescript/40022,2,403,7,FALSE,0,1,FALSE,1,A2052,0,0,0,TRUE,0,FALSE
+40023,프리미엄 위장 무기,Item/위장/38,Itemname/40023,Itemdescript/40023,2,403,7,FALSE,0,1,FALSE,1,A2053,0,0,0,TRUE,0,FALSE
+40024,양날 파괴  도끼,Item/위장/39,Itemname/40024,Itemdescript/40024,2,403,6,FALSE,0,1,FALSE,1,A2054,0,0,0,TRUE,0,FALSE
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
@@ -133,15 +133,23 @@ id,descriptionKor,sprite,name,description,itemtype,itemsubtype,rare,droprare,buy
 100003,안씀,Item/Event/E4,Itemname/100003,Itemdescript/100003,1,116,4,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 100004,안씀,Item/Event/E5,Itemname/100004,Itemdescript/100004,1,116,5,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 100005,안씀,Item/Event/E6,Itemname/100005,Itemdescript/100005,1,116,6,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100006,이벤트 아이템 [낮은 드롭율],Item/Event/E7,Itemname/100006,Itemdescript/100006,1,116,4,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100007,이벤트 아이템 [중간 드롭율],Item/Event/E8,Itemname/100007,Itemdescript/100007,1,116,5,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100008,이벤트 아이템 [업적으로만지급],Item/Event/E9,Itemname/100008,Itemdescript/100008,1,116,6,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100009,이벤트 아이템 [낮은 드롭율],Item/Event/크리스마스/44_Christmas_Ornament_Red_Ball_Flat,Itemname/100009,Itemdescript/100006,1,116,4,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100010,이벤트 아이템 [중간 드롭율],Item/Event/크리스마스/46_Christmas_Ornament_Red_Ball_Stripe,Itemname/100010,Itemdescript/100007,1,116,5,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100011,이벤트 아이템 [업적으로만지급],Item/Event/크리스마스/50_Christmas_Ornament_Gold_Ball,Itemname/100011,Itemdescript/100008,1,116,6,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100012,이벤트 아이템 [낮은 드롭율],Item/Event/설날/복조리,Itemname/100012,Itemdescript/100006,1,116,4,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100013,이벤트 아이템 [중간 드롭율],Item/Event/설날/복조리1,Itemname/100013,Itemdescript/100007,1,116,5,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100014,이벤트 아이템 [업적으로만지급],Item/Event/설날/복조리3,Itemname/100014,Itemdescript/100008,1,116,6,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+100006,안씀,Item/Event/E7,Itemname/100006,Itemdescript/100006,1,116,4,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+100007,안씀,Item/Event/E8,Itemname/100007,Itemdescript/100007,1,116,5,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+100008,안씀,Item/Event/E9,Itemname/100008,Itemdescript/100008,1,116,6,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+100009,안씀,Item/Event/크리스마스/44_Christmas_Ornament_Red_Ball_Flat,Itemname/100009,Itemdescript/100006,1,116,4,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+100010,안씀,Item/Event/크리스마스/46_Christmas_Ornament_Red_Ball_Stripe,Itemname/100010,Itemdescript/100007,1,116,5,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+100011,안씀,Item/Event/크리스마스/50_Christmas_Ornament_Gold_Ball,Itemname/100011,Itemdescript/100008,1,116,6,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+100012,안씀,Item/Event/설날/복조리,Itemname/100012,Itemdescript/100006,1,116,4,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+100013,안씀,Item/Event/설날/복조리1,Itemname/100013,Itemdescript/100007,1,116,5,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+100014,안씀,Item/Event/설날/복조리3,Itemname/100014,Itemdescript/100008,1,116,6,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+100015,이벤트 아이템 [낮은 드롭율],Item/Event/E10,Itemname/100015,Itemdescript/100006,1,116,4,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+100016,이벤트 아이템 [중간 드롭율],Item/Event/E11,Itemname/100016,Itemdescript/100007,1,116,5,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+100017,이벤트 아이템 [업적으로만지급],Item/Event/E12,Itemname/100017,Itemdescript/100008,1,116,6,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
@@ -153,7 +161,7 @@ id,descriptionKor,sprite,name,description,itemtype,itemsubtype,rare,droprare,buy
 100105,진저 쿠키 조각A,Item/Event/크리스마스/04_Gingerbread_Bite,Itemname/100105,Itemdescript/100105,1,116,4,TRUE,0,100000,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE
 100106,진저 쿠키 조각B,Item/Event/크리스마스/02_Gingerbread_Bite,Itemname/100106,Itemdescript/100106,1,116,5,FALSE,0,500000,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE
 100107,진저 쿠키 조각C,Item/Event/크리스마스/01_Gingerbread_Whole,Itemname/100107,Itemdescript/100107,1,116,6,FALSE,0,10000000,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE
-200000,레이드 횟수 +1 충전권,Item/Consume/Paper/quest_82,Itemname/200000,Itemdescript/200000,2,401,6,TRUE,0,1,FALSE,1,레이드,1,daily,0,TRUE,0,FALSE
+200000,진저 쿠키 조각C,Item/Consume/Paper/quest_82,Itemname/200000,Itemdescript/200000,2,401,6,TRUE,0,1,FALSE,1,레이드,1,daily,0,TRUE,0,FALSE
 200001,200레벨 경험치 스크롤,Item/Consume/Paper/quest_08,Itemname/200001,Itemdescript/200001,2,402,6,FALSE,0,1,FALSE,1,86759030,0,0,0,TRUE,0,FALSE
 200002,300레벨 경험치 스크롤,Item/Consume/Paper/quest_08,Itemname/200002,Itemdescript/200002,2,402,6,FALSE,0,1,FALSE,1,1045879131,0,0,0,TRUE,0,FALSE
 200003,400레벨 경험치 스크롤,Item/Consume/Paper/quest_08,Itemname/200003,Itemdescript/200003,2,402,6,FALSE,0,1,FALSE,1,3683420881,0,0,0,TRUE,0,FALSE
@@ -172,6 +180,7 @@ id,descriptionKor,sprite,name,description,itemtype,itemsubtype,rare,droprare,buy
 200015,유물 수집 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200015,Itemdescript/200015,2,405,6,TRUE,0,1,FALSE,1,18,0,0,0,TRUE,0,FALSE
 200016,룬 제련 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200016,Itemdescript/200016,2,405,6,TRUE,0,1,FALSE,1,21,0,0,0,TRUE,0,FALSE
 200017,펫 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200017,Itemdescript/200017,2,405,6,TRUE,0,1,FALSE,1,24,0,0,0,TRUE,0,FALSE
+200018,1200레벨 경험치 스크롤,Item/Consume/Paper/quest_08,Itemname/200018,Itemdescript/200018,2,402,6,FALSE,0,1,FALSE,1,170225920881,0,0,0,TRUE,0,FALSE
 ,,,,,,,,,,,,,,,,,,,
 500,아이템 상자,Item/Consume/Box/골드유물,Itemname/500,Itemdescript/500,2,400,5,FALSE,0,1,FALSE,0,10;11;12;13;14;15;1000,10;100;1000;10000;100000;1000000;200000000,All,0,TRUE,FALSE,FALSE
 501,장비 상자,Item/Consume/Box/드래곤체스트,Itemname/501,Itemdescript/501,2,400,6,FALSE,0,1,FALSE,0,E1003;E2002;E3004;E4007;E5005;E1015;E5513;E5522;E5529;E5532,0,All,0,TRUE,FALSE,TRUE
@@ -237,6 +246,12 @@ id,descriptionKor,sprite,name,description,itemtype,itemsubtype,rare,droprare,buy
 550,대마법사 세트 상자,Item/Consume/Box2/Icon19,Itemname/550,Itemdescript/550,2,400,6,TRUE,0,1,FALSE,0,E6028;E6029;E6030;E6031,,All,0,TRUE,FALSE,TRUE
 551,독룡 세트상자,Item/Consume/Box2/Icon23,Itemname/551,Itemdescript/551,2,400,6,TRUE,0,1,FALSE,0,E6036;E6037;E6038;E6039,,All,0,TRUE,FALSE,TRUE
 ,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
 552,하급 고대 유물 선택 상자,Item/Consume/Box/chest_2,Itemname/552,Itemdescript/552,2,400,4,TRUE,0,100000000,FALSE,0,90000;90001;90002,5;5;5,Choice,1,TRUE,FALSE,FALSE
 553,하급 고대 유물 무작위 상자,Item/Consume/Box/chest_2,Itemname/553,Itemdescript/553,2,400,4,TRUE,0,100000000,FALSE,0,90000;90001;90002,5;5;5,Random,0,TRUE,FALSE,FALSE
 554,중급 고대 유물 선택 상자,Item/Consume/Box/chest_3,Itemname/554,Itemdescript/554,2,400,5,TRUE,0,200000000,FALSE,0,90003;90004;90005,5;5;5,Choice,1,TRUE,FALSE,FALSE
@@ -254,14 +269,15 @@ id,descriptionKor,sprite,name,description,itemtype,itemsubtype,rare,droprare,buy
 564,룬선택상자,Item/Consume/Box2/Icon7,Itemname/564,Itemdescript/564,2,400,6,TRUE,0,1,FALSE,0,E6125;E6137,,Choice,1,TRUE,FALSE,TRUE
 565,[이벤트]설날 복 주머니,Item/Event/설날/설날복주머니,Itemname/565,Itemdescript/565,2,400,6,FALSE,0,1,FALSE,0,50005;50006;535;40000;40000;40001;40001;40002;40002;40003;40004;1005;1006;1750,10;1;1;100;1000;20;50;5;20;2;1;5;2;1,Random,0,TRUE,FALSE,FALSE
 566,2023 겨울 쿠폰 상자,Item/Consume/Box/chest_4,Itemname/566,Itemdescript/566,2,400,6,TRUE,0,1,FALSE,0,200002;527;528;529;530;4001;4002;4003;4004,1;1;1;1;1;1;1;1;1,All,0,TRUE,FALSE,FALSE
+567,[이벤트]불의 축제 상자,Item/Consume/Box2/Icon3,Itemname/567,Itemdescript/567,2,400,6,FALSE,0,1,FALSE,0,50005;50006;535;40000;40000;40001;40001;40002;40002;40003;40004;1005;1006;1750,10;1;1;100;1000;20;50;5;20;2;1;5;2;1,Random,0,TRUE,FALSE,FALSE
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,
+568,시즌2 무기 상자,Item/Consume/Box2/Icon17,Itemname/568,Itemdescript/568,2,400,7,TRUE,0,1,FALSE,0,E6138;E6139;E6140;E6142;E6144;E6145;E6146;E6147;E6148;E6149;E6150,,Choice,1,TRUE,FALSE,TRUE
+569,시즌2 보조무기 상자,Item/Consume/Box2/Icon7,Itemname/569,Itemdescript/569,2,400,7,TRUE,0,1,FALSE,0,E6151;E6152;E6153;E6154,,Choice,1,TRUE,FALSE,TRUE
+570,시즌2 방어구 상자,Item/Consume/Box2/Icon23,Itemname/570,Itemdescript/570,2,400,7,TRUE,0,1,FALSE,0,E6155;E6156;E6157;E6158,,Choice,1,TRUE,FALSE,TRUE
+571,시즌2 장신구 상자,Item/Consume/Box2/Icon21,Itemname/571,Itemdescript/571,2,400,7,TRUE,0,1,FALSE,0,E6161;E6162;E6163;E6164;E6165;E6166,,Choice,1,TRUE,FALSE,TRUE
+572,파티 레이드 토벌 상자,Item/Consume/Box/pvpbag,Itemname/572,Itemdescript/572,2,400,6,FALSE,0,1,FALSE,0,50005;535;40000;40000;40001;40001;40002;40002;40003;40004;1005;1006;1750,3;1;100;1000;20;50;5;20;2;1;5;2;1,Random,0,TRUE,FALSE,FALSE
+573,[시즌2]초고속 성장 패키지,Item/Consume/Box/죽은왕상자,Shopname/1040,Shopinfo/1040,2,400,7,TRUE,0,1,FALSE,0,200018;4005;558;559;547;548;532;533;534;40005;40002;526;1711;99000;1003,1;2;2;1;2;1;2;2;1;20;1000;15;1200;15000;2200,All,0,TRUE,FALSE,FALSE
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
 1500,신의 결정,Item/Consume/Potion/HP12,Itemname/1500,Itemdescript/1500,2,101,0,FALSE,0,0,FALSE,0,500,0,0,0,TRUE,TRUE,FALSE

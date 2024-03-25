@@ -429,7 +429,7 @@ public class Hpmanager : MonoBehaviour
             //파ㅣ티레이ㅐ드
                case "12":
                    CurHp -= dmg;
-                   Debug.Log("피해를 받았다.");
+//                   Debug.Log("피해를 받았다.");
                 if (CurHp <= 0 && !isdeath)
                 {
                     isdeath = true;
@@ -451,7 +451,7 @@ public class Hpmanager : MonoBehaviour
                             //보스방이면
                             //TotalDmg
                             PartyraidChatManager.Instance.Chat_MainBossRaidFinish(dpsmanager.Instance.TotalDmg);
-                            Debug.Log("피해넣기"+dpsmanager.Instance.TotalDmg);
+//                            Debug.Log("피해넣기"+dpsmanager.Instance.TotalDmg);
                             dpsmanager.Instance.EndDps();
                         }
                         else

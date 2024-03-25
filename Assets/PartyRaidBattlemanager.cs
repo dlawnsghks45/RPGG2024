@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Doozy.Engine.UI;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
 using UnityEngine.UI;
@@ -114,13 +115,16 @@ public class PartyRaidBattlemanager : MonoBehaviour
         for (int i = 0; i < MainBossBloodObj.Length; i++)
         {
             MainBossBloodObj[i].SetActive(false);
-        }
-
+        }   
+        
         InitRaid();
         PartyRaidRoommanager.Instance.ExitButton.SetActive(true);
         PartyRaidRoommanager.Instance.ExitButtons.SetActive(false);
         PartyRaidRoommanager.Instance.PartyradPanel.Show(false);
     }
+
+    
+  
     public int[] nowPenalty = new int[(int)PartyRaidBuffEnemy.Length];
     public decimal NowBossMaxHp = 0;
     public int nowmiddlenum = 0;
@@ -133,6 +137,8 @@ public class PartyRaidBattlemanager : MonoBehaviour
     public Text MonHpPercent;
     public penaltyslot[] PenaltySlots;
     public partyraidmiddlebossslot[] middlebosspanel;
+    public float buffmax = 0;
+    public int buffusernum = 0;
     void InitRaid()
     {
         MonImage.sprite = SpriteManager.Instance.GetSprite(monsterDB.Instance.Find_id(battledata.monid).sprite);
@@ -152,16 +158,29 @@ public class PartyRaidBattlemanager : MonoBehaviour
             middlebosspanel[i].SetData(MiddleData[i], 0, i);
             middlebosspanel[i].gameObject.SetActive(true);
         }
-        
-        foreach (var t in PartyRaidRoommanager.Instance.PartyMember)
+
+        buffmax = PartyRaidRoommanager.Instance.PartyMember[0].BuffPercent;
+        buffusernum = 0;
+        for (var index = 0; index < PartyRaidRoommanager.Instance.PartyMember.Length; index++)
         {
+            var t = PartyRaidRoommanager.Instance.PartyMember[index];
             if (t.data != null)
             {
                 t.RefreshPlayerBuff();
+                t.BufferObj.SetActive(false);
+                if (buffmax < t.BuffPercent)
+                {
+                    buffmax = t.BuffPercent;
+                    buffusernum = index;
+                }
             }
         }
-
-        
+        if (buffmax > 0)
+        {
+            PartyRaidRoommanager.Instance.PartyMember[buffusernum].BufferObj.SetActive(true);
+            PartyRaidRoommanager.Instance.PartyMember[buffusernum].BufferText.text =
+                string.Format(Inventory.GetTranslate("UI7/버퍼"),(buffmax*100f).ToString("N0"));
+        }
         RefreshBossPenaly();
         PartyRaidRoommanager.Instance.ExitButtons.SetActive(false);
     }
@@ -261,7 +280,6 @@ public class PartyRaidBattlemanager : MonoBehaviour
             {
                 curhp = 0;
                 
-                Debug.Log("보상출력");
                 ShowReward();
                 break;
             }
@@ -299,6 +317,17 @@ public class PartyRaidBattlemanager : MonoBehaviour
         PartyraidChatManager.Instance.Chat_GiveReward(
             PartyRaidRoommanager.Instance.DropId[PartyRaidRoommanager.Instance.partyroomdata.level - 1]);
     }
+
+    public GameObject RewardShowPanel;
+
+
+    public string rewardid;
+    public void ShowRewardPanel(string dropid)
+    {
+        RewardShowPanel.SetActive(true);
+        rewardid = dropid;
+    }
+    
     
     public Text RaidFinishText;
     public Image monsterimage_raidfinish;
@@ -310,30 +339,66 @@ public class PartyRaidBattlemanager : MonoBehaviour
 
     readonly WaitForSeconds waits = new WaitForSeconds(0.2f);
 
-
-    public void StartGiveReward(string dropid)
+    public string nowlevel;
+    public void Bt_StartGiveReward()
     {
-        List<MonDropDB.Row> dropdatas = MonDropDB.Instance.FindAll_id(dropid);
-        dungeondropsid.Clear();
-        dungeondropshowmany.Clear();
-        foreach (var t in dropdatas)
+        RewardShowPanel.SetActive(false);
+
+        if (Timemanager.Instance.ConSumeCount_WeeklyAscny((int)Timemanager.ContentEnumWeekly.파티레이드주간횟수,
+                1))
         {
-            //                Debug.Log(dropid[i]);
-            Random.InitState((int)Time.deltaTime + PlayerBackendData.Instance.GetRandomSeed());
-            int Ran_rate = Random.Range(0, 1000000); // 1,000,000이 100%이다.
-            if (Ran_rate <= int.Parse(t.rate))//mondropmanager.Instance.getpercent(percent[i]))
+            List<MonDropDB.Row> dropdatas = MonDropDB.Instance.FindAll_id(rewardid);
+            dungeondropsid.Clear();
+            dungeondropshowmany.Clear();
+            foreach (var t in dropdatas)
             {
-                int Howmany = Random.Range(int.Parse(t.minhowmany), int.Parse(t.maxhowmany));
-                Inventory.Instance.AddItem(t.itemid, Howmany, false, true);
-                RaidManager.Instance.AddLoot(t.itemid , Howmany);
-                dungeondropsid.Add(t.itemid);
-                dungeondropshowmany.Add(Howmany);
+                //                Debug.Log(dropid[i]);
+                Random.InitState((int)Time.deltaTime + PlayerBackendData.Instance.GetRandomSeed());
+                int Ran_rate = Random.Range(0, 1000000); // 1,000,000이 100%이다.
+                if (Ran_rate <= int.Parse(t.rate)) //mondropmanager.Instance.getpercent(percent[i]))
+                {
+                    int Howmany = Random.Range(int.Parse(t.minhowmany), int.Parse(t.maxhowmany));
+                    Inventory.Instance.AddItem(t.itemid, Howmany, false, true);
+                    RaidManager.Instance.AddLoot(t.itemid, Howmany);
+                    dungeondropsid.Add(t.itemid);
+                    dungeondropshowmany.Add(Howmany);
+                }
+            }
+            LogManager.Log_ClearRaid(PartyRaidRoommanager.Instance.partyroomdata.level.ToString());
+            StartCoroutine(FinishRaidReward2());
+        }
+        else
+        {
+            if (PlayerBackendData.Instance.CheckItemAndRemove("30",1))
+            {
+                alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI7/충전권사용"), alertmanager.alertenum.일반);
+                List<MonDropDB.Row> dropdatas = MonDropDB.Instance.FindAll_id(rewardid);
+                dungeondropsid.Clear();
+                dungeondropshowmany.Clear();
+                foreach (var t in dropdatas)
+                {
+                    //                Debug.Log(dropid[i]);
+                    Random.InitState((int)Time.deltaTime + PlayerBackendData.Instance.GetRandomSeed());
+                    int Ran_rate = Random.Range(0, 1000000); // 1,000,000이 100%이다.
+                    if (Ran_rate <= int.Parse(t.rate)) //mondropmanager.Instance.getpercent(percent[i]))
+                    {
+                        int Howmany = Random.Range(int.Parse(t.minhowmany), int.Parse(t.maxhowmany));
+                        Inventory.Instance.AddItem(t.itemid, Howmany, false, true);
+                        RaidManager.Instance.AddLoot(t.itemid, Howmany);
+                        dungeondropsid.Add(t.itemid);
+                        dungeondropshowmany.Add(Howmany);
+                    }
+                }
+                LogManager.Log_ClearRaid(PartyRaidRoommanager.Instance.partyroomdata.level.ToString());
+                StartCoroutine(FinishRaidReward2());
+            }
+            else
+            {
+                alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI6/월드보스보상횟수없음"), alertmanager.alertenum.주의);
             }
         }
-        
-        StartCoroutine(FinishRaidReward2());
     }
-    
+
     private IEnumerator FinishRaidReward2()
     {
         RaidFinishText.text = string.Format(Inventory.GetTranslate("UI7/격파완료"),
