@@ -125,6 +125,7 @@ public class Timemanager : MonoBehaviour
         월드보스9보상횟수,
         월드보스10보상횟수,
         월드보스공격횟수,
+        월드보스보상횟수리뉴얼,
         Length
     }
 

@@ -307,6 +307,10 @@ public class Player : MonoBehaviour
             case 28:
             case 29:
             case 30:
+            case 31:
+            case 32:
+            case 33:
+            case 34:
                 return 6;
 
         }
@@ -688,6 +692,8 @@ public class Player : MonoBehaviour
             {
                 EquipItemDB.Row data =
                     EquipItemDB.Instance.Find_id(PlayerBackendData.Instance.GetEquipData()[i].Itemid);
+                EquipItemDB.Row data2 =
+                    EquipItemDB.Instance.Find_id(PlayerBackendData.Instance.GetEquipData()[0].Itemid);
                 gear_atk += PlayerBackendData.Instance.GetEquipData()[i].GetStat(4);
                 gear_matk += PlayerBackendData.Instance.GetEquipData()[i].GetStat(5);
                 gear_def += PlayerBackendData.Instance.GetEquipData()[i].GetStat(6);
@@ -1362,8 +1368,7 @@ public class Player : MonoBehaviour
                             case "1120":
                             case "1454":
                             case "1182":
-
-                                switch (data.SubType)
+                                switch (data2.SubType)
                                 {
                                     case "Physic":
                                         equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.physicperup,
@@ -1389,8 +1394,7 @@ public class Player : MonoBehaviour
                             case "1223":
                             case "1233":
                             case "1524":
-                                
-                                switch (data.SubType)
+                                switch (data2.SubType)
                                 {
                                     case "Physic":
                                         equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.maxhpupper,

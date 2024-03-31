@@ -701,6 +701,26 @@ public class EquipDatabase : IEquatable<object>
         return isbool;
 
     }
+    public bool GetRareUpShininh()
+    {
+        float temp = Time.time * 100f;
+        int seed = (int)temp + PlayerBackendData.Instance.GetRandomSeed();
+        UnityEngine.Random.InitState(seed);
+        int ran = UnityEngine.Random.Range(1, 100);
+        int minval = int.Parse(Itemrare); //현재 등급이 제일 낮은 등급
+        //현재 등급이 더 높은 거면 진행
+        if (ran <= 2)
+        {
+                Itemrare = "7";
+                LogManager.RareLog("6",Itemrare,Inventory.Instance.data.KeyId1);
+                return true;
+        }
+        else
+        {
+            LogManager.RareLog("6",Itemrare,Inventory.Instance.data.KeyId1);
+            return false;
+        }
+    }
 
     string GetRare()
     {
@@ -1241,6 +1261,9 @@ case 10:
         {
             int str = int.Parse(data.AllStat);
             int rareatk = (int)(str * getrarepercent());
+            
+            Debug.Log(rareatk);
+            
             int craftrareatk = (int)(str * getcraftrarepercent());
             int smeltstat = (int)(str * smeltpercent);
             int enchantstat = (int)(str * getEnchantpercent());
@@ -1306,6 +1329,7 @@ case 10:
         if (data.Str != "0")
         {
             int str = int.Parse(data.Str);
+            Debug.Log("레어퍼센트" + getrarepercent());
             int rareatk = (int)(str * getrarepercent());
             int craftrareatk = (int)(str * getcraftrarepercent());
             int smeltstat = (int)(str * smeltpercent);
@@ -2193,6 +2217,8 @@ case 10:
             3 => $"<color=#FF7000>{stat:N0}</color>",
             4 => $"<color=#E500FF>{stat:N0}</color>",
             5 => $"<color=#FF003F>{stat:N0}</color>",
+            6 => $"<color=#00FFC9>{stat:N0}</color>",
+            7 => $"<color=#F8FF5F>{stat:N0}</color>",
             _ => stat.ToString("N0")
         };
     }
@@ -2207,6 +2233,7 @@ case 10:
              "4" => $"<color=#E500FF>{stat:N0}</color>",
              "5" => $"<color=#FF003F>{stat:N0}</color>",
              "6" => $"<color=#00FFC9>{stat:N0}</color>",
+             "7" => $"<color=#F8FF5F>{stat:N0}</color>",
              _ => stat.ToString("N0")
          };
      }
@@ -2227,17 +2254,28 @@ case 10:
 
     float getrarepercent()
     {
-        return itemrare switch
+//        Debug.Log(Itemrare+"아이템등급");
+        switch (itemrare)
         {
-            "0" => 0,
-            "1" => 0.2f,
-            "2" => 0.4f,
-            "3" => 0.6f,
-            "4" => 0.8f,
-            "5" => 1f,
-            "6" => 1.2f,
-            _ => 1
-        };
+            case "0":
+                return 0;
+            case "1":
+                return 0.2f;
+            case "2":
+                return 0.4f;
+            case "3":
+                return 0.6f;
+            case "4":
+                return 0.8f;
+            case "5":
+                return 1f;
+            case "6":
+                return 1.2f;
+            case "7":
+                return 1.8f;
+            default:
+                return 1;
+        }
     }
 
     //강화 스탯

@@ -194,14 +194,14 @@ public class WorldBossSlot : MonoBehaviour
             //다시 시도
         }
         
-        if (Timemanager.Instance.ConSumeCount_DailyAscny((int)Timemanager.ContentEnumDaily.월드보스보상횟수, 1))
+        if (Timemanager.Instance.ConSumeCount_DailyAscny((int)Timemanager.ContentEnumDaily.월드보스보상횟수리뉴얼, 1))
         {
             int num = (int)Enum.Parse(typeof(Timemanager.ContentEnumDaily),
                 WorldBossDB.Instance.Find_id(bossid).arrynum2);
             
             if (Timemanager.Instance.ConSumeCount_DailyAscny(num, 1))
             {
-                //보상지급
+                //보상지급ㅔ
 //                Debug.Log("보상 지급");
                 alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI6/월드보스토벌보상지급"), alertmanager.alertenum.주의);
                 WorldBossManager.Instance.SetDropDataDropId(WorldBossDB.Instance.Find_id(bossid).mondropid);

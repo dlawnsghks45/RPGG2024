@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings:
     _location: 0
-    path: 2023-10-31T06:43:25.842Z.es3
+    path: 2024-02-29T07:42:05.415Z.es3
     encryptionType: 1
     compressionType: 0
     encryptionPassword: gksrnr13
@@ -22,7 +22,7 @@ MonoBehaviour:
     format: 0
     prettyPrint: 1
     bufferSize: 2048
-    saveChildren: 0
+    saveChildren: 1
     typeChecking: 1
     safeReflection: 1
     memberReferenceMode: 0
@@ -60,5 +60,5 @@ MonoBehaviour:
   autoUpdateReferences: 1
   addAllPrefabsToManager: 1
   logDebugInfo: 0
-  logWarnings: 0
-  logErrors: 0
+  logWarnings: 1
+  logErrors: 1

@@ -8353,8 +8353,8 @@ MonoBehaviour:
       Languages:
       - "\uBAA8\uB4E0 \uB2A5\uB825\uCE58 +15%\n\uC81C\uC791 \uC2AC\uB987 +2\n\uCD94\uAC00
         \uACBD\uD5D8\uCE58 50%\n\uC81C\uC791 \uC2DC\uAC04 50% \uAC10\uC18C\n\n\n<color=cyan>-\uC5D8\uB9AC\uC758
-        \uC131\uC7A5 \uC9C0\uC6D0-</color>\nLv.1200 \uBBF8\uB9CC \uCD94\uAC00 \uACBD\uD5D8\uCE58
-        100% \uCD94\uAC00 \uC99D\uAC00"
+        \uC131\uC7A5 \uC9C0\uC6D0-</color>\nLv.1500 \uBBF8\uB9CC \uCD94\uAC00 \uACBD\uD5D8\uCE58
+        200% \uCD94\uAC00 \uC99D\uAC00"
       - '#ERROR!'
       - 
       - 
@@ -8946,7 +8946,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - "\uC77C\uBC18 (100%)\n<color=cyan>35%</color>"
+      - "\uC5B8\uCEE4\uBA3C (100%)\n<color=cyan>35%</color>"
       - 'Normal (100%)
 
         <color=cyan>35%</color>'
@@ -8961,7 +8961,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - "<color=#9EFF00>\uB6F0\uC5B4\uB0A8 (120%)</color>\n<color=cyan>30%</color>"
+      - "<color=#9EFF00>\uCEE4\uBA3C (120%)</color>\n<color=cyan>30%</color>"
       - '<color=#9EFF00>Exceptional (120%)</color>
 
         <color=cyan>30%</color>'
@@ -8976,7 +8976,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - "<color=#0055FF>\uB9E4\uC6B0 \uB6F0\uC5B4\uB09C (140%)</color>\n<color=cyan>15%</color>"
+      - "<color=#0055FF>\uB808\uC5B4 (140%)</color>\n<color=cyan>15%</color>"
       - '<color=#0055FF>Exceptional (140%)</color>
 
         <color=cyan>15%</color>'
@@ -8991,7 +8991,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - "<color=#FF7000>\uAC78\uC791 (160%)</color>\n<color=cyan>10%</color>"
+      - "<color=#FF7000>\uC720\uB2C8\uD06C (160%)</color>\n<color=cyan>10%</color>"
       - "<color=#FF7000>\uAC78\uC791 (160%)</color>\n<color=cyan>10%</color>"
       - 
       - 
@@ -9004,7 +9004,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - "<color=#E500FF>\uB300\uC791 (180%)</color>\n<color=cyan>8%</color>"
+      - "<color=#E500FF>\uB808\uC804\uB4DC (180%)</color>\n<color=cyan>8%</color>"
       - '<color=#E500FF>Masterpiece (180%)</color>
 
         <color=cyan>8%</color>'
@@ -9019,10 +9019,53 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - "<color=#FF003F>\uC5ED\uC0AC\uC758 \uB0A8\uC744 (200%)</color>\n<color=cyan>2%</color>"
+      - "<color=#FF003F>\uBBF8\uC2A4\uD2F1 (200%)</color>\n<color=cyan>2%</color>"
       - '<color=#FF003F>History (200%)</color>
 
         <color=cyan>2%</color>'
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
+    - Term: "UI/0_\uD488\uC9C8250"
+      TermType: 0
+      Description: 
+      Languages:
+      - "<color=#00FFC9>\uC5D0\uD53D (250%)</color>\n<color=cyan>2%</color>"
+      - '<color=#FF003F>History (200%)</color>
+
+        <color=cyan>2%</color>'
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
+    - Term: "UI/0_\uD488\uC9C8300"
+      TermType: 0
+      Description: 
+      Languages:
+      - "<color=#F8FF5F>\uC0E4\uC774\uB2DD (300%)</color>\n<color=cyan>2%</color>"
+      - '<color=#FF003F>History (200%)</color>
+
+        <color=cyan>2%</color>'
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
+    - Term: UI/
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
       - 
       - 
       - 
@@ -10319,7 +10362,7 @@ MonoBehaviour:
       Languages:
       - "\uB808\uC774\uB4DC\uC5D0 \uC2E4\uD328\uD558\uC5EC \uB808\uC774\uB4DC \uB3C4\uC804
         \uAE30\uD68C\uAC00 1\uD68C \uCDA9\uC804\uB429\uB2C8\uB2E4."
-      - If you fail the raid, your chance to challenge the raid will be charged once.
+      - If you fail a raid, your chance to challenge the raid will be charged once.
       - 
       - 
       - 
@@ -24558,7 +24601,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - "\uC545\uB9C8\uC758 \uB450\uAC1C\uACE8"
+      - "[\uC774\uBCA4\uD2B8]\uC545\uB9C8\uC758 \uB450\uAC1C\uACE8"
       - 
       - 
       - 
@@ -24571,7 +24614,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - "\uACE0\uC704 \uC545\uB9C8\uC758 \uB450\uAC1C\uACE8"
+      - "[\uC774\uBCA4\uD2B8]\uACE0\uC704 \uC545\uB9C8\uC758 \uB450\uAC1C\uACE8"
       - 
       - 
       - 
@@ -24584,7 +24627,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - "\uB514\uC544\uBE14\uB85C\uC758 \uB450\uAC1C\uACE8"
+      - "[\uC774\uBCA4\uD2B8]\uB514\uC544\uBE14\uB85C\uC758 \uB450\uAC1C\uACE8"
       - 
       - 
       - 
@@ -33379,7 +33422,7 @@ MonoBehaviour:
       - "\uAE30\uBCF8 \uACF5\uACA9 \uC2DC 28% \uD655\uB960\uB85C \uC815\uC2E0\uB825
         9% \uD68C\uBCF5\n\uAE30\uBCF8 \uACF5\uACA9 \uAE30\uD68C \uB2F9 1\uD68C\uB9CC
         \uD68C\uBCF5"
-      - '28% chance to recover 9% of mental power when making a basic attack
+      - '28% chance to recover 9% mental power when making a basic attack
 
         Recover
         only once per basic attack opportunity'
@@ -35347,8 +35390,8 @@ MonoBehaviour:
       - "\uB9C8\uBC95 \uC2A4\uD0AC \uC0AC\uC6A9 \uC2DC 25% \uD655\uB960\uB85C \uB9C8\uBC95
         \uACF5\uACA9\uB825 200% \uB9CC\uD07C\uC758 \uB9C8\uBC95 \uD53C\uD574\uB97C
         \uC785\uD798."
-      - When using a magic skill, there is a 25% chance to inflict magic damage equal
-        to 200% of magic attack power.
+      - When using a magic skill, there is a 25% chance of inflicting magic damage
+        equal to 200% of magic attack power.
       - 
       - 
       - 
@@ -39854,9 +39897,9 @@ MonoBehaviour:
         Physical attack power +40%
 
         Critical
-        Strike Chance +18%
+        hit chance +18%
 
-        +25% Critical Strike Damage
+        Critical Strike Damage +25%
 
         Damage Reduction
         +35%'
@@ -39881,9 +39924,9 @@ MonoBehaviour:
         Magic attack power +40%
 
         Critical
-        Strike Chance +18%
+        hit chance +18%
 
-        +25% Critical Strike Damage
+        Critical Strike Damage +25%
 
         Damage Reduction
         +35%'
@@ -39908,9 +39951,9 @@ MonoBehaviour:
         Status ailment damage
         +80%
 
-        Critical Strike Chance +18%
+        Critical hit chance +18%
 
-        +25% Critical Strike Damage
+        Critical Strike Damage +25%
 
         Damage
         Reduction +35%'
@@ -41402,6 +41445,32 @@ MonoBehaviour:
       - 
       Flags: 00000000000000
       Languages_Touch: []
+    - Term: MonsterName/5029
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uD038\uBE44"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
+    - Term: MonsterName/5030
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC704\uCE58"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
     - Term: Shopname/1000
       TermType: 0
       Description: 
@@ -41472,7 +41541,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uD06C\uB9AC\uC2A4\uD0C8 8000+500\uAC1C"
-      - 8000+500 Crystals
+      - 8000+500 crystals
       - 
       - 
       - 
@@ -45554,6 +45623,32 @@ MonoBehaviour:
       - 
       Flags: 00000000000000
       Languages_Touch: []
+    - Term: mapname/2030
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uBAA8\uD5D8\uAC00 \uC2B9\uAE09 \uC2DC\uD5D8 31"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
+    - Term: mapname/2031
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uBAA8\uD5D8\uAC00 \uC2B9\uAE09 \uC2DC\uD5D8 32"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
     - Term: mapname/1000
       TermType: 0
       Description: 
@@ -47392,7 +47487,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uCD9C\uC785 \uC81C\uD55C \uAD6C\uC5ED - \uD32C\uD140"
-      - Restricted Access Area - Phantom
+      - Restricted Entry Area - Phantom
       - 
       - 
       - 
@@ -47679,6 +47774,32 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uCD9C\uC785 \uC81C\uD55C \uAD6C\uC5ED - \uC6E8\uC5B4 \uC6B8\uD504"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
+    - Term: mapname/5029
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uCD9C\uC785 \uC81C\uD55C \uAD6C\uC5ED - \uD038\uBE44"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
+    - Term: mapname/5030
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uCD9C\uC785 \uC81C\uD55C \uAD6C\uC5ED - \uB9C8\uB140'"
       - 
       - 
       - 
@@ -48562,8 +48683,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - "<color=#00FFC9>\uC5D0\uD53D (220%)</color>"
-      - <color=#00FFC9>Epic (220%)</color>
+      - "<color=#00FFC9>\uC5D0\uD53D (250%)</color>"
+      - <color=#00FFC9>Epic (250%)</color>
       - 
       - 
       - 
@@ -48575,8 +48696,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - "<color=#F8FF5F>\uC0E4\uC774\uB2DD (240%)</color>"
-      - <color=#F8FF5F>Shining (240%)</color>
+      - "<color=#00FFC9>\uC0E4\uC774\uB2DD (300%)</color>"
+      - <color=#00FFC9>Shining (300%)</color>
       - 
       - 
       - 
@@ -51986,7 +52107,7 @@ MonoBehaviour:
       - 'Dungeon - Swamp area entry is possible.
 
         Forest sub-weapons can
-        be made.'
+        be crafted.'
       - 
       - 
       - 
@@ -56339,7 +56460,7 @@ MonoBehaviour:
       Languages:
       - "\uC0DD\uBA85\uB825 +20\n\uC815\uC2E0\uB825 +15\n\uBB3C\uB9AC \uACF5\uACA9\uB825
         +24"
-      - '+20 vitality
+      - 'Life +20
 
         Spirit +15
 
@@ -56473,7 +56594,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uBB34\uAE30 \uACF5\uACA9\uB825[\uBB3C\uB9AC]"
-      - Weapon attack power [Physical]
+      - Weapon Attack Power [Physical]
       - 
       - 
       - 
@@ -58166,7 +58287,7 @@ MonoBehaviour:
         \uC801\uC5D0\uAC8C <color=red>220%</color> \uBB3C\uB9AC \uD53C\uD574\uB97C
         3\uD68C \uC785\uD78C\uB2E4.\n[\uCD94\uAC00 \uCE58\uBA85\uD0C0 \uD53C\uD574
         +20%]"
-      - 'Strike down a weapon filled with the energy of chaos, inflicting <color=red>220%</color>
+      - 'Strikes down a weapon filled with the energy of chaos, inflicting <color=red>220%</color>
         physical damage to the enemy 3 times.
 
         [Additional critical damage
@@ -60634,7 +60755,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycbxhcSJOOxI2cpDPngQJFCYrJuB6ffrqjqE3UgW-z7NUkneTss0VycsDEYRszHhWYImy/exec
     Google_SpreadsheetKey: 1rhi3AD5stOr4ljin6mwlgGM5wvn1pTUlM2ritN6RDf8
     Google_SpreadsheetName: I2Loc RIZE RPG Localization
-    Google_LastUpdatedVersion: 1711358579101
+    Google_LastUpdatedVersion: 1711836736603
     Google_Password: gksrnr13
     GoogleUpdateFrequency: 3
     GoogleInEditorCheckFrequency: 2

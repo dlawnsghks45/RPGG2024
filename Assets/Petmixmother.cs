@@ -100,7 +100,7 @@ public class Petmixmother : MonoBehaviour
                 else
                 {
                     r = Random.Range(0,petmanager.Instance.rare2.Length);
-                    rewardid =  petmanager.Instance.rare1[r];
+                    rewardid =  petmanager.Instance.rare2[r];
                 }
                 break;
             case "2":
@@ -147,8 +147,8 @@ public class Petmixmother : MonoBehaviour
                 if (ran <= 70)
                 {
                     //1Бо
-                    r = Random.Range(0,petmanager.Instance.rare6.Length);
-                    rewardid =  petmanager.Instance.rare6[r];
+                    r = Random.Range(0,petmanager.Instance.rare5.Length);
+                    rewardid =  petmanager.Instance.rare5[r];
                 }
                 else
                 {

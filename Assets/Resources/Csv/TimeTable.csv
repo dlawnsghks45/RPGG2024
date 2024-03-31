@@ -61,6 +61,7 @@ enumname,maxcount,type
 월드보스9보상횟수,1,daily
 월드보스10보상횟수,1,daily
 월드보스공격횟수,1,daily
+월드보스보상횟수리뉴얼,1,daily
 장비업그레이드패키지,3,weekly
 교환소등급재설정,15,weekly
 교환소품질재설정,15,weekly

@@ -701,7 +701,7 @@ public class PartyRoom
     {
         nowmap = "20000";
         level = 1;
-        leadername = PlayerBackendData.Instance.nickname;
+        //leadername = PlayerBackendData.Instance.nickname;
         usercount = 1;
         isstart = false;
     }

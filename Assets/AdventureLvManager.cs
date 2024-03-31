@@ -26,7 +26,7 @@ public class AdventureLvManager : MonoBehaviour
 
     public itemiconslot[] Reward;
 
-    const int maxlv = 30;
+    const int maxlv = 32;
     
     
     public void Bt_OpenAdPanel()

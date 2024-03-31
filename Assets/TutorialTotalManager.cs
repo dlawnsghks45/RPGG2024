@@ -43,7 +43,7 @@ public class TutorialTotalManager : MonoBehaviour
     [Button(ButtonSizes.Large),GUIColor(0,1,0)]
     public void BtShow()
     {
-        Tutorialmanager.Instance.StartTutorial(3);
+        Tutorialmanager.Instance.StartTutorial(21);
     }
 
     [Button(ButtonSizes.Large), GUIColor(0, 1, 0)]
