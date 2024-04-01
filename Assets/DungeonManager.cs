@@ -1,3 +1,4 @@
+using System;
 using Doozy.Engine.UI;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,6 +7,7 @@ using System.Runtime.Remoting.Metadata;
 using BackEnd;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class DungeonManager : MonoBehaviour
 {
@@ -202,8 +204,21 @@ public GameObject DungeonRewardPanel;
 
     private void Start()
     {
-        if (PlayerBackendData.Instance.GetAdLv() >= 3)
-            Bt_SelectDungeon(DungeonDB.Instance.Find_maprank(PlayerBackendData.Instance.GetAdLv().ToString()).id);
+        try
+        {
+            if (PlayerBackendData.Instance.GetAdLv() >= 3)
+                Bt_SelectDungeon(DungeonDB.Instance.Find_maprank(PlayerBackendData.Instance.GetAdLv().ToString()).id);
+        }
+        catch (Exception e)
+        {
+            if(PlayerBackendData.Instance.GetAdLv() > 30)
+                Bt_SelectDungeon(DungeonDB.Instance.Find_maprank("30").id);
+            else
+            {
+                Bt_SelectDungeon(DungeonDB.Instance.Find_maprank("3").id);
+            }
+        }
+     
     }
 
     //던전 목록 보여줌

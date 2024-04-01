@@ -204,6 +204,7 @@ public class SettingReNewal : MonoBehaviour
                 ButtonSound[0].IsOn ? 0 : 1
             );
 
+        Debug.Log("버튼 저장" +   PlayerBackendData.Instance.settingdata.ButtonSound);
         SetEffectColor();
 
         Param paramEquip = new Param { { "SettingData", PlayerBackendData.Instance.settingdata } };

@@ -1363,13 +1363,13 @@ public class Settingmanager : MonoBehaviour
         
         if (PlayerBackendData.Instance.ServerLv > PlayerBackendData.Instance.GetLv())
         {
-            Debug.Log("하이");
+//            Debug.Log("하이");
             return;
         }
 
         if (Timemanager.Instance.isstop)
         {
-            Debug.Log("하이");
+      //      Debug.Log("하이");
             return;
         }
 
@@ -1394,7 +1394,7 @@ public class Settingmanager : MonoBehaviour
                     TimeSpan dateDiff = nowtimeNow - datetime;
 //                    Debug.Log(nowtimeNow);
                //    Debug.Log(datetime);
-                    Debug.Log("총안들어온 시간" +  dateDiff.TotalSeconds);
+//                    Debug.Log("총안들어온 시간" +  dateDiff.TotalSeconds);
 
                     if (PlayerBackendData.Instance.Offlinedata != null)
                     {

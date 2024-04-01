@@ -283,6 +283,7 @@ public class EquipDatabase : IEquatable<object>
     {
         equipoptionchanger.Instance.lockcountEs = 0;
         SuccManager.Instance.lockcountEs = 0;
+        
         for (int i = 0; i < equipoptionchanger.Instance.eskillnowpanel.Length; i++)
         {
             if (equipoptionchanger.Instance.eskillnowpanel[i].LockEs.IsOn)
@@ -414,7 +415,7 @@ public class EquipDatabase : IEquatable<object>
             upcount = 0;
         //옵션나온다 옵션의 개수
         int oc = curcount + upcount+pluscount;
-//        Debug.Log("oc는" + oc);
+        Debug.Log("oc는" + oc);
         for (int i = 0; i < oc; i++)
         {
              Debug.Log(i);
@@ -434,8 +435,8 @@ public class EquipDatabase : IEquatable<object>
                 for (int j = 0; j < LockSkill.Count; j++)
 //                    Debug.Log(LockSkill[j]);
                 //잠금이라면     
-//                Debug.Log(i);
-            //    Debug.Log(LockSkill[i]);
+                Debug.Log(i);
+                Debug.Log(LockSkill[i]);
                 selectedskill.Add(LockSkill[i]);
                 
                 //스택형이 아니라면 뺀다
@@ -473,6 +474,7 @@ public class EquipDatabase : IEquatable<object>
                         break;
                     }
                 }
+                    Debug.Log("넣다");
                 int ran2 = UnityEngine.Random.Range(0, giveskill.Count);
                 selectedskill.Add(giveskill[ran2]);
 
@@ -611,6 +613,31 @@ public class EquipDatabase : IEquatable<object>
         return isbool;
     }
 
+    public bool GetCraftTierUp_5()
+    {
+        float temp = Time.time * 100f;
+        int seed = (int)temp + PlayerBackendData.Instance.GetRandomSeed();
+        UnityEngine.Random.InitState(seed);
+        int ran = UnityEngine.Random.Range(1, 101);
+//        Debug.Log("0번뜨면 최종 단계 랜덤 번호 : " + ran );
+        int prevrare = CraftRare1;
+        bool isbool = false;
+Debug.Log(" 랜덤" + ran);
+        if (ran <= 2)
+        {
+            CraftRare1 = 6;
+            chatmanager.Instance.ChattoCRAFTUP(Inventory.Instance.data.itemid);
+            isbool = true;
+        }
+        
+        if (isbool)
+        {
+            Settingmanager.Instance.OnlyInvenSave();
+        }
+        LogManager.CraftRareLog(prevrare,CraftRare1,Inventory.Instance.data.KeyId1);
+        return isbool;
+    }
+    
     //현재 등급 이상이 나온다. 
     public bool GetRareUp()
     {
@@ -713,6 +740,7 @@ public class EquipDatabase : IEquatable<object>
         {
                 Itemrare = "7";
                 LogManager.RareLog("6",Itemrare,Inventory.Instance.data.KeyId1);
+                chatmanager.Instance.ChattoRAREUP(Inventory.Instance.data.itemid);
                 return true;
         }
         else
@@ -1171,7 +1199,7 @@ case 10:
             if (smeltpercent != 0)
             {
                 Inventory.Instance.StringWrite(" +");
-                Inventory.Instance.StringWrite($"<color=#FF0000>{smeltstat:N0}</color>");
+                Inventory.Instance.StringWrite(getSmeltStat(smeltstat));
             }
             Inventory.Instance.StringWrite(")");
 
@@ -1228,7 +1256,7 @@ case 10:
             if (smeltpercent != 0)
             {
                 Inventory.Instance.StringWrite(" +");
-                Inventory.Instance.StringWrite($"<color=#FF0000>{smeltstat:N0}</color>");
+                Inventory.Instance.StringWrite(getSmeltStat(smeltstat));
             }
             Inventory.Instance.StringWrite(")");
 
@@ -1294,7 +1322,7 @@ case 10:
             if (smeltpercent != 0)
             {
                 Inventory.Instance.StringWrite(" +");
-                Inventory.Instance.StringWrite($"<color=#FF0000>{smeltstat:N0}</color>");
+                Inventory.Instance.StringWrite(getSmeltStat(smeltstat));
             }
             Inventory.Instance.StringWrite(")");
             
@@ -1362,7 +1390,7 @@ case 10:
             if (smeltpercent != 0)
             {
                 Inventory.Instance.StringWrite(" +");
-                Inventory.Instance.StringWrite($"<color=#FF0000>{smeltstat:N0}</color>");
+                Inventory.Instance.StringWrite(getSmeltStat(smeltstat));
             }
             Inventory.Instance.StringWrite(")");
             
@@ -1429,7 +1457,7 @@ case 10:
             if (smeltpercent != 0)
             {
                 Inventory.Instance.StringWrite(" +");
-                Inventory.Instance.StringWrite($"<color=#FF0000>{smeltstat:N0}</color>");
+                Inventory.Instance.StringWrite(getSmeltStat(smeltstat));
             }
             Inventory.Instance.StringWrite(")");
             
@@ -1495,7 +1523,7 @@ case 10:
             if (smeltpercent != 0)
             {
                 Inventory.Instance.StringWrite(" +");
-                Inventory.Instance.StringWrite($"<color=#FF0000>{smeltstat:N0}</color>");
+                Inventory.Instance.StringWrite(getSmeltStat(smeltstat));
             }
             Inventory.Instance.StringWrite(")");
             
@@ -1561,7 +1589,7 @@ case 10:
             if (smeltpercent != 0)
             {
                 Inventory.Instance.StringWrite(" +");
-                Inventory.Instance.StringWrite($"<color=#FF0000>{smeltstat:N0}</color>");
+                Inventory.Instance.StringWrite(getSmeltStat(smeltstat));
             }
             Inventory.Instance.StringWrite(")");
             
@@ -2181,6 +2209,7 @@ case 10:
             3 => 0.6f,
             4 => 0.8f,
             5 => 1f,
+            6 => 1.5f,
             _ => 1
         };
     }
@@ -2212,13 +2241,31 @@ case 10:
         return CraftRare switch
         {
             0 => stat.ToString("N0"),
-            1 => $"<color=#9EFF00>{stat:N0}</color>",
-            2 => $"<color=#0055FF>{stat:N0}</color>",
+            1 => $"<color=#0055FF>{stat:N0}</color>",
+            2 => $"<color=#FF7000>{stat:N0}</color>",
+            3 => $"<color=#E500FF>{stat:N0}</color>",
+            4 => $"<color=#FF003F>{stat:N0}</color>",
+            5 => $"<color=#00FFC9>{stat:N0}</color>",
+            6 => $"<color=#F8FF5F>{stat:N0}</color>",
+            7 => $"<color=#F8FF5F>{stat:N0}</color>",
+            _ => stat.ToString("N0")
+        };
+    }
+    string getSmeltStat(float stat)
+    {
+        return SmeltSuccCount1 switch
+        {
+            0 => stat.ToString("N0"),
+            1 => $"<color=#0055FF>{stat:N0}</color>",
+            2 => $"<color=#FF7000>{stat:N0}</color>",
             3 => $"<color=#FF7000>{stat:N0}</color>",
             4 => $"<color=#E500FF>{stat:N0}</color>",
-            5 => $"<color=#FF003F>{stat:N0}</color>",
-            6 => $"<color=#00FFC9>{stat:N0}</color>",
-            7 => $"<color=#F8FF5F>{stat:N0}</color>",
+            5 => $"<color=#E500FF>{stat:N0}</color>",
+            6 => $"<color=#FF003F>{stat:N0}</color>",
+            7 => $"<color=#FF003F>{stat:N0}</color>",
+            8 => $"<color=#00FFC9>{stat:N0}</color>",
+            9 => $"<color=#00FFC9>{stat:N0}</color>",
+            10 => $"<color=#F8FF5F>{stat:N0}</color>",
             _ => stat.ToString("N0")
         };
     }
@@ -2272,7 +2319,7 @@ case 10:
             case "6":
                 return 1.2f;
             case "7":
-                return 1.8f;
+                return 1.7f;
             default:
                 return 1;
         }

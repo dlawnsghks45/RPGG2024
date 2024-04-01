@@ -231,7 +231,7 @@ MonoBehaviour:
     characterSpacing: 0
     size: -3.96
   enableBottomText: 1
-  bottomText: 10000
+  bottomText: 1231002130
   bottomTextSettings:
     bold: 0
     italic: 0
@@ -239,7 +239,7 @@ MonoBehaviour:
     strike: 0
     alpha: 1
     customColor: 1
-    color: {r: 1, g: 0, b: 0.03915453, a: 1}
+    color: {r: 0.99431324, g: 1, b: 0.08018869, a: 1}
     mark: 0
     markColor: {r: 0, g: 0, b: 0, a: 0.5}
     horizontal: 0
@@ -667,10 +667,10 @@ MonoBehaviour:
 
     
 
-    <voffset=-0.12em><size=-3.4><color=#FF000AFF>10000</color></size></voffset>'
+    <voffset=-0.12em><size=-3.4><color=#FEFF14FF>1231002130</color></size></voffset>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 29adcc1312f32b342b3b8a92011eb67a, type: 2}
-  m_sharedMaterial: {fileID: 6016590301912908663, guid: 29adcc1312f32b342b3b8a92011eb67a, type: 2}
+  m_sharedMaterial: {fileID: 2450873276819730281, guid: de68fbedc352a294a8ec9b6bc246a710, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -686,7 +686,7 @@ MonoBehaviour:
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
+  m_spriteAsset: {fileID: 11400000, guid: c41005c129ba4d66911b75229fd70b45, type: 2}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
   m_TextStyleHashCode: -1183493901

@@ -6,119 +6,34 @@
   <component name="ChangeListManager">
     <list default="true" id="026fe4cd-66d7-4da1-a1b1-1a7d0490dfd5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AcrasRPG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AcrasRPG/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AdventureLvManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AdventureLvManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EasyMobile/Editor/ManifMerger/builder-model-2.3.0.jar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EasyMobile/Editor/ManifMerger/builder-model-2.3.0.jar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EasyMobile/Editor/ManifMerger/builder-test-api-2.3.0.jar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EasyMobile/Editor/ManifMerger/builder-test-api-2.3.0.jar.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BackendFerderationAuth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BackendFerderationAuth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DungeonManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DungeonManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/EquipDatabase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EquipDatabase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPGSIds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GPGSIds.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GUI Pro Kit Fantasy RPG/Sprites/00_Loading.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GUI Pro Kit Fantasy RPG/Sprites/00_Loading.spriteatlas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GooglePlayGames/Editor/template-AndroidManifest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GooglePlayGames/Editor/template-AndroidManifest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GooglePlayGames/Plugins/Android/GooglePlayGamesManifest.plugin.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GooglePlayGames/Plugins/Android/GooglePlayGamesManifest.plugin.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PartyRaidRoommanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PartyRaidRoommanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Petmixmother.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Petmixmother.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EquipmentItemData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EquipmentItemData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/EasyMobile.androidlib.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/EasyMobile.androidlib.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.annotation.annotation-1.2.0.jar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.annotation.annotation-1.2.0.jar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.annotation.annotation-experimental-1.1.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.annotation.annotation-experimental-1.1.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.appcompat.appcompat-1.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.appcompat.appcompat-1.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.arch.core.core-common-2.1.0.jar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.arch.core.core-common-2.1.0.jar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.arch.core.core-runtime-2.1.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.arch.core.core-runtime-2.1.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.asynclayoutinflater.asynclayoutinflater-1.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.asynclayoutinflater.asynclayoutinflater-1.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.browser.browser-1.4.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.browser.browser-1.4.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.collection.collection-1.1.0.jar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.collection.collection-1.1.0.jar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.concurrent.concurrent-futures-1.0.0.jar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.concurrent.concurrent-futures-1.0.0.jar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.coordinatorlayout.coordinatorlayout-1.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.coordinatorlayout.coordinatorlayout-1.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.core.core-1.6.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.core.core-1.6.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.cursoradapter.cursoradapter-1.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.cursoradapter.cursoradapter-1.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.customview.customview-1.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.customview.customview-1.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.documentfile.documentfile-1.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.documentfile.documentfile-1.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.drawerlayout.drawerlayout-1.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.drawerlayout.drawerlayout-1.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.fragment.fragment-1.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.fragment.fragment-1.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.interpolator.interpolator-1.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.interpolator.interpolator-1.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.legacy.legacy-support-core-ui-1.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.legacy.legacy-support-core-ui-1.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.legacy.legacy-support-core-utils-1.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.legacy.legacy-support-core-utils-1.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.legacy.legacy-support-v4-1.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.legacy.legacy-support-v4-1.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-common-2.1.0.jar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-common-2.1.0.jar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-livedata-2.1.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-livedata-2.1.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-livedata-core-2.1.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-livedata-core-2.1.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-runtime-2.1.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-runtime-2.1.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-service-2.1.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-service-2.1.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-viewmodel-2.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-viewmodel-2.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.loader.loader-1.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.loader.loader-1.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.localbroadcastmanager.localbroadcastmanager-1.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.localbroadcastmanager.localbroadcastmanager-1.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.media.media-1.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.media.media-1.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.print.print-1.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.print.print-1.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.room.room-common-2.2.5.jar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.room.room-common-2.2.5.jar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.room.room-runtime-2.2.5.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.room.room-runtime-2.2.5.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.slidingpanelayout.slidingpanelayout-1.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.slidingpanelayout.slidingpanelayout-1.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.sqlite.sqlite-2.1.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.sqlite.sqlite-2.1.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.sqlite.sqlite-framework-2.1.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.sqlite.sqlite-framework-2.1.0.aar.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerBackendData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerBackendData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.startup.startup-runtime-1.0.0.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.startup.startup-runtime-1.0.0.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.startup.startup-runtime-1.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.startup.startup-runtime-1.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.swiperefreshlayout.swiperefreshlayout-1.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.swiperefreshlayout.swiperefreshlayout-1.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.tracing.tracing-1.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.tracing.tracing-1.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.vectordrawable.vectordrawable-1.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.vectordrawable.vectordrawable-1.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.vectordrawable.vectordrawable-animated-1.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.vectordrawable.vectordrawable-animated-1.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.versionedparcelable.versionedparcelable-1.1.1.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.versionedparcelable.versionedparcelable-1.1.1.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.viewpager.viewpager-1.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.viewpager.viewpager-1.0.0.aar.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.work.work-runtime-2.7.0.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.work.work-runtime-2.7.0.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.work.work-runtime-2.7.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.work.work-runtime-2.7.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-22.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-22.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-base-22.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-base-22.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-identifier-18.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-identifier-18.0.0.aar.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-lite-22.0.0.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-lite-22.0.0.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-lite-22.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-lite-22.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-appset-16.0.1.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-appset-16.0.1.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-auth-19.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-auth-19.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-auth-api-phone-17.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-auth-api-phone-17.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-auth-base-17.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-auth-base-17.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-base-18.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-base-18.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-basement-18.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-basement-18.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-drive-17.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-drive-17.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-games-21.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-games-21.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-measurement-base-20.1.2.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-measurement-base-20.1.2.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-measurement-sdk-api-20.1.2.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-measurement-sdk-api-20.1.2.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-nearby-17.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-nearby-17.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-tasks-18.0.1.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-tasks-18.0.1.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.play.app-update-2.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.play.app-update-2.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.play.core-common-2.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.play.core-common-2.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.play.review-2.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.play.review-2.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.ump.user-messaging-platform-2.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.ump.user-messaging-platform-2.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.games.gpgs-plugin-support-0.10.12.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.games.gpgs-plugin-support-0.10.12.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.guava.listenablefuture-1.0.jar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.guava.listenablefuture-1.0.jar.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.sglib.easymobile.easy-mobile-1.5.1.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.sglib.easymobile.easy-mobile-1.5.1.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.sglib.easymobile.easy-mobile-1.5.1.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.sglib.easymobile.easy-mobile-1.5.1.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/gradleTemplate.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/gradleTemplate.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/launcherTemplate.gradle.DISABLED" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/launcherTemplate.gradle.DISABLED.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/mainTemplate.gradle.DISABLED" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/mainTemplate.gradle.DISABLED.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3Defaults.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3Defaults.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/material/파티/메인무기 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/material/파티/메인무기 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Damage/크리 피해.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Damage/크리 피해.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/material/메인무기.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/material/메인무기.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/material/보조무기.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/material/보조무기.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/material/파티/메인무기 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/material/파티/메인무기 1.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/material/파티/펫 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/material/파티/펫 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/material/파티/펫 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/material/파티/펫 2.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/material/펫.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/material/펫.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/Map.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/Map.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/MonDrop.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/MonDrop.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/TimeTable.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/TimeTable.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/TradeShop.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/TradeShop.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/monster.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/monster.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/장비정보/장비아이템정보슬릇.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/장비정보/장비아이템정보슬릇.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/CollectionRenewal.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/CollectionRenewal.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/I2Languages.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/I2Languages.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Monster/Event/디아블로.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Monster/Event/디아블로.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Monster/Field2/129.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Monster/Field2/129.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Monster/Field2/130.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Monster/Field2/130.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Roulette.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Roulette.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Savemanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Savemanager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lobby.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Chat/chatmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Chat/chatmanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SettingReNewal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SettingReNewal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settingmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settingmanager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Timemanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Timemanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialTotalManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TutorialTotalManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WorldBossSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WorldBossSlot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XR/UserSimulationSettings/Resources/XRSimulationPreferences.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR/UserSimulationSettings/Resources/XRSimulationPreferences.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/equipoptionchanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/equipoptionchanger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -472,6 +387,7 @@
       <workItem from="1711594033584" duration="4173000" />
       <workItem from="1711604524868" duration="3527000" />
       <workItem from="1711712034019" duration="2737000" />
+      <workItem from="1711876704451" duration="5355000" />
     </task>
     <task id="LOCAL-00001" summary="gg">
       <created>1681093758612</created>
@@ -510,7 +426,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/PlayerData.cs</url>
-          <line>859</line>
+          <line>860</line>
           <properties documentPath="C:\Unity\AcrasRPG\Assets\PlayerData.cs" initialLine="705" containingFunctionPresentation="메서드 'GetPlayerStatForSave'" />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
@@ -529,7 +445,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Savemanager.cs</url>
-          <line>1685</line>
+          <line>1695</line>
           <properties documentPath="C:\Unity2\AcrasRPG\Assets\Savemanager.cs" initialLine="1476" containingFunctionPresentation="메서드 'GameDataGet'">
             <startOffsets>
               <option value="-1" />
@@ -673,52 +589,26 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/EquipDatabase.cs</url>
-          <line>1325</line>
-          <properties documentPath="C:\Unity2\AcrasRPG\Assets\EquipDatabase.cs" initialLine="1300" containingFunctionPresentation="메서드 'GetItemStat'">
-            <startOffsets>
-              <option value="44659" />
-            </startOffsets>
-            <endOffsets>
-              <option value="44679" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/EquipDatabase.cs</url>
-          <line>1457</line>
-          <properties documentPath="C:\Unity2\AcrasRPG\Assets\EquipDatabase.cs" initialLine="1432" containingFunctionPresentation="메서드 'GetItemStat'">
-            <startOffsets>
-              <option value="49767" />
-            </startOffsets>
-            <endOffsets>
-              <option value="49787" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/EquipDatabase.cs</url>
-          <line>1650</line>
+          <line>1678</line>
           <properties documentPath="C:\Unity2\AcrasRPG\Assets\EquipDatabase.cs" initialLine="1625" containingFunctionPresentation="메서드 'GetItemStat'">
             <startOffsets>
-              <option value="57441" />
+              <option value="58233" />
             </startOffsets>
             <endOffsets>
-              <option value="57467" />
+              <option value="58259" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/EquipDatabase.cs</url>
-          <line>1758</line>
+          <line>1786</line>
           <properties documentPath="C:\Unity2\AcrasRPG\Assets\EquipDatabase.cs" initialLine="1733" containingFunctionPresentation="메서드 'GetItemStat'">
             <startOffsets>
-              <option value="61556" />
+              <option value="62348" />
             </startOffsets>
             <endOffsets>
-              <option value="61575" />
+              <option value="62367" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="46" />
@@ -738,7 +628,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/equipoptionchanger.cs</url>
-          <line>362</line>
+          <line>361</line>
           <properties documentPath="C:\Unity2\AcrasRPG\Assets\equipoptionchanger.cs" initialLine="345" containingFunctionPresentation="메서드 'Bt_StartRareChanger'">
             <startOffsets>
               <option value="9844" />

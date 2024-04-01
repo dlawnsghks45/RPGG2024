@@ -238,8 +238,20 @@ public class chatmanager : MonoBehaviour
                                     Inventory.GetTranslate(PetDB.Instance.Find_id(stringdata[4])
                                         .name)), false);
                             break;
-
-
+                        case "RAREUP":
+                            ShowSystemChat(args.From.NickName,
+                                string.Format(Inventory.GetTranslate("UI7/샤이닝등급성공"),
+                                    stringdata[2], //이름
+                                    Inventory.GetTranslate(EquipItemDB.Instance.Find_id(stringdata[3])
+                                        .Name)), false);
+                            break;
+                        case "CRAFTUP":
+                            ShowSystemChat(args.From.NickName,
+                                string.Format(Inventory.GetTranslate("UI7/샤이닝품질성공"),
+                                    stringdata[2], //이름
+                                    Inventory.GetTranslate(EquipItemDB.Instance.Find_id(stringdata[3])
+                                        .Name)), false);
+                            break;
                         #region 파티레이드
                         //홍보
                         case "PRAD":
@@ -1147,6 +1159,20 @@ public class chatmanager : MonoBehaviour
                               //      Debug.Log("call5");
 
                                     break;
+                                case "RAREUP":
+                                    ShowSystemChat(nickname,
+                                        string.Format(Inventory.GetTranslate("UI7/샤이닝등급성공"),
+                                            stringdata[2], //이름
+                                            Inventory.GetTranslate(EquipItemDB.Instance.Find_id(stringdata[3])
+                                                .Name)), false);
+                                    break;
+                                case "CRAFTUP":
+                                    ShowSystemChat(nickname,
+                                        string.Format(Inventory.GetTranslate("UI7/샤이닝품질성공"),
+                                            stringdata[2], //이름
+                                            Inventory.GetTranslate(EquipItemDB.Instance.Find_id(stringdata[3])
+                                                .Name)), false);
+                                    break;
                             }
                         }
                         //    Debug.Log(nickname + " : " + message);
@@ -1265,8 +1291,32 @@ public class chatmanager : MonoBehaviour
                 $"{publicsystem};PET;{PlayerBackendData.Instance.nickname};{rare};{petid}");
         }
     }
-    
-    
+    public void ChattoRAREUP(string EQUIPID)
+    {
+        bool isConnect = Backend.Chat.IsChatConnect(ChannelType.Public);
+        if (isConnect)
+        {
+//            Debug.Log("여기입니다");
+            //Debug.Log("길드 채널에 연결되어 있습니다");
+            //withdraw
+            //시스템이다 / 닉네임 /강퇴처리한다.
+            Backend.Chat.ChatToChannel(ChannelType.Public,
+                $"{publicsystem};RAREUP;{PlayerBackendData.Instance.nickname};{EQUIPID}");
+        }
+    }
+    public void ChattoCRAFTUP(string EQUIPID)
+    {
+        bool isConnect = Backend.Chat.IsChatConnect(ChannelType.Public);
+        if (isConnect)
+        {
+//            Debug.Log("여기입니다");
+            //Debug.Log("길드 채널에 연결되어 있습니다");
+            //withdraw
+            //시스템이다 / 닉네임 /강퇴처리한다.
+            Backend.Chat.ChatToChannel(ChannelType.Public,
+                $"{publicsystem};CRAFTUP;{PlayerBackendData.Instance.nickname};{EQUIPID}");
+        }
+    }
     #endregion
     
 

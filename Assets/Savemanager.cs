@@ -1657,6 +1657,16 @@ public bool GameDataGet()
                     }
                 }
                 
+                if (gameDataJson[0].ContainsKey("Roulette"))
+                {
+//                    Debug.Log("룰렛가져옴");
+                    for (int i = 0; i < gameDataJson[0]["Roulette"].Count; i++)
+                    {
+                        PlayerBackendData.Instance.RouletteCount[i] =
+                            int.Parse(gameDataJson[0]["Roulette"][i].ToString());
+                    }
+                }
+                
                 string loadstring = Timemanager.Instance.GetServerTime().ToString();
                 Param param = new Param
                 {

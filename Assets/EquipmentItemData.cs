@@ -36,7 +36,7 @@ public class EquipmentItemData : MonoBehaviour
 
         try
         {
-            if (data2.CraftRare1 >= 2)
+            if (data2.CraftRare1 >= 1)
             {
                 ItemCraftRare[data2.CraftRare1 - 2].SetActive(true);
             }

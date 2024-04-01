@@ -333,9 +333,10 @@ public class PlayerData : MonoBehaviour
         {
             foreach (var t in MainWeaponMaterial)
             {
+//                Debug.Log("무기 레어" + ( rare+ 1));
                 t.SetFloat(Shader.PropertyToID("_OuterOutlineFade"), 1f);
                 t.SetColor(Shader.PropertyToID("_OuterOutlineColor"),
-                    Inventory.Instance.GetRareColor(rare.ToString()));
+                    Inventory.Instance.GetRareColor((rare+1).ToString()));
             }
         }
     }
@@ -354,7 +355,7 @@ public class PlayerData : MonoBehaviour
                 //Debug.Log("보조무기");
                 t.SetFloat(Shader.PropertyToID("_OuterOutlineFade"), 1f);
                 t.SetColor(Shader.PropertyToID("_OuterOutlineColor"),
-                    Inventory.Instance.GetRareColor(rare.ToString()));
+                    Inventory.Instance.GetRareColor((rare+1).ToString()));
             }
         }
     }

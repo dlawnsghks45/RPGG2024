@@ -500,7 +500,10 @@ public class BackendFerderationAuth : MonoBehaviour
                 //사운드
                 PlayerBackendData.Instance.settingdata.Backsound = float.Parse(jdata["SettingData"]["Backsound"].ToString());
                 PlayerBackendData.Instance.settingdata.Effectsound = float.Parse(jdata["SettingData"]["Effectsound"].ToString());
+                
+                
                 PlayerBackendData.Instance.settingdata.ButtonSound = int.Parse(jdata["SettingData"]["ButtonSound"].ToString());
+//                Debug.Log("버튼사운드는" + PlayerBackendData.Instance.settingdata.ButtonSound );
                 //피해량 스킬 이펙트
                 PlayerBackendData.Instance.settingdata.DmgCountNum = int.Parse(jdata["SettingData"]["DmgCountNum"].ToString());
                 PlayerBackendData.Instance.settingdata.DmgShowNum = int.Parse(jdata["SettingData"]["DmgShowNum"].ToString());
@@ -628,15 +631,17 @@ public class BackendFerderationAuth : MonoBehaviour
             PlayerBackendData.Instance.SeasonPassNum = int.Parse(jdata["SeasonPassNum"].ToString());
         }
         
-        
+        /*
         if (jdata.ContainsKey("Roulette"))
         {
+            Debug.Log("룰렛가져옴");
             for (int i = 0; i < jdata["Roulette"].Count; i++)
             {
                 PlayerBackendData.Instance.RouletteCount[i] =
                     int.Parse(jdata["Roulette"][i].ToString());
             }
         }
+        */
     }
 
     public void GPGSLogin()

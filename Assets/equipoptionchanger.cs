@@ -86,7 +86,6 @@ public class equipoptionchanger : MonoBehaviour
       {
          UpgradeButtons.gameObject.SetActive(false);
       }
-      Debug.Log(".dada" + Inventory.Instance.data.Itemrare);
       if (Inventory.Instance.data.Itemrare == "6")
       {
          RareButtons.gameObject.SetActive(true);
@@ -106,7 +105,7 @@ public class equipoptionchanger : MonoBehaviour
          CraftButtons.gameObject.SetActive(true);
          Inventory.Instance.InvenslotButtons[(int)Inventory.invenslotenumbutton.재설정].SetActive(true);
       }
-      else if (Inventory.Instance.data.CraftRare1 != 5)
+      else if (Inventory.Instance.data.CraftRare1 != 6)
       {
          //가능
          CraftButtons.gameObject.SetActive(true);
@@ -250,7 +249,7 @@ public class equipoptionchanger : MonoBehaviour
                }
          
                bool ishavenext = false;
-               for (int i = minrare + 1; i < RareText.Length; i++)
+               for (int i = minrare + 1; i < RareText.Length-1; i++)
                {
                   if (getrare[i] == "0") continue;
                   ishavenext = true;
@@ -321,7 +320,6 @@ public class equipoptionchanger : MonoBehaviour
       }
 
       isstart = true;
-      RareEffect_Start.Play();
 
       if (Inventory.Instance.data.Itemrare == "6")
       {
@@ -331,6 +329,7 @@ public class equipoptionchanger : MonoBehaviour
             Debug.Log("안됨");
             return;
          }
+         RareEffect_Start.Play();
          issucc = Inventory.Instance.data.GetRareUpShininh();
          Invoke(nameof(ShowResultRare), 0.7f);
          RefreshEquipEquipGear();
@@ -347,8 +346,8 @@ public class equipoptionchanger : MonoBehaviour
             return;
          }
 
+         RareEffect_Start.Play();
          issucc = Inventory.Instance.data.GetRareUp();
-
          Invoke(nameof(ShowResultRare), 0.7f);
 
          RefreshEquipEquipGear();
@@ -390,6 +389,7 @@ public class equipoptionchanger : MonoBehaviour
       if (issucc)
       {
          RareShowEffect_Succ.Play();
+         alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI7/등급성공"), alertmanager.alertenum.일반);
       }
       else
       {
@@ -425,18 +425,16 @@ public class equipoptionchanger : MonoBehaviour
          Craftobj[i].gameObject.SetActive(false);
       }
 
+      if (Inventory.Instance.data.CraftRare1 == 6)
+      {
+         //최대치
+         //최대레벨입니다
+         CraftPanel.Hide(true);
+      }
+      
       if (Inventory.Instance.data.CraftRare1 == 5)
       {
          Craftobj[6].gameObject.SetActive(true);
-         
-         
-         if (Inventory.Instance.data.CraftRare1 == 6)
-         {
-            //최대치
-            //최대레벨입니다
-            CraftPanel.Hide(true);
-         }
-         
          CraftItemCount.text =
             $"{Inventory.GetTranslate("Itemname/52")} x 2 ({PlayerBackendData.Instance.CheckItemCount("52")})";
          LayoutRebuilder.ForceRebuildLayoutImmediate(RefreshItembars[1]);
@@ -448,6 +446,7 @@ public class equipoptionchanger : MonoBehaviour
             Craftobj[i].gameObject.SetActive(false);
          }
 
+         Craftobj[6].gameObject.SetActive(false);
          for (int i = Inventory.Instance.data.CraftRare1 + 1; i < Craftobj.Length; i++)
          {
             Craftobj[i].gameObject.SetActive(true);
@@ -483,25 +482,47 @@ public class equipoptionchanger : MonoBehaviour
          return;
       }
 
-      
-      
-      if (PlayerBackendData.Instance.CheckItemCount("52") <= 0)
+      if (Inventory.Instance.data.CraftRare1 == 5)
       {
-         //없음
-         Debug.Log("안됨");
-         return;
+         if (PlayerBackendData.Instance.CheckItemCount("52") <= 1)
+         {
+            //없음
+            Debug.Log("안됨");
+            return;
+         }
+         
+         
+         isstart = true;
+         CraftEffect_Start.Play();
+         issucc = Inventory.Instance.data.GetCraftTierUp_5();
+
+         PlayerBackendData.Instance.RemoveItem("52", 2);
+         RefreshEquipEquipGear();
       }
+      else
+      {
+         if (PlayerBackendData.Instance.CheckItemCount("52") <= 0)
+         {
+            //없음
+            Debug.Log("안됨");
+            return;
+         }
+         
+         isstart = true;
+         CraftEffect_Start.Play();
+         issucc = Inventory.Instance.data.GetCraftTierUp();
 
-      isstart = true;
-      CraftEffect_Start.Play();
-      issucc = Inventory.Instance.data.GetCraftTierUp();
+         PlayerBackendData.Instance.RemoveItem("52", 1);
+         RefreshEquipEquipGear();
+      }
+      
+      
 
+  
+      
+      
       Invoke(nameof(ShowResultCraft), 0.7f);
-
-
-      RefreshEquipEquipGear();
       Inventory.Instance.ShowInventoryItem(Inventory.Instance.data, true);
-      PlayerBackendData.Instance.RemoveItem("52", 1);
       TutorialTotalManager.Instance.CheckGuideQuest("changecraft");
 
       if (Inventory.Instance.istrue)
@@ -536,6 +557,7 @@ public class equipoptionchanger : MonoBehaviour
       if (issucc)
       {
          CraftShowEffect_Succ.Play();
+         alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI7/품질성공"), alertmanager.alertenum.일반);
       }
       else
       {

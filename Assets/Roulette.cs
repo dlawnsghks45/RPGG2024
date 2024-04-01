@@ -93,7 +93,7 @@ public class Roulette : MonoBehaviour
 		extragive = Data.extragive;
 		Rare = Data.Rare.Split(';');
 		extragivehw = Data.extragivehw.Split(';');
-		Debug.Log(Data.extragivecount);
+//		Debug.Log(Data.extragivecount);
 		extragivecount = int.Parse(Data.extragivecount);
 		roulettenum = int.Parse(Data.num);
 		
@@ -327,6 +327,7 @@ public class Roulette : MonoBehaviour
 	public void Bt_Exit()
 	{
 		LogManager.LogSave_Roulette(iD,listid2.ToArray(),listhw2.ToArray(),roulettecount);
+		Settingmanager.Instance.SaveDataALl(false,false,false);
 		roulettecount = 0;
 		Toggle.IsOn = false;
 		StartButton.Interactable = true;

@@ -1166,6 +1166,7 @@ public record SettingData
         ItemDrop = itemDrop;
         EskillPanel = eskillPanel;
         SystemChat = systemChat;
+        this.ButtonSound = ButtonSound;
     }
 }
 

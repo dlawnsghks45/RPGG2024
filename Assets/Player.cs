@@ -1379,12 +1379,12 @@ public class Player : MonoBehaviour
                                     case "Magic":
                                         equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.magicperup,
                                             float.Parse(skilldata.value));
-                                        Debug.Log("성불2");
+                                       // Debug.Log("성불2");
                                         break;
                                     case "Dot":
                                         equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.dotperup,
                                             float.Parse(skilldata.c));
-                                        Debug.Log("성불3");
+//                                        Debug.Log("성불3");
                                         break;
                                 }
                                 
