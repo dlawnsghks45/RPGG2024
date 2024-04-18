@@ -116,7 +116,8 @@ public class  altarwarmanager : MonoBehaviour
                 MyRank.text = string.Format(Inventory.GetTranslate("UI/위"), jsondata[0]["rank"].ToString());
             }
         });
-        achievemanager.Instance.AddCount(Acheves.성물전쟁완료);
+       // achievemanager.Instance.AddCount(Acheves.성물전쟁완료);
+        QuestManager.Instance.AddCount(1, "content1");
         RewardPanel.SetActive(true);
         yield return waits2;
         for (int i = 0; i < dropsid.Count;i++)

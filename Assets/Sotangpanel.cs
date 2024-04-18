@@ -104,7 +104,9 @@ public class Sotangpanel : MonoBehaviour
                 Mon_DropItemMinHowmanyboss,
                 Mon_DropItemMaxHowmanyboss, Mon_DropItemPercentboss);
             PlayerBackendData.Instance.RemoveItem(needitemid, sotangcount * needitempersotang);
-            achievemanager.Instance.AddCount(Acheves.대마법사의묘,sotangcount);
+           // achievemanager.Instance.AddCount(Acheves.대마법사의묘,sotangcount);
+            QuestManager.Instance.AddCount(sotangcount, "content2");
+
             return true;
         }
     }

@@ -974,7 +974,7 @@ public class Inventory : MonoBehaviour
 
         if (datas.SpeMehod != "0")
         {
-            Debug.Log(datas.SpeMehod);
+            //Debug.Log(datas.SpeMehod);
             EquipSkill_Count.text = string.Format(GetTranslate("UI/특수효과개수"), "0", EquipSkillRandomGiveDB.Instance.Find_id(datas.SpeMehod).A);
             EquipSkill_Count.gameObject.SetActive(true);
             EsSkillShowButton.SetActive(true);
@@ -1734,7 +1734,15 @@ public class Inventory : MonoBehaviour
         //전체
         for (int i = 0; i < PlayerBackendData.Instance.ItemInventory.Count; i++)
         {
-            iteminvenslots[i].Refresh(PlayerBackendData.Instance.ItemInventory[i].Id, PlayerBackendData.Instance.ItemInventory[i].Howmany);
+            switch (PlayerBackendData.Instance.ItemInventory[i].Id)
+            {
+                case "996":
+                case "997": 
+                    break;
+                default:
+                    iteminvenslots[i].Refresh(PlayerBackendData.Instance.ItemInventory[i].Id, PlayerBackendData.Instance.ItemInventory[i].Howmany);
+                    break;
+            }
         }
 
         if (InventoryToggles[0].IsOn)
@@ -1742,7 +1750,15 @@ public class Inventory : MonoBehaviour
             //전체
             for (int i = 0; i < PlayerBackendData.Instance.ItemInventory.Count; i++)
             {
-                iteminvenslots[i].gameObject.SetActive(true);
+                switch (PlayerBackendData.Instance.ItemInventory[i].Id)
+                {
+                    case "996":
+                    case "997": 
+                        break;
+                    default:
+                        iteminvenslots[i].gameObject.SetActive(true);
+                        break;
+                }
             }
         }
         else
@@ -1756,7 +1772,15 @@ public class Inventory : MonoBehaviour
                 {
                     if (ItemdatabasecsvDB.Instance.Find_id(PlayerBackendData.Instance.ItemInventory[i].Id).itemtype == "2") //2는 소모품이다
                     {
-                        iteminvenslots[i].gameObject.SetActive(true);
+                        switch (PlayerBackendData.Instance.ItemInventory[i].Id)
+                        {
+                            case "996":
+                            case "997": 
+                                break;
+                            default:
+                                iteminvenslots[i].gameObject.SetActive(true);
+                                break;
+                        }
                     }
                 }
             }
@@ -1768,7 +1792,15 @@ public class Inventory : MonoBehaviour
                 {
                     if (ItemdatabasecsvDB.Instance.Find_id(PlayerBackendData.Instance.ItemInventory[i].Id).itemtype == "1") //1은 재료이다
                     {
-                        iteminvenslots[i].gameObject.SetActive(true);
+                        switch (PlayerBackendData.Instance.ItemInventory[i].Id)
+                        {
+                            case "996":
+                            case "997": 
+                                break;
+                            default:
+                                iteminvenslots[i].gameObject.SetActive(true);
+                                break;
+                        }
                     }
                 }
             }
@@ -1780,7 +1812,15 @@ public class Inventory : MonoBehaviour
                 {
                     if (ItemdatabasecsvDB.Instance.Find_id(PlayerBackendData.Instance.ItemInventory[i].Id).itemtype == "3") //3은 기타
                     {
-                        iteminvenslots[i].gameObject.SetActive(true);
+                        switch (PlayerBackendData.Instance.ItemInventory[i].Id)
+                        {
+                            case "996":
+                            case "997": 
+                                break;
+                            default:
+                                iteminvenslots[i].gameObject.SetActive(true);
+                                break;
+                        }
                     }
                 }
             }
@@ -1792,7 +1832,15 @@ public class Inventory : MonoBehaviour
                 {
                     if (ItemdatabasecsvDB.Instance.Find_id(PlayerBackendData.Instance.ItemInventory[i].Id).itemtype == "4") //3은 기타
                     {
-                        iteminvenslots[i].gameObject.SetActive(true);
+                        switch (PlayerBackendData.Instance.ItemInventory[i].Id)
+                        {
+                            case "996":
+                            case "997": 
+                                break;
+                            default:
+                                iteminvenslots[i].gameObject.SetActive(true);
+                                break;
+                        }
                     }
                 }
             }
@@ -1804,7 +1852,15 @@ public class Inventory : MonoBehaviour
                 {
                     if (ItemdatabasecsvDB.Instance.Find_id(PlayerBackendData.Instance.ItemInventory[i].Id).itemsubtype == "116") //4는 이벤트
                     {
-                        iteminvenslots[i].gameObject.SetActive(true);
+                        switch (PlayerBackendData.Instance.ItemInventory[i].Id)
+                        {
+                            case "996":
+                            case "997": 
+                                break;
+                            default:
+                                iteminvenslots[i].gameObject.SetActive(true);
+                                break;
+                        }
                     }
                 }
             }
@@ -1985,6 +2041,7 @@ public class Inventory : MonoBehaviour
         else
         {
             PlayerBackendData.Instance.Additem(id, count);
+//            Debug.Log("아이템얻음" + id);
             if (InventoryPanel.isActiveAndEnabled)
             {
                 RefreshInventory();
@@ -2072,8 +2129,8 @@ public class Inventory : MonoBehaviour
                 Savemanager.Instance.SaveInventory();
                 RefreshInventory();
 
-                if (nowselectid == "200002")
-                {
+                if (nowselectid == "200007" || nowselectid == "200002")
+                 {
                     TutorialTotalManager.Instance.CheckGuideQuest("300scroll");
                 }
                 
@@ -2586,6 +2643,10 @@ public class Inventory : MonoBehaviour
             decimal exp = 0;
             for (int i = 0; i < id.Count; i++)
             {
+                if (i == earnitems.Length)
+                {
+                    break;
+                }
                 yield return SpriteManager.Instance.GetWaitforSecond(0.05f);
                 switch (id[i])
                 {

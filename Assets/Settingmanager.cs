@@ -186,6 +186,12 @@ public class Settingmanager : MonoBehaviour
         paramEquip.Add("inventory", userData.ItemInventory);
         paramEquip.Add("Roulette", userData.RouletteCount);
         paramEquip.Add("SaveNum", userData.ClientSaveNum);
+        paramEquip.Add("QuestCount", userData.QuestCount);
+        paramEquip.Add("QuestIsFinish", userData.QuestIsFinish);
+        paramEquip.Add("QuestTotalCount", userData.QuestTotalCount);
+
+       
+
 
         Where where = new Where();
         where.Equal("owner_inDate", PlayerBackendData.Instance.playerindate);
@@ -212,7 +218,10 @@ public class Settingmanager : MonoBehaviour
         Param paramEquip = new Param
         {
             //셋팅필수
-            { "Achievement", PlayerBackendData.Instance.PlayerAchieveData },
+            //퀘스트
+            { "QuestCount", PlayerBackendData.Instance.QuestCount },
+            { "QuestIsFinish", PlayerBackendData.Instance.QuestIsFinish },
+            { "QuestTotalCount", PlayerBackendData.Instance.QuestTotalCount },
             { "Gold", userData.GetMoney() },
             { "Crystal", userData.GetCash() },
             { "avata_avata", userData.avata_avata },
@@ -434,6 +443,11 @@ public class Settingmanager : MonoBehaviour
             { "Roulette", PlayerBackendData.Instance.RouletteCount },
             { "LoginTimeSecToday", Timemanager.Instance.LoginTimeSecToday },
             { "LoginTimeSecEvery", Timemanager.Instance.LoginTimeSecEvery },
+            //퀘스트
+            { "QuestCount", PlayerBackendData.Instance.QuestCount },
+            { "QuestIsFinish", PlayerBackendData.Instance.QuestIsFinish },
+            { "QuestTotalCount", PlayerBackendData.Instance.QuestTotalCount },
+            
             { "SaveNum", PlayerBackendData.Instance.ClientSaveNum }
         };
         PlayerBackendData.Instance.sotang_raid = PlayerBackendData.Instance.sotang_raid.Distinct().ToList();
@@ -442,7 +456,9 @@ public class Settingmanager : MonoBehaviour
         Timemanager.Instance.OncePremiumPackage = Timemanager.Instance.OncePremiumPackage.Distinct().ToList();
         Param paramB = new Param
         {     //업적
-            { "Achievement", PlayerBackendData.Instance.PlayerAchieveData },
+            { "QuestCount", PlayerBackendData.Instance.QuestCount },
+            { "QuestIsFinish", PlayerBackendData.Instance.QuestIsFinish },
+            { "QuestTotalCount", PlayerBackendData.Instance.QuestTotalCount },
             //기간제 자동사냥 엘리
             { "PlayerTimes", PlayerBackendData.Instance.PlayerTimes },
             //상점
@@ -499,7 +515,7 @@ public class Settingmanager : MonoBehaviour
             string paramToString = JsonConvert.SerializeObject(paramB.GetValue());
             int count = System.Text.Encoding.Default.GetByteCount(paramToString);
             Debug.Log("paramB의 크기(byte) : " + count);
-            Debug.Log(callback);
+//            Debug.Log(callback);
         });
         SendQueue.Enqueue(Backend.GameData.Update, "PlayerData", where, paramC, (callback) =>
         {
@@ -553,7 +569,7 @@ public class Settingmanager : MonoBehaviour
         //최근 저장시간을 기준으로 잡느다.
         Param param = new Param
         {
-            { "Achievement", PlayerBackendData.Instance.PlayerAchieveData },
+         
             { "Gold", userData.GetMoney() }, 
             { "Crystal", userData.GetCash() },
             { "avata_avata", userData.avata_avata },
@@ -596,6 +612,14 @@ public class Settingmanager : MonoBehaviour
             { "Roulette", PlayerBackendData.Instance.RouletteCount },
             { "LoginTimeSecToday", Timemanager.Instance.LoginTimeSecToday },
             { "LoginTimeSecEvery", Timemanager.Instance.LoginTimeSecEvery },
+            
+            //퀘스트
+            { "QuestCount", PlayerBackendData.Instance.QuestCount },
+            { "QuestIsFinish", PlayerBackendData.Instance.QuestIsFinish },
+            { "QuestTotalCount", PlayerBackendData.Instance.QuestTotalCount },
+
+            
+            
             { "SaveNum", PlayerBackendData.Instance.ClientSaveNum },
                        //제작
             { "craftmakingid", PlayerBackendData.Instance.craftmakingid },
@@ -708,6 +732,35 @@ public class Settingmanager : MonoBehaviour
         });
     }
 
+    public void SaveQuest()
+    {
+         if (PlayerBackendData.Instance.ServerLv > PlayerBackendData.Instance.GetLv())
+                {
+                    return;
+                }
+                PlayerBackendData userData = PlayerBackendData.Instance;
+                Param paramData = new Param
+                {
+                    //가방
+                    { "inventory", userData.ItemInventory },
+                    { "Gold", userData.GetMoney() },
+                    { "Crystal", userData.GetCash() },
+                    //퀘스트
+                    { "QuestCount", PlayerBackendData.Instance.QuestCount },
+                    { "QuestIsFinish", PlayerBackendData.Instance.QuestIsFinish },
+                    { "QuestTotalCount", PlayerBackendData.Instance.QuestTotalCount },
+                };
+                
+                
+                // key 컬럼의 값이 keyCode인 데이터 검색
+                Where where = new Where();
+                where.Equal("owner_inDate", PlayerBackendData.Instance.playerindate);
+        
+                SendQueue.Enqueue(Backend.GameData.Update, "PlayerData", where, paramData, (callback) =>
+                {
+                });
+    }
+
     public void OnlyInvenSave()
     {
         if (PlayerBackendData.Instance.ServerLv > PlayerBackendData.Instance.GetLv())
@@ -725,6 +778,12 @@ public class Settingmanager : MonoBehaviour
             { "avata_weapon", userData.avata_weapon },
             { "avata_subweapon", userData.avata_subweapon },
             { "playeravata", userData.playeravata },
+            
+            //퀘스트
+            { "QuestCount", PlayerBackendData.Instance.QuestCount },
+            { "QuestIsFinish", PlayerBackendData.Instance.QuestIsFinish },
+            { "QuestTotalCount", PlayerBackendData.Instance.QuestTotalCount },
+
             //레벨
             { "level", userData.GetLv() },
             { "levelExp", userData.GetExp() },
@@ -745,7 +804,7 @@ public class Settingmanager : MonoBehaviour
         {
             // 이후 처리
             if (!callback.IsSuccess()) return;
-            LogManager.UserInventoryLog(paramData);
+                LogManager.UserInventoryLog(paramData);
         });
     }
     

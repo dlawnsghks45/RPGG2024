@@ -319,7 +319,9 @@ public class GuildRaidManager : MonoBehaviour
     //피해를 줒ㅁ
     public void DmgtoGuildMob()
     {
-        achievemanager.Instance.AddCount(Acheves.길드레이드공격);
+       // achievemanager.Instance.AddCount(Acheves.길드레이드공격);
+        QuestManager.Instance.AddCount(1, "guildraid");
+
         decimal dmg = TotalDmg;
         string saveraiddid = MyGuildManager.Instance.myguildclassdata.GuildRaidIDs;
         SendQueue.Enqueue(Backend.Guild.GetMyGuildInfoV3, (callback) =>
@@ -400,6 +402,8 @@ public class GuildRaidManager : MonoBehaviour
                                     alertmanager.Instance.ShowAlert(Inventory.GetTranslate("Guild/길드레이드전투가완료"),
                                         alertmanager.alertenum.일반);
                                     chatmanager.Instance.ChattoGuildRaidAttack(PlayerBackendData.Instance.nickname,dmg,alldmg,mobhp);
+                                    QuestManager.Instance.AddCount(1, "guildraid");
+
                                     //가능하다
                                     RefreshRaidRaidHp();
                                     ShowDmgPlayer();

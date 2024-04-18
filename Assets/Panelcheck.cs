@@ -38,6 +38,14 @@ public class Panelcheck : MonoBehaviour
 
     public void RefreshDungeonToggle()
     {
+        if(PlayerBackendData.Instance.GetAdLv() > 30)
+            DungeonManager.Instance.Bt_SelectDungeon(DungeonDB.Instance.Find_maprank("30").id);
+        else
+        {
+            if(PlayerBackendData.Instance.GetAdLv() > 2)
+            DungeonManager.Instance.Bt_SelectDungeon(DungeonDB.Instance.Find_maprank(PlayerBackendData.Instance.GetAdLv().ToString()).id);
+        }
+        
         if (PlayerBackendData.Instance.GetAdLv() >= 0)
         {
             DungeonTG[0].IsOn = true;

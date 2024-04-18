@@ -18,30 +18,63 @@ public class craftResourceSlot : MonoBehaviour
             ItemImage.sprite = SpriteManager.Instance.GetSprite(ItemdatabasecsvDB.Instance.Find_id(itemid).sprite);
             ItemName.text = Inventory.GetTranslate(ItemdatabasecsvDB.Instance.Find_id(itemid).name);
             ItemName.color = Inventory.Instance.GetRareColor(ItemdatabasecsvDB.Instance.Find_id(itemid).rare);
-        int index = PlayerBackendData.Instance.ItemInventory.FindIndex(r => r.Id == itemid); //ItemInventory.IndexOf(itemid);
-            if (index == -1)
+
+            switch (itemid)
             {
-                //아이템이 없음
-                CountText.text = $"0/{int.Parse(count) * CraftManager.Instance.nowselectcount}";
-                CountText.color = Color.red;
-                CraftManager.Instance.cancraft = false;
+                case "1001":
+                    if (PlayerBackendData.Instance.GetCash()<=0)
+                    {
+                        //아이템이 없음
+                        CountText.text = $"0/{int.Parse(count) * CraftManager.Instance.nowselectcount}";
+                        CountText.color = Color.red;
+                        CraftManager.Instance.cancraft = false;
+                    }
+                    else
+                    {
+                        //아이템이 있음
+                        CountText.text =
+                            $"{PlayerBackendData.Instance.GetCash()}/{int.Parse(count) * CraftManager.Instance.nowselectcount}";
+                        if(PlayerBackendData.Instance.GetCash() >= int.Parse(count) * CraftManager.Instance.nowselectcount)
+                        {
+                            //충족
+                            CountText.color = Color.cyan;
+                        }
+                        else
+                        {
+                            CountText.color = Color.red;
+                            CraftManager.Instance.cancraft = false;
+                        }
+                    }
+                    break;
+                default:
+                    int index = PlayerBackendData.Instance.ItemInventory.FindIndex(r => r.Id == itemid); //ItemInventory.IndexOf(itemid);
+                    if (index == -1)
+                    {
+                        //아이템이 없음
+                        CountText.text = $"0/{int.Parse(count) * CraftManager.Instance.nowselectcount}";
+                        CountText.color = Color.red;
+                        CraftManager.Instance.cancraft = false;
+                    }
+                    else
+                    {
+                        //아이템이 있음
+                        CountText.text =
+                            $"{PlayerBackendData.Instance.ItemInventory[index].Howmany}/{int.Parse(count) * CraftManager.Instance.nowselectcount}";
+                        if(PlayerBackendData.Instance.ItemInventory[index].Howmany >= int.Parse(count) * CraftManager.Instance.nowselectcount)
+                        {
+                            //충족
+                            CountText.color = Color.cyan;
+                        }
+                        else
+                        {
+                            CountText.color = Color.red;
+                            CraftManager.Instance.cancraft = false;
+                        }
+                    }
+                    break;
             }
-            else
-            {
-            //아이템이 있음
-                CountText.text =
-                    $"{PlayerBackendData.Instance.ItemInventory[index].Howmany}/{int.Parse(count) * CraftManager.Instance.nowselectcount}";
-                if(PlayerBackendData.Instance.ItemInventory[index].Howmany >= int.Parse(count) * CraftManager.Instance.nowselectcount)
-                {
-                    //충족
-                    CountText.color = Color.cyan;
-                }
-                else
-                {
-                    CountText.color = Color.red;
-                    CraftManager.Instance.cancraft = false;
-                }
-            }
+            
+           
     }
 
     public void Bt_ShowItemInfo()

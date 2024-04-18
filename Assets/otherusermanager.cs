@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using BackEnd;
 using Doozy.Engine.UI;
 using JetBrains.Annotations;
@@ -778,7 +779,7 @@ public class otherusermanager : MonoBehaviour
                Debug.Log(data["TrainTotalDmg"].ToString());
                decimal a = decimal.Parse(data["TrainTotalDmg"].ToString(), System.Globalization.NumberStyles.Float);
                TotalDmg.text = dpsmanager.convertNumber(a);
-               DPSDmg.text = dpsmanager.convertNumber(decimal.Parse(data["DPSDmgText"].ToString()));
+               DPSDmg.text = dpsmanager.convertNumber(decimal.Parse(data["DPSDmgText"].ToString(),NumberStyles.Float));
                TotalTime.text =
                    $"{data["TrainTime"].ToString()}\n<color=yellow><size=23>({float.Parse(data["BreakTime"].ToString()):N0})</size></color>";
 

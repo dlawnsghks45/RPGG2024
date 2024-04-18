@@ -34,7 +34,7 @@ public class altarmanager : MonoBehaviour
     public Text[] altarpanelstat;
     public decimal[] CheckAltarCount = new Decimal[4];
 
-    void RefreshAltarLv()
+    public void RefreshAltarLv()
     {
         for (int i = 0; i < altarpanellv.Length; i++)
         {
@@ -194,7 +194,7 @@ public class altarmanager : MonoBehaviour
         Refresh();
     }
 
-    private void Refresh()
+    public void Refresh()
     {
         AltarImage.sprite = AltarSpriteSource[(int)NowSelectType];
         SetStat();

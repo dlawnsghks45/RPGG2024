@@ -98,6 +98,7 @@ public class alertmanager : MonoBehaviour
     public GameObject[] Alert_Raid; //가이드퀘스트
     public GameObject[] Alert_Ability; //가이드퀘스트
     public GameObject[] Alert_Altar; //아래가 하나라도 있으면 전부
+    public GameObject[] Alert_Quest; //아래가 하나라도 있으면 전부
 
     
     private void Start()
@@ -105,7 +106,6 @@ public class alertmanager : MonoBehaviour
         NotiCheck_Post();
         NotiCheck_PremiumShop();
         Bt_ClickMenu();
-        NotiCheck_Achieve();
         NotiCheck_GuideQuest();
     }
 
@@ -187,62 +187,43 @@ public class alertmanager : MonoBehaviour
        
        
     }
-    
-    
-    //업적
-    public void NotiCheck_Achieve()
+
+    public void NotiCheck_Quest()
     {
-        foreach (var t in Alert_Achieve)
+        foreach (var t in Alert_Quest)
         {
             t.SetActive(false);
         }
-        achievemanager.Instance.allfinishnoti.SetActive(false);
 
-//        Debug.Log(achievemanager.Instance.acheveslots.Count);
-        foreach (var t in achievemanager.Instance.acheveslots.Where(t => t.data.Curcount >= t.data.Maxcount &&
-                                                                         !t.data.Isfinish
-                                                                         && AchievementDB.Instance.Find_id(t.data.Id)
-                                                                             .islast == "0"))
+        for (int i = 0; i < QuestManager.Instance.Questslots.Length; i++)
         {
-//            Debug.Log(t.data.Id + "업적");
-            if (AchievementDB.Instance.Find_id(t.data.Id).paneltype == "daily")
+            if (QuestManager.Instance.Questslots[i].RewardBt.activeSelf)
             {
-                Alert_Achieve[0].SetActive(true);
-                Alert_Achieve[1].SetActive(true);
-                achievemanager.Instance.allfinishnoti.SetActive(true);
                 if (!Alert_Menu.activeSelf)
                     Alert_Menu.SetActive(true);
+                Alert_Quest[0].SetActive(true);
+                switch (QuestDB.Instance.Find_id(i.ToString()).pointtotalnum)
+                {
+                    case "0":
+                        Alert_Quest[1].SetActive(true);
+                        break;
+                    case "1":
+                        Alert_Quest[2].SetActive(true);
+                        break;
+                    case "2":
+                        Alert_Quest[3].SetActive(true);
+                        break;
+                    case "3":
+                        Alert_Quest[4].SetActive(true);
+                        break;
+                }
             }
-            else if (AchievementDB.Instance.Find_id(t.data.Id).paneltype == "forever")
-            {
-                Alert_Achieve[0].SetActive(true);
-                Alert_Achieve[2].SetActive(true);
-                achievemanager.Instance.allfinishnoti.SetActive(true);
-
-
-                if (!Alert_Menu.activeSelf)
-                    Alert_Menu.SetActive(true);
-            }
-            else if (AchievementDB.Instance.Find_id(t.data.Id).paneltype == "event")
-            {
-                Alert_Achieve[0].SetActive(true);
-                Alert_Achieve[3].SetActive(true);
-                achievemanager.Instance.allfinishnoti.SetActive(true);
-
-                if (!Alert_Menu.activeSelf)
-                    Alert_Menu.SetActive(true);
-            }
-            else if (AchievementDB.Instance.Find_id(t.data.Id).paneltype == "crystal")
-            {
-                Alert_Achieve[0].SetActive(true);
-                Alert_Achieve[4].SetActive(true);
-                achievemanager.Instance.allfinishnoti.SetActive(true);
-
-                if (!Alert_Menu.activeSelf)
-                    Alert_Menu.SetActive(true);
-            }
+          
         }
+        
     }
+    
+  
 
 
     //직업 -해금 가능한 직업이 있다면
@@ -586,7 +567,6 @@ public class alertmanager : MonoBehaviour
         NotiCheck_AutoFarm(false);
         NotiCheck_Class();
         NotiCheck_AutoFarm(false);
-        NotiCheck_Achieve();
         NotiCheck_Altar();
         NotiCheck_Collection();
         CollectionRenewalManager.Instance.RefreshTotalCount();
@@ -595,6 +575,7 @@ public class alertmanager : MonoBehaviour
         NotiCheck_Pet();
         NotiCheck_Roullet();
         NotiCheck_Ability();
+        NotiCheck_Quest();
     }
 
     public GameObject EventNoti;

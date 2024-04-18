@@ -588,7 +588,9 @@ public class Hpmanager : MonoBehaviour
 
                                 if (EnemySpawnManager.Instance.NowStageindex == EnemySpawnManager.Instance.NowMaxindex)
                                 {
-                                    achievemanager.Instance.AddCount(Acheves.보스처치);
+                                    //achievemanager.Instance.AddCount(Acheves.보스처치);
+                                    //QuestManager.Instance.AddCount(1, "craft");
+
                                     if (PlayerBackendData.Instance.ContentLevel[
                                             Contentmanager.Instance.nowPlaycontentnum] ==
                                         Contentmanager.Instance.nowplayinglevel &&
@@ -613,7 +615,9 @@ public class Hpmanager : MonoBehaviour
                                         case "9996": //대마법사의 묘
                                         case "9995": //대마법사의 묘
                                         case "9994": //대마법사의 묘
-                                            achievemanager.Instance.AddCount(Acheves.대마법사의묘);
+                                           // achievemanager.Instance.AddCount(Acheves.대마법사의묘);
+                                            QuestManager.Instance.AddCount(1, "content2");
+
                                             Savemanager.Instance.SaveAchieveDirect();
                                             Savemanager.Instance.Save();
                                             break;
@@ -644,7 +648,10 @@ public class Hpmanager : MonoBehaviour
                                 if (EnemySpawnManager.Instance.NowStageindex == EnemySpawnManager.Instance.NowMaxindex)
                                 {
                                     if (EnemySpawnManager.Instance.iseventspawned)
+                                    {
                                         EnemySpawnManager.Instance.iseventspawned = false;
+                                        QuestManager.Instance.AddCount(1, "eventmon");
+                                    }
 
                                     //현재 점수가 같다면. 처음으로 간다.
                                     mondropmanager.Instance.GiveDropToInvenToryBoss(transform,
@@ -664,8 +671,10 @@ public class Hpmanager : MonoBehaviour
                                         mondropmanager.Instance.Event_DropItemPercent);
                                     mondropmanager.Instance.checkDrop = false;
                                     //업적
-                                    achievemanager.Instance.AddCount(Acheves.사냥터클리어);
-                                    achievemanager.Instance.AddCount(Acheves.보스처치);
+                                   // achievemanager.Instance.AddCount(Acheves.사냥터클리어);
+                                   // achievemanager.Instance.AddCount(Acheves.보스처치);
+                                   // QuestManager.Instance.AddCount(1, "content2");
+
                                     //시즌 패스 퀘스트 체크
                                     achievemanager.Instance.CheckFinishSeasonPass();
 
@@ -718,14 +727,18 @@ public class Hpmanager : MonoBehaviour
 
                                 //가이드퀘스트
                                 Tutorialmanager.Instance.CheckTutorial("killmon");
-                                achievemanager.Instance.AddCount(Acheves.몬스터처치);
+                               // achievemanager.Instance.AddCount(Acheves.몬스터처치);
+                                QuestManager.Instance.AddCount(1, "monkill");
+
                                 EnemySpawnManager.Instance.RefreshStage();
                                 break;
                             case "1": //던전
                                 if (EnemySpawnManager.Instance.NowStageindex == EnemySpawnManager.Instance.NowMaxindex)
                                 {
-                                    achievemanager.Instance.AddCount(Acheves.보스처치);
-                                    achievemanager.Instance.AddCount(Acheves.던전격파);
+                                    //achievemanager.Instance.AddCount(Acheves.보스처치);
+                                    //achievemanager.Instance.AddCount(Acheves.던전격파);
+                                    QuestManager.Instance.AddCount(1, "dungeon");
+
                                     if (!PlayerBackendData.Instance.sotang_dungeon.Contains(PlayerBackendData.Instance
                                             .nowstage))
                                     {
@@ -742,11 +755,20 @@ public class Hpmanager : MonoBehaviour
                                     {
                                         TutorialTotalManager.Instance.CheckGuideQuest("dungeonclearborn");
                                     }
+                                    if (PlayerBackendData.Instance.nowstage.Equals("3007"))
+                                    {
+                                        TutorialTotalManager.Instance.CheckGuideQuest("dungeon13clear");
+                                    }
+                                    if (PlayerBackendData.Instance.nowstage.Equals("3009"))
+                                    {
+                                        TutorialTotalManager.Instance.CheckGuideQuest("dungeon14clear");
+                                    }
                                     if (PlayerBackendData.Instance.nowstage.Equals("3010"))
                                     {
                                         TutorialTotalManager.Instance.CheckGuideQuest("dungeon15clear");
                                     }
-                                    
+                                    TutorialTotalManager.Instance.CheckGuideQuest("dungeonclear");
+
                                     mondropmanager.Instance.GiveDropToInvenToryBoss(transform,
                                         mondropmanager.Instance.Mon_DropItemIDboss,
                                         mondropmanager.Instance.Mon_DropItemMinHowmanyboss,
@@ -816,7 +838,7 @@ public class Hpmanager : MonoBehaviour
                                     int.Parse(MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage).maprank))
                                 {
                                     //모험가 레벨업
-                                    achievemanager.Instance.AddCount(Acheves.승급);
+                                    //achievemanager.Instance.AddCount(Acheves.승급);
                                     PlayerBackendData.Instance.AddAdLv(1);
                                     uimanager.Instance.ResetLoot();
                                     mondropmanager.Instance.GiveDropToInvenToryBoss(transform,
@@ -852,9 +874,26 @@ public class Hpmanager : MonoBehaviour
                                 }
 
 
-                                if (PlayerBackendData.Instance.nowstage.Equals("5007"))
+                                switch (PlayerBackendData.Instance.nowstage)
                                 {
-                                    TutorialTotalManager.Instance.CheckGuideQuest("raidclearborn");
+                                    case "5007":
+                                        TutorialTotalManager.Instance.CheckGuideQuest("raidclearborn");
+                                        break;
+                                    case "5008":
+                                        TutorialTotalManager.Instance.CheckGuideQuest("raidclear11");
+                                        break;
+                                    case "5009":
+                                        TutorialTotalManager.Instance.CheckGuideQuest("raidclear12");
+                                        break;
+                                    case "5010":
+                                        TutorialTotalManager.Instance.CheckGuideQuest("raidclear13");
+                                        break;
+                                    case "5011":
+                                        TutorialTotalManager.Instance.CheckGuideQuest("raidclear14");
+                                        break;
+                                    case "5012":
+                                        TutorialTotalManager.Instance.CheckGuideQuest("raidclear15");
+                                        break;
                                 }
 
                                 TutorialTotalManager.Instance.CheckGuideQuest("raidclear");

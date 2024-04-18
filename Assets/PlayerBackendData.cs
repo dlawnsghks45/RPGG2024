@@ -201,6 +201,7 @@ public string petrare;
     public int[] ContentLevel = new int[30];
     
     public ObscuredInt AntCaveLv;
+    public ObscuredInt AntCaveLvMax;
     public ObscuredInt AntTotalClear;
     public int ClientSaveNum = 0; //캐릭 레벨
 
@@ -229,8 +230,15 @@ public string petrare;
     ObscuredDecimal Ach_MaxExp = 0;
     ObscuredInt Ach_Lv = 1; //캐릭 레벨
     public Dictionary<string, Achievedata> PlayerAchieveData = new Dictionary<string, Achievedata>();
-    
-    
+
+   
+   //퀘스트
+   
+   //퀘스트 개별
+   public float[] QuestCount = new float[100];
+   public bool[] QuestIsFinish = new bool[100];
+   public float[] QuestTotalCount = new float[10]; //달성도 보상
+   
     
     //소탕가능여부
     public List<string> sotang_raid = new List<string>();
@@ -937,6 +945,69 @@ public string petrare;
         }
     }
 
+     //장비 제작
+    public void MakeEquipment_Min(string id)
+    {
+        //Debug.Log("장비 제작");
+        EquipDatabase makedata = null;
+        string artikey;
+        string type = EquipItemDB.Instance.Find_id(id).Type;
+        while (true)
+        {
+            artikey = artifactname(id);
+            if (GetTypeEquipment(type).ContainsKey(artikey)) continue;
+            EquipItemDB.Row data = EquipItemDB.Instance.Find_id(id);
+            makedata = new EquipDatabase(id, artikey, "10;10",false,true);
+            switch (type)
+            {
+                case "Weapon":
+                    Equiptment0.Add(artikey, makedata);
+
+                    break;
+                case "SWeapon":
+                    Equiptment1.Add(artikey, makedata);
+
+                    break;
+                case "Helmet":
+                    Equiptment2.Add(artikey, makedata);
+
+                    break;
+                case "Chest":
+                    Equiptment3.Add(artikey, makedata);
+
+                    break;
+                case "Glove":
+                    Equiptment4.Add(artikey, makedata);
+                    break;
+                case "Boot":
+                    Equiptment5.Add(artikey, makedata);
+                    break;
+                case "Ring":
+                    Equiptment6.Add(artikey, makedata);
+                    break;
+                case "Necklace":
+                    Equiptment7.Add(artikey, makedata);
+                    break;
+                case "Wing":
+                    Equiptment8.Add(artikey, makedata);
+                    break;
+                case "Pet":
+                    Equiptment9.Add(artikey, makedata);
+                    break;
+
+                case "Rune":
+                    Equiptment10.Add(artikey, makedata);
+                    break;
+                case "Insignia":
+                    Equiptment11.Add(artikey, makedata);
+                    break;
+                default:
+                    break;
+            }
+            return ;
+        }
+    }
+    
     //장비 제작
     public void MakeEquipmentAndEquip(string id)
     {

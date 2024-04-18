@@ -76,9 +76,7 @@ public class TutorialTotalManager : MonoBehaviour
                 RefreshNow();
                 Savemanager.Instance.SaveGuideQuest();
                 alertmanager.Instance.NotiCheck_GuideQuest();
-
             }
-       
     }
 
     //즉시완료 체크
@@ -98,7 +96,7 @@ public class TutorialTotalManager : MonoBehaviour
             return;
         switch (PlayerBackendData.Instance.tutoguideid)
         {
-            case 0:
+            case 1:
                 //아이템이 없다면 완료
                 if (PlayerBackendData.Instance.CheckItemCount("531") == 0)
                 {
@@ -106,21 +104,10 @@ public class TutorialTotalManager : MonoBehaviour
                     RefreshNow();
                     Savemanager.Instance.SaveGuideQuest();
                 }
-
-                break;
-            case 1:
-                //이미 300렙 이라면 완료
-                if (PlayerBackendData.Instance.GetLv() >= 300)
-                {
-                    PlayerBackendData.Instance.tutoguideisfinish = true;
-                    RefreshNow();
-                    Savemanager.Instance.SaveGuideQuest();
-                }
-
                 break;
             case 2:
                 //장비 점수 22000
-                if (PlayerData.Instance.GetEquipPoint(PlayerBackendData.Instance.EquipEquiptment0) >= 22000)
+                if (PlayerData.Instance.GetEquipPoint(PlayerBackendData.Instance.EquipEquiptment0) >= 30000)
                 {
                     PlayerBackendData.Instance.tutoguideisfinish = true;
                     RefreshNow();
@@ -130,7 +117,7 @@ public class TutorialTotalManager : MonoBehaviour
                 break;
             case 3:
                 //모험 랭크 4
-                if (PlayerBackendData.Instance.GetAdLv() >= 4)
+                if (PlayerBackendData.Instance.GetAdLv() >= 15)
                 {
                     PlayerBackendData.Instance.tutoguideisfinish = true;
                     RefreshNow();
@@ -138,16 +125,7 @@ public class TutorialTotalManager : MonoBehaviour
                 }
 
                 break;
-            case 5:
-                //모험 랭크 5
-                if (PlayerBackendData.Instance.GetAdLv() >= 5)
-                {
-                    PlayerBackendData.Instance.tutoguideisfinish = true;
-                    RefreshNow();
-                    Savemanager.Instance.SaveGuideQuest();
-                }
-
-                break;
+          
             case 6:
                 //300 레벨 어빌리티 선택
                 if (PlayerBackendData.Instance.Abilitys[0] != "")
@@ -169,7 +147,7 @@ public class TutorialTotalManager : MonoBehaviour
                     }
                 }
                 //패시브5개
-                if (num >=5)
+                if (num >= 6)
                 {
                     PlayerBackendData.Instance.tutoguideisfinish = true;
                     RefreshNow();
@@ -189,7 +167,14 @@ public class TutorialTotalManager : MonoBehaviour
                     || PlayerBackendData.Instance.ClassId == "C1026"
                     || PlayerBackendData.Instance.ClassId == "C1027"
                     || PlayerBackendData.Instance.ClassId == "C1028"
-                    || PlayerBackendData.Instance.ClassId == "C1029")
+                    || PlayerBackendData.Instance.ClassId == "C1029"
+                    || PlayerBackendData.Instance.ClassId == "C1030"
+                    || PlayerBackendData.Instance.ClassId == "C1031"
+                    || PlayerBackendData.Instance.ClassId == "C1032"
+                    || PlayerBackendData.Instance.ClassId == "C1033"
+                    || PlayerBackendData.Instance.ClassId == "C1034"
+                    || PlayerBackendData.Instance.ClassId == "C1035"
+                    )
                 {
                     PlayerBackendData.Instance.tutoguideisfinish = true;
                     RefreshNow();
@@ -217,17 +202,6 @@ public class TutorialTotalManager : MonoBehaviour
                 }
 
                 break;
-            case 10:
-                //모험 랭크 7
-                if (PlayerBackendData.Instance.GetAdLv() >= 7)
-                {
-                    PlayerBackendData.Instance.tutoguideisfinish = true;
-                    RefreshNow();
-                    Savemanager.Instance.SaveGuideQuest();
-                }
-
-                break;
-            case 11:
             case 12:
                 //성물 전쟁 콘텐츠 하기
                 //제단 레벨이 1이상이면 완료
@@ -272,17 +246,6 @@ public class TutorialTotalManager : MonoBehaviour
 
                 break;
 
-            case 18: //모험 랭크 10 달성
-                if (PlayerBackendData.Instance.GetAdLv() >= 10)
-                {
-                    PlayerBackendData.Instance.tutoguideisfinish = true;
-                    RefreshNow();
-                    Savemanager.Instance.SaveGuideQuest();
-                    Savemanager.Instance.Save();
-
-                }
-
-                break;
             case 20: //★6 이상 직업 선택
                 if (PlayerBackendData.Instance.ClassId == "C1023"
                     || PlayerBackendData.Instance.ClassId == "C1024"
@@ -290,7 +253,14 @@ public class TutorialTotalManager : MonoBehaviour
                     || PlayerBackendData.Instance.ClassId == "C1026"
                     || PlayerBackendData.Instance.ClassId == "C1027"
                     || PlayerBackendData.Instance.ClassId == "C1028"
-                    || PlayerBackendData.Instance.ClassId == "C1029")
+                    || PlayerBackendData.Instance.ClassId == "C1029"
+                       || PlayerBackendData.Instance.ClassId == "C1030"
+                    || PlayerBackendData.Instance.ClassId == "C1031"
+                    || PlayerBackendData.Instance.ClassId == "C1032"
+                    || PlayerBackendData.Instance.ClassId == "C1033"
+                    || PlayerBackendData.Instance.ClassId == "C1034"
+                    || PlayerBackendData.Instance.ClassId == "C1035"
+                    )
                 {
                     PlayerBackendData.Instance.tutoguideisfinish = true;
                     RefreshNow();
@@ -325,7 +295,7 @@ public class TutorialTotalManager : MonoBehaviour
                 break;
 
             case 22:
-                if (Battlemanager.Instance.mainplayer.Stat_SmeltPoint >= 20)
+                if (Battlemanager.Instance.mainplayer.Stat_SmeltPoint >= 10)
                 {
                     PlayerBackendData.Instance.tutoguideisfinish = true;
                     RefreshNow();
@@ -334,8 +304,9 @@ public class TutorialTotalManager : MonoBehaviour
                 }
                 break;
 
-            case 23: //모험 랭크 10 달성
-                if (PlayerBackendData.Instance.GetAdLv() >= 11)
+            case 23: 
+                //레이드 - 엘더 본 드래곤 처치
+                if (PlayerBackendData.Instance.sotang_raid.Contains("5007"))
                 {
                     PlayerBackendData.Instance.tutoguideisfinish = true;
                     RefreshNow();
@@ -343,11 +314,10 @@ public class TutorialTotalManager : MonoBehaviour
                     Savemanager.Instance.Save();
 
                 }
-
                 break;
             case 25:
                 //장비 점수 26000
-                if (PlayerData.Instance.GetEquipPoint(PlayerBackendData.Instance.EquipEquiptment0) >= 26000)
+                if (PlayerData.Instance.GetEquipPoint(PlayerBackendData.Instance.EquipEquiptment0) >= 35000)
                 {
                     PlayerBackendData.Instance.tutoguideisfinish = true;
                     RefreshNow();
@@ -383,9 +353,18 @@ public class TutorialTotalManager : MonoBehaviour
 
                 break;
             case 28:
+                if (PlayerBackendData.Instance.sotang_raid.Contains("5008"))
+                {
+                    PlayerBackendData.Instance.tutoguideisfinish = true;
+                    RefreshNow();
+                    Savemanager.Instance.SaveGuideQuest();
+                    Savemanager.Instance.Save();
+
+                }
+                break;
             case 29:
                 //레이드 - 엘더 본 드래곤 처치
-                if (PlayerData.Instance.GetEquipPoint(PlayerBackendData.Instance.EquipEquiptment0) >= 40000)
+                if (PlayerBackendData.Instance.sotang_dungeon.Contains("3006"))
                 {
                     PlayerBackendData.Instance.tutoguideisfinish = true;
                     RefreshNow();
@@ -408,8 +387,8 @@ public class TutorialTotalManager : MonoBehaviour
                 }
 
                 break;
-            case 34: //모험 랭크 12 달성
-                if (PlayerBackendData.Instance.GetAdLv() >= 12)
+            case 34: //레이드 - 홀리 그리폰
+                if (PlayerBackendData.Instance.sotang_raid.Contains("5009"))
                 {
                     PlayerBackendData.Instance.tutoguideisfinish = true;
                     RefreshNow();
@@ -417,7 +396,6 @@ public class TutorialTotalManager : MonoBehaviour
                     Savemanager.Instance.Save();
 
                 }
-
                 break;
             case 35:
                 //장비 점수 35000
@@ -430,7 +408,7 @@ public class TutorialTotalManager : MonoBehaviour
 
                 break;
             case 36:
-                if (Battlemanager.Instance.mainplayer.Stat_SmeltPoint >= 30)
+                if (Battlemanager.Instance.mainplayer.Stat_SmeltPoint >= 15)
                 {
                     PlayerBackendData.Instance.tutoguideisfinish = true;
                     RefreshNow();
@@ -438,9 +416,19 @@ public class TutorialTotalManager : MonoBehaviour
                     Savemanager.Instance.Save();
                 }
                 break;
-            
-            case 39: //모험 랭크 13 달성
-                if (PlayerBackendData.Instance.GetAdLv() >= 13)
+            case 38:
+                //모험 랭크 4
+                if (PlayerBackendData.Instance.GetAdLv() >= 16)
+                {
+                    PlayerBackendData.Instance.tutoguideisfinish = true;
+                    RefreshNow();
+                    Savemanager.Instance.SaveGuideQuest();
+                }
+
+                break;
+
+            case 39: //레이드 - 홀리 아켄젤
+                if (PlayerBackendData.Instance.sotang_raid.Contains("5010"))
                 {
                     PlayerBackendData.Instance.tutoguideisfinish = true;
                     RefreshNow();
@@ -449,7 +437,6 @@ public class TutorialTotalManager : MonoBehaviour
 
                 }
                 break;
-
             case 40:
                 //장비 점수 45000
                 if (PlayerData.Instance.GetEquipPoint(PlayerBackendData.Instance.EquipEquiptment0) >= 45000)
@@ -462,7 +449,7 @@ public class TutorialTotalManager : MonoBehaviour
                 break;
             
             case 41:
-                if (Battlemanager.Instance.mainplayer.Stat_SmeltPoint >= 40)
+                if (Battlemanager.Instance.mainplayer.Stat_SmeltPoint >= 20)
                 {
                     PlayerBackendData.Instance.tutoguideisfinish = true;
                     RefreshNow();
@@ -471,8 +458,8 @@ public class TutorialTotalManager : MonoBehaviour
                 }
                 break;
             
-            case 44: //모험 랭크 14 달성
-                if (PlayerBackendData.Instance.GetAdLv() >= 14)
+            case 44: //레이드 - 홀리 아켄젤
+                if (PlayerBackendData.Instance.sotang_raid.Contains("5011"))
                 {
                     PlayerBackendData.Instance.tutoguideisfinish = true;
                     RefreshNow();
@@ -481,9 +468,37 @@ public class TutorialTotalManager : MonoBehaviour
 
                 }
                 break;
-            
-            case 47: //모험 랭크 14 달성
-                if (PlayerBackendData.Instance.GetAdLv() >= 15)
+            case 46:
+                //장비 점수 26000
+                if (PlayerData.Instance.GetEquipPoint(PlayerBackendData.Instance.EquipEquiptment0) >= 50000)
+                {
+                    PlayerBackendData.Instance.tutoguideisfinish = true;
+                    RefreshNow();
+                    Savemanager.Instance.SaveGuideQuest();
+                    Savemanager.Instance.Save();
+                }
+                break;
+            case 47: //노스테라 클리어
+                if (PlayerBackendData.Instance.sotang_dungeon.Contains("3009"))
+                {
+                    PlayerBackendData.Instance.tutoguideisfinish = true;
+                    RefreshNow();
+                    Savemanager.Instance.SaveGuideQuest();
+                    Savemanager.Instance.Save();
+
+                }
+                break;
+            case 48: //레이드 - 엔트로 위버
+                if (PlayerBackendData.Instance.sotang_raid.Contains("5012"))
+                {
+                    PlayerBackendData.Instance.tutoguideisfinish = true;
+                    RefreshNow();
+                    Savemanager.Instance.SaveGuideQuest();
+                    Savemanager.Instance.Save();
+                }
+                break;
+            case 49: //잊혀진 공허 클리어
+                if (PlayerBackendData.Instance.sotang_dungeon.Contains("3010"))
                 {
                     PlayerBackendData.Instance.tutoguideisfinish = true;
                     RefreshNow();
@@ -527,13 +542,16 @@ public class TutorialTotalManager : MonoBehaviour
     public GameObject nowquestpanel;
     public GameObject premiumpanel;
     public GameObject nowpremiumobj;
+    public GameObject selectclass;
+    public GameObject gobutton;
     //91.8
-   public  void RefreshNow()
+   public void RefreshNow()
     {
         getbuttons.Interactable = false;
         finishendobj.SetActive(false);
         TutoButton.SetActive(false);
         nowquestpanel.SetActive(false);
+        selectclass.SetActive(false);
         try
         {
             premiumpanel.SetActive(!PlayerBackendData.Instance.tutoguidepremium);
@@ -543,6 +561,7 @@ public class TutorialTotalManager : MonoBehaviour
                 finishendobj.SetActive(true);
                 nowquestpanel.SetActive(false);
                 Tutopanel.SetActive(false);
+
                 for (int i = 0; i < slots.Count; i++)
                 {
                     slots[i].RefreshQuest();
@@ -571,15 +590,18 @@ public class TutorialTotalManager : MonoBehaviour
                 {
                     getbuttons.Interactable = true;
                 }
-
-
-             
             }
             for (int i = 0; i < slots.Count; i++)
             {
                 slots[i].RefreshQuest();
             }
-
+            if (nowdata.id.Equals("0"))
+            {
+                selectclass.SetActive(true);
+                
+                if(PlayerBackendData.Instance.tutoguideisfinish)
+                    selectclass.SetActive(false);
+            }
             if (nowdata.istuto.Equals("TRUE"))
             {
                 TutoButton.SetActive(true);
@@ -628,7 +650,9 @@ public class TutorialTotalManager : MonoBehaviour
            case 18:
                Levelshop.Instance.GiveTime2(3, 2);
                break;
-           
+           case 19:
+               Tutorialmanager.Instance.review.SetActive(true);
+               break;
            case 24:
                Levelshop.Instance.GiveTime2(6, 2);
                break;
@@ -707,6 +731,12 @@ public class TutorialTotalManager : MonoBehaviour
         infotext.text = 
             $"{Inventory.GetTranslate(growthguideDB.Instance.Find_id(PlayerBackendData.Instance.tutoguideid.ToString()).name)}";
 
+    }
+    
+    //바로가기
+    public void Bt_Go()
+    {
+        
     }
     
     

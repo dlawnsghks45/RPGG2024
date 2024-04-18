@@ -1,0 +1,51 @@
+id,name,info,description,count,type,subtype,itemid,itemhw,givept,pointtotalnum,questexp,isevent,isseasonpremium,seasonpt
+0,questname/0,questinfo/0,몬스터 처치,2000,daily,monkill,1001,20,15,0,300,FALSE,FALSE,30
+1,questname/1,questinfo/1,이벤트 몬스터 처치,10,daily,eventmon,1001,20,15,0,300,FALSE,FALSE,30
+2,questname/2,questinfo/2,던전,1,daily,dungeon,1001,20,15,0,300,FALSE,FALSE,30
+3,questname/3,questinfo/3,싱글 레이드,1,daily,singleraid,1001,20,15,0,300,FALSE,FALSE,30
+4,questname/4,questinfo/4,월드 보스,1,daily,worldboss,1001,20,15,0,300,FALSE,FALSE,30
+5,questname/5,questinfo/5,길드 레이드,1,daily,guildraid,1001,20,15,0,300,FALSE,FALSE,30
+6,questname/6,questinfo/6,성물파괴,1,daily,content1,1001,20,15,0,300,FALSE,FALSE,30
+7,questname/7,questinfo/7,성장 콘텐츠,1,daily,content2,1001,20,15,0,300,FALSE,FALSE,30
+8,questname/8,questinfo/8,개미굴 1회,1,daily,content3,1001,20,15,0,300,FALSE,FALSE,30
+9,questname/9,questinfo/9,제작,1,daily,craft,1001,20,15,0,300,FALSE,FALSE,30
+10,questname/10,questinfo/0,몬스터 처치,25000,weekly,monkill,1001,70,30,1,2000,FALSE,FALSE,100
+11,questname/11,questinfo/1,이벤트 몬스터 처치,50,weekly,eventmon,1001,70,30,1,2000,FALSE,FALSE,100
+12,questname/12,questinfo/2,던전,15,weekly,dungeon,1001,70,30,1,2000,FALSE,FALSE,100
+13,questname/13,questinfo/3,싱글 레이드,15,weekly,singleraid,1001,70,30,1,2000,FALSE,FALSE,100
+14,questname/14,questinfo/4,월드 보스,4,weekly,worldboss,1001,70,30,1,2000,FALSE,FALSE,100
+15,questname/15,questinfo/5,길드 레이드,4,weekly,guildraid,1001,70,30,1,2000,FALSE,FALSE,100
+16,questname/16,questinfo/6,성물파괴,4,weekly,content1,1001,70,30,1,2000,FALSE,FALSE,100
+17,questname/17,questinfo/7,성장 콘텐츠,10,weekly,content2,1001,70,30,1,2000,FALSE,FALSE,100
+18,questname/18,questinfo/8,개미굴 1회,20,weekly,content3,1001,70,30,1,2000,FALSE,FALSE,100
+19,questname/19,questinfo/9,제작,10,weekly,craft,1001,70,30,1,2000,FALSE,FALSE,30
+20,questname/20,questinfo/0,몬스터 처치,2000,daily,monkill,100015,1000,15,2,300,TRUE,FALSE,30
+21,questname/21,questinfo/1,이벤트 몬스터 처치,10,daily,eventmon,100015,1000,15,2,300,TRUE,FALSE,30
+22,questname/22,questinfo/2,던전,1,daily,dungeon,100016,300,15,2,300,TRUE,FALSE,30
+23,questname/23,questinfo/3,싱글 레이드,1,daily,singleraid,100016,300,15,2,300,TRUE,FALSE,30
+24,questname/24,questinfo/4,월드 보스,1,daily,worldboss,100017,1,15,2,300,TRUE,FALSE,30
+25,questname/25,questinfo/5,길드 레이드,1,daily,guildraid,1001,20,15,2,300,TRUE,FALSE,30
+26,questname/26,questinfo/6,성물파괴,1,daily,content1,1001,20,15,2,300,TRUE,FALSE,30
+27,questname/27,questinfo/7,성장 콘텐츠,1,daily,content2,1001,20,15,2,300,TRUE,FALSE,30
+28,questname/28,questinfo/8,개미굴 1회,1,daily,content3,1001,20,15,2,300,TRUE,FALSE,30
+29,questname/29,questinfo/9,제작,1,daily,craft,1001,20,15,2,300,TRUE,FALSE,100
+30,questname/30,questinfo/0,몬스터 처치,25000,weekly,monkill,100015,10000,30,2,2000,TRUE,FALSE,100
+31,questname/31,questinfo/1,이벤트 몬스터 처치,50,weekly,eventmon,100015,10000,30,2,2000,TRUE,FALSE,100
+32,questname/32,questinfo/2,던전,15,weekly,dungeon,100016,3000,30,2,2000,TRUE,FALSE,100
+33,questname/33,questinfo/3,싱글 레이드,15,weekly,singleraid,100016,3000,30,2,2000,TRUE,FALSE,100
+34,questname/34,questinfo/4,월드 보스,5,weekly,worldboss,100017,2,30,2,2000,TRUE,FALSE,100
+35,questname/35,questinfo/5,길드 레이드,5,weekly,guildraid,1001,40,30,2,2000,TRUE,FALSE,100
+36,questname/36,questinfo/6,성물파괴,5,weekly,content1,1001,40,30,2,2000,TRUE,FALSE,100
+37,questname/37,questinfo/7,성장 콘텐츠,10,weekly,content2,1001,40,30,2,2000,TRUE,FALSE,100
+38,questname/38,questinfo/8,개미굴 1회,50,weekly,content3,1001,40,30,2,2000,TRUE,FALSE,100
+39,questname/39,questinfo/9,제작,10,weekly,craft,1001,40,30,2,2000,TRUE,FALSE,100
+40,questname/40,questinfo/0,몬스터 처치,3000,daily,monkill,1001,20,20,3,400,TRUE,TRUE,100
+41,questname/41,questinfo/1,이벤트 몬스터 처치,15,daily,eventmon,1001,20,20,3,400,TRUE,TRUE,100
+42,questname/42,questinfo/2,던전,2,daily,dungeon,1001,20,20,3,400,TRUE,TRUE,100
+43,questname/43,questinfo/3,싱글 레이드,2,daily,singleraid,1001,20,20,3,400,TRUE,TRUE,100
+44,questname/44,questinfo/4,월드 보스,1,daily,worldboss,1001,20,20,3,400,TRUE,TRUE,100
+45,questname/45,questinfo/5,길드 레이드,1,daily,guildraid,1001,20,20,3,400,TRUE,TRUE,100
+46,questname/46,questinfo/6,성물파괴,1,daily,content1,1001,20,20,3,400,TRUE,TRUE,100
+47,questname/47,questinfo/7,성장 콘텐츠,1,daily,content2,1001,20,20,3,400,TRUE,TRUE,100
+48,questname/48,questinfo/8,개미굴 1회,1,daily,content3,1001,20,20,3,400,TRUE,TRUE,100
+49,questname/49,questinfo/9,제작,2,daily,craft,1001,20,20,3,400,TRUE,TRUE,100

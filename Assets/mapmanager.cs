@@ -275,6 +275,11 @@ public class mapmanager : MonoBehaviour
                         if (Antcavemanager.Instance.ids_save.Count != 0)
                         {
                             Antcavemanager.Instance.GiveReward();
+                            QuestManager.Instance.AddCount(Antcavemanager.Instance.ids_save.Count,"content3");
+                        }
+                        else
+                        {
+                            QuestManager.Instance.AddCount(1,"content3");
                         }
                         alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI4/개미굴실패"),alertmanager.alertenum.일반);
                         LocateMap(savemapid);

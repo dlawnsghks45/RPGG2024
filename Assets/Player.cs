@@ -768,12 +768,14 @@ public class Player : MonoBehaviour
                             case "1050": //��ø����
                             case "1070": //��������
                             case "1090": //��������
+                            case "1334": //��������
                                 equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.allstat,
                                     float.Parse(skilldata.value));
                                 break;
                             case "1040": //������ �ۼ�Ʈ
                             case "1060": //��ø���� �ۼ�Ʈ
                             case "1080": //�������� �ۼ�Ʈ
+                            case "1344": //�������� �ۼ�Ʈ
                             case "1100": //�������� �ۼ�Ʈ
 
                                 equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.allstatperup,
@@ -1415,10 +1417,8 @@ public class Player : MonoBehaviour
                                             float.Parse(skilldata.c));
                                         break;
                                 }
-
                                 break;
-                            
-                            
+                             //피해 증가
                         }
                     }
                     catch (Exception e)
@@ -1630,96 +1630,102 @@ public class Player : MonoBehaviour
             Stat_totalbuff = PartyRaidBattlemanager.Instance.buffmax;
            // Debug.Log("파티레이드임");
         }
+
         string[] skills = PlayerBackendData.Instance.ClassData[PlayerBackendData.Instance.ClassId].Skills1;
+        
         for (int s = 0; s < skills.Length; s++)
         {
             try
             {
-                SkillDB.Row skilldata = SkillDB.Instance.Find_Id(skills[s]);
-                switch (skilldata.BuffType)
+                if (skills[s] != null)
                 {
-                    //파티버프
-                    //기본 공격력 증가
-                    case "Crit_P":
-                        // Debug.Log("스킬을 사용");
-                        buff_crit = float.Parse(skilldata.Atk);
-                        buff_crit += buff_crit * Stat_totalbuff;
-                        Skillmanager.Instance.PlayerBuffImage[2].SetActive(false);
-                        Skillmanager.Instance.PlayerBuffImage[5].SetActive(true);
-                        break;
-                    //기본 공격력 증가
-                    case "AtkPercent_P":
-                        buff_atkPercent = float.Parse(skilldata.Atk);
-                        buff_matkPercent = float.Parse(skilldata.Atk);
-                        if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.buffup) != 0)
-                        {
-                            buff_atkPercent += buff_atkPercent * Stat_totalbuff;
+                    SkillDB.Row skilldata = SkillDB.Instance.Find_Id(skills[s]);
+//                    Debug.Log(skills[s]);
+                    switch (skilldata.BuffType)
+                    {
+                        //파티버프
+                        //기본 공격력 증가
+                        case "Crit_P":
+                            // Debug.Log("스킬을 사용");
+                            buff_crit = float.Parse(skilldata.Atk);
+                            buff_crit += buff_crit * Stat_totalbuff;
+                            Skillmanager.Instance.PlayerBuffImage[2].SetActive(false);
+                            Skillmanager.Instance.PlayerBuffImage[5].SetActive(true);
+                            break;
+                        //기본 공격력 증가
+                        case "AtkPercent_P":
+                            buff_atkPercent = float.Parse(skilldata.Atk);
+                            buff_matkPercent = float.Parse(skilldata.Atk);
+                            if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.buffup) != 0)
+                            {
+                                buff_atkPercent += buff_atkPercent * Stat_totalbuff;
+                                buff_matkPercent += buff_matkPercent * Stat_totalbuff;
+                            }
+
+                            // Debug.Log("버프증가량");
+                            Skillmanager.Instance.PlayerBuffImage[6].SetActive(true);
+                            Skillmanager.Instance.PlayerBuffImage[0].SetActive(false);
+                            Skillmanager.Instance.PlayerBuffImage[1].SetActive(false);
+                            break;
+                        //기본 공격력 증가
+                        case "Critdmg_P":
+                            buff_critdmg = float.Parse(skilldata.CritDmg);
+                            buff_critdmg += buff_critdmg * Stat_totalbuff;
+                            //   Invoke(nameof(OffCritDmgBuff), float.Parse(skilldata.skilldata.AttackCount));
+                            Skillmanager.Instance.PlayerBuffImage[7].SetActive(true);
+                            Skillmanager.Instance.PlayerBuffImage[3].SetActive(false);
+                            break;
+
+                        //기본 공격력 증가
+                        case "BasicAtk":
+                            buff_basicatkup = float.Parse(skilldata.Atk);
+                            if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.buffup) != 0)
+                            {
+                                buff_basicatkup += buff_basicatkup * Stat_totalbuff;
+                            }
+
+                            // Debug.Log("버프증가량");
+                            Skillmanager.Instance.PlayerBuffImage[4].SetActive(true);
+                            break;
+
+                        case "AtkPercent": //물리공격력증가
+                            buff_atkPercent = float.Parse(skilldata.Atk);
+                            if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.buffup) != 0)
+                            {
+                                buff_atkPercent += buff_atkPercent * Stat_totalbuff;
+                            }
+
+                            Skillmanager.Instance.PlayerBuffImage[0].SetActive(true);
+                            Skillmanager.Instance.PlayerBuffImage[6].SetActive(false);
+                            break;
+                        case "MAtkPercent": //마법공격력증가
+                            buff_matkPercent = float.Parse(skilldata.Matk);
                             buff_matkPercent += buff_matkPercent * Stat_totalbuff;
-                        }
+                            Skillmanager.Instance.PlayerBuffImage[1].SetActive(true);
+                            Skillmanager.Instance.PlayerBuffImage[6].SetActive(false);
+                            break;
+                        case "Crit": //크리티컬
+                            // Debug.Log("스킬을 사용");
+                            buff_crit = float.Parse(skilldata.Atk);
+                            buff_crit += buff_crit * Stat_totalbuff;
+                            Skillmanager.Instance.PlayerBuffImage[2].SetActive(true);
+                            Skillmanager.Instance.PlayerBuffImage[5].SetActive(false);
+                            break;
+                        case "Critdmg": //크리티컬
+                            buff_critdmg = float.Parse(skilldata.CritDmg);
+                            buff_critdmg += buff_critdmg * Stat_totalbuff;
+                            //   Invoke(nameof(OffCritDmgBuff), float.Parse(skilldata.skilldata.AttackCount));
+                            Skillmanager.Instance.PlayerBuffImage[3].SetActive(true);
+                            Skillmanager.Instance.PlayerBuffImage[7].SetActive(false);
+                            break;
+                        case "Alldmgup": //크리티컬
+                            buff_alldmgup = float.Parse(skilldata.Atk);
+                            buff_alldmgup += buff_alldmgup * Stat_totalbuff;
+                            //   Invoke(nameof(OffCritDmgBuff), float.Parse(skilldata.skilldata.AttackCount));
+                            Skillmanager.Instance.PlayerBuffImage[8].SetActive(true);
+                            break;
 
-                        // Debug.Log("버프증가량");
-                        Skillmanager.Instance.PlayerBuffImage[6].SetActive(true);
-                        Skillmanager.Instance.PlayerBuffImage[0].SetActive(false);
-                        Skillmanager.Instance.PlayerBuffImage[1].SetActive(false);
-                        break;
-                    //기본 공격력 증가
-                    case "Critdmg_P":
-                        buff_critdmg = float.Parse(skilldata.CritDmg);
-                        buff_critdmg += buff_critdmg * Stat_totalbuff;
-                        //   Invoke(nameof(OffCritDmgBuff), float.Parse(skilldata.skilldata.AttackCount));
-                        Skillmanager.Instance.PlayerBuffImage[7].SetActive(true);
-                        Skillmanager.Instance.PlayerBuffImage[3].SetActive(false);
-                        break;
-
-                    //기본 공격력 증가
-                    case "BasicAtk":
-                        buff_basicatkup = float.Parse(skilldata.Atk);
-                        if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.buffup) != 0)
-                        {
-                            buff_basicatkup += buff_basicatkup * Stat_totalbuff;
-                        }
-
-                        // Debug.Log("버프증가량");
-                        Skillmanager.Instance.PlayerBuffImage[4].SetActive(true);
-                        break;
-
-                    case "AtkPercent": //물리공격력증가
-                        buff_atkPercent = float.Parse(skilldata.Atk);
-                        if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.buffup) != 0)
-                        {
-                            buff_atkPercent += buff_atkPercent * Stat_totalbuff;
-                        }
-
-                        Skillmanager.Instance.PlayerBuffImage[0].SetActive(true);
-                        Skillmanager.Instance.PlayerBuffImage[6].SetActive(false);
-                        break;
-                    case "MAtkPercent": //마법공격력증가
-                        buff_matkPercent = float.Parse(skilldata.Matk);
-                        buff_matkPercent += buff_matkPercent * Stat_totalbuff;
-                        Skillmanager.Instance.PlayerBuffImage[1].SetActive(true);
-                        Skillmanager.Instance.PlayerBuffImage[6].SetActive(false);
-                        break;
-                    case "Crit": //크리티컬
-                        // Debug.Log("스킬을 사용");
-                        buff_crit = float.Parse(skilldata.Atk);
-                        buff_crit += buff_crit * Stat_totalbuff;
-                        Skillmanager.Instance.PlayerBuffImage[2].SetActive(true);
-                        Skillmanager.Instance.PlayerBuffImage[5].SetActive(false);
-                        break;
-                    case "Critdmg": //크리티컬
-                        buff_critdmg = float.Parse(skilldata.CritDmg);
-                        buff_critdmg += buff_critdmg  * Stat_totalbuff;
-                        //   Invoke(nameof(OffCritDmgBuff), float.Parse(skilldata.skilldata.AttackCount));
-                        Skillmanager.Instance.PlayerBuffImage[3].SetActive(true);
-                        Skillmanager.Instance.PlayerBuffImage[7].SetActive(false);
-                        break;
-                    case "Alldmgup": //크리티컬
-                        buff_alldmgup = float.Parse(skilldata.Atk);
-                        buff_alldmgup += buff_alldmgup * Stat_totalbuff;
-                        //   Invoke(nameof(OffCritDmgBuff), float.Parse(skilldata.skilldata.AttackCount));
-                        Skillmanager.Instance.PlayerBuffImage[8].SetActive(true);
-                        break;
-                        
+                    }
                 }
             }
             catch (Exception e)

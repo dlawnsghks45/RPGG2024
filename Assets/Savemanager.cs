@@ -889,19 +889,54 @@ Save();
             Battlemanager.Instance.RefreshDeath();
         }
     }
-    
-    public void SaveAchieve()
+    public void SaveQuest()
     {
-        _es3File.Save($"{PlayerBackendData.Instance.Id}Achievedata", PlayerBackendData.Instance.PlayerAchieveData);
+        // _es3File.Save($"{PlayerBackendData.Instance.Id}Achievedata", PlayerBackendData.Instance.PlayerAchieveData);
+        _es3File.Save($"{PlayerBackendData.Instance.Id}QuestCount", PlayerBackendData.Instance.QuestCount);
+        _es3File.Save($"{PlayerBackendData.Instance.Id}QuestIsFinish", PlayerBackendData.Instance.QuestIsFinish);
+        _es3File.Save($"{PlayerBackendData.Instance.Id}QuestTotalCount", PlayerBackendData.Instance.QuestTotalCount);
+    }
+    public void LoadQuest()
+    {
+        if (_es3File.KeyExists($"{PlayerBackendData.Instance.Id}QuestCount"))
+        {
+            float[] temp = _es3File.Load<float[]>($"{PlayerBackendData.Instance.Id}QuestCount");
+            for (int i = 0; i < temp.Length; i++)
+            {
+                PlayerBackendData.Instance.QuestCount[i] = temp[i];
+            }
+            
+            bool[] temp2 = _es3File.Load<bool[]>($"{PlayerBackendData.Instance.Id}QuestIsFinish");
+            for (int i = 0; i < temp2.Length; i++)
+            {
+                PlayerBackendData.Instance.QuestIsFinish[i] = temp2[i];
+            }
+            
+            float[] temp3 = _es3File.Load<float[]>($"{PlayerBackendData.Instance.Id}QuestTotalCount");
+            for (int i = 0; i < temp3.Length; i++)
+            {
+                PlayerBackendData.Instance.QuestTotalCount[i] = temp3[i];
+            }
+            
+            
+        }
+    }
+    
+    public void SaveAchieve() 
+    {
+        //_es3File.Save($"{PlayerBackendData.Instance.Id}Achievedata", PlayerBackendData.Instance.PlayerAchieveData);
+        SaveQuest();
     }
     public void SaveAchieveDirect()
     {
         _es3File.Save($"{PlayerBackendData.Instance.Id}Achievedata", PlayerBackendData.Instance.PlayerAchieveData);
-
+        SaveQuest();
     }
 
     public void LoadAchieve()
     {
+        LoadQuest();
+        /*
         if (_es3File.KeyExists($"{PlayerBackendData.Instance.Id}Achievedata"))
         {
             Dictionary<string, Achievedata> TempAchieve = new Dictionary<string, Achievedata>();
@@ -928,6 +963,7 @@ Save();
                 PlayerBackendData.Instance.PlayerAchieveData[a.Key] = a.Value;
             }
         }
+        */
     }
 
 
@@ -1499,13 +1535,29 @@ public bool GameDataGet()
                 }
              
 
-                //업적
+            /*   //업적
                 if (gameDataJson[0].ContainsKey("Achievement"))
                 {
                     foreach (string key in gameDataJson[0]["Achievement"].Keys)
                     {
                         //  Debug.Log("직업입력" + key);
                         PlayerBackendData.Instance.PlayerAchieveData[key] = new Achievedata(gameDataJson[0]["Achievement"][key]);
+                    }
+                }*/
+                //퀘스트
+                if (gameDataJson[0].ContainsKey("QuestCount"))
+                {
+                    for (int i = 0; i < gameDataJson[0]["QuestCount"].Count; i++)
+                    {
+                        PlayerBackendData.Instance.QuestCount[i] = float.Parse(gameDataJson[0]["QuestCount"][i].ToString());
+                    }
+                    for (int i = 0; i < gameDataJson[0]["QuestIsFinish"].Count; i++)
+                    {
+                        PlayerBackendData.Instance.QuestIsFinish[i] = bool.Parse(gameDataJson[0]["QuestIsFinish"][i].ToString());
+                    }
+                    for (int i = 0; i < gameDataJson[0]["QuestTotalCount"].Count; i++)
+                    {
+                        PlayerBackendData.Instance.QuestTotalCount[i] = float.Parse(gameDataJson[0]["QuestTotalCount"][i].ToString());
                     }
                 }
 

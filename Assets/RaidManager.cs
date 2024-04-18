@@ -74,7 +74,20 @@ public class RaidManager : MonoBehaviour
             return;
         }
 
-        if (!Timemanager.Instance.ConSumeCount_DailyAscny(Timemanager.ContentEnumDaily.레이드)) return;
+        if (!Timemanager.Instance.ConSumeCount_DailyAscny(Timemanager.ContentEnumDaily.레이드))
+        {
+            if(PlayerBackendData.Instance.CheckItemCount("200000") > 0) 
+            {
+                PlayerBackendData.Instance.RemoveItem("200000",1);
+                alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI7/레이드입장권사용"), alertmanager.alertenum.일반);
+                Savemanager.Instance.SaveInventory();
+                Savemanager.Instance.Save();
+            }
+            else
+            {
+                return;
+            }
+        }
 
         dungeondropsid.Clear();
         dungeondropshowmany.Clear();
@@ -176,8 +189,6 @@ public class RaidManager : MonoBehaviour
     }
     public void Bt_Sotang()
     {
-      
-        
         if (!PlayerBackendData.Instance.sotang_raid.Contains(nowselectmap))
         {
             alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI3/1회클리어소탕가능"), alertmanager.alertenum.일반);
@@ -234,7 +245,9 @@ public class RaidManager : MonoBehaviour
         
         if (PlayerBackendData.Instance.CheckItemAndRemove("200000", sotangcount))
         {
-            achievemanager.Instance.AddCount(Acheves.레이드격파, sotangcount);
+           // achievemanager.Instance.AddCount(Acheves.레이드격파, sotangcount);
+            QuestManager.Instance.AddCount(sotangcount, "singleraid");
+
             LogManager.Stang_Raid(sotangcount);
             GiveDropToInvenToryBoss(Mon_DropItemIDboss,
                 Mon_DropItemMinHowmanyboss,
@@ -261,7 +274,8 @@ public class RaidManager : MonoBehaviour
         }
 
         
-        achievemanager.Instance.AddCount(Acheves.레이드격파, 1);
+       // achievemanager.Instance.AddCount(Acheves.레이드격파, 1);
+        QuestManager.Instance.AddCount(1, "singleraid");
 
         
         effect_raidfinish.SetActive(false);

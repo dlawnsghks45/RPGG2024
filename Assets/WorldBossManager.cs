@@ -412,6 +412,7 @@ public class WorldBossManager : MonoBehaviour
                 }
             }
         }
+        QuestManager.Instance.AddCount(1, "worldboss");
         Inventory.Instance.ShowEarnItem3(id.ToArray(),hw.ToArray(),false);
         Savemanager.Instance.SaveInventory();
         Savemanager.Instance.Save();

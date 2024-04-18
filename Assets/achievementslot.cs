@@ -203,7 +203,6 @@ public class achievementslot : MonoBehaviour
 
         if (!isnotcsave)
         {
-            alertmanager.Instance.NotiCheck_Achieve();
             Savemanager.Instance.SaveAchieveDirect();
         }
     }

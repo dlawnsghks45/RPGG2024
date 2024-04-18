@@ -36,8 +36,11 @@ public class Classmanager : MonoBehaviour
     }
     public void RefreshJobSlot()
     {
-        foreach (var t in JobSlots)
+      //  Debug.Log("잡슬릇" + JobSlots.Length);
+        for (var index = 0; index < JobSlots.Length; index++)
         {
+            var t = JobSlots[index];
+//            Debug.Log(index);
             t.Refresh();
         }
     }
@@ -612,11 +615,8 @@ public class Classmanager : MonoBehaviour
        
         
     }
-    public void Bt_SelectClass(string classid,string[] skills)
+    public void Bt_SelectClass(string classid,string[] skills,bool justequip = false)
     {
-   
-
-        
         PlayerBackendData.Instance.ClassId = classid;
 
         for (int i = 0;
@@ -625,16 +625,30 @@ public class Classmanager : MonoBehaviour
         {
             PlayerBackendData.Instance.ClassData[PlayerBackendData.Instance.ClassId].Skills1[i] = "";
         }
-        
-        for (int i = 0; i < Skillmanager.Instance.mainplayer.skillslotcount + Skillmanager.Instance.mainplayer.classskillslotcount+Skillmanager.Instance.mainplayer.AdventureRankSkillSlot(PlayerBackendData.Instance.GetAdLv()); i++)
+
+        if (justequip)
         {
-            if(skills[i] == ("True"))
-                continue;
-            if (skills[i] != null && skills[i] != "")
+            for (int i = 0; i < PlayerBackendData.Instance.Skills.Count; i++)
             {
-                PlayerBackendData.Instance.ClassData[PlayerBackendData.Instance.ClassId].Skills1[i] = skills[i];
+                if (PlayerBackendData.Instance.Skills[i] != null && PlayerBackendData.Instance.Skills[i] != "")
+                {
+                    PlayerBackendData.Instance.ClassData[PlayerBackendData.Instance.ClassId].Skills1[i] = PlayerBackendData.Instance.Skills[i];
+                }
             }
         }
+        else
+        {
+            for (int i = 0; i < Skillmanager.Instance.mainplayer.skillslotcount + Skillmanager.Instance.mainplayer.classskillslotcount+Skillmanager.Instance.mainplayer.AdventureRankSkillSlot(PlayerBackendData.Instance.GetAdLv()); i++)
+            {
+                if(skills[i] == ("True"))
+                    continue;
+                if (skills[i] != null && skills[i] != "")
+                {
+                    PlayerBackendData.Instance.ClassData[PlayerBackendData.Instance.ClassId].Skills1[i] = skills[i];
+                }
+            }
+        }
+      
         
     }
     public void Bt_SelectPassive()
@@ -660,6 +674,11 @@ public class Classmanager : MonoBehaviour
         Savemanager.Instance.SaveClassData();
         Savemanager.Instance.Save();
 
+    }
+    public void Bt_SelectPassive(string classid)
+    {
+        ClassDB.Row data = ClassDB.Instance.Find_id(classid);
+        PlayerBackendData.Instance.PassiveClassId[int.Parse(data.tier) - 1] = data.passive;
     }
     public void Bt_SelectPassive_Preset(string[] passiveid)
     {
@@ -700,6 +719,7 @@ public class Classmanager : MonoBehaviour
             alertmanager.Instance.NotiCheck_Class();
             RefreshJobSlot();
             RefreshJobitemslots();
+            Savemanager.Instance.SaveClassData();
             Savemanager.Instance.Save();
             Settingmanager.Instance.SaveAllNoLog();
         }
@@ -712,6 +732,24 @@ public class Classmanager : MonoBehaviour
 
 
       
+    }
+    
+    public void Bt_BuyClass(string id)
+    {
+      
+            PlayerBackendData.Instance.ClassData[id].Isown = true;
+            //기본스킬 지급
+            PlayerBackendData.Instance.AddSkill(ClassDB.Instance
+                .Find_id(PlayerBackendData.Instance.ClassData[id].ClassId1).giveskill);
+
+            int num =
+                int.Parse(ClassDB.Instance
+                    .Find_id(PlayerBackendData.Instance.ClassData.ToList()[nowpage].Value.ClassId1).tier) - 1;
+                Bt_SelectPassive(id);
+        
+                RefreshJobSlot();
+            RefreshJobitemslots();
+         
     }
     [SerializeField]
     itemjobslot[] jobitemslots;

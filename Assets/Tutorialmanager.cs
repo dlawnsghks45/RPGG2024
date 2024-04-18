@@ -199,6 +199,50 @@ public class Tutorialmanager : MonoBehaviour
         }
     }
 
+    public GameObject SelectTutorialLevel;
+
+    public void Bt_SelectNewbie()
+    {
+        SelectTutorialLevel.SetActive(false);
+        SkipTutorialbutton.SetActive(false);
+        SkipTutorialbutton_GuideQuest.SetActive(false);
+        hidealluiview();
+        StartTutorial(0);
+        Inventory.Instance.AddItem("996",1);
+        LogManager.Log_SelectTutoType("초보자");
+    }
+
+    public void Bt_SelectVeteran()
+    {
+        SelectTutorialLevel.SetActive(false);
+        int tutoid = 15;
+        Tutopanel.SetActive(false);
+        PlayerBackendData.Instance.tutoid = tutoid.ToString();
+        PlayerBackendData.Instance.tutocount = 0;
+
+        List<string> id = new List<string>();
+        List<int> hw = new List<int>();
+
+        for (int i = 0; i < TutorialDB.Instance.NumRows(); i++)
+        {
+            id.Add(TutorialDB.Instance.GetAt(i).itemid);
+            hw.Add(int.Parse(TutorialDB.Instance.GetAt(i).itemhowmany));
+            Inventory.Instance.AddItem(TutorialDB.Instance.GetAt(i).itemid,int.Parse(TutorialDB.Instance.GetAt(i).itemhowmany));
+        }
+        alertmanager.Instance.ShowAlert( Inventory.GetTranslate("UI7/베테랑선택함"),alertmanager.alertenum.일반);
+        Inventory.Instance.ShowEarnItem3(id.ToArray(), hw.ToArray(), false);
+        Inventory.Instance.AddItem("997",1);
+        hidealluiview();
+        //TutorialTotalManager.Instance.guidepanel.Show(false);
+        GrowEventmanager.Instance.Bt_ShowPanel();
+        Savemanager.Instance.SaveInventory();
+        Savemanager.Instance.SaveCash();
+        Savemanager.Instance.SaveGuideQuest();
+        Savemanager.Instance.Save();
+        LogManager.Log_SelectTutoType("베테랑");
+
+    }
+    
     public void ShowArrowObj(string id)
     {
         SkipTutorialbutton.SetActive(false);
@@ -208,7 +252,7 @@ public class Tutorialmanager : MonoBehaviour
         switch (id)
         {
             case "0":
-                StartTutorial(0);
+                SelectTutorialLevel.SetActive(true);
                 break;
             case "1":
                 StartTutorial(1);
@@ -1297,7 +1341,7 @@ break;
      yield return new WaitWhile(() => nowstep < 5);
      obj[4].SetActive(false);
      obj[5].SetActive(true);
-     yield return new WaitWhile(() => nowstep <6);
+     yield return new WaitWhile(() => nowstep < 6);
      for (int i = 0; i < obj.Length; i++)
          obj[i].SetActive(false);
      TutorialTotalManager.Instance.CheckGuideQuest("tutopass");
@@ -1313,6 +1357,7 @@ break;
      {
          Tutorial_objAll[i].SetActive(false);
      }
+     SkipTutorialbutton_GuideQuest.SetActive(false);
      TutorialTotalManager.Instance.guidepanel.Show(false);
  }
  
@@ -1353,6 +1398,7 @@ break;
      {
          Tutorial_objAll[i].SetActive(false);
      }
+     SkipTutorialbutton_GuideQuest.SetActive(false);
      TutorialTotalManager.Instance.guidepanel.Show(false);
  }
  
@@ -1401,6 +1447,7 @@ break;
      {
          Tutorial_objAll[i].SetActive(false);
      }
+     SkipTutorialbutton_GuideQuest.SetActive(false);
      TutorialTotalManager.Instance.guidepanel.Show(false);
  }
  
@@ -1447,6 +1494,8 @@ break;
          Tutorial_objAll[i].SetActive(false);
      }
      TutorialTotalManager.Instance.guidepanel.Show(false);
+     SkipTutorialbutton_GuideQuest.SetActive(false);
+
  }
  public IEnumerator Tutorial_18()
  {
@@ -1527,6 +1576,9 @@ break;
      SkipTutorialbutton_GuideQuest.SetActive(false);
 
      TutorialTotalManager.Instance.guidepanel.Show(false);
+     
+     SkipTutorialbutton_GuideQuest.SetActive(false);
+
  }
  
  public IEnumerator Tutorial_collect()

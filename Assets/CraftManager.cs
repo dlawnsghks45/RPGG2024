@@ -306,21 +306,33 @@ public class CraftManager : MonoBehaviour
     public void Bt_MakeFull()
     {
         int max = 100000;
+        int divide = 0;
         for (int i = 0; i < strid.Length; i++)
         {
             //Debug.Log(strid[i]);
             if (strid[i] != "0")
             {
-                int index = PlayerBackendData.Instance.GetItemIndex(strid[i]);
-                if (index == -1)
+
+                switch (strid[i])
                 {
-                    max = 1;
-                    break;
+                    case "1001":
+                        if (PlayerBackendData.Instance.GetCash() <= 0)
+                        {
+                            max = 1;
+                            break;
+                        }
+                        divide = (int)PlayerBackendData.Instance.GetCash() / int.Parse(strhowmany[i]);
+                        break;
+                    default:
+                        int index = PlayerBackendData.Instance.GetItemIndex(strid[i]);
+                        if (index == -1)
+                        {
+                            max = 1;
+                            break;
+                        }
+                        divide = PlayerBackendData.Instance.ItemInventory[index].Howmany / int.Parse(strhowmany[i]);
+                        break;
                 }
-
-
-                int divide = PlayerBackendData.Instance.ItemInventory[index].Howmany / int.Parse(strhowmany[i]);
-               
                 //제일 낮은 수를 찾는다.
                 if (divide < 0)
                     divide = 1;
@@ -601,19 +613,34 @@ public class CraftManager : MonoBehaviour
             break;
         }
 
-        for(int i = 0; i < strid.Length;i++)
+        for (int i = 0; i < strid.Length; i++)
         {
             if (strid[i] == "0") continue;
-            int index = PlayerBackendData.Instance.GetItemIndex(strid[i]);
 
-            if(index == -1)
+
+            switch (strid[i])
             {
-                ishaveresource = true;
-                break;
-            }
+                case "1001":
+                    if (PlayerBackendData.Instance.GetCash() <= 0)
+                    {
+                        ishaveresource = true;
+                        break;
+                    }
 
-            if (PlayerBackendData.Instance.ItemInventory[index].Howmany >= int.Parse(strhowmany[i])) continue;
-            ishaveresource = true;
+                    break;
+                default:
+                    int index = PlayerBackendData.Instance.GetItemIndex(strid[i]);
+
+                    if (index == -1)
+                    {
+                        ishaveresource = true;
+                        break;
+                    }
+
+                    if (PlayerBackendData.Instance.ItemInventory[index].Howmany >= int.Parse(strhowmany[i])) continue;
+                    ishaveresource = true;
+                    break;
+            }
             break;
         }
 
@@ -680,14 +707,22 @@ public class CraftManager : MonoBehaviour
                 {
                     if (strid[i] != "0")
                     {
-                        PlayerBackendData.Instance.RemoveItem(strid[i], int.Parse(strhowmany[i]) * nowselectcount);
+                        switch (strid[i])
+                        {
+                            case "1001":
+                                PlayerData.Instance.DownCash(int.Parse(strhowmany[i])* nowselectcount);
+                                break;
+                            default:
+                                PlayerBackendData.Instance.RemoveItem(strid[i], int.Parse(strhowmany[i]) * nowselectcount);
+                                break;
+                        }
                     }
                 }
 
                 PlayerData.Instance.DownGold(needgold);
                 // Inventory.Instance.RefreshInventory();
                 Savemanager.Instance.SaveInventory();
-                Savemanager.Instance.SaveMoneyData();
+                Savemanager.Instance.SaveMoneyCashDirect();
                 Savemanager.Instance.Save();
             }
             LogManager.StartCraft(craftdata.id,nowselectcount);
@@ -778,7 +813,8 @@ public class CraftManager : MonoBehaviour
         craftresultslots[2].gameObject.SetActive(false);
         
         
-        achievemanager.Instance.AddCount(Acheves.아이템제작);
+        //achievemanager.Instance.AddCount(Acheves.아이템제작);
+        QuestManager.Instance.AddCount(1, "craft");
 
         if (craftdata.SuccessPercent != "0")
         {
@@ -917,13 +953,7 @@ public class CraftManager : MonoBehaviour
         //가이드 퀘스트
         Tutorialmanager.Instance.CheckTutorial("getcraft");
         Tutorialmanager.Instance.CheckTutorial("craftpotion");
-        if (craftdata.id.Equals("5541") || craftdata.id.Equals("5542") ||
-            craftdata.id.Equals("5543") || craftdata.id.Equals("5544") ||
-            craftdata.id.Equals("5545") || craftdata.id.Equals("5546") ||
-            craftdata.id.Equals("5547") || craftdata.id.Equals("5548") ||
-            craftdata.id.Equals("5551") || craftdata.id.Equals("5552") ||
-            craftdata.id.Equals("5549") || craftdata.id.Equals("5550") 
-            )
+        if (craftdata.id.Equals("10300"))
         {
             TutorialTotalManager.Instance.CheckGuideQuest("makearmor");
         }

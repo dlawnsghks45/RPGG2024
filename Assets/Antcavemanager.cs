@@ -38,14 +38,28 @@ public class Antcavemanager : MonoBehaviour
     public GameObject AntCaveObj;
     public void ShowAntCave()
     {
-    
+        MapDB.Row mapdata_Now = MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage);
+        if (mapdata_Now.maptype != "0")
+        {
+            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI/사냥터만가능"), alertmanager.alertenum.주의);
+            return;
+        }
+
+        DateTime nowtime = Timemanager.Instance.GetServerTime();
+        Debug.Log("서버시간"+ nowtime);
+        if (nowtime.Hour >= 0 && nowtime.Hour < 6)
+        {
+            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI2/성물파괴이용불가"), alertmanager.alertenum.일반);
+            return;
+        }
         
         Panel.Show(false);
         Loading.SetActive(true);
         AntCaveObj.SetActive(false);
         string[] selects =
         {
-            "AntcaveLv"
+            "AntcaveLv",
+            "AntcaveMaxLv"
         };
         //데이터를 받아온다.
         Where where1 = new Where();
@@ -64,14 +78,46 @@ public class Antcavemanager : MonoBehaviour
                         
             jdatas = broj.FlattenRows()[0];
             
+            if (jdatas.ContainsKey("AntcaveMaxLv"))
+            {
+                PlayerBackendData.Instance.AntCaveLvMax = int.Parse(jdatas["AntcaveMaxLv"].ToString());
+            }
             if (jdatas.ContainsKey("AntcaveLv"))
             {
-//                Debug.Log("개미굴랭킹가져옴"+jdatas["AntcaveLv"].ToString());
-                
                 PlayerBackendData.Instance.AntCaveLv = int.Parse(jdatas["AntcaveLv"].ToString());
+
+//                Debug.Log("개미굴랭킹가져옴"+jdatas["AntcaveLv"].ToString());
+                if (PlayerBackendData.Instance.AntCaveLv == 0&&PlayerBackendData.Instance.AntCaveLvMax != 0)
+                {
+                    //100보다 큰고 나눴을때 소수점 버린 수
+                    PlayerBackendData.Instance.AntCaveLv = PlayerBackendData.Instance.AntCaveLvMax;
+                    //보상지급
+                    List<string> id = new List<string>();
+                    List<int> hw = new List<int>();
+
+                    int count=0;
+                    for (int i = 0; i < PlayerBackendData.Instance.AntCaveLv; i++)
+                    {
+                        AntCaveDB.Row data = AntCaveDB.Instance.GetAt(i);
+                        count += int.Parse(data.count);
+                    }
+                                    
+                    id.Add("1714");
+                    hw.Add(count);
+                    Inventory.Instance.AddItem("1714",count,false);
+                    Inventory.Instance.ShowEarnItem3(id.ToArray(), hw.ToArray(), false);
+                    RankingManager.Instance.RankInsert(PlayerBackendData.Instance.AntCaveLv.ToString(),RankingManager.RankEnum.개미굴);
+                    Savemanager.Instance.SaveInventory();
+                    Savemanager.Instance.Save();
+                    alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI8/개미굴점핑"),alertmanager.alertenum.일반);
+                }
+                
                 Loading.SetActive(false);
                 AntCaveObj.SetActive(true);
                 AntLv.text = $"{PlayerBackendData.Instance.AntCaveLv}F";
+                
+                
+                
             }
             else
             {
@@ -153,7 +199,7 @@ public class Antcavemanager : MonoBehaviour
     }
     public List<string> ids_save = new List<string>();
     public List<int> howmany_save = new List<int>();
-    private int savedlv = 0;
+    public int savedlv = 0;
     public void SaveReward()
     {
         AntCaveDB.Row data = AntCaveDB.Instance.Find_id(PlayerBackendData.Instance.AntCaveLv.ToString());
@@ -178,17 +224,36 @@ public class Antcavemanager : MonoBehaviour
         savedlv++;
     }
 
+    public int GetRound(int num)
+    {
+        int a = num - (num % 100);
+        Debug.Log("A는" + num);
+        return a;
+    }
+    
     public void GiveReward()
     {
+        if (GetRound(PlayerBackendData.Instance.AntCaveLv) > PlayerBackendData.Instance.AntCaveLvMax)
+        {
+            PlayerBackendData.Instance.AntCaveLvMax = GetRound(PlayerBackendData.Instance.AntCaveLv);
+        }
+
         Param param= new Param
         {
             //가방
+            { "AntcaveLv", PlayerBackendData.Instance.AntCaveLv.GetDecrypted() },
+            { "AntcaveMaxLv", PlayerBackendData.Instance.AntCaveLvMax.GetDecrypted() },
             { "AntTotalClear", PlayerBackendData.Instance.AntTotalClear.GetDecrypted() },
         };
         
         Where where = new Where();
         where.Equal("owner_inDate", PlayerBackendData.Instance.playerindate);
-        
+
+        SendQueue.Enqueue(Backend.GameData.Update, "RankData", where, param, (callback2) =>
+        {
+            Debug.Log(callback2);
+
+        });
         SendQueue.Enqueue(Backend.GameData.Update, "PlayerData", where, param, (callback2) =>
         {
             if (callback2.IsSuccess())
@@ -202,9 +267,12 @@ public class Antcavemanager : MonoBehaviour
                 Inventory.Instance.ShowEarnItem3(ids_save.ToArray(),howmany_save.ToArray(),false);
                 ids_save.Clear();
                 howmany_save.Clear();
+
                 RankingManager.Instance.RankInsert(PlayerBackendData.Instance.AntCaveLv.ToString(),RankingManager.RankEnum.개미굴);
                 FinishButton.gameObject.SetActive(false);
                 Settingmanager.Instance.SaveDataALl();
+                QuestManager.Instance.AddCount(savedlv, "content3");
+
                 LogManager.Log_CrystalEarn("개미굴");
             }
             else
@@ -243,6 +311,9 @@ public class Antcavemanager : MonoBehaviour
         {
             //가방
             { "AntcaveLv", PlayerBackendData.Instance.AntCaveLv.GetDecrypted() },
+            { "AntTotalClear", PlayerBackendData.Instance.AntTotalClear.GetDecrypted() },
+            { "AntcaveMaxLv", PlayerBackendData.Instance.AntCaveLvMax.GetDecrypted() },
+
         };
         
         Where where = new Where();
@@ -265,6 +336,9 @@ public class Antcavemanager : MonoBehaviour
                 }
                 Savemanager.Instance.SaveInventory();
                 Savemanager.Instance.Save();
+                
+                QuestManager.Instance.AddCount(savedlv, "content3");
+
                 Inventory.Instance.ShowEarnItem2(ids.ToArray(),howmany.ToArray(),false);
                 FinishButton.gameObject.SetActive(false);
                 RankingManager.Instance.RankInsert(PlayerBackendData.Instance.AntCaveLv.ToString(),RankingManager.RankEnum.개미굴);

@@ -371,11 +371,8 @@ public class NewIAPManager : MonoBehaviour
                 case EM_IAPConstants.Product_rpgg2_growthguide_premium:
                     PlayerBackendData.Instance.tutoguidepremium = true;
                     //현재 레벨아래 보상을 모두 다시 받음
-                    
-                    
                     List<string> idss = new List<string>();
                     List<int> hw = new List<int>();
-
                     if (PlayerBackendData.Instance.tutoguideid != 0)
                     {
                         for (int i = 0; i < PlayerBackendData.Instance.tutoguideid ; i++)
@@ -391,7 +388,6 @@ public class NewIAPManager : MonoBehaviour
                         }
                         Inventory.Instance.ShowEarnItem3(idss.ToArray(),hw.ToArray(),false);
                     }
-
                     TutorialTotalManager.Instance.RefreshNow();
                     Savemanager.Instance.SaveGuideQuest();
                     Savemanager.Instance.SaveInventory();

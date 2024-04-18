@@ -183,6 +183,11 @@ public class Timemanager : MonoBehaviour
         프상주간펫패키지2,
         파티레이드주간횟수,
         프상주간파티레이드충전권,
+        교환소등급재설정2,
+        교환소품질재설정2,
+        교환소특효재설정2,
+        교환소던전입장권2,
+        교환소성장입장권2,
         Length
     }
     public enum ContentEnumMonthly
@@ -391,6 +396,8 @@ public class Timemanager : MonoBehaviour
     
     private BackendReturnObject broCallback;
     public bool isachievereset = false;
+    public bool isachieveresetdaily = false;
+    public bool isachieveresetweekly = false;
        //12시가 지나면 체크한다.
        public void GetTime()
        {
@@ -485,7 +492,7 @@ public class Timemanager : MonoBehaviour
                        //IAPLKManager.Instance.SetRandomPackage();
 //                       Debug.Log("업적 초기화대기");
                        isachievereset = true;
-
+                       isachieveresetdaily = true;
                        if (SceneManager.GetActiveScene().name == "Lobby")
                        {
                            achievemanager.Instance.ResetCheck();
@@ -573,6 +580,7 @@ public class Timemanager : MonoBehaviour
                    if (date.Date < NowTime.Date)
                    {
                        Debug.Log("주간초기화진행");
+                       isachieveresetweekly = true;
                        for (int i = 0; i < WeeklyContentCount.Length; i++)
                        {
                            WeeklyContentCount[i] = WeeklyContentCount_Standard[i];

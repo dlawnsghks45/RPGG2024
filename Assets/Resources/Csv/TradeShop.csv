@@ -103,3 +103,8 @@ id,type,name,description,giveid,givehowmany,needid,needhowmany,buytype,arrynum,b
 ,,,,,,,,,,
 1078,Roulette,룰렛 보상,룰렛 열쇠 파편C,40022,1,40006,5,UnLimit,,13
 1079,Roulette,룰렛 보상,룰렛 열쇠 파편C,40023,1,40006,5,UnLimit,,13
+1080,Raid,등급 재설정,레이드토큰,52,1,20,360,weekly,교환소등급재설정2,30
+1081,Raid,품질 재설정,레이드토큰,53,1,20,360,weekly,교환소품질재설정2,30
+1082,Raid,특수효과 재설정,레이드토큰,54,1,20,360,weekly,교환소특효재설정2,30
+1083,Raid,던전 입장권,레이드토큰,1711,1,20,240,weekly,교환소던전입장권2,30
+1084,Raid,성장 콘텐츠 입장권,레이드토큰,1750,1,20,1000,weekly,교환소성장입장권2,30

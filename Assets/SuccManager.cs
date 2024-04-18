@@ -44,7 +44,7 @@ public class SuccManager : MonoBehaviour
     public EquipmentItemData LastSlot;
 
     public int lockcountEs = 0;
-    public int maxcount = 2;
+    public int maxcount = 5;
     public int resultcraft;
     public string resultrare;
 
@@ -66,7 +66,7 @@ public class SuccManager : MonoBehaviour
         lockcountEs = 0;
         foreach (var VARIABLE in EquipSkills)
         {
-            VARIABLE.UnLockEquipSkillSucc();
+            VARIABLE.LockEquipSkill();
         }
     }
 
@@ -90,31 +90,41 @@ public class SuccManager : MonoBehaviour
         NeedItem = "1000";
         NeedHowmany = 500000000;
         RefreshItem();
-        LastSlot.data.CraftRare1 = resultcraft;
-        LastSlot.data.Itemrare = resultrare;
-        //  ResultsEquipKeyId.EquipSkill1 = resulteskill;
-        //  ResultsEquipKeyId.IshaveEquipSkill = resultesbool;
-        
+        LayoutRebuilder.ForceRebuildLayoutImmediate(itemtext.GetComponentInParent<RectTransform>());
+
+        if (ResourceSlot.data.CraftRare1 > LastSlot.data.CraftRare1)
+        {
+            //����ᰡ �� ������
+            LastSlot.data.CraftRare1 = ResourceSlot.data.CraftRare1;
+        }
+
+        if (int.Parse(ResourceSlot.data.Itemrare) > int.Parse(LastSlot.data.Itemrare))
+        {
+            //����ᰡ �� ������
+            LastSlot.data.Itemrare = ResourceSlot.data.Itemrare;
+        }
+
         if (PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
                 .ToString())[ResultsEquipKeyId.KeyId1].SmeltSuccCount1 < ResourceSlot.data.SmeltSuccCount1)
         {
             //제련이 더 높은쪽으로
-            LastSlot.data.MaxStoneCount1 = PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
-                .ToString())[ResultsEquipKeyId.KeyId1].SmeltSuccCount1;
-            LastSlot.data.StoneCount1 = PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
-                .ToString())[ResultsEquipKeyId.KeyId1].StoneCount1;
-            LastSlot.data.SmeltStatCount1 = PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
-                .ToString())[ResultsEquipKeyId.KeyId1].SmeltStatCount1;
-            LastSlot.data.SmeltSuccCount1 = PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
-                .ToString())[ResultsEquipKeyId.KeyId1].SmeltSuccCount1;
-            LastSlot.data.SmeltFailCount1 = PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
-                .ToString())[ResultsEquipKeyId.KeyId1].SmeltFailCount1;
+            LastSlot.data.MaxStoneCount1 = ResourceSlot.data.MaxStoneCount1;
+            LastSlot.data.StoneCount1 = ResourceSlot.data.StoneCount1;
+            LastSlot.data.SmeltStatCount1 = ResourceSlot.data.SmeltStatCount1;
+            LastSlot.data.SmeltSuccCount1 = ResourceSlot.data.SmeltSuccCount1;
+            LastSlot.data.SmeltFailCount1 = ResourceSlot.data.SmeltFailCount1;
         }
-        
-        
-        //����ᰡ �� ������
+
+
+        LastSlot.data.EquipSkill1 = ResourceSlot.data.EquipSkill1;
+        LastSlot.data.IshaveEquipSkill = ResourceSlot.data.IshaveEquipSkill;
+
+        LastSlot.data.EnchantNum1 = ResourceSlot.data.EnchantNum1;
+        LastSlot.data.EnchantFail1 = ResourceSlot.data.EnchantFail1;
+
+
         LastSlot.Refresh(LastSlot.data);
-        maxcount = 2;
+        maxcount = 5;
     }
 
     //���±�
@@ -150,14 +160,14 @@ public class SuccManager : MonoBehaviour
             LastSlot.data.SmeltFailCount1 = ResourceSlot.data.SmeltFailCount1;
         }
 
-        
+
         LastSlot.data.EquipSkill1 = ResourceSlot.data.EquipSkill1;
         LastSlot.data.IshaveEquipSkill = ResourceSlot.data.IshaveEquipSkill;
 
         LastSlot.data.EnchantNum1 = ResourceSlot.data.EnchantNum1;
         LastSlot.data.EnchantFail1 = ResourceSlot.data.EnchantFail1;
-        
-        
+
+
         LastSlot.Refresh(LastSlot.data);
         maxcount = 5;
     }
@@ -260,7 +270,7 @@ public class SuccManager : MonoBehaviour
 
         for (int i = 0; i < EquipSkills.Length; i++)
         {
-            EquipSkills[i].LockEs.IsOn = false;
+            EquipSkills[i].LockEs.IsOn = true;
             EquipSkills[i].UnLockEquipSkillSucc();
         }
 
@@ -272,15 +282,26 @@ public class SuccManager : MonoBehaviour
 
         SuccPanel.Show(false);
 
-        if (toggles[0].IsOn)
+        //골드면골드
+        if (EquipItemDB.Instance.Find_id(ep.Itemid).SuccType == "gold")
         {
             Tg_SetGold();
+            isgold = true;
+            goldobj.SetActive(true);
+            itemobj.SetActive(false);
         }
         else
         {
             Tg_SetItem();
+            isgold = false;
+            goldobj.SetActive(false);
+            itemobj.SetActive(true);
         }
     }
+
+    public GameObject goldobj;
+    public GameObject itemobj;
+    bool isgold = false;
 
     public void StopSucc()
     {
@@ -290,11 +311,8 @@ public class SuccManager : MonoBehaviour
         lockcountEs = 0;
         for (int i = 0; i < EquipSkills.Length; i++)
         {
-            EquipSkills[i].LockEs.IsOn = false;
-            EquipSkills[i].UnLockEquipSkillSucc();
+            EquipSkills[i].LockEs.IsOn = true;
             EquipSkills[i].LockEs.Interactable = true;
-
-
         }
     }
 
@@ -308,7 +326,6 @@ public class SuccManager : MonoBehaviour
     public void Bt_TrySucc0()
     {
         SuccNoLockPanel.Show(false);
-        SuccNoLockText.text = string.Format(Inventory.GetTranslate("UI4/잠금된전승특수효과없음"), lockcountEs);
     }
 
 
@@ -328,163 +345,120 @@ public class SuccManager : MonoBehaviour
             plusnum = 1;
         }
 
-        switch (maxcount)
+        Debug.Log("시작");
+
+        bool ishave = true;
+        if (isgold)
         {
-            case 2:
-                if (NeedItem.Equals("1000") && PlayerBackendData.Instance.GetMoney() >= NeedHowmany)
-                {
-                    foreach (var VARIABLE in effect)
-                    {
-                        VARIABLE.Play();
-                    }
-                    blockifdoing.SetActive(true);
-                    Soundmanager.Instance.PlayerSound("Sound/강화확인전");
-                    succbutton.Interactable = false;
-                    //골드가 있다 소비
-                    PlayerData.Instance.DownGold(NeedHowmany);
-                    Debug.Log(plusnum);
-                    LastSlot.data.EquipSkill1 = LastSlot.data.GetESkill(plusnum);
-                    Inventory.Instance.RemoveItem(ResourceEquipKeyId.KeyId1);
-                    
-                    
-                    PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
-                        .ToString())[ResultsEquipKeyId.KeyId1].SetEquipSkills(LastSlot.data.EquipSkill1.ToArray());
-                    
-                    PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
-                        .ToString())[ResultsEquipKeyId.KeyId1].EnchantNum1 = LastSlot.data.EnchantNum1;
-                    PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
-                        .ToString())[ResultsEquipKeyId.KeyId1].EnchantFail1 = LastSlot.data.EnchantFail1;
+            if (NeedItem.Equals("1000") && PlayerBackendData.Instance.GetMoney() < NeedHowmany)
+            {
+                alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI/골드부족"), alertmanager.alertenum.일반);
+                ishave = false;
+            }
+            else
+            {
+                PlayerData.Instance.DownGold(NeedHowmany);
+                LogManager.LogSucc(ResourceEquipKeyId.KeyId1, ResultsEquipKeyId.KeyId1, "골드");
+                ishave = true;
+            }
+        }
+        else
+        {
+            if (NeedItem.Equals("1713") && PlayerBackendData.Instance.CheckItemCount("1713") < NeedHowmany)
+            {
+                alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI/재료부족"), alertmanager.alertenum.일반);
+                ishave = false;
+            }
+            else
+            {
+                //골드가 있다 소비
+                PlayerBackendData.Instance.RemoveItem(NeedItem, NeedHowmany);
+                ishave = true;
+            }
 
-                    
-                    
-                    if (Inventory.Instance.EquipSlots[Inventory.Instance.nowsettype].data.KeyId1.Equals(
-                            PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
-                                .ToString())[ResultsEquipKeyId.KeyId1].KeyId1))
-                    {
-                        Inventory.Instance.EquipSlots[Inventory.Instance.nowsettype].SetItem(PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
-                            .ToString())[ResultsEquipKeyId.KeyId1]);
-                    }
-
-                    
-                    
-                    Savemanager.Instance.SaveMoneyCashDirect();
-                    yield return SpriteManager.Instance.GetWaitforSecond(1);
-                    Finisheffect.Play();
-                    Savemanager.Instance.SaveTypeEquip();
-                    Soundmanager.Instance.PlayerSound("Sound/Special Click 05");
-
-                    
-                    yield return SpriteManager.Instance.GetWaitforSecond(1);
-                    blockifdoing.SetActive(false);
-                    Inventory.Instance.ShowEquipInventory(Inventory.Instance.nowsettype);
-                    LogManager.LogSucc(ResourceEquipKeyId.KeyId1, ResultsEquipKeyId.KeyId1, "골드");
-                    equipoptionchanger.Instance.Bt_SaveServerData();
-                    IsSucc = false;
-
-                }
-                else
-                {
-                    //골드부족
-                    alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI/골드부족"), alertmanager.alertenum.일반);
-                }
-
-                //골드전승
-                break;
-            case 5:
-                if (NeedItem.Equals("1713") && PlayerBackendData.Instance.CheckItemCount("1713") >= NeedHowmany)
-                {
-                    foreach (var VARIABLE in effect)
-                    {
-                        VARIABLE.Play();
-                    }
-
-                    blockifdoing.SetActive(true);
-
-                    Soundmanager.Instance.PlayerSound("Sound/강화확인전");
-                    succbutton.Interactable = false;
-                    //골드가 있다 소비
-                    PlayerBackendData.Instance.RemoveItem(NeedItem, NeedHowmany);
-                    LastSlot.data.EquipSkill1 = LastSlot.data.GetESkill(plusnum);
-                    Inventory.Instance.RemoveItem(ResourceEquipKeyId.KeyId1);
-
-                    int MaxStoneCount; //제련 카운트 최대 치 이며 해당 수치까지 제련이 가능
-                    int StoneCount; //제련 현재 카운트
-                    int[] SmeltStatCount; //제련을 할 때 해당 칸을 보여준다 0은 빈칸 1은 성공 2는 실패
-                    int SmeltSuccCount; //실패횟수
-                    int SmeltFailCount; //성공횟수
-
-                    if (PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
-                            .ToString())[ResultsEquipKeyId.KeyId1].SmeltSuccCount1 < LastSlot.data.SmeltSuccCount1)
-                    {
-                        //제련이 더 높은쪽으로
-                        PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
-                            .ToString())[ResultsEquipKeyId.KeyId1].MaxStoneCount1 = LastSlot.data.MaxStoneCount1;
-                        
-                        PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
-                            .ToString())[ResultsEquipKeyId.KeyId1].StoneCount1 = LastSlot.data.StoneCount1;
-                        
-                        PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
-                            .ToString())[ResultsEquipKeyId.KeyId1].SmeltStatCount1 = LastSlot.data.SmeltStatCount1;
-                        
-                        PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
-                            .ToString())[ResultsEquipKeyId.KeyId1].SmeltSuccCount1 = LastSlot.data.SmeltSuccCount1;
-                        
-                        PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
-                            .ToString())[ResultsEquipKeyId.KeyId1].SmeltFailCount1 = LastSlot.data.SmeltFailCount1;
+            Debug.Log("시작");
 
 
-                    }
 
-
-                    PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
-                        .ToString())[ResultsEquipKeyId.KeyId1].SetEquipSkills(LastSlot.data.EquipSkill1.ToArray());
-
-                    PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
-                        .ToString())[ResultsEquipKeyId.KeyId1].CraftRare1 = LastSlot.data.CraftRare1;
-
-                    PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
-                        .ToString())[ResultsEquipKeyId.KeyId1].Itemrare = LastSlot.data.Itemrare;
-
-                    PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
-                        .ToString())[ResultsEquipKeyId.KeyId1].EnchantNum1 = LastSlot.data.EnchantNum1;
-                    PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
-                        .ToString())[ResultsEquipKeyId.KeyId1].EnchantFail1 = LastSlot.data.EnchantFail1;
-
-
-                    if (Inventory.Instance.EquipSlots[Inventory.Instance.nowsettype].data.KeyId1.Equals(
-                            PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
-                                .ToString())[ResultsEquipKeyId.KeyId1].KeyId1))
-                    {
-                        Inventory.Instance.EquipSlots[Inventory.Instance.nowsettype].SetItem(PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
-                            .ToString())[ResultsEquipKeyId.KeyId1]);
-                    }
-                    
-                    
-                    Savemanager.Instance.SaveInventory();
-                    Savemanager.Instance.SaveTypeEquip();
-                    yield return SpriteManager.Instance.GetWaitforSecond(1);
-                    Finisheffect.Play();
-                    Soundmanager.Instance.PlayerSound("Sound/Special Click 05");
-                    yield return SpriteManager.Instance.GetWaitforSecond(1);
-                    blockifdoing.SetActive(false);
-                    Inventory.Instance.ShowEquipInventory(Inventory.Instance.nowsettype);
-                    LogManager.LogSucc(ResourceEquipKeyId.KeyId1, ResultsEquipKeyId.KeyId1, "전승석");
-                    equipoptionchanger.Instance.Bt_SaveServerData();
-                    Savemanager.Instance.Save();
-                    IsSucc = false;
-                }
-                else
-                {
-                    //골드부족
-                    alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI/재료부족"), alertmanager.alertenum.일반);
-                }
-
-             
-
-                //전승석전승
-                break;
         }
 
-    }
+        if (ishave)
+        {
+            foreach (var VARIABLE in effect)
+            {
+                VARIABLE.Play();
+            }
 
+            Debug.Log("시작");
+            blockifdoing.SetActive(true);
+
+            Soundmanager.Instance.PlayerSound("Sound/강화확인전");
+            succbutton.Interactable = false;
+
+            LastSlot.data.SendSkill(plusnum);
+            Inventory.Instance.RemoveItem(ResourceEquipKeyId.KeyId1);
+
+
+            if (PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
+                    .ToString())[ResultsEquipKeyId.KeyId1].SmeltSuccCount1 < LastSlot.data.SmeltSuccCount1)
+            {
+                //제련이 더 높은쪽으로
+                PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
+                    .ToString())[ResultsEquipKeyId.KeyId1].MaxStoneCount1 = LastSlot.data.MaxStoneCount1;
+
+                PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
+                    .ToString())[ResultsEquipKeyId.KeyId1].StoneCount1 = LastSlot.data.StoneCount1;
+
+                PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
+                    .ToString())[ResultsEquipKeyId.KeyId1].SmeltStatCount1 = LastSlot.data.SmeltStatCount1;
+
+                PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
+                    .ToString())[ResultsEquipKeyId.KeyId1].SmeltSuccCount1 = LastSlot.data.SmeltSuccCount1;
+
+                PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
+                    .ToString())[ResultsEquipKeyId.KeyId1].SmeltFailCount1 = LastSlot.data.SmeltFailCount1;
+
+
+            }
+
+
+            PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
+                .ToString())[ResultsEquipKeyId.KeyId1].SetEquipSkills(LastSlot.data.EquipSkill1.ToArray());
+
+            PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
+                .ToString())[ResultsEquipKeyId.KeyId1].CraftRare1 = LastSlot.data.CraftRare1;
+
+            PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
+                .ToString())[ResultsEquipKeyId.KeyId1].Itemrare = LastSlot.data.Itemrare;
+
+            PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
+                .ToString())[ResultsEquipKeyId.KeyId1].EnchantNum1 = LastSlot.data.EnchantNum1;
+            PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
+                .ToString())[ResultsEquipKeyId.KeyId1].EnchantFail1 = LastSlot.data.EnchantFail1;
+
+
+            if (Inventory.Instance.EquipSlots[Inventory.Instance.nowsettype].data.KeyId1.Equals(
+                    PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
+                        .ToString())[ResultsEquipKeyId.KeyId1].KeyId1))
+            {
+                Inventory.Instance.EquipSlots[Inventory.Instance.nowsettype].SetItem(
+                    PlayerBackendData.Instance.GetTypeEquipment(Inventory.Instance.nowsettype
+                        .ToString())[ResultsEquipKeyId.KeyId1]);
+            }
+
+            Savemanager.Instance.SaveMoneyCashDirect();
+            Savemanager.Instance.SaveInventory();
+            Savemanager.Instance.SaveTypeEquip();
+            yield return SpriteManager.Instance.GetWaitforSecond(1);
+            Finisheffect.Play();
+            Soundmanager.Instance.PlayerSound("Sound/Special Click 05");
+            yield return SpriteManager.Instance.GetWaitforSecond(1);
+            blockifdoing.SetActive(false);
+            Inventory.Instance.ShowEquipInventory(Inventory.Instance.nowsettype);
+            LogManager.LogSucc(ResourceEquipKeyId.KeyId1, ResultsEquipKeyId.KeyId1, "전승석");
+            equipoptionchanger.Instance.Bt_SaveServerData();
+            Savemanager.Instance.Save();
+            IsSucc = false;
+        }
+    }
 }

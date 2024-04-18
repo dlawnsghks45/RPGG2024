@@ -172,6 +172,10 @@ public class EquipDatabase : IEquatable<object>
             rares = 0;
             this.itemrare = "0";
             MaxStoneCount = 0;
+            if (maxStoneCount == "0")
+                MaxStoneCount = 0;
+            else
+                MaxStoneCount = UnityEngine.Random.Range(int.Parse(ransmelt[0]), int.Parse(ransmelt[1]) + 1);
         }
         else
         {
@@ -279,6 +283,13 @@ public class EquipDatabase : IEquatable<object>
         }
     }
 
+    public void SendSkill(int pluscount = 0)
+    {
+        if (pluscount == 1)
+        {
+            EquipSkill1[0] = EquipItemDB.Instance.Find_id(itemid).SpeMehodP;
+        }
+    }
     public List<string> GetESkill(int pluscount = 0)
     {
         equipoptionchanger.Instance.lockcountEs = 0;
@@ -307,14 +318,14 @@ public class EquipDatabase : IEquatable<object>
         //잠금이있을수있으니 미리넣는다.
 
         bool ESislock = false;
-        if (equipoptionchanger.Instance.lockcountEs > 0 || SuccManager.Instance.lockcountEs > 0)
-        {
+       // if (equipoptionchanger.Instance.lockcountEs > 0 || SuccManager.Instance.lockcountEs > 0)
+       // {
             ESislock = true;
             for (int i = 0; i < EquipSkill.Count; i++)
             {
                 LockSkill.Add(EquipSkill[i]);
             }
-        }
+       // }
         
         if (curcount-num == 0) //특수효과가 1이면 0 0이면 개수만큼
             curcount = 1 + num; //이라면 0

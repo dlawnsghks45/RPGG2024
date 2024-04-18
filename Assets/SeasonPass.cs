@@ -34,6 +34,7 @@ public class SeasonPass : MonoBehaviour
     public GameObject seasonNoAchieve;
     
     public GameObject PremiumButton;
+    public GameObject PremiumQuestPanel;
     public GameObject LevelButton;
     [SerializeField]
     int nowseasonnum = 0;
@@ -59,6 +60,16 @@ public class SeasonPass : MonoBehaviour
                 PlayerBackendData.Instance.SeasonPassPremiumReward[i] = false;
             }
             
+            PlayerBackendData.Instance.QuestTotalCount[2] = 0;
+            //업적 초기화
+            for (int i = 0; i < QuestDB.Instance.NumRows(); i++)
+            {
+                if (bool.Parse(QuestDB.Instance.GetAt(i).isevent))
+                {
+                    PlayerBackendData.Instance.QuestCount[i] = 0;
+                    PlayerBackendData.Instance.QuestIsFinish[i] = false;
+                }
+            }
             Param param = new Param
             {
                 //가방
@@ -107,6 +118,8 @@ public class SeasonPass : MonoBehaviour
             PassImage.sprite = PassImagesprite[1];
             seasonglow.SetActive(true);
             PremiumButton.SetActive(false);
+            PremiumQuestPanel.SetActive(false);
+            
             if (PlayerBackendData.Instance.SeasonPassExp >= 100000)
             {
                 SeasonPass.Instance.LevelButton.SetActive(false);
@@ -119,6 +132,8 @@ public class SeasonPass : MonoBehaviour
             PassImage.sprite = PassImagesprite[0];
             seasonglow.SetActive(false);
             PremiumButton.SetActive(true);
+            PremiumQuestPanel.SetActive(true);
+
             LevelButton.SetActive(false);
             
         }

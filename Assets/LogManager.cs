@@ -85,28 +85,57 @@ public class LogManager : MonoBehaviour
             // 이후 처리
         });
     }
+
     public static void LogTutorial(string id)
     {
-        Param param = new Param ();
-        param.Add ( "ID", id);
-        SendQueue.Enqueue(Backend.GameLog.InsertLogV2, "TutoTableNEW", param, ( callback ) => 
+        Param param = new Param();
+        param.Add("ID", id);
+        SendQueue.Enqueue(Backend.GameLog.InsertLogV2, "TutoTableNEW2", param, (callback) =>
         {
-            
+
             // 이후 처리
-            
+
         });
     }
-    
+
     public static void LogTutorialGuide(string id)
     {
         Param param = new Param ();
         param.Add ( "ID", id);
-        SendQueue.Enqueue(Backend.GameLog.InsertLogV2, "GuideQuest", param, ( callback ) => 
+
+        //튜토유저
+        if (PlayerBackendData.Instance.CheckItemCount("996") >= 1)
+        {
+            Debug.Log("초보");
+
+            SendQueue.Enqueue(Backend.GameLog.InsertLogV2, "GuideQuest_New", param, ( callback ) => 
+            {
+                // 이후 처리
+            });
+            return;
+        }
+
+        //베테랑유저
+        if (PlayerBackendData.Instance.CheckItemCount("997") >= 1)
+        {
+            Debug.Log("베테랑");
+
+            SendQueue.Enqueue(Backend.GameLog.InsertLogV2, "GuideQuest_Expert", param, (callback) =>
+            {
+                // 이후 처리
+
+            });
+            return;
+        }
+        Debug.Log("일반ㅑ");
+
+        SendQueue.Enqueue(Backend.GameLog.InsertLogV2, "GuideQuest", param, (callback) =>
         {
             
             // 이후 처리
-            
+
         });
+
     }
     public static void LogCraft(string id,string result,int count)
     {
@@ -692,4 +721,17 @@ public class LogManager : MonoBehaviour
             }
         });
     }
+    
+    public static void Log_SelectTutoType(string Type)
+    {
+        Param param = new Param();
+        param.Add("타입", Type);
+        SendQueue.Enqueue(Backend.GameLog.InsertLogV2, "튜토리얼타입", param, (callback) =>
+        {
+            // 이후 처리
+            if (callback.IsSuccess())
+            {
+            }
+        });
+    } 
 }

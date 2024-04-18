@@ -5544,7 +5544,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2583201644805281960, guid: 2196a2cf2f8352c459260890ea917f67, type: 3}
       propertyPath: m_Text
-      value: "\uC815\uBCF4\uBCF4\uAE30"
+      value: "\uC7A5\uCC29"
       objectReference: {fileID: 0}
     - target: {fileID: 2583201644805281960, guid: 2196a2cf2f8352c459260890ea917f67, type: 3}
       propertyPath: m_FontData.m_BestFit

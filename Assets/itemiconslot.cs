@@ -9,6 +9,8 @@ public class itemiconslot : MonoBehaviour
     public bool isguide; //성장지표용
     [SerializeField]
     private bool isequip; 
+    [SerializeField]
+    private bool isequipchoice; 
     public string id;
     [SerializeField]
     public decimal count;
@@ -124,7 +126,14 @@ public class itemiconslot : MonoBehaviour
     {
         if (id != "")
         {
-            Refresh(id, count, false, false);
+            if (isequip)
+            {
+                Refresh(id, count, false, false,true);
+            }
+            else
+            {
+                Refresh(id, count, false, false);
+            }
         }
     }
 
@@ -132,7 +141,12 @@ public class itemiconslot : MonoBehaviour
     {
         if (isequip)
         {
-            if (isguide)
+            if (isequipchoice)
+            {
+                uimanager.Instance.AddUiview(GrowEventmanager.Instance.GrowChoicePanel, true);
+
+            }
+            else if (isguide)
             {
                 uimanager.Instance.AddUiview(growthmanager.Instance.panel,true);
             }
@@ -143,9 +157,8 @@ public class itemiconslot : MonoBehaviour
             Inventory.Instance.ShowInventoryItem_NoMine(id);
         }
     }
-    
-    
-  
+
+
     static string FormatNumber(decimal num)
     {
         if (num >= 100000000) {

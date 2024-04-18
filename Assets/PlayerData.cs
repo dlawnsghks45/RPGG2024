@@ -278,7 +278,7 @@ public class PlayerData : MonoBehaviour
         {
                 materials.SetFloat(Shader.PropertyToID("_OuterOutlineFade"), 1f);
                 materials.SetColor(Shader.PropertyToID("_OuterOutlineColor"),
-                    Inventory.Instance.GetRareColor(rare.ToString()));
+                    Inventory.Instance.GetRareColor((rare+1).ToString()));
         }
     }
 
@@ -580,10 +580,9 @@ public class PlayerData : MonoBehaviour
 
     public void RefreshAchExp()
     {
-        //PlayerExp.fillAmount = (0.14f + (float)(PlayerBackendData.Instance.GetExp() / PlayerBackendData.Instance.GetMaxExp()));
         Level_Achexp.text =
             $"{PlayerBackendData.Instance.GetAchExp().ToString("N0")}/{PlayerBackendData.Instance.GetMaxAchExp().ToString("N0")}";
-        Level_Achslider.value = (float)PlayerBackendData.Instance.GetAchExp() / (float)PlayerBackendData.Instance.GetMaxAchExp();
+        Level_Achslider.fillAmount = (float)PlayerBackendData.Instance.GetAchExp() / (float)PlayerBackendData.Instance.GetMaxAchExp();
         //CheckLvup();
     }
 
@@ -607,7 +606,7 @@ public class PlayerData : MonoBehaviour
         Level_lv.text = $"Lv.{PlayerBackendData.Instance.GetLv().ToString()}";
         Level_Achlv.text = $"Lv.{PlayerBackendData.Instance.GetAchLv().ToString()}";
         string stat = AchievementStatDB.Instance.Find_id(PlayerBackendData.Instance.GetAchLv().ToString()).str;
-        AchStat.text = string.Format(Inventory.GetTranslate("UI/업적 능력치 상세"), stat, stat, stat, stat);
+        AchStat.text = string.Format(Inventory.GetTranslate("UI/업적 능력치 상세"), stat);
 
 //////        Debug.Log(LevelDB.Instance.Find_Lv(PlayerBackendData.Instance.GetLv().ToString()).RequiredExp);
         //맥스경험치
@@ -828,6 +827,12 @@ public class PlayerData : MonoBehaviour
     }
     public void EarnAchExp(decimal exp)
     {
+        if (PlayerBackendData.Instance.GetAchLv() >= 1200)
+        {
+            
+            return;
+        }
+        
         PlayerBackendData.Instance.AddAchExp(exp);
         bt_LvupbuttonAch();
         RefreshAchExp();
@@ -856,7 +861,7 @@ public class PlayerData : MonoBehaviour
     public Text Level_Achlv;
     public Text AchStat;
     public Slider Level_slider;
-    public Slider Level_Achslider;
+    public Image Level_Achslider;
 
     public Text Battlepoint;
     public Text BattlepointEquipBag;

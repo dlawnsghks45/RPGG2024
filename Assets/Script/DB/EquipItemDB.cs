@@ -101,6 +101,9 @@ public class EquipItemDB : MonoBehaviour
 		public string AdvanPercent;
 		public string ChangeId;
 		public string UpgradeNeedID;
+		public string SuccType;
+		public string SuccNeedId;
+		public string SuccNeedCount;
 
 	}
 
@@ -189,6 +192,9 @@ public class EquipItemDB : MonoBehaviour
 			row.AdvanPercent = grid[i][62];
 			row.ChangeId = grid[i][63];
 			row.UpgradeNeedID = grid[i][64];
+			row.SuccType = grid[i][65];
+			row.SuccNeedId = grid[i][66];
+			row.SuccNeedCount = grid[i][67];
 
 			rowList.Add(row);
 		}
@@ -726,6 +732,30 @@ public class EquipItemDB : MonoBehaviour
 	public List<Row> FindAll_UpgradeNeedID(string find)
 	{
 		return rowList.FindAll(x => x.UpgradeNeedID == find);
+	}
+	public Row Find_SuccType(string find)
+	{
+		return rowList.Find(x => x.SuccType == find);
+	}
+	public List<Row> FindAll_SuccType(string find)
+	{
+		return rowList.FindAll(x => x.SuccType == find);
+	}
+	public Row Find_SuccNeedId(string find)
+	{
+		return rowList.Find(x => x.SuccNeedId == find);
+	}
+	public List<Row> FindAll_SuccNeedId(string find)
+	{
+		return rowList.FindAll(x => x.SuccNeedId == find);
+	}
+	public Row Find_SuccNeedCount(string find)
+	{
+		return rowList.Find(x => x.SuccNeedCount == find);
+	}
+	public List<Row> FindAll_SuccNeedCount(string find)
+	{
+		return rowList.FindAll(x => x.SuccNeedCount == find);
 	}
 
 }

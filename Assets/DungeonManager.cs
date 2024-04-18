@@ -224,6 +224,8 @@ public GameObject DungeonRewardPanel;
     //던전 목록 보여줌
     public void Bt_ShowDungeonPanel()
     {
+     
+        
         RefreshCount();
         if (isshowingpanel)
         {
@@ -491,7 +493,10 @@ public GameObject DungeonRewardPanel;
             
         LogManager.Stang_Dungeon(autocount_Doing);
         isstang = true;
-        achievemanager.Instance.AddCount(Acheves.던전격파,autocount_Doing);
+        
+   //     achievemanager.Instance.AddCount(Acheves.던전격파,autocount_Doing);
+        QuestManager.Instance.AddCount(autocount_Doing, "dungeon");
+
         FinishDungeonLoot();
         /*
         if (Inventory.Instance.istrue)

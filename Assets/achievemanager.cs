@@ -29,9 +29,8 @@ public class achievemanager : MonoBehaviour
     public UIView Achievepanel;
     private void Start()
     {
-        InvokeRepeating(nameof(save), 10f,60f);
-        ResetCheck();
-        CheckReSetIfNO();
+        //ResetCheck();
+        //CheckReSetIfNO();
     }
 
 
@@ -403,7 +402,6 @@ public class achievemanager : MonoBehaviour
        {
            Debug.Log("업적저장");
            Settingmanager.Instance.SaveDataAchieveInven();
-           alertmanager.Instance.NotiCheck_Achieve();
            Savemanager.Instance.SaveAchieveDirect();
            Savemanager.Instance.Save();
        }
@@ -414,7 +412,7 @@ public class achievemanager : MonoBehaviour
        if(SeasonPass.Instance.GetLv() >= 50)
            return;
 
-
+/*
        foreach (var t in Seasonacheveslots.Where(t => t.data.Curcount >= t.data.Maxcount && !t.data.Isfinish))
        {
 //               Debug.Log("뭐가있다");
@@ -422,12 +420,14 @@ public class achievemanager : MonoBehaviour
            alertmanager.Instance.Alert_SeasonPass[1].SetActive(true);
            return;
        }
+       */
    }
    public void FinishAllSeason()
    {
        if(SeasonPass.Instance.GetLv() >= 50)
            return;
-       
+       return;
+
        id.Clear();
        hw.Clear();
        bool isclear = true;

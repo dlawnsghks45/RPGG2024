@@ -114,6 +114,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 13cffcc793504e747ab1a2936d561c09, type: 3}
   - {fileID: 21300000, guid: 9ad5a0f75088ecb4ba8e40a8f1421b98, type: 3}
   - {fileID: 21300000, guid: 9d8eb40834d875840a5cd9b465cd0a29, type: 3}
+  - {fileID: 21300000, guid: c7218e28a70f36146a6d705837674a05, type: 3}
   - {fileID: 21300000, guid: 8157cf3838809fd4f95a1d9848df791e, type: 3}
   - {fileID: 21300000, guid: d63eec4820f707c42ad4bc5bbe16579c, type: 3}
   - {fileID: 21300000, guid: 1c147658a2cd4a148a64f8688afdae08, type: 3}
@@ -225,6 +226,7 @@ SpriteAtlas:
   - c2570
   - c3230
   - ButtonYellowPressed
+  - c38
   - c135
   - c400
   - ButtonNormal
