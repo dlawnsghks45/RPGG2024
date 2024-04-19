@@ -231,7 +231,14 @@ public string petrare;
     ObscuredInt Ach_Lv = 1; //캐릭 레벨
     public Dictionary<string, Achievedata> PlayerAchieveData = new Dictionary<string, Achievedata>();
 
-   
+    //탈리스만
+    public Dictionary<string, Talismandatabase> TalismanData = new Dictionary<string, Talismandatabase>();
+    public string[] EquipTalisman = new string[8];
+    public bool[] TalismanLock = new bool[8];
+    public List<string> Talisman2Set = new List<string>();
+    public List<string> Talisman3Set = new List<string>();
+    public List<string> Talisman5Set = new List<string>();
+
    //퀘스트
    
    //퀘스트 개별

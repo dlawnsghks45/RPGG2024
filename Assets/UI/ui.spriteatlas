@@ -98,6 +98,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 4effa9353161d654aaaef8a85c658683, type: 3}
   - {fileID: 21300000, guid: 8bca9f55678798545ace6562a3f48350, type: 3}
   - {fileID: 21300000, guid: 62e06d75d72734945965d30e827bb010, type: 3}
+  - {fileID: 21300000, guid: 9c8cad95399b5fa4daf6adfbee239ee5, type: 3}
   - {fileID: 21300000, guid: 747f76c5924e6f94a8f72791dc47de23, type: 3}
   - {fileID: 21300000, guid: 10693a465ceb3d54091ced773d2296be, type: 3}
   - {fileID: 21300000, guid: 131132760ac596c47a59a379289de30c, type: 3}
@@ -210,6 +211,7 @@ SpriteAtlas:
   - ButtonPinkPressed
   - c332
   - c98
+  - Demon_scull_dark_shadow
   - c113
   - c14
   - ButtonPurplePressed

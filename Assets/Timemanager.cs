@@ -813,20 +813,26 @@ public class Timemanager : MonoBehaviour
         param.Clear();
         GetTime();
 
+        
+        Debug.Log("시간을 확인");
         if (index == ContentEnumDaily.길드출석)
         {
             if (DailyContentCount[(int)index] > 1)
                 DailyContentCount[(int)index] = 1;
         }
-        
+        Debug.Log("시간을 확인");
         if (DailyContentCount[(int)index].Equals(0))
         {
             alertmanager.Instance.ShowAlert("횟수가 부족합니다.",alertmanager.alertenum.주의);
+            Debug.Log("시간을 확인");
+
             //timedele();
             return false;
         }
+        Debug.Log("시간을 확인");
         DailyContentCount[(int)index]--;
         param.Add("DailyCount", DailyContentCount);
+        Debug.Log("시간을 확인");
         bool istrue = false;
 
         

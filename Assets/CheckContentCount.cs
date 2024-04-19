@@ -13,10 +13,13 @@ public class CheckContentCount : MonoBehaviour
             return;
         }
         
-        if (PlayerBackendData.Instance.PlayerAchieveData["A2001"].Curcount == 0 &&
+        if (PlayerBackendData.Instance.QuestCount[6] == 0 &&
             Timemanager.Instance.DailyContentCount[0].Equals(0))
         {
             Timemanager.Instance.AddDailyCount(Timemanager.ContentEnumDaily.¼º¹°ÀüÀï, 1);
+            Debug.Log("È½¼ö ÃæÀü");
+            Debug.Log(PlayerBackendData.Instance.QuestCount[6] );
+            Debug.Log(Timemanager.Instance.DailyContentCount[0]);
         }
     }
 }

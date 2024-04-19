@@ -57,10 +57,12 @@ public class  altarwarmanager : MonoBehaviour
 
             if (Application.platform == RuntimePlatform.Android)
             {
-            
-            if (!Timemanager.Instance.ConSumeCount_DailyAscny(Timemanager.ContentEnumDaily.성물전쟁)) return;
-        }
-        Debug.Log("성물전쟁시작");
+
+                if (!Timemanager.Instance.ConSumeCount_DailyAscny(Timemanager.ContentEnumDaily.성물전쟁)) return;
+
+            }
+            QuestManager.Instance.AddCount(1, "content1");
+            Debug.Log("성물전쟁시작");
         totaldmg = 0;
         dropsid.Clear();
         dropshowmany.Clear();
@@ -117,7 +119,6 @@ public class  altarwarmanager : MonoBehaviour
             }
         });
        // achievemanager.Instance.AddCount(Acheves.성물전쟁완료);
-        QuestManager.Instance.AddCount(1, "content1");
         RewardPanel.SetActive(true);
         yield return waits2;
         for (int i = 0; i < dropsid.Count;i++)

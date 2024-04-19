@@ -142,6 +142,8 @@ public class QuestManager : MonoBehaviour
             {
                 Questslots[i].GetReward_All();
             }
+            
+            Questslots[i].Refresh();
         }
 
         if (id.Count != 0)

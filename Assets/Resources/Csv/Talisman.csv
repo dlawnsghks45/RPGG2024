@@ -1,0 +1,10 @@
+id,num,description,name,eskill,setinfo1,setinfo2,setinfo3,sprite
+T1000,0,대지의 탈리스만 코어,Talismanname/1000,1000,Talismansetinfo/1000_1,Talismansetinfo/1000_2,Talismansetinfo/1000_3,Item/Talisman/0
+T1001,1,죽음의 탈리스만 코어,Talismanname/1001,1000,Talismansetinfo/1001_1,Talismansetinfo/1001_2,Talismansetinfo/1001_3,Item/Talisman/1
+T1002,2,칼날의 탈리스만 코어,Talismanname/1002,1000,Talismansetinfo/1002_1,Talismansetinfo/1002_2,Talismansetinfo/1002_3,Item/Talisman/2
+T1003,3,용의 탈리스만 코어,Talismanname/1003,1000,Talismansetinfo/1003_1,Talismansetinfo/1003_2,Talismansetinfo/1003_3,Item/Talisman/3
+T1004,4,독사의 탈리스만 코어,Talismanname/1004,1000,Talismansetinfo/1004_1,Talismansetinfo/1004_2,Talismansetinfo/1004_3,Item/Talisman/4
+T1005,5,번개의 탈리스만 코어,Talismanname/1005,1000,Talismansetinfo/1005_1,Talismansetinfo/1005_2,Talismansetinfo/1005_3,Item/Talisman/5
+T1006,6,빛의 탈리스만 코어,Talismanname/1006,1000,Talismansetinfo/1006_1,Talismansetinfo/1006_2,Talismansetinfo/1006_3,Item/Talisman/6
+T1007,7,거인의 탈리스만 코어,Talismanname/1007,1000,Talismansetinfo/1007_1,Talismansetinfo/1007_2,Talismansetinfo/1007_3,Item/Talisman/7
+T1008,8,키메라의 탈리스만 코어,Talismanname/1008,1000,Talismansetinfo/1008_1,Talismansetinfo/1008_2,Talismansetinfo/1008_3,Item/Talisman/8
