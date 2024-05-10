@@ -303,6 +303,10 @@ public class SeasonPass : MonoBehaviour
             { "SeasonPassExp", PlayerBackendData.Instance.SeasonPassExp.GetDecrypted() },
             { "SeasonPassBasicReward", PlayerBackendData.Instance.SeasonPassBasicReward },
             { "SeasonPassPremiumReward", PlayerBackendData.Instance.SeasonPassPremiumReward },
+            { "QuestCount", PlayerBackendData.Instance.QuestCount },
+            { "QuestIsFinish", PlayerBackendData.Instance.QuestIsFinish },
+            { "QuestTotalCount", PlayerBackendData.Instance.QuestTotalCount },
+            
         };
         // key 컬럼의 값이 keyCode인 데이터 검색
         Where where = new Where();
@@ -318,7 +322,6 @@ public class SeasonPass : MonoBehaviour
         Param param = new Param
         {
             //가방
-            { "Achievement", PlayerBackendData.Instance.PlayerAchieveData },
             { "Crystal", PlayerBackendData.Instance.GetMoney() },
             { "Gold", PlayerBackendData.Instance.GetCash() },
             { "inventory", PlayerBackendData.Instance.ItemInventory },

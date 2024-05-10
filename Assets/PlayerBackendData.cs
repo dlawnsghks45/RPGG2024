@@ -1,13 +1,10 @@
 using CodeStage.AntiCheat.ObscuredTypes;
-using Sirenix.OdinInspector;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using BackEnd;
-using Doozy.Engine.Utils.ColorModels;
 using UnityEngine;
-using UnityEngine.UIElements;
 using Random = UnityEngine.Random;
 
 public class PlayerBackendData : MonoBehaviour
@@ -69,6 +66,10 @@ public class PlayerBackendData : MonoBehaviour
         initrandomseed();
         Screen.SetResolution(720, 1280, false);
         Application.targetFrameRate = 60;
+        for (int i = 0; i < TalismanPreset.Length; i++)
+        {
+            TalismanPreset[i] = new PresetTalisman();
+        }
         DontDestroyOnLoad(this);
     }
 
@@ -233,11 +234,17 @@ public string petrare;
 
     //탈리스만
     public Dictionary<string, Talismandatabase> TalismanData = new Dictionary<string, Talismandatabase>();
-    public string[] EquipTalisman = new string[8];
-    public bool[] TalismanLock = new bool[8];
+    //public bool[] TalismanLock = new bool[8];
     public List<string> Talisman2Set = new List<string>();
     public List<string> Talisman3Set = new List<string>();
     public List<string> Talisman5Set = new List<string>();
+    public int nowtalismanpreset = 0;
+    public PresetTalisman[] TalismanPreset = new PresetTalisman[5];
+
+    public Talismandatabase[] GiveEquipTalismanData()
+    {
+        return TalismanPreset[nowtalismanpreset].Talismanset;
+    }
 
    //퀘스트
    
@@ -454,7 +461,7 @@ public string petrare;
      * 힘   : 생명력 과 공격력이 소폭 오른다.
      * 민첩 : 생명력 소폭과 공격력이 대폭 오른다.
      * 지능 : 마법 공격력이 대폭 오른다.
-     * 지혜 : 최대 생명력과 최대 정신력이 오른다.
+     * 지혜 : 최대 생명력과 최대 정신력이 오
      */
     //무기
 
@@ -821,6 +828,34 @@ public string petrare;
         }
     }
 
+    public void MakeTalisman(string id)
+    {
+
+        while (true)
+        {
+            string keyids = artifactname(id);
+            if(TalismanData.ContainsKey(keyids))
+                continue;
+            
+            TalismanData.Add(keyids, new Talismandatabase(keyids, id));
+            return;
+        }
+    }    
+    public Talismandatabase MakeTalismanDatabase(string id)
+    {
+
+        while (true)
+        {
+            string keyids = artifactname(id);
+            if(TalismanData.ContainsKey(keyids))
+                continue;
+
+            Talismandatabase a = new Talismandatabase(keyids, id);
+            
+            TalismanData.Add(a.Keyid, a);
+            return a;
+        }
+    }    
     //장비 아이디 설정
     private string artifactname(string id)
     {

@@ -4,15 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using BackEnd;
 using BackEnd.Tcp;
-using Doozy.Engine.Soundy;
 using Doozy.Engine.UI;
-using Doozy.Engine.Utils.ColorModels;
 using LitJson;
 using UnityEngine;
 using UnityEngine.UI;
 using GooglePlayGames;
-using JetBrains.Annotations;
 using Newtonsoft.Json;
+using Sirenix.OdinInspector;
+
 
 public class Settingmanager : MonoBehaviour
 {
@@ -189,10 +188,6 @@ public class Settingmanager : MonoBehaviour
         paramEquip.Add("QuestCount", userData.QuestCount);
         paramEquip.Add("QuestIsFinish", userData.QuestIsFinish);
         paramEquip.Add("QuestTotalCount", userData.QuestTotalCount);
-
-       
-
-
         Where where = new Where();
         where.Equal("owner_inDate", PlayerBackendData.Instance.playerindate);
 
@@ -222,6 +217,10 @@ public class Settingmanager : MonoBehaviour
             { "QuestCount", PlayerBackendData.Instance.QuestCount },
             { "QuestIsFinish", PlayerBackendData.Instance.QuestIsFinish },
             { "QuestTotalCount", PlayerBackendData.Instance.QuestTotalCount },
+            //탈리스만
+            { "TalismanData", PlayerBackendData.Instance.TalismanData},
+            { "TalismanPreset", PlayerBackendData.Instance.TalismanPreset},
+            { "nowtalismanpreset", PlayerBackendData.Instance.nowtalismanpreset},
             { "Gold", userData.GetMoney() },
             { "Crystal", userData.GetCash() },
             { "avata_avata", userData.avata_avata },
@@ -447,7 +446,10 @@ public class Settingmanager : MonoBehaviour
             { "QuestCount", PlayerBackendData.Instance.QuestCount },
             { "QuestIsFinish", PlayerBackendData.Instance.QuestIsFinish },
             { "QuestTotalCount", PlayerBackendData.Instance.QuestTotalCount },
-            
+            //탈리스만
+            { "TalismanData", PlayerBackendData.Instance.TalismanData},
+            { "TalismanPreset", PlayerBackendData.Instance.TalismanPreset},
+            { "nowtalismanpreset", PlayerBackendData.Instance.nowtalismanpreset},
             { "SaveNum", PlayerBackendData.Instance.ClientSaveNum }
         };
         PlayerBackendData.Instance.sotang_raid = PlayerBackendData.Instance.sotang_raid.Distinct().ToList();
@@ -455,11 +457,7 @@ public class Settingmanager : MonoBehaviour
         Timemanager.Instance.OnceTradePackage = Timemanager.Instance.OnceTradePackage.Distinct().ToList();
         Timemanager.Instance.OncePremiumPackage = Timemanager.Instance.OncePremiumPackage.Distinct().ToList();
         Param paramB = new Param
-        {     //업적
-            { "QuestCount", PlayerBackendData.Instance.QuestCount },
-            { "QuestIsFinish", PlayerBackendData.Instance.QuestIsFinish },
-            { "QuestTotalCount", PlayerBackendData.Instance.QuestTotalCount },
-            //기간제 자동사냥 엘리
+        {   
             { "PlayerTimes", PlayerBackendData.Instance.PlayerTimes },
             //상점
             { "OnceShopData", Timemanager.Instance.OncePremiumPackage },
@@ -618,7 +616,10 @@ public class Settingmanager : MonoBehaviour
             { "QuestIsFinish", PlayerBackendData.Instance.QuestIsFinish },
             { "QuestTotalCount", PlayerBackendData.Instance.QuestTotalCount },
 
-            
+            //탈리스만
+            { "TalismanData", PlayerBackendData.Instance.TalismanData},
+            { "TalismanPreset", PlayerBackendData.Instance.TalismanPreset},
+            { "nowtalismanpreset", PlayerBackendData.Instance.nowtalismanpreset},
             
             { "SaveNum", PlayerBackendData.Instance.ClientSaveNum },
                        //제작
@@ -784,6 +785,11 @@ public class Settingmanager : MonoBehaviour
             { "QuestIsFinish", PlayerBackendData.Instance.QuestIsFinish },
             { "QuestTotalCount", PlayerBackendData.Instance.QuestTotalCount },
 
+            //탈리스만
+            { "TalismanData", PlayerBackendData.Instance.TalismanData},
+            { "TalismanPreset", PlayerBackendData.Instance.TalismanPreset},
+            { "nowtalismanpreset", PlayerBackendData.Instance.nowtalismanpreset},
+            
             //레벨
             { "level", userData.GetLv() },
             { "levelExp", userData.GetExp() },
@@ -933,7 +939,6 @@ public class Settingmanager : MonoBehaviour
 
     void RefreshTokens()
     {
-
         if (!internetcheck.isinternet())
         {
             uimanager.Instance.internetobj.SetActive(true);
@@ -1008,7 +1013,8 @@ public class Settingmanager : MonoBehaviour
             Savemanager.Instance.SaveEvery();
             // LogManager.OfflineRewardLog();
             isPaused = true;
-            PartyRaidRoommanager.Instance.Bt_ExitRoom();
+            if (PartyRaidRoommanager.Instance.partyroomdata.usercount > 1)
+                PartyRaidRoommanager.Instance.Bt_ExitRoom();
             SaveOffline();
             /* 앱이 비활성화 되었을 때 처리 */
         }
@@ -1021,6 +1027,7 @@ public class Settingmanager : MonoBehaviour
                 RefreshTokens();
                 CheckDailyCount();
                 CheckOffLine();
+                Timemanager.Instance.GetTime();
                 if (timechecktimecheck != null)
                     StopCoroutine(timechecktimecheck);
                 if (timechecktimecheckRank != null)
@@ -1043,7 +1050,7 @@ public class Settingmanager : MonoBehaviour
         nowtime = nowtimeNow.Date;
 //        Debug.Log(nowtime);
   //      Debug.Log(nowtimeNow);
-        DateTime nexttime = nowtime.AddDays(1).AddSeconds(2);
+        DateTime nexttime = nowtime.AddDays(1).AddSeconds(5);
         TimeSpan timeSpan = nexttime -nowtimeNow;
         timechecktimecheck = ResetCheckStart((float)timeSpan.TotalSeconds);
         StartCoroutine(timechecktimecheck);
@@ -1132,20 +1139,33 @@ public class Settingmanager : MonoBehaviour
             }
         }
     }
-    
-    
+    [Button(Name = "리셋테스트")] 
+    public void ResetTest()
+    {
+        Timemanager.Instance.GetTime();
+        GuildManager.Instance.Guildchecksetting();
+        Invoke(nameof(RefreshReset), 3f);
+        SaveDataALl();
+    }
     IEnumerator ResetCheckStart(float totalsecond)
     {
+        Debug.Log("남은 시간은" +totalsecond );
         yield return new WaitForSeconds(totalsecond);
         Timemanager.Instance.GetTime();
         GuildManager.Instance.Guildchecksetting();
-        if (Timemanager.Instance.isachievereset)
-        {
-            achievemanager.Instance.ResetCheck();
-        }
+
+        Invoke(nameof(RefreshReset), 5f);
+        
         SaveDataALl();
     }
-    
+
+    public void RefreshReset()
+    {
+        QuestManager.Instance.RefreshReset();
+        LoginEventManager.Instance.RefreshPanel();
+        MyGuildManager.Instance.AddendanceBt.Interactable = true;
+        alertmanager.Instance.Bt_ClickMenu();
+    }
     
     //월드보스 시작
     IEnumerator IenumerWBStart(float totalsecond)

@@ -29,7 +29,7 @@ public class QuestManager : MonoBehaviour
 
     private void Start()
     {
-        ResetCheck();
+        Invoke(nameof(ResetCheck),1.5f);
     }
 
     public QuestFinishPanel[] FinishPanel;
@@ -74,20 +74,41 @@ public class QuestManager : MonoBehaviour
     private bool ischeckachieve;
     public void ResetCheck()
     {
-        if(PlayerBackendData.Instance.PlayerAchieveData.Count ==0)
+       ResetDaily();
+       ResetWeekly();
+       RefreshReset();
+    }
+
+    public void RefreshReset()
+    {
+        foreach (var t in Questslots)
         {
-            //업적이없다
-            ischeckachieve = true;
-            return;
+            t.initdata();
         }
+
+        for (int i = 0; i < Questdatas.Length; i++)
+        {
+            Questdatas[i].RefreshCount();
+        }
+        
+        alertmanager.Instance.NotiCheck_Quest();
+        Savemanager.Instance.SaveInventory();
+        Savemanager.Instance.SaveCash();
+        Savemanager.Instance.SaveAchieve();
+        Savemanager.Instance.Save();
+    }
+
+    public void ResetDaily()
+    {
         if (Timemanager.Instance.isachieveresetdaily)
         {
-            Timemanager.Instance.isachievereset = false;
-            Timemanager.Instance.LoginTimeSecToday = 0;
+            Timemanager.Instance.isachieveresetdaily = false;
             Savemanager.Instance.SaveLoginTime();
             Savemanager.Instance.Save();
             
             PlayerBackendData.Instance.QuestTotalCount[0] = 0;
+            PlayerBackendData.Instance.QuestTotalCount[3] = 0;
+       
             //업적 초기화
             for (int i = 0; i < QuestDB.Instance.NumRows(); i++)
             {
@@ -98,7 +119,10 @@ public class QuestManager : MonoBehaviour
                 }
             }
         }
+    }
 
+    public void ResetWeekly()
+    {
         if (Timemanager.Instance.isachieveresetweekly)
         {
             PlayerBackendData.Instance.QuestTotalCount[1] = 0;
@@ -112,18 +136,8 @@ public class QuestManager : MonoBehaviour
                 }
             }
         }
-        
-        foreach (var t in Questslots)
-        {
-            t.initdata();
-        }
-        alertmanager.Instance.NotiCheck_Quest();
-        Savemanager.Instance.SaveInventory();
-        Savemanager.Instance.SaveCash();
-        Savemanager.Instance.SaveAchieve();
-        Savemanager.Instance.Save();
     }
-
+    
     public void Bt_AllQuest()
     {
         id.Clear();
@@ -134,9 +148,7 @@ public class QuestManager : MonoBehaviour
             if (bool.Parse(QuestDB.Instance.Find_id(Questslots[i].Questid.ToString()).isseasonpremium)
                 && PlayerBackendData.Instance.SeasonPassPremium)
             {
-               
                 Questslots[i].GetReward_All();
-                
             }
             else
             {
@@ -153,10 +165,12 @@ public class QuestManager : MonoBehaviour
             
             LogManager.Log_CrystalEarn($"퀘스트 {id.Count}개 완료");
             alertmanager.Instance.NotiCheck_Quest();
+            SeasonPass.Instance.SaveSeasonReward();
             Savemanager.Instance.SaveInventory();
             Savemanager.Instance.SaveCash();
             Savemanager.Instance.SaveAchieve();
             Savemanager.Instance.Save();
+            
         }
        
     }

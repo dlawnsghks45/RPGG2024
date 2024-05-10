@@ -509,7 +509,7 @@ public class Autofarmmanager : MonoBehaviour
         if (timeDiff.TotalSeconds > MaxTime)
         {
             AutofarmFastobj.SetActive(true);
-            alertmanager.Instance.NotiCheck_AutoFarm(true);
+            alertmanager.Instance.NotiCheck_AutoFarm(timeDiff.TotalSeconds >= 3600);
         }
         else
         {

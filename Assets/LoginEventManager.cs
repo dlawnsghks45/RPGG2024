@@ -90,6 +90,7 @@ public class LoginEventManager : MonoBehaviour
         
         for (int i = 0; i < slots.Length; i++)
         {
+          slots[i].isfinish = false;
           slots[i].Refresh();
         }
       }

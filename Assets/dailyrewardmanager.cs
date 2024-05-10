@@ -188,6 +188,7 @@ public class dailyrewardmanager : MonoBehaviour
     }
 
     public UIView CrystalObj;
+    public UIView RewardPanel;
     
     public void Bt_FinishCrystal()
     {

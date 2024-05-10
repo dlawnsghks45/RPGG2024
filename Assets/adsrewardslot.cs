@@ -17,6 +17,7 @@ public class adsrewardslot : MonoBehaviour
 
     private void Start()
     {
+        uimanager.Instance.adsSlots.Add(this);
         buycountarraynum = (int)Enum.Parse(typeof(Timemanager.ContentEnumDaily),
             enumdaily);
         RefreshBuyCount();

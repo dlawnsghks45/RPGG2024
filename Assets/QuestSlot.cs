@@ -64,7 +64,7 @@ public class QuestSlot : MonoBehaviour
                 }
 
                 RewardBt.SetActive(true);
-                transform.SetAsFirstSibling();
+               // transform.SetAsFirstSibling();
 
             }
             else
@@ -76,7 +76,7 @@ public class QuestSlot : MonoBehaviour
         else
         {
             FinishBt.SetActive(true);
-            transform.SetAsLastSibling();
+           // transform.SetAsLastSibling();
         }
     }
 

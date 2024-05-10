@@ -255,31 +255,36 @@ public class alertmanager : MonoBehaviour
     //자동 보상
     public void NotiCheck_AutoFarm(bool istrue)
     {
+        
         if (istrue)
         {
             foreach (var t in Alert_AutoFarm)
             {
-                t.SetActive(true);
-            }      
+                    t.SetActive(true);
+            }
+
             if(!Alert_Menu.activeSelf)
                 Alert_Menu.SetActive(true);
-            return;
+        }
+        else
+        {
+            foreach (var t in Alert_AutoFarm)
+            {
+                t.SetActive(false);
+            }
         }
         
-        foreach (var t in Alert_AutoFarm)
-        {
-            t.SetActive(false);;
-        }
+        /*
         if (Timemanager.Instance.DailyContentCount[(int)Timemanager.ContentEnumDaily.빠른전투] > 0
             || Timemanager.Instance.DailyContentCount[(int)Timemanager.ContentEnumDaily.광고_사냥1시간] > 0)
         {
             foreach (var t in Alert_AutoFarm)
             {
-                t.SetActive(true);
+                    t.SetActive(true);
             }       
             if(!Alert_Menu.activeSelf)
                 Alert_Menu.SetActive(true);
-        }
+        }*/
     }
     
     
@@ -566,7 +571,6 @@ public class alertmanager : MonoBehaviour
         Alert_Menu.SetActive(false);
         NotiCheck_AutoFarm(false);
         NotiCheck_Class();
-        NotiCheck_AutoFarm(false);
         NotiCheck_Altar();
         NotiCheck_Collection();
         CollectionRenewalManager.Instance.RefreshTotalCount();

@@ -156,6 +156,38 @@ public class StatShowManager : MonoBehaviour
                     num++;
                 }
 
+                if ((decimal)playerdata.ability_strnum != 0)
+                {
+                    StatSlots[num].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_어빌리티 고정")
+                        , "0",
+                        (decimal)playerdata.ability_strnum, false, false);
+                    StatSlots[num].gameObject.SetActive(true);
+                    statnumber += (decimal)playerdata.ability_strnum;
+                    num++;
+                }
+                
+                
+                if ((decimal)playerdata.ability_allstatnum != 0)
+                {
+                    StatSlots[num].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_어빌리티 고정")
+                        , "0",
+                        (decimal)playerdata.ability_allstatnum, false, false);
+                    StatSlots[num].gameObject.SetActive(true);
+                    statnumber += (decimal)playerdata.ability_allstatnum;
+                    num++;
+                }
+                
+                if ((decimal)playerdata.pet_allstatnum != 0)
+                {
+                    StatSlots[num].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_펫")
+                        , "0",
+                        (decimal)playerdata.pet_allstatnum, false, false);
+                    StatSlots[num].gameObject.SetActive(true);
+                    statnumber += (decimal)playerdata.pet_allstatnum;
+                    num++;
+                }
+                
+                
                 //특수효과 (고정)
                 if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.strup) != 0)
                 {
@@ -211,6 +243,69 @@ public class StatShowManager : MonoBehaviour
                         100m;
                     numP++;
                 }
+                
+                if (classdata.mainstat.Equals("str"))
+                {
+                    //탈리스만
+                    if (playerdata.talisman_allstat != 0)
+                    {
+                        StatSlots_Percent[numP].RefreshShow(Inventory.GetTranslate("UI8/탈리스만세트")
+                            , "0",
+                            (decimal)playerdata.talisman_allstat, true,
+                            true);
+                        StatSlots_Percent[numP].gameObject.SetActive(true);
+                        statnumberPercent +=
+                            (decimal)playerdata.talisman_allstat * 100m;
+                        numP++;
+                    }
+                    
+                    //장비 주 능력치
+                    if ((decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstat) != 0)
+                    {
+                        StatSlots[num].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_특효주능력치")
+                            , "0",
+                            (decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstat), false, false);
+                        StatSlots[num].gameObject.SetActive(true);
+                        statnumber += (decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstat);
+                        num++;
+                    }
+                    
+                    
+                    //수집
+                    if ((decimal)playerdata.Stat_collection != 0)
+                    {
+                        StatSlots[num].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_수집")
+                            , "0",
+                            (decimal)playerdata.Stat_collection, false, false);
+                        StatSlots[num].gameObject.SetActive(true);
+                        statnumber += (decimal)playerdata.Stat_collection;
+                        num++;
+                    }
+                    
+                    if ((decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstatperup) != 0)
+                    {
+                        StatSlots_Percent[numP].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_특효주능력치")
+                            , "0",
+                            (decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstatperup), true,
+                            true);
+                        StatSlots_Percent[numP].gameObject.SetActive(true);
+                        statnumberPercent +=
+                            (decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstatperup) * 100m;
+                        numP++;
+                    }
+                    
+                    if ((decimal)playerdata.buff_Allstatper != 0)
+                    {
+                        StatSlots_Percent[numP].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_버프")
+                            , "0",
+                            (decimal)playerdata.buff_Allstatper, true,
+                            true);
+                        StatSlots_Percent[numP].gameObject.SetActive(true);
+                        statnumberPercent +=
+                            (decimal)playerdata.buff_Allstatper * 100m;
+                        numP++;
+                    }
+                }
                 break;
             case 1: //민
                 if (float.Parse(classdata.dexperlv) * playerlv != 0)
@@ -234,7 +329,37 @@ public class StatShowManager : MonoBehaviour
                     statnumber += (decimal)playerdata.set_dex;
                     num++;
                 }
-
+                
+                if ((decimal)playerdata.ability_dexnum != 0)
+                {
+                    StatSlots[num].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_어빌리티 고정")
+                        , "0",
+                        (decimal)playerdata.ability_dexnum, false, false);
+                    StatSlots[num].gameObject.SetActive(true);
+                    statnumber += (decimal)playerdata.ability_dexnum;
+                    num++;
+                }
+                
+                
+                if ((decimal)playerdata.ability_allstatnum != 0)
+                {
+                    StatSlots[num].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_어빌리티 고정")
+                        , "0",
+                        (decimal)playerdata.ability_allstatnum, false, false);
+                    StatSlots[num].gameObject.SetActive(true);
+                    statnumber += (decimal)playerdata.ability_allstatnum;
+                    num++;
+                }
+                
+                if ((decimal)playerdata.pet_allstatnum != 0)
+                {
+                    StatSlots[num].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_펫")
+                        , "0",
+                        (decimal)playerdata.pet_allstatnum, false, false);
+                    StatSlots[num].gameObject.SetActive(true);
+                    statnumber += (decimal)playerdata.pet_allstatnum;
+                    num++;
+                }
                 if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.dexup) != 0)
                 {
                     StatSlots[num].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_특수효과")
@@ -289,6 +414,69 @@ public class StatShowManager : MonoBehaviour
                     numP++;
                 }
 
+                if (classdata.mainstat.Equals("dex"))
+                {
+                    //탈리스만
+                    if (playerdata.talisman_allstat != 0)
+                    {
+                        StatSlots_Percent[numP].RefreshShow(Inventory.GetTranslate("UI8/탈리스만세트")
+                            , "0",
+                            (decimal)playerdata.talisman_allstat, true,
+                            true);
+                        StatSlots_Percent[numP].gameObject.SetActive(true);
+                        statnumberPercent +=
+                            (decimal)playerdata.talisman_allstat * 100m;
+                        numP++;
+                    }
+                    
+                    //장비 주 능력치
+                    if ((decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstat) != 0)
+                    {
+                        StatSlots[num].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_특효주능력치")
+                            , "0",
+                            (decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstat), false, false);
+                        StatSlots[num].gameObject.SetActive(true);
+                        statnumber += (decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstat);
+                        num++;
+                    }
+                    
+                    
+                    //수집
+                    if ((decimal)playerdata.Stat_collection != 0)
+                    {
+                        StatSlots[num].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_수집")
+                            , "0",
+                            (decimal)playerdata.Stat_collection, false, false);
+                        StatSlots[num].gameObject.SetActive(true);
+                        statnumber += (decimal)playerdata.Stat_collection;
+                        num++;
+                    }
+                    
+                        
+                    if ((decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstatperup) != 0)
+                    {
+                        StatSlots_Percent[numP].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_특효주능력치")
+                            , "0",
+                            (decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstatperup), true,
+                            true);
+                        StatSlots_Percent[numP].gameObject.SetActive(true);
+                        statnumberPercent +=
+                            (decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstatperup) * 100m;
+                        numP++;
+                    }
+                    
+                    if ((decimal)playerdata.buff_Allstatper != 0)
+                    {
+                        StatSlots_Percent[numP].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_버프")
+                            , "0",
+                            (decimal)playerdata.buff_Allstatper, true,
+                            true);
+                        StatSlots_Percent[numP].gameObject.SetActive(true);
+                        statnumberPercent +=
+                            (decimal)playerdata.buff_Allstatper * 100m;
+                        numP++;
+                    }
+                }
                 break;
             case 2: //지
                 if (float.Parse(classdata.intperlv) * playerlv != 0)
@@ -311,7 +499,39 @@ public class StatShowManager : MonoBehaviour
                     statnumber += (decimal)playerdata.set_int;
                     num++;
                 }
+                
+                    
+                if ((decimal)playerdata.ability_intnum != 0)
+                {
+                    StatSlots[num].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_어빌리티 고정")
+                        , "0",
+                        (decimal)playerdata.ability_intnum, false, false);
+                    StatSlots[num].gameObject.SetActive(true);
+                    statnumber += (decimal)playerdata.ability_intnum;
+                    num++;
+                }
 
+
+                if ((decimal)playerdata.ability_allstatnum != 0)
+                {
+                    StatSlots[num].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_어빌리티 고정")
+                        , "0",
+                        (decimal)playerdata.ability_allstatnum, false, false);
+                    StatSlots[num].gameObject.SetActive(true);
+                    statnumber += (decimal)playerdata.ability_allstatnum;
+                    num++;
+                }
+                
+                if ((decimal)playerdata.pet_allstatnum != 0)
+                {
+                    StatSlots[num].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_펫")
+                        , "0",
+                        (decimal)playerdata.pet_allstatnum, false, false);
+                    StatSlots[num].gameObject.SetActive(true);
+                    statnumber += (decimal)playerdata.pet_allstatnum;
+                    num++;
+                }
+                
                 if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.intup) != 0)
                 {
                     StatSlots[num].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_특수효과")
@@ -365,6 +585,74 @@ public class StatShowManager : MonoBehaviour
                         100m;
                     numP++;
                 }
+                
+                
+                if (classdata.mainstat.Equals("int"))
+                {
+                    //탈리스만
+                    if (playerdata.talisman_allstat != 0)
+                    {
+                        StatSlots_Percent[numP].RefreshShow(Inventory.GetTranslate("UI8/탈리스만세트")
+                            , "0",
+                            (decimal)playerdata.talisman_allstat, true,
+                            true);
+                        StatSlots_Percent[numP].gameObject.SetActive(true);
+                        statnumberPercent +=
+                            (decimal)playerdata.talisman_allstat * 100m;
+                        numP++;
+                    }
+                   
+                    
+                    //장비 주 능력치
+                    if ((decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstat) != 0)
+                    {
+                        StatSlots[num].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_특효주능력치")
+                            , "0",
+                            (decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstat), false, false);
+                        StatSlots[num].gameObject.SetActive(true);
+                        statnumber += (decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstat);
+                        num++;
+                    }
+                    
+                    
+                    //수집
+                    if ((decimal)playerdata.Stat_collection != 0)
+                    {
+                        StatSlots[num].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_수집")
+                            , "0",
+                            (decimal)playerdata.Stat_collection, false, false);
+                        StatSlots[num].gameObject.SetActive(true);
+                        statnumber += (decimal)playerdata.Stat_collection;
+                        num++;
+                    }
+                    
+                        
+                    if ((decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstatperup) != 0)
+                    {
+                        StatSlots_Percent[numP].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_특효주능력치")
+                            , "0",
+                            (decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstatperup), true,
+                            true);
+                        StatSlots_Percent[numP].gameObject.SetActive(true);
+                        statnumberPercent +=
+                            (decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstatperup) * 100m;
+                        numP++;
+                    }
+                    
+                    if ((decimal)playerdata.buff_Allstatper != 0)
+                    {
+                        StatSlots_Percent[numP].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_버프")
+                            , "0",
+                            (decimal)playerdata.buff_Allstatper, true,
+                            true);
+                        StatSlots_Percent[numP].gameObject.SetActive(true);
+                        statnumberPercent +=
+                            (decimal)playerdata.buff_Allstatper * 100m;
+                        numP++;
+                    }
+                }
+                
+                
                 break;
             case 3: //지혜
                 if (float.Parse(classdata.wisperlv) * playerlv != 0)
@@ -377,6 +665,7 @@ public class StatShowManager : MonoBehaviour
                     statnumber += (decimal)(float.Parse(classdata.wisperlv) * playerlv);
                     num++;
                 }
+                
 
                 if ((decimal)playerdata.set_wis != 0)
                 {
@@ -388,6 +677,38 @@ public class StatShowManager : MonoBehaviour
                     num++;
                 }
 
+                
+                if ((decimal)playerdata.ability_wisnum != 0)
+                {
+                    StatSlots[num].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_어빌리티 고정")
+                        , "0",
+                        (decimal)playerdata.ability_wisnum, false, false);
+                    StatSlots[num].gameObject.SetActive(true);
+                    statnumber += (decimal)playerdata.ability_wisnum;
+                    num++;
+                }
+                
+                
+                if ((decimal)playerdata.ability_allstatnum != 0)
+                {
+                    StatSlots[num].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_어빌리티 고정")
+                        , "0",
+                        (decimal)playerdata.ability_allstatnum, false, false);
+                    StatSlots[num].gameObject.SetActive(true);
+                    statnumber += (decimal)playerdata.ability_allstatnum;
+                    num++;
+                }
+                
+                if ((decimal)playerdata.pet_allstatnum != 0)
+                {
+                    StatSlots[num].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_펫")
+                        , "0",
+                        (decimal)playerdata.pet_allstatnum, false, false);
+                    StatSlots[num].gameObject.SetActive(true);
+                    statnumber += (decimal)playerdata.pet_allstatnum;
+                    num++;
+                }
+                
                 if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.wisup) != 0)
                 {
                     StatSlots[num].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_특수효과")
@@ -440,7 +761,69 @@ public class StatShowManager : MonoBehaviour
                         100m;
                     numP++;
                 }
-
+                if (classdata.mainstat.Equals("wis"))
+                {
+                    //탈리스만
+                    if (playerdata.talisman_allstat != 0)
+                    {
+                        StatSlots_Percent[numP].RefreshShow(Inventory.GetTranslate("UI8/탈리스만세트")
+                            , "0",
+                            (decimal)playerdata.talisman_allstat, true,
+                            true);
+                        StatSlots_Percent[numP].gameObject.SetActive(true);
+                        statnumberPercent +=
+                            (decimal)playerdata.talisman_allstat * 100m;
+                        numP++;
+                    }
+                    //장비 주 능력치
+                    if ((decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstat) != 0)
+                    {
+                        StatSlots[num].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_특효주능력치")
+                            , "0",
+                            (decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstat), false, false);
+                        StatSlots[num].gameObject.SetActive(true);
+                        statnumber += (decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstat);
+                        num++;
+                    }
+                    
+                    
+                    //수집
+                    if ((decimal)playerdata.Stat_collection != 0)
+                    {
+                        StatSlots[num].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_수집")
+                            , "0",
+                            (decimal)playerdata.Stat_collection, false, false);
+                        StatSlots[num].gameObject.SetActive(true);
+                        statnumber += (decimal)playerdata.Stat_collection;
+                        num++;
+                    }
+                    
+                        
+                    if ((decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstatperup) != 0)
+                    {
+                        StatSlots_Percent[numP].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_특효주능력치")
+                            , "0",
+                            (decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstatperup), true,
+                            true);
+                        StatSlots_Percent[numP].gameObject.SetActive(true);
+                        statnumberPercent +=
+                            (decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstatperup) * 100m;
+                        numP++;
+                    }
+                    
+                    
+                    if ((decimal)playerdata.buff_Allstatper != 0)
+                    {
+                        StatSlots_Percent[numP].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_버프")
+                            , "0",
+                            (decimal)playerdata.buff_Allstatper, true,
+                            true);
+                        StatSlots_Percent[numP].gameObject.SetActive(true);
+                        statnumberPercent +=
+                            (decimal)playerdata.buff_Allstatper * 100m;
+                        numP++;
+                    }
+                }
                 break;
 
             case 4: //물리 공격력
@@ -567,7 +950,19 @@ public class StatShowManager : MonoBehaviour
                     numP++;
                 }
                 
-              
+                //탈리스만
+                if (playerdata.talisman_atk != 0)
+                {
+                    StatSlots_Percent[numP].RefreshShow(Inventory.GetTranslate("UI8/탈리스만세트")
+                        , "0",
+                        (decimal)playerdata.talisman_atk,
+                        true, true);
+                    StatSlots_Percent[numP].gameObject.SetActive(true);
+                    statnumberPercent +=
+                        (decimal)playerdata.talisman_atk *
+                        100m;
+                    numP++;
+                }
 
                 break;
            case 5: //마법 공격력
@@ -677,6 +1072,20 @@ public class StatShowManager : MonoBehaviour
                     StatSlots_Percent[numP].gameObject.SetActive(true);
                     statnumberPercent +=
                         (decimal)playerdata.ability_matk*
+                        100m;
+                    numP++;
+                }
+                
+                //탈리스만
+                if (playerdata.talisman_matk != 0)
+                {
+                    StatSlots_Percent[numP].RefreshShow(Inventory.GetTranslate("UI8/탈리스만세트")
+                        , "0",
+                        (decimal)playerdata.talisman_matk,
+                        true, true);
+                    StatSlots_Percent[numP].gameObject.SetActive(true);
+                    statnumberPercent +=
+                        (decimal)playerdata.talisman_matk *
                         100m;
                     numP++;
                 }
@@ -1208,6 +1617,19 @@ public class StatShowManager : MonoBehaviour
                         (decimal)playerdata.ability_crit;
                     numP++;
                 }
+                
+                //탈리스만
+                if ((decimal)playerdata.talisman_crit != 0)
+                {
+                    StatSlots_Percent[numP].RefreshShow(Inventory.GetTranslate("UI8/탈리스만세트")
+                        , "0",
+                        (decimal)playerdata.talisman_crit, true, false);
+                    StatSlots_Percent[numP].gameObject.SetActive(true);
+                    statnumberPercent += (decimal)playerdata.talisman_crit;
+                    numP++;
+                }
+                
+                
                 break;
             case 15: //치명타 피해
                 StatSlots_Percent[numP].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_기본치명타피해")
@@ -1307,6 +1729,16 @@ public class StatShowManager : MonoBehaviour
                         100m;
                     numP++;
                 }
+                //탈리스만
+                if ((decimal)playerdata.talisman_critdmg != 0)
+                {
+                    StatSlots_Percent[numP].RefreshShow(Inventory.GetTranslate("UI8/탈리스만세트")
+                        , "0",
+                        (decimal)playerdata.talisman_critdmg, true, false);
+                    StatSlots_Percent[numP].gameObject.SetActive(true);
+                    statnumberPercent += (decimal)playerdata.talisman_critdmg;
+                    numP++;
+                }
                 break;
             case 16: //보스
                 if ((decimal)playerdata.set_Bossdmg != 0)
@@ -1354,6 +1786,19 @@ public class StatShowManager : MonoBehaviour
                     StatSlots_Percent[numP].gameObject.SetActive(true);
                     statnumberPercent +=
                         (decimal)playerdata.ability_bossdmg *
+                        100m;
+                    numP++;
+                }
+                  
+                if (playerdata.talisman_Bossdmg != 0)
+                {
+                    StatSlots_Percent[numP].RefreshShow(Inventory.GetTranslate("UI8/탈리스만세트")
+                        , "0",
+                        (decimal)playerdata.talisman_Bossdmg,
+                        true, true);
+                    StatSlots_Percent[numP].gameObject.SetActive(true);
+                    statnumberPercent +=
+                        (decimal)playerdata.talisman_Bossdmg *
                         100m;
                     numP++;
                 }
@@ -1406,7 +1851,20 @@ public class StatShowManager : MonoBehaviour
                         100m;
                     numP++;
                 }
+                
+                //탈리스만
+                if ((decimal)playerdata.talisman_ReduceCooldown != 0)
+                {
+                    StatSlots_Percent[numP].RefreshShow(Inventory.GetTranslate("UI8/탈리스만세트")
+                        , "0",
+                        (decimal)playerdata.talisman_ReduceCooldown, true, false);
+                    StatSlots_Percent[numP].gameObject.SetActive(true);
+                    statnumberPercent += (decimal)playerdata.talisman_ReduceCooldown;
+                    numP++;
+                }
                 break;
+            
+            
         }
 
 
@@ -1415,15 +1873,15 @@ public class StatShowManager : MonoBehaviour
         if (stat is 0 or 1 or 2 or 3)
         {
             //기본 100%
-                StatSlots_Percent[numP].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_기본상승")
-                    , "0",
-                    (decimal)1, true,
-                    true);
-                StatSlots_Percent[numP].gameObject.SetActive(true);
-                statnumberPercent +=
-                    100m;
-                numP++;
-            
+            StatSlots_Percent[numP].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_기본상승")
+                , "0",
+                (decimal)1, true,
+                true);
+            StatSlots_Percent[numP].gameObject.SetActive(true);
+            statnumberPercent +=
+                100m;
+            numP++;
+
             //모험랭크
             if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.allstatperup) != 0)
             {
@@ -1465,23 +1923,14 @@ public class StatShowManager : MonoBehaviour
             {
                 StatSlots[num].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_업적")
                     , "0",
-                    (decimal)playerdata.achstat+20, false, false);
+                    (decimal)playerdata.achstat + 20, false, false);
                 StatSlots[num].gameObject.SetActive(true);
-                statnumber += (decimal)playerdata.achstat+20;
+                statnumber += (decimal)playerdata.achstat + 20;
 
                 num++;
             }
 
-            //수집
-            if ((decimal)playerdata.Stat_collection != 0)
-            {
-                StatSlots[num].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_수집")
-                    , "0",
-                    (decimal)playerdata.Stat_collection, false, false);
-                StatSlots[num].gameObject.SetActive(true);
-                statnumber += (decimal)playerdata.Stat_collection;
-                num++;
-            }
+          
 
 
 
@@ -1503,12 +1952,14 @@ public class StatShowManager : MonoBehaviour
             {
                 StatSlots_Percent[numP].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_엘리의축복")
                     , "0",
-                    15m, true, false,true);
+                    15m, true, false, true);
                 StatSlots_Percent[numP].gameObject.SetActive(true);
-                statnumberGearWeaponPercent+=15m;
+                statnumberGearWeaponPercent += 15m;
             }
 
+           
         }
+
         //장비
         bool isstat = stat is 4 or 5 or 6 or 7 or 8 or 9 or 10 or 11 or 13 or 14 or 15 or 16 or 17 ? true : false;
         bool ishundred = stat is 4 or 5 or 6 or 7 or 8 or 9 or 10 or 11 or 13 or 15 or 16 or 17 ? true : false;

@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -187,7 +187,13 @@ public class avatamanager : MonoBehaviour
         ani.SetTrigger(Show);
     }
 
-
+    public void EarnPet(string id)
+    {
+        Earn_Avata_WeaponBody.SetActive(false);
+        Earn_AvataName.text = Inventory.GetTranslate(PetDB.Instance.Find_id(id).name);
+        Earn_Avata.sprite = SpriteManager.Instance.GetSprite(PetDB.Instance.Find_id(id).sprite);
+        ani.SetTrigger(Show);
+    }
 
 
     public void Bt_ButAvata()

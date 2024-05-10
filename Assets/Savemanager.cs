@@ -69,6 +69,7 @@ public class Savemanager : MonoBehaviour
         LoadLoginTime();
         LoadSaveNum();
         LoadAvataData();
+        LoadTalisman();
         //LoadTime();
     }
 
@@ -95,6 +96,7 @@ public class Savemanager : MonoBehaviour
         SaveRoulette();
         SaveLoginTime();
         SaveAvataData();
+        SaveTalisman();
         Save();
     }
     public void SaveSaveNum()
@@ -225,6 +227,41 @@ public class Savemanager : MonoBehaviour
         _es3File.Save($"{PlayerBackendData.Instance.Id}EquipPreset", PlayerBackendData.Instance.nowpreset);
 
         //Debug.Log("저장성공");
+    }
+
+    public void SaveTalisman()
+    {
+        _es3File.Save($"{PlayerBackendData.Instance.Id}TalismanData", PlayerBackendData.Instance.TalismanData);
+        _es3File.Save($"{PlayerBackendData.Instance.Id}TalismanPreset", PlayerBackendData.Instance.TalismanPreset);
+        _es3File.Save($"{PlayerBackendData.Instance.Id}nowtalismanpreset",
+            PlayerBackendData.Instance.nowtalismanpreset);
+    }
+
+    public void LoadTalisman()
+    {
+//        Debug.Log("장비" + _es3File.KeyExists($"{PlayerBackendData.Instance.Id}equipInven0"));
+        if (_es3File.KeyExists($"{PlayerBackendData.Instance.Id}TalismanData"))
+        {
+            PlayerBackendData.Instance.TalismanData = _es3File.Load<Dictionary<string, Talismandatabase>>(
+                $"{PlayerBackendData.Instance.Id}TalismanData");
+            
+
+        }
+        
+        if (_es3File.KeyExists($"{PlayerBackendData.Instance.Id}TalismanPreset"))
+        {
+            PlayerBackendData.Instance.TalismanPreset = _es3File.Load<PresetTalisman[]>(
+                $"{PlayerBackendData.Instance.Id}TalismanPreset");
+
+            PlayerBackendData.Instance.nowtalismanpreset = _es3File.Load<int>(
+                $"{PlayerBackendData.Instance.Id}nowtalismanpreset");
+        }
+    }
+
+    public void SaveTalismanPreset()
+    {
+        _es3File.Save($"{PlayerBackendData.Instance.Id}nowtalismanpreset", PlayerBackendData.Instance.nowtalismanpreset);
+        _es3File.Save($"{PlayerBackendData.Instance.Id}TalismanPreset", PlayerBackendData.Instance.TalismanPreset);
     }
 
     public void SaveContentLevel()
@@ -1559,6 +1596,25 @@ public bool GameDataGet()
                     {
                         PlayerBackendData.Instance.QuestTotalCount[i] = float.Parse(gameDataJson[0]["QuestTotalCount"][i].ToString());
                     }
+                }
+
+                //탈리스만
+                if (gameDataJson[0].ContainsKey("TalismanData"))
+                {
+                    userData.TalismanData.Clear();
+                    foreach (string key in gameDataJson[0]["TalismanData"].Keys)
+                    {
+                        Debug.Log(gameDataJson[0]["TalismanData"][key]);
+                        userData.TalismanData.Add(key, new Talismandatabase(gameDataJson[0]["TalismanData"][key]));
+                    }
+
+                    for (int i = 0; i < gameDataJson[0]["TalismanPreset"].Count; i++)
+                    {
+                        if(gameDataJson[0]["TalismanPreset"][i] != null)
+                        PlayerBackendData.Instance.TalismanPreset[i] = new PresetTalisman(gameDataJson[0]["TalismanPreset"][i]);
+                    }
+
+                    PlayerBackendData.Instance.nowtalismanpreset = int.Parse(gameDataJson[0]["nowtalismanpreset"].ToString());
                 }
 
 

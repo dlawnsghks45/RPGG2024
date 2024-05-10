@@ -20,6 +20,7 @@ public class shopslot : MonoBehaviour
     
     private void Start()
     {
+        uimanager.Instance.ShopSlots.Add(this);
         RefreshAll();
     }
 
@@ -135,7 +136,7 @@ public class shopslot : MonoBehaviour
                 if (Timemanager.Instance.OncePremiumPackage.Contains(shopid))
                 {
                     BuyCountText.color = Color.red;
-                    transform.SetAsLastSibling();
+                  //  transform.SetAsLastSibling();
                 }
                 else
                 {
@@ -154,7 +155,7 @@ public class shopslot : MonoBehaviour
                 if (Timemanager.Instance.DailyContentCount[buycountarraynum] == 0)
                 {
                     BuyCountText.color = Color.red;
-                    transform.SetAsLastSibling();
+                   // transform.SetAsLastSibling();
                 }
                 else
                 {
@@ -171,7 +172,7 @@ public class shopslot : MonoBehaviour
                 if (Timemanager.Instance.WeeklyContentCount[buycountarraynum] == 0)
                 {
                     BuyCountText.color = Color.red;
-                    transform.SetAsLastSibling();
+                  //  transform.SetAsLastSibling();
                 }
                 else
                 {
@@ -187,7 +188,7 @@ public class shopslot : MonoBehaviour
                 if (Timemanager.Instance.MonthlyContentCount[buycountarraynum] == 0)
                 {
                     BuyCountText.color = Color.red;
-                    transform.SetAsLastSibling();
+               //     transform.SetAsLastSibling();
                 }
                 else
                 {

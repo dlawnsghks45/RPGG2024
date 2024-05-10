@@ -56,6 +56,9 @@ public class ContentSlot : MonoBehaviour
            case "유물도시":
                Contentmanager.Instance.Bt_SelectContent("4");
                break;
+            case "강화던전":
+                Contentmanager.Instance.Bt_SelectContent("1");
+                break;
         }
     }
 }

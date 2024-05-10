@@ -23,7 +23,7 @@ id,descriptionKor,sprite,name,description,itemtype,itemsubtype,rare,droprare,buy
 14,최상급 결정,Item/ETC/4_Item,Itemname/14,Itemdescript/14,1,111,4,FALSE,0,800,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
 15,신의 결정,Item/ETC/5_Item,Itemname/15,Itemdescript/15,1,111,5,FALSE,0,1600,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 16,악몽의 파편 악몽사냥터 드랍,Item/Resource/Scale2,Itemname/16,Itemdescript/16,1,111,5,FALSE,0,1600,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-17,1억 골드,Item/유물/bag3,Itemname/17,Itemdescript/17,1,111,6,,0,100000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+17,1억 골드,Item/유물/bag3,Itemname/17,Itemdescript/17,1,111,6,TRUE,0,100000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 18,지옥의 파편,Item/Resource/완벽한룬의기억 1,Itemname/18,Itemdescript/18,1,111,6,TRUE,0,3000,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
 19,지옥 레이드 결정,Item/Resource/신화악세파편,Itemname/19,Itemdescript/19,1,111,6,TRUE,0,100000,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
 50000,악몽 악세서리 승급석Ⅰ,Item/Resource/DungeonChange1,Itemname/50000,Itemdescript/50000,1,111,6,TRUE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
@@ -35,7 +35,7 @@ id,descriptionKor,sprite,name,description,itemtype,itemsubtype,rare,droprare,buy
 50005,강화 촉진 가루,Item/Resource/강화촉진제,Itemname/50005,Itemdescript/50005,1,111,6,TRUE,0,1000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 50006,고급 펫 상자 티켓,Item/Consume/Paper/quest_83,Itemname/50006,Itemdescript/50006,1,111,6,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 50007,펫 초월석,Item/Resource/material_06,Itemname/50007,Itemdescript/50007,1,111,6,TRUE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-,,,,,,,,,,,,,,,,,,,
+50008,장비 룬 강화석,Item/Resource/jinRune,Itemname/50008,Itemdescript/50008,1,111,7,TRUE,0,5000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
@@ -94,8 +94,39 @@ id,descriptionKor,sprite,name,description,itemtype,itemsubtype,rare,droprare,buy
 40022,프리미엄 위장,Transform/바이킹,Itemname/40022,Itemdescript/40022,2,403,7,FALSE,0,1,FALSE,1,A2052,0,0,0,TRUE,0,FALSE
 40023,프리미엄 위장 무기,Item/위장/38,Itemname/40023,Itemdescript/40023,2,403,7,FALSE,0,1,FALSE,1,A2053,0,0,0,TRUE,0,FALSE
 40024,양날 파괴  도끼,Item/위장/39,Itemname/40024,Itemdescript/40024,2,403,6,FALSE,0,1,FALSE,1,A2054,0,0,0,TRUE,0,FALSE
+40025,제우스,Transform/제우스,Itemname/40025,Itemdescript/40025,2,403,6,FALSE,0,1,FALSE,1,A2055,0,0,0,TRUE,0,FALSE
+40026,제우스의번개,Item/위장/40,Itemname/40026,Itemdescript/40026,2,403,6,FALSE,0,1,FALSE,1,A2056,0,0,0,TRUE,0,FALSE
+40027,도깨비 방망이,Item/위장/41,Itemname/40027,Itemdescript/40027,2,403,6,FALSE,0,1,FALSE,1,A2057,0,0,0,TRUE,0,FALSE
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
+48000,북극곰,Item/Pet/0,petname/1000,Itemdescript/48000,2,406,1,FALSE,0,1,FALSE,1,P1000,0,0,0,TRUE,0,FALSE
+48001,사막여우,Item/Pet/1,petname/1001,Itemdescript/48000,2,406,1,FALSE,0,1,FALSE,1,P1001,0,0,0,TRUE,0,FALSE
+48002,노란전갈,Item/Pet/2,petname/1002,Itemdescript/48000,2,406,1,FALSE,0,1,FALSE,1,P1002,0,0,0,TRUE,0,FALSE
+48003,하운드,Item/Pet/3,petname/1003,Itemdescript/48000,2,406,1,FALSE,0,1,FALSE,1,P1003,0,0,0,TRUE,0,FALSE
+48004,임프,Item/Pet/4,petname/1004,Itemdescript/48000,2,406,2,FALSE,0,1,FALSE,1,P1004,0,0,0,TRUE,0,FALSE
+48005,아이스 가고일,Item/Pet/5,petname/1005,Itemdescript/48000,2,406,2,FALSE,0,1,FALSE,1,P1005,0,0,0,TRUE,0,FALSE
+48006,포이즌 임프,Item/Pet/6,petname/1006,Itemdescript/48000,2,406,2,FALSE,0,1,FALSE,1,P1006,0,0,0,TRUE,0,FALSE
+48007,고스트,Item/Pet/7,petname/1007,Itemdescript/48000,2,406,2,FALSE,0,1,FALSE,1,P1007,0,0,0,TRUE,0,FALSE
+48008,드라켄,Item/Pet/8,petname/1008,Itemdescript/48000,2,406,3,FALSE,0,1,FALSE,1,P1008,0,0,0,TRUE,0,FALSE
+48009,옥토퍼즈,Item/Pet/9,petname/1009,Itemdescript/48000,2,406,3,FALSE,0,1,FALSE,1,P1009,0,0,0,TRUE,0,FALSE
+48010,발록,Item/Pet/10,petname/1010,Itemdescript/48000,2,406,3,FALSE,0,1,FALSE,1,P1010,0,0,0,TRUE,0,FALSE
+48011,리퍼,Item/Pet/11,petname/1011,Itemdescript/48000,2,406,3,FALSE,0,1,FALSE,1,P1011,0,0,0,TRUE,0,FALSE
+48012,적룡,Item/Pet/12,petname/1012,Itemdescript/48000,2,406,4,FALSE,0,1,FALSE,1,P1012,0,0,0,TRUE,0,FALSE
+48013,백룡,Item/Pet/13,petname/1013,Itemdescript/48000,2,406,4,FALSE,0,1,FALSE,1,P1013,0,0,0,TRUE,0,FALSE
+48014,독룡,Item/Pet/14,petname/1014,Itemdescript/48000,2,406,4,FALSE,0,1,FALSE,1,P1014,0,0,0,TRUE,0,FALSE
+48015,악룡,Item/Pet/15,petname/1015,Itemdescript/48000,2,406,4,FALSE,0,1,FALSE,1,P1015,0,0,0,TRUE,0,FALSE
+48016,이그니스,Item/Pet/16,petname/1016,Itemdescript/48000,2,406,5,FALSE,0,1,FALSE,1,P1016,0,0,0,TRUE,0,FALSE
+48017,스핑크스,Item/Pet/17,petname/1017,Itemdescript/48000,2,406,5,FALSE,0,1,FALSE,1,P1017,0,0,0,TRUE,0,FALSE
+48018,카흐마,Item/Pet/18,petname/1018,Itemdescript/48000,2,406,5,FALSE,0,1,FALSE,1,P1018,0,0,0,TRUE,0,FALSE
+48019,Missing,Item/Pet/19,petname/1019,Itemdescript/48000,2,406,5,FALSE,0,1,FALSE,1,P1019,0,0,0,TRUE,0,FALSE
+48020,까치,Item/Pet/20,petname/1020,Itemdescript/48000,2,406,6,FALSE,0,1,FALSE,1,P1020,0,0,0,TRUE,0,FALSE
+48021,뱁새,Item/Pet/21,petname/1021,Itemdescript/48000,2,406,6,FALSE,0,1,FALSE,1,P1021,0,0,0,TRUE,0,FALSE
+48022,유령나무,Item/Pet/22,petname/1022,Itemdescript/48000,2,406,6,FALSE,0,1,FALSE,1,P1022,0,0,0,TRUE,0,FALSE
+48023,루돌프,Item/Pet/23,petname/1023,Itemdescript/48000,2,406,6,FALSE,0,1,FALSE,1,P1023,0,0,0,TRUE,0,FALSE
+48024,붉은 갈기 검은용,Item/Pet/24,petname/1024,Itemdescript/48000,2,406,6,FALSE,0,1,FALSE,1,P1024,0,0,0,TRUE,0,FALSE
+48025,푸른 갈기 검은용,Item/Pet/25,petname/1025,Itemdescript/48000,2,406,6,FALSE,0,1,FALSE,1,P1025,0,0,0,TRUE,0,FALSE
+48026,녹빛 갈기 검은용,Item/Pet/26,petname/1026,Itemdescript/48000,2,406,6,FALSE,0,1,FALSE,1,P1026,0,0,0,TRUE,0,FALSE
+48027,황금 갈기 검은용,Item/Pet/27,petname/1027,Itemdescript/48000,2,406,6,FALSE,0,1,FALSE,1,P1027,0,0,0,TRUE,0,FALSE
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
@@ -151,12 +182,12 @@ id,descriptionKor,sprite,name,description,itemtype,itemsubtype,rare,droprare,buy
 100012,안씀,Item/Event/설날/복조리,Itemname/100012,Itemdescript/100006,1,116,4,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 100013,안씀,Item/Event/설날/복조리1,Itemname/100013,Itemdescript/100007,1,116,5,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 100014,안씀,Item/Event/설날/복조리3,Itemname/100014,Itemdescript/100008,1,116,6,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100015,이벤트 아이템 [낮은 드롭율],Item/Event/E10,Itemname/100015,Itemdescript/100006,1,116,4,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100016,이벤트 아이템 [중간 드롭율],Item/Event/E11,Itemname/100016,Itemdescript/100007,1,116,5,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100017,이벤트 아이템 [업적으로만지급],Item/Event/E12,Itemname/100017,Itemdescript/100008,1,116,6,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,
+100015,안씀,Item/Event/E10,Itemname/100015,Itemdescript/100006,1,116,4,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+100016,안씀,Item/Event/E11,Itemname/100016,Itemdescript/100007,1,116,5,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+100017,안씀,Item/Event/E12,Itemname/100017,Itemdescript/100008,1,116,6,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+100018,이벤트 아이템 [낮은 드롭율],Item/Event/E13,Itemname/100018,Itemdescript/100006,1,116,4,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+100019,이벤트 아이템 [중간 드롭율],Item/Event/E14,Itemname/100019,Itemdescript/100007,1,116,5,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+100020,이벤트 아이템 [업적으로만지급],Item/Event/E15,Itemname/100020,Itemdescript/100008,1,116,6,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
@@ -278,7 +309,7 @@ id,descriptionKor,sprite,name,description,itemtype,itemsubtype,rare,droprare,buy
 564,룬선택상자,Item/Consume/Box2/Icon7,Itemname/564,Itemdescript/564,2,400,6,TRUE,0,1,FALSE,0,E6125;E6137,,Choice,1,TRUE,FALSE,TRUE
 565,[이벤트]설날 복 주머니,Item/Event/설날/설날복주머니,Itemname/565,Itemdescript/565,2,400,6,FALSE,0,1,FALSE,0,50005;50006;535;40000;40000;40001;40001;40002;40002;40003;40004;1005;1006;1750,10;1;1;100;1000;20;50;5;20;2;1;5;2;1,Random,0,TRUE,FALSE,FALSE
 566,2023 겨울 쿠폰 상자,Item/Consume/Box/chest_4,Itemname/566,Itemdescript/566,2,400,6,TRUE,0,1,FALSE,0,200002;527;528;529;530;4001;4002;4003;4004,1;1;1;1;1;1;1;1;1,All,0,TRUE,FALSE,FALSE
-567,[이벤트]불의 축제 상자,Item/Consume/Box2/Icon3,Itemname/567,Itemdescript/567,2,400,6,FALSE,0,1,FALSE,0,50005;50006;535;40000;40000;40001;40001;40002;40002;40003;40004;1005;1006;1750,10;1;1;100;1000;20;50;5;20;2;1;5;2;1,Random,0,TRUE,FALSE,FALSE
+567,[이벤트]보물 상자,Item/Consume/Box2/Icon15,Itemname/567,Itemdescript/567,2,400,6,FALSE,0,1,FALSE,0,50005;50006;535;40000;40000;40001;40001;40002;40002;40003;40004;1005;1006;1750,10;1;1;100;1000;20;50;5;20;2;1;5;2;1,Random,0,TRUE,FALSE,FALSE
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
 568,시즌2 무기 상자,Item/Consume/Box2/Icon17,Itemname/568,Itemdescript/568,2,400,7,TRUE,0,1,FALSE,0,E6138;E6139;E6140;E6142;E6144;E6145;E6146;E6147;E6148;E6149;E6150,,Choice,1,TRUE,FALSE,TRUE
@@ -298,12 +329,12 @@ id,descriptionKor,sprite,name,description,itemtype,itemsubtype,rare,droprare,buy
 580,3승급 반지,Item/Consume/Box/드래곤체스트,Itemname/580,Itemdescript/580,2,400,6,TRUE,0,1,FALSE,0,E10012;E10013;E10014,,Choice,1,TRUE,FALSE,TRUE
 581,3승급 목걸이,Item/Consume/Box/드래곤체스트,Itemname/581,Itemdescript/581,2,400,6,TRUE,0,1,FALSE,0,E10015;E10016;E10017,,Choice,1,TRUE,FALSE,TRUE
 ,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,
+582,노란전갈,Item/Consume/Box/New box/quest_125,Itemname/582,Itemdescript/582,2,400,1,TRUE,0,1,FALSE,0,48000;48001;48002;48003,1;1;1;1,Choice,1,TRUE,FALSE,FALSE
+583,임프,Item/Consume/Box/New box/quest_126,Itemname/583,Itemdescript/583,2,400,2,TRUE,0,1,FALSE,0,48004;48005;48006;48007,1;1;1;1,Choice,1,TRUE,FALSE,FALSE
+584,드라켄,Item/Consume/Box/New box/quest_122,Itemname/584,Itemdescript/584,2,400,3,TRUE,0,1,FALSE,0,48008;48009;48010;48011,1;1;1;1,Choice,1,TRUE,FALSE,FALSE
+585,백룡,Item/Consume/Box/New box/quest_108,Itemname/585,Itemdescript/585,2,400,4,TRUE,0,1,FALSE,0,48012;48013;48014;48015,1;1;1;1,Choice,1,TRUE,FALSE,FALSE
+586,이그니스,Item/Consume/Box/New box/quest_121,Itemname/586,Itemdescript/586,2,400,5,TRUE,0,1,FALSE,0,48016;48017;48018;48019,1;1;1;1,Choice,1,TRUE,FALSE,FALSE
+587,까치,Item/Consume/Box/New box/quest_146,Itemname/587,Itemdescript/587,2,400,6,TRUE,0,1,FALSE,0,48020;48021;48022;48023;48024;48025;48026;48027,1;1;1;1;1;1;1;1,Choice,1,TRUE,FALSE,FALSE
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,

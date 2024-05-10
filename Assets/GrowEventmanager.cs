@@ -59,20 +59,20 @@ public class GrowEventmanager : MonoBehaviour
       {
          case "str":
             Recomend_First[0].SetActive(true);
-            Recomend_WeaponMelee[0].SetActive(true);
+           // Recomend_WeaponMelee[0].SetActive(true);
             Recomend_WeaponMelee[1].SetActive(true);
             break;
          case "dex":
             Recomend_First[0].SetActive(true);
-            Recomend_WeaponMelee[2].SetActive(true);
+            //Recomend_WeaponMelee[2].SetActive(true);
             Recomend_WeaponMelee[3].SetActive(true);
             break;
          case "int":
             Recomend_First[1].SetActive(true);
             Recomend_First[2].SetActive(true);
             Recomend_WeaponMagic[0].SetActive(true);
-            Recomend_WeaponMagic[1].SetActive(true);
-            Recomend_WeaponMagic[3].SetActive(true);
+            //Recomend_WeaponMagic[1].SetActive(true);
+            //Recomend_WeaponMagic[3].SetActive(true);
             break;
       }
    }

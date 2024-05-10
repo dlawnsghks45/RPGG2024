@@ -49,8 +49,11 @@ A2046,46,다크 글레이브,,Avartaname/2046,,AvartaGetinfo/2000,W,위장/무�
 A2047,47,곡괭이,,Avartaname/2047,,AvartaGetinfo/2000,W,위장/무기위장/34,,allstat,0.02,0,Avartainfo/2000,5,TRUE,crystal,10000
 A2048,48,기습단검,,Avartaname/2048,,AvartaGetinfo/2000,W,위장/무기위장/35,,allstat,0.02,0,Avartainfo/2000,5,TRUE,crystal,10000
 A2049,49,월도,,Avartaname/2049,,AvartaGetinfo/2009,W,위장/무기위장/36,,gold,0.15,0,Avartainfo/2007,6,TRUE,item,
-A2050,50,디아블로,불의 축제 이벤트,Avartaname/2050,,AvartaGetinfo/2012,A,Transform/디아블로,,allstat,0.1,0,Avartainfo/2006,6,TRUE,item,
-A2051,51,겁화,,Avartaname/2051,,AvartaGetinfo/2012,W,위장/무기위장/37,,allstat,0.15,0,Avartainfo/2007,6,TRUE,item,
+A2050,50,디아블로,불의 축제 이벤트,Avartaname/2050,,AvartaGetinfo/2012,A,Transform/디아블로,,exp,0.1,0,Avartainfo/2006,6,TRUE,item,
+A2051,51,겁화,,Avartaname/2051,,AvartaGetinfo/2012,W,위장/무기위장/37,,gold,0.15,0,Avartainfo/2007,6,TRUE,item,
 A2052,52,프리미엄 위장,바이킹,Avartaname/2052,,AvartaGetinfo/2013,A,Transform/바이킹,,expdmg,0.25,0.03,Avartainfo/2010,7,TRUE,item,
 A2053,53,프리미엄 위장 무기,황금검,Avartaname/2053,,AvartaGetinfo/2013,W,위장/무기위장/38,,golddmg,0.25,0.03,Avartainfo/2011,7,TRUE,item,
-A2054,54,양날 파괴  도끼,시즌4 패키지,Avartaname/2054,,AvartaGetinfo/2012,W,위장/무기위장/39,,allstat,0.15,0,Avartainfo/2007,6,TRUE,item,
+A2054,54,양날 파괴  도끼,시즌4 패키지,Avartaname/2054,,AvartaGetinfo/2012,W,위장/무기위장/39,,gold,0.15,0,Avartainfo/2007,6,TRUE,item,
+A2055,55,제우스,올림푸스 이벤트,Avartaname/2055,,AvartaGetinfo/2014,A,Transform/제우스,,exp,0.1,0,Avartainfo/2006,6,TRUE,item,
+A2056,56,제우스의 번개,올림푸스 이벤트,Avartaname/2056,,AvartaGetinfo/2014,W,위장/무기위장/40,,gold,0.15,0,Avartainfo/2007,6,TRUE,item,
+A2057,57,양날 파괴  도끼,시즌5패키지,Avartaname/2057,,AvartaGetinfo/2015,W,위장/무기위장/41,,gold,0.15,0,Avartainfo/2007,6,TRUE,item,

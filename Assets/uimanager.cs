@@ -26,6 +26,26 @@ public class uimanager : MonoBehaviour
         }
     }
 
+    public List<tradeslot> TradeSlots = new List<tradeslot>();
+    public List<shopslot> ShopSlots = new List<shopslot>();
+    public List<adsrewardslot> adsSlots = new List<adsrewardslot>();
+
+    public void RefreshShopAndTrade()
+    {
+        foreach (var VARIABLE in TradeSlots)
+        {
+            VARIABLE.RefreshBuyCount();
+        }
+        foreach (var VARIABLE in ShopSlots)
+        {
+            VARIABLE.RefreshBuyCount();
+        }
+        foreach (var VARIABLE in adsSlots)
+        {
+            VARIABLE.RefreshBuyCount();
+        }
+    }
+
     public GameObject internetobj;
     
     public UIView ShowDeathPanel;

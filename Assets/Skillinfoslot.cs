@@ -63,7 +63,7 @@ public class Skillinfoslot : MonoBehaviour
         감전,
         독,
         죽음,
-      
+        주능력치,
 
     }
     
@@ -178,8 +178,8 @@ public class Skillinfoslot : MonoBehaviour
             
             if (skilldata.CritDmg != "0")
             {
-                Infoobj[(int)infoenum.추가치명타피해].SetActive(true);
-                Infotext[(int)infoenum.추가치명타피해].text = string.Format(Inventory.GetTranslate("UI5/퍼센트"),(decimal.Parse(skilldata.CritDmg)*100m).ToString(CultureInfo.InvariantCulture));
+                Infoobj[(int)infoenum.주능력치].SetActive(true);
+                Infotext[(int)infoenum.주능력치].text = string.Format(Inventory.GetTranslate("UI5/퍼센트"),(decimal.Parse(skilldata.CritDmg)*100m).ToString(CultureInfo.InvariantCulture));
             }
             
            

@@ -126,6 +126,8 @@ public class Timemanager : MonoBehaviour
         월드보스10보상횟수,
         월드보스공격횟수,
         월드보스보상횟수리뉴얼,
+        이벤트던전재설정3,
+        이벤트제련재설정3,
         Length
     }
 
@@ -188,6 +190,12 @@ public class Timemanager : MonoBehaviour
         교환소특효재설정2,
         교환소던전입장권2,
         교환소성장입장권2,
+        이벤트등급재설정3,
+        이벤트품질재설정3,
+        이벤트특효재설정3,
+        이벤트무기강화석3,
+        이벤트방어구강화석3,
+        이벤트장신구강화석3,
         Length
     }
     public enum ContentEnumMonthly
@@ -307,13 +315,6 @@ public class Timemanager : MonoBehaviour
 
         if (userInfo.ContainsKey("DailyRewardCount"))
         {
-
-       
-//            Debug.Log("카운트" + userInfo.Count);
-            //추가
-          
-       // Debug.Log("출첵 데이터");
-
             if (userInfo.ContainsKey("DailyRewardCount"))
             {
                 //보상 
@@ -329,7 +330,7 @@ public class Timemanager : MonoBehaviour
                 // 서버에 저장할 출석 정보를 미리 선언
                 Param check = new Param();
 
-// 출석정보를 초기화 해야됨
+                // 출석정보를 초기화 해야됨
                 if (NowTime.Month != lastLoginDate.Month)
                 {
                     // 빈 출석 정보 생성
@@ -470,9 +471,6 @@ public class Timemanager : MonoBehaviour
 
                    date = System.Convert.ToDateTime(timedata["DailyDateTime"]["S"].ToString());
                    rewarddatetime = timedata["DailyDateTime"]["S"].ToString();
-                   
-                  
-                   
                    //일일
                    if (date.Date < NowTime.Date)
                    {
@@ -493,12 +491,17 @@ public class Timemanager : MonoBehaviour
 //                       Debug.Log("업적 초기화대기");
                        isachievereset = true;
                        isachieveresetdaily = true;
+                       LoginTimeSecToday = 0;
+                       //리셋
                        if (SceneManager.GetActiveScene().name == "Lobby")
                        {
-                           achievemanager.Instance.ResetCheck();
+                           QuestManager.Instance.ResetDaily();
+                           alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI8/퀘스트가초기화"),alertmanager.alertenum.일반);
                            //출석체크
                            CheckdailyReward();
-                           dailyrewardmanager.Instance.Initdailyreward();
+                           dailyrewardmanager.Instance.RewardPanel.Show(false);
+                           //dailyrewardmanager.Instance.Initdailyreward();
+                           uimanager.Instance.RefreshShopAndTrade();
                        }
 
                        Param param = new Param();
@@ -541,7 +544,6 @@ public class Timemanager : MonoBehaviour
                                isfalse = true;
                            }
                        }
-
                        if (isfalse)
                        {
                            Debug.Log("데이터를 넣는다");
@@ -585,12 +587,11 @@ public class Timemanager : MonoBehaviour
                        {
                            WeeklyContentCount[i] = WeeklyContentCount_Standard[i];
                        }
-
-                       //일일 상점도 초기화 진행
-                       //IAPLKManager.Instance.SetRandomPackage();
-                       isachievereset = true;
-
-
+                       if (SceneManager.GetActiveScene().name == "Lobby")
+                       {
+                           QuestManager.Instance.ResetWeekly();
+                           alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI8/퀘스트가초기화"),alertmanager.alertenum.일반);
+                       }
                        Param param = new Param();
 
                        DateTime today = NowTime;
@@ -607,7 +608,6 @@ public class Timemanager : MonoBehaviour
                            {
                                if (broCallbackUpdate.IsSuccess())
                                {
-                                   Debug.Log("저자자아");
                                    Debug.Log(broCallbackUpdate);
                                }
                            });

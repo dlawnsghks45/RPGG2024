@@ -81,6 +81,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 03e5af00d017f01428305ba986c9e9ec, type: 3}
   - {fileID: 21300000, guid: 43ae741064d5c9e48bbd0a95f0cb20d2, type: 3}
   - {fileID: 21300000, guid: 46a51610385f3c74cb96feb08bbed76e, type: 3}
+  - {fileID: 21300000, guid: 8e7a281078342a04b9846fe190174923, type: 3}
   - {fileID: 21300000, guid: 1b5079104fc78964891cc755724a9b4b, type: 3}
   - {fileID: 21300000, guid: 3f71eb1014f603a41b8dff11b397dc53, type: 3}
   - {fileID: 21300000, guid: 0488b020d1a5de94bbc1d49705fad39c, type: 3}
@@ -307,6 +308,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: ef033d52b4e60a64b9e398b3e0fb1dd2, type: 3}
   - {fileID: 21300000, guid: 6d138f52cdd2bf44aab78139b9ed4911, type: 3}
   - {fileID: 21300000, guid: df7233623ff8bdc4e9ad877ed1b3c46a, type: 3}
+  - {fileID: 21300000, guid: c333246253589214a8eb61ca3effdf52, type: 3}
   - {fileID: 21300000, guid: 6f310862494206a4b98af41b17f78b81, type: 3}
   - {fileID: 21300000, guid: 53b14862e41bb39498ded9cad2f0bf50, type: 3}
   - {fileID: 21300000, guid: 32b4c372c8a379d40b30673ba9f53aa1, type: 3}
@@ -382,6 +384,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: f6175b237122fb24c9c1f786eb0350aa, type: 3}
   - {fileID: 21300000, guid: d16e3c23097e44748b151cfd4c3d2fb7, type: 3}
   - {fileID: 21300000, guid: 514e7d23768d37f45a2a989f469f26ff, type: 3}
+  - {fileID: 21300000, guid: b9e2dd23503185e4d85c2926783dbce1, type: 3}
   - {fileID: 21300000, guid: 194dc233ba6e2444bab2f71205c6dcea, type: 3}
   - {fileID: 21300000, guid: b2e3d3331522ac84486734d5d3f93776, type: 3}
   - {fileID: 21300000, guid: e61184335e2982c4f824d2652def753a, type: 3}
@@ -438,6 +441,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 3b9f43b39e7b3ca43a8851c8096c3408, type: 3}
   - {fileID: 21300000, guid: 97b506b3a6822e34a91c1cc8b9d391f9, type: 3}
   - {fileID: 21300000, guid: 3f1f47b3e3e81cd4fb53e9bd08a12d0f, type: 3}
+  - {fileID: 21300000, guid: f4de09b3158a9cb40abd0e967f7de745, type: 3}
   - {fileID: 21300000, guid: 04e5fab3445ef914fad98388b50c8a07, type: 3}
   - {fileID: 21300000, guid: 44365bb38936717459b4b63a8cb92506, type: 3}
   - {fileID: 21300000, guid: de067db3643c58f428eca8e285de233c, type: 3}
@@ -794,6 +798,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 2d9a2457622af764183bae3ff32ad38a, type: 3}
   - {fileID: 21300000, guid: d6c2e55784f1b884e9c36a15bf5ecd45, type: 3}
   - {fileID: 21300000, guid: c7c05657b5efe47479bd7a77b4a40594, type: 3}
+  - {fileID: 21300000, guid: fcce565716833ad428bfb5ddba0c9b1f, type: 3}
   - {fileID: 21300000, guid: 55f95757214daaf4c98a7700a021e936, type: 3}
   - {fileID: 21300000, guid: 818e0c5767ce01649a9f49e349bb598c, type: 3}
   - {fileID: 21300000, guid: da403e57e07a441409525506d3e4fe25, type: 3}
@@ -1512,6 +1517,8 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 4f0921ce46b9a5e4aae3f6b9e04e0fb3, type: 3}
   - {fileID: 21300000, guid: 68d491ce9ce626245964fc2473a349d6, type: 3}
   - {fileID: 21300000, guid: e68bf1ce1052215409025adee9597cf1, type: 3}
+  - {fileID: 21300000, guid: 8f7b72ce8a89d094889451ee534c2bbc, type: 3}
+  - {fileID: 21300000, guid: deced4cecf720a0469edd3ed5ee3c72e, type: 3}
   - {fileID: 21300000, guid: 175575ce3ab54954b89b6088dced175d, type: 3}
   - {fileID: 21300000, guid: 4b2ec6ce4c3d7e24e929c7dfeb7dcb4b, type: 3}
   - {fileID: 21300000, guid: 7f20d9ceacbd34e46a30bb2faa42d8da, type: 3}
@@ -1651,6 +1658,7 @@ SpriteAtlas:
   - "\uD398\uD5C8\uBCF4\uC11D"
   - "\uC2E0\uC758\uB2E8\uAC806~10"
   - 3
+  - 40
   - short_sword2
   - Dagger3
   - "\uAE4C\uB9C8\uADC0\uAE43\uD138"
@@ -1877,6 +1885,7 @@ SpriteAtlas:
   - 1020
   - angel
   - "\uC2E0\uC758\uC624\uBE0C16~20"
+  - 40
   - Clock14
   - 1030
   - 1026
@@ -1952,6 +1961,7 @@ SpriteAtlas:
   - club2
   - 1114
   - "\uD06C\uB9AC\uC2A4\uB9C8\uC2A4\uC0AC\uD0D5"
+  - 41
   - "\uC624\uB798\uB41C \uC0AC\uB9C9\uC6A9\uC758 \uBE44\uB298 \uC870\uAC01"
   - 1_Ore
   - Gold321
@@ -2008,6 +2018,7 @@ SpriteAtlas:
   - 19
   - Bow1
   - Punch1
+  - E15
   - "\uD718\uC7A5\uC99D\uD45C"
   - quest_83
   - 333
@@ -2364,6 +2375,7 @@ SpriteAtlas:
   - 5
   - "\uC774\uBCA4\uD2B8\uC644\uB4DC"
   - "\uC2E0\uBC18\uC9C0\uC804\uCCB4"
+  - 41
   - 1
   - 1038
   - Dungeon_Special1
@@ -3082,6 +3094,8 @@ SpriteAtlas:
   - "\uB9C8\uB825\uC758 \uACB0\uC815\uCCB4"
   - Clock11
   - "\uC2E0\uC758\uBCF4\uC870\uBB34\uAE30\uC0C1\uD0DC1"
+  - E14
+  - E13
   - 1026
   - 1231
   - 0

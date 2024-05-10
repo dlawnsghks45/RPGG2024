@@ -731,6 +731,7 @@ public class LogManager : MonoBehaviour
             // 이후 처리
             if (callback.IsSuccess())
             {
+                
             }
         });
     } 

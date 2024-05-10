@@ -826,10 +826,8 @@ public class Inventory : MonoBehaviour
             equipoptionchanger.Instance.Checkpanel();
 
             
-            //Debug.Log(nowsettype);
             LockUi.gameObject.SetActive(true);
-            LockUi.IsOn =
-                PlayerBackendData.Instance.GetTypeEquipment(EquipItemDB.Instance.Find_id(data.Itemid).Type)[data.KeyId1]
+            LockUi.IsOn = PlayerBackendData.Instance.GetTypeEquipment(EquipItemDB.Instance.Find_id(data.Itemid).Type)[data.KeyId1]
                     .IsLock;
 
 
@@ -2081,6 +2079,18 @@ public class Inventory : MonoBehaviour
       
         switch (ItemdatabasecsvDB.Instance.Find_id(nowselectid).itemsubtype)
         {
+            case "406":
+                petmanager.Instance.Bt_GetPet(ItemdatabasecsvDB.Instance.Find_id(nowselectid).A);
+                PlayerBackendData.Instance.RemoveItem(nowselectid, 1);
+                //저장
+                Savemanager.Instance.SaveInventory();
+                petmanager.Instance.SavePet();
+                RefreshInventory();
+                Savemanager.Instance.Save();
+                PlayerData.Instance.RefreshPlayerstat();
+                avatamanager.Instance.EarnPet(ItemdatabasecsvDB.Instance.Find_id(nowselectid).A);
+                break;
+            //아바타
             case "405":
                 Levelshop.Instance.GiveTime2(int.Parse(ItemdatabasecsvDB.Instance.Find_id(nowselectid).A), 3);
                 PlayerBackendData.Instance.RemoveItem(nowselectid, 1);

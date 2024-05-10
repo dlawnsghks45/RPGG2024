@@ -29,6 +29,28 @@ public class Player : MonoBehaviour
 
     #region 능력치들
     
+    
+    //탈리스만
+    public float talisman_allstat = 0;
+    public float talisman_atk = 0;
+    public float talisman_matk = 0;
+    public float talisman_crit = 0;
+    public float talisman_critdmg = 0;
+    public int talisman_MaxDotCount = 0; //�ִ� ��Ʈ ��  //�⺻ 10
+    public float talisman_DotDmgUp = 0; //�ִ� ��Ʈ ��  //�⺻ 10
+    public int talisman_AddStack = 0; //��Ʈ ��ų ��� �� �߰��Ǵ� ���
+    public int talisman_Attakcount = 0; //��Ʈ ��ų ��� �� �߰��Ǵ� ���
+    public float talisman_Bossdmg = 0; //���� �߰� ����
+    public float talisman_Mondmg = 0; //���� �߰� ����
+    public float talisman_dmgup = 0; //���� �߰� ����
+    public float talisman_Buff = 0; //���� �߰� ����
+    public float talisman_Exp = 0; //���� �߰� ����
+    public float talisman_Gold = 0; //���� �߰� ����
+    public float talisman_ReduceCooldown = 0; //���� �߰� ����
+
+    
+    
+    
     //수집
     public float Stat_collection = 0;
     
@@ -165,6 +187,12 @@ public class Player : MonoBehaviour
     public float AlldmgUp = 0;
     public int ability_AttackCount = 0;
 
+    public float pet_allstatnum = 0;
+    public float pet_gold = 0;
+    public float pet_exp = 0;
+
+    
+    
     //5단계 특화
     public float ability_basicskillper = 0;
     public float ability_basicskilldmg = 0;
@@ -191,6 +219,7 @@ public class Player : MonoBehaviour
     public float buff_hit = 0;
     public float buff_crit = 0;
     public float buff_critdmg = 0;
+    public float buff_Allstatper = 0;
     public float buff_hp = 0;
     public float buff_mp = 0;
     public float buff_atkspeed = 0;
@@ -266,469 +295,10 @@ public class Player : MonoBehaviour
             return lv * 0.1f;
         }
     }
-
-    public float AdventureRankSkillSlot(int lv)
+    bool isequipskills = false;
+    void CheckESKILL(EquipSkillDB.Row skilldata,EquipItemDB.Row data2 = null ,EquipItemDB.Row data = null)
     {
-        switch (lv)
-        {
-            case 1:
-                return 0;
-            case 2:
-            case 3:
-            case 4:
-                return 1;
-            case 5:
-            case 6:
-            case 7:
-                return 2;
-            case 8:
-            case 9:
-            case 10:
-                return 3;
-            case 11:
-            case 12:
-            case 13:
-            case 14:
-            case 15:
-            case 16:
-            case 17:
-                return 4;
-            case 18:
-            case 19:
-            case 20:
-            case 21:
-            case 22:
-            case 23:
-            case 24:
-                return 5;
-            case 25:
-            case 26:
-            case 27:
-            case 28:
-            case 29:
-            case 30:
-            case 31:
-            case 32:
-            case 33:
-            case 34:
-                return 6;
-
-        }
-
-        return 0;
-    }
-
-    public float altarstat_strdexintwis = 0;
-    public float achstat = 0;
-    public float altarstat_atkmatk = 0;
-    // ReSharper disable Unity.PerformanceAnalysis
-    public void RefreshStat()
-    {
-        ClassDB.Row classdata = ClassDB.Instance.Find_id(Nowclass.ClassId1);
-
-        equipskillmanager.Instance.ResetStats();
-
-        int playerlv = PlayerBackendData.Instance.GetLv();
-
-        achstat = 0; //업적
-        altarstat_strdexintwis = 0; //제단
-        altarstat_atkmatk = 0; //제단 
-
-        set_atk = 0;
-        set_matk = 0;
-        set_def = 0;
-        set_mdef = 0;
-        set_str = 0;
-        set_dex = 0;
-        set_int = 0;
-        set_wis = 0;
-        set_hit = 0;
-        set_crit = 0;
-        set_critdmg = 0;
-        set_hp = 0;
-        set_mp = 0;
-        set_atkspeed = 0;
-        set_castspeed = 0;
-        set_MaxDotCount = 0; //�ִ� ��Ʈ ��  //�⺻ 10
-        set_DotDmgUp = 0; //�ִ� ��Ʈ ��  //�⺻ 10
-        set_AddStack = 0; //��Ʈ ��ų ��� �� �߰��Ǵ� ���
-        set_reducedmg = 0;
-        set_cooldown = 0;
-
-        stat_atk = 0;
-        stat_matk = 0;
-        stat_def = 0;
-        stat_mdef = 0;
-        stat_str = 0;
-        stat_dex = 0;
-        stat_int = 0;
-        stat_wis = 0;
-        stat_hit = 0;
-        stat_crit = 0;
-        stat_critdmg = 0;
-        stat_hp = 0;
-        stat_mp = 0;
-        stat_atkspeed = 0;
-        stat_castspeed = 0;
-        Stat_MaxDotCount = maxdotcount;
-        Stat_DotDmgUp = 0;
-        Stat_ReduceCoolDown = 0;
-        stat_reducedmg = 0;
-        stat_basicatkup = 0;
-        stat_potionup = 0;
-
-        stat_addmatkdmg = 0;
-        stat_addatkdmg = 0;
-        stat_usemoremana = 0;
-        Stat_BreakDmg = 0;
-        Stat_ExtraExp = 0;
-        Stat_ExtraGold = 0;
-        stat_Monsterdmg = 0;
-        Stat_ExtraDrop = 0;
-        
-        //제련 점수
-        Stat_SmeltPoint = 0;
-        Stat_SmeltDmg = 0;
-
-        
-        //버프효율증가
-        Stat_totalbuff = 0;
-        
-        //수집
-        Stat_collection = 0;
-
-
-
-        AlldmgUp = 0;
-        
-        
-        
-        
-        //어빌리티
-        ability_atk = 0;
-        ability_matk = 0;
-        ability_def = 0;
-        ability_mdef = 0;
-        ability_str = 0;
-        ability_dex = 0;
-        ability_int = 0;
-        ability_wis = 0;
-        
-        ability_strnum = 0;
-        ability_dexnum = 0;
-        ability_intnum = 0;
-        ability_wisnum = 0;
-        
-        
-        ability_hit = 0;
-        ability_crit = 0;
-        ability_critdmg = 0;
-        ability_hp = 0;
-        ability_mp = 0;
-        ability_atkspeed = 0;
-        ability_castspeed = 0;
-        ability_maxdotcount = 0;
-        ability_dotdmgup = 0;
-        ability_AddStack = 0;
-        ability_bossdmg = 0;
-        ability_monsterdmg = 0;
-        ability_breakdmg = 0;
-        ability_reducedmg = 0;
-        ability_basicatkup = 0;
-        ability_potionup = 0;
-        ability_allstat = 0;
-        ability_allstatnum= 0;
-        ability_exp = 0;
-        ability_gold = 0;
-        ability_drop = 0;
-        ability_cooldown = 0;
-        ability_buff = 0;
-        ability_AttackCount = 0;
-
-        //5단계 특화
-        ability_basicskillper = 0;
-        ability_basicskilldmg = 0;
-
-        ability_magicskillper = 0;
-        ability_magicskilldmg = 0;
-
-        ability_critskillper = 0;
-        ability_critskilldmg = 0;
-
-        abilityskillallatack = false;
-
-
-
-        gear_atk = 0;
-        gear_matk = 0;
-        gear_def = 0;
-        gear_mdef = 0;
-        gear_str = 0;
-        gear_dex = 0;
-        gear_int = 0;
-        gear_wis = 0;
-        gear_hit = 0;
-        gear_crit = 0;
-        gear_critdmg = 0;
-        gear_hp = 0;
-        gear_mp = 0;
-        gear_atkspeed = 0;
-        gear_castspeed = 0;
-        gear_maxdotcount = 0;
-        gear_dotdmgup = 0;
-        gear_reducedmg = 0;
-        gear_basicatkup = 0;
-        gear_potionup = 0;
-        gear_allstat = 0;
-        gear_alldmg = 0;
-        buff_atk = 0;
-        buff_atkPercent = 0;
-        buff_matk = 0;
-        buff_matkPercent = 0;
-        buff_def = 0;
-        buff_mdef = 0;
-        buff_str = 0;
-        buff_dex = 0;
-        buff_int = 0;
-        buff_wis = 0;
-        buff_hit = 0;
-        buff_crit = 0;
-        buff_critdmg = 0;
-        buff_hp = 0;
-        buff_mp = 0;
-        buff_atkspeed = 0;
-        buff_castspeed = 0;
-        buff_basicatkup = 0;
-        buff_alldmgup = 0;
-
-
-        bool isequipskills = false;
-        
-
-        for (int i = 0; i < AvartaDB.Instance.NumRows(); i++)
-        {
-//            Debug.Log(i);
-            if (PlayerBackendData.Instance.playeravata[i])
-            {
-                switch (AvartaDB.Instance.GetAt(i).stattype)
-                {
-                    case "allstat":
-                        ability_allstat += float.Parse(AvartaDB.Instance.GetAt(i).stat);
-                        break;
-                    case "gold":
-                        Stat_ExtraGold += float.Parse(AvartaDB.Instance.GetAt(i).stat);
-                        break;
-                    case "exp":
-                        Stat_ExtraExp += float.Parse(AvartaDB.Instance.GetAt(i).stat);
-                        break;
-                    case "expdmg":
-                        Stat_ExtraExp += float.Parse(AvartaDB.Instance.GetAt(i).stat);
-                         AlldmgUp += float.Parse(AvartaDB.Instance.GetAt(i).stat2);
-                        break;
-                    case "golddmg":
-                        Stat_ExtraGold += float.Parse(AvartaDB.Instance.GetAt(i).stat);
-                        AlldmgUp += float.Parse(AvartaDB.Instance.GetAt(i).stat2);
-                        break;
-                }   
-            }
-        }
-       // Debug.Log("펫 계산전" + ability_allstatnum);
-
-        foreach (var VARIABLE in PlayerBackendData.Instance.PetData)
-        {
-            if (VARIABLE.Value.Ishave)
-            {
-                PetDB.Row petdata = PetDB.Instance.Find_id(VARIABLE.Value.Petid);
-                switch (petdata.stathave)
-                {
-                    case "allstat":
-                        ability_allstatnum += float.Parse(petdata.stathavenum.Split(';')[VARIABLE.Value.Petstar]);
-//                        Debug.Log("로그" + float.Parse(petdata.stathavenum.Split(';')[VARIABLE.Value.Petstar])) ;
-                        break;
-                    case "gold":
-                        Stat_ExtraGold += float.Parse(petdata.stathavenum.Split(';')[VARIABLE.Value.Petstar]);
-                        break;
-                    case "exp":
-                        Stat_ExtraExp += float.Parse(petdata.stathavenum.Split(';')[VARIABLE.Value.Petstar]);
-                        break;
-                }   
-            }
-         
-        }
-
- 
-        
-        
-//        Debug.Log("펫 계산후" + ability_allstatnum);
-        //펫
-        if (PlayerBackendData.Instance.nowPetid != "")
-        {
-            PetDB.Row petdata = PetDB.Instance.Find_id(PlayerBackendData.Instance.nowPetid);
-
-            string[] stattypes = petdata.Stattype.Split(';');
-            string[] stat0 = petdata.Stat0.Split(';');
-            string[] stat1 = petdata.Stat1.Split(';');
-            string[] stat2 = petdata.Stat2.Split(';');
-            string[] stat3 = petdata.Stat3.Split(';');
-            string[] stat4 = petdata.Stat4.Split(';');
-            string[] nowstat = new string[5];
-            for (int a = 0; a< stattypes.Length; a++)
-            {
-                switch (a)
-                {
-                    case 0:
-                        nowstat = stat0;
-                        break;
-                    case 1:
-                        nowstat = stat1;
-                        break;
-                    case 2:
-                        nowstat = stat2;
-                        break;
-                    case 3:
-                        nowstat = stat3;
-                        break;
-                    case 4:
-                        nowstat = stat4;
-                        break;
-                }
-                switch (stattypes[a])
-                {
-                    case "crit":
-                        ability_crit +=
-                            float.Parse(nowstat[
-                                PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar]);
-//                        Debug.Log("크리");
-                        break;
-                    case "meleemagic":
-                        ability_atk +=
-                            float.Parse(nowstat[
-                                PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar]);
-                        ability_matk +=
-                            float.Parse(nowstat[
-                                PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar]);
-                       // Debug.Log("물마");
-                        break;
-                    case "dotdmg":
-                        ability_dotdmgup +=
-                            float.Parse(nowstat[
-                                PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar]);
-                  //      Debug.Log("상태이상");
-                        break;
-                    case "critdmg":
-                        ability_critdmg +=
-                            float.Parse(nowstat[
-                                PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar]);
-               //         Debug.Log("치명피해");
-
-                        break;
-                    case "alldmg":
-                        AlldmgUp +=   float.Parse(nowstat[
-                            PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar]);
-//                        Debug.Log("피증" + float.Parse(nowstat[
-                  //          PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar]));
-                        break;
-                    case "melee":
-                        ability_atk +=
-                            float.Parse(nowstat[
-                                PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar]);
-                 //       Debug.Log("물리");
-
-                        break;
-                    case "magic":
-                        ability_matk +=
-                            float.Parse(nowstat[
-                                PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar]);
-                 //       Debug.Log("마법");
-
-                        break;
-                    case "exp":
-                        ability_exp +=
-                            float.Parse(nowstat[
-                                PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar]);
-                     //   Debug.Log("경험치");
-
-                        break;
-                    case "gold":
-                        ability_gold +=
-                            float.Parse(nowstat[
-                                PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar]);
-                    //    Debug.Log("골드");
-
-                        break;
-                    case "monatk":
-                        ability_monsterdmg +=
-                            float.Parse(nowstat[
-                                PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar]);
-                    //    Debug.Log("일반 몬스터");
-
-                        break;
-                    case "potionup":
-                        ability_potionup +=
-                            float.Parse(nowstat[
-                                PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar]);
-                  //      Debug.Log("포션업");
-
-                        break;
-                    case "bossdmg":
-                        ability_bossdmg +=
-                            float.Parse(nowstat[
-                                PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar]);
-                     //   Debug.Log("보스");
-
-                        break;
-                }
-            }
-        }
-        
-        
-        
-        
-        // Debug.Log("1");
-        //��� ����
-        for (int i = 0; i < PlayerBackendData.Instance.GetEquipData().Length; i++)
-        {
-            if (PlayerBackendData.Instance.GetEquipData()[i] != null)
-            {
-                EquipItemDB.Row data =
-                    EquipItemDB.Instance.Find_id(PlayerBackendData.Instance.GetEquipData()[i].Itemid);
-                EquipItemDB.Row data2 =
-                    EquipItemDB.Instance.Find_id(PlayerBackendData.Instance.GetEquipData()[0].Itemid);
-                gear_atk += PlayerBackendData.Instance.GetEquipData()[i].GetStat(4);
-                gear_matk += PlayerBackendData.Instance.GetEquipData()[i].GetStat(5);
-                gear_def += PlayerBackendData.Instance.GetEquipData()[i].GetStat(6);
-                gear_mdef += PlayerBackendData.Instance.GetEquipData()[i].GetStat(7);
-
-                gear_str += PlayerBackendData.Instance.GetEquipData()[i].GetStat(0);
-                gear_dex += PlayerBackendData.Instance.GetEquipData()[i].GetStat(1);
-                gear_int += PlayerBackendData.Instance.GetEquipData()[i].GetStat(2);
-                gear_wis += PlayerBackendData.Instance.GetEquipData()[i].GetStat(3);
-
-                gear_hit += float.Parse(data.Hit);
-//                Debug.Log(PlayerBackendData.Instance.GetEquipData()[i].Itemid+" " + data.Hp);
-                gear_hp += float.Parse(data.Hp);
-                gear_mp += float.Parse(data.Mp);
-
-                gear_atkspeed += float.Parse(data.atkspeed);
-                gear_castspeed += float.Parse(data.castspeed);
-
-                gear_maxdotcount += int.Parse(data.maxdotcount);
-                gear_dotdmgup += float.Parse(data.dotdmgup);
-                gear_reducedmg += float.Parse(data.def);
-
-                gear_crit += float.Parse(data.Crit);
-                gear_critdmg += float.Parse(data.CritDmg);
-
-
-                gear_allstat += PlayerBackendData.Instance.GetEquipData()[i].GetStat(12);
-                gear_alldmg += PlayerBackendData.Instance.GetEquipData()[i].Alldmg1 * 0.01f;
-                if (!PlayerBackendData.Instance.GetEquipData()[i].IshaveEquipSkill) continue;
-                foreach (var skilldata in PlayerBackendData.Instance.GetEquipData()[i].EquipSkill1
-                             .Select(t => EquipSkillDB.Instance.Find_id(t)))
-                {
-                    try
-                    {
-                        switch (skilldata.coreid)
+          switch (skilldata.coreid)
                         {
                             case "1000": //������ ���
                                 equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.manadrain,
@@ -1370,6 +940,8 @@ public class Player : MonoBehaviour
                             case "1120":
                             case "1454":
                             case "1182":
+                                if(data2 == null)
+                                    return;
                                 switch (data2.SubType)
                                 {
                                     case "Physic":
@@ -1396,6 +968,8 @@ public class Player : MonoBehaviour
                             case "1223":
                             case "1233":
                             case "1524":
+                                if(data2 == null)
+                                    return;
                                 switch (data2.SubType)
                                 {
                                     case "Physic":
@@ -1420,6 +994,496 @@ public class Player : MonoBehaviour
                                 break;
                              //피해 증가
                         }
+    }
+    
+    
+    public float AdventureRankSkillSlot(int lv)
+    {
+        switch (lv)
+        {
+            case 1:
+                return 0;
+            case 2:
+            case 3:
+            case 4:
+                return 1;
+            case 5:
+            case 6:
+            case 7:
+                return 2;
+            case 8:
+            case 9:
+            case 10:
+                return 3;
+            case 11:
+            case 12:
+            case 13:
+            case 14:
+            case 15:
+            case 16:
+            case 17:
+                return 4;
+            case 18:
+            case 19:
+            case 20:
+            case 21:
+            case 22:
+            case 23:
+            case 24:
+                return 5;
+            case 25:
+            case 26:
+            case 27:
+            case 28:
+            case 29:
+            case 30:
+            case 31:
+            case 32:
+            case 33:
+            case 34:
+                return 6;
+
+        }
+
+        return 0;
+    }
+
+    public float altarstat_strdexintwis = 0;
+    public float achstat = 0;
+    public float altarstat_atkmatk = 0;
+    // ReSharper disable Unity.PerformanceAnalysis
+    public void RefreshStat()
+    {
+        ClassDB.Row classdata = ClassDB.Instance.Find_id(Nowclass.ClassId1);
+
+        equipskillmanager.Instance.ResetStats();
+
+        int playerlv = PlayerBackendData.Instance.GetLv();
+
+        achstat = 0; //업적
+        altarstat_strdexintwis = 0; //제단
+        altarstat_atkmatk = 0; //제단 
+
+        
+        //탈리스만스탯
+        talisman_allstat = 0;
+        talisman_atk = 0;
+        talisman_matk = 0;
+        talisman_crit = 0;
+         talisman_critdmg = 0;
+        talisman_MaxDotCount = 0; //�ִ� ��Ʈ ��  //�⺻ 10
+        talisman_DotDmgUp = 0; //�ִ� ��Ʈ ��  //�⺻ 10
+        talisman_AddStack = 0; //��Ʈ ��ų ��� �� �߰��Ǵ� ���
+        talisman_Attakcount = 0; //��Ʈ ��ų ��� �� �߰��Ǵ� ���
+        talisman_Bossdmg = 0; //���� �߰� ����
+        talisman_Mondmg = 0; //���� �߰� ����
+        talisman_dmgup = 0; //���� �߰� ����
+        talisman_Buff = 0;
+        talisman_Exp = 0;
+        talisman_Gold = 0;
+        talisman_ReduceCooldown = 0;
+        
+        
+        set_atk = 0;
+        set_matk = 0;
+        set_def = 0;
+        set_mdef = 0;
+        set_str = 0;
+        set_dex = 0;
+        set_int = 0;
+        set_wis = 0;
+        set_hit = 0;
+        set_crit = 0;
+        set_critdmg = 0;
+        set_hp = 0;
+        set_mp = 0;
+        set_atkspeed = 0;
+        set_castspeed = 0;
+        set_MaxDotCount = 0; //�ִ� ��Ʈ ��  //�⺻ 10
+        set_DotDmgUp = 0; //�ִ� ��Ʈ ��  //�⺻ 10
+        set_AddStack = 0; //��Ʈ ��ų ��� �� �߰��Ǵ� ���
+        set_reducedmg = 0;
+        set_cooldown = 0;
+
+        stat_atk = 0;
+        stat_matk = 0;
+        stat_def = 0;
+        stat_mdef = 0;
+        stat_str = 0;
+        stat_dex = 0;
+        stat_int = 0;
+        stat_wis = 0;
+        stat_hit = 0;
+        stat_crit = 0;
+        stat_critdmg = 0;
+        stat_hp = 0;
+        stat_mp = 0;
+        stat_atkspeed = 0;
+        stat_castspeed = 0;
+        Stat_MaxDotCount = maxdotcount;
+        Stat_DotDmgUp = 0;
+        Stat_ReduceCoolDown = 0;
+        stat_reducedmg = 0;
+        stat_basicatkup = 0;
+        stat_potionup = 0;
+
+        stat_addmatkdmg = 0;
+        stat_addatkdmg = 0;
+        stat_usemoremana = 0;
+        Stat_BreakDmg = 0;
+        Stat_ExtraExp = 0;
+        Stat_ExtraGold = 0;
+        stat_Monsterdmg = 0;
+        Stat_ExtraDrop = 0;
+        
+        //제련 점수
+        Stat_SmeltPoint = 0;
+        Stat_SmeltDmg = 0;
+
+        
+        //버프효율증가
+        Stat_totalbuff = 0;
+        
+        //수집
+        Stat_collection = 0;
+
+
+
+        AlldmgUp = 0;
+        
+        
+        //펫
+        pet_allstatnum = 0;
+        pet_exp = 0;
+        pet_gold = 0;
+        
+        //어빌리티
+        ability_atk = 0;
+        ability_matk = 0;
+        ability_def = 0;
+        ability_mdef = 0;
+        ability_str = 0;
+        ability_dex = 0;
+        ability_int = 0;
+        ability_wis = 0;
+        
+        ability_strnum = 0;
+        ability_dexnum = 0;
+        ability_intnum = 0;
+        ability_wisnum = 0;
+        
+        
+        ability_hit = 0;
+        ability_crit = 0;
+        ability_critdmg = 0;
+        ability_hp = 0;
+        ability_mp = 0;
+        ability_atkspeed = 0;
+        ability_castspeed = 0;
+        ability_maxdotcount = 0;
+        ability_dotdmgup = 0;
+        ability_AddStack = 0;
+        ability_bossdmg = 0;
+        ability_monsterdmg = 0;
+        ability_breakdmg = 0;
+        ability_reducedmg = 0;
+        ability_basicatkup = 0;
+        ability_potionup = 0;
+        ability_allstat = 0;
+        ability_allstatnum= 0;
+        ability_exp = 0;
+        ability_gold = 0;
+        ability_drop = 0;
+        ability_cooldown = 0;
+        ability_buff = 0;
+        ability_AttackCount = 0;
+
+        //5단계 특화
+        ability_basicskillper = 0;
+        ability_basicskilldmg = 0;
+
+        ability_magicskillper = 0;
+        ability_magicskilldmg = 0;
+
+        ability_critskillper = 0;
+        ability_critskilldmg = 0;
+
+        abilityskillallatack = false;
+
+
+
+        gear_atk = 0;
+        gear_matk = 0;
+        gear_def = 0;
+        gear_mdef = 0;
+        gear_str = 0;
+        gear_dex = 0;
+        gear_int = 0;
+        gear_wis = 0;
+        gear_hit = 0;
+        gear_crit = 0;
+        gear_critdmg = 0;
+        gear_hp = 0;
+        gear_mp = 0;
+        gear_atkspeed = 0;
+        gear_castspeed = 0;
+        gear_maxdotcount = 0;
+        gear_dotdmgup = 0;
+        gear_reducedmg = 0;
+        gear_basicatkup = 0;
+        gear_potionup = 0;
+        gear_allstat = 0;
+        gear_alldmg = 0;
+        buff_atk = 0;
+        buff_atkPercent = 0;
+        buff_matk = 0;
+        buff_matkPercent = 0;
+        buff_def = 0;
+        buff_mdef = 0;
+        buff_str = 0;
+        buff_dex = 0;
+        buff_int = 0;
+        buff_wis = 0;
+        buff_hit = 0;
+        buff_crit = 0;
+        buff_critdmg = 0;
+        buff_Allstatper = 0;
+        buff_hp = 0;
+        buff_mp = 0;
+        buff_atkspeed = 0;
+        buff_castspeed = 0;
+        buff_basicatkup = 0;
+        buff_alldmgup = 0;
+
+
+        isequipskills = false;
+        
+
+        for (int i = 0; i < AvartaDB.Instance.NumRows(); i++)
+        {
+//            Debug.Log(i);
+            if (PlayerBackendData.Instance.playeravata[i])
+            {
+                switch (AvartaDB.Instance.GetAt(i).stattype)
+                {
+                    case "allstat":
+                        ability_allstat += float.Parse(AvartaDB.Instance.GetAt(i).stat);
+                        break;
+                    case "gold":
+                        Stat_ExtraGold += float.Parse(AvartaDB.Instance.GetAt(i).stat);
+                        break;
+                    case "exp":
+                        Stat_ExtraExp += float.Parse(AvartaDB.Instance.GetAt(i).stat);
+                        break;
+                    case "expdmg":
+                        Stat_ExtraExp += float.Parse(AvartaDB.Instance.GetAt(i).stat);
+                         AlldmgUp += float.Parse(AvartaDB.Instance.GetAt(i).stat2);
+                        break;
+                    case "golddmg":
+                        Stat_ExtraGold += float.Parse(AvartaDB.Instance.GetAt(i).stat);
+                        AlldmgUp += float.Parse(AvartaDB.Instance.GetAt(i).stat2);
+                        break;
+                }   
+            }
+        }
+       // Debug.Log("펫 계산전" + ability_allstatnum);
+
+        foreach (var VARIABLE in PlayerBackendData.Instance.PetData)
+        {
+            if (VARIABLE.Value.Ishave)
+            {
+                PetDB.Row petdata = PetDB.Instance.Find_id(VARIABLE.Value.Petid);
+                switch (petdata.stathave)
+                {
+                    case "allstat":
+                        pet_allstatnum += float.Parse(petdata.stathavenum.Split(';')[VARIABLE.Value.Petstar]);
+//                        Debug.Log("로그" + float.Parse(petdata.stathavenum.Split(';')[VARIABLE.Value.Petstar])) ;
+                        break;
+                    case "gold":
+                        pet_gold += float.Parse(petdata.stathavenum.Split(';')[VARIABLE.Value.Petstar]);
+                        break;
+                    case "exp":
+                        pet_exp += float.Parse(petdata.stathavenum.Split(';')[VARIABLE.Value.Petstar]);
+                        
+                        break;
+                }   
+            }
+         
+        }
+
+ 
+        
+        
+//        Debug.Log("펫 계산후" + ability_allstatnum);
+        //펫
+        if (PlayerBackendData.Instance.nowPetid != "")
+        {
+            PetDB.Row petdata = PetDB.Instance.Find_id(PlayerBackendData.Instance.nowPetid);
+
+            string[] stattypes = petdata.Stattype.Split(';');
+            string[] stat0 = petdata.Stat0.Split(';');
+            string[] stat1 = petdata.Stat1.Split(';');
+            string[] stat2 = petdata.Stat2.Split(';');
+            string[] stat3 = petdata.Stat3.Split(';');
+            string[] stat4 = petdata.Stat4.Split(';');
+            string[] nowstat = new string[5];
+            for (int a = 0; a< stattypes.Length; a++)
+            {
+                switch (a)
+                {
+                    case 0:
+                        nowstat = stat0;
+                        break;
+                    case 1:
+                        nowstat = stat1;
+                        break;
+                    case 2:
+                        nowstat = stat2;
+                        break;
+                    case 3:
+                        nowstat = stat3;
+                        break;
+                    case 4:
+                        nowstat = stat4;
+                        break;
+                }
+                switch (stattypes[a])
+                {
+                    case "crit":
+                        ability_crit +=
+                            float.Parse(nowstat[
+                                PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar]);
+//                        Debug.Log("크리");
+                        break;
+                    case "meleemagic":
+                        ability_atk +=
+                            float.Parse(nowstat[
+                                PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar]);
+                        ability_matk +=
+                            float.Parse(nowstat[
+                                PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar]);
+                       // Debug.Log("물마");
+                        break;
+                    case "dotdmg":
+                        ability_dotdmgup +=
+                            float.Parse(nowstat[
+                                PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar]);
+                  //      Debug.Log("상태이상");
+                        break;
+                    case "critdmg":
+                        ability_critdmg +=
+                            float.Parse(nowstat[
+                                PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar]);
+               //         Debug.Log("치명피해");
+
+                        break;
+                    case "alldmg":
+                        AlldmgUp +=   float.Parse(nowstat[
+                            PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar]);
+//                        Debug.Log("피증" + float.Parse(nowstat[
+                  //          PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar]));
+                        break;
+                    case "melee":
+                        ability_atk +=
+                            float.Parse(nowstat[
+                                PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar]);
+                 //       Debug.Log("물리");
+
+                        break;
+                    case "magic":
+                        ability_matk +=
+                            float.Parse(nowstat[
+                                PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar]);
+                 //       Debug.Log("마법");
+
+                        break;
+                    case "exp":
+                        ability_exp +=
+                            float.Parse(nowstat[
+                                PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar]);
+                     //   Debug.Log("경험치");
+
+                        break;
+                    case "gold":
+                        ability_gold +=
+                            float.Parse(nowstat[
+                                PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar]);
+                    //    Debug.Log("골드");
+
+                        break;
+                    case "monatk":
+                        ability_monsterdmg +=
+                            float.Parse(nowstat[
+                                PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar]);
+                    //    Debug.Log("일반 몬스터");
+
+                        break;
+                    case "potionup":
+                        ability_potionup +=
+                            float.Parse(nowstat[
+                                PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar]);
+                  //      Debug.Log("포션업");
+
+                        break;
+                    case "bossdmg":
+                        ability_bossdmg +=
+                            float.Parse(nowstat[
+                                PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar]);
+                     //   Debug.Log("보스");
+
+                        break;
+                }
+            }
+        }
+      
+        
+        
+        
+        // Debug.Log("1");
+        //��� ����
+        for (int i = 0; i < PlayerBackendData.Instance.GetEquipData().Length; i++)
+        {
+            if (PlayerBackendData.Instance.GetEquipData()[i] != null)
+            {
+                EquipItemDB.Row data =
+                    EquipItemDB.Instance.Find_id(PlayerBackendData.Instance.GetEquipData()[i].Itemid);
+                EquipItemDB.Row data2 =
+                    EquipItemDB.Instance.Find_id(PlayerBackendData.Instance.GetEquipData()[0].Itemid);
+                gear_atk += PlayerBackendData.Instance.GetEquipData()[i].GetStat(4);
+                gear_matk += PlayerBackendData.Instance.GetEquipData()[i].GetStat(5);
+                gear_def += PlayerBackendData.Instance.GetEquipData()[i].GetStat(6);
+                gear_mdef += PlayerBackendData.Instance.GetEquipData()[i].GetStat(7);
+
+                gear_str += PlayerBackendData.Instance.GetEquipData()[i].GetStat(0);
+                gear_dex += PlayerBackendData.Instance.GetEquipData()[i].GetStat(1);
+                gear_int += PlayerBackendData.Instance.GetEquipData()[i].GetStat(2);
+                gear_wis += PlayerBackendData.Instance.GetEquipData()[i].GetStat(3);
+
+                gear_hit += float.Parse(data.Hit);
+//                Debug.Log(PlayerBackendData.Instance.GetEquipData()[i].Itemid+" " + data.Hp);
+                gear_hp += float.Parse(data.Hp);
+                gear_mp += float.Parse(data.Mp);
+
+                gear_atkspeed += float.Parse(data.atkspeed);
+                gear_castspeed += float.Parse(data.castspeed);
+
+                gear_maxdotcount += int.Parse(data.maxdotcount);
+                gear_dotdmgup += float.Parse(data.dotdmgup);
+                gear_reducedmg += float.Parse(data.def);
+
+                gear_crit += float.Parse(data.Crit);
+                gear_critdmg += float.Parse(data.CritDmg);
+
+
+                gear_allstat += PlayerBackendData.Instance.GetEquipData()[i].GetStat(12);
+                gear_alldmg += PlayerBackendData.Instance.GetEquipData()[i].Alldmg1 * 0.01f;
+                if (!PlayerBackendData.Instance.GetEquipData()[i].IshaveEquipSkill) continue;
+                foreach (var skilldata in PlayerBackendData.Instance.GetEquipData()[i].EquipSkill1
+                             .Select(t => EquipSkillDB.Instance.Find_id(t)))
+                {
+                    try
+                    {
+                        CheckESKILL(skilldata,data2,data);
                     }
                     catch (Exception e)
                     {
@@ -1436,7 +1500,22 @@ public class Player : MonoBehaviour
             Battlemanager.Instance.mainplayer.buffmanager.OffEquipSkills();
         }
 
-
+        foreach (var v in PlayerBackendData.Instance.GiveEquipTalismanData())
+        {
+            if (v != null)
+            {
+                if (v.Eskill != null)
+                {
+                    for (int i = 0; i < v.Eskill.Count; i++)
+                    {
+                        EquipSkillDB.Row skilldata = EquipSkillDB.Instance.Find_id(v.Eskill[i]);
+                        CheckESKILL(skilldata);
+//                        Debug.Log("스킬체크했다" + v.Eskill[i]);
+                    }
+                }
+            }
+        }
+        
 
         //��Ʈ���
         foreach (var SetData in EquipSetmanager.Instance.SetIDs.Select(t => SetDBDB.Instance.Find_id(t)))
@@ -1620,19 +1699,15 @@ public class Player : MonoBehaviour
         }
 
         Stat_totalbuff = (Passivemanager.Instance.GetPassiveStat(Passivemanager
-            .PassiveStatEnum.buffup) + ability_buff);
-        
+            .PassiveStatEnum.buffup) + ability_buff) + talisman_Buff;
         MapDB.Row mapdata_Now = MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage);
-       
         if (mapdata_Now.maptype.Equals("12"))
         {
             alertmanager.Instance.ShowAlert2(string.Format(Inventory.GetTranslate("UI7/버퍼효과발동"),PartyRaidBattlemanager.Instance.buffmax * 100f), alertmanager.alertenum.일반);
             Stat_totalbuff = PartyRaidBattlemanager.Instance.buffmax;
            // Debug.Log("파티레이드임");
         }
-
         string[] skills = PlayerBackendData.Instance.ClassData[PlayerBackendData.Instance.ClassId].Skills1;
-        
         for (int s = 0; s < skills.Length; s++)
         {
             try
@@ -1669,8 +1744,8 @@ public class Player : MonoBehaviour
                             break;
                         //기본 공격력 증가
                         case "Critdmg_P":
-                            buff_critdmg = float.Parse(skilldata.CritDmg);
-                            buff_critdmg += buff_critdmg * Stat_totalbuff;
+                            buff_Allstatper = float.Parse(skilldata.CritDmg);
+                            buff_Allstatper += buff_Allstatper * Stat_totalbuff;
                             //   Invoke(nameof(OffCritDmgBuff), float.Parse(skilldata.skilldata.AttackCount));
                             Skillmanager.Instance.PlayerBuffImage[7].SetActive(true);
                             Skillmanager.Instance.PlayerBuffImage[3].SetActive(false);
@@ -1712,8 +1787,8 @@ public class Player : MonoBehaviour
                             Skillmanager.Instance.PlayerBuffImage[5].SetActive(false);
                             break;
                         case "Critdmg": //크리티컬
-                            buff_critdmg = float.Parse(skilldata.CritDmg);
-                            buff_critdmg += buff_critdmg * Stat_totalbuff;
+                            buff_Allstatper = float.Parse(skilldata.CritDmg);
+                            buff_Allstatper += buff_Allstatper * Stat_totalbuff;
                             //   Invoke(nameof(OffCritDmgBuff), float.Parse(skilldata.skilldata.AttackCount));
                             Skillmanager.Instance.PlayerBuffImage[3].SetActive(true);
                             Skillmanager.Instance.PlayerBuffImage[7].SetActive(false);
@@ -1766,7 +1841,8 @@ public class Player : MonoBehaviour
              float.Parse(altarrenewalDB.Instance.Find_id("2").stat)) +
             (PlayerBackendData.Instance.GetGoldAltarlv(altarmanager.AltarType.개미굴) *
              float.Parse(altarrenewalDB.Instance.Find_id("3").stat));
-          
+   
+        
 //          Debug.Log("총 능력치" + altarstat_strdexintwis);
         float premiumper = PlayerBackendData.Instance.ispremium ? 0.15f : 0f;
         float advenper = AdventureRank();
@@ -1781,44 +1857,165 @@ public class Player : MonoBehaviour
         float int_allstatper = 0;
         float wis_allstatper = 0;
 
+        
+                 
+        //탈리스만 2세트
+        foreach (var t in PlayerBackendData.Instance.Talisman2Set)
+        {
+            switch (t)
+            {
+                case "T1000":
+                    talisman_allstat += 0.2f;
+                    break;
+                case "T1001":
+                    talisman_crit += 0.2f;
+                    break;
+                case "T1002":
+                    talisman_atk += 5f;
+                    break;
+                case "T1003":
+                    talisman_Bossdmg += 1f;
+                    break;
+                case "T1004":
+                    talisman_DotDmgUp += 10f;
+                    break;
+                case "T1005":
+                    talisman_matk += 5f;
+                    break;
+                case "T1006":
+                    talisman_Buff += 1f;
+                    break;
+                case "T1007":
+                    talisman_Exp += 1f;
+                    talisman_Gold += 0.5f;
+                    break;
+                case "T1008":
+                    talisman_Mondmg += 1f;
+                    talisman_Gold += 0.5f;
+                    break;
+            }
+        }
+
+        //탈리스만 3세트
+        foreach (var t in PlayerBackendData.Instance.Talisman3Set)
+        {
+            switch (t)
+            {
+                case "T1000":
+                    talisman_allstat += 0.2f;
+                    break;
+                case "T1001":
+                    talisman_dmgup += 0.12f;
+                    break;
+                case "T1002":
+                    talisman_atk += 10f;
+                    break;
+                case "T1003":
+                    talisman_Bossdmg += 1.5f;
+                    break;
+                case "T1004":
+                    talisman_DotDmgUp += 10f;
+                    talisman_MaxDotCount += 30;
+                    talisman_AddStack += 30;
+                    break;
+                case "T1005":
+                    talisman_ReduceCooldown += 0.03f;
+                    talisman_matk += 10f;
+                    break;
+                case "T1006":
+                    talisman_Buff += 1.5f;
+                    break;
+                case "T1007":
+                    talisman_Exp += 1.5f;
+                    talisman_Gold += 0.5f;
+                    break;
+                case "T1008":
+                    talisman_Mondmg += 1.5f;
+                    talisman_Gold += 0.5f;
+                    break;
+            }
+        }
+
+         //탈리스만 5세트
+                foreach (var t in PlayerBackendData.Instance.Talisman5Set)
+                {
+                    switch (t)
+                    {
+                        case "T1000":
+                            talisman_allstat += 0.6f;
+                            break;
+                        case "T1001":
+                        case "T1002":
+                        case "T1004":
+                        case "T1005":
+                            talisman_dmgup += 0.2f;
+                            break;
+                        
+                        case "T1003":
+                            talisman_Bossdmg += 2f;
+                            break;
+                       
+                        case "T1006":
+                            talisman_Buff += 2.5f;
+                            break;
+                        case "T1007":
+                            talisman_Exp += 2.0f;
+                            talisman_Gold += 0.5f;
+                            break;
+                        case "T1008":
+                            talisman_Mondmg += 2f;
+                            talisman_Gold += 0.5f;
+                            break;
+                    }
+                }
+
+        
+        
+        
         switch (classdata.mainstat)
         {
             case "str":
-                str_allstat = gear_allstat+ Stat_collection + equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstat);
-                str_allstatper = equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstatperup);
+                str_allstat += gear_allstat+ Stat_collection + equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstat);
+                str_allstatper += equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstatperup) + buff_Allstatper + talisman_allstat;
                 break;
             case "dex":
-                dex_allstat = gear_allstat+ Stat_collection + equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstat);
-                dex_allstatper = equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstatperup);
+                dex_allstat += gear_allstat+ Stat_collection + equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstat);
+                dex_allstatper += equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstatperup)+ buff_Allstatper+ talisman_allstat;
                 break;
             case "int":
                 int_allstat = gear_allstat + Stat_collection + equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstat);
-                int_allstatper = equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstatperup);
+                int_allstatper += equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstatperup)+ buff_Allstatper+ talisman_allstat;
                 break;
             case "wis":
-                wis_allstat = gear_allstat + Stat_collection + equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstat);
-                wis_allstatper  = equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstatperup);
+                wis_allstat += gear_allstat + Stat_collection + equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstat);
+                wis_allstatper  += equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.allstatperup)+ buff_Allstatper+ talisman_allstat;
                 break;
         }
+        
+        
+      
 
-        //Debug.Log("오른 스탯" + allstat);
-        //���� ����
+
+
+        
+        
+        
+        
+        
+        
         stat_str = (float.Parse(classdata.strperlv) * playerlv) + gear_str + buff_str +
                    equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.strup) + set_str + ability_strnum +
-                   achstat + altarstat_strdexintwis  + str_allstat + ability_allstatnum;
+                   achstat + altarstat_strdexintwis  + str_allstat + ability_allstatnum + pet_allstatnum;
         stat_dex = (float.Parse(classdata.dexperlv) * playerlv) + gear_dex + buff_dex +
                    equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.dexup) + set_dex + ability_dexnum +
-                   achstat + altarstat_strdexintwis  + dex_allstat + ability_allstatnum;
+                   achstat + altarstat_strdexintwis  + dex_allstat + ability_allstatnum+ pet_allstatnum;
 
         stat_int = (float.Parse(classdata.intperlv) * playerlv) + gear_int + buff_int +
                    equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.intup) + set_int + ability_intnum +
-                   achstat + altarstat_strdexintwis  + int_allstat + ability_allstatnum;
+                   achstat + altarstat_strdexintwis  + int_allstat + ability_allstatnum+ pet_allstatnum;
         stat_wis = (float.Parse(classdata.wisperlv) * playerlv) + gear_wis + buff_int +
                    equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.wisup) + set_wis + ability_wisnum +
-                   achstat + altarstat_strdexintwis  + wis_allstat + ability_allstatnum;
-
-      
-        
+                   achstat + altarstat_strdexintwis  + wis_allstat + ability_allstatnum+ pet_allstatnum;
         
         
         float allstatper = pm.GetPassiveStat(Passivemanager.PassiveStatEnum.allstatperup) ;
@@ -1864,8 +2061,8 @@ public class Player : MonoBehaviour
         
         
         //추가 경험치
-        Stat_ExtraExp += MyGuildManager.Instance.GetBuffStat(MyGuildManager.GuildBuffEnum.경험치증가) + ability_exp;
-        Stat_ExtraGold += MyGuildManager.Instance.GetBuffStat(MyGuildManager.GuildBuffEnum.골드획득량증가) + ability_gold;
+        Stat_ExtraExp += MyGuildManager.Instance.GetBuffStat(MyGuildManager.GuildBuffEnum.경험치증가) + ability_exp + pet_exp + talisman_Exp;
+        Stat_ExtraGold += MyGuildManager.Instance.GetBuffStat(MyGuildManager.GuildBuffEnum.골드획득량증가) + ability_gold + pet_gold + talisman_Gold;
         Stat_ExtraDrop += MyGuildManager.Instance.GetBuffStat(MyGuildManager.GuildBuffEnum.드롭율증가) + ability_drop;
 
         stat_hp = (float.Parse(classdata.hpperlv) * playerlv) + (stat_str * 60) + (stat_dex * 20) +
@@ -1890,7 +2087,7 @@ public class Player : MonoBehaviour
         stat_crit = 5f + gear_crit + buff_crit + ability_crit +
                     equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.critper) +
                     pm.GetPassiveStat(Passivemanager.PassiveStatEnum.critup) + set_crit
-                    + MyGuildManager.Instance.GetBuffStat(MyGuildManager.GuildBuffEnum.치명타확률증가);
+                    + MyGuildManager.Instance.GetBuffStat(MyGuildManager.GuildBuffEnum.치명타확률증가)  + talisman_crit;
 
         if (mapmanager.Instance.BossPenalty[1].activeSelf)
         {
@@ -1903,7 +2100,7 @@ public class Player : MonoBehaviour
                        equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.critdmgper) +
                        pm.GetPassiveStat(Passivemanager.PassiveStatEnum.critdmgup) +
                        pm.GetPassiveStat(Passivemanager.PassiveStatEnum.critmeleedmgup) + set_critdmg
-                       + MyGuildManager.Instance.GetBuffStat(MyGuildManager.GuildBuffEnum.치명타피해증가);
+                       + MyGuildManager.Instance.GetBuffStat(MyGuildManager.GuildBuffEnum.치명타피해증가) + talisman_critdmg;
 
         if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6142) > 0)
         {
@@ -1944,7 +2141,7 @@ public class Player : MonoBehaviour
                          (int)equipskillmanager.EquipStatFloat.physicperup)
                      + pm.GetPassiveStat(Passivemanager.PassiveStatEnum.atkdmgup) +
                      pm.GetPassiveStatPercent(Passivemanager.PassiveStatEnum
-                         .critmeleedmgup) + set_atk + altarstat_atkmatk + ability_atk));
+                         .critmeleedmgup) + set_atk + altarstat_atkmatk + ability_atk+ talisman_atk) );
         stat_atk += addAtk;
         stat_matk = (stat_int * 28) + (stat_wis * 10) + buff_matk;
 
@@ -1954,7 +2151,7 @@ public class Player : MonoBehaviour
                                   equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat
                                       .magicperup) +
                                   pm.GetPassiveStat(Passivemanager.PassiveStatEnum.matkdmgup) + set_matk +
-                                  altarstat_atkmatk + ability_matk));
+                                  altarstat_atkmatk + ability_matk + talisman_matk));
 
         stat_def = gear_def + buff_def;
         stat_mdef = gear_mdef + buff_mdef;
@@ -1971,8 +2168,8 @@ public class Player : MonoBehaviour
         //���� ����
         stat_Bossdmg = gear_bossdmg + 0f + buff_bossdmg + set_Bossdmg + ability_bossdmg +
                        equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.bossadddmg)
-                       + MyGuildManager.Instance.GetBuffStat(MyGuildManager.GuildBuffEnum.보스피해증가);
-        stat_Monsterdmg = ability_monsterdmg;
+                       + MyGuildManager.Instance.GetBuffStat(MyGuildManager.GuildBuffEnum.보스피해증가) + talisman_Bossdmg;
+        stat_Monsterdmg = ability_monsterdmg + talisman_Mondmg;
 
         if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.basicmonsterdmg) != 0)
         {
@@ -1992,7 +2189,7 @@ public class Player : MonoBehaviour
                            (int)pm.GetPassiveStat(Passivemanager.PassiveStatEnum.dotstackup) + set_MaxDotCount
                            + (int)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat
                                .legendotmaxstack)
-                           + ability_maxdotcount;
+                           + ability_maxdotcount  + talisman_MaxDotCount;
 
         //        Debug.Log("최대중첩"+Stat_MaxDotCount);
 
@@ -2001,15 +2198,15 @@ public class Player : MonoBehaviour
 
         Stat_DotDmgUp = gear_dotdmgup + buff_dotdmgup + pm.GetPassiveStat(Passivemanager.PassiveStatEnum.dotdmgup) +
                         set_DotDmgUp + dotstatup + ability_dotdmgup +
-                        equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.dotperup);
+                        equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.dotperup) + talisman_DotDmgUp;
         Stat_AddStack = gear_AddStack + buff_AddStack +
                         (int)pm.GetPassiveStat(Passivemanager.PassiveStatEnum.dotstackup) + set_AddStack
                         + (int)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat
                             .legendotaddstack)
-                        + ability_AddStack;
+                        + ability_AddStack + talisman_AddStack;
         Stat_ReduceCoolDown = pm.GetPassiveStat(Passivemanager.PassiveStatEnum.reduceskillcooldown) + set_cooldown +
                               MyGuildManager.Instance.GetBuffStat(MyGuildManager.GuildBuffEnum.재사용시간감소) +
-                              ability_cooldown;
+                              ability_cooldown + talisman_ReduceCooldown;
 
         if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.scarvalue) != 0)
         {
@@ -2049,7 +2246,7 @@ public class Player : MonoBehaviour
             stat_basicatkup += basicdmg;
         }
 
-        AlldmgUp += buff_alldmgup + gear_alldmg + equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.totaldmg);
+        AlldmgUp += buff_alldmgup + gear_alldmg + equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.totaldmg) + talisman_dmgup;
 
     }
 
@@ -2210,7 +2407,7 @@ public class Player : MonoBehaviour
                                .attackcountupandrange) + ability_AttackCount + 
                            (int)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6144_3) //블러드 커터
                            +(int)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6148_3) //아폴론의 메이스
-                           +(int)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6159_2); //청화적화온
+                           +(int)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6159_2) + talisman_Attakcount; //청화적화온
         // Debug.Log("ī��Ʈ"+  (int)Passivemanager.Instance.GetPassiveStat( Passivemanager.PassiveStatEnum.atkcountup));
         RefreshAttackCount();
     }

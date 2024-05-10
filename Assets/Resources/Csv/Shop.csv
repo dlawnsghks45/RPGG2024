@@ -14,7 +14,8 @@ ids,namedes,infodes,name,sprite,productid,price,producttype,enumname,isnew,,,
 1013, ★3 신의 증표, ★3 신의 증표,Shopname/1013,Shopinfo/1013,4002;1003,1;33,Item/ETC/goldsafe2,rpgg2.class3,3300,all,,FALSE
 1014, ★4 신의 증표, ★4 신의 증표,Shopname/1014,Shopinfo/1014,4003;1003,1;55,Item/ETC/goldsafe2,rpgg2.class4,5500,all,,FALSE
 1015, ★5 신의 증표, ★5 신의 증표,Shopname/1015,Shopinfo/1015,4004;1003,1;110,Item/ETC/goldsafe2,rpgg2.class5,11000,all,,FALSE
-1016, ★6 신의 증표, ★6 신의 증표,Shopname/1016,Shopinfo/1016,4005;1003,1;330,Item/ETC/goldsafe2,rpgg2.class6,33000,all,,FALSE
+1016, ★6 신의 증표, ★6 신의 증표,Shopname/1016,Shopinfo/1016,4005;1003,1;220,Item/ETC/goldsafe2,rpgg2.class6,22000,all,,FALSE
+,,,,,,,,,,,,
 1017,1100 패키지,"3성 직업권 1개
 3성 무기 방어구
 제단석 50개",Shopname/1017,Shopinfo/1017,4002;40003;1003,1;20;22,Item/Consume/Box/chest_1,rpgg2.package.1100,1100,one,,FALSE
@@ -151,3 +152,12 @@ T10 무기
 1096,파티 레이드 출시 기념 상자,불의 축제 상자,Shopname/1096,Shopinfo/1096,30;1003,20;110,Item/Consume/Paper/quest_90,rpgg2.package2024.party1,11000,one,,TRUE
 1097,파티 레이드 출시 기념 상자,불의 축제 상자,Shopname/1097,Shopinfo/1097,30;1003,40;220,Item/Consume/Paper/quest_90,rpgg2.package2024.party2,22000,one,,TRUE
 1098,파티레이드 주간 충전권,불의 축제 상자,Shopname/1098,Shopinfo/1098,30;1003,14;110,Item/Consume/Paper/quest_90,rpgg2.package2024.party3,11000,weekly,프상주간파티레이드충전권,TRUE
+1099,에픽 패키지 펫 패키지Ⅰ,펫 티켓,Shopname/1099,Shopinfo/1099,50006;587;50007;1003,10;1;500;110,Item/Consume/Paper/quest_83,rpgg2.package.pet.3,11000,one,,TRUE
+1100,에픽 패키지 펫 패키지Ⅱ,펫 티켓,Shopname/1100,Shopinfo/1100,50006;587;50007;1003,21;2;1000;220,Item/Consume/Paper/quest_83,rpgg2.package.pet.4,22000,one,,TRUE
+1101,에픽 패키지 펫 패키지Ⅲ,펫 티켓,Shopname/1101,Shopinfo/1101,50006;587;50007;1003,33;3;1500;330,Item/Consume/Paper/quest_83,rpgg2.package.pet.5,33000,one,,TRUE
+1102, ★7 신의 증표,,Shopname/1102,Shopinfo/1102,4006;1003,1;330,Item/ETC/goldsafe2,rpgg2.class7,33000,,,TRUE
+1103,[올림푸스]제우스 위장 세트 패키지,설날 위장 + 무기,Shopname/1103,Shopinfo/1103,50006;40025;40026;1003;100018,20;1;1;220;66000,Transform/제우스,rpgg2.package2024.event1,33000,one,,TRUE
+1104,[올림푸스]펫 패키지,펫 티켓,Shopname/1104,Shopinfo/1104,50006;50007;1003;100018,30;600;220;44000,Item/Consume/Paper/quest_83,rpgg2.package2024.event2,22000,one,,TRUE
+1105,[올림푸스]강화 패키지,무기강화석 촉진제 등,Shopname/1105,Shopinfo/1105,50005;50002;50003;50004;1003;100018,500;200;200;200;330;44000,Item/Resource/강화촉진제,rpgg2.package2024.event3,22000,one,,TRUE
+1106,[올림푸스]보물 상자 패키지,보물상자,Shopname/1106,Shopinfo/1106,567;1003;100018,20;55;11000,Item/Consume/Box2/Icon3,rpgg2.package2024.event4,5500,,,TRUE
+1107,[올림푸스]룰렛 패키지,33000 당 30개,Shopname/1107,Shopinfo/1107,40005;1003;100018,30;330;66000,Item/Consume/Box2/Icon26,rpgg2.package2024.event5,33000,one,,TRUE

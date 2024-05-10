@@ -35,11 +35,12 @@ public class RankingManager : MonoBehaviour
     
 
     public string[] RankUUID =
-        {"a7266a70-d5ab-11ed-b054-4f1c1856cbd9"
+        {
+            "a7266a70-d5ab-11ed-b054-4f1c1856cbd9"
         ,"b4b6b4b0-d5ab-11ed-942d-07dba37d07d1",
         "b8ad6b50-df64-11ed-a58b-7b8196e7f0e8",
-        "76700840-165c-11ee-8834-99cd73b8dd76",
-        "4f148330-329e-11ee-aee8-afd9bd12cdc6",//길드,
+        "e244c730-0dd8-11ef-b538-adeb1f163bd9",
+        "4f148330-329e-11ee-aee8-afd9bd12cdc6",//길드,`11
         "abbc0400-4bdf-11ee-9e5d-8d7bd888bb2b"
         };
 

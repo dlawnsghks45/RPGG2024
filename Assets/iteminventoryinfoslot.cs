@@ -108,6 +108,9 @@ public class iteminventoryinfoslot : MonoBehaviour
                         case "405": //위장
                             Buttons[(int)itemtypes.사용].SetActive(true);
                             break;
+                        case "406": //펫
+                            Buttons[(int)itemtypes.사용].SetActive(true);
+                            break;
                     }
                     break;
                 case "3": //기타      

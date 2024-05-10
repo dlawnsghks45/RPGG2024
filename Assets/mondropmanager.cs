@@ -156,7 +156,7 @@ public class mondropmanager : MonoBehaviour
 //                Debug.Log("줬다!");
 
                 int Howmany = Random.Range(minhowmany[i], maxhowmany[i]);
-
+                Debug.Log("드랍아이디"+dropid[i]);
                 Inventory.Instance.AddItem(dropid[i], Howmany,false,true);
                 if(monpos != null)
                     ItemDropManager.Instance.SpawnItem(ItemdatabasecsvDB.Instance.Find_id(dropid[i]).sprite,bool.Parse(ItemdatabasecsvDB.Instance.Find_id(dropid[i]).droprare),monpos.position);

@@ -38,7 +38,7 @@ id,DescriptionKor,mapname,name,hp,dmg,crit,attackcount,attacktime,montype,sprite
 98,개미굴여왕,,MonsterName/98,2000000000000,0,0,1,1,boss,Monster/Field/Training,0,0,500,10,8,2,FALSE,0,FALSE
 ,,,,13409502308809,40,,,,,,,,,,,,FALSE,0,FALSE
 ,,,,,,,,,,,,,,,,,FALSE,0,FALSE
-4999,황금박쥐,이벤트 몹,MonsterName/4999,,0,0,1,1,boss,Monster/Event/디아블로,99999,99999,15,30,8,0,FALSE,0,FALSE
+4999,황금박쥐,이벤트 몹,MonsterName/4999,,0,0,1,1,boss,Monster/Event/제우스,99999,99999,15,30,8,0,FALSE,0,FALSE
 레이드,,,,,,,,,,,,,,,,,FALSE,0,FALSE
 5000,전기 뱀장어,레이드 지역,MonsterName/5000,25000000,3000,0,1,1,boss,Monster/Field/54/0,5000,5000,400,12,8,2.5,FALSE,0,FALSE
 5001,심해어,레이드 지역,MonsterName/5001,120000000,5000,0,1,1,boss,Monster/Field/54/1,5001,5001,400,12,8,2.5,FALSE,0,FALSE
@@ -112,16 +112,16 @@ id,DescriptionKor,mapname,name,hp,dmg,crit,attackcount,attacktime,montype,sprite
 ,,,,,,,,,,,,,,,,,,,FALSE
 ,,,,,,,,,,,,,,,,,,,FALSE
 ,,,,,,,,,,,,,,,,,,,FALSE
-1000,1,들판,MonsterName/1000,"4,096",14,30,1,1,basic,Monster/Animal/0_Sheep;Monster/Animal/0_Yak;Monster/Animal/0_Oldyak,1000,1001,0,0,0,0,FALSE,0,FALSE
-1001,1,초원,MonsterName/1001,5793,21,30,1,1,basic,Monster/Animal/1_Pig;Monster/Animal/1_OldPig,1002,1003,0,0,0,0,FALSE,0,FALSE
-1002,2,산,MonsterName/1002,8192,42,30,1,1,basic,Monster/Animal/2_Naga;Monster/Animal/2_Bat;Monster/Animal/2_Wolf,1004,1005,0,0,0,0,FALSE,0,FALSE
-1003,2,뱀굴,MonsterName/1003,11585,49,30,1,1,basic,Monster/Animal/3_Snake3;Monster/Animal/3_Snake1;Monster/Animal/3_Snake,1006,1007,0,0,0,0,FALSE,0,FALSE
-1004,3,켄타 부락,MonsterName/1004,16384,210,30,1,1,basic,Monster/Field/0/0_mob2;Monster/Field/0/0_mob1;Monster/Field/0/0_mob0,1008,1009,0,0,0,0,FALSE,0,FALSE
-1005,3,트롤족 주둔지,MonsterName/1005,23170,105,30,1,1,basic,Monster/Field/1/1_mob3;Monster/Field/1/1_mob2;Monster/Field/1/1_mob1,1010,1011,0,0,0,0,FALSE,0,FALSE
-1006,4,협곡,MonsterName/1006,32768,210,30,1,1,basic,Monster/Field/2/2_mob3;Monster/Field/2/2_mob2;Monster/Field/2/2_mob1,1012,1013,0,0,0,0,FALSE,0,FALSE
-1007,4,폐허,MonsterName/1007,46341,238,30,1,1,basic,Monster/Field/3/3_mob3;Monster/Field/3/3_mob2;Monster/Field/3/3_mob1,1014,1015,0,0,0,0,FALSE,0,FALSE
-1008,4,묘지,MonsterName/1008,65536,350,30,1,1,basic,Monster/Field/4/mob3;Monster/Field/4/mob2;Monster/Field/4/mob1,1016,1017,0,0,0,0,FALSE,0,FALSE
-1009,5,차원의 갈림길,MonsterName/1009,92682,700,30,1,1,basic,Monster/Field/5/mob4;Monster/Field/5/mob3;Monster/Field/5/mob42,1018,1019,0,0,0,0,FALSE,0,FALSE
+1000,1,들판,MonsterName/1000,"4,096",1,30,1,1,basic,Monster/Animal/0_Sheep;Monster/Animal/0_Yak;Monster/Animal/0_Oldyak,1000,1001,0,0,0,0,FALSE,0,FALSE
+1001,1,초원,MonsterName/1001,5793,2,30,1,1,basic,Monster/Animal/1_Pig;Monster/Animal/1_OldPig,1002,1003,0,0,0,0,FALSE,0,FALSE
+1002,2,산,MonsterName/1002,8192,3,30,1,1,basic,Monster/Animal/2_Naga;Monster/Animal/2_Bat;Monster/Animal/2_Wolf,1004,1005,0,0,0,0,FALSE,0,FALSE
+1003,2,뱀굴,MonsterName/1003,11585,4,30,1,1,basic,Monster/Animal/3_Snake3;Monster/Animal/3_Snake1;Monster/Animal/3_Snake,1006,1007,0,0,0,0,FALSE,0,FALSE
+1004,3,켄타 부락,MonsterName/1004,16384,5,30,1,1,basic,Monster/Field/0/0_mob2;Monster/Field/0/0_mob1;Monster/Field/0/0_mob0,1008,1009,0,0,0,0,FALSE,0,FALSE
+1005,3,트롤족 주둔지,MonsterName/1005,23170,6,30,1,1,basic,Monster/Field/1/1_mob3;Monster/Field/1/1_mob2;Monster/Field/1/1_mob1,1010,1011,0,0,0,0,FALSE,0,FALSE
+1006,4,협곡,MonsterName/1006,32768,7,30,1,1,basic,Monster/Field/2/2_mob3;Monster/Field/2/2_mob2;Monster/Field/2/2_mob1,1012,1013,0,0,0,0,FALSE,0,FALSE
+1007,4,폐허,MonsterName/1007,46341,8,30,1,1,basic,Monster/Field/3/3_mob3;Monster/Field/3/3_mob2;Monster/Field/3/3_mob1,1014,1015,0,0,0,0,FALSE,0,FALSE
+1008,4,묘지,MonsterName/1008,65536,9,30,1,1,basic,Monster/Field/4/mob3;Monster/Field/4/mob2;Monster/Field/4/mob1,1016,1017,0,0,0,0,FALSE,0,FALSE
+1009,5,차원의 갈림길,MonsterName/1009,92682,10,30,1,1,basic,Monster/Field/5/mob4;Monster/Field/5/mob3;Monster/Field/5/mob42,1018,1019,0,0,0,0,FALSE,0,FALSE
 1010,5,마계 외부,MonsterName/1010,131072,784,30,1,1,basic,Monster/Field/6/mob4;Monster/Field/6/mob3;Monster/Field/6/mob2,1020,1021,0,0,0,0,FALSE,0,FALSE
 1011,6,마계 내부,MonsterName/1011,185364,980,30,1,1,basic,Monster/Field/7/mob4;Monster/Field/7/mob3;Monster/Field/7/mob2,1022,1023,0,0,0,0,FALSE,0,FALSE
 1012,6,천계 입구,MonsterName/1012,262144,1106,30,1,1,basic,Monster/Field/8/mob4;Monster/Field/8/mob3;Monster/Field/8/mob2,1024,1025,0,0,0,0,FALSE,0,FALSE
@@ -453,14 +453,14 @@ id,DescriptionKor,mapname,name,hp,dmg,crit,attackcount,attacktime,montype,sprite
 6006,대마법사의묘,1,,114618822656,140000,30,1,1,basic,Monster/Content/mage/0;Monster/Content/mage/1;Monster/Content/mage/2;Monster/Content/mage/3;Monster/Content/mage/4;Monster/Content/mage/5,0,0,0,0,0,0,FALSE,0,FALSE
 6007,대마법사의묘,2,,114618822656,140000,50,1,1,boss,Monster/Content/mage/7,0,0,350,5,8,1.5,FALSE,0,FALSE
 골드,,,,,,,,,,,,,,,,,FALSE,0,FALSE
-6008,골드 던전,1,천만 20~50,154618822656,140000,30,1,1,basic,Monster/Content/gold/0;Monster/Content/gold/1;Monster/Content/gold/2;Monster/Content/gold/3;Monster/Content/gold/4;Monster/Content/gold/5,0,0,0,0,0,0,FALSE,0,FALSE
-6009,골드 던전,1,60~85,154618822656,140000,30,1,1,basic,Monster/Content/gold/0;Monster/Content/gold/1;Monster/Content/gold/2;Monster/Content/gold/3;Monster/Content/gold/4;Monster/Content/gold/5,0,0,0,0,0,0,FALSE,0,FALSE
-6010,골드 던전,1,90~120,154618822656,140000,30,1,1,basic,Monster/Content/gold/0;Monster/Content/gold/1;Monster/Content/gold/2;Monster/Content/gold/3;Monster/Content/gold/4;Monster/Content/gold/5,0,0,0,0,0,0,FALSE,0,FALSE
-6011,골드 던전,1,130~160,154618822656,140000,30,1,1,basic,Monster/Content/gold/0;Monster/Content/gold/1;Monster/Content/gold/2;Monster/Content/gold/3;Monster/Content/gold/4;Monster/Content/gold/5,0,0,0,0,0,0,FALSE,0,FALSE
-6012,골드 던전,1,170~220,154618822656,140000,30,1,1,basic,Monster/Content/gold/0;Monster/Content/gold/1;Monster/Content/gold/2;Monster/Content/gold/3;Monster/Content/gold/4;Monster/Content/gold/5,0,0,0,0,0,0,FALSE,0,FALSE
-6013,골드 던전,1,230~260,154618822656,140000,30,1,1,basic,Monster/Content/gold/0;Monster/Content/gold/1;Monster/Content/gold/2;Monster/Content/gold/3;Monster/Content/gold/4;Monster/Content/gold/5,0,0,0,0,0,0,FALSE,0,FALSE
-6014,골드 던전,1,270~300,154618822656,140000,30,1,1,basic,Monster/Content/gold/0;Monster/Content/gold/1;Monster/Content/gold/2;Monster/Content/gold/3;Monster/Content/gold/4;Monster/Content/gold/5,0,0,0,0,0,0,FALSE,0,FALSE
-6015,골드 던전,2,310~350,154618822656,140000,50,1,1,boss,Monster/Content/gold/7,0,0,350,5,8,1.5,FALSE,0,FALSE
+6008,강화석 던전,1,천만 20~50,500046188226560,800000,30,1,1,basic,Monster/Content/Enchant/0;Monster/Content/Enchant/1;Monster/Content/Enchant/2;Monster/Content/Enchant/3;Monster/Content/Enchant/4;Monster/Content/Enchant/5,0,0,0,0,0,0,FALSE,0,FALSE
+6009,강화석 던전,1,60~85,500046188226560,800000,30,1,1,basic,Monster/Content/Enchant/0;Monster/Content/Enchant/1;Monster/Content/Enchant/2;Monster/Content/Enchant/3;Monster/Content/Enchant/4;Monster/Content/Enchant/5,0,0,0,0,0,0,FALSE,0,FALSE
+6010,강화석 던전,1,90~120,500046188226560,800000,30,1,1,basic,Monster/Content/Enchant/0;Monster/Content/Enchant/1;Monster/Content/Enchant/2;Monster/Content/Enchant/3;Monster/Content/Enchant/4;Monster/Content/Enchant/5,0,0,0,0,0,0,FALSE,0,FALSE
+6011,강화석 던전,1,130~160,500046188226560,800000,30,1,1,basic,Monster/Content/Enchant/0;Monster/Content/Enchant/1;Monster/Content/Enchant/2;Monster/Content/Enchant/3;Monster/Content/Enchant/4;Monster/Content/Enchant/5,0,0,0,0,0,0,FALSE,0,FALSE
+6012,강화석 던전,1,170~220,500046188226560,800000,30,1,1,basic,Monster/Content/Enchant/0;Monster/Content/Enchant/1;Monster/Content/Enchant/2;Monster/Content/Enchant/3;Monster/Content/Enchant/4;Monster/Content/Enchant/5,0,0,0,0,0,0,FALSE,0,FALSE
+6013,강화석 던전,1,230~260,500046188226560,800000,30,1,1,basic,Monster/Content/Enchant/0;Monster/Content/Enchant/1;Monster/Content/Enchant/2;Monster/Content/Enchant/3;Monster/Content/Enchant/4;Monster/Content/Enchant/5,0,0,0,0,0,0,FALSE,0,FALSE
+6014,강화석 던전,1,270~300,500046188226560,800000,30,1,1,basic,Monster/Content/Enchant/0;Monster/Content/Enchant/1;Monster/Content/Enchant/2;Monster/Content/Enchant/3;Monster/Content/Enchant/4;Monster/Content/Enchant/5,0,0,0,0,0,0,FALSE,0,FALSE
+6015,강화석 던전,2,310~350,500046188226560,800000,50,1,1,boss,Monster/Content/Enchant/7,0,0,350,5,8,1.5,FALSE,0,FALSE
 경험치,,,,,,,,,,,,,,,,,FALSE,0,FALSE
 6016,경험치 던전,1,,154618822656,140000,30,1,1,basic,Monster/Content/exp/0;Monster/Content/exp/1;Monster/Content/exp/2;Monster/Content/exp/3;Monster/Content/exp/4;Monster/Content/exp/5,0,0,0,0,0,0,FALSE,0,FALSE
 6017,경험치 던전,1,,154618822656,140000,30,1,1,basic,Monster/Content/exp/0;Monster/Content/exp/1;Monster/Content/exp/2;Monster/Content/exp/3;Monster/Content/exp/4;Monster/Content/exp/5,0,0,0,0,0,0,FALSE,0,FALSE

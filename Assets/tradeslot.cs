@@ -29,9 +29,13 @@ public class tradeslot : MonoBehaviour
     
     private void Start()
     {
+        
         if (tradeid == "")
             return;
-
+        
+        uimanager.Instance.TradeSlots.Add(this);
+        
+        
         buycountarraynum = TradeShopDB.Instance.Find_id(tradeid).buytype switch
         {
             "daily" => (int)Enum.Parse(typeof(Timemanager.ContentEnumDaily),

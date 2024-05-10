@@ -43,7 +43,7 @@ id,description,coreid,maparray,mapnum,name,maptype,maplevel,maprank,mapneedid,ma
 -,도적단 섬멸,10002,,1,mapname/10002,6,0,9,0,0,0,10002,1,7,Background/Map/골드,,,,-1
 9999,개미굴,9999,,1,mapname/9999,9,0,13,0,0,0,9999,1,7,Background/Map/개미굴,,,,-1
 9998,대마법사의 묘,9998,,1,mapname/9998,10,0,13,0,0,0,6007,1,7,Background/Map/마법사의묘,,,,-1
-9997,골드던전,9997,,1,mapname/9997,10,0,13,0,0,0,6015,1,7,Background/Map/골드2,,,,-1
+9997,강화석 던전,9997,,1,mapname/9997,10,0,13,0,0,0,6015,1,7,Background/Map/광산,,,,-1
 9996,경험치던전,9996,,1,mapname/9996,10,0,13,0,0,0,6023,1,7,Background/Map/제국,,,,-1
 9995,비법서 던전,9995,,1,mapname/9995,10,0,13,0,0,0,6031,1,7,Background/Map/용암2,,,,-1
 9994,유물 던전,9994,,1,mapname/9994,10,0,13,0,0,0,6039,1,7,Background/Map/개미굴,,,,-1

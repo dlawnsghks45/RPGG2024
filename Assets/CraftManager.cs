@@ -361,7 +361,7 @@ public class CraftManager : MonoBehaviour
 
         craftPercent.text = string.Format(Inventory.GetTranslate("ButtonUI/성공확률"), craftdata.SuccessPercent);
         dt = new DateTime(0);
-        craftTime.text = dt.AddSeconds(double.Parse(craftdata.crafttime) * nowselectcount).ToString("HH:mm:ss");
+        craftTime.text = dt.AddSeconds(double.Parse(craftdata.crafttime) * nowselectcount).ToString("dd:HH:mm:ss");
         //개수 설정
         nowselectcount = 1;
         countinput.text = "1";
