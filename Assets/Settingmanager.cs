@@ -1144,7 +1144,6 @@ public class Settingmanager : MonoBehaviour
     {
         Timemanager.Instance.GetTime();
         GuildManager.Instance.Guildchecksetting();
-        Invoke(nameof(RefreshReset), 3f);
         SaveDataALl();
     }
     IEnumerator ResetCheckStart(float totalsecond)
@@ -1153,8 +1152,7 @@ public class Settingmanager : MonoBehaviour
         yield return new WaitForSeconds(totalsecond);
         Timemanager.Instance.GetTime();
         GuildManager.Instance.Guildchecksetting();
-
-        Invoke(nameof(RefreshReset), 5f);
+      
         
         SaveDataALl();
     }
@@ -1162,7 +1160,7 @@ public class Settingmanager : MonoBehaviour
     public void RefreshReset()
     {
         QuestManager.Instance.RefreshReset();
-        LoginEventManager.Instance.RefreshPanel();
+        LoginEventManager.Instance.ResetEvent();
         MyGuildManager.Instance.AddendanceBt.Interactable = true;
         alertmanager.Instance.Bt_ClickMenu();
     }

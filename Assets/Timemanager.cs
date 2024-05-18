@@ -502,6 +502,7 @@ public class Timemanager : MonoBehaviour
                            dailyrewardmanager.Instance.RewardPanel.Show(false);
                            //dailyrewardmanager.Instance.Initdailyreward();
                            uimanager.Instance.RefreshShopAndTrade();
+                           Settingmanager.Instance.RefreshReset();
                        }
 
                        Param param = new Param();
@@ -591,6 +592,8 @@ public class Timemanager : MonoBehaviour
                        {
                            QuestManager.Instance.ResetWeekly();
                            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI8/퀘스트가초기화"),alertmanager.alertenum.일반);
+                           Settingmanager.Instance.RefreshReset();
+
                        }
                        Param param = new Param();
 

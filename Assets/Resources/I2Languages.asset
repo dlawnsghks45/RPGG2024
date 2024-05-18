@@ -22,7 +22,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uC2A4\uD0AC \uC7A5\uCC29\uD558\uAE30"
-      - '#NAME?'
+      - 
       - 
       - 
       - 
@@ -204,149 +204,6 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uC131\uC7A5 \uAC00\uC774\uB4DC \uD29C\uD1A0\uB9AC\uC5BC \uC9C4\uD589"
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      Flags: 00000000000000
-      Languages_Touch: []
-    - Term: tuto/15
-      TermType: 0
-      Description: 
-      Languages:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      Flags: 00000000000000
-      Languages_Touch: []
-    - Term: tuto/16
-      TermType: 0
-      Description: 
-      Languages:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      Flags: 00000000000000
-      Languages_Touch: []
-    - Term: tuto/17
-      TermType: 0
-      Description: 
-      Languages:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      Flags: 00000000000000
-      Languages_Touch: []
-    - Term: tuto/18
-      TermType: 0
-      Description: 
-      Languages:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      Flags: 00000000000000
-      Languages_Touch: []
-    - Term: tuto/19
-      TermType: 0
-      Description: 
-      Languages:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      Flags: 00000000000000
-      Languages_Touch: []
-    - Term: tuto/20
-      TermType: 0
-      Description: 
-      Languages:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      Flags: 00000000000000
-      Languages_Touch: []
-    - Term: tuto/21
-      TermType: 0
-      Description: 
-      Languages:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      Flags: 00000000000000
-      Languages_Touch: []
-    - Term: tuto/22
-      TermType: 0
-      Description: 
-      Languages:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      Flags: 00000000000000
-      Languages_Touch: []
-    - Term: tuto/23
-      TermType: 0
-      Description: 
-      Languages:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      Flags: 00000000000000
-      Languages_Touch: []
-    - Term: tuto/24
-      TermType: 0
-      Description: 
-      Languages:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      Flags: 00000000000000
-      Languages_Touch: []
-    - Term: tuto/25
-      TermType: 0
-      Description: 
-      Languages:
-      - 
       - 
       - 
       - 
@@ -10717,7 +10574,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uCD5C\uADFC \uC0AC\uB0E5\uD130\n<color=cyan>{0}</color>"
-      - 'recent hunting grounds
+      - 'recent hunting ground
 
         <color=cyan>{0}</color>'
       - 
@@ -11340,7 +11197,7 @@ MonoBehaviour:
       - "\uB9AC\uBDF0 5\uC810 \uD558\uB7EC\uAC00\uAE30\n5\uCD08 \uB9CC \uD22C\uC790\uD574\uC8FC\uC138\uC694!!"
       - 'Go to 5-star review
 
-        Please take just 5 seconds!!'
+        Please just invest 5 seconds!!'
       - 
       - 
       - 
@@ -11595,7 +11452,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uB358\uC804 \uB098\uAC00\uAE30 \uC608\uC57D"
-      - Reserve a dungeon exit
+      - Reservation for exiting the dungeon
       - 
       - 
       - 
@@ -23531,6 +23388,32 @@ MonoBehaviour:
       - 
       Flags: 00000000000000
       Languages_Touch: []
+    - Term: EquipName/61511
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC808\uBA85\uC758 \uCC44\uCC0D"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
+    - Term: EquipName/61521
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uD06C\uB85C\uB178\uC2A4\uC758 \uC9C0\uD321\uC774"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
     - Term: EquipName/6151
       TermType: 0
       Description: 
@@ -23653,6 +23536,32 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uB4DC\uB798\uACE4 \uC560\uB85C\uC6B0"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
+    - Term: EquipName/61611
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC2DC\uAC04\uC758 \uC624\uBE0C"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
+    - Term: EquipName/61621
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC5ED\uBCD1 \uC880\uBE44\uC758 \uBA38\uB9AC"
       - 
       - 
       - 
@@ -34743,7 +34652,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uBC1C\uB85D\uC758 \uC77C\uACA9"
-      - Balrog's Strike
+      - Balrog Strike
       - 
       - 
       - 
@@ -34990,7 +34899,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "<\uACE0\uC720>\uBBF8\uC9C0\uC758 \uB9C8\uB825"
-      - <Unique>Unknown magical power
+      - <Unique>Unknown Magical Power
       - 
       - 
       - 
@@ -35003,7 +34912,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "<\uACE0\uC720>\uAD11\uAE30"
-      - <Unique>Madness
+      - <Unique>Insanity
       - 
       - 
       - 
@@ -35639,7 +35548,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - "<\uACE0\uC720>\uC2A4\uD1B0 \uC2A4\uD2B8\uB77C\uC774\uD06C"
+      - "<\uACE0\uC720>\uC2A4\uD1B0 \uC2A4\uD2B8\uB77C\uC774\uD06C222"
       - 
       - 
       - 
@@ -36025,6 +35934,110 @@ MonoBehaviour:
       - 
       Flags: 00000000000000
       Languages_Touch: []
+    - Term: EquipSkill/1534
+      TermType: 0
+      Description: 
+      Languages:
+      - "<\uACE0\uC720>\uBE0C\uB808\uC774\uD06C \uD0C0\uC784"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
+    - Term: EquipSkill/1534_2
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uD0C0\uC784 \uCF54\uC5B4"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
+    - Term: EquipSkill/1534_3
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uAC13 \uC624\uBE0C \uD0C0\uC784"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
+    - Term: EquipSkill/1535
+      TermType: 0
+      Description: 
+      Languages:
+      - "<\uACE0\uC720>\uC5ED\uBCD1 \uCC44\uCC0D"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
+    - Term: EquipSkill/1535_2
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC5ED\uBCD1\uC758 \uC778\uB3C4\uC790"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
+    - Term: EquipSkill/1535_3
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC5ED\uBCD1\uC758 \uC9C0\uBC30\uC790"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
+    - Term: EquipSkill/1536
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uAC13 \uC624\uBE0C \uD0C0\uC784"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
+    - Term: EquipSkill/1537
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC5ED\uBCD1\uC758 \uC9C0\uBC30\uC790"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
     - Term: EquipSkillInfo/1000
       TermType: 0
       Description: 
@@ -36104,7 +36117,7 @@ MonoBehaviour:
       - "\uAE30\uBCF8 \uACF5\uACA9 \uC2DC 28% \uD655\uB960\uB85C \uC815\uC2E0\uB825
         9% \uD68C\uBCF5\n\uAE30\uBCF8 \uACF5\uACA9 \uAE30\uD68C \uB2F9 1\uD68C\uB9CC
         \uD68C\uBCF5"
-      - '28% chance to recover 9% of mental power when making a basic attack
+      - '28% chance to recover 9% mental power when making a basic attack
 
         Recover
         only once per basic attack opportunity'
@@ -36122,10 +36135,10 @@ MonoBehaviour:
       - "\uAE30\uBCF8 \uACF5\uACA9 \uC2DC 30% \uD655\uB960\uB85C \uC815\uC2E0\uB825
         10% \uD68C\uBCF5\n\uAE30\uBCF8 \uACF5\uACA9 \uAE30\uD68C \uB2F9 1\uD68C\uB9CC
         \uD68C\uBCF5"
-      - 'When making a basic attack, there is a 30% chance to recover 10% of your
-        mental power.
+      - '30% chance to recover 10% of mental power during basic attack
 
-        Recover only once per basic attack opportunity'
+        Recover
+        only once per basic attack opportunity'
       - 
       - 
       - 
@@ -36158,7 +36171,7 @@ MonoBehaviour:
       - "\uAE30\uBCF8 \uACF5\uACA9 \uC2DC 34% \uD655\uB960\uB85C \uC815\uC2E0\uB825
         12% \uD68C\uBCF5\n\uAE30\uBCF8 \uACF5\uACA9 \uAE30\uD68C \uB2F9 1\uD68C\uB9CC
         \uD68C\uBCF5"
-      - '34% chance to recover 12% of mental power during basic attack
+      - '34% chance to recover 12% of mental power with basic attack
 
         Recover
         only once per basic attack opportunity'
@@ -36451,7 +36464,7 @@ MonoBehaviour:
       Languages:
       - "\uBB3C\uB9AC \uC2A4\uD0AC \uC0AC\uC6A9 \uC2DC 27% \uD655\uB960\uB85C \uBB3C\uB9AC
         \uACF5\uACA9\uB825 550% \uB9CC\uD07C \uD53C\uD574\uB97C \uC785\uD798."
-      - When using a physical skill, there is a 27% chance to inflict damage equal
+      - When using a physical skill, there is a 27% chance of inflicting damage equal
         to 550% of physical attack power.
       - 
       - 
@@ -37368,7 +37381,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uC9C0\uD61C 70 \uC99D\uAC00"
-      - Wisdom increased by 70
+      - Increases Wisdom by 70
       - 
       - 
       - 
@@ -37381,7 +37394,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uC9C0\uD61C 80 \uC99D\uAC00"
-      - Increases Wisdom by 80
+      - Wisdom increased by 80
       - 
       - 
       - 
@@ -38018,7 +38031,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uCE58\uBA85\uD0C0 \uD53C\uD574 17% \uC99D\uAC00"
-      - Critical hit damage increased by 17%
+      - Critical damage increased by 17%
       - 
       - 
       - 
@@ -38057,7 +38070,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uCE58\uBA85\uD0C0 \uD53C\uD574 25% \uC99D\uAC00"
-      - Increases critical strike damage by 25%
+      - Critical hit damage increased by 25%
       - 
       - 
       - 
@@ -38388,7 +38401,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uC0C1\uD0DC \uC774\uC0C1 \uD53C\uD574 5% \uC99D\uAC00."
-      - Status ailment damage increased by 5%.
+      - Damage from status ailments increases by 5%.
       - 
       - 
       - 
@@ -42292,6 +42305,86 @@ MonoBehaviour:
       - 
       Flags: 00000000000000
       Languages_Touch: []
+    - Term: EquipSkillInfo/1534
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC815\uC2E0\uB825 \uC18C\uBAA8\uB7C9\uC774 3\uBC30 \uC99D\uAC00\uD558\uB294
+        \uB300\uC2E0 \uBC1C\uB3D9\uB41C \uACF5\uACA9 \uB9C8\uBC95 \uD53C\uD574\uAC00
+        250% \uC99D\uAC00\uD558\uACE0\n\uB9C8\uBC95 \uC2A4\uD0AC \uC0AC\uC6A9 \uC2DC
+        \uC801\uC5D0\uAC8C \uB9C8\uBC95 \uACF5\uACA9\uB825\uC758 2300% \uB9CC\uD07C
+        \uD53C\uD574\uB97C \uC785\uD788\uB294 \uD0C0\uC784 \uC5B4\uD0DD\uC744 \uC0AC\uC6A9\uD55C\uB2E4.\n\n<color=cyan>[\uD0C0\uC784
+        \uCF54\uC5B4]</color>\n\uBAA8\uB4E0 \uD655\uB960\uD615 \uC7A5\uBE44\uC640
+        \uD2B9\uC218 \uD6A8\uACFC\uC758 \uC131\uACF5 \uD655\uB960\uC744 1.5\uBC30
+        \uC99D\uAC00\uC2DC\uD0A8\uB2E4.\n\n<color=cyan>[\uAC13 \uC624\uBE0C \uD0C0\uC784]</color>\n\uBCF4\uC870
+        \uBB34\uAE30 \uC2DC\uAC04\uC758 \uC624\uBE0C \uC7A5\uCC29 \uC2DC \uC2DC\uAC04\uC758
+        \uD798\uC744 \uC81C\uB300\uB85C \uB2E4\uB8E8\uAC8C \uB41C\uB2E4.\n\uD655\uB960\uD615
+        \uC131\uACF5 \uD655\uB960\uC774 1.5\uBC30\uC5D0\uC11C 2\uBC30\uB85C \uC99D\uAC00\uD55C\uB2E4."
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
+    - Term: EquipSkillInfo/1535
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC0C1\uD0DC \uC774\uC0C1 \uC911\uCCA9 +70\n\uC0C1\uD0DC \uC774\uC0C1 \uCD5C\uB300
+        \uC911\uCCA9 +70\n\uBAA8\uB4E0 \uC2DC\uCCB4 \uD3ED\uBC1C \uB9C8\uBC95 \uC2A4\uD0AC
+        \uD53C\uD574 30% \uC99D\uAC00\n\n<color=cyan>[\uC5ED\uBCD1\uC758 \uC778\uB3C4\uC790]</color>\n\uBAA8\uB4E0
+        \uC2DC\uCCB4 \uD3ED\uBC1C \uB9C8\uBC95 \uC2A4\uD0AC \uD53C\uD574 +8% \uCD94\uAC00
+        \uC99D\uAC00\n\n<color=cyan>[\uC5ED\uBCD1\uC758 \uC9C0\uBC30\uC790]</color>\n\uBCF4\uC870
+        \uBB34\uAE30 \uC5ED\uBCD1 \uC880\uBE44\uC758 \uBA38\uB9AC \uC7A5\uCC29 \uC2DC
+        \uBAA8\uB4E0 \uC5ED\uBCD1\uC758 \uC6D0\uB9AC\uB97C \uAE68\uC6B0\uCCD0\n\uC2DC\uCCB4
+        \uD3ED\uBC1C \uB9C8\uBC95 \uC2A4\uD0AC \uD53C\uD574\uAC00 +10% \uCD94\uAC00
+        \uC99D\uAC00\uD558\uACE0\n\uC0C1\uD0DC \uC774\uC0C1 \uD53C\uD574 \uD53C\uD574
+        \uC18D\uB3C4\uAC00 -0.125\uCD08 \uAC10\uC18C\uD55C\uB2E4."
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
+    - Term: EquipSkillInfo/1536
+      TermType: 0
+      Description: 
+      Languages:
+      - "<color=cyan>[\uAC13 \uC624\uBE0C \uD0C0\uC784]</color>\n\uC8FC \uBB34\uAE30
+        \uD06C\uB85C\uB178\uC2A4\uC758 \uC9C0\uD321\uC774 \uC7A5\uCC29 \uC2DC \uC7A0\uC7AC\uB41C
+        \uC2DC\uAC04\uC758 \uD798\uC774 \uAE68\uC5B4\uB09C\uB2E4.\n-\uD0C0\uC784
+        \uC5B4\uD0DD\uC774 \uBAA8\uB4E0 \uBAAC\uC2A4\uD130\uB97C \uD0C0\uACA9\uD558\uACE0
+        \uD53C\uD574\uB7C9\uC774 2300%\uC5D0\uC11C 2700%\n-\uD0C0\uC784 \uCF54\uC5B4
+        \uC131\uACF5 \uD655\uB960\uC774 1.5\uBC30\uC5D0\uC11C 2\uBC30\uB85C \uC99D\uAC00\uD55C\uB2E4."
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
+    - Term: EquipSkillInfo/1537
+      TermType: 0
+      Description: 
+      Languages:
+      - "<color=cyan>[\uC5ED\uBCD1\uC758 \uC9C0\uBC30\uC790]</color>\n\uC8FC \uBB34\uAE30
+        \uC808\uBA85\uC758 \uCC44\uCC0D \uC7A5\uCC29 \uC2DC \uC7A0\uC7AC\uB41C \uC5ED\uBCD1\uC758
+        \uD798\uC774 \uAE68\uC5B4\uB09C\uB2E4.\n-\uC2DC\uCCB4 \uD3ED\uBC1C \uB9C8\uBC95
+        \uC2A4\uD0AC \uD53C\uD574\uAC00 +10% \uCD94\uAC00 \uC99D\uAC00\uD55C\uB2E4.\r\n-\uC0C1\uD0DC
+        \uC774\uC0C1 \uD53C\uD574 \uD53C\uD574 \uC18D\uB3C4\uAC00 -0.125\uCD08 \uAC10\uC18C\uD55C\uB2E4."
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000
+      Languages_Touch: []
     - Term: Setname/1000
       TermType: 0
       Description: 
@@ -43443,7 +43536,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uD2B8\uB864 \uC8FC\uC220\uC0AC"
-      - Troll Shaman
+      - troll shaman
       - 
       - 
       - 
@@ -44223,7 +44316,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uD06C\uB9AC\uC2A4\uD0C8 8000+500\uAC1C"
-      - 8000+500 crystals
+      - 8000+500 Crystals
       - 
       - 
       - 
@@ -51913,7 +52006,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uD22C\uD1B5\uAC00"
-      - tutonga
+      - Tutonga
       - 
       - 
       - 
@@ -53049,7 +53142,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uC774\uBBF8 \uAC00\uC785 \uC2E0\uCCAD\uD55C \uAE38\uB4DC\uC785\uB2C8\uB2E4."
-      - This is a guild that you have already applied to join.
+      - This is a guild you have already applied to join.
       - 
       - 
       - 
@@ -54033,7 +54126,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uD558\uAE09 \uACB0\uC815 \uB0A9\uD488 -3-"
-      - Subordinate Crystal Delivery -3-
+      - Low-Level Crystal Delivery -3-
       - 
       - 
       - 
@@ -54436,7 +54529,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uCD5C\uC0C1\uAE09 \uACB0\uC815 200,000\uAC1C \uB0A9\uD488"
-      - Delivery of 200,000 top quality crystals
+      - Delivered 200,000 top quality crystals
       - 
       - 
       - 
@@ -55077,10 +55170,10 @@ MonoBehaviour:
       Languages:
       - "\uB358\uC804-\uC9C0\uD558 \uAC10\uC625 \uC785\uC7A5\uC774 \uAC00\uB2A5\uD569\uB2C8\uB2E4.\n\uC8FD\uC74C\uC758
         \uBC29\uC5B4\uAD6C \uC138\uD2B8 \uC81C\uC791\uC774 \uAC00\uB2A5\uD569\uB2C8\uB2E4."
-      - 'Dungeon - Entry to the dungeon is possible.
+      - 'Dungeon - Dungeon entry is possible.
 
-        It is possible to craft
-        a set of death armor.'
+        It is possible to craft a
+        set of death armor.'
       - 
       - 
       - 
@@ -55450,7 +55543,7 @@ MonoBehaviour:
         If you change your device, be sure to save
         it to the server.
 
-        Menu->Settings->Send data'
+        Menu->Settings->Send Data'
       - 
       - 
       - 
@@ -58178,7 +58271,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uC81C\uBB3C \uBC14\uCE58\uAE30"
-      - offer sacrifice
+      - sacrifice
       - 
       - 
       - 
@@ -59158,7 +59251,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "[\uC2DC\uC98C\uC77C\uC77C]\uBCF4\uC2A4 \uBAAC\uC2A4\uD130 \uCC98\uCE58 {0}\uD68C"
-      - '[Season daily] Defeat boss monster {0} times'
+      - '[Season Daily] Defeat boss monsters {0} times'
       - 
       - 
       - 
@@ -59637,7 +59730,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uC9C0\uB2A5 1\uB2F9 \uC624\uB974\uB294 \uB2A5\uB825\uCE58"
-      - Ability level increases per intelligence level
+      - Ability level increases per intelligence point
       - 
       - 
       - 
@@ -59663,7 +59756,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uBA40\uD2F0 \uCE90\uC2A4\uD305"
-      - multi casting
+      - multicasting
       - 
       - 
       - 
@@ -59689,7 +59782,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uBB34\uAE30 \uACF5\uACA9\uB825[\uBB3C\uB9AC]"
-      - Weapon Attack Power [Physical]
+      - Weapon attack power [Physical]
       - 
       - 
       - 
@@ -61298,7 +61391,7 @@ MonoBehaviour:
       Languages:
       - "\uBB34\uAE30\uB97C \uD798\uAECF \uC950\uC5B4 \uAC15\uD558\uAC8C \uB0B4\uB824\uCCD0
         \uC801\uC5D0\uAC8C  <color=red>380%</color> \uD53C\uD574\uB97C \uC785\uD78C\uB2E4."
-      - Hold the weapon with all your might and strike hard, inflicting <color=red>380%</color>
+      - Hold the weapon with all your might and hit it hard, inflicting <color=red>380%</color>
         damage to the enemy.
       - 
       - 
@@ -63901,7 +63994,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycbxhcSJOOxI2cpDPngQJFCYrJuB6ffrqjqE3UgW-z7NUkneTss0VycsDEYRszHhWYImy/exec
     Google_SpreadsheetKey: 1rhi3AD5stOr4ljin6mwlgGM5wvn1pTUlM2ritN6RDf8
     Google_SpreadsheetName: I2Loc RIZE RPG Localization
-    Google_LastUpdatedVersion: 1715311549246
+    Google_LastUpdatedVersion: 1716029556365
     Google_Password: gksrnr13
     GoogleUpdateFrequency: 3
     GoogleInEditorCheckFrequency: 2

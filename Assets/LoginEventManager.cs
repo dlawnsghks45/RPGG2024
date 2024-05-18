@@ -90,7 +90,6 @@ public class LoginEventManager : MonoBehaviour
         
         for (int i = 0; i < slots.Length; i++)
         {
-          slots[i].isfinish = false;
           slots[i].Refresh();
         }
       }
@@ -101,6 +100,15 @@ public class LoginEventManager : MonoBehaviour
   {
     for (int i = 0; i < slots.Length; i++)
     {
+      slots[i].Refresh();
+    }
+  }
+
+  public void ResetEvent()
+  {
+    for (int i = 0; i < slots.Length; i++)
+    {
+      slots[i].isfinish = false;
       slots[i].Refresh();
     }
   }
