@@ -123,6 +123,26 @@ public class CollectionRenewalManager : MonoBehaviour
 
    public void RefreshTotalCount()
    {
+      foreach (var v in NotiMain)
+      {
+         v.SetActive(false);
+      }
+
+      foreach (var v in NotiSub_Item)
+      {
+         v.SetActive(false);
+      }
+
+      foreach (var v in NotiSub_Equip)
+      {
+         v.SetActive(false);
+      }
+      MenuNoti.SetActive(false);
+      if (PlayerBackendData.Instance.GetAdLv() < 10)
+      {
+         return;
+      }
+
       int num = 0;
 
       for (int i = 0; i < PlayerBackendData.Instance.RenewalCollectData.Length; i++)
@@ -256,11 +276,7 @@ public class CollectionRenewalManager : MonoBehaviour
                   alertmanager.Instance.Alert_Menu.SetActive(true);
             }
          }
-
-
       }
-
-
    }
 
 

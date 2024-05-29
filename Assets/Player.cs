@@ -301,39 +301,102 @@ public class Player : MonoBehaviour
           switch (skilldata.coreid)
                         {
                             case "1000": //������ ���
-                                equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.manadrain,
-                                    float.Parse(skilldata.value));
-                                equipskillmanager.Instance.SetStats(
-                                    (int)equipskillmanager.EquipStatFloat.manadrainhitper,
-                                    float.Parse(skilldata.probability));
-                                equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.manadrainlv,
-                                    float.Parse(skilldata.lv));
-                                equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.manadrainrare,
-                                    float.Parse(skilldata.rare));
+                                if(data2 == null)
+                                    return;
+                                switch (data2.SubType)
+                                {
+                                    case "Physic":
+                                        equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.smitedmg,
+                                            float.Parse(skilldata.A));
+                                        equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.smitehitper,
+                                            float.Parse(skilldata.c));
+                                        equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.smiterare,
+                                            float.Parse(skilldata.rare));
+                                        equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.smitelv,
+                                            float.Parse(skilldata.lv));
+                                        break;
+                                    case "Magic":
+                                    case "Dot":
+                                        equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.manadrain,
+                                            float.Parse(skilldata.value));
+                                        equipskillmanager.Instance.SetStats(
+                                            (int)equipskillmanager.EquipStatFloat.manadrainhitper,
+                                            float.Parse(skilldata.probability));
+                                        equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.manadrainlv,
+                                            float.Parse(skilldata.lv));
+                                        equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.manadrainrare,
+                                            float.Parse(skilldata.rare));
+                                        break;
+                                }
+                                
+                         
                                 break;
                             case "1010": //��Ÿ
-                                equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.smitedmg,
-                                    float.Parse(skilldata.value));
-                                equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.smitehitper,
-                                    float.Parse(skilldata.probability));
-                                equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.smiterare,
-                                    float.Parse(skilldata.rare));
-                                equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.smitelv,
-                                    float.Parse(skilldata.lv));
+                                if(data2 == null)
+                                    return;
+                                switch (data2.SubType)
+                                {
+                                    case "Physic":
+                                        equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.smitedmg,
+                                            float.Parse(skilldata.A));
+                                        equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.smitehitper,
+                                            float.Parse(skilldata.c));
+                                        equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.smiterare,
+                                            float.Parse(skilldata.rare));
+                                        equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.smitelv,
+                                            float.Parse(skilldata.lv));
+                                        break;
+                                    case "Magic":
+                                    case "Dot":
+                                        equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.manadrain,
+                                            float.Parse(skilldata.value));
+                                        equipskillmanager.Instance.SetStats(
+                                            (int)equipskillmanager.EquipStatFloat.manadrainhitper,
+                                            float.Parse(skilldata.probability));
+                                        equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.manadrainlv,
+                                            float.Parse(skilldata.lv));
+                                        equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.manadrainrare,
+                                            float.Parse(skilldata.rare));
+                                        break;
+                                }
                                 break;
                             case "1020": //õ�� ����
-                                equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.thundersmash,
-                                    float.Parse(skilldata.value));
-                                equipskillmanager.Instance.SetStats(
-                                    (int)equipskillmanager.EquipStatFloat.thundersmashhitper,
-                                    float.Parse(skilldata.probability));
-                                equipskillmanager.Instance.SetStats(
-                                    (int)equipskillmanager.EquipStatFloat.thundersmashrare,
-                                    float.Parse(skilldata.rare));
-                                equipskillmanager.Instance.SetStats(
-                                    (int)equipskillmanager.EquipStatFloat.thundersmashlv,
-                                    float.Parse(skilldata.lv));
-                                break;
+                                
+                                  if(data2 == null)
+                                    return;
+                                  switch (data2.SubType)
+                                  {
+                                      case "Physic":
+                                          equipskillmanager.Instance.SetStats(
+                                              (int)equipskillmanager.EquipStatFloat.thundersmash,
+                                              float.Parse(skilldata.c));
+                                          equipskillmanager.Instance.SetStats(
+                                              (int)equipskillmanager.EquipStatFloat.thundersmashhitper,
+                                              float.Parse(skilldata.A));
+                                          equipskillmanager.Instance.SetStats(
+                                              (int)equipskillmanager.EquipStatFloat.thundersmashrare,
+                                              float.Parse(skilldata.rare));
+                                          equipskillmanager.Instance.SetStats(
+                                              (int)equipskillmanager.EquipStatFloat.thundersmashlv,
+                                              float.Parse(skilldata.lv));
+                                          break;
+                                      case "Magic":
+                                      case "Dot":
+                                          equipskillmanager.Instance.SetStats(
+                                              (int)equipskillmanager.EquipStatFloat.explosion,
+                                              float.Parse(skilldata.value));
+                                          equipskillmanager.Instance.SetStats(
+                                              (int)equipskillmanager.EquipStatFloat.explosionhitper,
+                                              float.Parse(skilldata.probability));
+                                          equipskillmanager.Instance.SetStats(
+                                              (int)equipskillmanager.EquipStatFloat.explosionrare,
+                                              float.Parse(skilldata.rare));
+                                          equipskillmanager.Instance.SetStats(
+                                              (int)equipskillmanager.EquipStatFloat.explosionlv,
+                                              float.Parse(skilldata.lv));
+                                          break;
+                                  }
+                                  break;
                             case "1030": //������
                             case "1050": //��ø����
                             case "1070": //��������
@@ -404,16 +467,42 @@ public class Player : MonoBehaviour
                                     float.Parse(skilldata.value));
                                 break;
                             case "1150": //�ͽ��÷���
-                                equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.explosion,
-                                    float.Parse(skilldata.value));
-                                equipskillmanager.Instance.SetStats(
-                                    (int)equipskillmanager.EquipStatFloat.explosionhitper,
-                                    float.Parse(skilldata.probability));
-                                equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.explosionrare,
-                                    float.Parse(skilldata.rare));
-                                equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.explosionlv,
-                                    float.Parse(skilldata.lv));
-                                break;
+                                 if(data2 == null)
+                                    return;
+                                 switch (data2.SubType)
+                                 {
+                                     case "Physic":
+                                         equipskillmanager.Instance.SetStats(
+                                             (int)equipskillmanager.EquipStatFloat.thundersmash,
+                                             float.Parse(skilldata.c));
+                                         equipskillmanager.Instance.SetStats(
+                                             (int)equipskillmanager.EquipStatFloat.thundersmashhitper,
+                                             float.Parse(skilldata.A));
+                                         equipskillmanager.Instance.SetStats(
+                                             (int)equipskillmanager.EquipStatFloat.thundersmashrare,
+                                             float.Parse(skilldata.rare));
+                                         equipskillmanager.Instance.SetStats(
+                                             (int)equipskillmanager.EquipStatFloat.thundersmashlv,
+                                             float.Parse(skilldata.lv));
+                                         break;
+                                     case "Magic":
+                                     case "Dot":
+                                         equipskillmanager.Instance.SetStats(
+                                             (int)equipskillmanager.EquipStatFloat.explosion,
+                                             float.Parse(skilldata.value));
+                                         equipskillmanager.Instance.SetStats(
+                                             (int)equipskillmanager.EquipStatFloat.explosionhitper,
+                                             float.Parse(skilldata.probability));
+                                         equipskillmanager.Instance.SetStats(
+                                             (int)equipskillmanager.EquipStatFloat.explosionrare,
+                                             float.Parse(skilldata.rare));
+                                         equipskillmanager.Instance.SetStats(
+                                             (int)equipskillmanager.EquipStatFloat.explosionlv,
+                                             float.Parse(skilldata.lv));
+                                         break;
+                                 }
+
+                                 break;
                             case "1160": //���� ��������
                             case "1291": //���� ��������
                             case "1292": //���� ��������

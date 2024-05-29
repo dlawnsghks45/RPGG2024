@@ -517,17 +517,27 @@ public class mapmanager : MonoBehaviour
         //2초뒤 맵이름 변경
 
         //가이드퀘스트
-        Tutorialmanager.Instance.CheckTutorial("changemaplv");
         TutorialTotalManager.Instance.CheckFinish();
         
         //맵타입
         maptype = MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage).maptype;
         mondropmanager.Instance.SetEventDrop(MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage).maptype);
 
+        
+        
+        
         //맵타입에따른 추가
         switch (MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage).maptype)
         {
             case "0": //사냥터
+
+
+                if (EnemySpawnManager.Instance.savedcount.Equals(3))
+                {
+                    Tutorialmanager.Instance.CheckTutorial("changemaplv");
+                }
+
+
                 if (EnemySpawnManager.Instance.savedcount != 0)
                 {
                     savespawncount = EnemySpawnManager.Instance.savedcount;
@@ -735,7 +745,12 @@ public class mapmanager : MonoBehaviour
         maptype = MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage).maptype;
         background[0].sprite = SpriteManager.Instance.GetSprite(MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage).maplayer0);
         EnemySpawnManager.Instance.RemoveEnemySpawn();
-        if (maptype.Equals("9"))
+        if (PlayerBackendData.Instance.nowstage.Equals("5031"))
+        {
+            changemaptext.text =
+                $"{Inventory.GetTranslate(MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage).name)} {string.Format(Inventory.GetTranslate("UI8/단계"),EliteRaid.Instance.LevelCount.nowcount)}";
+        }
+        else if (maptype.Equals("9"))
         {
             changemaptext.text =
                 $"{Inventory.GetTranslate(MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage).name)} {PlayerBackendData.Instance.AntCaveLv}F";

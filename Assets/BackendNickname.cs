@@ -47,7 +47,7 @@ public class BackendNickname : MonoBehaviour
                 //Debug.Log("¿Œµ•" + bro.GetInDate());
             PlayerBackendData.Instance.nickname = NicknameInput_logo.text;
             Nickname_logoPanel.SetActive(false);
-            GetComponent<BackendLogin>().StartClassSetting();
+            GetComponent<BackendLogin>().Bt_SetClass();
            // PlayerBackendData.Instance.initNewPlayerData();
         }
         else

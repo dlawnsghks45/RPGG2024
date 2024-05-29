@@ -6,6 +6,25 @@ using UnityEngine.UI;
 
 public class AdventureLvManager : MonoBehaviour
 {
+    //½Ì±ÛÅæ¸¸µé±â.
+    private static AdventureLvManager _instance = null;
+
+    public static AdventureLvManager Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType(typeof(AdventureLvManager)) as AdventureLvManager;
+                if (_instance == null)
+                {
+                    //Debug.Log("Player script Error");
+                }
+            }
+
+            return _instance;
+        }
+    }
     //½Â±Þ ¼º°ø ½Ã 
     public void Succ()
     {

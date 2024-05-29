@@ -1,16 +1,12 @@
-id,description,info,count,itemid,itemhowmany,type,typesub,type,,typeㄴ,count
-0,스킬 장착 하기,tuto/0,1,1001,500,equipskill,any,equipskill,,equipskill,1
-1,장비 제작 하기,tuto/1,1,1001,500,craft,any,changemaplv,,craft,1
-2,제작 수령 하기,tuto/2,1,1001,500,getcraft,any,killmon,,getcraft,1
-3,장비 장착 하기,tuto/3,1,1001,500,equipitem,any,seeclass,직업 보기,equipitem,1
-4,몬스터 처치하기,tuto/4,1,1001,500,killmon,any,setpassive,직업 패시브 설정하기,killmon,1
-5,사냥터 난이도 변경하기,tuto/5,1,1001,500,changemaplv,any,adlvup,모험 랭크 2이상 달성,changemaplv,1
-6,모험 랭크 2 달성,tuto/6,1,1001,500,adlvup,any,buyclass,직업 구매 하기,adlvup,1
-7,직업 해금 하기,tuto/7,1,1001,500,buyclass,any,equipskill2,스킬 장착 하기,buyclass,1
-8,스킬 장착하기,tuto/8,1,1001,500,equipskill2,any,craft,제작하기,equipskill2,1
-9,물약 제작,tuto/9,1,1001,500,craft,any,getcraft,제작 수령,getcraft,1
-10,물약 수령,tuto/10,1,1001,500,getcraft,any,equipitem,장비 장착,equipitem,1
-11,물약 설정및 장착,tuto/11,1,1001,500,equippotion,any,craftpotion,물약 제작,craftpotion,1
-12,모험 랭크 3 달성,tuto/12,1,1711,50,adlvup3,any,equippotion,물약 장착,equippotion,1
-13,던전 진행,tuto/13,1,531,1,finishdungeon,any,buypotion,교환소 물약  구매,buypotion,1
-14,성장 가이드 보기,tuto/14,1,1001,2000,tutoguide,any,adlvup3,모험 랭크 3이상 달성,adlvup3,1
+id,description,info,count,itemid,itemhowmany,type,typesub,
+0,장비 제작 하기,tuto/1,1,1001,500,craft,any,제작하기
+1,장비 장착하기,tuto/3,1,1001,500,equipitem,any,seeclass
+2,직업 선택 하기,tuto/7,1,1001,500,buyclass,any,직업칸
+3,스킬 장착 하기,tuto/8,1,1001,500,equipskill2,any,스킬장착화면
+4,몬스터 처치하기,tuto/4,1,1001,500,killmon,any,
+5,사냥터 난이도 변경하기,tuto/5,1,1001,500,changemaplv,any,맵선택나오기
+6,물약 제작,tuto/9,1,1001,1000,craft,any,제작나오기
+7,물약 설정및 장착,tuto/11,1,1001,1500,equippotion,any,물약-소모품
+8,모험 랭크 2 달성,tuto/6,1,1711,100,adlvup,any,랭크창
+9,던전 진행,tuto/13,1,531,1,finishdungeon,any,던전창
+10,성장 가이드 보기,tuto/14,1,1001,2000,tutoguide,any,성장가이드창

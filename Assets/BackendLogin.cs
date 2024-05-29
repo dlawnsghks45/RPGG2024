@@ -194,20 +194,15 @@ public class BackendLogin : MonoBehaviour
     }
     public void StartLobby_Load()
     {
-      
-
         StartCoroutine(LoadScene(LobbySelectScene));
     }
     public void StartClassSetting()
     {
-      //  PlayerBackendData.Instance.InitClassData();
-      //  PlayerBackendData.Instance.InitAchieveData();
-
         
         foreach (var t in LoginButtons)
             t.SetActive(false);
 
-        StartCoroutine(LoadScene(CharacterSelectScene));
+        StartCoroutine(LoadScene(LobbySelectScene));
     }
 
     //접속
@@ -218,6 +213,31 @@ public class BackendLogin : MonoBehaviour
     public string LobbySelectScene;
     public string CharacterSelectScene;
 
+    public void Bt_SetClass()
+    {
+        PlayerBackendData.Instance.ClassData["C999"].Lv1 = 1;
+        PlayerBackendData.Instance.ClassData["C999"].Isown = true;
+        PlayerBackendData.Instance.ClassId = "C999";
+        ClassDB.Row data = ClassDB.Instance.Find_id("C999");
+        //아이템 지급
+        PlayerBackendData.Instance.MakeEquipmentAndEquip(data.standweapon);
+        PlayerBackendData.Instance.MakeEquipmentAndEquip(data.standsubweapon);
+
+        PlayerBackendData.Instance.Additem("1700",1);
+        PlayerBackendData.Instance.Additem("10",1);
+        
+        PlayerBackendData.Instance.nowstage = "1000";
+        progressobj.SetActive(true);
+        Savemanager.Instance.SaveStageData();
+        Savemanager.Instance.SaveClassData();
+        Savemanager.Instance.SaveEquip();
+        Savemanager.Instance.SaveSkillData();
+        Savemanager.Instance.GameDataInsert_ToServer();
+        Savemanager.Instance.Init();
+        Savemanager.Instance.Save();
+        StartClassSetting();
+    }
+    
     IEnumerator LoadScene(string scenename)
     {
         yield return new WaitForSeconds(2f);

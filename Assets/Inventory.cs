@@ -716,6 +716,10 @@ public class Inventory : MonoBehaviour
 
     }
 
+    
+    
+    public UIView QuickPotionPanel;
+
     public InventorySlot nowequipslot;
     public UIToggle LockUi;
     public Transform RefreshPanel;

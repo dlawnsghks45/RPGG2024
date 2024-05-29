@@ -201,7 +201,7 @@ id,descriptionKor,sprite,name,description,itemtype,itemsubtype,rare,droprare,buy
 100105,진저 쿠키 조각A,Item/Event/크리스마스/04_Gingerbread_Bite,Itemname/100105,Itemdescript/100105,1,116,4,TRUE,0,100000,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE
 100106,진저 쿠키 조각B,Item/Event/크리스마스/02_Gingerbread_Bite,Itemname/100106,Itemdescript/100106,1,116,5,FALSE,0,500000,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE
 100107,진저 쿠키 조각C,Item/Event/크리스마스/01_Gingerbread_Whole,Itemname/100107,Itemdescript/100107,1,116,6,FALSE,0,10000000,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE
-200000,진저 쿠키 조각C,Item/Consume/Paper/quest_82,Itemname/200000,Itemdescript/200000,2,401,6,TRUE,0,1,FALSE,1,레이드,1,daily,0,TRUE,0,FALSE
+200000,레이드 입장권,Item/Consume/Paper/quest_82,Itemname/200000,Itemdescript/200000,2,401,6,TRUE,0,1,FALSE,1,레이드,1,daily,0,TRUE,0,FALSE
 200001,200레벨 경험치 스크롤,Item/Consume/Paper/quest_08,Itemname/200001,Itemdescript/200001,2,402,6,FALSE,0,1,FALSE,1,86759030,0,0,0,TRUE,0,FALSE
 200002,300레벨 경험치 스크롤,Item/Consume/Paper/quest_08,Itemname/200002,Itemdescript/200002,2,402,6,FALSE,0,1,FALSE,1,1045879131,0,0,0,TRUE,0,FALSE
 200003,400레벨 경험치 스크롤,Item/Consume/Paper/quest_08,Itemname/200003,Itemdescript/200003,2,402,6,FALSE,0,1,FALSE,1,3683420881,0,0,0,TRUE,0,FALSE
@@ -392,6 +392,17 @@ id,descriptionKor,sprite,name,description,itemtype,itemsubtype,rare,droprare,buy
 1750,마법사의 묘 입장권,Item/ETC/DungeonPass2,Itemname/1750,Itemdescript/1750,3,111,6,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 ,,,,,,,,,,,,,,,,,,,
 1751,장비 변경권,Item/Scroll/Scroll12,Itemname/1751,Itemdescript/1751,1,117,6,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
+1752,발록의 정수1~15,Item/Resource/Dungeon_Boss6,Itemname/1752,Itemdescript/1752,3,111,7,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
+1753,발록의 정수16~30,Item/Resource/Dungeon_Boss6,Itemname/1753,Itemdescript/1753,3,111,7,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
 99000,제련석,Item/Resource/acientresource/제련석,Itemname/99000,Itemdescript/99000,3,111,3,FALSE,0,1,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 99001,룬 제련석,Item/룬/Icon27,Itemname/99001,Itemdescript/99001,3,111,5,FALSE,0,1,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
@@ -423,6 +434,15 @@ id,descriptionKor,sprite,name,description,itemtype,itemsubtype,rare,droprare,buy
 3009,응축된 마력이 담긴 병,Item/Resource/Dungeon_Boss11,Itemname/3009,Itemdescript/3009,4,111,5,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
 3010,노스 블로우의 심장,Item/Resource/Dungeon_Boss12,Itemname/3010,Itemdescript/3010,4,111,5,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
 3011,공허의 정수,Item/Resource/공허의정수,Itemname/3011,Itemdescript/3011,4,111,5,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
+3012,던전 코어,Item/Resource/공허의정수,Itemname/3011,Itemdescript/3011,4,111,5,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
+3013,악몽 던전 코어,Item/Resource/공허의정수,Itemname/3011,Itemdescript/3011,4,111,5,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
+3014,지옥 던전 코어,Item/Resource/공허의정수,Itemname/3011,Itemdescript/3011,4,111,5,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
+3015,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,0,,,FALSE
 4000, ★1 신의 증표,Item/ETC/goldsafe2,Itemname/4000,Itemdescript/4000,3,114,1,FALSE,0,20000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE

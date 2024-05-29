@@ -120,7 +120,7 @@ public class uimanager : MonoBehaviour
                 break;
             case 3:
                 //°¨¿¬µÈ ³óÀå ¿ÀÇÂ
-                PlayerData.Instance.ShowNewContentReal("°¨¿°µÈ³óÀå");
+              
                 break;
             case 4: //´ËÂ¢´ë
                 PlayerData.Instance.ShowNewContentReal("´ËÁö´ë");

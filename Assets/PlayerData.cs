@@ -147,6 +147,7 @@ public class PlayerData : MonoBehaviour
                 NewContentTitle.text = Inventory.GetTranslate("Content/교환소제목");
                 NewContentInfo.text = Inventory.GetTranslate("Content/교환소내용");
                 NewContentHow.text = Inventory.GetTranslate("Content/교환소아이템");
+                PlayerData.Instance.ShowNewContentReal("감염된농장");
                 break;
             case "제단":
                 NewContentTitle.text = Inventory.GetTranslate("Content/제단제목");

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Permissions;
 using Doozy.Engine.UI;
 using UnityEngine;
 using UnityEngine.UI;
@@ -31,7 +32,7 @@ public class Tutorialmanager : MonoBehaviour
     public GameObject SkipTutorialbutton;
     public GameObject SkipTutorialbutton_GuideQuest;
 
-    public string maxlv = "15";
+    public string maxlv = "11";
 
 
     public GameObject Tutopanel;
@@ -41,7 +42,8 @@ public class Tutorialmanager : MonoBehaviour
     private int maxcount;
     public GameObject finishbtobj;
 
-    
+
+    public GameObject startturoobj;
     
     
     void RefreshMax()
@@ -54,7 +56,7 @@ public class Tutorialmanager : MonoBehaviour
         }
 
         maxcount = int.Parse(TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).count);
-        Invoke("timestart", 2f);
+        //Invoke("timestart", 2f);
     }
 
     public void timestart()
@@ -113,6 +115,12 @@ public class Tutorialmanager : MonoBehaviour
             finishbtobj.SetActive(false);
         }
         TutorialTotalManager.Instance.RefreshInfo();
+
+        if (PlayerBackendData.Instance.tutoid.Equals("0") && !isnotstarttuto)
+        {
+            SelectTutorialLevel.SetActive(true);
+        }
+
     }
 
 
@@ -142,14 +150,45 @@ public class Tutorialmanager : MonoBehaviour
             Tutopanel.SetActive(false);
             return;
         }
+        
+        startturoobj.SetActive(false);
+        finishbtobj.SetActive(false);
 
-        infotext.text =
-            string.Format("[{0}]\n({1}/{2})",
-                Inventory.GetTranslate(TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).info),
-                PlayerBackendData.Instance.tutocount, maxcount);
+        if (PlayerBackendData.Instance.tutocount >= maxcount)
+            isnotstarttuto = true;
+        
+        //튜토를 시작하지 안흥ㅁ
+        if (!isnotstarttuto)
+        {
+            startturoobj.SetActive(true);
+            infotext.text =
+                string.Format("<color=cyan>[{0}]</color>\n{1}",
+                    Inventory.GetTranslate(TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).info+"a"),
+                    Inventory.GetTranslate("UI8/튜토리얼시작하기"));
+        }
+        else
+        {
+            if (isfinish)
+            {
+                infotext.text =
+                    string.Format("<color=cyan>[{0}]\n{1}/{2} {3}</color>",
+                        Inventory.GetTranslate(TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).info),
+                        PlayerBackendData.Instance.tutocount, maxcount,Inventory.GetTranslate("UI8/완료하기"));
+            }
+            else
+            {
+                infotext.text =
+                    string.Format("<color=white>[{0}]</color>\n{1}/{2}",
+                        Inventory.GetTranslate(TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).info),
+                        PlayerBackendData.Instance.tutocount, maxcount);
+            }
+          
+        }
+        
         if (isfinish)
         {
             infotext.color = Color.cyan;
+            finishbtobj.SetActive(true);
         }
         else
         {
@@ -161,6 +200,17 @@ public class Tutorialmanager : MonoBehaviour
         item.Refresh(reward, howmany, false);
     }
 
+    public void FinishTutoPotion()
+    {
+        CheckTutorial("equippotion");
+    }
+    public void FinishTutoMapChange()
+    {
+        CheckTutorial("changemaplv");
+
+    }
+
+    private bool isnotstarttuto;
     public void CheckTutorial(string trigger)
     {
         if (int.Parse(PlayerBackendData.Instance.tutoid) >= int.Parse(maxlv))
@@ -170,10 +220,16 @@ public class Tutorialmanager : MonoBehaviour
         }
 
         if (isfinish) return;
-        Debug.Log(PlayerBackendData.Instance.tutoid);
-        Debug.Log(TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).type);
+        if(!isnotstarttuto) return;
+            //   Debug.Log(PlayerBackendData.Instance.tutoid);
+      //  Debug.Log(TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).type);
         if (TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).type == (trigger))
         {
+            for (int i = 0; i < NewTuto1.Length; i++)
+                NewTuto1[i].SetActive(false);
+            
+            hidealluiview();
+            
             PlayerBackendData.Instance.tutocount++;
 
             if (maxcount <= PlayerBackendData.Instance.tutocount)
@@ -193,7 +249,6 @@ public class Tutorialmanager : MonoBehaviour
             {
                 finishbtobj.SetActive(false);
             }
-
             Refresh();
             Savemanager.Instance.SaveGuideQuest();
         }
@@ -207,7 +262,6 @@ public class Tutorialmanager : MonoBehaviour
         SkipTutorialbutton.SetActive(false);
         SkipTutorialbutton_GuideQuest.SetActive(false);
         hidealluiview();
-        StartTutorial(0);
         Inventory.Instance.AddItem("996",1);
         LogManager.Log_SelectTutoType("초보자");
     }
@@ -215,7 +269,7 @@ public class Tutorialmanager : MonoBehaviour
     public void Bt_SelectVeteran()
     {
         SelectTutorialLevel.SetActive(false);
-        int tutoid = 15;
+        int tutoid = 11;
         Tutopanel.SetActive(false);
         PlayerBackendData.Instance.tutoid = tutoid.ToString();
         PlayerBackendData.Instance.tutocount = 0;
@@ -233,18 +287,75 @@ public class Tutorialmanager : MonoBehaviour
         Inventory.Instance.ShowEarnItem3(id.ToArray(), hw.ToArray(), false);
         Inventory.Instance.AddItem("997",1);
         hidealluiview();
-        //TutorialTotalManager.Instance.guidepanel.Show(false);
+        TutorialTotalManager.Instance.RefreshInfo();
+        TutorialTotalManager.Instance.RefreshNow();
         GrowEventmanager.Instance.Bt_ShowPanel();
         Savemanager.Instance.SaveInventory();
         Savemanager.Instance.SaveCash();
         Savemanager.Instance.SaveGuideQuest();
         Savemanager.Instance.Save();
         LogManager.Log_SelectTutoType("베테랑");
+    }
 
+    public void bt_starttutiobutton()
+    {
+        isnotstarttuto = true;
+        ShowArrowObj(PlayerBackendData.Instance.tutoid);
+        Refresh();
+    }
+
+    public GameObject[] NewTuto1;
+
+    void SetNewTuto(int num)
+    {
+        switch (num)
+        {
+            case 0:
+                NewTuto1[0].SetActive(true);
+                NewTuto1[1].SetActive(true);
+                NewTuto1[5].SetActive(true);
+                break;
+            case 1:
+                NewTuto1[5].SetActive(true);
+                NewTuto1[7].SetActive(true);
+                NewTuto1[11].SetActive(true);
+                NewTuto1[16].SetActive(true);
+
+                break;
+            case 3:
+                NewTuto1[5].SetActive(true);
+                NewTuto1[8].SetActive(true);
+                NewTuto1[15].SetActive(true);
+
+                
+                switch (PlayerBackendData.Instance.ClassId)
+                {
+                    case "C1000":
+                        NewTuto1[12].SetActive(true);
+                        break;
+                    case "C1001":
+                        NewTuto1[13].SetActive(true);
+                        break;
+                    case "C1002":
+                        NewTuto1[14].SetActive(true);
+                        break;
+                }
+                break;
+            case 6:
+                Debug.Log("여기다");
+                NewTuto1[0].SetActive(true);
+                NewTuto1[5].SetActive(true);
+                NewTuto1[19].SetActive(true);
+                break;
+        }
     }
     
     public void ShowArrowObj(string id)
     {
+        for (int i = 0; i < NewTuto1.Length; i++)
+        {
+            NewTuto1[i].SetActive(false);
+        }
         SkipTutorialbutton.SetActive(false);
         SkipTutorialbutton_GuideQuest.SetActive(false);
         Debug.Log("튜토리얼 시작" + id);
@@ -252,36 +363,45 @@ public class Tutorialmanager : MonoBehaviour
         switch (id)
         {
             case "0":
-                SelectTutorialLevel.SetActive(true);
+                Debug.Log("튜토레어" + isnotstarttuto);
+                SetNewTuto(0);
+                
                 break;
             case "1":
-                StartTutorial(1);
+             StartTutorial(3);
+              // StartTutorial(6); //2
+             
                 break;
             case "2":
-                StartTutorial(2);
+                Classmanager.Instance.Bt_BuyClass("C1000");
+                Classmanager.Instance.Bt_BuyClass("C1001");
+                Classmanager.Instance.Bt_BuyClass("C1002");
+                SetNewTuto(1);
                 break;
-            case "3":
-                StartTutorial(3);
+            case "3": //스킬
+                SetNewTuto(3);
+               // StartTutorial(7); //3
                 break;
             case "4": //몬스터 처치
+               
                 break;
             case "5":
                 StartTutorial(4);
                 break;
             case "6":
-                StartTutorial(5);
+                SetNewTuto(6);
                 break;
             case "7":
-                StartTutorial(6);
+                StartTutorial(10);
                 break;
             case "8":
-                StartTutorial(7);
+                StartTutorial(5);
                 break;
             case "9":
-                StartTutorial(8);
+                StartTutorial(11);
                 break;
             case "10":
-                StartTutorial(9);
+                StartTutorial(18);
                 break;
             case "11": //포셔ㅑㄴ퀵슬릇
                 StartTutorial(10);
@@ -662,12 +782,52 @@ break;
 
     }
 
+    public GameObject[] tutoPanel;
+    public UIButton craftbutton;
+    public UIButton classbutton;
+    public void Bt_TutorialPanelOpen()
+    {
+        switch (PlayerBackendData.Instance.tutoid)
+        {
+            case "0":
+                break;
+            case "1":
+                break;
+            case "2":
+                break;
+            case "3":
+                SkillInventory.Instance.ShowSkillInventory();
+                break;
+            case "4":
+                break;
+            case "5":
+                break;
+            case "6":
+                break;
+            case "7":
+                AdventureLvManager.Instance.Bt_OpenAdPanel();
+                break;
+            case "8":
+                AdventureLvManager.Instance.Bt_OpenAdPanel();
+                break;
+            case "9":
+                DungeonManager.Instance.DungeonPanel.Show(false);
+                DungeonManager.Instance.RefreshCount();
+                break;
+            case "10":
+                CheckTutorial("tutoguide");
+                TutorialTotalManager.Instance.guidepanel.Show(false);
+                TutorialTotalManager.Instance.CheckFinish();
+                TutorialTotalManager.Instance.RefreshScrolbar();
+                break;
+        }
+    }
 
 
     public void bt_finish()
     {
         if (maxcount > PlayerBackendData.Instance.tutocount) return;
-
+        if(!isnotstarttuto) return;
         List<string> id = new List<string>();
         List<string> hw = new List<string>();
 
@@ -683,8 +843,9 @@ break;
         Inventory.Instance.ShowEarnItem(id.ToArray(), hw.ToArray(), false);
 
         LogManager.LogTutorial(PlayerBackendData.Instance.tutoid);
-
         int tutoid = int.Parse(PlayerBackendData.Instance.tutoid) + 1;
+
+        isnotstarttuto = false;
         PlayerBackendData.Instance.tutoid = tutoid.ToString();
         PlayerBackendData.Instance.tutocount = 0;
         Savemanager.Instance.SaveInventory();
@@ -693,6 +854,15 @@ break;
         RefreshMax();
         Refresh();
         Tutorial_End.SetActive(false);
+
+        if (PlayerBackendData.Instance.tutoid.Equals(maxlv))
+        {
+            Debug.Log("아아아아");
+            TutorialTotalManager.Instance.RefreshInfo();
+            TutorialTotalManager.Instance.RefreshNow();
+            GrowEventmanager.Instance.Bt_ShowPanel();
+        }
+        
     }
 
 
@@ -916,6 +1086,10 @@ break;
         yield return new WaitForSeconds(1.2f);
         obj[5].SetActive(true);
         yield return new WaitWhile(() => nowstep < 6);
+        EndTutorial();
+        for (int i = 0; i < obj.Length; i++)
+            obj[i].SetActive(false);
+/*
         obj[5].SetActive(false);
         obj[6].SetActive(true);
         yield return new WaitWhile(() => nowstep < 7);
@@ -940,7 +1114,7 @@ break;
 //제작슬릇 누르기
         EndTutorial();
         for (int i = 0; i < obj.Length; i++)
-            obj[i].SetActive(false);
+            obj[i].SetActive(false);*/
     }
 
     public IEnumerator Tutorial_4()
@@ -971,9 +1145,10 @@ break;
         obj[5].SetActive(false);
         obj[6].SetActive(true);
         yield return new WaitWhile(() => nowstep < 7);
-        obj[6].SetActive(false);
-        obj[7].SetActive(true);
-        yield return new WaitWhile(() => nowstep < 8);
+        hidealluiview();
+        //obj[6].SetActive(false);
+       // obj[7].SetActive(true);
+      //  yield return new WaitWhile(() => nowstep < 8);
 //제작슬릇 누르기
         EndTutorial();
         for (int i = 0; i < obj.Length; i++)
@@ -1018,14 +1193,18 @@ break;
         obj[8].SetActive(true);
         yield return new WaitWhile(() => nowstep < 9);
         Time.timeScale = 1;
-//제작슬릇 누르기
+        //제작슬릇 누르기
         for (int i = 0; i < obj.Length; i++)
             obj[i].SetActive(false);
     }
 
-
+    public GameObject[] NotUIviewpanel;
     void hidealluiview()
     {
+        for (int i = 0; i <NotUIviewpanel.Length; i++)
+        {
+            NotUIviewpanel[i].SetActive(false);
+        }
         for (int i = 0; i < UIView.VisibleViews.Count; i++)
         {
             UIView.VisibleViews[i].Hide(true);
@@ -1038,8 +1217,11 @@ break;
     {
         SkipTutorialbutton.SetActive(true);
         SkipTutorialbutton_GuideQuest.SetActive(false);
+        Classmanager.Instance.Bt_BuyClass("C1000");
+        Classmanager.Instance.Bt_BuyClass("C1001");
+        Classmanager.Instance.Bt_BuyClass("C1002");
         Debug.Log("튜토6");
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(1f);
         hidealluiview();
         GameObject[] obj = Tutorial_obj6;
         for (int i = 0; i < obj.Length; i++)
@@ -1054,6 +1236,9 @@ break;
         yield return new WaitWhile(() => nowstep < 2);
 //여기서 계산
         obj[1].SetActive(false);
+        obj[2].SetActive(true);
+
+        /*
         switch (PlayerBackendData.Instance.ClassId)
         {
             case "C1000": //전사면 도적
@@ -1066,7 +1251,7 @@ break;
                 obj[2].SetActive(true);
                 break;
         }
-
+*/
         yield return new WaitWhile(() => nowstep < 3);
         obj[2].SetActive(false);
         obj[3].SetActive(false);
@@ -1117,6 +1302,7 @@ break;
     {
         SkipTutorialbutton.SetActive(true);
         SkipTutorialbutton_GuideQuest.SetActive(false);
+       
         GameObject[] obj = Tutorial_obj7;
         for (int i = 0; i < obj.Length; i++)
             obj[i].SetActive(false);
@@ -1127,23 +1313,6 @@ break;
         obj[1].SetActive(true);
         yield return new WaitWhile(() => nowstep < 2);
         obj[1].SetActive(false);
-
-        //스킬이 전사라면 두번째
-        //도적이라면 처음
-        //마법이라면처음
-        switch (PlayerBackendData.Instance.ClassId)
-        {
-            case "C1000": //전사면 도적
-                obj[3].SetActive(true);
-                break;
-            case "C1001": //도적이면 전사
-                obj[2].SetActive(true);
-                break;
-            case "C1002": //마법사면 전사
-                obj[2].SetActive(true);
-                break;
-        }
-
         yield return new WaitWhile(() => nowstep < 3);
         obj[2].SetActive(false);
         obj[3].SetActive(false);
@@ -1248,15 +1417,6 @@ break;
      obj[4].SetActive(false);
      obj[5].SetActive(true);
      yield return new WaitWhile(() => nowstep < 6);
-     obj[5].SetActive(false);
-     obj[6].SetActive(true);
-     yield return new WaitWhile(() => nowstep < 7);
-     obj[6].SetActive(false);
-     obj[7].SetActive(true);
-     yield return new WaitWhile(() => nowstep < 8);
-     obj[7].SetActive(false);
-     obj[8].SetActive(true);
-     yield return new WaitWhile(() => nowstep < 9);
      for (int i = 0; i < obj.Length; i++)
          obj[i].SetActive(false);
      EndTutorial();
@@ -1287,8 +1447,12 @@ break;
      obj[4].SetActive(false);
      obj[5].SetActive(true);
      yield return new WaitWhile(() => nowstep < 6);
+     obj[5].SetActive(false);
+     obj[6].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 7);
      for (int i = 0; i < obj.Length; i++)
          obj[i].SetActive(false);
+     hidealluiview();
      EndTutorial();
  }
 

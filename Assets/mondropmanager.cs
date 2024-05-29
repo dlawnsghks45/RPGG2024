@@ -156,7 +156,6 @@ public class mondropmanager : MonoBehaviour
 //                Debug.Log("줬다!");
 
                 int Howmany = Random.Range(minhowmany[i], maxhowmany[i]);
-                Debug.Log("드랍아이디"+dropid[i]);
                 Inventory.Instance.AddItem(dropid[i], Howmany,false,true);
                 if(monpos != null)
                     ItemDropManager.Instance.SpawnItem(ItemdatabasecsvDB.Instance.Find_id(dropid[i]).sprite,bool.Parse(ItemdatabasecsvDB.Instance.Find_id(dropid[i]).droprare),monpos.position);
@@ -199,6 +198,51 @@ public class mondropmanager : MonoBehaviour
     }
 
     
+      public void GiveDropToInvenToryBossPercentUp(Transform monpos,string monid,decimal addper)
+    {
+        if (nowdropbossid is "" or "0")
+            return;
+
+        List<MonDropDB.Row> data = MonDropDB.Instance.FindAll_id(monsterDB.Instance.Find_id(monid).dropid);
+
+        for (int i = 0; i < data.Count; i++)
+        {
+
+            decimal howmanycount = bool.Parse(data[i].Ispercent)
+                ? decimal.Parse(data[i].maxhowmany) * addper
+                : decimal.Parse(data[i].maxhowmany);
+
+            float percent = float.Parse(data[i].rate);
+
+            decimal minh = decimal.Parse(data[i].minhowmany) * addper;
+            decimal maxh = decimal.Parse(data[i].maxhowmany) * addper;
+            
+            Random.InitState((int)Time.deltaTime + PlayerBackendData.Instance.GetRandomSeed());
+            Ran_rate = Random.Range(0, 1000000);// 1,000,000이 100%이다.
+            if (Ran_rate <= getpercent(percent))
+            { 
+                int Howmany = Random.Range((int)minh,(int)maxh);
+                Inventory.Instance.AddItem(data[i].itemid, Howmany,false,true);
+                if(monpos != null)
+                    ItemDropManager.Instance.SpawnItem(ItemdatabasecsvDB.Instance.Find_id(data[i].itemid).sprite,bool.Parse(ItemdatabasecsvDB.Instance.Find_id(data[i].itemid).droprare),monpos.position);
+
+                switch (MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage).maptype)
+                {
+                    //던전
+                    case "1":
+                        break;
+                    //레이드
+                    case "3":
+                        RaidManager.Instance.AddLoot(data[i].itemid, Howmany);
+                        break;
+                   
+                }
+            }
+            
+        }
+    }
+
+      
     public void GiveDropToInvenToryBoss(Transform monpos,string maptype,List<string> dropid , List<int>minhowmany,List<int> maxhowmany,List<float> percent,bool issotang =false)
     {
         if (nowdropbossid == "")

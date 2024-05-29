@@ -195,6 +195,9 @@ public class alertmanager : MonoBehaviour
             t.SetActive(false);
         }
 
+        if(PlayerBackendData.Instance.GetAdLv() < 10)
+            return;
+        
         for (int i = 0; i < QuestManager.Instance.Questslots.Length; i++)
         {
             if (QuestManager.Instance.Questslots[i].RewardBt.activeSelf)
@@ -255,6 +258,14 @@ public class alertmanager : MonoBehaviour
     //자동 보상
     public void NotiCheck_AutoFarm(bool istrue)
     {
+        if (PlayerBackendData.Instance.GetAdLv() < 10)
+        {
+            foreach (var t in Alert_AutoFarm)
+            {
+                t.SetActive(false);
+            }
+            return;
+        }
         
         if (istrue)
         {
@@ -273,6 +284,8 @@ public class alertmanager : MonoBehaviour
                 t.SetActive(false);
             }
         }
+        
+        
         
         /*
         if (Timemanager.Instance.DailyContentCount[(int)Timemanager.ContentEnumDaily.빠른전투] > 0
@@ -295,6 +308,11 @@ public class alertmanager : MonoBehaviour
             t.SetActive(false);
         }
 
+        if (PlayerBackendData.Instance.GetAdLv() < 2)
+        {
+            return;
+        }
+        
         if (Timemanager.Instance.DailyContentCount[(int)Timemanager.ContentEnumDaily.광고_등급재설정] > 0
             || Timemanager.Instance.DailyContentCount[(int)Timemanager.ContentEnumDaily.광고_도전장] > 0
             || Timemanager.Instance.DailyContentCount[(int)Timemanager.ContentEnumDaily.광고_엘리축복] > 0
@@ -322,6 +340,15 @@ public class alertmanager : MonoBehaviour
         {
             t.SetActive(false);
         }
+        
+        
+        if (PlayerBackendData.Instance.GetAdLv() < 10)
+        {
+            return;
+        }
+
+        
+        
         if ( SeasonPass.Instance. ishavereward())
         {
             foreach (var t in Alert_SeasonPass)
@@ -342,6 +369,11 @@ public class alertmanager : MonoBehaviour
             t.SetActive(false);
         }
 
+        if (PlayerBackendData.Instance.GetAdLv() < 2)
+        {
+            return;
+        }
+        
         TutorialTotalManager.Instance.CheckFinish();
 
         if (PlayerBackendData.Instance.tutoguideisfinish)
@@ -360,8 +392,15 @@ public class alertmanager : MonoBehaviour
             t.SetActive(false);
         }
         
+        
+        if (PlayerBackendData.Instance.GetAdLv() < 7)
+        {
+            return;
+        }
+        
         altarmanager.Instance.RefreshCounts();
 
+        
         if (PlayerBackendData.Instance.CheckItemCount("1712") >= altarmanager.Instance.CheckAltarCount[0])
         {
             if(!Alert_Menu.activeSelf)
@@ -402,6 +441,11 @@ public class alertmanager : MonoBehaviour
             t.SetActive(false);
         }
         
+        if (PlayerBackendData.Instance.GetAdLv() < 15)
+        {
+            return;
+        }
+        
         if (PlayerBackendData.Instance.CheckItemCount("40003") >= 1)
         {
             if(!Alert_Menu.activeSelf)
@@ -435,6 +479,11 @@ public class alertmanager : MonoBehaviour
             t.SetActive(false);
         }
 
+        if (PlayerBackendData.Instance.GetLv() < 300)
+        {
+            return;
+        }
+        
         int[] lv = new int[] { 300, 450,600,750,900,1200,1500 };
         for (int i = 0; i < lv.Length; i++)
         {
@@ -453,6 +502,12 @@ public class alertmanager : MonoBehaviour
         foreach (var t in Alert_Pet)
         {
             t.SetActive(false);
+        }
+        
+        
+        if (PlayerBackendData.Instance.GetAdLv() < 15)
+        {
+            return;
         }
 
         if (PlayerBackendData.Instance.CheckItemCount("50006") >= 1)

@@ -71,8 +71,8 @@ id,DescriptionKor,mapname,name,hp,dmg,crit,attackcount,attacktime,montype,sprite
 5028,웨어울프,레이드 지역,MonsterName/5028,9000000000000000000,4990000,0,1,1,boss,Monster/Field2/Outline9,5028,5028,900,12,8,2.5,FALSE,0,FALSE
 5029,여왕벌,레이드 지역,MonsterName/5029,75000000000000000000,4990000,0,1,1,boss,Monster/Field2/Outline21,5029,5029,900,12,8,2.5,FALSE,0,FALSE
 5030,마녀,레이드 지역,MonsterName/5030,255000000000000000000,4990000,0,1,1,boss,Monster/Field2/Outline27,5030,5030,900,12,8,2.5,FALSE,0,FALSE
-5031,마녀,레이드 지역,MonsterName/5031,9000000000000000000,4990000,0,1,1,boss,Monster/Field2/Outline27,5031,5031,900,12,8,2.5,FALSE,0,FALSE
-5032,,,,,,,,,,,,,,,,,FALSE,0,FALSE
+5031,발록,레이드 지역,MonsterName/5031,505000000000000000000,12000000,0,1,1,boss,Monster/Boss/balrug,5031,5031,2000,10,7,4,FALSE,0,FALSE
+5032,,,,,,,,,,,,,,,,,,,
 5022,,,,,,,,,,,,,,,,,FALSE,0,FALSE
 5023,,,,,,,,,,,,,,,,,FALSE,0,FALSE
 5024,,,,,,,,,,,,,,,,,FALSE,0,FALSE

@@ -152,7 +152,6 @@ public class iteminventoryinfoslot : MonoBehaviour
 
     public void Bt_UseQuickSlot()
     {
-        Debug.Log(item.itemsubtype);
         switch (item.itemsubtype)
         {
             
@@ -167,9 +166,8 @@ public class iteminventoryinfoslot : MonoBehaviour
                 Savemanager.Instance.SaveMpQuickSlot();
                 break;
         }
-        
+        Inventory.Instance.QuickPotionPanel.Show(false);
         //가이드 퀘스트
-        Tutorialmanager.Instance.CheckTutorial("equippotion");
     }
 
     enum itemtypes

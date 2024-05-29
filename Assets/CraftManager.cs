@@ -51,6 +51,17 @@ public class CraftManager : MonoBehaviour
 
     public void Bt_SelectMainPanel(int num)
     {
+        if (num.Equals(0) &&
+            TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).type.Equals("craft"))
+        {
+            Tutorialmanager.Instance.NewTuto1[2].SetActive(true);
+        }
+        if (num.Equals(3) &&
+            TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).type.Equals("craft"))
+        {
+            Tutorialmanager.Instance.NewTuto1[18].SetActive(true);
+        }
+
         for (int i = 0; i < SubObj.Length; i++)
         {
             SubObj[i].SetActive(false);
@@ -70,6 +81,17 @@ public class CraftManager : MonoBehaviour
             }
         }
 
+        if (PlayerBackendData.Instance.tutoid.Equals("0") &&
+            TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).type.Equals("craft"))
+        {
+            Tutorialmanager.Instance.NewTuto1[3].SetActive(true);
+        }
+
+        if (PlayerBackendData.Instance.tutoid.Equals("6") &&
+            TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).type.Equals("craft"))
+        {
+            Tutorialmanager.Instance.NewTuto1[3].SetActive(true);
+        }
         //개수 체크 안맞으면 늘림
         if (craftslots.Count < str.Count)
         {
@@ -491,6 +513,13 @@ public class CraftManager : MonoBehaviour
     public Text CraftAcceptNeedGold;
     public void ShowCraftAcceptPanel()
     {
+        if (craftdata.id.Equals("1021") || craftdata.id.Equals("10") &&  
+            TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).type.Equals("craft"))
+        {
+            Tutorialmanager.Instance.NewTuto1[4].SetActive(false);
+            Tutorialmanager.Instance.NewTuto1[6].SetActive(true);
+        }
+        
         CraftAcceptPanel.Show(false);
         CraftAcceptImage.sprite = SuccessImage.sprite;
         CraftAcceptName.text = SuccessItem.text;
@@ -681,6 +710,14 @@ public class CraftManager : MonoBehaviour
 
         if (!istest && (!iscrafting || ishaveresource || !ishavegold)) return;
         {
+            if (craftdata.id.Equals("1021") || craftdata.id.Equals("10")  &&
+                TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).type.Equals("craft"))
+            {
+                Tutorialmanager.Instance.NewTuto1[6].SetActive(false);
+                Tutorialmanager.Instance.NewTuto1[9].SetActive(true);
+            }
+            
+            
             //제작 시작 
             BackendReturnObject servertime = Backend.Utils.GetServerTime();
             if (!servertime.IsSuccess()) return;
@@ -732,7 +769,7 @@ public class CraftManager : MonoBehaviour
             CraftAcceptPanel.Hide(false);
             
             //가이드 
-            Tutorialmanager.Instance.CheckTutorial("craft");
+           // Tutorialmanager.Instance.CheckTutorial("craft");
             if (nowselectcraftid.Equals("5500") || nowselectcraftid.Equals("5501") ||
                 nowselectcraftid.Equals("5502") || nowselectcraftid.Equals("5503"))
             {
@@ -951,8 +988,9 @@ public class CraftManager : MonoBehaviour
 
 
         //가이드 퀘스트
-        Tutorialmanager.Instance.CheckTutorial("getcraft");
-        Tutorialmanager.Instance.CheckTutorial("craftpotion");
+        Tutorialmanager.Instance.CheckTutorial("craft");
+        //Tutorialmanager.Instance.CheckTutorial("getcraft");
+        //Tutorialmanager.Instance.CheckTutorial("craftpotion");
         if (craftdata.id.Equals("10300"))
         {
             TutorialTotalManager.Instance.CheckGuideQuest("makearmor");

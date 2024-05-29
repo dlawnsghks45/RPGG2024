@@ -46,6 +46,7 @@ public class MonDropDB : MonoBehaviour
 		public string maxhowmany;
 		public string rate;
 		public string isshow;
+		public string Ispercent;
 
 	}
 
@@ -79,6 +80,7 @@ public class MonDropDB : MonoBehaviour
 			row.maxhowmany = grid[i][7];
 			row.rate = grid[i][8];
 			row.isshow = grid[i][9];
+			row.Ispercent = grid[i][10];
 
 			rowList.Add(row);
 		}
@@ -176,6 +178,14 @@ public class MonDropDB : MonoBehaviour
 	public List<Row> FindAll_isshow(string find)
 	{
 		return rowList.FindAll(x => x.isshow == find);
+	}
+	public Row Find_Ispercent(string find)
+	{
+		return rowList.Find(x => x.Ispercent == find);
+	}
+	public List<Row> FindAll_Ispercent(string find)
+	{
+		return rowList.FindAll(x => x.Ispercent == find);
 	}
 
 }

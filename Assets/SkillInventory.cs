@@ -60,10 +60,10 @@ public class SkillInventory : MonoBehaviour
         int i = 0;
         List<string> skillid = new List<string>();
 
-
-
         foreach (var data in PlayerBackendData.Instance.Skills.Select(t => SkillDB.Instance.Find_Id(t)))
         {
+            if(data.Id == "")
+                continue;
             if (!skillid.Contains(data.Id))
             {
                 skillid.Add(data.Id);

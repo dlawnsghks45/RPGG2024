@@ -617,9 +617,8 @@ public class Hpmanager : MonoBehaviour
                                         case "9994": //대마법사의 묘
                                            // achievemanager.Instance.AddCount(Acheves.대마법사의묘);
                                             QuestManager.Instance.AddCount(1, "content2");
-
-                                            Savemanager.Instance.SaveAchieveDirect();
-                                            Savemanager.Instance.Save();
+                                           // Savemanager.Instance.SaveAchieveDirect();
+                                            //Savemanager.Instance.Save();
                                             break;
                                     }
 
@@ -864,13 +863,42 @@ public class Hpmanager : MonoBehaviour
                                 break;
                             case "3": //레이드
                                 //  achievemanager.Instance.AddCount(Acheves.레이드격파);
-                                if (!PlayerBackendData.Instance.sotang_raid.Contains(
-                                        PlayerBackendData.Instance.nowstage))
+                                if (PlayerBackendData.Instance.nowstage.Equals("5031"))
                                 {
-                                    alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI3/레이드최초클리어"),
-                                        alertmanager.alertenum.일반);
-                                    PlayerBackendData.Instance.sotang_raid.Add(PlayerBackendData.Instance.nowstage);
-                                    Settingmanager.Instance.SaveSotangs();
+                                        alertmanager.Instance.ShowAlert(string.Format(Inventory.GetTranslate("UI8/발록레이드토벌성공"),(EliteRaid.Instance.LevelCount.nowcount).ToString()),
+                                            alertmanager.alertenum.일반);
+                                        
+                                        mondropmanager.Instance.GiveDropToInvenToryBossPercentUp(transform,
+                                            "5031",EliteRaid.Instance.GetPercent());
+                                        
+                                        if (EliteRaid.Instance.LevelCount.nowcount-1 ==
+                                            PlayerBackendData.Instance.ContentLevel[10])
+                                        {
+                                            //단계 상승
+                                            PlayerBackendData.Instance.ContentLevel[10]++;
+                                            EliteRaid.Instance.LevelCount.Maxcount =
+                                                PlayerBackendData.Instance.ContentLevel[10] + 1;
+                                            EliteRaid.Instance.LevelCount.SetCount(EliteRaid.Instance.LevelCount.Maxcount);
+                                           Settingmanager.Instance.SaveContent();
+                                        }
+                                   
+                                }
+                                else
+                                {
+                                    if (!PlayerBackendData.Instance.sotang_raid.Contains(
+                                            PlayerBackendData.Instance.nowstage))
+                                    {
+                                        alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI3/레이드최초클리어"),
+                                            alertmanager.alertenum.일반);
+                                        PlayerBackendData.Instance.sotang_raid.Add(PlayerBackendData.Instance.nowstage);
+                                        Settingmanager.Instance.SaveSotangs();
+                                    }
+                                    
+                                    mondropmanager.Instance.GiveDropToInvenToryBoss(transform,
+                                        mondropmanager.Instance.Mon_DropItemIDboss,
+                                        mondropmanager.Instance.Mon_DropItemMinHowmanyboss,
+                                        mondropmanager.Instance.Mon_DropItemMaxHowmanyboss,
+                                        mondropmanager.Instance.Mon_DropItemPercentboss);
                                 }
 
 
@@ -903,11 +931,7 @@ public class Hpmanager : MonoBehaviour
                                 EnemySpawnManager.Instance.NowStageindex = 0;
                                 EnemySpawnManager.Instance.spawnedmonstercur = 0;
                                 PlayerBackendData.Instance.spawncount = mapmanager.Instance.savespawncount;
-                                mondropmanager.Instance.GiveDropToInvenToryBoss(transform,
-                                    mondropmanager.Instance.Mon_DropItemIDboss,
-                                    mondropmanager.Instance.Mon_DropItemMinHowmanyboss,
-                                    mondropmanager.Instance.Mon_DropItemMaxHowmanyboss,
-                                    mondropmanager.Instance.Mon_DropItemPercentboss);
+                            
                                 mapmanager.Instance.LocateMap(mapmanager.Instance.savemapid);
                                 Savemanager.Instance.SaveInventory();
                                 RaidManager.Instance.FinishRaid();

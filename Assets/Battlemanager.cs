@@ -188,22 +188,7 @@ public class Battlemanager : MonoBehaviour
                        {
                            BasicAttackPassiveOneOnly();
                            //마나드레인
-                           if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.manadrain) !=
-                               0)
-                           {
-                               if (Random.Range(0, 100) <
-                                   equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat
-                                       .manadrainhitper))
-                               {
-                                   //찬다
-//                                   Debug.Log("마나회복");
-                                   equipskillmanager.Instance.showequipslots("1000",
-                                       equipskillmanager.Instance
-                                           .GetStats((int)equipskillmanager.EquipStatFloat.manadrainrare).ToString("N0")
-                                       , equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.manadrainlv).ToString("N0"));
-                                   mainplayer.hpmanager.Manadrain();
-                               }
-                           }
+                         
 
                            if (iscrit)
                            {
@@ -231,6 +216,20 @@ public class Battlemanager : MonoBehaviour
    
    void equipskillbasicattack(Enemy target)
     {
+        if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.manadrain) !=
+            0)
+        {
+            //마나드레인이라면
+            if (Random.Range(0, 100) < equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.manadrainhitper))
+            {
+                equipskillmanager.Instance.showequipslots("1000", equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.manadrainrare).ToString("N0"),
+                    equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.manadrainlv).ToString("N0"));
+                bool iscrit = Random.Range(0, 101) <= mainplayer.stat_crit ? true : false;
+                target.hpmanager.TakeDamage(dpsmanager.attacktype.특수효과,"E1000",(decimal)(mainplayer.stat_matk * equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.manadrain)), iscrit, mainplayer.stat_critdmg, "", 0, "Slash6");
+            }
+        }
+        
+        
         //적혼의 건틀릿
         if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6141) != 0) 
         {
@@ -331,8 +330,6 @@ public class Battlemanager : MonoBehaviour
                     equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.smitelv).ToString("N0"));
                 bool iscrit = Random.Range(0, 101) <= mainplayer.stat_crit ? true : false;
                 target.hpmanager.TakeDamage(dpsmanager.attacktype.특수효과,"E1010",(decimal)(mainplayer.stat_atk * equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.smitedmg)), iscrit, mainplayer.stat_critdmg, "", 0, "Slash6");
-             //   DamageManager.Instance.ShowEffect(NowTarget.hpmanager.Effecttrans,"Slash6");
-
             }
         }
 

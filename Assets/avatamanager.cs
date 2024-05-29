@@ -1,6 +1,7 @@
  using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+ using Doozy.Engine.UI;
+ using UnityEngine;
 using UnityEngine.UI;
 
 public class avatamanager : MonoBehaviour
@@ -8,6 +9,7 @@ public class avatamanager : MonoBehaviour
 
 
     private static avatamanager _instance = null;
+
 
     public static avatamanager Instance
     {
@@ -26,6 +28,7 @@ public class avatamanager : MonoBehaviour
             return _instance;
         }
     }
+    public UIView View;
 
     public Dictionary<string, avartaslot> listslot = new Dictionary<string, avartaslot>();
 

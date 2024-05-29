@@ -38,7 +38,7 @@ public class GrowEventmanager : MonoBehaviour
    public GameObject[] Recomend_WeaponMagic;
    public void Bt_ShowPanel()
    {
-      //Á÷¾÷ °è»ê
+      //ì§ì—… ê³„ì‚°
       GrowChoicePanel.Show(false);
 
       foreach (var VARIABLE in Recomend_First)
@@ -122,10 +122,10 @@ public class GrowEventmanager : MonoBehaviour
 
       public void Bt_GiveAll()
       {
-         //¾ÆÀÌÅÛÀ¸·Î Áö±Ş
+         //ì•„ì´í…œìœ¼ë¡œ ì§€ê¸‰
          id.Clear();
          hw.TrimExcess();
-         //Àåºñ Áö±Ş
+         //ì¥ë¹„ ì§€ê¸‰
          JumpDB.Row data = JumpDB.Instance.Find_id(nowid);
 
          string[] equip = data.equipid.Split(';');
@@ -139,12 +139,12 @@ public class GrowEventmanager : MonoBehaviour
 
          Inventory.Instance.ShowEarnItem3(id.ToArray(), hw.ToArray(), true);
 
-         //·¹º§¾÷
+         //ë ˆë²¨ì—…
          PlayerBackendData.Instance.SetLv(700);
          PlayerData.Instance.RefreshInitData();
 
-         PlayerBackendData.Instance.SetGoldAltarLv(2000, altarmanager.AltarType.Á¦´Ü);
-         PlayerBackendData.Instance.SetGoldAltarLv(1000, altarmanager.AltarType.°ñµå);
+         PlayerBackendData.Instance.SetGoldAltarLv(2000, altarmanager.AltarType.ì œë‹¨);
+         PlayerBackendData.Instance.SetGoldAltarLv(1000, altarmanager.AltarType.ê³¨ë“œ);
          PlayerBackendData.Instance.SetAdLv(15);
          PlayerBackendData.Instance.SetFieldLV(64);
 
@@ -152,10 +152,10 @@ public class GrowEventmanager : MonoBehaviour
          hw.Clear();
 
          List<string> skills = new List<string>();
-         //Á÷¾÷ Áö±Ş
+         //ì§ì—… ì§€ê¸‰
          if (ClassSelectToggle.IsOn)
          {
-            //Á÷¾÷ÇØ±İ¹× ÆĞ½Ãºê ÀåÂø¹× ½ºÅ³ÀÚÂø
+            //ì§ì—…í•´ê¸ˆë° íŒ¨ì‹œë¸Œ ì¥ì°©ë° ìŠ¤í‚¬ìì°©
             string[] giveclass = data.openclass.Split(';');
 
             for (int i = 0; i < giveclass.Length; i++)
@@ -194,14 +194,14 @@ public class GrowEventmanager : MonoBehaviour
          Soundmanager.Instance.PlayerSound("Sound/Special Click 05");
 
          Invoke("ShowGrowGuide", 1.5f);
-         //Àåºñ ÀåÂø
+         //ì¥ë¹„ ì¥ì°©
          Inventory.Instance.bt_autoequip();
          PlayerData.Instance.RefreshPlayerstat();
          alertmanager.Instance.NotiCheck_Altar();
          altarmanager.Instance.RefreshAltarLv();
          GivePanel.SetActive(false);
          GrowChoicePanel.Hide(false);
-         alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI7/1_Áø·Î¼±ÅÃ¿Ï·á"), alertmanager.alertenum.ÀÏ¹İ);
+         alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI7/1_ì§„ë¡œì„ íƒì™„ë£Œ"), alertmanager.alertenum.ì¼ë°˜);
          Settingmanager.Instance.SaveAllNoLog();
          Savemanager.Instance.SaveExpData();
          Savemanager.Instance.SaveClassData();

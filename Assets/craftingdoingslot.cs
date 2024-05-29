@@ -75,6 +75,12 @@ public class craftingdoingslot : MonoBehaviour
             NowleftTime.text = "00:00:00";
             GetResultButton.SetActive(true);
             FinishUsingFireButton.SetActive(false);
+            
+            if (craftdata.id.Equals("1021") || craftdata.id.Equals("10") &&
+                TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).type.Equals("craft"))
+            {
+                Tutorialmanager.Instance.NewTuto1[10].SetActive(true);
+            }
         }
         else
         {

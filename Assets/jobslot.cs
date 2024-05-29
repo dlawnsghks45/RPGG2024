@@ -41,19 +41,21 @@ public class jobslot : MonoBehaviour
 
         ClassBackGround.color = Colors[0];
 
-        if(PlayerBackendData.Instance.PassiveClassId.Length != 0)
+        if (PlayerBackendData.Instance.ClassId != "C999")
         {
-            Debug.Log(PlayerBackendData.Instance.PassiveClassId.Length);
-            if (PlayerBackendData.Instance.PassiveClassId[int.Parse(ClassDB.Instance.Find_id(ClassId).tier) - 1] ==
-          ClassDB.Instance.Find_id(ClassId).passive)
+            if (PlayerBackendData.Instance.PassiveClassId.Length != 0)
             {
-                ClassBackGround.color = Colors[2];
-                ClassPassive.SetActive(true);
+                Debug.Log(PlayerBackendData.Instance.PassiveClassId.Length);
+                if (PlayerBackendData.Instance.PassiveClassId[int.Parse(ClassDB.Instance.Find_id(ClassId).tier) - 1] ==
+                    ClassDB.Instance.Find_id(ClassId).passive)
+                {
+                    ClassBackGround.color = Colors[2];
+                    ClassPassive.SetActive(true);
+                }
+                else
+                    ClassPassive.SetActive(false);
             }
-            else
-                ClassPassive.SetActive(false);
         }
-       
 
 
         if (PlayerBackendData.Instance.ClassData[ClassId].ClassId1 == PlayerBackendData.Instance.ClassId)

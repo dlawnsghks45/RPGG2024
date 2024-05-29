@@ -1,5 +1,6 @@
 id,Description,name,info,classsprite,tier,Hp,Mp,strperlv,dexperlv,intperlv,wisperlv,hitperlv,hpperlv,mpperlv,passive,standweapon,standsubweapon,giveskill,skillslotcount,skillcastingcount,RequiredItemID,RequiredItemHowmany,NextClass,NeedPlayerRank,mainstat
 ,설명,,캐릭터 정보,,,기본 Hp,기본 Mp,,,,,,,,패시브,기본 무기외형,기본보조무기 외형,지급 스킬,스킬 슬릇,동시 캐스팅 가능,필요 아이템,,다음 직업,모험가 등급,
+C999,노비스,Class/999,ClassInfo/999,Class/999,1,1000,1000,1,1,0,0,0,50,10,,E1000,E1014,,0,0,4000,1,0,1,str
 C1000,워리어,Class/1000,ClassInfo/1000,Class/1000,1,1000,1000,2,1,0,0,0,50,10,C1000,E1000,E1014,1000,1,1,4000,1,0,1,str
 C1001,로그,Class/1001,ClassInfo/1001,Class/1001,1,1000,1000,1,2,0,0,0,30,15,C1001,E1003,E1015,1001,1,1,4000,1,0,1,dex
 C1002,매지션,Class/1002,ClassInfo/1002,Class/1002,1,1000,1000,0,0,2,1,0,20,25,C1002,E1002,E1016,1002,2,1,4000,1,0,1,int
@@ -14,7 +15,7 @@ C1010,파이어 위저드,Class/1010,ClassInfo/1010,Class/1010,3,4000,2000,0,0,8
 C1011,아이스 위저드,Class/1011,ClassInfo/1011,Class/1011,3,4000,2000,0,0,1,8,0,90,70,C1011,E1000,E1014,1011,4,3,4002,1,0,3,wis
 C1012,크루세이더,Class/1012,ClassInfo/1012,Class/1012,4,7000,2400,8,4,0,0,0,150,30,C1012,E1000,E1014,1012,4,1,4003,1,0,4,str
 C1013,버서커,Class/1013,ClassInfo/1013,Class/1013,4,7000,2400,9,3,0,0,0,150,30,C1013,E1000,E1014,1013,4,1,4003,1,0,4,str
-C1014,슬레이어,Class/1014,ClassInfo/1014,Class/1014,4,7000,2400,4,8,0,0,0,110,40,C1014,E1000,E1014,1014,4,1,4003,1,0,4,dex
+C1014,나이드로드,Class/1014,ClassInfo/1014,Class/1014,4,7000,2400,4,8,0,0,0,110,40,C1014,E1000,E1014,1014,4,1,4003,1,0,4,dex
 C1015,레인저,Class/1015,ClassInfo/1015,Class/1015,4,7000,2700,3,9,0,0,0,110,40,C1015,E1000,E1014,1015,4,1,4003,1,0,4,dex
 C1016,어스 서머너,Class/1016,ClassInfo/1016,Class/1016,4,7000,2700,0,0,10,2,0,90,70,C1016,E1000,E1014,1016,5,3,4003,1,0,4,int
 C1017,워록,Class/1017,ClassInfo/1017,Class/1017,4,7000,2700,0,0,2,10,0,90,70,C1017,E1000,E1014,1017,5,3,4003,1,0,4,wis

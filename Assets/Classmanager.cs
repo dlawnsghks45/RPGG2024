@@ -126,6 +126,8 @@ public class Classmanager : MonoBehaviour
     string needitem;
     int needitemhowmany;
 
+    public GameObject[] Novicepanels;
+    
     public void ShowClassData()
     {
     //    Settingmanager.Instance.falseserveron();
@@ -144,23 +146,39 @@ public class Classmanager : MonoBehaviour
             ClassHaveObj[1].SetActive(false);
             ClassHaveObj[2].SetActive(true);
             ClassHaveObj[3].SetActive(true);
-            if (PlayerBackendData.Instance.PassiveClassId.Length == 0)
+
+
+            if (data.id.Equals("C999"))
             {
-                PassiveButton.interactable = true;
-                PassiveText.text = Inventory.GetTranslate("UI/패시브선택");
+                foreach (var VARIABLE in Novicepanels)
+                {
+                    VARIABLE.SetActive(false);
+                }
             }
             else
             {
-                if (PlayerBackendData.Instance.PassiveClassId[int.Parse(data.tier) - 1] == data.passive)
+                foreach (var VARIABLE in Novicepanels)
                 {
-                    PassiveButton.interactable = false;
-                    PassiveText.text = Inventory.GetTranslate("UI/패시브선택됨");
+                    VARIABLE.SetActive(true);
                 }
-                else
+                if (PlayerBackendData.Instance.PassiveClassId.Length == 0)
                 {
                     PassiveButton.interactable = true;
                     PassiveText.text = Inventory.GetTranslate("UI/패시브선택");
+                }
+                else
+                {
+                    if (PlayerBackendData.Instance.PassiveClassId[int.Parse(data.tier) - 1] == data.passive)
+                    {
+                        PassiveButton.interactable = false;
+                        PassiveText.text = Inventory.GetTranslate("UI/패시브선택됨");
+                    }
+                    else
+                    {
+                        PassiveButton.interactable = true;
+                        PassiveText.text = Inventory.GetTranslate("UI/패시브선택");
 
+                    }
                 }
             }
         }
@@ -171,22 +189,37 @@ public class Classmanager : MonoBehaviour
             ClassHaveObj[1].SetActive(true);
             ClassHaveObj[2].SetActive(false);
             ClassHaveObj[3].SetActive(true);
-            if (PlayerBackendData.Instance.PassiveClassId.Length == 0)
+            if (data.id.Equals("C999"))
             {
-                PassiveButton.interactable = true;
-                PassiveText.text = Inventory.GetTranslate("UI/패시브선택");
+                foreach (var VARIABLE in Novicepanels)
+                {
+                    VARIABLE.SetActive(false);
+                }
             }
             else
             {
-                if (PlayerBackendData.Instance.PassiveClassId[int.Parse(data.tier) - 1] == data.passive)
+                foreach (var VARIABLE in Novicepanels)
                 {
-                    PassiveButton.interactable = false;
-                    PassiveText.text = Inventory.GetTranslate("UI/패시브선택됨");
+                    VARIABLE.SetActive(true);
                 }
-                else
+
+                if (PlayerBackendData.Instance.PassiveClassId.Length == 0)
                 {
                     PassiveButton.interactable = true;
                     PassiveText.text = Inventory.GetTranslate("UI/패시브선택");
+                }
+                else
+                {
+                    if (PlayerBackendData.Instance.PassiveClassId[int.Parse(data.tier) - 1] == data.passive)
+                    {
+                        PassiveButton.interactable = false;
+                        PassiveText.text = Inventory.GetTranslate("UI/패시브선택됨");
+                    }
+                    else
+                    {
+                        PassiveButton.interactable = true;
+                        PassiveText.text = Inventory.GetTranslate("UI/패시브선택");
+                    }
                 }
             }
         }
@@ -201,7 +234,7 @@ public class Classmanager : MonoBehaviour
                 SpriteManager.Instance.GetSprite(ItemdatabasecsvDB.Instance.Find_id(needitem).sprite);
             //필요한 아이템 출력
 
-
+            PassiveButton.gameObject.SetActive(false);
             NoClassTextNeedItem.text =
                 $"{Inventory.GetTranslate(ItemdatabasecsvDB.Instance.Find_id(needitem).name)} {PlayerBackendData.Instance.CheckItemCount(needitem)}/{ClassDB.Instance.Find_id(PlayerBackendData.Instance.ClassData.ToList()[nowpage].Value.ClassId1).RequiredItemHowmany}";
 
@@ -254,45 +287,60 @@ public class Classmanager : MonoBehaviour
         ClassLvStat[7].text = data.skillcastingcount;
 
 
-        //  ClassPassive.text = GetTranslate(data.name);
-        SkillDB.Row skilldata = SkillDB.Instance.Find_Id(data.giveskill);
-        ClassSkillImage.sprite = SpriteManager.Instance.GetSprite(skilldata.Sprite);
-        switch (skilldata.RangeType)
+        if (data.id.Equals("C999"))
         {
-            case "M":
-                ClassAttackType[0].SetActive(true);
-                ClassAttackType[1].SetActive(false);
-                ClassAttackType[2].SetActive(false);
-                break;
-
-            case "R":
-                ClassAttackType[0].SetActive(false);
-                ClassAttackType[1].SetActive(true);
-                ClassAttackType[2].SetActive(false);
-                break;
-            case "MR":
-                ClassAttackType[0].SetActive(false);
-                ClassAttackType[1].SetActive(false);
-                ClassAttackType[2].SetActive(true);
-                break;
-            case "MRR":
-                ClassAttackType[0].SetActive(true);
-                ClassAttackType[1].SetActive(true);
-                ClassAttackType[2].SetActive(false);
-                break;
-            case "ALL":
-                ClassAttackType[0].SetActive(true);
-                ClassAttackType[1].SetActive(true);
-                ClassAttackType[2].SetActive(true);
-                break;
+            foreach (var VARIABLE in Novicepanels)
+            {
+                VARIABLE.SetActive(false);
+            }
         }
+        else
+        {
+            foreach (var VARIABLE in Novicepanels)
+            {
+                VARIABLE.SetActive(true);
+            }
 
-        ClassSkill.text = Inventory.GetTranslate(skilldata.Name);
-        ClassSkill.color = Inventory.Instance.GetRareColor(skilldata.Rare);
+            //  ClassPassive.text = GetTranslate(data.name);
+            SkillDB.Row skilldata = SkillDB.Instance.Find_Id(data.giveskill);
+            ClassSkillImage.sprite = SpriteManager.Instance.GetSprite(skilldata.Sprite);
+            switch (skilldata.RangeType)
+            {
+                case "M":
+                    ClassAttackType[0].SetActive(true);
+                    ClassAttackType[1].SetActive(false);
+                    ClassAttackType[2].SetActive(false);
+                    break;
 
-        //패시브
-        PassiveInfo.text = Inventory.GetTranslate(PassiveDB.Instance.Find_id(data.passive).info);
+                case "R":
+                    ClassAttackType[0].SetActive(false);
+                    ClassAttackType[1].SetActive(true);
+                    ClassAttackType[2].SetActive(false);
+                    break;
+                case "MR":
+                    ClassAttackType[0].SetActive(false);
+                    ClassAttackType[1].SetActive(false);
+                    ClassAttackType[2].SetActive(true);
+                    break;
+                case "MRR":
+                    ClassAttackType[0].SetActive(true);
+                    ClassAttackType[1].SetActive(true);
+                    ClassAttackType[2].SetActive(false);
+                    break;
+                case "ALL":
+                    ClassAttackType[0].SetActive(true);
+                    ClassAttackType[1].SetActive(true);
+                    ClassAttackType[2].SetActive(true);
+                    break;
+            }
 
+            ClassSkill.text = Inventory.GetTranslate(skilldata.Name);
+            ClassSkill.color = Inventory.Instance.GetRareColor(skilldata.Rare);
+
+            //패시브
+            PassiveInfo.text = Inventory.GetTranslate(PassiveDB.Instance.Find_id(data.passive).info);
+
+        }
 
         if (nowpage == 0)
             Prevbutton.interactable = false;
@@ -585,6 +633,9 @@ public class Classmanager : MonoBehaviour
             return;
         }
         
+        //가이드 퀘스트
+        Tutorialmanager.Instance.CheckTutorial("buyclass");
+        
         string[] skills = PlayerBackendData.Instance.ClassData[PlayerBackendData.Instance.ClassId].Skills1;
         PlayerBackendData.Instance.ClassId = PlayerBackendData.Instance.ClassData.ToList()[nowpage].Value.ClassId1;
 
@@ -598,6 +649,8 @@ public class Classmanager : MonoBehaviour
             }
         }
 
+
+        Tutorialmanager.Instance.NewTuto1[11].SetActive(false);
         //가이드 퀘스트
         Tutorialmanager.Instance.CheckTutorial("buyclass3");
 
@@ -667,6 +720,13 @@ public class Classmanager : MonoBehaviour
         Tutorialmanager.Instance.CheckTutorial("setpassive");
         
         
+        if (PlayerBackendData.Instance.tutoid.Equals("2") &&
+            TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).type.Equals("buyclass"))
+        {
+            Tutorialmanager.Instance.NewTuto1[16].SetActive(false);
+            Tutorialmanager.Instance.NewTuto1[17].SetActive(true);
+        }
+        
         Passivemanager.Instance.Refresh();
         PlayerData.Instance.RefreshPlayerstat();
         ShowClassData();
@@ -704,8 +764,7 @@ public class Classmanager : MonoBehaviour
             ShowClassData();
             Skillmanager.Instance.mainplayer.SetClass_start();
 
-            //가이드 퀘스트
-            Tutorialmanager.Instance.CheckTutorial("buyclass");
+        
 
             int num =
                 int.Parse(ClassDB.Instance
@@ -728,15 +787,14 @@ public class Classmanager : MonoBehaviour
             //없다면
             alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI/아이템부족"), alertmanager.alertenum.주의);
         }
-
-
-
-      
+     
     }
+
+    
+    
     
     public void Bt_BuyClass(string id)
     {
-      
             PlayerBackendData.Instance.ClassData[id].Isown = true;
             //기본스킬 지급
             PlayerBackendData.Instance.AddSkill(ClassDB.Instance
@@ -745,7 +803,7 @@ public class Classmanager : MonoBehaviour
             int num =
                 int.Parse(ClassDB.Instance
                     .Find_id(PlayerBackendData.Instance.ClassData.ToList()[nowpage].Value.ClassId1).tier) - 1;
-                Bt_SelectPassive(id);
+                //Bt_SelectPassive(id);
         
                 RefreshJobSlot();
             RefreshJobitemslots();

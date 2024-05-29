@@ -255,20 +255,36 @@ public class Enemy : MonoBehaviour
 
                 break;
             case "3": //레이드
+                
                 mondata = monsterDB.Instance.Find_id(MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage)
                     .monsterid);
                 monid = mondata.id;
                 if (EnemySprite.sprite == null)
                     EnemySprite.sprite = SpriteManager.Instance.GetSprite(mondata.sprite);
-                hpmanager.MaxHp = decimal.Parse(mondata.hp);
-                hpmanager.CurHp = hpmanager.MaxHp;
-                //무력화 점수
+                
+                
                 hpmanager.MaxBP = float.Parse(mondata.breakPoint);
                 hpmanager.CurBP = hpmanager.MaxBP;
-
+                
                 mapmanager.Instance.breakadddmg = float.Parse(mondata.breakadddmg);
                 mondropmanager.Instance.SetDropData(monid);
-                atk = float.Parse(mondata.dmg) * 5;
+                
+                if (PlayerBackendData.Instance.nowstage.Equals("5031"))
+                {
+                    hpmanager.MaxHp = EliteRaid.Instance.GetHp();
+                    hpmanager.CurHp = hpmanager.MaxHp;
+                    atk = EliteRaid.Instance.GetAtk() *5;
+
+                }
+                else
+                {
+                    hpmanager.MaxHp = decimal.Parse(mondata.hp);
+                    hpmanager.CurHp = hpmanager.MaxHp;
+                    atk = float.Parse(mondata.dmg) * 5;
+                }
+              
+               
+                //무력화 점수
                 break;
             case "4": //성물전쟁
                 mondata = monsterDB.Instance.Find_id(MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage)

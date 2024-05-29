@@ -46,11 +46,12 @@ public class TutorialTotalManager : MonoBehaviour
         Tutorialmanager.Instance.StartTutorial(21);
     }
 
+    public string tutoids;
     [Button(ButtonSizes.Large), GUIColor(0, 1, 0)]
     public void BtShow2()
     {
         PlayerBackendData.Instance.tutocount = 0;
-        PlayerBackendData.Instance.tutoid = "14";
+        PlayerBackendData.Instance.tutoid = tutoids;
         Tutorialmanager.Instance.Refresh();
         Tutorialmanager.Instance.ShowArrowObj(PlayerBackendData.Instance.tutoid);
     }
@@ -96,6 +97,9 @@ public class TutorialTotalManager : MonoBehaviour
             return;
         switch (PlayerBackendData.Instance.tutoguideid)
         {
+            case 0:
+                Tutorialmanager.Instance.CheckTutorial("tutoguide");
+                break;
             case 1:
                 //아이템이 없다면 완료
                 if (PlayerBackendData.Instance.CheckItemCount("531") == 0)

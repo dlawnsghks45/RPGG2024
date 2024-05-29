@@ -2,6 +2,7 @@ using System;
 using Doozy.Engine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks.Triggers;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,10 +16,14 @@ public class menulevelcheck : MonoBehaviour
 
     [SerializeField]
     Color[] Colors; //0È­ÀÌÆ® //Åõ¸í 
+
+    public Text TitleText;
     public Image IconImage;
+    public Image BackImage;
     public GameObject OpenPanel;
     public UIView OpenPanel_UV;
-    public GameObject LockIcon;
+  
+    public Text LockText;
 
 
     private void OnEnable()
@@ -28,43 +33,54 @@ public class menulevelcheck : MonoBehaviour
 
     private bool islock;
 
-    private void Start()
-    {
-       InvokeRepeating(nameof(chevklock), 1f,3f);
-    }
+   
 
     void chevklock()
     {
-        if (islock)
+        if (adlv != 0)
         {
-            LockIcon.SetActive(false);
-            CancelInvoke(nameof(chevklock));
-            return;
-        }
+            if(adlv > PlayerBackendData.Instance.GetAdLv())
+            {
+                LockText.gameObject.SetActive(true);
+                LockText.text = $"{Inventory.GetTranslate("UI8/Àá±è·©Å©")} {adlv}";
+                BackImage.color = Colors[1];
+                IconImage.color = Colors[1];
+                TitleText.color = Colors[1];
+            }
+            else
+            {
+                LockText.gameObject.SetActive(false);
 
-        if(adlv > PlayerBackendData.Instance.GetAdLv())
-        {
-            LockIcon.SetActive(true);
-            IconImage.color = Colors[1];
+                BackImage.color = Colors[0];
+                IconImage.color = Colors[0];
+                TitleText.color = Colors[0];
+
+                islock = true;
+            }
         }
         else
         {
-            LockIcon.SetActive(false);
-            IconImage.color = Colors[0];
-            islock = true;
+            if (lv > PlayerBackendData.Instance.GetLv())
+            {
+                LockText.gameObject.SetActive(true);
+                LockText.text =  $"{Inventory.GetTranslate("UI8/Àá±è·¹º§")} {lv}";
+                BackImage.color = Colors[1];
+                IconImage.color = Colors[1];
+                TitleText.color = Colors[1];
+
+            }
+            else
+            {
+                LockText.gameObject.SetActive(false);
+                BackImage.color = Colors[0];
+                IconImage.color = Colors[0];
+                TitleText.color = Colors[0];
+
+                islock = true;
+            }
         }
         
-        if (adlv.Equals(0) && lv > PlayerBackendData.Instance.GetLv())
-        {
-            LockIcon.SetActive(true);
-            IconImage.color = Colors[1];
-        }
-        else
-        {
-            LockIcon.SetActive(false);
-            IconImage.color = Colors[0];
-            islock = true;
-        }
+      
        
     }
     
@@ -88,6 +104,30 @@ public class menulevelcheck : MonoBehaviour
                     case "altar":
                         altarmanager.Instance.Bt_OpenPanel();
                         break;
+                    case "avarta":
+                        avatamanager.Instance.View.Show(false);
+                        avatamanager.Instance.RefreshBt_();
+                        break;  
+                    case "preset":
+                        presetmanager.Instance.Bt_OpenPresetPanel();
+                        break;
+                    
+                    case "batterysave":
+                        batterysaver.Instance.Bt_BatterySaver();
+                        break;
+                    case "collect":
+                        CollectionRenewalManager.Instance.Bt_ShowCollectionPanel();
+                        break;
+                    case "Raid":
+                        MapDB.Row mapdata_Now = MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage);
+                        if (mapdata_Now.maptype != "0")
+                        {
+                            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI7/ÄÜÅÙÃ÷ Áß ºÒ°¡"), alertmanager.alertenum.ÁÖÀÇ);
+                            return;
+                        }
+                        OpenPanel_UV.Show(true);
+                        break;
+                    
                 }
             }
             else

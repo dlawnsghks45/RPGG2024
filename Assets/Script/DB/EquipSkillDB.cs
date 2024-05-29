@@ -47,6 +47,8 @@ public class EquipSkillDB : MonoBehaviour
 		public string probability;
 		public string value;
 		public string c;
+		public string A;
+		public string B;
 		public string type;
 		public string subtype;
 		public string rare;
@@ -87,12 +89,14 @@ public class EquipSkillDB : MonoBehaviour
 			row.probability = grid[i][8];
 			row.value = grid[i][9];
 			row.c = grid[i][10];
-			row.type = grid[i][11];
-			row.subtype = grid[i][12];
-			row.rare = grid[i][13];
-			row.isstack = grid[i][14];
-			row.isset = grid[i][15];
-			row.isusebar = grid[i][16];
+			row.A = grid[i][11];
+			row.B = grid[i][12];
+			row.type = grid[i][13];
+			row.subtype = grid[i][14];
+			row.rare = grid[i][15];
+			row.isstack = grid[i][16];
+			row.isset = grid[i][17];
+			row.isusebar = grid[i][18];
 
 			rowList.Add(row);
 		}
@@ -198,6 +202,22 @@ public class EquipSkillDB : MonoBehaviour
 	public List<Row> FindAll_c(string find)
 	{
 		return rowList.FindAll(x => x.c == find);
+	}
+	public Row Find_A(string find)
+	{
+		return rowList.Find(x => x.A == find);
+	}
+	public List<Row> FindAll_A(string find)
+	{
+		return rowList.FindAll(x => x.A == find);
+	}
+	public Row Find_B(string find)
+	{
+		return rowList.Find(x => x.B == find);
+	}
+	public List<Row> FindAll_B(string find)
+	{
+		return rowList.FindAll(x => x.B == find);
 	}
 	public Row Find_type(string find)
 	{
