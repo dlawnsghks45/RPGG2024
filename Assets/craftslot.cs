@@ -78,11 +78,14 @@ public class craftslot : MonoBehaviour
     {
         if (!craftlock.activeSelf) //잠금이안나와야한다.
 
-            if (id.Equals("1021") || id.Equals("10") &&
-                TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).type.Equals("craft"))
+            if (PlayerBackendData.Instance.tutoid != Tutorialmanager.Instance.maxlv)
             {
-                Tutorialmanager.Instance.NewTuto1[3].SetActive(false);
-                Tutorialmanager.Instance.NewTuto1[4].SetActive(true);
+                if (id.Equals("1021") || id.Equals("10") &&
+                    TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).type.Equals("craft"))
+                {
+                    Tutorialmanager.Instance.NewTuto1[3].SetActive(false);
+                    Tutorialmanager.Instance.NewTuto1[4].SetActive(true);
+                }
             }
 
         CraftManager.Instance.Bt_ShowCraftResourceInfo(id);

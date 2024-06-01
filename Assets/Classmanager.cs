@@ -1,3 +1,4 @@
+using System;
 using Doozy.Engine.UI;
 using System.Collections;
 using System.Collections.Generic;
@@ -30,6 +31,8 @@ public class Classmanager : MonoBehaviour
     [SerializeField]
     Transform ClassPanel;
 
+
+    public UIView ClassMotherPanel;
     public void Bt_RefreshClass()
     {
         LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)ClassPanel.transform);
@@ -130,7 +133,6 @@ public class Classmanager : MonoBehaviour
     
     public void ShowClassData()
     {
-    //    Settingmanager.Instance.falseserveron();
         ClassDB.Row data =
             ClassDB.Instance.Find_id(PlayerBackendData.Instance.ClassData.ToList()[nowpage].Value.ClassId1);
         //Debug.Log("1");
@@ -225,6 +227,13 @@ public class Classmanager : MonoBehaviour
         }
         else
         {
+            
+            //아예없음
+            ClassHaveObj[0].SetActive(true);
+            ClassHaveObj[1].SetActive(false);
+            ClassHaveObj[2].SetActive(false);
+            ClassHaveObj[3].SetActive(false);
+            Novicepanels[3].SetActive(false);
             //없다면
             needitem = ClassDB.Instance.Find_id(PlayerBackendData.Instance.ClassData.ToList()[nowpage].Value.ClassId1)
                 .RequiredItemID;
@@ -234,7 +243,8 @@ public class Classmanager : MonoBehaviour
                 SpriteManager.Instance.GetSprite(ItemdatabasecsvDB.Instance.Find_id(needitem).sprite);
             //필요한 아이템 출력
 
-            PassiveButton.gameObject.SetActive(false);
+            //PassiveButton.gameObject.SetActive(false);
+            Debug.Log("없당");
             NoClassTextNeedItem.text =
                 $"{Inventory.GetTranslate(ItemdatabasecsvDB.Instance.Find_id(needitem).name)} {PlayerBackendData.Instance.CheckItemCount(needitem)}/{ClassDB.Instance.Find_id(PlayerBackendData.Instance.ClassData.ToList()[nowpage].Value.ClassId1).RequiredItemHowmany}";
 
@@ -253,11 +263,6 @@ public class Classmanager : MonoBehaviour
             Tutorialmanager.Instance.CheckTutorial("seeclass");
 
 
-            //아예없음
-            ClassHaveObj[0].SetActive(true);
-            ClassHaveObj[1].SetActive(false);
-            ClassHaveObj[2].SetActive(false);
-            ClassHaveObj[3].SetActive(false);
         }
         //Debug.Log("1");
 
@@ -296,12 +301,11 @@ public class Classmanager : MonoBehaviour
         }
         else
         {
-            foreach (var VARIABLE in Novicepanels)
-            {
-                VARIABLE.SetActive(true);
-            }
-
-            //  ClassPassive.text = GetTranslate(data.name);
+          //  foreach (var VARIABLE in Novicepanels)
+         //   {
+          //      VARIABLE.SetActive(true);
+          //  }
+            
             SkillDB.Row skilldata = SkillDB.Instance.Find_Id(data.giveskill);
             ClassSkillImage.sprite = SpriteManager.Instance.GetSprite(skilldata.Sprite);
             switch (skilldata.RangeType)
@@ -469,7 +473,7 @@ public class Classmanager : MonoBehaviour
             //가이드 퀘스트
             Tutorialmanager.Instance.CheckTutorial("seeclass");
 
-
+            ClassHaveObj[3].SetActive(false);
             //아예없음
             ClassHaveObj[0].SetActive(true);
             ClassHaveObj[1].SetActive(false);
@@ -503,47 +507,50 @@ public class Classmanager : MonoBehaviour
         ClassLvStat[6].text = data.skillslotcount;
         ClassLvStat[7].text = data.skillcastingcount;
 
-
-        //  ClassPassive.text = GetTranslate(data.name);
-        SkillDB.Row skilldata = SkillDB.Instance.Find_Id(data.giveskill);
-        ClassSkillImage.sprite = SpriteManager.Instance.GetSprite(skilldata.Sprite);
-        switch (skilldata.RangeType)
+        if (data.giveskill != "")
         {
-            case "M":
-                ClassAttackType[0].SetActive(true);
-                ClassAttackType[1].SetActive(false);
-                ClassAttackType[2].SetActive(false);
-                break;
+            //  ClassPassive.text = GetTranslate(data.name);
+            SkillDB.Row skilldata = SkillDB.Instance.Find_Id(data.giveskill);
+            ClassSkillImage.sprite = SpriteManager.Instance.GetSprite(skilldata.Sprite);
+            switch (skilldata.RangeType)
+            {
+                case "M":
+                    ClassAttackType[0].SetActive(true);
+                    ClassAttackType[1].SetActive(false);
+                    ClassAttackType[2].SetActive(false);
+                    break;
 
-            case "R":
-                ClassAttackType[0].SetActive(false);
-                ClassAttackType[1].SetActive(true);
-                ClassAttackType[2].SetActive(false);
-                break;
-            case "MR":
-                ClassAttackType[0].SetActive(false);
-                ClassAttackType[1].SetActive(false);
-                ClassAttackType[2].SetActive(true);
-                break;
-            case "MRR":
-                ClassAttackType[0].SetActive(true);
-                ClassAttackType[1].SetActive(true);
-                ClassAttackType[2].SetActive(false);
-                break;
-            case "ALL":
-                ClassAttackType[0].SetActive(true);
-                ClassAttackType[1].SetActive(true);
-                ClassAttackType[2].SetActive(true);
-                break;
+                case "R":
+                    ClassAttackType[0].SetActive(false);
+                    ClassAttackType[1].SetActive(true);
+                    ClassAttackType[2].SetActive(false);
+                    break;
+                case "MR":
+                    ClassAttackType[0].SetActive(false);
+                    ClassAttackType[1].SetActive(false);
+                    ClassAttackType[2].SetActive(true);
+                    break;
+                case "MRR":
+                    ClassAttackType[0].SetActive(true);
+                    ClassAttackType[1].SetActive(true);
+                    ClassAttackType[2].SetActive(false);
+                    break;
+                case "ALL":
+                    ClassAttackType[0].SetActive(true);
+                    ClassAttackType[1].SetActive(true);
+                    ClassAttackType[2].SetActive(true);
+                    break;
+            }
+
+            ClassSkill.text = Inventory.GetTranslate(skilldata.Name);
+            Debug.Log(data.giveskill);
+            ClassSkill.color = Inventory.Instance.GetRareColor(skilldata.Rare);
+
+
+            //패시브
+            PassiveInfo.text = Inventory.GetTranslate(PassiveDB.Instance.Find_id(data.passive).info);
+
         }
-
-        ClassSkill.text = Inventory.GetTranslate(skilldata.Name);
-        ClassSkill.color = Inventory.Instance.GetRareColor(skilldata.Rare);
-
-
-        //패시브
-        PassiveInfo.text = Inventory.GetTranslate(PassiveDB.Instance.Find_id(data.passive).info);
-
 
         if (nowpage == 0)
             Prevbutton.interactable = false;
@@ -649,6 +656,13 @@ public class Classmanager : MonoBehaviour
             }
         }
 
+        
+        if (PlayerBackendData.Instance.tutoid.Equals("2") &&
+            TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).type.Equals("buyclass"))
+        {
+            Tutorialmanager.Instance.NewTuto1[25].SetActive(true);
+        }
+
 
         Tutorialmanager.Instance.NewTuto1[11].SetActive(false);
         //가이드 퀘스트
@@ -683,10 +697,22 @@ public class Classmanager : MonoBehaviour
         {
             for (int i = 0; i < PlayerBackendData.Instance.Skills.Count; i++)
             {
-                if (PlayerBackendData.Instance.Skills[i] != null && PlayerBackendData.Instance.Skills[i] != "")
+                if(PlayerBackendData.Instance.Skills[i] == "")
+                    continue;
+                try
                 {
-                    PlayerBackendData.Instance.ClassData[PlayerBackendData.Instance.ClassId].Skills1[i] = PlayerBackendData.Instance.Skills[i];
+                    if (PlayerBackendData.Instance.Skills[i] != null && PlayerBackendData.Instance.Skills[i] != "")
+                    {
+                    
+                        Debug.Log(PlayerBackendData.Instance.Skills[i]);
+                        PlayerBackendData.Instance.ClassData[PlayerBackendData.Instance.ClassId].Skills1[i] = PlayerBackendData.Instance.Skills[i];
+                    }
                 }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                }
+               
             }
         }
         else

@@ -180,6 +180,8 @@ public class EquipUpgradeManager : MonoBehaviour
             }
         }
 
+        
+        
         Soundmanager.Instance.PlayerSound2("Sound/강화확인전",1);
         isstart = true;
         StartCoroutine(StartEnchnat());
@@ -239,6 +241,29 @@ public class EquipUpgradeManager : MonoBehaviour
             LogManager.UpgradeLog(Inventory.Instance.data,logdata.ToArray());
             logdata.Clear();
         }
+
+
+        if (Inventory.Instance.data.EnchantNum1 >= 10)
+        {
+            switch (EquipItemDB.Instance.Find_id(Inventory.Instance.data.Itemid).Type)
+            {
+                case"Weapon":
+                case"SWeapon":
+                    TutorialTotalManager.Instance.CheckGuideQuest("enchantweapon");
+                    break;
+                case"Helmet":
+                case"Chest":
+                case"Glove":
+                case"Boot":
+                    TutorialTotalManager.Instance.CheckGuideQuest("enchantarmor");
+                    break;
+                case"Ring":
+                case"Necklace":
+                    TutorialTotalManager.Instance.CheckGuideQuest("enchantring");
+                    break;
+            }
+        }
+        
         Savemanager.Instance.SaveEquip();
         Savemanager.Instance.SaveInventory();
         Savemanager.Instance.SaveCash();

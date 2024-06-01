@@ -45,7 +45,6 @@ public class jobslot : MonoBehaviour
         {
             if (PlayerBackendData.Instance.PassiveClassId.Length != 0)
             {
-                Debug.Log(PlayerBackendData.Instance.PassiveClassId.Length);
                 if (PlayerBackendData.Instance.PassiveClassId[int.Parse(ClassDB.Instance.Find_id(ClassId).tier) - 1] ==
                     ClassDB.Instance.Find_id(ClassId).passive)
                 {

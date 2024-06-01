@@ -44,11 +44,19 @@ public class BackendLogin : MonoBehaviour
         }
         
     }
-    
+
+    public UIButton startpolicytoggle;
     public void CheckPolicy()
     {
+        startpolicytoggle.Interactable = false;
         if (!policytoggles[0].IsOn || !policytoggles[1].IsOn) return;
         ispolicyon = true;
+        startpolicytoggle.Interactable = true;
+       
+    }
+
+    public void Bt_StartPolicy()
+    {
         SavePolicy();
         PolicyPanel.SetActive(false);
         BackendFerderationAuth.Instance.StartGoogle();

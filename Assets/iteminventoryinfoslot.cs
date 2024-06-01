@@ -167,6 +167,7 @@ public class iteminventoryinfoslot : MonoBehaviour
                 break;
         }
         Inventory.Instance.QuickPotionPanel.Show(false);
+        TutorialTotalManager.Instance.CheckFinish();
         //가이드 퀘스트
     }
 

@@ -8,13 +8,15 @@ public class itemboxslot : MonoBehaviour
 {
     public Image ItemSprite;
     public Text ItemName;
-
+    public GameObject Recoobj;
     private bool isequip;
     public string id;
     public int itemcount;
     public UIToggle ChoiceToggle;
     public void SetData(string ID, int howmany, bool ISEQUIP,string BoxType,bool ismine)
     {
+        Recoobj.SetActive(false);
+
         this.isequip = ISEQUIP;
         this.id = ID;
         itemcount = howmany;
@@ -31,6 +33,12 @@ public class itemboxslot : MonoBehaviour
         }
         else
         {
+            if (ItemdatabasecsvDB.Instance.Find_id(id).Recotype == EquipItemDB.Instance
+                    .Find_id(PlayerBackendData.Instance.EquipEquiptment0[0].Itemid).SubType
+                || ItemdatabasecsvDB.Instance.Find_id(id).Recotype == "all")
+            {
+                Recoobj.SetActive(true);
+            }
 //            Debug.Log(id);
             ItemSprite.sprite = SpriteManager.Instance.GetSprite(ItemdatabasecsvDB.Instance.Find_id(id).sprite);
             ItemName.text =  $"{Inventory.GetTranslate(ItemdatabasecsvDB.Instance.Find_id(id).name)} x {itemcount.ToString()}";

@@ -117,7 +117,7 @@ public class EliteRaid : MonoBehaviour
                 ? decimal.Parse(data[i].maxhowmany) * GetPercent()
                 : decimal.Parse(data[i].maxhowmany);
 
-            Debug.Log(howmanycount);
+//            Debug.Log(howmanycount);
             Reward[i].Refresh(data[i].itemid, howmanycount, false, false, false);
             Reward[i].gameObject.SetActive(true);
         }
@@ -125,6 +125,9 @@ public class EliteRaid : MonoBehaviour
 
     public void Bt_StartRaid()
     {
+        RaidManager.Instance.dungeondropsid.Clear();
+        RaidManager.Instance.dungeondropshowmany.Clear();
+        
         MapDB.Row mapdata_Now = MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage);
         if (mapdata_Now.maptype != "0")
         {

@@ -3,6 +3,7 @@ using UnityEngine.UI;
 public class DungeonSlot : MonoBehaviour
 {
     public string mapid;
+    public bool islock;
 
     public Text MapName;
     public Text MapLevel;
@@ -32,17 +33,19 @@ public class DungeonSlot : MonoBehaviour
 
         if (isgrowth)
         {
-            if (PlayerBackendData.Instance.GetAdLv() < int.Parse(MapDB.Instance.Find_id(mapid).maprank))
+            if (!PlayerBackendData.Instance.sotang_dungeon.Contains(mapid))
             {
+                islock = true;
                 Debug.Log("Àá±è");
                 mapgobutton.interactable = false;
             }
             else
             {
+                islock = false;
+
                 mapgobutton.interactable = true;
             }
         }
-        
     }
 
     [SerializeField] private bool isgrowth;
@@ -62,43 +65,21 @@ public class DungeonSlot : MonoBehaviour
 
     public void CheckLock()
     {
-        if (PlayerBackendData.Instance.GetAdLv() < int.Parse(MapDB.Instance.Find_id(mapid).maprank))
-        {
-            mapgobutton.interactable = false;
-            if (!isgrowth)
-            {
-                Debug.Log("Àá±è");
-                //Àá±Ý
-                Lockpanel.SetActive(true);
-
-                string[] lvs = DungeonDB.Instance.Find_id(mapid).levelid.Split(';');
-
-                switch (lvs.Length)
-                {
-                    case 1:
-                        LockLevel.text = string.Format(Inventory.GetTranslate("UI2/¸ðÇè·©Å©"),
-                            PlayerData.Instance.gettierstar(DungeonDB.Instance.Find_id(lvs[0]).maprank));
-                        break;
-                    case 2:
-                        LockLevel.text =
-                            $"{PlayerData.Instance.gettierstar(DungeonDB.Instance.Find_id(lvs[0]).maprank)}/{PlayerData.Instance.gettierstar(DungeonDB.Instance.Find_id(lvs[1]).maprank)}";
-                        break;
-                    case 3:
-                        LockLevel.text =
-                            $"{PlayerData.Instance.gettierstar(DungeonDB.Instance.Find_id(lvs[0]).maprank)}/{PlayerData.Instance.gettierstar(DungeonDB.Instance.Find_id(lvs[1]).maprank)}/{PlayerData.Instance.gettierstar(DungeonDB.Instance.Find_id(lvs[2]).maprank)}";
-                        break;
-                    case 4:
-                        LockLevel.text =
-                            $"{PlayerData.Instance.gettierstar(DungeonDB.Instance.Find_id(lvs[0]).maprank)}/{PlayerData.Instance.gettierstar(DungeonDB.Instance.Find_id(lvs[1]).maprank)}/{PlayerData.Instance.gettierstar(DungeonDB.Instance.Find_id(lvs[2]).maprank)}/{PlayerData.Instance.gettierstar(DungeonDB.Instance.Find_id(lvs[3]).maprank)}";
-                        break;
-                }
-            }
-        }
-        else
+        if ((MapDB.Instance.Find_id(mapid).maparray == "")
+            || PlayerBackendData.Instance.sotang_dungeon.Contains(MapDB.Instance.Find_id(mapid).maparray))
         {
             //Àá±ÝÇ°
             Lockpanel.SetActive(false);
             mapgobutton.interactable = true;
+            islock = false;
+        }
+        else
+        {
+            islock = true;
+            mapgobutton.interactable = false;
+            Lockpanel.SetActive(true);
+            LockLevel.text = string.Format(Inventory.GetTranslate("UI/ÀÔÀå°¡´ÉÁ¶°Ç¸Ê4"), 
+                Inventory.GetTranslate(MapDB.Instance.Find_id(MapDB.Instance.Find_id(mapid).maparray).name));
         }
     }
 

@@ -1,7 +1,7 @@
 id,DescriptionKor,mapname,name,hp,dmg,crit,attackcount,attacktime,montype,sprite,dropid,bossdrop,breakPoint,breakTime,breaknewstart,breakadddmg,israge,ragepercent,ispenalty
 아이디,,,이름,체력,데미지,크리확률,공격횟수,공격시간,몬스터 타입,이미지,드롭아이디,보스 드롭 아이디,무력화 점수,무력화 시간,무력화다시시작시간,무력화 시 추가딜,움직이는가?,,
-100,승급 시험2,,MonsterName/100,70000,150,30,1,1,basic,Monster/Boss/100,100,100,100,5,8,2,FALSE,0,FALSE
-101,승급 시험3,,MonsterName/101,250000,250,30,1,1,basic,Monster/Boss/101,101,101,150,5,8,2,FALSE,0,FALSE
+100,승급 시험2,,MonsterName/100,500000,150,30,1,1,basic,Monster/Boss/100,100,100,30,10,8,5,FALSE,0,FALSE
+101,승급 시험3,,MonsterName/101,520000,250,30,1,1,basic,Monster/Boss/101,101,101,150,5,8,2,FALSE,0,FALSE
 102,승급 시험4,,MonsterName/102,4000000,500,30,1,1,basic,Monster/Boss/102,102,102,200,5,8,2,FALSE,0,FALSE
 103,승급 시험5,,MonsterName/103,20000000,1000,30,1,1,basic,Monster/Boss/103,103,103,250,5,8,2,FALSE,0,FALSE
 104,승급 시험6,,MonsterName/104,102000000,3000,30,1,1,basic,Monster/Boss/104,104,104,300,5,8,2,FALSE,0,FALSE
@@ -17,8 +17,8 @@ id,DescriptionKor,mapname,name,hp,dmg,crit,attackcount,attacktime,montype,sprite
 114,승급 시험16,,MonsterName/114,101000000000000,210000,30,1,1,basic,Monster/Boss/114,114,114,550,5,8,2,FALSE,0,FALSE
 115,승급 시험17,,MonsterName/115,310000000000000,250000,30,1,1,basic,Monster/Boss/115,115,115,550,5,8,2,FALSE,0,FALSE
 116,승급 시험18,,MonsterName/116,989000000000000,290000,30,1,1,basic,Monster/Boss/116,116,116,550,5,8,2,FALSE,0,FALSE
-117,승급 시험19,,MonsterName/117,2268000000000000,330000,30,1,1,basic,Monster/Boss/117,117,117,550,5,8,2,FALSE,0,FALSE
-118,승급 시험20,,MonsterName/118,4568000000000000,370000,30,1,1,basic,Monster/Boss/118,118,118,550,5,8,2,FALSE,0,FALSE
+117,승급 시험19,,MonsterName/117,1568000000000000,330000,30,1,1,basic,Monster/Boss/117,117,117,550,5,8,2,FALSE,0,FALSE
+118,승급 시험20,,MonsterName/118,3068000000000000,370000,30,1,1,basic,Monster/Boss/118,118,118,550,5,8,2,FALSE,0,FALSE
 119,승급 시험21,,MonsterName/119,15868000000000000,410000,30,1,1,basic,Monster/Boss/119,119,119,550,5,8,2,FALSE,0,FALSE
 120,승급 시험22,,MonsterName/120,30068000000000000,450000,30,1,1,basic,Monster/Boss/120,120,120,550,5,8,2,FALSE,0,FALSE
 121,승급 시험23,,MonsterName/121,78635870242928600,570000,30,1,1,basic,Monster/Boss/121,121,121,550,5,8,2,FALSE,0,FALSE

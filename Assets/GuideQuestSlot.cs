@@ -7,6 +7,7 @@ public class GuideQuestSlot : MonoBehaviour
 {
     public string id;
     public Text title;
+    public Text info;
     public GameObject FinishObj;
     public GameObject NextObj;
     public itemiconslot[] Reward;
@@ -18,6 +19,7 @@ public class GuideQuestSlot : MonoBehaviour
      
         id = data.id;
         title.text = Inventory.GetTranslate(data.name);
+        info.text = Inventory.GetTranslate(data.info);
 
         for (int i = 0; i < Reward.Length; i++)
         {

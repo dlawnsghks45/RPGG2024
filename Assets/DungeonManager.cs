@@ -201,24 +201,12 @@ public GameObject DungeonRewardPanel;
 
     bool isshowingpanel;
     public GameObject DungeonShowPanel;
-
+    public DungeonSlot[] dungeonslots;
     private void Start()
     {
-        try
-        {
-            if (PlayerBackendData.Instance.GetAdLv() >= 3)
-                Bt_SelectDungeon(DungeonDB.Instance.Find_maprank(PlayerBackendData.Instance.GetAdLv().ToString()).id);
-        }
-        catch (Exception e)
-        {
-            if(PlayerBackendData.Instance.GetAdLv() > 30)
-                Bt_SelectDungeon(DungeonDB.Instance.Find_maprank("30").id);
-            else
-            {
-                Bt_SelectDungeon(DungeonDB.Instance.Find_maprank("3").id);
-            }
-        }
-     
+        string dungeonid = PlayerBackendData.Instance.sotang_dungeon[^1];
+        Bt_SelectDungeon(dungeonid);
+
     }
 
     //던전 목록 보여줌

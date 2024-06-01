@@ -245,13 +245,20 @@ public class mapmanager : MonoBehaviour
                         break;
                     case "3": //레이드
                         //횟수 복원
-                        if (Timemanager.Instance.AddDailyCount(Timemanager.ContentEnumDaily.레이드, 1))
+                        if (MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage).id.Equals("5031"))
                         {
-                            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI2/레이드실패"),alertmanager.alertenum.일반);
+
                         }
+                        else if (Timemanager.Instance.AddDailyCount(Timemanager.ContentEnumDaily.레이드, 1))
+                        {
+                            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI2/레이드실패"),
+                                alertmanager.alertenum.일반);
+                        }
+
                         LocateMap(savemapid);
                         break;
                     case "4": //성물 파괴
+                        TutorialTotalManager.Instance.CheckGuideQuest("altarstart");
                         RankingManager.Instance.RankInsert(altarwarmanager.Instance.totaldmg.ToString(), RankingManager.RankEnum.성물);
                         LocateMap(savemapid);
                         break;

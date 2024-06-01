@@ -1,6 +1,6 @@
 id,Description,name,info,classsprite,tier,Hp,Mp,strperlv,dexperlv,intperlv,wisperlv,hitperlv,hpperlv,mpperlv,passive,standweapon,standsubweapon,giveskill,skillslotcount,skillcastingcount,RequiredItemID,RequiredItemHowmany,NextClass,NeedPlayerRank,mainstat
 ,설명,,캐릭터 정보,,,기본 Hp,기본 Mp,,,,,,,,패시브,기본 무기외형,기본보조무기 외형,지급 스킬,스킬 슬릇,동시 캐스팅 가능,필요 아이템,,다음 직업,모험가 등급,
-C999,노비스,Class/999,ClassInfo/999,Class/999,1,1000,1000,1,1,0,0,0,50,10,,E1000,E1014,,0,0,4000,1,0,1,str
+C999,노비스,Class/999,ClassInfo/999,Class/999,1,1000,1000,1,1,0,0,0,50,10,C1000,E1000,E1014,1000,0,0,4000,1,0,1,str
 C1000,워리어,Class/1000,ClassInfo/1000,Class/1000,1,1000,1000,2,1,0,0,0,50,10,C1000,E1000,E1014,1000,1,1,4000,1,0,1,str
 C1001,로그,Class/1001,ClassInfo/1001,Class/1001,1,1000,1000,1,2,0,0,0,30,15,C1001,E1003,E1015,1001,1,1,4000,1,0,1,dex
 C1002,매지션,Class/1002,ClassInfo/1002,Class/1002,1,1000,1000,0,0,2,1,0,20,25,C1002,E1002,E1016,1002,2,1,4000,1,0,1,int

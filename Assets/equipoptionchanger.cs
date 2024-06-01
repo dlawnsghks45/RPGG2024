@@ -1011,6 +1011,7 @@ public class equipoptionchanger : MonoBehaviour
                break;
          }
 
+         TutorialTotalManager.Instance.CheckFinish();
          //Inventory.Instance.nowequipslot.Refresh(Inventory.Instance.data);
          EquipSetmanager.Instance.EquipSetItem();
          PlayerData.Instance.RefreshPlayerstat();

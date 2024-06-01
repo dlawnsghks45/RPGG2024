@@ -475,6 +475,24 @@ public class GuildManager : MonoBehaviour
         });
     }
 
+    [SerializeField] private string[] guild_tuto;
+
+    public void JoinTutorialGuld()
+    {
+        for (int i = 0; i < guild_tuto.Length; i++)
+        {
+            SendQueue.Enqueue(Backend.Guild.ApplyGuildV3, guild_tuto[i], (callback) =>
+            {
+                // 이후 처리
+                if (callback.IsSuccess())
+                {
+                    //즉시가입여부 확ㅇ인 
+                    GuildManager.Instance.GuildJoinSucc();
+                }
+            });
+        }
+    }
+
     private GuildItem nowotherGuildItem;
     public void Bt_ShowSelectGuild(GuildItem info)
     {

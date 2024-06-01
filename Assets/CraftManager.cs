@@ -51,15 +51,19 @@ public class CraftManager : MonoBehaviour
 
     public void Bt_SelectMainPanel(int num)
     {
-        if (num.Equals(0) &&
-            TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).type.Equals("craft"))
+        if (PlayerBackendData.Instance.tutoid != "11")
         {
-            Tutorialmanager.Instance.NewTuto1[2].SetActive(true);
-        }
-        if (num.Equals(3) &&
-            TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).type.Equals("craft"))
-        {
-            Tutorialmanager.Instance.NewTuto1[18].SetActive(true);
+            if (num == 0 &&
+                TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).type.Equals("craft"))
+            {
+                Tutorialmanager.Instance.NewTuto1[2].SetActive(true);
+            }
+
+            if (num.Equals(3) &&
+                TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).type.Equals("craft"))
+            {
+                Tutorialmanager.Instance.NewTuto1[18].SetActive(true);
+            }
         }
 
         for (int i = 0; i < SubObj.Length; i++)
@@ -383,7 +387,7 @@ public class CraftManager : MonoBehaviour
 
         craftPercent.text = string.Format(Inventory.GetTranslate("ButtonUI/성공확률"), craftdata.SuccessPercent);
         dt = new DateTime(0);
-        craftTime.text = dt.AddSeconds(double.Parse(craftdata.crafttime) * nowselectcount).ToString("dd:HH:mm:ss");
+        craftTime.text = (dt.AddSeconds(double.Parse(craftdata.crafttime) * nowselectcount)).ToString("HH:mm:ss");
         //개수 설정
         nowselectcount = 1;
         countinput.text = "1";
@@ -498,7 +502,7 @@ public class CraftManager : MonoBehaviour
         
         times = PlayerBackendData.Instance.ispremium ? times * 0.5f : times;
         
-        craftTime.text = dt.AddSeconds(times).ToString("HH:mm:ss");
+        craftTime.text = (dt.AddSeconds(times)).ToString("HH:mm:ss");
         needgold = decimal.Parse(craftdata.needgold) * nowselectcount;
         needgoldtext.text = dpsmanager.convertNumber(needgold);
         LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)needgoldtext.transform);
@@ -513,13 +517,16 @@ public class CraftManager : MonoBehaviour
     public Text CraftAcceptNeedGold;
     public void ShowCraftAcceptPanel()
     {
-        if (craftdata.id.Equals("1021") || craftdata.id.Equals("10") &&  
-            TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).type.Equals("craft"))
+        if (PlayerBackendData.Instance.tutoid != Tutorialmanager.Instance.maxlv)
         {
-            Tutorialmanager.Instance.NewTuto1[4].SetActive(false);
-            Tutorialmanager.Instance.NewTuto1[6].SetActive(true);
+            if (craftdata.id.Equals("1021") || craftdata.id.Equals("10") &&
+                TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).type.Equals("craft"))
+            {
+                Tutorialmanager.Instance.NewTuto1[4].SetActive(false);
+                Tutorialmanager.Instance.NewTuto1[6].SetActive(true);
+            }
         }
-        
+
         CraftAcceptPanel.Show(false);
         CraftAcceptImage.sprite = SuccessImage.sprite;
         CraftAcceptName.text = SuccessItem.text;
@@ -710,14 +717,16 @@ public class CraftManager : MonoBehaviour
 
         if (!istest && (!iscrafting || ishaveresource || !ishavegold)) return;
         {
-            if (craftdata.id.Equals("1021") || craftdata.id.Equals("10")  &&
-                TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).type.Equals("craft"))
+            if (PlayerBackendData.Instance.tutoid != Tutorialmanager.Instance.maxlv)
             {
-                Tutorialmanager.Instance.NewTuto1[6].SetActive(false);
-                Tutorialmanager.Instance.NewTuto1[9].SetActive(true);
+                if (craftdata.id.Equals("1021") || craftdata.id.Equals("10") &&
+                    TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).type.Equals("craft"))
+                {
+                    Tutorialmanager.Instance.NewTuto1[6].SetActive(false);
+                    Tutorialmanager.Instance.NewTuto1[9].SetActive(true);
+                }
             }
-            
-            
+
             //제작 시작 
             BackendReturnObject servertime = Backend.Utils.GetServerTime();
             if (!servertime.IsSuccess()) return;
@@ -991,24 +1000,16 @@ public class CraftManager : MonoBehaviour
         Tutorialmanager.Instance.CheckTutorial("craft");
         //Tutorialmanager.Instance.CheckTutorial("getcraft");
         //Tutorialmanager.Instance.CheckTutorial("craftpotion");
-        if (craftdata.id.Equals("10300"))
-        {
-            TutorialTotalManager.Instance.CheckGuideQuest("makearmor");
-        }
-        
-        if (craftdata.id.Equals("5553") || craftdata.id.Equals("5554") ||
-            craftdata.id.Equals("5555") || craftdata.id.Equals("5556") 
+        if (craftdata.id.Equals("80000") || craftdata.id.Equals("80001") ||
+            craftdata.id.Equals("80002") || craftdata.id.Equals("80003") ||
+            craftdata.id.Equals("80004") || craftdata.id.Equals("80005") ||
+            craftdata.id.Equals("80008") || craftdata.id.Equals("80009") ||
+            craftdata.id.Equals("80010") || craftdata.id.Equals("80011") ||
+            craftdata.id.Equals("80012") || craftdata.id.Equals("80013") ||
+            craftdata.id.Equals("80006") || craftdata.id.Equals("80007")
            )
         {
-            TutorialTotalManager.Instance.CheckGuideQuest("makesubweapon");
-        }
-        if (craftdata.id.Equals("5557") || craftdata.id.Equals("5558") ||
-            craftdata.id.Equals("5559") || craftdata.id.Equals("5560") ||
-            craftdata.id.Equals("5561") || craftdata.id.Equals("5562") ||
-            craftdata.id.Equals("5563") || craftdata.id.Equals("5564")
-           )
-        {
-            TutorialTotalManager.Instance.CheckGuideQuest("makeweapon");
+            TutorialTotalManager.Instance.CheckGuideQuest("skillbookmake");
         }
         
         //제거

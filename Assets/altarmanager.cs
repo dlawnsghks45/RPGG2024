@@ -28,7 +28,6 @@ public class altarmanager : MonoBehaviour
             return _instance;
         }
     }
-
     
     public Text[] altarpanellv;
     public Text[] altarpanelstat;
@@ -295,10 +294,6 @@ public class altarmanager : MonoBehaviour
 
         for (int i = 0; i < countpanels.nowcount; i++)
         {
-           
-            
-            
-            
             nowindex = 0;
 
             for (int j = 0; j < lvscale2.Length; j++)
@@ -331,7 +326,7 @@ public class altarmanager : MonoBehaviour
                     if (!PlayerBackendData.Instance.ishaveitemcount(needitem, (int)counts))
                     {
                      //   alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI/재료없음"), alertmanager.alertenum.주의);
-                     noresource = true;
+                        noresource = true;
 
                         return;
                     }
@@ -424,6 +419,7 @@ public class altarmanager : MonoBehaviour
                      noresource = true;
                         return;
                     }
+                    TutorialTotalManager.Instance.CheckGuideQuest("antcavelvup");
 
                     PlayerBackendData.Instance.RemoveItem(needitem, (int)needitemhowmany);
                     if (nowpercent >= Random.Range(1, 101))
@@ -458,6 +454,7 @@ public class altarmanager : MonoBehaviour
         
         if (issucc)
         {
+            TutorialTotalManager.Instance.CheckGuideQuest("altarup");
             //서버저장
             Param param = new Param
             {

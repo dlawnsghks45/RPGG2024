@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class menulevelcheck : MonoBehaviour
 {
+    public bool istuto;
     [SerializeField]
     int adlv;
     [SerializeField]
@@ -37,7 +38,29 @@ public class menulevelcheck : MonoBehaviour
 
     void chevklock()
     {
-        if (adlv != 0)
+        if (istuto)
+        {
+            if (int.Parse(PlayerBackendData.Instance.tutoid)< 10   && istuto)
+            {
+                //튜토잠김
+                LockText.gameObject.SetActive(true);
+                LockText.text = Inventory.GetTranslate("UI8/튜로완료후");
+                BackImage.color = Colors[1];
+                IconImage.color = Colors[1];
+                TitleText.color = Colors[1];
+            }
+            else
+            {
+                LockText.gameObject.SetActive(false);
+
+                BackImage.color = Colors[0];
+                IconImage.color = Colors[0];
+                TitleText.color = Colors[0];
+
+                islock = true;
+            }
+        }
+        else if (adlv != 0)
         {
             if(adlv > PlayerBackendData.Instance.GetAdLv())
             {
@@ -86,12 +109,27 @@ public class menulevelcheck : MonoBehaviour
     
     public void Bt_TouchPanel()
     {
-        if (adlv > PlayerBackendData.Instance.GetAdLv())
+        if (int.Parse(PlayerBackendData.Instance.tutoid) < 10   && istuto)
+        {
+            //레벨이 부족합니다.
+            alertmanager.Instance.ShowAlert(
+                TranslateManager.Instance.GetTranslate("UI/입장가능조건맵3"),alertmanager.alertenum.주의);
+        }
+       else if (adlv > PlayerBackendData.Instance.GetAdLv())
         {
             //레벨이 부족합니다.
             alertmanager.Instance.ShowAlert(string.Format(TranslateManager.Instance.GetTranslate("UI/입장가능조건레벨"), PlayerData.Instance.gettierstar(adlv.ToString())),alertmanager.alertenum.주의);
             //alertmanager.Instance.ShowAlert("dd",alertmanager.alertenum.주의);
         }
+        else if (lv > PlayerBackendData.Instance.GetLv())
+        {
+            //레벨이 부족합니다.
+            alertmanager.Instance.ShowAlert(
+                string.Format(TranslateManager.Instance.GetTranslate("UI/입장가능조건레벨2"),
+                    lv.ToString()), alertmanager.alertenum.주의);
+            //alertmanager.Instance.ShowAlert("dd",alertmanager.alertenum.주의);
+        }
+      
         else
         {
             if (type != "")
@@ -126,6 +164,12 @@ public class menulevelcheck : MonoBehaviour
                             return;
                         }
                         OpenPanel_UV.Show(true);
+                        break;
+                    case "Guide":
+                        OpenPanel_UV.Show(true);
+                        TutorialTotalManager.Instance.CheckFinish();
+                        TutorialTotalManager.Instance.RefreshScrolbar();
+
                         break;
                     
                 }

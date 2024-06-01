@@ -401,6 +401,7 @@ public class petmanager : MonoBehaviour
             Bt_GetPet(t);
         }
 
+        TutorialTotalManager.Instance.CheckGuideQuest("petopen");
 
         PlayerBackendData userData = PlayerBackendData.Instance;
         Param paramEquip = new Param();
@@ -958,6 +959,9 @@ public class petmanager : MonoBehaviour
            Where where = new Where();
            where.Equal("owner_inDate", PlayerBackendData.Instance.playerindate);
 
+           TutorialTotalManager.Instance.CheckGuideQuest("petequip");
+
+           
            SendQueue.Enqueue(Backend.GameData.Update, "PlayerData", where, paramEquip, (callback) =>
            {
                // 이후 처리

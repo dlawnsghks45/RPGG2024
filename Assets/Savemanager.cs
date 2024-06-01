@@ -636,6 +636,8 @@ public class Savemanager : MonoBehaviour
 
             for (int i = 0; i < tempskill.Count; i++)
             {
+                if(tempskill[i] == "")
+                    continue;
                 if (!PlayerBackendData.Instance.Skills.Contains(tempskill[i]))
                 {
                     PlayerBackendData.Instance.Skills.Add(tempskill[i]);

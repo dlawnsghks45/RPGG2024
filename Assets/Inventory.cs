@@ -1105,22 +1105,8 @@ public class Inventory : MonoBehaviour
         PlayerData.Instance.RefreshPlayerstat_Equip();
 
         //가이드 퀘스트
-        
-        if (PlayerBackendData.Instance.tutoid != Tutorialmanager.Instance.maxlv)
-        {
-            Tutorialmanager.Instance.CheckTutorial("equipitem");
-            if (PlayerBackendData.Instance.GetEquipData()[0].Itemid.Equals("E5500") ||
-                PlayerBackendData.Instance.GetEquipData()[0].Itemid.Equals("E5501") ||
-                PlayerBackendData.Instance.GetEquipData()[0].Itemid.Equals("E5502") ||
-                PlayerBackendData.Instance.GetEquipData()[0].Itemid.Equals("E5503") ||
-                PlayerBackendData.Instance.GetEquipData()[0].Itemid.Equals("E5504") ||
-                PlayerBackendData.Instance.GetEquipData()[0].Itemid.Equals("E5505") ||
-                PlayerBackendData.Instance.GetEquipData()[0].Itemid.Equals("E5506") ||
-                PlayerBackendData.Instance.GetEquipData()[0].Itemid.Equals("E5507"))
-            {
-                Tutorialmanager.Instance.CheckTutorial("equipitemraze");
-            }
-        }
+            
+        TutorialTotalManager.Instance.CheckFinish();
 
         ItemObj.Hide(false);
         EquipInventoryObj.Hide(false);
@@ -1471,11 +1457,12 @@ public class Inventory : MonoBehaviour
                 if (isbigsuccsmelt)
                 {
                     AutoSmelting.Instance.AutoSmeltinginfo.text = GetTranslate("UI3/대성공");
+                    TutorialTotalManager.Instance.CheckFinish();
                 }
                 else if (issuccsmelt)
                 {
                     AutoSmelting.Instance.AutoSmeltinginfo.text = GetTranslate("UI3/성공");
-
+                    TutorialTotalManager.Instance.CheckFinish();
                 }
                 else
                 {
@@ -1976,8 +1963,46 @@ public class Inventory : MonoBehaviour
             Savemanager.Instance.SaveInventory_SaveOn();
         // RefreshInventory();
     }
-       
-    public void AddItem(string id, int count, bool issave = true, bool ismonkill = false)
+
+       public void AddItemExp(string id, decimal count, bool issave = true, bool ismonkill = false)
+       {
+           ItemdatabasecsvDB.Row item = ItemdatabasecsvDB.Instance.Find_id(id);
+//            Debug.Log(id);
+           if (item.itemtype == "0")
+           {
+               switch (item.id)
+               {
+                   case "1000": //골드
+                       if (ismonkill)
+                       {
+                           PlayerData.Instance.UpGoldMon((decimal)count);
+                       }
+                       else
+                           PlayerData.Instance.UpGold((decimal)count);
+
+                       break;
+                   case "1001": //불꽃
+                       PlayerData.Instance.UpCash((decimal)count);
+                       break;
+                   case "1002": //경험치
+                       if (ismonkill)
+                       {
+                           PlayerData.Instance.EarnExp((decimal)count, false);
+                       }
+                       else
+                       {
+                           PlayerData.Instance.EarnExp((decimal)count);
+                       }
+
+                       break;
+                   case "1011": //경험치
+                       PlayerData.Instance.EarnExpNoPre((decimal)count);
+                       break;
+               }
+           }
+       }
+
+       public void AddItem(string id, int count, bool issave = true, bool ismonkill = false)
     {
         ItemdatabasecsvDB.Row item = ItemdatabasecsvDB.Instance.Find_id(id);
 //            Debug.Log(id);
@@ -2586,18 +2611,21 @@ public class Inventory : MonoBehaviour
                     gold += decimal.Parse(count[i]);
                     showearnGold.text = gold.ToString("N0");
                     shwoearnGoldobj.SetActive(true);
+                    LayoutRebuilder.ForceRebuildLayoutImmediate(EarnItemRect);
                     break;
                 case "1002":
                     exp += decimal.Parse(count[i]);
                     showearnExp.text = exp.ToString("N0");
                     shwoearnExpobj.SetActive(true);
+                    LayoutRebuilder.ForceRebuildLayoutImmediate(EarnItemRect);
+
                     break;
                 default:
                     earnitems[i].gameObject.SetActive(true);
                     earnitems[i].Refresh(id[i], decimal.Parse(count[i]), false, true, isequip);
+                    LayoutRebuilder.ForceRebuildLayoutImmediate(EarnItemRect);
                     break;
             }
-            LayoutRebuilder.ForceRebuildLayoutImmediate(EarnItemRect);
         }
         
     }
@@ -2883,7 +2911,7 @@ public class Inventory : MonoBehaviour
          string[] id = boxdata.A.Split(';');
          string[] howmany = boxdata.B.Split(';');
          isbox = false;
-
+         TutorialTotalManager.Instance.CheckFinish();
          List<string> getid = new List<string>();
          List<string> gethowmany = new List<string>();
 
@@ -2902,10 +2930,7 @@ public class Inventory : MonoBehaviour
                          gethowmany.Add("1");
                      }
 
-                     if (nowselectid.Equals("527"))
-                     {
-                         TutorialTotalManager.Instance.CheckGuideQuest("openbox");
-                     }
+             
                      
                      Savemanager.Instance.SaveEquip();
                  }

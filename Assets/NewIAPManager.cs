@@ -388,8 +388,8 @@ public class NewIAPManager : MonoBehaviour
                         {
                             Inventory.Instance.AddItem(TutorialTotalManager.Instance.slots[i].Reward[0].id,
                                 (int)TutorialTotalManager.Instance.slots[i].Reward[0].count, false);
-                            Inventory.Instance.AddItem(TutorialTotalManager.Instance.slots[i].Reward[1].id,
-                                (int)TutorialTotalManager.Instance.slots[i].Reward[1].count, false);
+                            Inventory.Instance.AddItemExp(TutorialTotalManager.Instance.slots[i].Reward[1].id,
+                                (decimal)TutorialTotalManager.Instance.slots[i].Reward[1].count, false);
                             idss.Add(TutorialTotalManager.Instance.slots[i].Reward[0].id);
                             hw.Add((int)TutorialTotalManager.Instance.slots[i].Reward[0].count);
                             idss.Add(TutorialTotalManager.Instance.slots[i].Reward[1].id);

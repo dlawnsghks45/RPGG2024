@@ -606,8 +606,15 @@ public class Hpmanager : MonoBehaviour
                                         Settingmanager.Instance.SaveContent();
                                     }
 
-                                    TutorialTotalManager.Instance.CheckGuideQuest("contentdungeon");
 
+                                    if (PlayerBackendData.Instance.nowstage.Equals("9997"))
+                                    {
+                                        TutorialTotalManager.Instance.CheckGuideQuest("contentdungeon3");
+                                    }
+                                    if (PlayerBackendData.Instance.nowstage.Equals("9998"))
+                                    {
+                                        TutorialTotalManager.Instance.CheckGuideQuest("contentdungeon");
+                                    }
                                     switch (PlayerBackendData.Instance.nowstage)
                                     {
                                         case "9998": //대마법사의 묘q
@@ -749,7 +756,10 @@ public class Hpmanager : MonoBehaviour
                                             .nowstage);
                                         Settingmanager.Instance.SaveSotangs();
                                     }
-
+                                    if (int.Parse(MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage).maprank) >= 20)
+                                    {
+                                        TutorialTotalManager.Instance.CheckGuideQuest("dungeonclearhell");
+                                    }
                                     if (PlayerBackendData.Instance.nowstage.Equals("3006"))
                                     {
                                         TutorialTotalManager.Instance.CheckGuideQuest("dungeonclearborn");

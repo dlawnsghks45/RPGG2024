@@ -2336,6 +2336,7 @@ public class Player : MonoBehaviour
         }
 
         AlldmgUp += buff_alldmgup + gear_alldmg + equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.totaldmg) + talisman_dmgup;
+        abilitymanager.Instance.Bt_RefreshReco();
 
     }
 

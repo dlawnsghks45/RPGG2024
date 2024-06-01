@@ -23,7 +23,8 @@ public class Raidslot : MonoBehaviour
 
     void CheckLock()
     {
-        if (int.Parse(MapDB.Instance.Find_id(mapid).maprank) <= PlayerBackendData.Instance.GetAdLv())
+        if ((MapDB.Instance.Find_id(mapid).maparray == "")
+             || PlayerBackendData.Instance.sotang_raid.Contains(MapDB.Instance.Find_id(mapid).maparray))
         {
             islock = false;
             lockpanel.SetActive(false);
@@ -32,8 +33,8 @@ public class Raidslot : MonoBehaviour
         {
             islock = true;
             lockpanel.SetActive(true);
-            locktxt.text = string.Format(Inventory.GetTranslate("UI/입장가능조건레벨"), 
-                PlayerData.Instance.gettierstar(MapDB.Instance.Find_id(mapid).maprank));
+            locktxt.text = string.Format(Inventory.GetTranslate("UI/입장가능조건맵"), 
+             Inventory.GetTranslate(MapDB.Instance.Find_id(MapDB.Instance.Find_id(mapid).maparray).name));
         }
         
         if (PlayerBackendData.Instance.sotang_raid.Contains(mapid))

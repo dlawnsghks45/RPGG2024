@@ -43,6 +43,7 @@ public class JumpDB : MonoBehaviour
 		public string selectclass;
 		public string itemid;
 		public string itemhw;
+		public string equipskill;
 
 	}
 
@@ -73,6 +74,7 @@ public class JumpDB : MonoBehaviour
 			row.selectclass = grid[i][4];
 			row.itemid = grid[i][5];
 			row.itemhw = grid[i][6];
+			row.equipskill = grid[i][7];
 
 			rowList.Add(row);
 		}
@@ -146,6 +148,14 @@ public class JumpDB : MonoBehaviour
 	public List<Row> FindAll_itemhw(string find)
 	{
 		return rowList.FindAll(x => x.itemhw == find);
+	}
+	public Row Find_equipskill(string find)
+	{
+		return rowList.Find(x => x.equipskill == find);
+	}
+	public List<Row> FindAll_equipskill(string find)
+	{
+		return rowList.FindAll(x => x.equipskill == find);
 	}
 
 }

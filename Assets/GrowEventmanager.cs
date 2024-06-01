@@ -140,11 +140,13 @@ public class GrowEventmanager : MonoBehaviour
          Inventory.Instance.ShowEarnItem3(id.ToArray(), hw.ToArray(), true);
 
          //레벨업
-         PlayerBackendData.Instance.SetLv(700);
+         PlayerBackendData.Instance.SetLv(1500);
          PlayerData.Instance.RefreshInitData();
 
-         PlayerBackendData.Instance.SetGoldAltarLv(2000, altarmanager.AltarType.제단);
-         PlayerBackendData.Instance.SetGoldAltarLv(1000, altarmanager.AltarType.골드);
+         PlayerBackendData.Instance.SetGoldAltarLv(3000, altarmanager.AltarType.제단);
+         PlayerBackendData.Instance.SetGoldAltarLv(6000, altarmanager.AltarType.골드);
+         PlayerBackendData.Instance.SetGoldAltarLv(1500, altarmanager.AltarType.레이드);
+         PlayerBackendData.Instance.SetGoldAltarLv(2000, altarmanager.AltarType.개미굴);
          PlayerBackendData.Instance.SetAdLv(15);
          PlayerBackendData.Instance.SetFieldLV(64);
 
@@ -161,9 +163,18 @@ public class GrowEventmanager : MonoBehaviour
             for (int i = 0; i < giveclass.Length; i++)
             {
                Classmanager.Instance.Bt_BuyClass(giveclass[i]);
-               skills.Add(ClassDB.Instance.Find_id(giveclass[i]).giveskill);
+               Debug.Log("준 스킬 " + giveclass[i]  + "ㅋ" + ClassDB.Instance.Find_id(giveclass[i]).giveskill);
             }
 
+            //직업해금및 패시브 장착및 스킬자착
+            string[] giveclass2 = data.equipskill.Split(';');
+
+            for (int i = 0; i < giveclass2.Length; i++)
+            {
+               skills.Add(ClassDB.Instance.Find_id(giveclass2[i]).giveskill);
+               Classmanager.Instance.Bt_SelectPassive(giveclass2[i]);
+            }
+            
             Classmanager.Instance.Bt_SelectClass(data.selectclass, skills.ToArray(), true);
             Skillmanager.Instance.mainplayer.SetClass_start();
             Battlemanager.Instance.mainplayer.hpmanager.HealAll();

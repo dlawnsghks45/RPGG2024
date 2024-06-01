@@ -79,7 +79,17 @@ public class abilitymanager : MonoBehaviour
         AbilityInfo.text = Inventory.GetTranslate(data.info);
         SelectButton.gameObject.SetActive(false);
     }
-    
+
+    public void Bt_RefreshReco()
+    {
+        string type = EquipItemDB.Instance.Find_id(PlayerBackendData.Instance.EquipEquiptment0[0].Itemid).SubType;
+        for (var index = 0; index < abilityslots.Length; index++)
+        {
+            Debug.Log("е╦ют"+type);
+            var t = abilityslots[index];
+            t.RefreshReco(type);
+        }
+    }
     
     public void Refresh()
     {
@@ -116,6 +126,7 @@ public class abilitymanager : MonoBehaviour
             Savemanager.Instance.SaveAbility();
             Savemanager.Instance.Save();
             alertmanager.Instance.NotiCheck_Ability();
+            TutorialTotalManager.Instance.CheckFinish();
         }
     }
 }

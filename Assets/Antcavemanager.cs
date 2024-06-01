@@ -321,6 +321,11 @@ public class Antcavemanager : MonoBehaviour
         
         ids_save.Clear();
         howmany_save.Clear();
+
+        if (PlayerBackendData.Instance.AntCaveLv >= 10)
+        {
+            TutorialTotalManager.Instance.CheckGuideQuest("antcaveup");
+        }
         
         SendQueue.Enqueue(Backend.GameData.Update, "PlayerData", where, param, (callback2) =>
         {

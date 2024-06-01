@@ -44,6 +44,7 @@ public class ItemdatabasecsvDB : MonoBehaviour
 		public string itemtype;
 		public string itemsubtype;
 		public string rare;
+		public string Recotype;
 		public string droprare;
 		public string buy;
 		public string sell;
@@ -87,18 +88,19 @@ public class ItemdatabasecsvDB : MonoBehaviour
 			row.itemtype = grid[i][5];
 			row.itemsubtype = grid[i][6];
 			row.rare = grid[i][7];
-			row.droprare = grid[i][8];
-			row.buy = grid[i][9];
-			row.sell = grid[i][10];
-			row.dropalert = grid[i][11];
-			row.itemiconnew = grid[i][12];
-			row.A = grid[i][13];
-			row.B = grid[i][14];
-			row.C = grid[i][15];
-			row.D = grid[i][16];
-			row.Isstack = grid[i][17];
-			row.IsCrafting = grid[i][18];
-			row.IsEquipBox = grid[i][19];
+			row.Recotype = grid[i][8];
+			row.droprare = grid[i][9];
+			row.buy = grid[i][10];
+			row.sell = grid[i][11];
+			row.dropalert = grid[i][12];
+			row.itemiconnew = grid[i][13];
+			row.A = grid[i][14];
+			row.B = grid[i][15];
+			row.C = grid[i][16];
+			row.D = grid[i][17];
+			row.Isstack = grid[i][18];
+			row.IsCrafting = grid[i][19];
+			row.IsEquipBox = grid[i][20];
 
 			rowList.Add(row);
 		}
@@ -180,6 +182,14 @@ public class ItemdatabasecsvDB : MonoBehaviour
 	public List<Row> FindAll_rare(string find)
 	{
 		return rowList.FindAll(x => x.rare == find);
+	}
+	public Row Find_Recotype(string find)
+	{
+		return rowList.Find(x => x.Recotype == find);
+	}
+	public List<Row> FindAll_Recotype(string find)
+	{
+		return rowList.FindAll(x => x.Recotype == find);
 	}
 	public Row Find_droprare(string find)
 	{

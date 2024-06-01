@@ -210,6 +210,7 @@ public class dpsmanager : MonoBehaviour
             return;
         }
 
+        TutorialTotalManager.Instance.CheckGuideQuest("training");
 
         if (maxtime.Equals(60))
         {
@@ -217,7 +218,6 @@ public class dpsmanager : MonoBehaviour
         }
         else
         {
-            TutorialTotalManager.Instance.CheckGuideQuest("training");
             isrec = false;
         }
 

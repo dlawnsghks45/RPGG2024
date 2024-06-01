@@ -166,7 +166,13 @@ public class Settingmanager : MonoBehaviour
         }
 
         SaveDataALl(true);
-        TutorialTotalManager.Instance.CheckGuideQuest("savedata");
+        
+        if (PlayerBackendData.Instance.tutoguideid.Equals(4))
+        {
+            Classmanager.Instance.ClassMotherPanel.Hide(false);
+            Tutorialmanager.Instance.NewTuto1[24].SetActive(true);
+            TutorialTotalManager.Instance.CheckGuideQuest("savedata");
+        }
     }
 
     public void SaveDataInventory()

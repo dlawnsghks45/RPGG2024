@@ -285,6 +285,8 @@ public string petrare;
 
     public bool AddSkill(string id)
     {
+        if (id == "")
+            return false;
         if(Skills.Contains(id))
         {
             return false;

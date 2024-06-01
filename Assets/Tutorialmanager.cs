@@ -48,9 +48,9 @@ public class Tutorialmanager : MonoBehaviour
     
     void RefreshMax()
     {
-        //Debug.Log(maxlv + "¸Æ·¾");
         if (int.Parse(PlayerBackendData.Instance.tutoid) >= int.Parse(maxlv))
         {
+            Debug.Log(maxlv + "¸Æ·¾");
             Tutopanel.SetActive(false);
             return;
         }
@@ -90,12 +90,17 @@ public class Tutorialmanager : MonoBehaviour
         tutocoroutine.Add(Tutorial_collect());
         tutocoroutine.Add(Tutorial_WorldBoss());
         tutocoroutine.Add(Tutorial_Pet());
+        tutocoroutine.Add(Tutorial_23());
+        tutocoroutine.Add(Tutorial_24());
+        tutocoroutine.Add(Tutorial_25());
+        tutocoroutine.Add(Tutorial_26());
 
 
         if (int.Parse(PlayerBackendData.Instance.tutoid) >= int.Parse(maxlv))
         {
+            Debug.Log(maxlv + "¸Æ·¾");
+
             Tutopanel.SetActive(false);
-    
             return;
         }
 
@@ -118,6 +123,7 @@ public class Tutorialmanager : MonoBehaviour
 
         if (PlayerBackendData.Instance.tutoid.Equals("0") && !isnotstarttuto)
         {
+            hidealluiview();
             SelectTutorialLevel.SetActive(true);
         }
 
@@ -147,6 +153,8 @@ public class Tutorialmanager : MonoBehaviour
     {
         if (int.Parse(PlayerBackendData.Instance.tutoid) >= int.Parse(maxlv))
         {
+            Debug.Log(maxlv + "¸Æ·¾");
+
             Tutopanel.SetActive(false);
             return;
         }
@@ -215,6 +223,7 @@ public class Tutorialmanager : MonoBehaviour
     {
         if (int.Parse(PlayerBackendData.Instance.tutoid) >= int.Parse(maxlv))
         {
+//            Debug.Log("²¨Áü");
             Tutopanel.SetActive(false);
             return;
         }
@@ -240,7 +249,8 @@ public class Tutorialmanager : MonoBehaviour
                         EndTutorial();
                         break;
                 }
-                //¿Ï·á;
+                //¿Ï·á
+                
                 finishbtobj.SetActive(true);
                 isfinish = true;
             
@@ -306,7 +316,7 @@ public class Tutorialmanager : MonoBehaviour
 
     public GameObject[] NewTuto1;
 
-    void SetNewTuto(int num)
+    public void SetNewTuto(int num)
     {
         switch (num)
         {
@@ -327,7 +337,7 @@ public class Tutorialmanager : MonoBehaviour
                 NewTuto1[8].SetActive(true);
                 NewTuto1[15].SetActive(true);
 
-                
+
                 switch (PlayerBackendData.Instance.ClassId)
                 {
                     case "C1000":
@@ -340,6 +350,7 @@ public class Tutorialmanager : MonoBehaviour
                         NewTuto1[14].SetActive(true);
                         break;
                 }
+
                 break;
             case 6:
                 Debug.Log("¿©±â´Ù");
@@ -347,6 +358,39 @@ public class Tutorialmanager : MonoBehaviour
                 NewTuto1[5].SetActive(true);
                 NewTuto1[19].SetActive(true);
                 break;
+            case 9:
+                NewTuto1[5].SetActive(true);
+                NewTuto1[20].SetActive(true);
+                NewTuto1[21].SetActive(true);
+                break;
+
+            case 100:
+                NewTuto1[22].SetActive(true);
+                NewTuto1[23].SetActive(true);
+                break;
+
+
+            case 101: //µî±Þ
+                NewTuto1[26].SetActive(true);
+                NewTuto1[28].SetActive(true);
+                break;
+            case 102: //Ç°Áú
+                NewTuto1[26].SetActive(true);
+                NewTuto1[29].SetActive(true);
+                break;
+            case 103: //Æ¯¼ö
+                NewTuto1[26].SetActive(true);
+                NewTuto1[30].SetActive(true);
+                break;
+            case 104: //°­È­
+                NewTuto1[26].SetActive(true);
+                NewTuto1[27].SetActive(true);
+                break;
+            case 105: //½Â±Þ
+                NewTuto1[26].SetActive(true);
+                NewTuto1[31].SetActive(true);
+                break;
+
         }
     }
     
@@ -428,6 +472,10 @@ public class Tutorialmanager : MonoBehaviour
             case "24":
                 StartTutorial(18);
                 break;
+            case "30":
+                StartTutorial(23);
+                break;
+            
             
         }
 /*
@@ -957,6 +1005,12 @@ break;
     public GameObject[] Tutorial_obj20;
     public GameObject[] Tutorial_obj21;
     public GameObject[] Tutorial_obj22; //Æê Æ©Åä
+   
+    
+    public GameObject[] Tutorial_obj23; //°³Á¶ Æ©Åä
+    public GameObject[] Tutorial_obj24; //Æê Æ©Åä
+    public GameObject[] Tutorial_obj25; //Æê Æ©Åä
+    public GameObject[] Tutorial_obj26; //Æê Æ©Åä
 
 //¸Þ´º Æ©Åä
     public IEnumerator Tutorial_0()
@@ -1086,9 +1140,10 @@ break;
         yield return new WaitForSeconds(1.2f);
         obj[5].SetActive(true);
         yield return new WaitWhile(() => nowstep < 6);
-        EndTutorial();
         for (int i = 0; i < obj.Length; i++)
             obj[i].SetActive(false);
+        EndTutorial();
+        CheckTutorial("equipitem");
 /*
         obj[5].SetActive(false);
         obj[6].SetActive(true);
@@ -1112,9 +1167,7 @@ break;
         obj[12].SetActive(true);
         yield return new WaitWhile(() => nowstep < 13);
 //Á¦ÀÛ½½¸© ´©¸£±â
-        EndTutorial();
-        for (int i = 0; i < obj.Length; i++)
-            obj[i].SetActive(false);*/
+        */
     }
 
     public IEnumerator Tutorial_4()
@@ -1199,7 +1252,7 @@ break;
     }
 
     public GameObject[] NotUIviewpanel;
-    void hidealluiview()
+    public void hidealluiview()
     {
         for (int i = 0; i <NotUIviewpanel.Length; i++)
         {
@@ -1452,6 +1505,7 @@ break;
      yield return new WaitWhile(() => nowstep < 7);
      for (int i = 0; i < obj.Length; i++)
          obj[i].SetActive(false);
+     SetNewTuto(9);
      hidealluiview();
      EndTutorial();
  }
@@ -1516,7 +1570,7 @@ break;
      }
      uimanager.Instance.UIVIEWS.Clear();
      uimanager.Instance.UIVIEWSGameObject.Clear();
-
+     hidealluiview();
      for (int i = 0; i < Tutorial_objAll.Length; i++)
      {
          Tutorial_objAll[i].SetActive(false);
@@ -1562,8 +1616,11 @@ break;
      {
          Tutorial_objAll[i].SetActive(false);
      }
+     GuildManager.Instance.JoinTutorialGuld();
+     alertmanager.Instance.ShowAlert(Inventory.GetTranslate("Guild/ÃÊº¸ÀÚ±æµå°¡ÀÔ¿Ï·á"),alertmanager.alertenum.ÀÏ¹Ý);
      SkipTutorialbutton_GuideQuest.SetActive(false);
-     TutorialTotalManager.Instance.guidepanel.Show(false);
+     hidealluiview();
+     //TutorialTotalManager.Instance.guidepanel.Show(false);
  }
  
  public IEnumerator Tutorial_Smelt()
@@ -1611,6 +1668,7 @@ break;
      {
          Tutorial_objAll[i].SetActive(false);
      }
+     hidealluiview();
      SkipTutorialbutton_GuideQuest.SetActive(false);
      TutorialTotalManager.Instance.guidepanel.Show(false);
  }
@@ -1871,8 +1929,232 @@ break;
      TutorialTotalManager.Instance.guidepanel.Show(false);
  }
 
- 
- 
+ public IEnumerator Tutorial_23()
+ {
+     TutorialTotalManager.Instance.RefreshNow();
+     TutorialTotalManager.Instance.CheckFinish();
+     SkipTutorialbutton.SetActive(true);
+     SkipTutorialbutton_GuideQuest.SetActive(false);
+     Debug.Log("Àåºñ°³Á¶");
+     GameObject[] obj = Tutorial_obj23;
+     for (int i = 0; i < obj.Length; i++)
+         obj[i].SetActive(false);
+     Tutorial_objAll[23].SetActive(true);
+     for (int i = 0; i < obj.Length; i++)
+         obj[i].SetActive(false);
+     obj[0].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 1);
+     obj[0].SetActive(false);
+     obj[1].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 2);
+     obj[1].SetActive(false);
+     obj[2].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 3);
+     obj[2].SetActive(false);
+     obj[3].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 4);
+     obj[3].SetActive(false);
+     obj[4].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 5);
+     obj[4].SetActive(false);
+     yield return new WaitForSeconds(1.2f);
+     obj[5].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 6);
+     obj[5].SetActive(false);
+     obj[6].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 7);
+     obj[6].SetActive(false);
+     obj[7].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 8);
+     obj[7].SetActive(false);
+     obj[8].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 9);
+     obj[8].SetActive(false);
+     obj[9].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 10);
+     obj[9].SetActive(false);
+     obj[10].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 11);
+     obj[10].SetActive(false);
+     obj[11].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 12);
+     for (int i = 0; i < obj.Length; i++)
+         obj[i].SetActive(false);
+     TutorialTotalManager.Instance.CheckGuideQuest("tutochange");
+     for (int i = 0; i < UIView.VisibleViews.Count; i++)
+     {
+         UIView.VisibleViews[i].Hide(true);
+     }
+     uimanager.Instance.UIVIEWS.Clear();
+     uimanager.Instance.UIVIEWSGameObject.Clear();
+     hidealluiview();
+     for (int i = 0; i < Tutorial_objAll.Length; i++)
+     {
+         Tutorial_objAll[i].SetActive(false);
+     }
+     SkipTutorialbutton_GuideQuest.SetActive(false);
+     TutorialTotalManager.Instance.guidepanel.Show(false);
+ }
+
+ public IEnumerator Tutorial_24()
+ {
+     TutorialTotalManager.Instance.RefreshNow();
+     TutorialTotalManager.Instance.CheckFinish();
+     SkipTutorialbutton.SetActive(true);
+     SkipTutorialbutton_GuideQuest.SetActive(false);
+     Debug.Log("Àåºñ½Â±Þ");
+     GameObject[] obj = Tutorial_obj24;
+     for (int i = 0; i < obj.Length; i++)
+         obj[i].SetActive(false);
+     Tutorial_objAll[24].SetActive(true);
+     for (int i = 0; i < obj.Length; i++)
+         obj[i].SetActive(false);
+     obj[0].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 1);
+     obj[0].SetActive(false);
+     obj[1].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 2);
+     obj[1].SetActive(false);
+     obj[2].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 3);
+     obj[2].SetActive(false);
+     obj[3].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 4);
+     obj[3].SetActive(false);
+     obj[4].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 5);
+     obj[4].SetActive(false);
+     yield return new WaitForSeconds(1.2f);
+     obj[5].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 6);
+     obj[5].SetActive(false);
+     obj[6].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 7);
+     obj[6].SetActive(false);
+     obj[7].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 8);
+     for (int i = 0; i < obj.Length; i++)
+         obj[i].SetActive(false);
+     TutorialTotalManager.Instance.CheckGuideQuest("tutoupgrade");
+     for (int i = 0; i < UIView.VisibleViews.Count; i++)
+     {
+         UIView.VisibleViews[i].Hide(true);
+     }
+     uimanager.Instance.UIVIEWS.Clear();
+     uimanager.Instance.UIVIEWSGameObject.Clear();
+     hidealluiview();
+     for (int i = 0; i < Tutorial_objAll.Length; i++)
+     {
+         Tutorial_objAll[i].SetActive(false);
+     }
+     SkipTutorialbutton_GuideQuest.SetActive(false);
+     TutorialTotalManager.Instance.guidepanel.Show(false);
+ }
+ public IEnumerator Tutorial_25()
+ {
+     TutorialTotalManager.Instance.RefreshNow();
+     TutorialTotalManager.Instance.CheckFinish();
+     SkipTutorialbutton.SetActive(true);
+     SkipTutorialbutton_GuideQuest.SetActive(false);
+     Debug.Log("¼º¹°ÆÄ±«");
+     GameObject[] obj = Tutorial_obj25;
+     for (int i = 0; i < obj.Length; i++)
+         obj[i].SetActive(false);
+     Tutorial_objAll[25].SetActive(true);
+     for (int i = 0; i < obj.Length; i++)
+         obj[i].SetActive(false);
+     obj[0].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 1);
+     obj[0].SetActive(false);
+     obj[1].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 2);
+     obj[1].SetActive(false);
+     obj[2].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 3);
+     obj[2].SetActive(false);
+     obj[3].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 4);
+     for (int i = 0; i < obj.Length; i++)
+         obj[i].SetActive(false);
+     TutorialTotalManager.Instance.CheckGuideQuest("tutoaltar");
+     for (int i = 0; i < UIView.VisibleViews.Count; i++)
+     {
+         UIView.VisibleViews[i].Hide(true);
+     }
+     uimanager.Instance.UIVIEWS.Clear();
+     uimanager.Instance.UIVIEWSGameObject.Clear();
+     hidealluiview();
+     for (int i = 0; i < Tutorial_objAll.Length; i++)
+     {
+         Tutorial_objAll[i].SetActive(false);
+     }
+     SkipTutorialbutton_GuideQuest.SetActive(false);
+     TutorialTotalManager.Instance.guidepanel.Show(false);
+ }
+
+
+ public GameObject[] Removes_26;
+ public IEnumerator Tutorial_26()
+ {
+     TutorialTotalManager.Instance.RefreshNow();
+     TutorialTotalManager.Instance.CheckFinish();
+     SkipTutorialbutton.SetActive(true);
+     SkipTutorialbutton_GuideQuest.SetActive(false);
+     Debug.Log("°­È­Æ©Åä");
+     GameObject[] obj = Tutorial_obj26;
+     for (int i = 0; i < obj.Length; i++)
+         obj[i].SetActive(false);
+     Tutorial_objAll[26].SetActive(true);
+     for (int i = 0; i < obj.Length; i++)
+         obj[i].SetActive(false);
+     obj[0].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 1);
+     obj[0].SetActive(false);
+     obj[1].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 2);
+     obj[1].SetActive(false);
+     obj[2].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 3);
+     obj[2].SetActive(false);
+     obj[3].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 4);
+     obj[3].SetActive(false);
+     obj[4].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 5);
+     obj[4].SetActive(false);
+     foreach (var VARIABLE in Removes_26)
+     {
+         VARIABLE.SetActive(false);
+     }
+     Removes_26[1].SetActive(true);
+     Removes_26[2].SetActive(true);
+     yield return new WaitForSeconds(1.2f);
+     obj[5].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 6);
+     obj[5].SetActive(false);
+     obj[6].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 7);
+     obj[6].SetActive(false);
+     obj[7].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 8);
+     for (int i = 0; i < obj.Length; i++)
+         obj[i].SetActive(false);
+     TutorialTotalManager.Instance.CheckGuideQuest("tutoenchant");
+     for (int i = 0; i < UIView.VisibleViews.Count; i++)
+     {
+         UIView.VisibleViews[i].Hide(true);
+     }
+     uimanager.Instance.UIVIEWS.Clear();
+     uimanager.Instance.UIVIEWSGameObject.Clear();
+     hidealluiview();
+     for (int i = 0; i < Tutorial_objAll.Length; i++)
+     {
+         Tutorial_objAll[i].SetActive(false);
+     }
+     SkipTutorialbutton_GuideQuest.SetActive(false);
+     TutorialTotalManager.Instance.guidepanel.Show(false);
+ }
+
  public void ShowInvenPotion()
  {
          Inventory.Instance.ShowInventoryItem("1501");
