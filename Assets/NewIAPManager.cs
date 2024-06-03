@@ -381,21 +381,36 @@ public class NewIAPManager : MonoBehaviour
                     PlayerBackendData.Instance.tutoguidepremium = true;
                     //현재 레벨아래 보상을 모두 다시 받음
                     List<string> idss = new List<string>();
-                    List<int> hw = new List<int>();
+                    List<decimal> hw = new List<decimal>();
                     if (PlayerBackendData.Instance.tutoguideid != 0)
                     {
                         for (int i = 0; i < PlayerBackendData.Instance.tutoguideid ; i++)
                         {
-                            Inventory.Instance.AddItem(TutorialTotalManager.Instance.slots[i].Reward[0].id,
-                                (int)TutorialTotalManager.Instance.slots[i].Reward[0].count, false);
-                            Inventory.Instance.AddItemExp(TutorialTotalManager.Instance.slots[i].Reward[1].id,
-                                (decimal)TutorialTotalManager.Instance.slots[i].Reward[1].count, false);
+////                            Debug.Log(TutorialTotalManager.Instance.slots[i].Reward[0].id);
+                            if (TutorialTotalManager.Instance.slots[i].Reward[0].id== "1000")
+                            {
+                                Inventory.Instance.AddItemExp(TutorialTotalManager.Instance.slots[i].Reward[0].id, (decimal)TutorialTotalManager.Instance.slots[i].Reward[0].count, false);
+                            }
+                            else if (TutorialTotalManager.Instance.slots[i].Reward[1].id == "1011")
+                            {
+                                Inventory.Instance.AddItemExp(TutorialTotalManager.Instance.slots[i].Reward[1].id, (decimal)TutorialTotalManager.Instance.slots[i].Reward[1].count, false);
+                            }
+                            else
+                            {
+                                Inventory.Instance.AddItem(TutorialTotalManager.Instance.slots[i].Reward[0].id, (int)TutorialTotalManager.Instance.slots[i].Reward[0].count, false);
+                            }
                             idss.Add(TutorialTotalManager.Instance.slots[i].Reward[0].id);
-                            hw.Add((int)TutorialTotalManager.Instance.slots[i].Reward[0].count);
+                            hw.Add((decimal)TutorialTotalManager.Instance.slots[i].Reward[0].count);
                             idss.Add(TutorialTotalManager.Instance.slots[i].Reward[1].id);
-                            hw.Add((int)TutorialTotalManager.Instance.slots[i].Reward[1].count);
+                            hw.Add((decimal)TutorialTotalManager.Instance.slots[i].Reward[1].count);
                         }
-                        Inventory.Instance.ShowEarnItem3(idss.ToArray(),hw.ToArray(),false);
+                       PlayerData.Instance.RefreshInitData();
+                       PlayerData.Instance. RefreshExp();
+                       PlayerData.Instance. RefreshAchExp();
+                       PlayerData.Instance. RefreshPlayerstat();
+                        Savemanager.Instance.SaveOnlyLv();
+                        Inventory.Instance.ShowEarnItem4(idss.ToArray(),hw.ToArray(),false);
+                        PlayerData.Instance.RefreshExp();
                     }
                     TutorialTotalManager.Instance.RefreshNow();
                     Savemanager.Instance.SaveGuideQuest();

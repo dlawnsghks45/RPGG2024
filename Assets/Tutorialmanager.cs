@@ -218,6 +218,14 @@ public class Tutorialmanager : MonoBehaviour
 
     }
 
+    public void FalseAllNewTuto()
+    {
+        foreach (var VARIABLE in NewTuto1)
+        {
+            VARIABLE.SetActive(false);
+        }
+    }
+    
     private bool isnotstarttuto;
     public void CheckTutorial(string trigger)
     {
@@ -318,6 +326,10 @@ public class Tutorialmanager : MonoBehaviour
 
     public void SetNewTuto(int num)
     {
+        foreach (var VARIABLE in NewTuto1)
+        {
+            VARIABLE.SetActive(false);
+        }
         switch (num)
         {
             case 0:
@@ -350,10 +362,13 @@ public class Tutorialmanager : MonoBehaviour
                         NewTuto1[14].SetActive(true);
                         break;
                 }
-
+                break;
+            case 5:
+                NewTuto1[32].SetActive(true);
+                NewTuto1[33].SetActive(true);
+                NewTuto1[34].SetActive(true);
                 break;
             case 6:
-                Debug.Log("여기다");
                 NewTuto1[0].SetActive(true);
                 NewTuto1[5].SetActive(true);
                 NewTuto1[19].SetActive(true);
@@ -362,6 +377,7 @@ public class Tutorialmanager : MonoBehaviour
                 NewTuto1[5].SetActive(true);
                 NewTuto1[20].SetActive(true);
                 NewTuto1[21].SetActive(true);
+                NewTuto1[36].SetActive(true);
                 break;
 
             case 100:
@@ -390,7 +406,9 @@ public class Tutorialmanager : MonoBehaviour
                 NewTuto1[26].SetActive(true);
                 NewTuto1[31].SetActive(true);
                 break;
-
+            case 106: //제련
+                NewTuto1[37].SetActive(true);
+                break;
         }
     }
     
@@ -1172,6 +1190,7 @@ break;
 
     public IEnumerator Tutorial_4()
     {
+        //난이도
         SkipTutorialbutton.SetActive(true);
         SkipTutorialbutton_GuideQuest.SetActive(false);
         GameObject[] obj = Tutorial_obj4;
@@ -1199,11 +1218,8 @@ break;
         obj[6].SetActive(true);
         yield return new WaitWhile(() => nowstep < 7);
         hidealluiview();
-        //obj[6].SetActive(false);
-       // obj[7].SetActive(true);
-      //  yield return new WaitWhile(() => nowstep < 8);
-//제작슬릇 누르기
         EndTutorial();
+        CheckTutorial("changemaplv");
         for (int i = 0; i < obj.Length; i++)
             obj[i].SetActive(false);
     }

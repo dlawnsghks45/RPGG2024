@@ -656,13 +656,14 @@ public class Classmanager : MonoBehaviour
             }
         }
 
-        
-        if (PlayerBackendData.Instance.tutoid.Equals("2") &&
-            TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).type.Equals("buyclass"))
+        if (PlayerBackendData.Instance.tutoid != "11")
         {
-            Tutorialmanager.Instance.NewTuto1[25].SetActive(true);
+            if (PlayerBackendData.Instance.tutoid.Equals("2") &&
+                TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).type.Equals("buyclass"))
+            {
+                Tutorialmanager.Instance.NewTuto1[25].SetActive(true);
+            }
         }
-
 
         Tutorialmanager.Instance.NewTuto1[11].SetActive(false);
         //가이드 퀘스트

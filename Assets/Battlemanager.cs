@@ -54,9 +54,9 @@ public class Battlemanager : MonoBehaviour
     public ShakeCamera shake;
 
     public bool isbattle;
-    WaitForSeconds wait = new WaitForSeconds(1.5f);
+    WaitForSeconds wait = new WaitForSeconds(1.1f);
     float waitsecond = 0;
-    WaitForSeconds wait_enemy = new WaitForSeconds(1.5f);
+    WaitForSeconds wait_enemy = new WaitForSeconds(1.1f);
     float waitsecond_enemy = 0;
    public  WaitForSeconds waitattackterm = new WaitForSeconds(0.1f);
    public  WaitForSeconds waitattackterm2 = new WaitForSeconds(0.05f);

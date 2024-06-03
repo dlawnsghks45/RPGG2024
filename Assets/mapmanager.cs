@@ -541,13 +541,12 @@ public class mapmanager : MonoBehaviour
 
                 if (EnemySpawnManager.Instance.savedcount.Equals(3))
                 {
-                    Tutorialmanager.Instance.CheckTutorial("changemaplv");
                 }
 
 
                 if (EnemySpawnManager.Instance.savedcount != 0)
                 {
-                    savespawncount = EnemySpawnManager.Instance.savedcount;
+                    savespawncount = 3;
                 }
                 savemapid = PlayerBackendData.Instance.nowstage;
                 PlayerBackendData.Instance.spawncount = savespawncount;
@@ -796,7 +795,7 @@ public class mapmanager : MonoBehaviour
         // ReSharper disable once SuspiciousTypeConversion.Global
         mapmanager.Instance.savemapid = PlayerBackendData.Instance.nowstage;
         mapmanager.Instance.savespawncount = PlayerBackendData.Instance.spawncount;
-        EnemySpawnManager.Instance. savedcount = PlayerBackendData.Instance.spawncount;
+        EnemySpawnManager.Instance.savedcount = 3;
 
         if (PlayerBackendData.Instance.nowstage.Equals(""))
         {

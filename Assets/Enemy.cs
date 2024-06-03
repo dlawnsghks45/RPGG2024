@@ -137,7 +137,7 @@ public class Enemy : MonoBehaviour
                 break;
             
             case  "10":
-                hpmanager.MaxHp = Contentmanager.Instance.GetHp(decimal.Parse(mondata.hp) *5,Contentmanager.Instance.nowplayinglevel);
+                hpmanager.MaxHp = Contentmanager.Instance.GetHp(decimal.Parse(mondata.hp) *1,Contentmanager.Instance.nowplayinglevel);
                 atk = Contentmanager.Instance.GetAttack(float.Parse(mondata.dmg));
 
                 mondropmanager.Instance.SetDropDataDropId(Contentmanager.Instance.dropid_playing[Contentmanager.Instance.nowplayinglevel]);

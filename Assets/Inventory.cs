@@ -1087,7 +1087,7 @@ public class Inventory : MonoBehaviour
                         mainplayer.InitArrow();
                         mainplayer.basicattackhit = "";
                         break;
-
+                        abilitymanager.Instance.Bt_RefreshReco();
                 }
                 break;
             case "SWeapon":
@@ -1996,7 +1996,7 @@ public class Inventory : MonoBehaviour
 
                        break;
                    case "1011": //경험치
-                       PlayerData.Instance.EarnExpNoPre((decimal)count);
+                       PlayerData.Instance.EarnExpNoPreGUIDE((decimal)count);
                        break;
                }
            }
@@ -2727,8 +2727,14 @@ public class Inventory : MonoBehaviour
 
         decimal gold = 0;
         decimal exp = 0;
+  
         for (int i = 0; i < id.Count; i++)
         {
+                  
+            if (i == earnitems.Length)
+            {
+                break;
+            }
             yield return SpriteManager.Instance.GetWaitforSecond(0.05f);
             switch (id[i])
             {

@@ -43,6 +43,7 @@ public class abilitymanager : MonoBehaviour
             AbilityDBDB.Row data = AbilityDBDB.Instance.GetAt(i);
             abilityslots[i].init(i, data);
         }
+        abilitymanager.Instance.Bt_RefreshReco();
     }
 
     public UIView AbilityInfoPanel;
@@ -85,7 +86,7 @@ public class abilitymanager : MonoBehaviour
         string type = EquipItemDB.Instance.Find_id(PlayerBackendData.Instance.EquipEquiptment0[0].Itemid).SubType;
         for (var index = 0; index < abilityslots.Length; index++)
         {
-            Debug.Log("타입"+type);
+//            Debug.Log("타입"+type);
             var t = abilityslots[index];
             t.RefreshReco(type);
         }
@@ -97,6 +98,7 @@ public class abilitymanager : MonoBehaviour
         {
             t.Refresh();
         }
+        
     }
 
     public void Bt_select()

@@ -46,10 +46,10 @@ public class abilityslot : MonoBehaviour
    public void RefreshReco(string type)
     {
         Recobj.SetActive(false);
-        Debug.Log("여기에용" + type);
+//        Debug.Log("여기에용" + type);
         if (types == (type))
         {
-            Debug.Log("당첨");
+       //     Debug.Log("당첨");
             Recobj.SetActive(true);
         }
 

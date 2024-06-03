@@ -726,7 +726,7 @@ public class Savemanager : MonoBehaviour
     public void Saveonlystage()
     {
         _es3File.Save($"{PlayerBackendData.Instance.Id}Stage", PlayerBackendData.Instance.nowstage);
-        _es3File.Save($"{PlayerBackendData.Instance.Id}FieldCount", PlayerBackendData.Instance.spawncount);
+       // _es3File.Save($"{PlayerBackendData.Instance.Id}FieldCount", PlayerBackendData.Instance.spawncount);
 Save();
     }
     //맵정보
@@ -746,8 +746,8 @@ Save();
 
         if (_es3File.KeyExists($"{PlayerBackendData.Instance.Id}FieldCount"))
         {
-            PlayerBackendData.Instance.spawncount =
-                (_es3File.Load<int>($"{PlayerBackendData.Instance.Id}FieldCount"));
+            PlayerBackendData.Instance.spawncount = 3;
+            // (_es3File.Load<int>($"{PlayerBackendData.Instance.Id}FieldCount"));
             //  Debug.Log("카웆ㄴ트는" + PlayerBackendData.Instance.spawncount);
         }
         
@@ -1626,12 +1626,12 @@ public bool GameDataGet()
                 if (gameDataJson[0].ContainsKey("Stage"))
                 {
                     PlayerBackendData.Instance.nowstage = gameDataJson[0]["Stage"].ToString();
-                    PlayerBackendData.Instance.spawncount = (int.Parse(gameDataJson[0]["FieldCount"].ToString()));
+                    PlayerBackendData.Instance.spawncount = 3; //(int.Parse(gameDataJson[0]["FieldCount"].ToString()));
                 }
                 else
                 {
                     PlayerBackendData.Instance.nowstage = "1000";
-                    PlayerBackendData.Instance.spawncount = 1;
+                    PlayerBackendData.Instance.spawncount = 3;
 
                 }
                 

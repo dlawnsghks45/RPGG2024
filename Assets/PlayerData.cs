@@ -614,7 +614,7 @@ public class PlayerData : MonoBehaviour
         PlayerBackendData.Instance.SetMaxExp(decimal.Parse(LevelDB.Instance.Find_Lv(PlayerBackendData.Instance.GetLv().ToString()).RequiredExp));
 
         //맥스경험치 ㅇ업적
-        PlayerBackendData.Instance.SetMaxAchExp(decimal.Parse(AchievementStatDB.Instance.Find_level(PlayerBackendData.Instance.GetAchLv().ToString()).EXP));
+      //  PlayerBackendData.Instance.SetMaxAchExp(decimal.Parse(AchievementStatDB.Instance.Find_level(PlayerBackendData.Instance.GetAchLv().ToString()).EXP));
     }
 
     public void RefreshClassName()
@@ -826,6 +826,12 @@ public class PlayerData : MonoBehaviour
         if (isave)
             Savemanager.Instance.SaveOnlyExp();
     }
+    public void EarnExpNoPreGUIDE(decimal exp, bool isave = true)
+    {
+        PlayerBackendData.Instance.AddExp(exp);
+        if (AutoLvUpToggle.isOn)
+            bt_LvupbuttonAuto2();
+    }
     public void EarnAchExp(decimal exp)
     {
         if (PlayerBackendData.Instance.GetAchLv() >= 1200)
@@ -938,6 +944,28 @@ public class PlayerData : MonoBehaviour
             Savemanager.Instance.SaveOnlyLv();
     }
 
+    private void bt_LvupbuttonAuto2()
+    {
+        bool islvup = false;
+        while (true)
+        {
+            if (PlayerBackendData.Instance.GetExp() >= PlayerBackendData.Instance.GetMaxExp())
+            {
+                islvup = true;
+                //레벨업가능
+                PlayerBackendData.Instance.AddExp(-PlayerBackendData.Instance.GetMaxExp());
+                PlayerBackendData.Instance.AddLv(1);
+                PlayerBackendData.Instance.SetMaxExp(decimal.Parse(LevelDB.Instance.Find_Lv(PlayerBackendData.Instance.GetLv().ToString()).RequiredExp));
+                RefreshExp();
+            }
+            else
+            {
+                lvupbutton.Interactable = false;
+                break;
+            }
+        }
+    }
+    
     public void bt_LvupbuttonAch()
     {
         while (true)
@@ -961,6 +989,9 @@ public class PlayerData : MonoBehaviour
             }
         }
     }
+    
+   
+    
     public void bt_Lvupbutton()
     {
         if (PlayerBackendData.Instance.GetExp() >= PlayerBackendData.Instance.GetMaxExp())

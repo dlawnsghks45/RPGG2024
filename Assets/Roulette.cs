@@ -263,6 +263,7 @@ public class Roulette : MonoBehaviour
 		Savemanager.Instance.SaveInventory();
 		Savemanager.Instance.SaveRoulette();
 		Savemanager.Instance.Save();
+		TutorialTotalManager.Instance.CheckFinish();
 		isSpinning = true;
 		StartCoroutine(OnSpin(targetAngle));
 	}

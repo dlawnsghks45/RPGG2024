@@ -594,7 +594,6 @@ public class Autofarmmanager : MonoBehaviour
         }
 
         Kill_Offline.text = $"{GetCount_OfflineKill():N0} Kills";
-Debug.Log("아이디 개수" + dropitemid_Offline.Count);
         for (int i = 0; i < dropitemid_Offline.Count; i++)
         {
             switch (dropitemid_Offline[i])
@@ -742,14 +741,6 @@ Debug.Log("추가 골드" + PlayerData.Instance.mainplayer.Stat_ExtraGold);
     public Text Data_offlinetime;
     public void Bt_RefreshOfflineData()
     {
-        if (PlayerBackendData.Instance.GetAdLv() >=15)
-        {
-            OffPanel.SetActive(true);
-        }
-        else
-        {
-            OffPanel.SetActive(false);
-        }
         
         if (PlayerBackendData.Instance.Offlinedata != null)
         {

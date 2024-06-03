@@ -517,7 +517,7 @@ public class EnemySpawnManager : MonoBehaviour
 
        
     }
-    public int savedcount;
+    public int savedcount = 3;
     public void ChageFieldCount(int num)
     {
         savedcount = num;

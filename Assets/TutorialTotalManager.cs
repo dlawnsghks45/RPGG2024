@@ -81,6 +81,14 @@ public class TutorialTotalManager : MonoBehaviour
     }
 
     public GameObject FinishObj;
+
+    void finishtalk()
+    {
+        Tutorialmanager.Instance.FalseAllNewTuto();
+        string.Format(Inventory.GetTranslate("UI8/성장가이드완료"),
+            Inventory.GetTranslate(growthguideDB.Instance
+                .Find_id(PlayerBackendData.Instance.tutoguideid.ToString()).name));
+    }
     //즉시완료 체크
     public void CheckFinish()
     {
@@ -95,6 +103,7 @@ public class TutorialTotalManager : MonoBehaviour
             return;
         }
 
+        
         int num = 0;
         if (PlayerBackendData.Instance.tutoguideisfinish)
             return;
@@ -147,28 +156,27 @@ public class TutorialTotalManager : MonoBehaviour
                 }
                 break;
             case 10:
-                Tutorialmanager.Instance.SetNewTuto(100);
+                Tutorialmanager.Instance.SetNewTuto(101);
                 break;
             case 11:
-                Tutorialmanager.Instance.SetNewTuto(101);
-
-                break;
-            case 12:
                 Tutorialmanager.Instance.SetNewTuto(102);
 
                 break;
-            case 16:
+            case 12:
                 Tutorialmanager.Instance.SetNewTuto(103);
+                break;
+            case 16:
+                Tutorialmanager.Instance.SetNewTuto(104);
                 break;
             
             case 45:
-                Tutorialmanager.Instance.SetNewTuto(105);
+                Tutorialmanager.Instance.SetNewTuto(104);
                 break;
             case 46:
-                Tutorialmanager.Instance.SetNewTuto(103);
+                Tutorialmanager.Instance.SetNewTuto(104);
                 break;
             case 47:
-                Tutorialmanager.Instance.SetNewTuto(103);
+                Tutorialmanager.Instance.SetNewTuto(104);
                 break;
             case 18:
                 //성물 전쟁 콘텐츠 하기
@@ -297,6 +305,7 @@ public class TutorialTotalManager : MonoBehaviour
                 break;
             
             case 8:
+
                 int smeltnum2 = 0;
                 for (int i = 0; i < PlayerBackendData.Instance.EquipEquiptment0.Length; i++)
                 {
@@ -312,7 +321,11 @@ public class TutorialTotalManager : MonoBehaviour
                     RefreshNow();
                     Savemanager.Instance.SaveGuideQuest();
                     Savemanager.Instance.Save();
-
+                    Tutorialmanager.Instance.NewTuto1[37].SetActive(false);
+                }
+                else
+                {
+                    Tutorialmanager.Instance.SetNewTuto(106);
                 }
                 break;
             
@@ -442,6 +455,7 @@ public class TutorialTotalManager : MonoBehaviour
                 {
                     getbuttons.Interactable = true;
                     FinishObj.SetActive(true);
+                    finishtalk();
                 }
             }
             for (int i = 0; i < slots.Count; i++)
@@ -602,6 +616,7 @@ public class TutorialTotalManager : MonoBehaviour
         switch (PlayerBackendData.Instance.tutoguideid)
         {
             case 0 :
+                GrowEventmanager.Instance.Bt_ShowPanel();
                 break;
             case 1 : //초보자 점핑 지원 물품 상자 사용
             case 2 : //물약 퀵슬릇에 모두 등록
@@ -630,19 +645,66 @@ public class TutorialTotalManager : MonoBehaviour
             case 47 : //[장비 승급]장비 무기 승급 시도
             case 31 : //[장비 승급]장비 무기 승급 시도
             case 39 : //[장비 승급]장비 무기 승급 시도
+            case 40 : //[장비 승급]장비 무기 승급 시도
                 panel_quest[1].Show(false);
                 toggles_quest[1].ExecuteClick();
                 break;
-            case 22: //[성장 던전]스킬북 던전 1회 진행하기
-            case 29: //[성장 던전]스킬북 던전 1회 진행하기
-            case 43: //[성장 던전]스킬북 던전 1회 진행하기
-                panel_quest[3].Show(false);
-                WorldBossManager.Instance.CheckWorldBossLock();
+            case 13: //레이드 클리어
+                RaidManager.Instance.Bt_SelectRaid("5008");
+                break;
+            case 37: //레이드 클리어
+                RaidManager.Instance.Bt_SelectRaid("5009");
+                break;
+            case 36 : //[장비 승급]장비 무기 승급 시도
+                if (PlayerBackendData.Instance.CheckItemCount("563") != 0)
+                {
+                    Inventory.Instance.RefreshInventory();
+                }
+                else
+                {
+                    panel_quest[1].Show(false);
+                    toggles_quest[1].ExecuteClick();
+                }
                 break;
             
+            case 14: //던전 클리어
+                DungeonManager.Instance.DungeonPanel.Show(false);
+                DungeonManager.Instance.Bt_SelectDungeon("3000");
+                break;
+            
+            case 38: //던전 클리어
+                DungeonManager.Instance.DungeonPanel.Show(false);
+                DungeonManager.Instance.Bt_SelectDungeon("3001");
+                break;
+            case 44: //던전 클리어
+                DungeonManager.Instance.DungeonPanel.Show(false);
+                DungeonManager.Instance.Bt_SelectDungeon("3011");
+                break;
+            case 18:
+                //성물파괴시도
+                panel_quest[5].Show(false);
+
+                break;
+            
+            case 22: //[성장 던전]스킬북 던전 1회 진행하기
+            case 29: //[성장 던전]스킬북 던전 1회 진행하기
+                Contentmanager.Instance.Bt_SelectContent("0");
+                break;
+            case 43: //[성장 던전]스킬북 던전 1회 진행하기
+                Contentmanager.Instance.Bt_SelectContent("1");
+                break;
             case 23 : //[성장 던전]스킬북 제작 1회 시도하기
                 panel_quest[2].Show(false);
                 CraftManager.Instance.RefreshNowCraftingCount();
+                break;
+            case 30:
+                altarmanager.Instance.SelectType(3);
+                break;
+            case 32 : //[[허수아비] 허수아비 1회 진행하기
+                panel_quest[6].Show(false);
+                break;
+            case 33 : //[[허수아비] 허수아비 1회 진행하기
+                panel_quest[7].Show(false);
                 break;
             case 34 : //[승급] 모험 랭크 16 달성하기
             case 41 : //[승급] 모험 랭크 20 달성하기
