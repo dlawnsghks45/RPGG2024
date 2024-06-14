@@ -289,6 +289,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 7c5350328815f9444b150a3f6a37df5f, type: 3}
   - {fileID: 21300000, guid: f95ff0327e0851d4cadde4b87db70a1d, type: 3}
   - {fileID: 21300000, guid: 5157013235b6a5c45a852166a8f9d885, type: 3}
+  - {fileID: 21300000, guid: 228f5132985b6064a956e36d52f1e8ca, type: 3}
   - {fileID: 21300000, guid: 918d08328d5071243a35d319d0a67f74, type: 3}
   - {fileID: 21300000, guid: 7e2ec93226285a3428c0379ba40f48dd, type: 3}
   - {fileID: 21300000, guid: e93dbe32da22e994392f63c0312ad3ff, type: 3}
@@ -547,6 +548,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: a0a5a9c42bd89884da99ba72407740ca, type: 3}
   - {fileID: 21300000, guid: f51e6ec4e913705449d4ceb73142d898, type: 3}
   - {fileID: 21300000, guid: 45de10d4bb02b1441806a5204239fda2, type: 3}
+  - {fileID: 21300000, guid: 0f37d1d4fe1ae3f4dbbdf8cc25018af6, type: 3}
   - {fileID: 21300000, guid: 687304d42c19dfc4ead981f0d6d55533, type: 3}
   - {fileID: 21300000, guid: bba9c5d41abb09b49a6a90f021261772, type: 3}
   - {fileID: 21300000, guid: c8c699d4a2b09994498f71e65996d087, type: 3}
@@ -1251,6 +1253,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 52e73cdba5faed34eb85f4e7968d1004, type: 3}
   - {fileID: 21300000, guid: 4beb6ddb74b913c4bbf14bcea1a1fc8f, type: 3}
   - {fileID: 21300000, guid: d652cddb140d80046a97529ea9b93c63, type: 3}
+  - {fileID: 21300000, guid: 70b8bfdbc8cf76f4d9adf37a77f5ef7e, type: 3}
   - {fileID: 21300000, guid: 812c90ebb4093cc48abc5bfe530b3b95, type: 3}
   - {fileID: 21300000, guid: fa3204eb9ac0eda469394ebae5f2b89f, type: 3}
   - {fileID: 21300000, guid: 175288ebebadd3b49ac70db37b30d6e7, type: 3}
@@ -1874,6 +1877,7 @@ SpriteAtlas:
   - quest_03
   - quest_72
   - 1
+  - E16
   - "\uBBFC"
   - HP6
   - 5
@@ -2132,6 +2136,7 @@ SpriteAtlas:
   - 20
   - "\uD478\uB978 \uC6A9\uC758 \uBC18\uC9C0-\uACF5\uC18D"
   - Shield1
+  - E17
   - 3
   - 1230
   - material_22
@@ -2836,6 +2841,7 @@ SpriteAtlas:
   - Necklace4
   - Icon20
   - "\uC9C4\uD22C\uD1B5\uAC00"
+  - E18
   - "\uACF5\uD5C8\uC758\uC815\uC218"
   - 1122
   - WarBook1

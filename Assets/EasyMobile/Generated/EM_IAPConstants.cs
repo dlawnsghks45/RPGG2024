@@ -15,6 +15,7 @@ namespace EasyMobile
 		public const string Product_rpgg2_all_package1 = "rpgg2.all.package1";
 		public const string Product_rpgg2_resource_package1 = "rpgg2.resource.package1";
 		public const string Product_rpgg2_packagetime_6 = "rpgg2.packagetime.6";
+		public const string Product_rpgg2_package2024_6_event1 = "rpgg2.package2024.6.event1";
 		public const string Product_rpgg2_package2024_fire4 = "rpgg2.package2024.fire4";
 		public const string Product_rpgg2_roulette_09 = "rpgg2.roulette.09";
 		public const string Product_rpgg2_roulette_08 = "rpgg2.roulette.08";
@@ -32,7 +33,9 @@ namespace EasyMobile
 		public const string Product_rpgg2_package2023_ch3 = "rpgg2.package2023.ch3";
 		public const string Product_rpgg2_packagetime_21 = "rpgg2.packagetime.21";
 		public const string Product_rpgg2_class6 = "rpgg2.class6";
+		public const string Product_rpgg2_package2024_6_event4 = "rpgg2.package2024.6.event4";
 		public const string Product_rpgg2_package_seasonpass1 = "rpgg2.package.seasonpass1";
+		public const string Product_rpgg2_package2024_6_event2 = "rpgg2.package2024.6.event2";
 		public const string Product_rpgg2_class2 = "rpgg2.class2";
 		public const string Product_rpgg2_packagetime_10 = "rpgg2.packagetime.10";
 		public const string Product_rpgg2_packagetime_20 = "rpgg2.packagetime.20";
@@ -40,6 +43,7 @@ namespace EasyMobile
 		public const string Product_rpgg2_equip_package1 = "rpgg2.equip.package1";
 		public const string Product_rpgg2_roulette_02 = "rpgg2.roulette.02";
 		public const string Product_rpgg2_package_pet_1 = "rpgg2.package.pet.1";
+		public const string Product_rpgg2_package2024_6_event5 = "rpgg2.package2024.6.event5";
 		public const string Product_rpgg2_class4 = "rpgg2.class4";
 		public const string Product_rpgg2_fire_85002 = "rpgg2.fire.85002";
 		public const string Product_rpgg2_packagetime_22 = "rpgg2.packagetime.22";
@@ -120,6 +124,7 @@ namespace EasyMobile
 		public const string Product_rpgg2_packagetime_24 = "rpgg2.packagetime.24";
 		public const string Product_rpgg2_dungeonenter10 = "rpgg2.dungeonenter10";
 		public const string Product_rpgg2_package2024_party2 = "rpgg2.package2024.party2";
+		public const string Product_rpgg2_package2024_6_event3 = "rpgg2.package2024.6.event3";
 		public const string Product_rpgg2_package_etc1 = "rpgg2.package.etc1";
 		public const string Product_rpgg2_fire_25500 = "rpgg2.fire.25500";
 		public const string Product_rpgg2_package2024_event1 = "rpgg2.package2024.event1";

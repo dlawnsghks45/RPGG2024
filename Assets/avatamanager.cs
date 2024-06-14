@@ -197,7 +197,13 @@ public class avatamanager : MonoBehaviour
         Earn_Avata.sprite = SpriteManager.Instance.GetSprite(PetDB.Instance.Find_id(id).sprite);
         ani.SetTrigger(Show);
     }
-
+    public void EarnSkill(string id)
+    {
+        Earn_Avata_WeaponBody.SetActive(false);
+        Earn_AvataName.text = Inventory.GetTranslate(SkillDB.Instance.Find_Id(id).Name);
+        Earn_Avata.sprite = SpriteManager.Instance.GetSprite(SkillDB.Instance.Find_Id(id).Sprite);
+        ani.SetTrigger(Show);
+    }
 
     public void Bt_ButAvata()
     {

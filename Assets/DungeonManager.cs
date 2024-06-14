@@ -204,7 +204,15 @@ public GameObject DungeonRewardPanel;
     public DungeonSlot[] dungeonslots;
     private void Start()
     {
-        string dungeonid = PlayerBackendData.Instance.sotang_dungeon[^1];
+        string dungeonid = "3000"; ;
+        try
+        {
+            dungeonid = PlayerBackendData.Instance.sotang_dungeon[^1];
+        }
+        catch (Exception e)
+        {
+            dungeonid = "3000";
+        }
         Bt_SelectDungeon(dungeonid);
 
     }

@@ -108,10 +108,10 @@ public class SkillChangeSlot : MonoBehaviour
                     }
                 }
 
-                
-                
-                
-                
+                if (int.Parse(SkillInventory.Instance.SelectSkillid) >= 5000)
+                {
+                    TutorialTotalManager.Instance.CheckGuideQuest("equipskillbook");
+                }
                 
                 //스킬을 장착
                 PlayerBackendData.Instance.ClassData[PlayerBackendData.Instance.ClassId].Skills1[index] = SkillInventory.Instance.SelectSkillid;

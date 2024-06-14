@@ -444,6 +444,54 @@ public class PartyraidChatManager : MonoBehaviour
         return $"{a1};{a2};{a3};{a4}";
     }
 
+    public string GetPartyNameRecent()
+    {
+        string a2 = "";
+        string a3 = "";
+        string a4 = "";
+
+        if (PartyRaidRoommanager.Instance.PartyMember[1].data != null)
+        {
+            a2 = PartyRaidRoommanager.Instance.PartyMember[1].data.nickname;
+        }
+
+        if (PartyRaidRoommanager.Instance.PartyMember[2].data != null)
+        {
+            a3 = PartyRaidRoommanager.Instance.PartyMember[2].data.nickname;
+        }
+
+        if (PartyRaidRoommanager.Instance.PartyMember[3].data != null)
+        {
+            a4 = PartyRaidRoommanager.Instance.PartyMember[3].data.nickname;
+        }
+
+
+        return $"{a2};{a3};{a4}";
+    }
+
+    public string recentusers;
+    public void Chat_InviteRecentUser()
+    {
+        //레디를 했다.
+        bool isConnect = Backend.Chat.IsChatConnect(ChannelType.Public);
+        if (isConnect)
+        {
+            if (recentusers != "")
+            { //최근 유저 초대
+                string[] nickname = recentusers.Split(';');
+                //시스템;PartyInviteRecentUser;리더이름;유저이름
+                for (int i = 0; i < nickname.Length; i++)
+                {
+                    if(nickname[i] != "")
+                    Chat_invitePlayer(nickname[i]);
+                }
+             //   Backend.Chat.ChatToChannel(ChannelType.Public,
+            //        $"{publicsystem};PIRU;{PartyRaidRoommanager.Instance.nowmyleadernickname}&{recentusers}");
+            }
+          
+        }
+    }
+
     #endregion
 
 

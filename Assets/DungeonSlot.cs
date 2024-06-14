@@ -65,7 +65,15 @@ public class DungeonSlot : MonoBehaviour
 
     public void CheckLock()
     {
-        if ((MapDB.Instance.Find_id(mapid).maparray == "")
+        if ((int.Parse(MapDB.Instance.Find_id(mapid).maprank) > PlayerBackendData.Instance.GetAdLv()))
+        {
+            islock = true;
+            mapgobutton.interactable = false;
+            Lockpanel.SetActive(true);
+            LockLevel.text = string.Format(Inventory.GetTranslate("UI/입장가능조건레벨"), 
+               MapDB.Instance.Find_id(mapid).maprank);
+        }
+        else if ((MapDB.Instance.Find_id(mapid).maparray == "")
             || PlayerBackendData.Instance.sotang_dungeon.Contains(MapDB.Instance.Find_id(mapid).maparray))
         {
             //잠금품

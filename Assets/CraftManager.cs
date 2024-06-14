@@ -51,20 +51,28 @@ public class CraftManager : MonoBehaviour
 
     public void Bt_SelectMainPanel(int num)
     {
-        if (PlayerBackendData.Instance.tutoid != "11")
+        try
         {
-            if (num == 0 &&
-                TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).type.Equals("craft"))
+            if (PlayerBackendData.Instance.tutoid != "11")
             {
-                Tutorialmanager.Instance.NewTuto1[2].SetActive(true);
-            }
+                if (num == 0 &&
+                    TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).type.Equals("craft"))
+                {
+                    Tutorialmanager.Instance.NewTuto1[2].SetActive(true);
+                }
 
-            if (num.Equals(3) &&
-                TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).type.Equals("craft"))
-            {
-                Tutorialmanager.Instance.NewTuto1[18].SetActive(true);
+                if (num.Equals(3) &&
+                    TutorialDB.Instance.Find_id(PlayerBackendData.Instance.tutoid).type.Equals("craft"))
+                {
+                    Tutorialmanager.Instance.NewTuto1[18].SetActive(true);
+                }
             }
         }
+        catch
+        {
+            
+        }
+    
 
         for (int i = 0; i < SubObj.Length; i++)
         {

@@ -97,6 +97,16 @@ id,descriptionKor,sprite,name,description,itemtype,itemsubtype,rare,Recotype,dro
 40025,제우스,Transform/제우스,Itemname/40025,Itemdescript/40025,2,403,6,,FALSE,0,1,FALSE,1,A2055,0,0,0,TRUE,0,FALSE
 40026,제우스의번개,Item/위장/40,Itemname/40026,Itemdescript/40026,2,403,6,,FALSE,0,1,FALSE,1,A2056,0,0,0,TRUE,0,FALSE
 40027,도깨비 방망이,Item/위장/41,Itemname/40027,Itemdescript/40027,2,403,6,,FALSE,0,1,FALSE,1,A2057,0,0,0,TRUE,0,FALSE
+40028,여름 서퍼,Transform/서핑,Itemname/40028,Itemdescript/40028,2,403,6,,FALSE,0,1,FALSE,1,A2058,0,0,0,TRUE,0,FALSE
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,
 48000,북극곰,Item/Pet/0,petname/1000,Itemdescript/48000,2,406,1,,FALSE,0,1,FALSE,1,P1000,0,0,0,TRUE,0,FALSE
@@ -185,9 +195,24 @@ id,descriptionKor,sprite,name,description,itemtype,itemsubtype,rare,Recotype,dro
 100015,안씀,Item/Event/E10,Itemname/100015,Itemdescript/100006,1,116,4,,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 100016,안씀,Item/Event/E11,Itemname/100016,Itemdescript/100007,1,116,5,,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 100017,안씀,Item/Event/E12,Itemname/100017,Itemdescript/100008,1,116,6,,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100018,이벤트 아이템 [낮은 드롭율],Item/Event/E13,Itemname/100018,Itemdescript/100006,1,116,4,,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100019,이벤트 아이템 [중간 드롭율],Item/Event/E14,Itemname/100019,Itemdescript/100007,1,116,5,,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100020,이벤트 아이템 [업적으로만지급],Item/Event/E15,Itemname/100020,Itemdescript/100008,1,116,6,,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+100018,안씀,Item/Event/E13,Itemname/100018,Itemdescript/100006,1,116,4,,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+100019,안씀,Item/Event/E14,Itemname/100019,Itemdescript/100007,1,116,5,,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+100020,안씀,Item/Event/E15,Itemname/100020,Itemdescript/100008,1,116,6,,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+100021,이벤트 아이템 [낮은 드롭율],Item/Event/E16,Itemname/100021,Itemdescript/100006,1,116,4,,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+100022,이벤트 아이템 [중간 드롭율],Item/Event/E17,Itemname/100022,Itemdescript/100007,1,116,5,,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+100023,이벤트 아이템 [업적으로만지급],Item/Event/E18,Itemname/100023,Itemdescript/100008,1,116,6,,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,

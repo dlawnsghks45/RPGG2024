@@ -6,59 +6,52 @@
   <component name="ChangeListManager">
     <list default="true" id="026fe4cd-66d7-4da1-a1b1-1a7d0490dfd5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AcrasRPG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AcrasRPG/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Antcavemanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Antcavemanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Classmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Classmanager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CraftManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DungeonManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DungeonManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DungeonSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DungeonSlot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EliteRaid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EliteRaid.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EquipUpgradeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EquipUpgradeManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EasyMobile/Generated/EM_IAPConstants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EasyMobile/Generated/EM_IAPConstants.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EasyMobile/Resources/EM_Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EasyMobile/Resources/EM_Settings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Font/godoFont/tex.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Font/godoFont/tex.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GrowEventmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GrowEventmanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GuideQuestSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GuideQuestSlot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GuildManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GuildManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hpmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hpmanager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Inventory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/NewIAPManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewIAPManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Panelcheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Panelcheck.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PartyRaidBattlemanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PartyRaidBattlemanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PartyRaidRoommanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PartyRaidRoommanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PartyraidChatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PartyraidChatManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PlayerBackendData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerBackendData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.startup.startup-runtime-1.0.0.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.startup.startup-runtime-1.0.0.aar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.work.work-runtime-2.7.0.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.work.work-runtime-2.7.0.aar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-lite-22.0.0.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-lite-22.0.0.aar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.sglib.easymobile.easy-mobile-1.5.1.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.sglib.easymobile.easy-mobile-1.5.1.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/UI/BOX/박스아이템슬릇.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/UI/BOX/박스아이템슬릇.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/material/유저정보/펫 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/material/유저정보/펫 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/UI/Shop/프리미엄상점슬릇.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/UI/Shop/프리미엄상점슬릇.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/material/메인무기.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/material/메인무기.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/material/보조무기.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/material/보조무기.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/material/파티/메인무기 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/material/파티/메인무기 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/material/파티/보조무기 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/material/파티/보조무기 1.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/material/파티/펫 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/material/파티/펫 1.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/material/펫.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/material/펫.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/가이드 퀘스트 목록.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/가이드 퀘스트 목록.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/어빌리티슬릇.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/어빌리티슬릇.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Raidslot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Raidslot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/Class.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/Class.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/AchievementStat.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/AchievementStat.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/Avarta.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/Avarta.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/EventDrop.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/EventDrop.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/Itemdatabasecsv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/Itemdatabasecsv.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/Jump.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/Jump.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/Map.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/Map.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/Shop.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/Shop.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/growthguide.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/growthguide.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/I2Languages.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/I2Languages.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skillicon.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skillicon.spriteatlas" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Savemanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Savemanager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lobby.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/DB/ItemdatabasecsvDB.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/DB/ItemdatabasecsvDB.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/DB/JumpDB.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/DB/JumpDB.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Chat/chatmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Chat/chatmanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/DB/AvartaDB.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/DB/AvartaDB.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shopmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shopmanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SkillChangeSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SkillChangeSlot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SkillInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SkillInventory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TutorialTotalManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TutorialTotalManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Tutorialmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tutorialmanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/abilitymanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/abilitymanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/abilityslot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/abilityslot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/altarmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/altarmanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/craftingdoingslot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/craftingdoingslot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/craftslot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/craftslot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/dpsmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/dpsmanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/equipoptionchanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/equipoptionchanger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/itemboxslot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/itemboxslot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/iteminventoryinfoslot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/iteminventoryinfoslot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/jobslot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jobslot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/mapmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/mapmanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/menulevelcheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/menulevelcheck.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/petmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/petmanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/alertmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/alertmanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/avatamanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/avatamanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/uimanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/uimanager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,6 +66,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/AdmobRewardAd.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AutoSmelting.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Autofarmmanager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/BannerShopSlot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CheckContentCount.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CollectionRenewalManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Collectmanager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -432,6 +426,14 @@
       <workItem from="1716180428584" duration="33192000" />
       <workItem from="1716660584650" duration="48287000" />
       <workItem from="1717125268944" duration="45474000" />
+      <workItem from="1717543427791" duration="6518000" />
+      <workItem from="1717690551356" duration="1785000" />
+      <workItem from="1717971488171" duration="1190000" />
+      <workItem from="1718312739004" duration="255000" />
+      <workItem from="1718313453402" duration="1598000" />
+      <workItem from="1718317854960" duration="128000" />
+      <workItem from="1718318951882" duration="1190000" />
+      <workItem from="1718398386526" duration="1380000" />
     </task>
     <task id="LOCAL-00001" summary="gg">
       <created>1681093758612</created>

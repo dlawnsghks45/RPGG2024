@@ -341,8 +341,6 @@ public class chatmanager : MonoBehaviour
                             
                             Debug.Log("초대를 받았다");
                             //system;PI;파장이름;유저이름;mapname;level
-                            Debug.Log(stringdata[4] + "맵아이디");
-                            Debug.Log(stringdata[5] + "맵레벨");
                             PartyRaidRoommanager.Instance.ShowInvitedPanel(stringdata[4], int.Parse(stringdata[5]), stringdata[2]);
                             break;
                         case "PAH":
@@ -403,6 +401,8 @@ public class chatmanager : MonoBehaviour
                                 Debug.Log("자리가없다");
                                 //자리가 없다
                             }
+
+                            PartyRaidBattlemanager.Instance.RewardShowPanel.SetActive(false);
                             break;
                         
                         //아바타를 바꿈
@@ -502,9 +502,6 @@ public class chatmanager : MonoBehaviour
                             if(PartyRaidRoommanager.Instance.nowmyleadernickname != stringdata[2])
                                 break;
                             //레디창을 보여줌
-
-
-                            PartyRaidRoommanager.Instance.PartyMember[0].BuffPercent = float.Parse(stringdata[3]);
                             PartyRaidRoommanager.Instance.ShowRaidReadyPanel();
                             break;
                         case "PRYR":
@@ -541,14 +538,35 @@ public class chatmanager : MonoBehaviour
                         #endregion
 
                        #region 파티레이드 진행
-                        //레이드 등장
+                        //레이드 시작
                         case "PRRS":
                             if(PartyRaidRoommanager.Instance.nowmyleadernickname != stringdata[2])
                                 break;
                             Debug.Log("레이드 시작");
+                            Debug.Log(PartyRaidRoommanager.Instance.nowmyleadernickname);
+                            Debug.Log(PlayerBackendData.Instance
+                                .nickname);
                             PartyRaidRoommanager.Instance.RaidReadyPanel.SetActive(false);
                             ShowPartyRaidSystemChat(args.From.NickName, "파티 레이드가 시작되었습니다.",PartyRaidRoommanager.Instance.syscolor[0]);
+                            
+                            PartyraidChatManager.Instance.recentusers = "";
+                            //닉네임
+                            if (PartyRaidRoommanager.Instance.nowmyleadernickname == (PlayerBackendData.Instance
+                                    .nickname))
+                            {
+                                Debug.Log("레이드 시작" + PartyRaidRoommanager.Instance.partyroomdata.usercount );
+                                if (PartyRaidRoommanager.Instance.partyroomdata.usercount > 1)
+                                {
+                                    PartyraidChatManager.Instance.recentusers =
+                                        PartyraidChatManager.Instance.GetPartyNameRecent();
+                                }
+                            }
+
+                            
+                            
                             PartyRaidBattlemanager.Instance.StartPartyRaid();
+
+                            
                             break;
                         
                         //채팅침
@@ -559,7 +577,6 @@ public class chatmanager : MonoBehaviour
                             ShowPartyRaidChat(args.From.NickName, stringdata[4]);
                             break;
                         
-                        ///
                         case "PSMOC":
                             if(PartyRaidRoommanager.Instance.nowmyleadernickname != stringdata[2])
                                 break;

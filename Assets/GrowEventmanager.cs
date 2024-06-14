@@ -183,6 +183,7 @@ public class GrowEventmanager : MonoBehaviour
             Classmanager.Instance.RefreshJobitemslots();
             PlayerData.Instance.RefreshClassName();
             mapmanager.Instance.LocateMap("1033");
+            abilitymanager.Instance.Bt_RefreshReco();
          }
          else
          {

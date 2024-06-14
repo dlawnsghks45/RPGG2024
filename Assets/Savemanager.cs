@@ -968,7 +968,7 @@ Save();
     }
     public void SaveAchieveDirect()
     {
-        _es3File.Save($"{PlayerBackendData.Instance.Id}Achievedata", PlayerBackendData.Instance.PlayerAchieveData);
+       // _es3File.Save($"{PlayerBackendData.Instance.Id}Achievedata", PlayerBackendData.Instance.PlayerAchieveData);
         SaveQuest();
     }
 

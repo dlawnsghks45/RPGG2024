@@ -108,6 +108,7 @@ public class SkillInventory : MonoBehaviour
                 i++;
             }
         }
+        SkillInventoryPanel.Show(false);
     }
 
     public void ShowChangePanel()

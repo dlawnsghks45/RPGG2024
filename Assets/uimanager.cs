@@ -116,7 +116,7 @@ public class uimanager : MonoBehaviour
         {
             case 2:
                 //직업 해금 가능
-                PlayerData.Instance.ShowNewContentReal("직업");
+               // PlayerData.Instance.ShowNewContentReal("직업");
                 break;
             case 3:
                 //감연된 농장 오픈
@@ -150,51 +150,16 @@ public class uimanager : MonoBehaviour
                 PlayerData.Instance.ShowNewContentReal("14던전");
                 break;
             case 15://대제국
-                PlayerData.Instance.ShowNewContentReal("15던전");
+                PlayerData.Instance.ShowNewContentReal("월드보스레이드");
                 //펫 기능
                 break;
             case 20://대제국
-                PlayerData.Instance.ShowNewContentReal("20던전");
+                 PlayerData.Instance.ShowNewContentReal("강화석던전");
                 //펫 기능
                 break;
-            case 21://대제국
-                PlayerData.Instance.ShowNewContentReal("21던전");
-                //펫 기능
-                break;
-            case 22://대제국
-                PlayerData.Instance.ShowNewContentReal("22던전");
-                //펫 기능
-                break;
-            case 23://대제국
-                PlayerData.Instance.ShowNewContentReal("23던전");
-                //펫 기능
-                break;
-            case 24://대제국
-                PlayerData.Instance.ShowNewContentReal("24던전");
-                //펫 기능
-                break;
-            case 25://대제국
-                PlayerData.Instance.ShowNewContentReal("25던전");
-                //펫 기능
-                break;
-            case 26://대제국
-                PlayerData.Instance.ShowNewContentReal("26던전");
-                //펫 기능
-                break;
-            case 27://대제국
-                PlayerData.Instance.ShowNewContentReal("27던전");
-                //펫 기능
-                break;
-            case 28://대제국
-                PlayerData.Instance.ShowNewContentReal("28던전");
-                //펫 기능
-                break;
-            case 29://대제국
-                PlayerData.Instance.ShowNewContentReal("29던전");
-                //펫 기능
-                break;
-            case 30://대제국
-                PlayerData.Instance.ShowNewContentReal("30던전");
+            
+            case 32://대제국
+                  PlayerData.Instance.ShowNewContentReal("기간틱발록");
                 //펫 기능
                 break;
         }

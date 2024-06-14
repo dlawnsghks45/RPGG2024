@@ -487,12 +487,13 @@ public class PartyRaidRoommanager : MonoBehaviour
     public itemslot[] itemdrops;
     public Text BossHp;
 
-
+    public float[] percentlevel; 
+    
     public decimal GetMaxHp()
     {
         decimal a =
             (decimal.Parse(monsterDB.Instance.Find_id(MapDB.Instance.Find_id(partyroomdata.nowmap).monsterid).hp) *
-             (decimal)math.pow(2.7f, partyroomdata.level));
+             (decimal)math.pow(percentlevel[partyroomdata.level-1], partyroomdata.level-1));
         return a;
     }
 
@@ -686,6 +687,24 @@ public class PartyRaidRoommanager : MonoBehaviour
         joinusername.Clear();
         RefreshJoinmemberCount();
     }
+
+    public GameObject RecentUserInvitePanel;
+    public Text RecentUserText;
+    public void ShowRecentPanel()
+    {
+        if (PartyraidChatManager.Instance.recentusers != "")
+        {
+            string[] username = PartyraidChatManager.Instance.recentusers.Split(';');
+            RecentUserInvitePanel.SetActive(true);
+            RecentUserText.text = "";
+            for (int i = 0; i < username.Length; i++)
+            {
+                if (username[i] != "")
+                    RecentUserText.text += $"{username[i]}\n";
+            }
+        }
+    }
+
 
 
 }

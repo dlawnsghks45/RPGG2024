@@ -29,6 +29,8 @@ public class PartyRaidBattlemanager : MonoBehaviour
             return _instance;
         }
     }
+
+    public List<string> RecentUser = new List<string>();
     //파티레이드 시작
     public PartyRaidBoss battledata;
     public void StartPartyRaid()

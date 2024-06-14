@@ -1087,8 +1087,8 @@ public class Inventory : MonoBehaviour
                         mainplayer.InitArrow();
                         mainplayer.basicattackhit = "";
                         break;
-                        abilitymanager.Instance.Bt_RefreshReco();
                 }
+                abilitymanager.Instance.Bt_RefreshReco();
                 break;
             case "SWeapon":
                 PlayerData.Instance.SetSubWeaponImage(SpriteManager.Instance.GetSprite(EquipItemDB.Instance.Find_id(data.Itemid).EquipSprite), EquipItemDB.Instance.Find_id(data.Itemid).EquipSprite);
@@ -1860,7 +1860,14 @@ public class Inventory : MonoBehaviour
        
         if(!InventoryPanel.IsActive())
         InventoryPanel.Show(false);
+
+        if (searchinput.text != "")
+        {
+            Input_SearchItem(searchinput.text);
+        }
     }
+
+    public InputField searchinput;
 
     public void Input_SearchItem(string name)
     {
@@ -2002,11 +2009,80 @@ public class Inventory : MonoBehaviour
            }
        }
 
+
+       public GameObject SkillbookPanel;
+
+       public void Bt_SelectEarnSkill()
+       {
+           PlayerBackendData.Instance.AddSkill(nowselectskillid);
+           PlayerBackendData.Instance.RemoveItem(nowselectid, 1);
+           Savemanager.Instance.SaveSkillData();
+           Savemanager.Instance.SaveInventory();
+           Savemanager.Instance.Save();
+           RefreshInventory();
+           avatamanager.Instance.EarnSkill(nowselectskillid);
+       }
+
+       public void Bt_SelectEarnSkillBook()
+       {
+           alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI8/스킬북을획득함"), alertmanager.alertenum.일반);
+           PlayerBackendData.Instance.Additem(nowselectid,1);
+//            Debug.Log("아이템얻음" + id);
+           if (InventoryPanel.isActiveAndEnabled)
+           {
+               RefreshInventory();
+           }
+           Savemanager.Instance.SaveInventory_SaveOn();
+       }
+       
+       private string nowselectskillid;
        public void AddItem(string id, int count, bool issave = true, bool ismonkill = false)
     {
         ItemdatabasecsvDB.Row item = ItemdatabasecsvDB.Instance.Find_id(id);
 //            Debug.Log(id);
         batterysaver.Instance.AddItem(id,count);
+
+        if (item.itemsubtype == "999")
+        {
+            if (count > 1)
+            {
+                alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI8/스킬북가방지급"), alertmanager.alertenum.일반);
+                PlayerBackendData.Instance.Additem(id, count);
+//            Debug.Log("아이템얻음" + id);
+                if (InventoryPanel.isActiveAndEnabled)
+                {
+                    RefreshInventory();
+                }
+                Savemanager.Instance.SaveInventory_SaveOn();
+                return;
+            }
+            
+            if (!PlayerBackendData.Instance.Skills.Contains(ItemdatabasecsvDB.Instance.Find_id(id).A))
+            {
+                SkillbookPanel.SetActive(true);
+                nowselectskillid = ItemdatabasecsvDB.Instance.Find_id(id).A;
+                PlayerBackendData.Instance.Additem(id, count);
+                if (InventoryPanel.isActiveAndEnabled)
+                {
+                    RefreshInventory();
+                }
+                Savemanager.Instance.SaveInventory_SaveOn();
+                //alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI4/스킬배우기성공"), alertmanager.alertenum.일반);
+                return;
+            }
+            else
+            {
+                alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI8/스킬북가방지급"), alertmanager.alertenum.일반);
+                PlayerBackendData.Instance.Additem(id, count);
+//            Debug.Log("아이템얻음" + id);
+                if (InventoryPanel.isActiveAndEnabled)
+                {
+                    RefreshInventory();
+                }
+                Savemanager.Instance.SaveInventory_SaveOn();
+                return;
+            }
+        }
         if (item.itemtype == "0")
         {
             switch (item.id)

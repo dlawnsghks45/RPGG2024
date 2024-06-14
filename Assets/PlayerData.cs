@@ -90,6 +90,23 @@ public class PlayerData : MonoBehaviour
         
         switch (newcontentstring)
         {
+            case "강화석던전":
+                NewContentTitle.text = Inventory.GetTranslate("Content/20랭크강화석던전");
+                NewContentInfo.text = Inventory.GetTranslate("Content/20랭크강화석던전설명");
+                NewContentHow.text = Inventory.GetTranslate("Content/메뉴전투입장");
+                PlayerData.Instance.ShowNewContentReal("20던전");
+                break;
+            case "기간틱발록":
+                NewContentTitle.text = Inventory.GetTranslate("Content/32기간틱발록");
+                NewContentInfo.text = Inventory.GetTranslate("Content/32기간틱발록설명");
+                NewContentHow.text = Inventory.GetTranslate("Content/메뉴전투입장");
+                break;
+            case "월드보스레이드":
+                NewContentTitle.text = Inventory.GetTranslate("Content/월드보스레이드");
+                NewContentInfo.text = Inventory.GetTranslate("Content/월드보스레이드설명");
+                NewContentHow.text = Inventory.GetTranslate("Content/월드보스레이드위치");
+                PlayerData.Instance.ShowNewContentReal("펫");
+                break;
             case "감염된농장":
                 NewContentTitle.text = Inventory.GetTranslate("Content/3차던전제목");
                 NewContentInfo.text = Inventory.GetTranslate("Content/3차던전설명");
@@ -194,8 +211,6 @@ public class PlayerData : MonoBehaviour
                 NewContentTitle.text = Inventory.GetTranslate("Content/15차던전제목");
                 NewContentInfo.text = Inventory.GetTranslate("Content/15차던전설명");
                 NewContentHow.text = Inventory.GetTranslate("Content/던전메뉴");
-                PlayerData.Instance.ShowNewContentReal("펫");
-
                 break;
             case "개미굴":
                 NewContentTitle.text = Inventory.GetTranslate("Content/개미굴");
@@ -581,9 +596,18 @@ public class PlayerData : MonoBehaviour
 
     public void RefreshAchExp()
     {
-        Level_Achexp.text =
-            $"{PlayerBackendData.Instance.GetAchExp().ToString("N0")}/{PlayerBackendData.Instance.GetMaxAchExp().ToString("N0")}";
-        Level_Achslider.fillAmount = (float)PlayerBackendData.Instance.GetAchExp() / (float)PlayerBackendData.Instance.GetMaxAchExp();
+        if (PlayerBackendData.Instance.GetAchLv() >= 1200)
+        {
+            Level_Achexp.text = "MAX";
+            Level_Achslider.fillAmount = 1f;
+        }
+        else
+        {
+            Level_Achexp.text =
+                $"{PlayerBackendData.Instance.GetAchExp().ToString("N0")}/{PlayerBackendData.Instance.GetMaxAchExp().ToString("N0")}";
+            Level_Achslider.fillAmount = (float)PlayerBackendData.Instance.GetAchExp() / (float)PlayerBackendData.Instance.GetMaxAchExp();
+        }
+      
         //CheckLvup();
     }
 
@@ -614,7 +638,7 @@ public class PlayerData : MonoBehaviour
         PlayerBackendData.Instance.SetMaxExp(decimal.Parse(LevelDB.Instance.Find_Lv(PlayerBackendData.Instance.GetLv().ToString()).RequiredExp));
 
         //맥스경험치 ㅇ업적
-      //  PlayerBackendData.Instance.SetMaxAchExp(decimal.Parse(AchievementStatDB.Instance.Find_level(PlayerBackendData.Instance.GetAchLv().ToString()).EXP));
+       PlayerBackendData.Instance.SetMaxAchExp(decimal.Parse(AchievementStatDB.Instance.Find_level(PlayerBackendData.Instance.GetAchLv().ToString()).EXP));
     }
 
     public void RefreshClassName()
@@ -787,7 +811,7 @@ public class PlayerData : MonoBehaviour
       //  Debug.Log("추가 경험치 계산" +  count);
         if (PlayerBackendData.Instance.ispremium)
         {
-            if (PlayerBackendData.Instance.GetLv() < 1200)
+            if (PlayerBackendData.Instance.GetLv() < 3000)
             {
                 count *= 2.5m;
             }
@@ -836,7 +860,7 @@ public class PlayerData : MonoBehaviour
     {
         if (PlayerBackendData.Instance.GetAchLv() >= 1200)
         {
-            
+            PlayerBackendData.Instance.SetAchLv(1200);
             return;
         }
         
@@ -968,6 +992,8 @@ public class PlayerData : MonoBehaviour
     
     public void bt_LvupbuttonAch()
     {
+        if(PlayerBackendData.Instance.GetAchLv().Equals(3000))
+            return;
         while (true)
         {
             if (PlayerBackendData.Instance.GetAchExp() >= PlayerBackendData.Instance.GetMaxAchExp())

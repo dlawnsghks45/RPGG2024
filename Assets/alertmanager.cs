@@ -483,7 +483,7 @@ public class alertmanager : MonoBehaviour
         {
             return;
         }
-        
+        /*
         int[] lv = new int[] { 300, 450,600,750,900,1200,1500 };
         for (int i = 0; i < lv.Length; i++)
         {
@@ -494,7 +494,8 @@ public class alertmanager : MonoBehaviour
                 Alert_Ability[0].SetActive(true);
                 Alert_Ability[i+1].SetActive(true);
             }
-        }
+        }*/
+        abilitymanager.Instance.Bt_RefreshReco();
     }
     
     public void NotiCheck_Pet()

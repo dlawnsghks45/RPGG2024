@@ -54,6 +54,7 @@ public class AvartaDB : MonoBehaviour
 		public string isshow;
 		public string costtype;
 		public string cost;
+		public string iswhole;
 
 	}
 
@@ -95,6 +96,7 @@ public class AvartaDB : MonoBehaviour
 			row.isshow = grid[i][15];
 			row.costtype = grid[i][16];
 			row.cost = grid[i][17];
+			row.iswhole = grid[i][18];
 
 			rowList.Add(row);
 		}
@@ -256,6 +258,14 @@ public class AvartaDB : MonoBehaviour
 	public List<Row> FindAll_cost(string find)
 	{
 		return rowList.FindAll(x => x.cost == find);
+	}
+	public Row Find_iswhole(string find)
+	{
+		return rowList.Find(x => x.iswhole == find);
+	}
+	public List<Row> FindAll_iswhole(string find)
+	{
+		return rowList.FindAll(x => x.iswhole == find);
 	}
 
 }

@@ -47,7 +47,7 @@ public class Shopmanager : MonoBehaviour
     public shopslot nowshopslot;
     public int selecttimenum;
     public bool istimeshop;
-    public void ShowShopInfos(string shopid,shopslot slot,int timenum,bool istimeshops)
+    public void ShowShopInfos(string shopid,shopslot slot = null,int timenum=0,bool istimeshops=false)
     {
         nowshopid = shopid;
         nowshopslot = slot;

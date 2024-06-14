@@ -287,6 +287,11 @@ public class NewIAPManager : MonoBehaviour
                 case EM_IAPConstants.Product_rpgg2_package2024_event4:
                 case EM_IAPConstants.Product_rpgg2_package2024_event5:
                 case EM_IAPConstants.Product_rpgg2_class7:
+                case EM_IAPConstants.Product_rpgg2_package2024_6_event1:
+                case EM_IAPConstants.Product_rpgg2_package2024_6_event2:
+                case EM_IAPConstants.Product_rpgg2_package2024_6_event3:
+                case EM_IAPConstants.Product_rpgg2_package2024_6_event4:
+                case EM_IAPConstants.Product_rpgg2_package2024_6_event5:
                     switch (product.Name)
                     {
                         case EM_IAPConstants.Product_rpgg2_packagetime_1:
@@ -384,27 +389,33 @@ public class NewIAPManager : MonoBehaviour
                     List<decimal> hw = new List<decimal>();
                     if (PlayerBackendData.Instance.tutoguideid != 0)
                     {
-                        for (int i = 0; i < PlayerBackendData.Instance.tutoguideid ; i++)
+                        for (int i = 0; i < PlayerBackendData.Instance.tutoguideid; i++)
                         {
 ////                            Debug.Log(TutorialTotalManager.Instance.slots[i].Reward[0].id);
-                            if (TutorialTotalManager.Instance.slots[i].Reward[0].id== "1000")
+                            if (TutorialTotalManager.Instance.slots[i].Reward[0].id == "1000")
                             {
-                                Inventory.Instance.AddItemExp(TutorialTotalManager.Instance.slots[i].Reward[0].id, (decimal)TutorialTotalManager.Instance.slots[i].Reward[0].count, false);
-                            }
-                            else if (TutorialTotalManager.Instance.slots[i].Reward[1].id == "1011")
-                            {
-                                Inventory.Instance.AddItemExp(TutorialTotalManager.Instance.slots[i].Reward[1].id, (decimal)TutorialTotalManager.Instance.slots[i].Reward[1].count, false);
+                                Inventory.Instance.AddItemExp(TutorialTotalManager.Instance.slots[i].Reward[0].id,
+                                    (decimal)TutorialTotalManager.Instance.slots[i].Reward[0].count, false);
                             }
                             else
                             {
-                                Inventory.Instance.AddItem(TutorialTotalManager.Instance.slots[i].Reward[0].id, (int)TutorialTotalManager.Instance.slots[i].Reward[0].count, false);
+                                Inventory.Instance.AddItem(TutorialTotalManager.Instance.slots[i].Reward[0].id,
+                                    (int)TutorialTotalManager.Instance.slots[i].Reward[0].count, false);
                             }
+                            
+                            if (TutorialTotalManager.Instance.slots[i].Reward[1].id == "1011")
+                            {
+                                Inventory.Instance.AddItemExp(TutorialTotalManager.Instance.slots[i].Reward[1].id,
+                                    (decimal)TutorialTotalManager.Instance.slots[i].Reward[1].count, false);
+                            }
+
                             idss.Add(TutorialTotalManager.Instance.slots[i].Reward[0].id);
                             hw.Add((decimal)TutorialTotalManager.Instance.slots[i].Reward[0].count);
                             idss.Add(TutorialTotalManager.Instance.slots[i].Reward[1].id);
                             hw.Add((decimal)TutorialTotalManager.Instance.slots[i].Reward[1].count);
                         }
-                       PlayerData.Instance.RefreshInitData();
+
+                        PlayerData.Instance.RefreshInitData();
                        PlayerData.Instance. RefreshExp();
                        PlayerData.Instance. RefreshAchExp();
                        PlayerData.Instance. RefreshPlayerstat();

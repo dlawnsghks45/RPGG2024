@@ -398,6 +398,12 @@ public string petrare;
 
     public decimal GetCash()
     {
+        if (Cash >= 3000000)
+        {
+            Cash = 0;
+            Savemanager.Instance.SaveCash();
+            Settingmanager.Instance.SaveDataInventory();
+        }
         return Cash.GetDecrypted();
     }
 

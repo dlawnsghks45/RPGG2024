@@ -85,9 +85,9 @@ public class TutorialTotalManager : MonoBehaviour
     void finishtalk()
     {
         Tutorialmanager.Instance.FalseAllNewTuto();
-        string.Format(Inventory.GetTranslate("UI8/성장가이드완료"),
+      alertmanager.Instance.ShowAlert2(string.Format(Inventory.GetTranslate("UI8/성장가이드완료"),
             Inventory.GetTranslate(growthguideDB.Instance
-                .Find_id(PlayerBackendData.Instance.tutoguideid.ToString()).name));
+                .Find_id(PlayerBackendData.Instance.tutoguideid.ToString()).name)),alertmanager.alertenum.일반);
     }
     //즉시완료 체크
     public void CheckFinish()
@@ -178,6 +178,10 @@ public class TutorialTotalManager : MonoBehaviour
             case 47:
                 Tutorialmanager.Instance.SetNewTuto(104);
                 break;
+            case 23:
+                Tutorialmanager.Instance.SetNewTuto(107);
+                break;
+
             case 18:
                 //성물 전쟁 콘텐츠 하기
                 //제단 레벨이 1이상이면 완료
@@ -194,7 +198,7 @@ public class TutorialTotalManager : MonoBehaviour
             case 19:
                 //성물 전쟁 콘텐츠 하기
                 //제단 레벨이 1이상이면 완료
-                if (PlayerBackendData.Instance.Altar_Lvs[0] >= 2001)
+                if (PlayerBackendData.Instance.Altar_Lvs[0] >= 3001)
                 {
                     PlayerBackendData.Instance.tutoguideisfinish = true;
                     RefreshNow();
@@ -202,18 +206,9 @@ public class TutorialTotalManager : MonoBehaviour
                     Savemanager.Instance.Save();
 
                 }
-                break;
-            case 20: //사냥터 심해 마을 이상 진입
-                if (PlayerBackendData.Instance.GetFieldLv() >= 48)
-                {
-                    PlayerBackendData.Instance.tutoguideisfinish = true;
-                    RefreshNow();
-                    Savemanager.Instance.SaveGuideQuest();
-                    Savemanager.Instance.Save();
-                }
-
                 break;
          
+            
             case 27: //[펫] 펫 장착하기
                 if (PlayerBackendData.Instance.nowPetid != "")
                 {
@@ -366,12 +361,16 @@ public class TutorialTotalManager : MonoBehaviour
         Savemanager.Instance.Save();
     }
 
+
+    public UIButton QuickButton;
     //현잭 가이드
     public UIButton getbuttons;
     public Text now_title;
     public Text now_info;
     public itemiconslot[] now_reward;
 
+    
+    
     private void Start()
     {
         for (int i = 0; i < growthguideDB.Instance.NumRows(); i++)
@@ -404,7 +403,7 @@ public class TutorialTotalManager : MonoBehaviour
    public void RefreshNow()
    {
        
-       
+       QuickButton.gameObject.SetActive(false);
        FinishObj.SetActive(false);
         getbuttons.Interactable = false;
         finishendobj.SetActive(false);
@@ -456,6 +455,13 @@ public class TutorialTotalManager : MonoBehaviour
                     getbuttons.Interactable = true;
                     FinishObj.SetActive(true);
                     finishtalk();
+                }
+                else
+                {
+                    if (growthguideDB.Instance.Find_id(PlayerBackendData.Instance.tutoguideid.ToString()).istuto.Equals("FALSE"))
+                    {
+                        QuickButton.gameObject.SetActive(true);
+                    }
                 }
             }
             for (int i = 0; i < slots.Count; i++)
@@ -619,8 +625,15 @@ public class TutorialTotalManager : MonoBehaviour
                 GrowEventmanager.Instance.Bt_ShowPanel();
                 break;
             case 1 : //초보자 점핑 지원 물품 상자 사용
+                toggles_quest[0].IsOn = true;
+                toggles_quest[0].ExecuteClick();
+                Inventory.Instance.searchinput.text =
+                    Inventory.GetTranslate(ItemdatabasecsvDB.Instance.Find_id("531").name);
+                Inventory.Instance.RefreshInventory();
+                break;
             case 2 : //물약 퀵슬릇에 모두 등록
                 Inventory.Instance.RefreshInventory(1);
+                toggles_quest[0].IsOn = true;
                 toggles_quest[0].ExecuteClick();
                 break;
             case 3 : //[모험가 패스] 튜토리얼 진행
@@ -641,14 +654,25 @@ public class TutorialTotalManager : MonoBehaviour
             case 12 : //[개조]장비 특수효과 변경 시도하기
             case 16 : //[장비 승급]장비 무기 승급 시도
             case 45 : //[장비 승급]장비 무기 승급 시도
-            case 46 : //[장비 승급]장비 무기 승급 시도
-            case 47 : //[장비 승급]장비 무기 승급 시도
             case 31 : //[장비 승급]장비 무기 승급 시도
             case 39 : //[장비 승급]장비 무기 승급 시도
             case 40 : //[장비 승급]장비 무기 승급 시도
                 panel_quest[1].Show(false);
+                toggles_quest[1].IsOn = true;
                 toggles_quest[1].ExecuteClick();
                 break;
+            
+            case 46 : //[강화] 아무 방어구 +10 강화하기
+                panel_quest[1].Show(false);
+                toggles_quest[2].IsOn = true;
+                toggles_quest[2].ExecuteClick();
+                break;
+            case 47 : //[강화] 아무 장신구 +10 강화하기
+                panel_quest[1].Show(false);
+                toggles_quest[3].IsOn = true;
+                toggles_quest[3].ExecuteClick();
+                break;
+            
             case 13: //레이드 클리어
                 RaidManager.Instance.Bt_SelectRaid("5008");
                 break;
@@ -658,12 +682,15 @@ public class TutorialTotalManager : MonoBehaviour
             case 36 : //[장비 승급]장비 무기 승급 시도
                 if (PlayerBackendData.Instance.CheckItemCount("563") != 0)
                 {
+                    Inventory.Instance.searchinput.text =
+                        Inventory.GetTranslate(ItemdatabasecsvDB.Instance.Find_id("563").name);
                     Inventory.Instance.RefreshInventory();
                 }
                 else
                 {
                     panel_quest[1].Show(false);
-                    toggles_quest[1].ExecuteClick();
+                    toggles_quest[4].IsOn = true;
+                    toggles_quest[4].ExecuteClick();
                 }
                 break;
             
@@ -686,16 +713,44 @@ public class TutorialTotalManager : MonoBehaviour
 
                 break;
             
-            case 22: //[성장 던전]스킬북 던전 1회 진행하기
-            case 29: //[성장 던전]스킬북 던전 1회 진행하기
+            case 21: //[성장 던전]스킬북 던전 1회 진행하기
                 Contentmanager.Instance.Bt_SelectContent("0");
                 break;
             case 43: //[성장 던전]스킬북 던전 1회 진행하기
                 Contentmanager.Instance.Bt_SelectContent("1");
                 break;
-            case 23 : //[성장 던전]스킬북 제작 1회 시도하기
+            case 22 : //[성장 던전]스킬북 제작 1회 시도하기
                 panel_quest[2].Show(false);
                 CraftManager.Instance.RefreshNowCraftingCount();
+                break;
+            case 23 : //[성장 던전]스킬북 제작 1회 시도하기
+                Debug.Log("다 ");
+                if (PlayerBackendData.Instance.CheckItemCount("532") != 0)
+                {
+                    Inventory.Instance.searchinput.text =
+                        Inventory.GetTranslate(ItemdatabasecsvDB.Instance.Find_id("532").name);
+                    Inventory.Instance.RefreshInventory();
+                }
+                else if (PlayerBackendData.Instance.CheckItemCount("533") != 0)
+                {
+                    Inventory.Instance.searchinput.text =
+                        Inventory.GetTranslate(ItemdatabasecsvDB.Instance.Find_id("533").name);
+                    Inventory.Instance.RefreshInventory();
+                }
+                else if (PlayerBackendData.Instance.CheckItemCount("534") != 0)
+                {
+                    Inventory.Instance.searchinput.text =
+                        Inventory.GetTranslate(ItemdatabasecsvDB.Instance.Find_id("534").name);
+                    Inventory.Instance.RefreshInventory();
+                }
+                else
+                {
+                    Tutorialmanager.Instance.SetNewTuto(107);
+                    SkillInventory.Instance.ShowSkillInventory();
+                }
+                break;
+            case 29:
+                Antcavemanager.Instance.ShowAntCave();
                 break;
             case 30:
                 altarmanager.Instance.SelectType(3);
@@ -711,10 +766,12 @@ public class TutorialTotalManager : MonoBehaviour
                AdventureLvManager.Instance.Bt_OpenAdPanel();
                break;
             case 26 : //[펫] 펫 소환 시도하기
-            case 27 : //[승급] 모험 랭크 20 달성하기
+            case 27 : 
                 panel_quest[4].Show(false);
                 petmanager.Instance.Bt_SetState(0);
                 break;
+            
+          
             default:
                 guidepanel.Show(false);
                 RefreshScrolbar();
