@@ -36,8 +36,9 @@ public class rankslot : MonoBehaviour
         Name.text = name;
         Score.text = score;
         RankPanel.color = Color.white;
-        //Debug.Log("스ㅗ컹"+ score);
+        
         playernickname = name;
+        Debug.Log(name);
         this.indate = indate;
 
         switch (rank)
@@ -73,17 +74,44 @@ public class rankslot : MonoBehaviour
             //위장
             if (datas[3] != "")
             {
-                avata.sprite = SpriteManager.Instance.GetSprite(AvartaDB.Instance.Find_id(datas[3]).sprite);
+                if (!datas[3].Contains("Class"))
+                {
+                    if (datas[3].Length == 5)
+                    {
+                        avata.sprite = SpriteManager.Instance.GetSprite(AvartaDB.Instance.Find_id(datas[3]).sprite);
+
+                    }
+                    else
+                    {
+                        avata.sprite = SpriteManager.Instance.GetSprite(datas[3]);
+
+                    }
+                    
+                }
+                else
+                {
+                    avata.sprite = SpriteManager.Instance.GetSprite(ClassDB.Instance.Find_id(datas[0]).classsprite);
+                }
             }
             else
             {
                 avata.sprite = SpriteManager.Instance.GetSprite(ClassDB.Instance.Find_id(datas[0]).classsprite);
             }
-            
+//            Debug.Log(datas[4]);
+
             //위장
             if (datas[4] != "")
             {
-                weapon.sprite = SpriteManager.Instance.GetSprite(AvartaDB.Instance.Find_id(datas[4]).sprite);
+                if (datas[4].Length == 5)
+                {
+                    weapon.sprite = SpriteManager.Instance.GetSprite(AvartaDB.Instance.Find_id(datas[4]).sprite);
+
+                }
+                else
+                {
+                    weapon.sprite = SpriteManager.Instance.GetSprite(datas[4]);
+
+                }
             }
             else
             {
@@ -93,7 +121,7 @@ public class rankslot : MonoBehaviour
             //위장
             if (datas[5] != "")
             {
-                subweapon.sprite = SpriteManager.Instance.GetSprite(AvartaDB.Instance.Find_id(datas[5]).sprite);
+                subweapon.sprite = SpriteManager.Instance.GetSprite(datas[5]);
             }
             else
             {

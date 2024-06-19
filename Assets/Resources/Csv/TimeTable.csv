@@ -83,7 +83,7 @@ enumname,maxcount,type
 이벤트품질재설정1,30,weekly
 이벤트특효재설정1,30,weekly
 이벤트전설비법서1,3,weekly
-이벤트신화비법서1,10,weekly
+이벤트신화비법서1,50,weekly
 길드토큰_전설제작,5,weekly
 길드토큰_신화제작,2,weekly
 길드토큰_레이드입장권,5,weekly
@@ -97,7 +97,7 @@ enumname,maxcount,type
 이벤트품질재설정2,30,weekly
 이벤트특효재설정2,30,weekly
 이벤트전설비법서2,3,weekly
-이벤트신화비법서2,3,weekly
+이벤트신화비법서2,50,weekly
 프상주간패키지레이드1,5,weekly
 프상주간패키지레이드2,2,weekly
 프상주간패키지제단석1,5,weekly
@@ -124,3 +124,9 @@ enumname,maxcount,type
 이벤트무기강화석3,20,weekly
 이벤트방어구강화석3,20,weekly
 이벤트장신구강화석3,20,weekly
+이벤트등급재설정4,30,weekly
+이벤트품질재설정4,30,weekly
+이벤트특효재설정4,30,weekly
+이벤트무기강화석4,20,weekly
+이벤트방어구강화석4,20,weekly
+이벤트장신구강화석4,20,weekly

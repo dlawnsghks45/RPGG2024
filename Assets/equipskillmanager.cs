@@ -182,6 +182,14 @@ public class equipskillmanager : MonoBehaviour
         E6159_2,//청혼의 건틀릿
         E6160,//드래곤 애로우
         totaldmg, //피해증가
+        E61521, //크로노스
+        E61521_2, //크로노스
+        E61521_lv, //크로노스
+        E61521_rare, //크로노스
+        E61611,//크로노스 보조무기
+        
+        
+
         Length
     }
 

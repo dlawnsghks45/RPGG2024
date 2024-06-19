@@ -92,7 +92,7 @@ public class castingbarslot : MonoBehaviour
                     if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.makdouble) != 0)
                     {
                         if (Random.Range(0, 100) <
-                            Passivemanager.Instance.GetPassiveStatPercent(Passivemanager.PassiveStatEnum.makdouble))
+                            Skillmanager.Instance.GetRate(Passivemanager.Instance.GetPassiveStatPercent(Passivemanager.PassiveStatEnum.makdouble)))
                         {
                             yield return castingsecond2;
                             // Debug.Log("스킬발동");
@@ -108,7 +108,7 @@ public class castingbarslot : MonoBehaviour
                 if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.reskillhitper) != 0)
                 {
                     if (Random.Range(0, 100) <
-                        equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.reskillhitper))
+                        Skillmanager.Instance.GetRate( equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.reskillhitper)))
                     {
                         yield return castingsecond2;
                         // Debug.Log("스킬발동");
@@ -127,7 +127,7 @@ public class castingbarslot : MonoBehaviour
                 if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.reskillhitper2) != 0)
                 {
                     if (Random.Range(0, 100) <
-                        equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.reskillhitper2))
+                        Skillmanager.Instance.GetRate(equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.reskillhitper2)))
                     {
                         yield return castingsecond2;
                         // Debug.Log("스킬발동");

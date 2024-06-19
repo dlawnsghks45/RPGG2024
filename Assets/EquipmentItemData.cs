@@ -70,7 +70,8 @@ public class EquipmentItemData : MonoBehaviour
             int numss = 0;
             for (int i = 0; i < data2.EquipSkill1.Count - num; i++)
             {
-                if (data2.EquipSkill1[i] == "")
+//                Debug.Log(data2.EquipSkill1[i] );
+                if (data2.EquipSkill1[i] == "" || data2.EquipSkill1[i] == "0")
                     continue;
                 if (EquipSkillDB.Instance.Find_id(data2.EquipSkill1[i]).lv ==
                     EquipSkillDB.Instance.Find_id(data2.EquipSkill1[i]).maxlv)

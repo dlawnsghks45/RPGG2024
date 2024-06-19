@@ -395,7 +395,7 @@ public class SuccManager : MonoBehaviour
             Soundmanager.Instance.PlayerSound("Sound/강화확인전");
             succbutton.Interactable = false;
 
-            LastSlot.data.SendSkill(plusnum);
+            //LastSlot.data.SendSkill(plusnum);
             Inventory.Instance.RemoveItem(ResourceEquipKeyId.KeyId1);
 
 

@@ -196,6 +196,12 @@ public class Timemanager : MonoBehaviour
         이벤트무기강화석3,
         이벤트방어구강화석3,
         이벤트장신구강화석3,
+        이벤트등급재설정4,
+        이벤트품질재설정4,
+        이벤트특효재설정4,
+        이벤트무기강화석4,
+        이벤트방어구강화석4,
+        이벤트장신구강화석4,
         Length
     }
     public enum ContentEnumMonthly

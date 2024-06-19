@@ -96,45 +96,96 @@ public class PlayerBackendData : MonoBehaviour
 
     public string GetPlayerAvatadata()
     {
-        return
-            $"{ClassId};{GetEquipData()[0].Itemid};{GetEquipData()[1].Itemid};{avata_avata};{avata_weapon};{avata_subweapon}";
-    }
-    
-    public string GetPlayerAvatadataPartyRaid()
-    {
-        string avata;
-        string weaponavata;
-        string subavata;
- 
-
+        string avata = "";
+        string weaponavata = "";
+        string subavata = "";
+        
+        bool iswhole = false;
         //아바타
         if (avata_avata != "")
         {
             avata = AvartaDB.Instance.Find_id(avata_avata).sprite;
+
+            if (bool.Parse(AvartaDB.Instance.Find_id(avata_avata).iswhole))
+            {
+                iswhole = true;
+            }
+            
         }
         else
         {
             avata = ClassDB.Instance.Find_id(ClassId).classsprite;
         }
         
-        if (avata_weapon != "")
+        if (!iswhole)
         {
-            weaponavata = AvartaDB.Instance.Find_id(avata_weapon).sprite;
-        }
-        else
-        {
-            weaponavata = EquipItemDB.Instance.Find_id(GetEquipData()[0].Itemid).EquipSprite;
+            if (avata_weapon != "")
+            {
+                weaponavata = AvartaDB.Instance.Find_id(avata_weapon).sprite;
+            }
+            else
+            {
+                weaponavata = EquipItemDB.Instance.Find_id(GetEquipData()[0].Itemid).EquipSprite;
+            }
+
+            if (avata_subweapon != "")
+            {
+                subavata = AvartaDB.Instance.Find_id(avata_subweapon).sprite;
+            }
+            else
+            {
+                subavata = EquipItemDB.Instance.Find_id(GetEquipData()[1].Itemid).EquipSprite;
+            }
         }
         
-        if (avata_subweapon != "")
+        
+        return
+            $"{ClassId};{GetEquipData()[0].Itemid};{GetEquipData()[1].Itemid};{avata};{weaponavata};{subavata}";
+    }
+    
+    public string GetPlayerAvatadataPartyRaid()
+    {
+        string avata = "";
+        string weaponavata = "";
+        string subavata = "";
+
+        bool iswhole = false;
+        //아바타
+        if (avata_avata != "")
         {
-            subavata = AvartaDB.Instance.Find_id(avata_subweapon).sprite;
+            avata = AvartaDB.Instance.Find_id(avata_avata).sprite;
+
+            if (bool.Parse(AvartaDB.Instance.Find_id(avata_avata).iswhole))
+            {
+                iswhole = true;
+            }
+            
         }
         else
         {
-            subavata = EquipItemDB.Instance.Find_id(GetEquipData()[1].Itemid).EquipSprite;
+            avata = ClassDB.Instance.Find_id(ClassId).classsprite;
         }
 
+        if (!iswhole)
+        {
+            if (avata_weapon != "")
+            {
+                weaponavata = AvartaDB.Instance.Find_id(avata_weapon).sprite;
+            }
+            else
+            {
+                weaponavata = EquipItemDB.Instance.Find_id(GetEquipData()[0].Itemid).EquipSprite;
+            }
+
+            if (avata_subweapon != "")
+            {
+                subavata = AvartaDB.Instance.Find_id(avata_subweapon).sprite;
+            }
+            else
+            {
+                subavata = EquipItemDB.Instance.Find_id(GetEquipData()[1].Itemid).EquipSprite;
+            }
+        }
         string pet;
         string petrare;
 
@@ -836,7 +887,7 @@ public string petrare;
         }
     }
 
-    public void MakeTalisman(string id)
+    public void MakeTalisman(string id,int esnum = 0 )
     {
 
         while (true)
@@ -845,7 +896,7 @@ public string petrare;
             if(TalismanData.ContainsKey(keyids))
                 continue;
             
-            TalismanData.Add(keyids, new Talismandatabase(keyids, id));
+            TalismanData.Add(keyids, new Talismandatabase(keyids, id,esnum));
             return;
         }
     }    

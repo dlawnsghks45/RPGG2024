@@ -2083,6 +2083,7 @@ public class Inventory : MonoBehaviour
                 return;
             }
         }
+
         if (item.itemtype == "0")
         {
             switch (item.id)
@@ -2094,6 +2095,7 @@ public class Inventory : MonoBehaviour
                     }
                     else
                         PlayerData.Instance.UpGold((decimal)count);
+
                     break;
                 case "1001": //불꽃
                     PlayerData.Instance.UpCash((decimal)count);
@@ -2107,9 +2109,10 @@ public class Inventory : MonoBehaviour
                     {
                         PlayerData.Instance.EarnExp((decimal)count);
                     }
+
                     break;
                 case "1011": //경험치
-                        PlayerData.Instance.EarnExpNoPre((decimal)count);
+                    PlayerData.Instance.EarnExpNoPre((decimal)count);
                     break;
                 case "999": //업적경험치
                     PlayerData.Instance.EarnAchExp((decimal)count);
@@ -2120,14 +2123,31 @@ public class Inventory : MonoBehaviour
                         PlayerBackendData.Instance.SeasonPassExp = 100000;
                         return;
                     }
+
                     PlayerData.Instance.EarnSeaSonPassExp(count);
                     if (SeasonPass.Instance.Panel.IsActive())
                     {
                         SeasonPass.Instance.RefreshSeasonItem();
                         SeasonPass.Instance.Refresh();
                     }
+
                     break;
             }
+        }
+        else if (item.itemsubtype == "407")
+        {
+            if (ItemdatabasecsvDB.Instance.Find_id(id).B == "1")
+            {
+                //빛나는 탈리스만
+                PlayerBackendData.Instance.MakeTalisman(ItemdatabasecsvDB.Instance.Find_id(id).A,3);
+            }
+            else
+            {
+                //그냥 탈리스만
+                PlayerBackendData.Instance.MakeTalisman(ItemdatabasecsvDB.Instance.Find_id(id).A);
+            }
+           
+            avatamanager.Instance.EarnTalisman(ItemdatabasecsvDB.Instance.Find_id(id).A);   
         }
         else if (item.itemsubtype == "403")
         {
@@ -2181,9 +2201,28 @@ public class Inventory : MonoBehaviour
     private int arraynum = 0;
     public void Bt_UseItem()
     {
-      
         switch (ItemdatabasecsvDB.Instance.Find_id(nowselectid).itemsubtype)
         {
+            case "407":
+                if (ItemdatabasecsvDB.Instance.Find_id(nowselectid).B == "1")
+                {
+                    //빛나는 탈리스만
+                    PlayerBackendData.Instance.MakeTalisman(ItemdatabasecsvDB.Instance.Find_id(nowselectid).A,3);
+                }
+                else
+                {
+                    //그냥 탈리스만
+                    PlayerBackendData.Instance.MakeTalisman(ItemdatabasecsvDB.Instance.Find_id(nowselectid).A);
+                }
+                PlayerBackendData.Instance.RemoveItem(nowselectid, 1);
+                //저장
+                Savemanager.Instance.SaveInventory();
+                petmanager.Instance.SavePet();
+                RefreshInventory();
+                Savemanager.Instance.Save();
+                PlayerData.Instance.RefreshPlayerstat();
+                avatamanager.Instance.EarnTalisman(ItemdatabasecsvDB.Instance.Find_id(nowselectid).A);
+                break;
             case "406":
                 petmanager.Instance.Bt_GetPet(ItemdatabasecsvDB.Instance.Find_id(nowselectid).A);
                 PlayerBackendData.Instance.RemoveItem(nowselectid, 1);
@@ -3053,9 +3092,23 @@ public class Inventory : MonoBehaviour
                      {
                          if (t.ChoiceToggle.IsOn && t.gameObject.activeSelf)
                          {
-                             AddItem(t.id, t.itemcount* curBoxcount, false);
-                             getid.Add(t.id);
-                             gethowmany.Add((t.itemcount * curBoxcount).ToString());
+                             if (bool.Parse(ItemdatabasecsvDB.Instance.Find_id(nowselectid).dropalert))
+                             {
+                                 for (int i = 0; i < curBoxcount; i++)
+                                 {
+                                    AddItem(t.id, t.itemcount, false);
+                                    getid.Add(t.id);
+                                    gethowmany.Add((t.itemcount).ToString());
+                                 }
+                                 Savemanager.Instance.SaveTalisman();
+                             }
+                             else
+                             {
+                                 AddItem(t.id, t.itemcount* curBoxcount, false);
+                                 getid.Add(t.id);
+                                 gethowmany.Add((t.itemcount * curBoxcount).ToString());
+                             }
+                       
                          }
 
                          if (!t.gameObject.activeSelf)
@@ -3094,6 +3147,8 @@ public class Inventory : MonoBehaviour
                  break;
          }
          
+         //저장
+         Savemanager.Instance.SaveInventory();
          LogManager.BoxOpen(GetTranslate(boxdata.name),curBoxcount);
          RefreshInventory();
          Savemanager.Instance.Save();
@@ -3109,7 +3164,10 @@ public class Inventory : MonoBehaviour
      {
          ShowEskillSkills(EquipItemDB.Instance.Find_id(data.Itemid).SpeMehod);
      }
-
+     public void Bt_ShowNowTalisman()
+     {
+         ShowEskillSkills("1027");
+     }
      private void ShowEskillSkills(string eskillid)
      {
         EskillShowpanel.Show(false);

@@ -307,7 +307,7 @@ public class WorldBossManager : MonoBehaviour
             return;
         }
 
-        Debug.Log((int)Timemanager.ContentEnumDaily.월드보스공격횟수);
+//        Debug.Log((int)Timemanager.ContentEnumDaily.월드보스공격횟수);
         if (Timemanager.Instance.GetNowCount_daily(Timemanager.ContentEnumDaily.월드보스공격횟수) <= 0)
         {
             alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI6/월드보스횟수부족"), alertmanager.alertenum.주의);
@@ -331,7 +331,7 @@ public class WorldBossManager : MonoBehaviour
                 WorldbossInfoPanel.Hide(false);
                 WorldbossPanel.Hide(false);
                 TotalDmg = 0;
-                Debug.Log(WorldBossDB.Instance.Find_id(playingplaydata.bossid).monsterid);
+//                Debug.Log(WorldBossDB.Instance.Find_id(playingplaydata.bossid).monsterid);
                 mapmanager.Instance.LocateMap(WorldBossDB.Instance.Find_id(playingplaydata.bossid).monsterid);
                 attacktimetext.Refresh();
             }

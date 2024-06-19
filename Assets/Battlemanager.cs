@@ -476,7 +476,6 @@ public class Battlemanager : MonoBehaviour
                 totaldmg = (decimal)mainplayer.stat_atk *
                                    (decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6143_2);
                 
-                Debug.Log("발사");
                 enemy.hpmanager.TakeDamage(dpsmanager.attacktype.특수효과,"E1314_2",totaldmg, iscrit, mainplayer.stat_critdmg, "", 0, "Buff2");
                // ShootArrow_MainPlayer("Water1", enemy.hpmanager);
                ShootArrow_MainPlayer_NoANi2("arrow/1040", enemy.hpmanager);

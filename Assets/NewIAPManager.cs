@@ -292,6 +292,9 @@ public class NewIAPManager : MonoBehaviour
                 case EM_IAPConstants.Product_rpgg2_package2024_6_event3:
                 case EM_IAPConstants.Product_rpgg2_package2024_6_event4:
                 case EM_IAPConstants.Product_rpgg2_package2024_6_event5:
+                case EM_IAPConstants.Product_rpgg2_package2024_starter1:
+                case EM_IAPConstants.Product_rpgg2_package2024_starter2:
+                case EM_IAPConstants.Product_rpgg2_package2024_starter3:
                     switch (product.Name)
                     {
                         case EM_IAPConstants.Product_rpgg2_packagetime_1:

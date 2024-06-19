@@ -139,6 +139,19 @@ public class PartyRaidRoommanager : MonoBehaviour
     //레이드 시작
     public void Bt_StartRaid()
     {
+        MapDB.Row mapdata_Now = MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage);
+        if (mapdata_Now.maptype != "0")
+        {
+            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI/사냥터만가능"), alertmanager.alertenum.주의);
+            return;
+        }
+        
+        if (mapmanager.Instance.islocating)
+        {
+            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI2/맵이동중불가"),alertmanager.alertenum.주의);
+            return;
+        }
+
         PartyraidChatManager.Instance.Chat_CheckStartRaid();
     }
 
@@ -488,6 +501,7 @@ public class PartyRaidRoommanager : MonoBehaviour
     public Text BossHp;
 
     public float[] percentlevel; 
+    
     
     public decimal GetMaxHp()
     {

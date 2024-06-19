@@ -54,6 +54,12 @@ public class partyraidjoinmemberslot : MonoBehaviour
     {
       SubWeapon.enabled = false;
     }
+
+    if (bool.Parse(AvartaDB.Instance.Find_sprite(avatapath[0]).iswhole))
+    {
+      Weapon.enabled = false;
+      SubWeapon.enabled = false;
+    }
   }
 
   public void Bt_AcceptJoin()

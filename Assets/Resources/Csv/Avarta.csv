@@ -57,4 +57,5 @@ A2054,54,양날 파괴  도끼,시즌4 패키지,Avartaname/2054,,AvartaGetinfo/
 A2055,55,제우스,올림푸스 이벤트,Avartaname/2055,,AvartaGetinfo/2014,A,Transform/제우스,,exp,0.1,0,Avartainfo/2006,6,TRUE,item,,FALSE
 A2056,56,제우스의 번개,올림푸스 이벤트,Avartaname/2056,,AvartaGetinfo/2014,W,위장/무기위장/40,,gold,0.15,0,Avartainfo/2007,6,TRUE,item,,FALSE
 A2057,57,양날 파괴  도끼,시즌5패키지,Avartaname/2057,,AvartaGetinfo/2015,W,위장/무기위장/41,,gold,0.15,0,Avartainfo/2007,6,TRUE,item,,FALSE
-A2058,58,서핑,여름 이벤트,Avartaname/2058,,AvartaGetinfo/2014,A,Transform/서핑,,exp,0.1,0,Avartainfo/2012,6,TRUE,item,,TRUE
+A2058,58,서핑,여름 이벤트,Avartaname/2058,,AvartaGetinfo/2016,A,Transform/서핑,,exp,0.1,0,Avartainfo/2012,6,TRUE,item,,TRUE
+A2059,59,트리슈라,시즌6패키지,Avartaname/2059,,AvartaGetinfo/2017,W,위장/무기위장/42,,gold,0.15,0,Avartainfo/2007,6,TRUE,item,,FALSE

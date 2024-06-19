@@ -163,6 +163,14 @@ public class PartyMemberslot : MonoBehaviour
       
       }
 
+      if (!data.avatapath.Contains("Class"))
+      {
+         if (bool.Parse(AvartaDB.Instance.Find_sprite(data.avatapath).iswhole))
+         {
+            weapon.enabled = false;
+            subweapon.enabled = false;
+         }
+      }
 
       PlayerName.text = $"Lv.{data.lv}\n{data.nickname}";
    }

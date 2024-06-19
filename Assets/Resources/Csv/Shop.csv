@@ -94,9 +94,9 @@ T10 무기
 1065,룰렛 프리미엄,99000 당 70개,Shopname/1065,Shopinfo/1065,40005;1003,70;990,Item/Consume/Box2/Icon26,rpgg2.roulette.09,99000,,,FALSE
 1066,[BF]성장 콘텐츠 입장권 패키지Ⅱ,마법사의 묘 입장권2,Shopname/1066,Shopinfo/1066,1750;1001;1003,30;24000;110,Item/ETC/DungeonPass2,rpgg2.package2023.bf1,11000,one,,FALSE
 1067,[BF]스킬북 패키지Ⅲ,"스킬북 조각 3000 , 스킬룬1 15개 , 신화 제작비법서 5개 + 악몽의 파편 1000개",Shopname/1067,Shopinfo/1067,1718;1717;1716;1710;1006;16;1003,30;50;100;20000;18;3000;110,Item/ETC/RUNE3,rpgg2.package2023.bf2,11000,one,,FALSE
-1068,[BF]악몽 파편 꾸러미,악몽 파편 꾸러미,Shopname/1068,Shopinfo/1068,16;1006;1003,5000;10;55,Item/Resource/Scale2,rpgg2.package2023.bf3,5500,daily,블랙프라이데이악몽,FALSE
-1069,[BF]지옥 파편 꾸러미,지옥 파편 꾸러미,Shopname/1069,Shopinfo/1069,18;1006;1003,5000;10;55,Item/Resource/완벽한룬의기억 1,rpgg2.package2023.bf4,5500,daily,블랙프라이데이지옥,FALSE
-1070,[BF]제단석 패키지★,제단 강화석 주간 패키지★,Shopname/1070,Shopinfo/1070,1712;1003,2400;110,Item/ETC/OpenBox,rpgg2.package2023.bf5,11000,one,,FALSE
+1068,[BF]악몽 파편 꾸러미,악몽 파편 꾸러미,Shopname/1068,Shopinfo/1068,16;1006;1003,20000;10;55,Item/Resource/Scale2,rpgg2.package2023.bf3,5500,daily,블랙프라이데이악몽,FALSE
+1069,[BF]지옥 파편 꾸러미,지옥 파편 꾸러미,Shopname/1069,Shopinfo/1069,18;1006;1003,20000;10;55,Item/Resource/완벽한룬의기억 1,rpgg2.package2023.bf4,5500,daily,블랙프라이데이지옥,FALSE
+1070,[BF]제단석 패키지★,제단 강화석 주간 패키지★,Shopname/1070,Shopinfo/1070,3,2400;110,Item/ETC/OpenBox,rpgg2.package2023.bf5,11000,one,,FALSE
 1071,[BF]룰렛 열쇠 - 초보자 60+10개,33000당 70개,Shopname/1071,Shopinfo/1071,40003;1003,70;110,Item/Key/material_98,rpgg2.package2023.bf6,11000,one,,FALSE
 1072,[BF]룰렛 열쇠 - 모험가 45+3개,33000당 48개,Shopname/1072,Shopinfo/1072,40004;1003,48;110,Item/Key/material_68,rpgg2.package2023.bf7,11000,one,,FALSE
 1073,[BF]룰렛 열쇠 - 프리미엄 18+2개,33000 당 20개,Shopname/1073,Shopinfo/1073,40005;1003,20;110,Item/Key/material_48,rpgg2.package2023.bf8,11000,one,,FALSE
@@ -138,7 +138,7 @@ T10 무기
 1085,설날 위장 패키지,설날 위장 + 무기,Shopname/1085,Shopinfo/1085,50006;40016;40018;1003,20;1;1;220,Transform/대장군,rpgg2.package2024.ny1,33000,one,,TRUE
 1086,설날 펫 패키지,펫 티켓,Shopname/1086,Shopinfo/1086,50006;50007;1003,30;600;220,Item/Consume/Paper/quest_83,rpgg2.package2024.ny2,22000,one,,TRUE
 1087,설날 장비 강화 패키지,무기강화석 촉진제 등,Shopname/1087,Shopinfo/1087,50005;50002;50003;50004;1003,500;200;200;200;330,Item/Resource/강화촉진제,rpgg2.package2024.ny3,22000,one,,TRUE
-1088,장비 강화 촉진 가루,장비 강화 촉진 가루,Shopname/1088,Shopinfo/1088,50005;1003,200;110,Item/Resource/강화촉진제,rpgg2.package.up.1,11000,,,TRUE
+1088,장비 강화 촉진 가루,장비 강화 촉진 가루,Shopname/1088,Shopinfo/1088,50005;1003,400;110,Item/Resource/강화촉진제,rpgg2.package.up.1,11000,,,TRUE
 1089,고급 펫 상자 티켓,펫 티켓,Shopname/1089,Shopinfo/1089,50006;1003,10;110,Item/Consume/Paper/quest_83,rpgg2.package.pet.1,11000,weekly,프상주간펫패키지1,TRUE
 1090,고급 펫 상자 티켓,펫 티켓,Shopname/1090,Shopinfo/1090,50006;1003,34;330,Item/Consume/Paper/quest_83,rpgg2.package.pet.2,33000,weekly,프상주간펫패키지2,TRUE
 1091,설날 복주머니,무기강화석 촉진제 등,Shopname/1091,Shopinfo/1091,565;1003,20;55,Item/Event/설날/설날복주머니,rpgg2.package2024.ny4,5500,,,TRUE
@@ -163,6 +163,9 @@ T10 무기
 1107,[올림푸스]룰렛 패키지,33000 당 30개,Shopname/1107,Shopinfo/1107,40005;1003;100018,30;330;66000,Item/Consume/Box2/Icon26,rpgg2.package2024.event5,33000,one,,TRUE
 1108,[여름2024]서핑 위장 세트 패키지,설날 위장 + 무기,Shopname/1108,Shopinfo/1108,50006;40028;1003;100021,20;1;330;66000,Transform/서핑,rpgg2.package2024.6.event1,22000,one,,TRUE
 1109,[여름2024]펫 패키지,펫 티켓,Shopname/1109,Shopinfo/1109,50006;50007;1003;100021,30;600;220;44000,Item/Consume/Paper/quest_83,rpgg2.package2024.6.event2,22000,one,,TRUE
-1110,[여름2024]강화 패키지,무기강화석 촉진제 등,Shopname/1110,Shopinfo/1110,50005;50002;50003;50004;1003;100021,500;200;200;200;220;44000,Item/Resource/강화촉진제,rpgg2.package2024.6.event3,22000,one,,TRUE
+1110,[여름2024]강화 패키지,무기강화석 촉진제 등,Shopname/1110,Shopinfo/1110,50005;50002;50003;50004;1003;100021,800;200;200;200;220;44000,Item/Resource/강화촉진제,rpgg2.package2024.6.event3,22000,one,,TRUE
 1111,[여름2024]보물 상자 패키지,보물상자,Shopname/1111,Shopinfo/1111,567;1003;100021,20;55;11000,Item/Consume/Box2/Icon3,rpgg2.package2024.6.event4,5500,,,TRUE
 1112,[여름2024]룰렛 패키지,33000 당 30개,Shopname/1112,Shopinfo/1112,40005;1003;100021,30;330;66000,Item/Consume/Box2/Icon26,rpgg2.package2024.6.event5,33000,one,,TRUE
+1113,시즌2 스타터 팩1,시즌2 스타터 팩,Shopname/1113,Shopinfo/1113,592;51;50000,1;1;150,Item/Consume/Box/chest_2,rpgg2.package2024.starter1,5500,one,,TRUE
+1114,시즌2 스타터 팩2,시즌2 스타터 팩,Shopname/1114,Shopinfo/1114,592;50001;99001;1711;200000;1750,1;300;400;300;100;80,Item/Consume/Box/chest_3,rpgg2.package2024.starter2,11000,one,,TRUE
+1115,시즌2 스타터 팩3,시즌2 스타터 팩,Shopname/1115,Shopinfo/1115,592;4006;587;40005;50005;50002;50003;50004,2;1;1;5;500;200;300;200,Item/Consume/Box/chest_4,rpgg2.package2024.starter3,33000,one,,TRUE

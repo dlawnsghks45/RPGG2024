@@ -47,11 +47,11 @@ id,descriptionKor,sprite,name,description,itemtype,itemsubtype,rare,Recotype,dro
 24,지옥 레이드 결정,Item/Resource/신화악세파편,Itemname/24,Itemdescript/24,1,111,5,,FALSE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 25,,,Itemname/25,Itemdescript/25,1,111,5,,FALSE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 26,신 장비 파편,Item/Season2/0,Itemname/26,Itemdescript/26,1,111,5,,FALSE,0,5000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-27,신 장비 제작석,Item/Season2/1,Itemname/27,Itemdescript/27,1,111,6,,FALSE,0,100000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+27,신 장비 제작석,Item/Season2/1,Itemname/27,Itemdescript/27,1,111,6,,FALSE,0,10,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 28,신전의 보옥,Item/Season2/2,Itemname/28,Itemdescript/28,1,111,7,,FALSE,0,500000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 29,정제된 신의 힘,Item/Season2/3,Itemname/29,Itemdescript/29,1,111,7,,FALSE,0,1000000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 30,"파티 레이드 보상 횟수권,.",Item/Consume/Paper/quest_90,Itemname/30,Itemdescript/30,2,401,6,,TRUE,0,1,FALSE,1,파티레이드주간횟수,1,weekly,0,TRUE,FALSE,FALSE
-,,,,,,,,,,,,,,,,,,,,
+31,신 장비 제작석,Item/Season2/1,Itemname/31,Itemdescript/31,1,111,6,,FALSE,0,100000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 ,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,
@@ -98,7 +98,7 @@ id,descriptionKor,sprite,name,description,itemtype,itemsubtype,rare,Recotype,dro
 40026,제우스의번개,Item/위장/40,Itemname/40026,Itemdescript/40026,2,403,6,,FALSE,0,1,FALSE,1,A2056,0,0,0,TRUE,0,FALSE
 40027,도깨비 방망이,Item/위장/41,Itemname/40027,Itemdescript/40027,2,403,6,,FALSE,0,1,FALSE,1,A2057,0,0,0,TRUE,0,FALSE
 40028,여름 서퍼,Transform/서핑,Itemname/40028,Itemdescript/40028,2,403,6,,FALSE,0,1,FALSE,1,A2058,0,0,0,TRUE,0,FALSE
-,,,,,,,,,,,,,,,,,,,,
+40029,트리슈라,Item/위장/42,Itemname/40029,Itemdescript/40029,2,403,6,,FALSE,0,1,FALSE,1,A2059,0,0,0,TRUE,0,FALSE
 ,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,
@@ -182,7 +182,7 @@ id,descriptionKor,sprite,name,description,itemtype,itemsubtype,rare,Recotype,dro
 100002,안씀,Item/Event/E3,Itemname/100002,Itemdescript/100002,1,116,6,,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 100003,안씀,Item/Event/E4,Itemname/100003,Itemdescript/100003,1,116,4,,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 100004,안씀,Item/Event/E5,Itemname/100004,Itemdescript/100004,1,116,5,,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100005,안씀,Item/Event/E6,Itemname/100005,Itemdescript/100005,1,116,6,,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+100005, ,Item/Event/E6,Itemname/100005,Itemdescript/100005,1,116,6,,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 100006,안씀,Item/Event/E7,Itemname/100006,Itemdescript/100006,1,116,4,,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 100007,안씀,Item/Event/E8,Itemname/100007,Itemdescript/100007,1,116,5,,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 100008,안씀,Item/Event/E9,Itemname/100008,Itemdescript/100008,1,116,6,,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
@@ -338,8 +338,8 @@ id,descriptionKor,sprite,name,description,itemtype,itemsubtype,rare,Recotype,dro
 ,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,
 568,시즌2 무기 상자,Item/Consume/Box2/Icon17,Itemname/568,Itemdescript/568,2,400,7,,TRUE,0,1,FALSE,0,E6138;E6139;E6140;E6142;E6144;E6145;E6146;E6147;E6148;E6149;E6150,,Choice,1,TRUE,FALSE,TRUE
-569,시즌2 보조무기 상자,Item/Consume/Box2/Icon7,Itemname/569,Itemdescript/569,2,400,7,,TRUE,0,1,FALSE,0,E6151;E6152;E6153;E6154,,Choice,1,TRUE,FALSE,TRUE
-570,시즌2 방어구 상자,Item/Consume/Box2/Icon23,Itemname/570,Itemdescript/570,2,400,7,,TRUE,0,1,FALSE,0,E6155;E6156;E6157;E6158,,Choice,1,TRUE,FALSE,TRUE
+569,시즌2 보조무기 상자,Item/Consume/Box2/Icon7,Itemname/569,Itemdescript/569,2,400,7,,TRUE,0,1,FALSE,0,E6155;E6156;E6157;E6158,,Choice,1,TRUE,FALSE,TRUE
+570,시즌2 방어구 상자,Item/Consume/Box2/Icon23,Itemname/570,Itemdescript/570,2,400,7,,TRUE,0,1,FALSE,0,E6151;E6152;E6153;E6154,,Choice,1,TRUE,FALSE,TRUE
 571,시즌2 장신구 상자,Item/Consume/Box2/Icon21,Itemname/571,Itemdescript/571,2,400,7,,TRUE,0,1,FALSE,0,E6161;E6162;E6163;E6164;E6165;E6166,,Choice,1,TRUE,FALSE,TRUE
 572,파티 레이드 토벌 상자,Item/Consume/Box/pvpbag,Itemname/572,Itemdescript/572,2,400,6,,FALSE,0,1,FALSE,0,50005;535;40000;40000;40001;40001;40002;40002;40003;40004;1005;1006;1750,3;1;100;1000;20;50;5;20;2;1;5;2;1,Random,0,TRUE,FALSE,FALSE
 573,[시즌2]초고속 성장 패키지,Item/Consume/Box/죽은왕상자,Shopname/1040,Shopinfo/1040,2,400,7,,TRUE,0,1,FALSE,0,200018;4005;558;559;575;576;532;533;534;40005;40002;526;1711;99000;1003,1;2;2;2;2;2;2;2;2;20;1000;15;1200;15000;2200,All,0,TRUE,FALSE,FALSE
@@ -360,6 +360,19 @@ id,descriptionKor,sprite,name,description,itemtype,itemsubtype,rare,Recotype,dro
 585,백룡,Item/Consume/Box/New box/quest_108,Itemname/585,Itemdescript/585,2,400,4,,TRUE,0,1,FALSE,0,48012;48013;48014;48015,1;1;1;1,Choice,1,TRUE,FALSE,FALSE
 586,이그니스,Item/Consume/Box/New box/quest_121,Itemname/586,Itemdescript/586,2,400,5,,TRUE,0,1,FALSE,0,48016;48017;48018;48019,1;1;1;1,Choice,1,TRUE,FALSE,FALSE
 587,까치,Item/Consume/Box/New box/quest_146,Itemname/587,Itemdescript/587,2,400,6,,TRUE,0,1,FALSE,0,48020;48021;48022;48023;48024;48025;48026;48027,1;1;1;1;1;1;1;1,Choice,1,TRUE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,,
+588,탈리스만 선택 상자,Item/Consume/Box/chest_3,Itemname/588,Itemdescript/588,2,400,6,,TRUE,0,100000000,TRUE,0,1754;1755;1756;1757;1758;1759;1760;1761;1762,1;1;1;1;1;1;1;1;1,Choice,1,TRUE,FALSE,FALSE
+589,탈리스만 무작위 상자,Item/Consume/Box/chest_4,Itemname/589,Itemdescript/589,2,400,6,,TRUE,0,100000000,FALSE,0,1754;1755;1756;1757;1758;1759;1760;1761;1762,1;1;1;1;1;1;1;1;1,Random,0,TRUE,FALSE,FALSE
+590,빛나는 탈리스만 선택 상자,Item/Consume/Box/chest_3,Itemname/590,Itemdescript/590,2,400,7,,TRUE,0,100000000,TRUE,0,1763;1764;1765;1766;1767;1768;1769;1770;1771,1;1;1;1;1;1;1;1;1,Choice,1,TRUE,FALSE,FALSE
+591,빛나는 탈리스만 무작위 상자,Item/Consume/Box/chest_4,Itemname/591,Itemdescript/591,2,400,7,,TRUE,0,100000000,FALSE,0,1763;1764;1765;1766;1767;1768;1769;1770;1771,1;1;1;1;1;1;1;1;1,Random,0,TRUE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,,
+592,전 시즌 위장 선택 상자,Item/Consume/Box2/Icon11,Itemname/592,Itemdescript/592,2,400,7,,TRUE,0,0,TRUE,0,40014;40015;40016;40017;40018;40019;40020;40021;40024;40025;40026;40027,1;1;1;1;1;1;1;1;1;1;1;1;1,Choice,1,TRUE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,
@@ -417,14 +430,29 @@ id,descriptionKor,sprite,name,description,itemtype,itemsubtype,rare,Recotype,dro
 1750,마법사의 묘 입장권,Item/ETC/DungeonPass2,Itemname/1750,Itemdescript/1750,3,111,6,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 ,,,,,,,,,,,,,,,,,,,,
 1751,장비 변경권,Item/Scroll/Scroll12,Itemname/1751,Itemdescript/1751,1,117,6,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-1752,발록의 정수1~15,Item/Resource/Dungeon_Boss6,Itemname/1752,Itemdescript/1752,3,111,7,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-1753,발록의 정수16~30,Item/Resource/Dungeon_Boss6,Itemname/1753,Itemdescript/1753,3,111,7,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
+1752,발록의 정수1~10,Item/Resource/Dungeon_Boss6,Itemname/1752,Itemdescript/1752,3,111,7,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
+1753,발록의 정수11~15,Item/Resource/Dungeon_Boss6,Itemname/1753,Itemdescript/1753,3,111,7,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
 ,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
+1754,대지의 탈리스만 코어,Item/Talisman/0,Itemname/1754,Itemdescript/1754,6,407,7,,FALSE,0,1,FALSE,1,T1000,0,0,0,TRUE,0,FALSE
+1755,죽음의 탈리스만 코어,Item/Talisman/1,Itemname/1755,Itemdescript/1755,6,407,7,,FALSE,0,1,FALSE,1,T1001,0,0,0,TRUE,0,FALSE
+1756,칼날의 탈리스만 코어,Item/Talisman/2,Itemname/1756,Itemdescript/1756,6,407,7,,FALSE,0,1,FALSE,1,T1002,0,0,0,TRUE,0,FALSE
+1757,용의 탈리스만 코어,Item/Talisman/3,Itemname/1757,Itemdescript/1757,6,407,7,,FALSE,0,1,FALSE,1,T1003,0,0,0,TRUE,0,FALSE
+1758,독사의 탈리스만 코어,Item/Talisman/4,Itemname/1758,Itemdescript/1758,6,407,7,,FALSE,0,1,FALSE,1,T1004,0,0,0,TRUE,0,FALSE
+1759,번개의 탈리스만 코어,Item/Talisman/5,Itemname/1759,Itemdescript/1759,6,407,7,,FALSE,0,1,FALSE,1,T1005,0,0,0,TRUE,0,FALSE
+1760,빛의 탈리스만 코어,Item/Talisman/6,Itemname/1760,Itemdescript/1760,6,407,7,,FALSE,0,1,FALSE,1,T1006,0,0,0,TRUE,0,FALSE
+1761,거인의 탈리스만 코어,Item/Talisman/7,Itemname/1761,Itemdescript/1761,6,407,7,,FALSE,0,1,FALSE,1,T1007,0,0,0,TRUE,0,FALSE
+1762,키메라의 탈리스만 코어,Item/Talisman/8,Itemname/1762,Itemdescript/1762,6,407,7,,FALSE,0,1,FALSE,1,T1008,0,0,0,TRUE,0,FALSE
+1763,빛나는 대지의 탈리스만 코어,Item/Talisman/0,Itemname/1763,Itemdescript/1763,7,407,7,,FALSE,0,1,FALSE,1,T1000,1,0,1,TRUE,0,FALSE
+1764,빛나는 죽음의 탈리스만 코어,Item/Talisman/1,Itemname/1764,Itemdescript/1764,7,407,7,,FALSE,0,1,FALSE,1,T1001,1,0,1,TRUE,0,FALSE
+1765,빛나는 칼날의 탈리스만 코어,Item/Talisman/2,Itemname/1765,Itemdescript/1765,7,407,7,,FALSE,0,1,FALSE,1,T1002,1,0,1,TRUE,0,FALSE
+1766,빛나는 용의 탈리스만 코어,Item/Talisman/3,Itemname/1766,Itemdescript/1766,7,407,7,,FALSE,0,1,FALSE,1,T1003,1,0,1,TRUE,0,FALSE
+1767,빛나는 독사의 탈리스만 코어,Item/Talisman/4,Itemname/1767,Itemdescript/1767,7,407,7,,FALSE,0,1,FALSE,1,T1004,1,0,1,TRUE,0,FALSE
+1768,빛나는 번개의 탈리스만 코어,Item/Talisman/5,Itemname/1768,Itemdescript/1768,7,407,7,,FALSE,0,1,FALSE,1,T1005,1,0,1,TRUE,0,FALSE
+1769,빛나는 빛의 탈리스만 코어,Item/Talisman/6,Itemname/1769,Itemdescript/1769,7,407,7,,FALSE,0,1,FALSE,1,T1006,1,0,1,TRUE,0,FALSE
+1770,빛나는 거인의 탈리스만 코어,Item/Talisman/7,Itemname/1770,Itemdescript/1770,7,407,7,,FALSE,0,1,FALSE,1,T1007,1,0,1,TRUE,0,FALSE
+1771,빛나는 키메라의 탈리스만 코어,Item/Talisman/8,Itemname/1771,Itemdescript/1771,7,407,7,,FALSE,0,1,FALSE,1,T1008,1,0,1,TRUE,0,FALSE
 ,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,

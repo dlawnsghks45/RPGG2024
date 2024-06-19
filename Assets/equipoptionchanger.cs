@@ -8,7 +8,7 @@ using Random = UnityEngine.Random;
 
 public class equipoptionchanger : MonoBehaviour
 {
-   //½Ì±ÛÅæ¸¸µé±â.
+   //ì‹±ê¸€í†¤ë§Œë“¤ê¸°.
    private static equipoptionchanger _instance = null;
 
    public static equipoptionchanger Instance
@@ -33,22 +33,22 @@ public class equipoptionchanger : MonoBehaviour
 
    public GameObject EquipBlind;
 
-   public UIButton RareButtons; //µî±Ş Ç°Áú Æ¯¼öÈ¿°ú ¼ø
-   public UIButton CraftButtons; //µî±Ş Ç°Áú Æ¯¼öÈ¿°ú ¼ø
-   public UIButton ESkillButtons; //µî±Ş Ç°Áú Æ¯¼öÈ¿°ú ¼ø
-   public UIButton SmeltButtons; //µî±Ş Ç°Áú Æ¯¼öÈ¿°ú ¼ø
-   public UIButton ESkillLessButtons; //ºÒ¾ÈÁ¤ÇÑ Æ¯¼öÈ¿°ú ¼ø
-   public UIButton AdvanButtons; //½Â±Ş ¼ø
-   public UIButton ChangeButtons; //Àåºñ º¯°æ
-   public UIButton UpgradeButtons; //Àåºñ º¯°æ
+   public UIButton RareButtons; //ë“±ê¸‰ í’ˆì§ˆ íŠ¹ìˆ˜íš¨ê³¼ ìˆœ
+   public UIButton CraftButtons; //ë“±ê¸‰ í’ˆì§ˆ íŠ¹ìˆ˜íš¨ê³¼ ìˆœ
+   public UIButton ESkillButtons; //ë“±ê¸‰ í’ˆì§ˆ íŠ¹ìˆ˜íš¨ê³¼ ìˆœ
+   public UIButton SmeltButtons; //ë“±ê¸‰ í’ˆì§ˆ íŠ¹ìˆ˜íš¨ê³¼ ìˆœ
+   public UIButton ESkillLessButtons; //ë¶ˆì•ˆì •í•œ íŠ¹ìˆ˜íš¨ê³¼ ìˆœ
+   public UIButton AdvanButtons; //ìŠ¹ê¸‰ ìˆœ
+   public UIButton ChangeButtons; //ì¥ë¹„ ë³€ê²½
+   public UIButton UpgradeButtons; //ì¥ë¹„ ë³€ê²½
 
 
    public RectTransform[] RefreshItembars;
 
    public UIView Panel;
 
-   //Ç°Áú¹× µî±ŞÀº Á¤ÇØÁø È®·ü·Î °£´Ù.
-   //Ç°Áú¹× µî±ŞÀº ÇöÀç µî±Ş ¾Æ·¡·Î ¶³¾îÁöÁö ¾Ê´Â´Ù.
+   //í’ˆì§ˆë° ë“±ê¸‰ì€ ì •í•´ì§„ í™•ë¥ ë¡œ ê°„ë‹¤.
+   //í’ˆì§ˆë° ë“±ê¸‰ì€ í˜„ì¬ ë“±ê¸‰ ì•„ë˜ë¡œ ë–¨ì–´ì§€ì§€ ì•ŠëŠ”ë‹¤.
 
 
    public void ShowPanel()
@@ -60,10 +60,10 @@ public class equipoptionchanger : MonoBehaviour
    {
       EquipItemDB.Row equipdata = EquipItemDB.Instance.Find_id(Inventory.Instance.data.Itemid);
 
-      //µî±Ş ¹öÆ° ¼³Á¤
+      //ë“±ê¸‰ ë²„íŠ¼ ì„¤ì •
       string[] getrare = equipdata.RarePercent.Split(';');
 
-      string minrare = Inventory.Instance.data.Itemrare; //ÀÚ±â·¹º§ÀÌ ÇöÀç ·¹º§ ½ÇÆĞ ½Ã À¯Â¢ 
+      string minrare = Inventory.Instance.data.Itemrare; //ìê¸°ë ˆë²¨ì´ í˜„ì¬ ë ˆë²¨ ì‹¤íŒ¨ ì‹œ ìœ ì§– 
       string maxrare = "0";
 
 
@@ -89,31 +89,31 @@ public class equipoptionchanger : MonoBehaviour
       if (Inventory.Instance.data.Itemrare == "6")
       {
          RareButtons.gameObject.SetActive(true);
-         Inventory.Instance.InvenslotButtons[(int)Inventory.invenslotenumbutton.Àç¼³Á¤].SetActive(true);
+         Inventory.Instance.InvenslotButtons[(int)Inventory.invenslotenumbutton.ì¬ì„¤ì •].SetActive(true);
       }
       else if (int.Parse(minrare) < int.Parse(maxrare))
       {
          RareButtons.gameObject.SetActive(true);
-         Inventory.Instance.InvenslotButtons[(int)Inventory.invenslotenumbutton.Àç¼³Á¤].SetActive(true);
+         Inventory.Instance.InvenslotButtons[(int)Inventory.invenslotenumbutton.ì¬ì„¤ì •].SetActive(true);
       }
       else
          RareButtons.gameObject.SetActive(false);
 
       if (Inventory.Instance.data.CraftRare1 == 5)
       {
-         //°¡´É
+         //ê°€ëŠ¥
          CraftButtons.gameObject.SetActive(true);
-         Inventory.Instance.InvenslotButtons[(int)Inventory.invenslotenumbutton.Àç¼³Á¤].SetActive(true);
+         Inventory.Instance.InvenslotButtons[(int)Inventory.invenslotenumbutton.ì¬ì„¤ì •].SetActive(true);
       }
       else if (Inventory.Instance.data.CraftRare1 != 6)
       {
-         //°¡´É
+         //ê°€ëŠ¥
          CraftButtons.gameObject.SetActive(true);
-         Inventory.Instance.InvenslotButtons[(int)Inventory.invenslotenumbutton.Àç¼³Á¤].SetActive(true);
+         Inventory.Instance.InvenslotButtons[(int)Inventory.invenslotenumbutton.ì¬ì„¤ì •].SetActive(true);
       }
       else
       {
-         //ºÒ°¡ 
+         //ë¶ˆê°€ 
          CraftButtons.gameObject.SetActive(false);
       }
 
@@ -121,7 +121,7 @@ public class equipoptionchanger : MonoBehaviour
       if (equipdata.SpeMehod != "0")
       {
          ESkillButtons.gameObject.SetActive(true);
-         Inventory.Instance.InvenslotButtons[(int)Inventory.invenslotenumbutton.Àç¼³Á¤].SetActive(true);
+         Inventory.Instance.InvenslotButtons[(int)Inventory.invenslotenumbutton.ì¬ì„¤ì •].SetActive(true);
       }
       else
          ESkillButtons.gameObject.SetActive(false);
@@ -129,11 +129,11 @@ public class equipoptionchanger : MonoBehaviour
       ESkillButtons.gameObject.SetActive(equipdata.SpeMehod != "0" ? true : false);
 
 
-      //Á¦·Ã 
+      //ì œë ¨ 
       if (Inventory.Instance.data.MaxStoneCount1 != 10)
       {
          SmeltButtons.gameObject.SetActive(true);
-         Inventory.Instance.InvenslotButtons[(int)Inventory.invenslotenumbutton.Àç¼³Á¤].SetActive(true);
+         Inventory.Instance.InvenslotButtons[(int)Inventory.invenslotenumbutton.ì¬ì„¤ì •].SetActive(true);
       }
       else
       {
@@ -141,22 +141,22 @@ public class equipoptionchanger : MonoBehaviour
       }
 
 
-      //½Â±Ş È®ÀÎ
+      //ìŠ¹ê¸‰ í™•ì¸
       if (equipdata.AdvanEquipID != "")
       {
          AdvanButtons.gameObject.SetActive(true);
-         Inventory.Instance.InvenslotButtons[(int)Inventory.invenslotenumbutton.Àç¼³Á¤].SetActive(true);
+         Inventory.Instance.InvenslotButtons[(int)Inventory.invenslotenumbutton.ì¬ì„¤ì •].SetActive(true);
       }
       else
       {
          AdvanButtons.gameObject.SetActive(false);
       }
       
-      //Àåºñº¯°æ
+      //ì¥ë¹„ë³€ê²½
       if (equipdata.ChangeId != "" )
       {
          ChangeButtons.gameObject.SetActive(true);
-         Inventory.Instance.InvenslotButtons[(int)Inventory.invenslotenumbutton.Àç¼³Á¤].SetActive(true);
+         Inventory.Instance.InvenslotButtons[(int)Inventory.invenslotenumbutton.ì¬ì„¤ì •].SetActive(true);
       }
       else
       {
@@ -164,19 +164,19 @@ public class equipoptionchanger : MonoBehaviour
       }
       
       
-      //ºÒ¾ÈÁ¤ÇÑ Æ¯¼öÈ¿°ú
+      //ë¶ˆì•ˆì •í•œ íŠ¹ìˆ˜íš¨ê³¼
       if (Inventory.Instance.data.GetEquipSkillCount() < 4 && equipdata.SpeMehod != "0")
       {
          ESkillLessButtons.gameObject.SetActive(true);
-         Inventory.Instance.InvenslotButtons[(int)Inventory.invenslotenumbutton.Àç¼³Á¤].SetActive(true);
+         Inventory.Instance.InvenslotButtons[(int)Inventory.invenslotenumbutton.ì¬ì„¤ì •].SetActive(true);
       }
       else
       {
          ESkillLessButtons.gameObject.SetActive(false);
       }
 
-      //¾ÆÀÌµğ¸¦ °¡Á®¿È 
-      //µî±ŞÀÌ µÇ´ÂÁö Ç°ÁúÀÌ µÇ´ÂÁö º»´Ù.
+      //ì•„ì´ë””ë¥¼ ê°€ì ¸ì˜´ 
+      //ë“±ê¸‰ì´ ë˜ëŠ”ì§€ í’ˆì§ˆì´ ë˜ëŠ”ì§€ ë³¸ë‹¤.
    }
 
 
@@ -215,7 +215,7 @@ public class equipoptionchanger : MonoBehaviour
       if (Inventory.Instance.data.Itemrare == "6")
       {
          
-               int minrare = int.Parse(Inventory.Instance.data.Itemrare); //ÀÚ±â·¹º§ÀÌ ÇöÀç ·¹º§ ½ÇÆĞ ½Ã À¯Â¢ 
+               int minrare = int.Parse(Inventory.Instance.data.Itemrare); //ìê¸°ë ˆë²¨ì´ í˜„ì¬ ë ˆë²¨ ì‹¤íŒ¨ ì‹œ ìœ ì§– 
          
                for (int i = 0; i < RareText.Length; i++)
                {
@@ -238,7 +238,7 @@ public class equipoptionchanger : MonoBehaviour
       {
           string[] getrare = equipdata.RarePercent.Split(';');
          
-               int minrare = int.Parse(Inventory.Instance.data.Itemrare); //ÀÚ±â·¹º§ÀÌ ÇöÀç ·¹º§ ½ÇÆĞ ½Ã À¯Â¢ 
+               int minrare = int.Parse(Inventory.Instance.data.Itemrare); //ìê¸°ë ˆë²¨ì´ í˜„ì¬ ë ˆë²¨ ì‹¤íŒ¨ ì‹œ ìœ ì§– 
          
                string maxrare = "0";
          
@@ -265,8 +265,8 @@ public class equipoptionchanger : MonoBehaviour
                
                if (!ishavenext)
                {
-                  //ÃÖ´ëÄ¡
-                  //ÃÖ´ë·¹º§ÀÔ´Ï´Ù
+                  //ìµœëŒ€ì¹˜
+                  //ìµœëŒ€ë ˆë²¨ì…ë‹ˆë‹¤
                   RarePanel.Hide(true);
                }
          
@@ -316,7 +316,7 @@ public class equipoptionchanger : MonoBehaviour
       {
          return;
 
-         //´Ù½Ã ½Ãµµ
+         //ë‹¤ì‹œ ì‹œë„
       }
 
       isstart = true;
@@ -325,8 +325,8 @@ public class equipoptionchanger : MonoBehaviour
       {
          if (PlayerBackendData.Instance.CheckItemCount("53") <= 1)
          {
-            //¾øÀ½
-            Debug.Log("¾ÈµÊ");
+            //ì—†ìŒ
+            Debug.Log("ì•ˆë¨");
             return;
          }
          RareEffect_Start.Play();
@@ -341,8 +341,8 @@ public class equipoptionchanger : MonoBehaviour
       {
          if (PlayerBackendData.Instance.CheckItemCount("53") <= 0)
          {
-            //¾øÀ½
-            Debug.Log("¾ÈµÊ");
+            //ì—†ìŒ
+            Debug.Log("ì•ˆë¨");
             return;
          }
 
@@ -369,12 +369,12 @@ public class equipoptionchanger : MonoBehaviour
             if (callback.IsSuccess())
             {
                Settingmanager.Instance.RecentServerDataCanLoadText.text = Inventory.Instance.istrue
-                  ? string.Format(Inventory.GetTranslate("UI/¼³Á¤_ÀúÀå_ºÒ·¯¿À±âÀ¯¹«"),
+                  ? string.Format(Inventory.GetTranslate("UI/ì„¤ì •_ì €ì¥_ë¶ˆëŸ¬ì˜¤ê¸°ìœ ë¬´"),
                      Inventory.Instance.istrue
                         ? "<Color=lime>On</color>"
                         : "<Color=red>Off</color>")
-                  : string.Format(Inventory.GetTranslate("UI/¼³Á¤_ÀúÀå_ºÒ·¯¿À±âÀ¯¹«"), "<Color=red>Off</color>");
-               LogManager.UserSmeltCheck("Ã¼Å©_µî±Ş");
+                  : string.Format(Inventory.GetTranslate("UI/ì„¤ì •_ì €ì¥_ë¶ˆëŸ¬ì˜¤ê¸°ìœ ë¬´"), "<Color=red>Off</color>");
+               LogManager.UserSmeltCheck("ì²´í¬_ë“±ê¸‰");
             }
          });
       }
@@ -389,7 +389,7 @@ public class equipoptionchanger : MonoBehaviour
       if (issucc)
       {
          RareShowEffect_Succ.Play();
-         alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI7/µî±Ş¼º°ø"), alertmanager.alertenum.ÀÏ¹İ);
+         alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI7/ë“±ê¸‰ì„±ê³µ"), alertmanager.alertenum.ì¼ë°˜);
       }
       else
       {
@@ -400,7 +400,7 @@ public class equipoptionchanger : MonoBehaviour
    }
 
 
-   //Ç°Áú
+   //í’ˆì§ˆ
    public UIView CraftPanel;
    public GameObject[] Craftobj;
    public Text CraftLevelText;
@@ -418,7 +418,7 @@ public class equipoptionchanger : MonoBehaviour
 
       CraftLevelText.text = Inventory.GetTranslate(
          $"CraftRare/{Inventory.Instance.data.CraftRare1}");
-      //µî±Ş ¹öÆ° ¼³Á¤
+      //ë“±ê¸‰ ë²„íŠ¼ ì„¤ì •
 
       for (int i = 0; i < Craftobj.Length; i++)
       {
@@ -427,8 +427,8 @@ public class equipoptionchanger : MonoBehaviour
 
       if (Inventory.Instance.data.CraftRare1 == 6)
       {
-         //ÃÖ´ëÄ¡
-         //ÃÖ´ë·¹º§ÀÔ´Ï´Ù
+         //ìµœëŒ€ì¹˜
+         //ìµœëŒ€ë ˆë²¨ì…ë‹ˆë‹¤
          CraftPanel.Hide(true);
       }
       
@@ -453,8 +453,8 @@ public class equipoptionchanger : MonoBehaviour
          }
          if (Inventory.Instance.data.CraftRare1 == 5)
          {
-            //ÃÖ´ëÄ¡
-            //ÃÖ´ë·¹º§ÀÔ´Ï´Ù
+            //ìµœëŒ€ì¹˜
+            //ìµœëŒ€ë ˆë²¨ì…ë‹ˆë‹¤
             CraftPanel.Hide(true);
          }
          
@@ -478,7 +478,7 @@ public class equipoptionchanger : MonoBehaviour
 
       if (!Settingmanager.Instance.CheckServerOn())
       {
-         //´Ù½Ã ½Ãµµ
+         //ë‹¤ì‹œ ì‹œë„
          return;
       }
 
@@ -486,8 +486,8 @@ public class equipoptionchanger : MonoBehaviour
       {
          if (PlayerBackendData.Instance.CheckItemCount("52") <= 1)
          {
-            //¾øÀ½
-            Debug.Log("¾ÈµÊ");
+            //ì—†ìŒ
+            Debug.Log("ì•ˆë¨");
             return;
          }
          
@@ -503,8 +503,8 @@ public class equipoptionchanger : MonoBehaviour
       {
          if (PlayerBackendData.Instance.CheckItemCount("52") <= 0)
          {
-            //¾øÀ½
-            Debug.Log("¾ÈµÊ");
+            //ì—†ìŒ
+            Debug.Log("ì•ˆë¨");
             return;
          }
          
@@ -536,12 +536,12 @@ public class equipoptionchanger : MonoBehaviour
             if (callback.IsSuccess())
             {
                Settingmanager.Instance.RecentServerDataCanLoadText.text = Inventory.Instance.istrue
-                  ? string.Format(Inventory.GetTranslate("UI/¼³Á¤_ÀúÀå_ºÒ·¯¿À±âÀ¯¹«"),
+                  ? string.Format(Inventory.GetTranslate("UI/ì„¤ì •_ì €ì¥_ë¶ˆëŸ¬ì˜¤ê¸°ìœ ë¬´"),
                      Inventory.Instance.istrue
                         ? "<Color=lime>On</color>"
                         : "<Color=red>Off</color>")
-                  : string.Format(Inventory.GetTranslate("UI/¼³Á¤_ÀúÀå_ºÒ·¯¿À±âÀ¯¹«"), "<Color=red>Off</color>");
-               LogManager.UserSmeltCheck("Ã¼Å©_Ç°Áú");
+                  : string.Format(Inventory.GetTranslate("UI/ì„¤ì •_ì €ì¥_ë¶ˆëŸ¬ì˜¤ê¸°ìœ ë¬´"), "<Color=red>Off</color>");
+               LogManager.UserSmeltCheck("ì²´í¬_í’ˆì§ˆ");
             }
          });
       }
@@ -557,7 +557,7 @@ public class equipoptionchanger : MonoBehaviour
       if (issucc)
       {
          CraftShowEffect_Succ.Play();
-         alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI7/Ç°Áú¼º°ø"), alertmanager.alertenum.ÀÏ¹İ);
+         alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI7/í’ˆì§ˆì„±ê³µ"), alertmanager.alertenum.ì¼ë°˜);
       }
       else
       {
@@ -583,7 +583,7 @@ public class equipoptionchanger : MonoBehaviour
    public bool islessequipskill;
    
    
-   //Æ¯¼öÈ¿°ú º¯°æ
+   //íŠ¹ìˆ˜íš¨ê³¼ ë³€ê²½
    public void ShowEskillPanel(bool isnew = false)
    {
       Eskillpanel.Show(false);
@@ -601,7 +601,7 @@ public class equipoptionchanger : MonoBehaviour
       EquipDatabase data = Inventory.Instance.data;
 
 
-      //°íÀ¯È¿°ú È®ÀÎ¿©ºÎ
+      //ê³ ìœ íš¨ê³¼ í™•ì¸ì—¬ë¶€
       int num = EquipItemDB.Instance.Find_id(data.Itemid).SpeMehodP != "0" ? 1 : 0;
 
       if (data.EquipSkill1.Count - num == 0)
@@ -644,7 +644,7 @@ public class equipoptionchanger : MonoBehaviour
       CheckLock();
    }
 
-   //³°Àº
+   //ë‚¡ì€
    public void ShowEskillLessPanel(bool isnew = false)
    {
       Eskillpanel.Show(false);
@@ -664,7 +664,7 @@ public class equipoptionchanger : MonoBehaviour
       EquipDatabase data = Inventory.Instance.data;
 
 
-      //°íÀ¯È¿°ú È®ÀÎ¿©ºÎ
+      //ê³ ìœ íš¨ê³¼ í™•ì¸ì—¬ë¶€
       int num = EquipItemDB.Instance.Find_id(data.Itemid).SpeMehodP != "0" ? 1 : 0;
 
       if (data.EquipSkill1.Count - num == 0)
@@ -755,7 +755,7 @@ public class equipoptionchanger : MonoBehaviour
 
       if (onnum <= 0)
       {
-         //¾ÈµÊ.
+         //ì•ˆë¨.
          for (int i = 0; i < eskillnowpanel.Length; i++)
          {
             eskillnowpanel[i].LockEs.gameObject.SetActive(false);
@@ -771,7 +771,7 @@ public class equipoptionchanger : MonoBehaviour
          }
       }
 
-      //2°³ÀÏ¶§´Â ¿ÂµÈ°Å»©°í´Â ´Ù ºñÈ°¼ºÈ­
+      //2ê°œì¼ë•ŒëŠ” ì˜¨ëœê±°ë¹¼ê³ ëŠ” ë‹¤ ë¹„í™œì„±í™”
       if (lockcountEs.Equals(islessequipskill ? 1:2))
       {
          for (int i = 0; i < eskillnowpanel.Length; i++)
@@ -796,28 +796,28 @@ public class equipoptionchanger : MonoBehaviour
    {
       if (!Settingmanager.Instance.CheckServerOn())
       {
-         //´Ù½Ã ½Ãµµ
+         //ë‹¤ì‹œ ì‹œë„
          return;
 
       }
       
       if (islessequipskill)
       {
-         //´Ã¾î³¯ È®·üÀº 10ÆÛ
+         //ëŠ˜ì–´ë‚  í™•ë¥ ì€ 10í¼
          if (PlayerBackendData.Instance.CheckItemCount("57") < GetNeedESItem())
          {
-            //¾øÀ½
-          //  Debug.Log("¾ÈµÊ");
+            //ì—†ìŒ
+          //  Debug.Log("ì•ˆë¨");
             return;
          }
       }
       else
       {
-         //´Ã¾î³¯ È®·üÀº 10ÆÛ
+         //ëŠ˜ì–´ë‚  í™•ë¥ ì€ 10í¼
          if (PlayerBackendData.Instance.CheckItemCount("54") < GetNeedESItem())
          {
-            //¾øÀ½
-           // Debug.Log("¾ÈµÊ");
+            //ì—†ìŒ
+           // Debug.Log("ì•ˆë¨");
             return;
          }
       }
@@ -866,11 +866,11 @@ public class equipoptionchanger : MonoBehaviour
             if (callback.IsSuccess())
             {
                Settingmanager.Instance.RecentServerDataCanLoadText.text = Inventory.Instance.istrue
-                  ? string.Format(Inventory.GetTranslate("UI/¼³Á¤_ÀúÀå_ºÒ·¯¿À±âÀ¯¹«"),
+                  ? string.Format(Inventory.GetTranslate("UI/ì„¤ì •_ì €ì¥_ë¶ˆëŸ¬ì˜¤ê¸°ìœ ë¬´"),
                      Inventory.Instance.istrue
                         ? "<Color=lime>On</color>"
                         : "<Color=red>Off</color>")
-                  : string.Format(Inventory.GetTranslate("UI/¼³Á¤_ÀúÀå_ºÒ·¯¿À±âÀ¯¹«"), "<Color=red>Off</color>");
+                  : string.Format(Inventory.GetTranslate("UI/ì„¤ì •_ì €ì¥_ë¶ˆëŸ¬ì˜¤ê¸°ìœ ë¬´"), "<Color=red>Off</color>");
             }
          });
       }
@@ -881,11 +881,11 @@ public class equipoptionchanger : MonoBehaviour
 
    }
 
-   //Æ¯¼öÈ¿°ú¸¦ ¹Ù²Û´Ù.
+   //íŠ¹ìˆ˜íš¨ê³¼ë¥¼ ë°”ê¾¼ë‹¤.
    public void Bt_AcceptESkill()
    {
-//     Debug.Log("Ã¼ÀÎÁö ½ºÅ³Àº "+ ChangedOption.Length);
-      Inventory.Instance.data.SetEquipSkills(ChangedOption);
+//     Debug.Log("ì²´ì¸ì§€ ìŠ¤í‚¬ì€ "+ ChangedOption.Length);
+      Inventory.Instance.data.SetEquipSkillsE(ChangedOption);
 
       LogManager.EskillLog(Inventory.Instance.data);
       LogManager.Instance.CheckBug();
@@ -902,7 +902,7 @@ public class equipoptionchanger : MonoBehaviour
       {
          ShowEskillPanel(true);
       }
-      LogManager.UserSmeltCheck("Ã¼Å©_Æ¯È¿");
+      LogManager.UserSmeltCheck("ì²´í¬_íŠ¹íš¨");
       
       
       RefreshEquipEquipGear();
@@ -924,11 +924,11 @@ public class equipoptionchanger : MonoBehaviour
 
    public void Bt_CheckCancelEskill()
    {
-      //  Debug.Log("½º,Å³°³¼ö"+Inventory.Instance.data.EquipSkill1.Count);
+      //  Debug.Log("ìŠ¤,í‚¬ê°œìˆ˜"+Inventory.Instance.data.EquipSkill1.Count);
 
       for (int i = 0; i < Inventory.Instance.data.EquipSkill1.Count; i++)
       {
-//         Debug.Log("½º,Å³"+Inventory.Instance.data.EquipSkill1[i] + i);
+//         Debug.Log("ìŠ¤,í‚¬"+Inventory.Instance.data.EquipSkill1[i] + i);
       }
 
       try
@@ -957,7 +957,7 @@ public class equipoptionchanger : MonoBehaviour
       }
 
       lockcountEs = 0;
-      Inventory.Instance.data.SetEquipSkills(SavedOption);
+      Inventory.Instance.data.SetEquipSkillsE(SavedOption);
      
    }
 
@@ -967,7 +967,7 @@ public class equipoptionchanger : MonoBehaviour
 
       if(!Inventory.Instance.ismines)
          return;
-      //°°Àº ¾ÆÀÌÅÛÀ» ÀåÂøÁßÀÌ¸é ÀåÂø¾ÆÀÌÅÛ º¯°æ
+      //ê°™ì€ ì•„ì´í…œì„ ì¥ì°©ì¤‘ì´ë©´ ì¥ì°©ì•„ì´í…œ ë³€ê²½
       if (Inventory.Instance.data.IsEquip)
       {
          PlayerBackendData.Instance.GetEquipData()[Inventory.Instance.nowsettype] = Inventory.Instance.data;
@@ -979,7 +979,7 @@ public class equipoptionchanger : MonoBehaviour
                   SpriteManager.Instance.GetSprite(EquipItemDB.Instance.Find_id(Inventory.Instance.data.Itemid)
                      .EquipSprite), EquipItemDB.Instance.Find_id(Inventory.Instance.data.Itemid).EquipSprite);
                PlayerData.Instance.SetMainWeaponRare(Inventory.Instance.data.CraftRare1);
-               Inventory.Instance.mainplayer.InitAttackData(); //°ø°İ È½¼ö ¼³Á¤
+               Inventory.Instance.mainplayer.InitAttackData(); //ê³µê²© íšŸìˆ˜ ì„¤ì •
 
                switch (EquipItemDB.Instance.Find_id(Inventory.Instance.data.Itemid).attacktype)
                {
@@ -987,7 +987,7 @@ public class equipoptionchanger : MonoBehaviour
                      Inventory.Instance.mainplayer.attacktype = AttackType.Melee;
                      EquipItemDB.Row data =
                         EquipItemDB.Instance.Find_id(PlayerBackendData.Instance.GetEquipData()[0].Itemid);
-                     //È÷Æ®»ç¿îµå
+                     //íˆíŠ¸ì‚¬ìš´ë“œ
                      if (data.HitSound != "")
                      {
 
@@ -1033,7 +1033,7 @@ public class equipoptionchanger : MonoBehaviour
 
    public GameObject[] SmeltSlotsHave;
 
-   //Æ¯¼öÈ¿°ú º¯°æ
+   //íŠ¹ìˆ˜íš¨ê³¼ ë³€ê²½
    public void ToggleIsCrystalSmelt(bool ison)
    {
       iscrystalSmelt = ison;
@@ -1049,14 +1049,14 @@ public class equipoptionchanger : MonoBehaviour
 
       if (Inventory.Instance.data.MaxStoneCount1.Equals(10))
       {
-         alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI2/ÃÖ´ëÁ¦·Ã¼öÄ¡"), alertmanager.alertenum.ÀÏ¹İ);
+         alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI2/ìµœëŒ€ì œë ¨ìˆ˜ì¹˜"), alertmanager.alertenum.ì¼ë°˜);
          SmeltPanel.Hide(false);
          return;
       }
 
       for (int i = 0; i < SmeltSlots.Length; i++)
       {
-         //ÀüºÎ²û
+         //ì „ë¶€ë”
          SmeltSlots[i].SmeltShow(3);
          SmeltSlotsHave[i].SetActive(false);
       }
@@ -1079,7 +1079,7 @@ public class equipoptionchanger : MonoBehaviour
       {
          return;
 
-         //´Ù½Ã ½Ãµµ
+         //ë‹¤ì‹œ ì‹œë„
       }
 
       isstart = true;
@@ -1089,11 +1089,11 @@ public class equipoptionchanger : MonoBehaviour
       {
          if (PlayerBackendData.Instance.GetCash() < CashCount)
          {
-            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI/ºÒ²ÉºÎÁ·"), alertmanager.alertenum.ÁÖÀÇ);
+            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI/ë¶ˆê½ƒë¶€ì¡±"), alertmanager.alertenum.ì£¼ì˜);
             return;
          }
 
-         //Å©¸®»ç¿ë
+         //í¬ë¦¬ì‚¬ìš©
          issucc = true;
          PlayerData.Instance.DownCash(1000);
          Savemanager.Instance.SaveCash();
@@ -1102,7 +1102,7 @@ public class equipoptionchanger : MonoBehaviour
       {
          if (PlayerBackendData.Instance.GetMoney() < 20000000)
          {
-            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI/°ñµåºÎÁ·"), alertmanager.alertenum.ÁÖÀÇ);
+            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI/ê³¨ë“œë¶€ì¡±"), alertmanager.alertenum.ì£¼ì˜);
             return;
          }
 
@@ -1167,7 +1167,7 @@ public class equipoptionchanger : MonoBehaviour
 
       PlayerBackendData userData = PlayerBackendData.Instance;
       Param paramEquip = new Param();
-      //¼ÂÆÃÇÊ¼ö
+      //ì…‹íŒ…í•„ìˆ˜
       paramEquip.Add("EquipmentNow", userData.EquipEquiptment0);
       paramEquip.Add("Gold", userData.GetMoney());
       paramEquip.Add("Crystal", userData.GetCash());
@@ -1227,14 +1227,14 @@ public class equipoptionchanger : MonoBehaviour
 
       SendQueue.Enqueue(Backend.GameData.Update, "PlayerData", where, paramEquip, (callback) =>
       {
-         // ÀÌÈÄ Ã³¸®
+         // ì´í›„ ì²˜ë¦¬
          if (!callback.IsSuccess()) return;
 
       });
    }
 
 
-   //Àåºñ ½Â±Ş
+   //ì¥ë¹„ ìŠ¹ê¸‰
 
    public UIView Advanpanel;
 
@@ -1266,12 +1266,12 @@ public class equipoptionchanger : MonoBehaviour
    {
       Advanpanel.Show(false);
 
-      //½Â±Ş Àåºñ µ¥ÀÌÅÍ
+      //ìŠ¹ê¸‰ ì¥ë¹„ ë°ì´í„°
       Data = EquipItemDB.Instance.Find_id(Inventory.Instance.data.Itemid);
       AdvanData = EquipItemDB.Instance.Find_id(
          EquipItemDB.Instance.Find_id(Inventory.Instance.data.Itemid).AdvanEquipID);
 
-      //½Â±ŞÀåºñ
+      //ìŠ¹ê¸‰ì¥ë¹„
       AdvanEquipPrevImage.sprite = SpriteManager.Instance.GetSprite(Data.Sprite);
       AdvanEquipPrevText.text = Inventory.GetTranslate(Data.Name);
       Inventory.Instance.ChangeItemRareColor(AdvanEquipPrevText, Inventory.Instance.data.Itemrare);
@@ -1282,29 +1282,29 @@ public class equipoptionchanger : MonoBehaviour
 
 
       itemdata = ItemdatabasecsvDB.Instance.Find_id(Data.AdvanNeedItem);
-      //Àç·á
+      //ì¬ë£Œ
       AdvanNeedImage.sprite = SpriteManager.Instance.GetSprite(itemdata.sprite);
       AdvanNeedNameText.text = $"{Inventory.GetTranslate(itemdata.name)} X {Data.AdvanNeedItemHowmany} ({PlayerBackendData.Instance.CheckItemCount(itemdata.id)})";
       Inventory.Instance.ChangeItemRareColor(AdvanNeedNameText, itemdata.rare);
 
       AdvanNeedGoldText.text = $"{Data.AdvanGold} Gold";
-      AdvanPercentText.text = string.Format(Inventory.GetTranslate("UI3/Àåºñ½Â±ŞÈ®·ü"), Data.AdvanPercent);
+      AdvanPercentText.text = string.Format(Inventory.GetTranslate("UI3/ì¥ë¹„ìŠ¹ê¸‰í™•ë¥ "), Data.AdvanPercent);
    }
 
    public void Bt_StartAdvan()
    {
-      //Àç·á¶û ÀÌ°Ô ÀÖ´Â°¡
+      //ì¬ë£Œë‘ ì´ê²Œ ìˆëŠ”ê°€
       if (PlayerBackendData.Instance.CheckItemCount(itemdata.id) < int.Parse(Data.AdvanNeedItemHowmany))
       {
-         alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI/¾ÆÀÌÅÛºÎÁ·"), alertmanager.alertenum.ÀÏ¹İ);
-         //¾ÆÀÌÅÛÀÌ ¾ø´Ù
+         alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI/ì•„ì´í…œë¶€ì¡±"), alertmanager.alertenum.ì¼ë°˜);
+         //ì•„ì´í…œì´ ì—†ë‹¤
          return;
       }
 
       if (PlayerBackendData.Instance.GetMoney() < decimal.Parse(Data.AdvanGold))
       {
-         //°ñµå°¡ ¾ø´Ù
-         alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI/°ñµåºÎÁ·"), alertmanager.alertenum.ÀÏ¹İ);
+         //ê³¨ë“œê°€ ì—†ë‹¤
+         alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI/ê³¨ë“œë¶€ì¡±"), alertmanager.alertenum.ì¼ë°˜);
          return;
       }
 
@@ -1315,7 +1315,7 @@ public class equipoptionchanger : MonoBehaviour
       
       Advanpanel.Hide(true);
          
-      //°¡´ÉÇÏ´Ù.
+      //ê°€ëŠ¥í•˜ë‹¤.
       PlayerData.Instance.DownGold(Decimal.Parse(Data.AdvanGold));
       PlayerBackendData.Instance.RemoveItem(itemdata.id, int.Parse(Data.AdvanNeedItemHowmany));
 
@@ -1331,7 +1331,7 @@ public class equipoptionchanger : MonoBehaviour
          {
             int alldmg = UnityEngine.Random.Range(int.Parse(AdvanData.MinAllDmg), int.Parse(AdvanData.MaxAllDmg)+1);
             PlayerBackendData.Instance.GetTypeEquipment(Data.Type)[Inventory.Instance.data.KeyId1].Alldmg1 = alldmg;
-            Debug.Log("ÇÇÁõ ¾ø¾î¼­ ¸¸µç´Ù");
+            Debug.Log("í”¼ì¦ ì—†ì–´ì„œ ë§Œë“ ë‹¤");
          }
          
          
@@ -1370,11 +1370,11 @@ public class equipoptionchanger : MonoBehaviour
             if (callback.IsSuccess())
             {
                Settingmanager.Instance.RecentServerDataCanLoadText.text = Inventory.Instance.istrue
-                  ? string.Format(Inventory.GetTranslate("UI/¼³Á¤_ÀúÀå_ºÒ·¯¿À±âÀ¯¹«"),
+                  ? string.Format(Inventory.GetTranslate("UI/ì„¤ì •_ì €ì¥_ë¶ˆëŸ¬ì˜¤ê¸°ìœ ë¬´"),
                      Inventory.Instance.istrue
                         ? "<Color=lime>On</color>"
                         : "<Color=red>Off</color>")
-                  : string.Format(Inventory.GetTranslate("UI/¼³Á¤_ÀúÀå_ºÒ·¯¿À±âÀ¯¹«"), "<Color=red>Off</color>");
+                  : string.Format(Inventory.GetTranslate("UI/ì„¤ì •_ì €ì¥_ë¶ˆëŸ¬ì˜¤ê¸°ìœ ë¬´"), "<Color=red>Off</color>");
             }
          });
       }
@@ -1391,10 +1391,10 @@ public class equipoptionchanger : MonoBehaviour
    }
 
 
-   public UIView AdvanResultPanel; //ÆĞ³Î
-   public Image EquipImage_advanresult; //Àåºñ ÀÌ¹ÌÁö
-   public Text EquipNameText_advanresult; //ÀÌ¸§
-   public Text EquipResult_advanresult; //¼º°ø or ½ÇÆĞ¸¦ º¸¿©ÁÜ
+   public UIView AdvanResultPanel; //íŒ¨ë„
+   public Image EquipImage_advanresult; //ì¥ë¹„ ì´ë¯¸ì§€
+   public Text EquipNameText_advanresult; //ì´ë¦„
+   public Text EquipResult_advanresult; //ì„±ê³µ or ì‹¤íŒ¨ë¥¼ ë³´ì—¬ì¤Œ
 
 
    // ReSharper disable Unity.PerformanceAnalysis
@@ -1407,7 +1407,7 @@ public class equipoptionchanger : MonoBehaviour
       {
          EquipNameText_advanresult.text = AdvanEquipText.text;
          Inventory.Instance.ChangeItemRareColor(EquipNameText_advanresult,Inventory.Instance.data.Itemrare);
-         EquipResult_advanresult.text = Inventory.GetTranslate("UI3/Àåºñ½Â±Ş¼º°ø");
+         EquipResult_advanresult.text = Inventory.GetTranslate("UI3/ì¥ë¹„ìŠ¹ê¸‰ì„±ê³µ");
          EquipResult_advanresult.color = Color.cyan;
       }
       else
@@ -1415,13 +1415,13 @@ public class equipoptionchanger : MonoBehaviour
          EquipNameText_advanresult.text = AdvanEquipPrevText.text;
          EquipNameText_advanresult.color = AdvanEquipPrevText.color;
          Inventory.Instance.ChangeItemRareColor(EquipNameText_advanresult,Inventory.Instance.data.Itemrare);
-         EquipResult_advanresult.text = Inventory.GetTranslate("UI3/Àåºñ½Â±Ş½ÇÆĞ");
+         EquipResult_advanresult.text = Inventory.GetTranslate("UI3/ì¥ë¹„ìŠ¹ê¸‰ì‹¤íŒ¨");
          EquipResult_advanresult.color = Color.red;
       }
 
       yield return SpriteManager.Instance.GetWaitforSecond(0.8f);
       AdvanEffect_Start.Play();
-      Soundmanager.Instance.PlayerSound("Sound/°­È­È®ÀÎÀü");
+      Soundmanager.Instance.PlayerSound("Sound/ê°•í™”í™•ì¸ì „");
 
       yield return SpriteManager.Instance.GetWaitforSecond(1.2f);
 
@@ -1430,12 +1430,12 @@ public class equipoptionchanger : MonoBehaviour
          EquipImage_advanresult.sprite = SpriteManager.Instance.GetSprite(resultimagepath);
          AdvanShowEffect_Succ.Play();
          AdvanShowEffect_Succ2.Play();
-         Soundmanager.Instance.PlayerSound("Sound/°­È­¼º°ø");
+         Soundmanager.Instance.PlayerSound("Sound/ê°•í™”ì„±ê³µ");
       }
       else
       {
          AdvanShowEffect_Fail.Play();
-         Soundmanager.Instance.PlayerSound("Sound/°­È­½ÇÆĞ");
+         Soundmanager.Instance.PlayerSound("Sound/ê°•í™”ì‹¤íŒ¨");
       }
    }
 

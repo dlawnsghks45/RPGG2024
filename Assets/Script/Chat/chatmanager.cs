@@ -542,10 +542,10 @@ public class chatmanager : MonoBehaviour
                         case "PRRS":
                             if(PartyRaidRoommanager.Instance.nowmyleadernickname != stringdata[2])
                                 break;
-                            Debug.Log("레이드 시작");
-                            Debug.Log(PartyRaidRoommanager.Instance.nowmyleadernickname);
-                            Debug.Log(PlayerBackendData.Instance
-                                .nickname);
+//                            Debug.Log("레이드 시작");
+                      //      Debug.Log(PartyRaidRoommanager.Instance.nowmyleadernickname);
+                      //      Debug.Log(PlayerBackendData.Instance
+                      //        .nickname);
                             PartyRaidRoommanager.Instance.RaidReadyPanel.SetActive(false);
                             ShowPartyRaidSystemChat(args.From.NickName, "파티 레이드가 시작되었습니다.",PartyRaidRoommanager.Instance.syscolor[0]);
                             

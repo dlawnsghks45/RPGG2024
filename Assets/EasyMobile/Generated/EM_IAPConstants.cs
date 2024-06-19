@@ -39,6 +39,7 @@ namespace EasyMobile
 		public const string Product_rpgg2_class2 = "rpgg2.class2";
 		public const string Product_rpgg2_packagetime_10 = "rpgg2.packagetime.10";
 		public const string Product_rpgg2_packagetime_20 = "rpgg2.packagetime.20";
+		public const string Product_rpgg2_package2024_starter2 = "rpgg2.package2024.starter2";
 		public const string Product_rpgg2_altar_package1 = "rpgg2.altar.package1";
 		public const string Product_rpgg2_equip_package1 = "rpgg2.equip.package1";
 		public const string Product_rpgg2_roulette_02 = "rpgg2.roulette.02";
@@ -66,6 +67,7 @@ namespace EasyMobile
 		public const string Product_rpgg2_packagetime_19 = "rpgg2.packagetime.19";
 		public const string Product_rpgg2_all_package2 = "rpgg2.all.package2";
 		public const string Product_rpgg2_package_skill2 = "rpgg2.package.skill2";
+		public const string Product_rpgg2_package2024_starter1 = "rpgg2.package2024.starter1";
 		public const string Product_rpgg2_packagetime_18 = "rpgg2.packagetime.18";
 		public const string Product_rpgg2_package2023_ch4 = "rpgg2.package2023.ch4";
 		public const string Product_rpgg2_package2024_ny4 = "rpgg2.package2024.ny4";
@@ -100,6 +102,7 @@ namespace EasyMobile
 		public const string Product_rpgg2_class5 = "rpgg2.class5";
 		public const string Product_rpgg2_packagetime_11 = "rpgg2.packagetime.11";
 		public const string Product_rpgg2_package_content1 = "rpgg2.package.content1";
+		public const string Product_rpgg2_package2024_starter3 = "rpgg2.package2024.starter3";
 		public const string Product_rpgg2_altar_package2 = "rpgg2.altar.package2";
 		public const string Product_rpgg2_class1 = "rpgg2.class1";
 		public const string Product_rpgg2_packagetime_15 = "rpgg2.packagetime.15";

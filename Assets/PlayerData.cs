@@ -427,6 +427,9 @@ public class PlayerData : MonoBehaviour
             PlayerAvartaWeapon1.sprite = SpriteManager.Instance.GetSprite(data.sprite);
             PlayerAvartaWeapon2.sprite =  SpriteManager.Instance.GetSprite(data.sprite);
             PlayerAvartaWeapon_Sprite.sprite =  SpriteManager.Instance.GetSprite(data.sprite);
+
+         
+
         }
         else
         {
@@ -434,12 +437,14 @@ public class PlayerData : MonoBehaviour
             PlayerAvartaWeapon1.sprite = image;
             PlayerAvartaWeapon2.sprite = image;
             PlayerAvartaWeapon_Sprite.sprite = image;
+            PlayerAvartaWeapon1.enabled = true;
+            PlayerAvartaWeapon2.enabled = true;
+            PlayerAvartaWeapon_Sprite.enabled = true;
         }
-        
+
       
-        PlayerAvartaWeapon1.enabled = true;
-        PlayerAvartaWeapon2.enabled = true;
-        PlayerAvartaWeapon_Sprite.enabled = true;
+        PartyraidChatManager.Instance.Chat_ChangeVisual();
+
     }
 
 
@@ -455,6 +460,8 @@ public class PlayerData : MonoBehaviour
     //보조무기
     public void SetpetImage(Sprite image=null, string path=null)
     {
+        Debug.Log(image);
+        Debug.Log(path);
         if (PlayerBackendData.Instance.nowPetid != "")
         {
             PetDB.Row data = PetDB.Instance.Find_id(PlayerBackendData.Instance.nowPetid);
@@ -462,6 +469,7 @@ public class PlayerData : MonoBehaviour
             PlayerPet1.sprite = SpriteManager.Instance.GetSprite(data.sprite);
             PlayerPet2.sprite =  SpriteManager.Instance.GetSprite(data.sprite);
             PlayerPet_sprite.sprite =  SpriteManager.Instance.GetSprite(data.sprite);
+            
         }
         else
         {
@@ -496,6 +504,7 @@ public class PlayerData : MonoBehaviour
             PlayerAvartaSubWeapon1.sprite = SpriteManager.Instance.GetSprite(data.sprite);
             PlayerAvartaSubWeapon2.sprite =  SpriteManager.Instance.GetSprite(data.sprite);
             PlayerAvartaSubWeapon_Sprite.sprite =  SpriteManager.Instance.GetSprite(data.sprite);
+          
         }
         else
         {
@@ -505,10 +514,10 @@ public class PlayerData : MonoBehaviour
             PlayerAvartaSubWeapon_Sprite.sprite = image;
         }
         
+        
+       
       
-        PlayerAvartaSubWeapon1.enabled = true;
-        PlayerAvartaSubWeapon2.enabled = true;
-        PlayerAvartaSubWeapon_Sprite.enabled = true;
+     
         PartyraidChatManager.Instance.Chat_ChangeVisual();
 
     }
@@ -556,15 +565,33 @@ public class PlayerData : MonoBehaviour
             PlayerAvarta_Sprite.sprite = image;
         }
 
+        if (PlayerBackendData.Instance.avata_avata != "")
+        {
+            
+            if (bool.Parse(AvartaDB.Instance.Find_id(PlayerBackendData.Instance.avata_avata).iswhole))
+            {
+                PlayerAvartaSubWeapon1.enabled = false;
+                PlayerAvartaSubWeapon2.enabled = false;
+                PlayerAvartaSubWeapon_Sprite.enabled = false;
+                PlayerAvartaWeapon1.enabled = false;
+                PlayerAvartaWeapon2.enabled = false;
+                PlayerAvartaWeapon_Sprite.enabled = false;
+            }
+            else
+            {
+                PlayerAvartaSubWeapon1.enabled = true;
+                PlayerAvartaSubWeapon2.enabled = true;
+                PlayerAvartaSubWeapon_Sprite.enabled = true;
+                PlayerAvartaWeapon1.enabled = true;
+                PlayerAvartaWeapon2.enabled = true;
+                PlayerAvartaWeapon_Sprite.enabled = true;
+            }
+        }
+        
         PlayerAvarta1.enabled = true;
         PlayerAvarta2.enabled = true;
         PlayerAvarta_Sprite.enabled = true;
-        PlayerAvartaSubWeapon1.enabled = true;
-        PlayerAvartaSubWeapon2.enabled = true;
-        PlayerAvartaSubWeapon_Sprite.enabled = true;
-        PlayerAvartaWeapon1.enabled = true;
-        PlayerAvartaWeapon2.enabled = true;
-        PlayerAvartaWeapon_Sprite.enabled = true;
+       
         PartyraidChatManager.Instance.Chat_ChangeVisual();
     }
 

@@ -163,6 +163,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 3aa611e07e42be54f9e56e60844422b5, type: 3}
   - {fileID: 21300000, guid: ca8493e09a1e842469d743948def1a0f, type: 3}
   - {fileID: 21300000, guid: 4c8936e054ac1cf469402d68eb30fb44, type: 3}
+  - {fileID: 21300000, guid: 370009e0374b0d8429890ca43fc3a313, type: 3}
   - {fileID: 21300000, guid: ddee5ae0fa6a83c4e8d443e221f78733, type: 3}
   - {fileID: 21300000, guid: 50cb5be01b3b8894092df90ddc0482f4, type: 3}
   - {fileID: 21300000, guid: 27e63ce0f3546d34e87058ca1748427a, type: 3}
@@ -270,6 +271,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: af626ce107ad1d749a51c35c985da339, type: 3}
   - {fileID: 21300000, guid: 7a284ee1c67037e40b9bac42ed99a7af, type: 3}
   - {fileID: 21300000, guid: 0ac642f15cb48d248b82a831342b5cc2, type: 3}
+  - {fileID: 21300000, guid: 2c07e2f11493cae48b22767d5165c6b3, type: 3}
   - {fileID: 21300000, guid: f7dce3f156c14714ea23e96cdb9afae0, type: 3}
   - {fileID: 21300000, guid: 54c224f1dee0b8e4cab178bf22237adf, type: 3}
   - {fileID: 21300000, guid: d95c66f1db24d47408b39a9710d6f5c4, type: 3}
@@ -1751,6 +1753,7 @@ SpriteAtlas:
   - material_141_0
   - Clock13
   - 12
+  - 42
   - 5_Item
   - 0
   - Icon9
@@ -1858,6 +1861,7 @@ SpriteAtlas:
   - "\uD53C\uB2C9\uC2A4\uC758\uBD80\uB9AC"
   - Staff4
   - quest_141
+  - 42
   - 1027
   - 10_Santa_Boots
   - 1243

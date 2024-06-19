@@ -416,7 +416,7 @@ public class DPS
 //        Debug.Log(total);
         // ReSharper disable once InterpolatedStringExpressionIsNotIFormattable
         totaldmg = decimal.Parse(data["totaldmg"].ToString(), System.Globalization.NumberStyles.Float);
-        dps = decimal.Parse(dmg);
+        dps = decimal.Parse(dmg,System.Globalization.NumberStyles.Float);
         count = int.Parse(data["count"].ToString());
         if (data.ContainsKey("countdivide"))
         {

@@ -436,6 +436,7 @@ public class Talismandatabase
     {
         this.Keyid = keyid;
         this.Itemid = itemid;
+        Debug.Log(itemid);
         string speid =   TalismanDB.Instance.Find_id(itemid).eskill;
         //Debug.Log(speid);
         EquipSkillRandomGiveDB.Row speds = EquipSkillRandomGiveDB.Instance.Find_id(speid);
@@ -485,6 +486,100 @@ public class Talismandatabase
         }
         this.Islock = false;
     }
+    
+    public Talismandatabase(string keyid, string itemid,int esnum)
+    {
+        this.Keyid = keyid;
+        this.Itemid = itemid;
+        string speid =   TalismanDB.Instance.Find_id(itemid).eskill;
+        //Debug.Log(speid);
+        EquipSkillRandomGiveDB.Row speds = EquipSkillRandomGiveDB.Instance.Find_id(speid);
+
+////        Debug.Log(esnum);
+        List<string> skilloption = new List<string>();
+        List<string> selectedskill = new List<string>();
+        skilloption = speds.equipskills.Split(';').ToList();
+        //확률에 따라 랜덤으로 지급
+        //A는 나올 옵션 개수
+        int percent = int.Parse(speds.percent);
+        int optioncount = int.Parse(speds.A);
+
+        int rd = UnityEngine.Random.Range(0, 101);
+
+        if (esnum == 0)
+        {
+            if (rd <= percent)
+            {
+                //옵션나온다
+                int oc = UnityEngine.Random.Range(1, optioncount + 1);
+                for (int i = 0; i < oc; i++)
+                {
+                    int ran = UnityEngine.Random.Range(0, skilloption.Count);
+
+                    List<string> giveskill = new List<string>();
+                    //스킬레벨 설정
+                    for (int j = 0; j < EquipSkillDB.Instance.NumRows(); j++)
+                    {
+                        if (EquipSkillDB.Instance.GetAt(j).coreid != skilloption[ran]) continue;
+                        giveskill.Add(EquipSkillDB.Instance.GetAt(j).id);
+
+                        if (EquipSkillDB.Instance.GetAt(j).coreid != skilloption[ran])
+                        {
+                            break;
+                        }
+                    }
+
+                    //스킬을 넣음
+                    int ran2 = UnityEngine.Random.Range(0, giveskill.Count);
+                    selectedskill.Add(giveskill[ran2]);
+
+                    //스택형이 아니라면 뺀다
+                    if (!bool.Parse(EquipSkillDB.Instance.Find_id(skilloption[ran]).isstack))
+                        skilloption.RemoveAt(ran);
+                }
+                //특수효과가있다
+
+                this.Eskill = selectedskill;
+            }
+        }
+        else
+        {
+            //옵션나온다
+            int oc = esnum;
+            for (int i = 0; i < oc; i++)
+            {
+                int ran = UnityEngine.Random.Range(0, skilloption.Count);
+
+                List<string> giveskill = new List<string>();
+                //스킬레벨 설정
+                for (int j = 0; j < EquipSkillDB.Instance.NumRows(); j++)
+                {
+                    if (EquipSkillDB.Instance.GetAt(j).coreid != skilloption[ran]) continue;
+                    giveskill.Add(EquipSkillDB.Instance.GetAt(j).id);
+
+                    if (EquipSkillDB.Instance.GetAt(j).coreid != skilloption[ran])
+                    {
+                        break;
+                    }
+                }
+
+                //스킬을 넣음
+                int ran2 = UnityEngine.Random.Range(0, giveskill.Count);
+                selectedskill.Add(giveskill[ran2]);
+
+                //스택형이 아니라면 뺀다
+                if (!bool.Parse(EquipSkillDB.Instance.Find_id(skilloption[ran]).isstack))
+                    skilloption.RemoveAt(ran);
+            }
+            //특수효과가있다
+
+            this.Eskill = selectedskill;
+        }
+        
+        
+        this.Islock = false;
+    }
+    
     public List<string> Eskill { get; set; }
 
     public string Itemid { get; set; }

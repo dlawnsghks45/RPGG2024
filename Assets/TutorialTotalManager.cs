@@ -43,7 +43,7 @@ public class TutorialTotalManager : MonoBehaviour
     [Button(ButtonSizes.Large),GUIColor(0,1,0)]
     public void BtShow()
     {
-        Tutorialmanager.Instance.StartTutorial(21);
+        Tutorialmanager.Instance.StartTutorial(27);
     }
 
     public string tutoids;
@@ -632,6 +632,7 @@ public class TutorialTotalManager : MonoBehaviour
                 Inventory.Instance.RefreshInventory();
                 break;
             case 2 : //¹°¾à Äü½½¸©¿¡ ¸ðµÎ µî·Ï
+                Inventory.Instance.searchinput.text = "";
                 Inventory.Instance.RefreshInventory(1);
                 toggles_quest[0].IsOn = true;
                 toggles_quest[0].ExecuteClick();

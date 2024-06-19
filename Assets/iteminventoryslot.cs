@@ -15,6 +15,7 @@ public class iteminventoryslot : MonoBehaviour
     public void Refresh(string itemid, int count)
     {
         this.Itemid = itemid;
+        Debug.Log(itemid);
         item = ItemdatabasecsvDB.Instance.Find_id(itemid);
         itemname.text = Inventory.GetTranslate(item.name);
         ItemImage.sprite = SpriteManager.Instance.GetSprite(item.sprite);

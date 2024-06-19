@@ -23,7 +23,7 @@ public class TMProHyperLink : MonoBehaviour, IPointerClickHandler
     }
     public void SetEquipSkill(string id)
     {
-        if(id == "")
+        if(id == "" || id == "0")
             return;
         this.id = id;
         m_TextMeshPro.text =

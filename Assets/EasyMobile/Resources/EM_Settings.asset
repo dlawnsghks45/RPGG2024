@@ -1115,6 +1115,27 @@ MonoBehaviour:
       _description: 
       _storeSpecificIds: []
       _isEditingAdvanced: 0
+    - _name: rpgg2.package2024.starter1
+      _type: 0
+      _id: rpgg2.package2024.starter1
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.package2024.starter2
+      _type: 0
+      _id: rpgg2.package2024.starter2
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.package2024.starter3
+      _type: 0
+      _id: rpgg2.package2024.starter3
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
   mNotificationSettings:
     mAutoInit: 1
     mAutoInitDelay: 0

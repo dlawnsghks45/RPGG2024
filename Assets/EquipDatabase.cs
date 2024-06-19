@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using Sirenix.OdinInspector.Demos;
+using Sirenix.Utilities;
 using UnityEngine;
 using Random = System.Random;
 
@@ -109,6 +110,7 @@ public class EquipDatabase : IEquatable<object>
 
         for (int i = 0; i < temp.Length; i++)
         {
+            Debug.Log(temp[i]);
             if (temp[i].Equals(speid))
                 cansucc = true;
         }
@@ -130,7 +132,7 @@ public class EquipDatabase : IEquatable<object>
         float eq = 0;
         for (int i = equipdata.SpeMehodP != "0" ? 1:0; i < EquipSkill1.Count; i++)
         {
-            if(EquipSkill[i] == "")
+            if(EquipSkill[i] == "" ||EquipSkill[i] == "0" )
                 continue;
 //         Debug.Log(EquipSkill[i] + i);
             if (EquipSkillDB.Instance.Find_id(EquipSkill[i]).lv == "1") eq += 0.02f;
@@ -499,15 +501,60 @@ public class EquipDatabase : IEquatable<object>
         
         return selectedskill;
     }
-
-    public void SetEquipSkills(string[] giveskill)
+    public void SetEquipSkillsE(string[] giveskill)
     {
         EquipSkill1.Clear();
-        Debug.Log(giveskill.Length +"옮긴거");
+        
         for (int i = 0; i < giveskill.Length; i++)
         {
 //            Debug.Log("넣었다" + giveskill[i]);
-            if(giveskill[i] == "")
+            if(giveskill[i] == "" || giveskill[i] == "0")
+                continue;
+            EquipSkill1.Add(giveskill[i]);
+        }
+
+        
+        if (EquipSkill1.Count != 0)
+            ishaveEquipSkill = true;
+    }
+    public void SetEquipSkills(string[] giveskill)
+    {
+        EquipSkill1.Clear();
+        Debug.Log("다");
+        //고유가 있으면 맨 앞줄 변경
+        if (EquipItemDB.Instance.Find_id(SuccManager.Instance.ResultSlot.data.itemid).SpeMehodP != "0")
+        {
+            Debug.Log("다2");
+            if (EquipItemDB.Instance.Find_id(SuccManager.Instance.ResourceSlot.data.itemid).SpeMehodP != "0")
+            {
+                Debug.Log("다23");
+
+                giveskill[0] = EquipItemDB.Instance.Find_id(SuccManager.Instance.ResultSlot.data.itemid).SpeMehodP;
+            }
+            else
+            {
+                Debug.Log("다42");
+
+                List<string> li = new List<string>();
+                li = giveskill.ToList();
+                for(int i = 0 ; i < li.Count;i++)
+                    Debug.Log(li[i]);
+                li.Insert(0, EquipItemDB.Instance.Find_id(SuccManager.Instance.ResultSlot.data.itemid).SpeMehodP);
+                Debug.Log("다42");
+                for(int i = 0 ; i < li.Count;i++)
+                    Debug.Log(li[i]);
+                giveskill = li.ToArray();
+            }
+        }
+        
+        Debug.Log("다44");
+
+    
+        
+        for (int i = 0; i < giveskill.Length; i++)
+        {
+//            Debug.Log("넣었다" + giveskill[i]);
+            if(giveskill[i] == "" || giveskill[i] == "0")
                 continue;
             EquipSkill1.Add(giveskill[i]);
         }

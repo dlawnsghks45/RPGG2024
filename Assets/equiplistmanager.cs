@@ -14,8 +14,7 @@ public class equiplistmanager : MonoBehaviour
     public void Bt_ShowPanel(string TypeName)
     {
         List<int> nums = new List<int>();
-        for(int i = 0 ; i < lists.Count;i++)
-            lists[i].gameObject.SetActive(false);
+        
         
         for (int i = 0; i < EquipListDB.Instance.NumRows(); i++)
         {
@@ -32,6 +31,10 @@ public class equiplistmanager : MonoBehaviour
                 lists.Add(Instantiate(obj, objtrans));
             }
         }
+        
+        for(int i = 0 ; i < lists.Count;i++)
+            lists[i].gameObject.SetActive(false);
+        
         for (int i = 0; i < nums.Count; i++)
         {
             lists[i].Init(EquipListDB.Instance.GetAt(nums[i]).id);

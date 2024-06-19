@@ -3280,6 +3280,38 @@ MonoBehaviour:
       - 
       Flags: 0000000000000000
       Languages_Touch: []
+    - Term: "Tutorial/00_\uD30C\uD2F0\uB808\uC774\uB4DC1"
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uD30C\uD2F0 \uB808\uC774\uB4DC\uB294 \uC2DC\uC98C2 \uC7A5\uBE44 \uBC0F
+        \uD0C8\uB9AC\uC2A4\uB9CC\uC744 \uC5BB\uC744 \uC218 \uC788\uB294 \uC2E0\uADDC
+        \uCF58\uD150\uCE20\uC785\uB2C8\uB2E4."
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: "Tutorial/00_\uD30C\uD2F0\uB808\uC774\uB4DC2"
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uD30C\uD2F0 \uB808\uC774\uB4DC\uB294 1~4\uC778\uC73C\uB85C \uC9C4\uD589\uC774
+        \uAC00\uB2A5\uD569\uB2C8\uB2E4. ? \uD130\uCE58 \uC2DC \uB354 \uC790\uC138\uD55C
+        \uC124\uBA85\uC744 \uBCFC \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
     - Term: "ASetting/\uBC30\uACBD"
       TermType: 0
       Description: 
@@ -7285,10 +7317,10 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - "\uD29C\uD1A0\uB9AC\uC5BC \uC9C4\uD589\uC744 \uB20C\uB7EC \uAC15\uD654 \uD29C\uD1A0\uB9AC\uC5BC
-        \uC9C4\uD589 \uD6C4 \uC644\uB8CC \uAC00\uB2A5\n<color=cyan>Tip. \uAC15\uD654\uB294
-        \uC7A5\uBE44\uB97C \uAC15\uD654\uC11D\uC73C\uB85C \uAC15\uD654\uD558\uC5EC
-        \uC7A5\uBE44\uC758 \uB2A5\uB825\uCE58\uB97C \uC62C\uB9B4 \uC218 \uC788\uB2E4</color>"
+      - "\uD29C\uD1A0\uB9AC\uC5BC \uC9C4\uD589\uC744 \uB20C\uB7EC \uD30C\uD2F0 \uB808\uC774\uB4DC
+        \uD29C\uD1A0\uB9AC\uC5BC \uC9C4\uD589 \uD6C4 \uC644\uB8CC \uAC00\uB2A5\n<color=cyan>Tip.
+        \uD30C\uD2F0 \uB808\uC774\uB4DC\uB294 \uC2DC\uC98C2 \uC7A5\uBE44\uB97C \uB9DE\uCD9C
+        \uC218 \uC788\uB294 \uCF58\uD150\uCE20\uC774\uB2E4.</color>"
       - 
       - 
       - 
@@ -8987,6 +9019,20 @@ MonoBehaviour:
       - 
       Flags: 0000000000000000
       Languages_Touch: []
+    - Term: Avartaname/2059
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uD2B8\uB9AC\uC288\uB77C"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
     - Term: Avartainfo/2000
       TermType: 0
       Description: 
@@ -9406,7 +9452,22 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - "\uC5EC\uB984 \uC11C\uD551 \uD328\uD0A4\uC9C0\uC5D0\uC11C \uD68D\uB4DD \uAC00\uB2A5"
+      - "\uC5EC\uB984 \uC11C\uD37C \uD328\uD0A4\uC9C0\uC5D0\uC11C \uD68D\uB4DD \uAC00\uB2A5"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: AvartaGetinfo/2017
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uBAA8\uD5D8\uAC00 \uD328\uC2A4 Season6 \uD504\uB9AC\uBBF8\uC5C4 \uD574\uAE08
+        \uC2DC \uD68D\uB4DD \uAC00\uB2A5"
       - 
       - 
       - 
@@ -13344,7 +13405,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uCD5C\uADFC \uC0AC\uB0E5\uD130\n<color=cyan>{0}</color>"
-      - 'recent hunting grounds
+      - 'recent hunting ground
 
         <color=cyan>{0}</color>'
       - 
@@ -14606,8 +14667,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - "<color=cyan>[\uC774\uBCA4\uD2B8]\uC81C\uC6B0\uC2A4 \uCD9C\uD604!!!</color>"
-      - <color=cyan>[Event] Zeus appears!!!</color>
+      - "<color=cyan>[\uC774\uBCA4\uD2B8]\uC11C\uD37C \uCD9C\uD604!!!</color>"
+      - <color=cyan>[Event] Surfer Appears!!!</color>
       - 
       - 
       - 
@@ -17691,7 +17752,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - "\uBAA8\uD5D8\uAC00 \uD328\uC2A4 Season 5"
+      - "\uBAA8\uD5D8\uAC00 \uD328\uC2A4 Season 6"
       - 
       - 
       - 
@@ -17733,7 +17794,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - "\uD328\uC2A4 \uAE30\uAC04 : ~ 2024\uB144 6\uC6D4 2\uC8FC\uCC28 \uC5C5\uB370\uC774\uD2B8
+      - "\uD328\uC2A4 \uAE30\uAC04 : ~ 2024\uB144 7\uC6D4 4\uC8FC\uCC28 \uC5C5\uB370\uC774\uD2B8
         \uAE4C\uC9C0"
       - 
       - 
@@ -18820,7 +18881,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - "\uC811\uC18D \uBCF4\uC0C1"
+      - "\uC811\uC18D \uBCF4\uC0C1 Season2"
       - 
       - 
       - 
@@ -22366,6 +22427,20 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uC774\uBCA4\uD2B8 \uD018\uC2A4\uD2B8"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: "UI8/\uD2B9\uC218\uD6A8\uACFC\uBAA9\uB85D"
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uD2B9\uC218\uD6A8\uACFC \uBAA9\uB85D"
       - 
       - 
       - 
@@ -32597,6 +32672,20 @@ MonoBehaviour:
       - 
       Flags: 0000000000000000
       Languages_Touch: []
+    - Term: Itemname/40029
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uD2B8\uB9AC\uC288\uB77C \uBB34\uAE30 \uC704\uC7A5"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
     - Term: Itemname/567
       TermType: 0
       Description: 
@@ -33039,7 +33128,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - "\uC2E0\uC758 \uD798\uC774 \uAE43\uB4E0 \uAD11\uC11D"
+      - "\uC7A1\uB3D9\uC0AC\uB2C8"
       - 
       - 
       - 
@@ -33152,6 +33241,20 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uD30C\uD2F0 \uB808\uC774\uB4DC \uBCF4\uC0C1 \uD69F\uC218 \uCDA9\uC804\uAD8C"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemname/31
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC2E0\uC758 \uD798\uC774 \uAE43\uB4E0 \uAD11\uC11D"
       - 
       - 
       - 
@@ -33278,6 +33381,328 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uAE30\uAC04\uD2F1 \uBC1C\uB85D\uC758 \uC815\uC218 [16~30 \uB2E8\uACC4]"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemname/1754
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uB300\uC9C0\uC758 \uD0C8\uB9AC\uC2A4\uB9CC \uCF54\uC5B4"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemname/1755
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC8FD\uC74C\uC758 \uD0C8\uB9AC\uC2A4\uB9CC \uCF54\uC5B4"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemname/1756
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uCE7C\uB0A0\uC758 \uD0C8\uB9AC\uC2A4\uB9CC \uCF54\uC5B4"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemname/1757
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC6A9\uC758 \uD0C8\uB9AC\uC2A4\uB9CC \uCF54\uC5B4"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemname/1758
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uB3C5\uC0AC\uC758 \uD0C8\uB9AC\uC2A4\uB9CC \uCF54\uC5B4"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemname/1759
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uBC88\uAC1C\uC758 \uD0C8\uB9AC\uC2A4\uB9CC \uCF54\uC5B4"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemname/1760
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uBE5B\uC758 \uD0C8\uB9AC\uC2A4\uB9CC \uCF54\uC5B4"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemname/1761
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uAC70\uC778\uC758 \uD0C8\uB9AC\uC2A4\uB9CC \uCF54\uC5B4"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemname/1762
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uD0A4\uBA54\uB77C\uC758 \uD0C8\uB9AC\uC2A4\uB9CC \uCF54\uC5B4"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemname/1763
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uBE5B\uB098\uB294 \uB300\uC9C0\uC758 \uD0C8\uB9AC\uC2A4\uB9CC \uCF54\uC5B4"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemname/1764
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uBE5B\uB098\uB294 \uC8FD\uC74C\uC758 \uD0C8\uB9AC\uC2A4\uB9CC \uCF54\uC5B4"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemname/1765
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uBE5B\uB098\uB294 \uCE7C\uB0A0\uC758 \uD0C8\uB9AC\uC2A4\uB9CC \uCF54\uC5B4"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemname/1766
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uBE5B\uB098\uB294 \uC6A9\uC758 \uD0C8\uB9AC\uC2A4\uB9CC \uCF54\uC5B4"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemname/1767
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uBE5B\uB098\uB294 \uB3C5\uC0AC\uC758 \uD0C8\uB9AC\uC2A4\uB9CC \uCF54\uC5B4"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemname/1768
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uBE5B\uB098\uB294 \uBC88\uAC1C\uC758 \uD0C8\uB9AC\uC2A4\uB9CC \uCF54\uC5B4"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemname/1769
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uBE5B\uB098\uB294 \uBE5B\uC758 \uD0C8\uB9AC\uC2A4\uB9CC \uCF54\uC5B4"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemname/1770
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uBE5B\uB098\uB294 \uAC70\uC778\uC758 \uD0C8\uB9AC\uC2A4\uB9CC \uCF54\uC5B4"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemname/1771
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uBE5B\uB098\uB294 \uD0A4\uBA54\uB77C\uC758 \uD0C8\uB9AC\uC2A4\uB9CC \uCF54\uC5B4"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemname/588
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uD0C8\uB9AC\uC2A4\uB9CC \uC120\uD0DD \uC0C1\uC790"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemname/589
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uD0C8\uB9AC\uC2A4\uB9CC \uBB34\uC791\uC704 \uC0C1\uC790"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemname/590
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uBE5B\uB098\uB294 \uD0C8\uB9AC\uC2A4\uB9CC \uC120\uD0DD \uC0C1\uC790"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemname/591
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uBE5B\uB098\uB294 \uD0C8\uB9AC\uC2A4\uB9CC \uBB34\uC791\uC704 \uC0C1\uC790"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemname/592
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC774\uBCA4\uD2B8 \uC704\uC7A5 \uC120\uD0DD \uC0C1\uC790"
       - 
       - 
       - 
@@ -37761,7 +38186,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - "\uC0AC\uC6A9 \uC2DC \uB3C4\uAE68\uBE44 \uBC29\uB9DD\uC774 \uBB34\uAE30 \uC704\uC7A5\uC744
+      - "\uC0AC\uC6A9 \uC2DC \uD2B8\uB9AC \uC288\uB77C \uBB34\uAE30 \uC704\uC7A5\uC744
         \uC5BB\uC744 \uC218 \uC788\uB2E4."
       - 
       - 
@@ -38265,9 +38690,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - "\uC2E0\uC758 \uD798\uC774 \uAE43\uB4E0 \uAD11\uC11D\uC774\uB2E4.\n\uC2E0
-        \uC7A5\uBE44 \uC81C\uC791\uC5D0 \uC0AC\uC6A9\uB41C\uB2E4.\n\n<color=cyan>\uC8FC\uC694
-        \uD68D\uB4DD\uCC98</color>\n\uCF58\uD150\uCE20 - \uD30C\uD2F0 \uB808\uC774\uB4DC"
+      - "\uD310\uB9E4 \uAC00\uB2A5\uD55C \uC7A1\uB3D9\uC0AC\uB2C8\uC774\uB2E4."
       - 
       - 
       - 
@@ -38376,6 +38799,22 @@ MonoBehaviour:
         \uBD88\uAC00\uB2A5\uD558\uB2E4.\n\uC544\uC774\uD15C\uC744 \uC0AC\uC6A9\uD558\uAC70\uB098
         \uD69F\uC218\uAC00 0\uC77C \uB54C \uBCF4\uC0C1\uBC1B\uAE30\uB97C \uB204\uB974\uBA74
         \uC790\uB3D9\uC73C\uB85C \uCC28\uAC10\uB41C\uB2E4."
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemdescript/31
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC2E0\uC758 \uD798\uC774 \uAE43\uB4E0 \uAD11\uC11D\uC774\uB2E4.\n\uC2E0
+        \uC7A5\uBE44 \uC81C\uC791\uC5D0 \uC0AC\uC6A9\uB41C\uB2E4.\n\n<color=cyan>\uC8FC\uC694
+        \uD68D\uB4DD\uCC98</color>\n\uCF58\uD150\uCE20 - \uD30C\uD2F0 \uB808\uC774\uB4DC"
       - 
       - 
       - 
@@ -38544,6 +38983,403 @@ MonoBehaviour:
       - "\uAE30\uAC04\uD2F1 \uBC1C\uB85D \uB808\uC774\uB4DC 16~30\uB2E8\uACC4 \uC785\uC7A5\uC5D0
         \uD544\uC694\uD55C \uC785\uC7A5\uAD8C\uC774\uB2E4.\n\n<color=cyan>\uC8FC\uC694
         \uD68D\uB4DD\uCC98</color>\n\uC81C\uC791"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemdescript/1754
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC0AC\uC6A9 \uC2DC \uD0C8\uB9AC\uC2A4\uB9CC\uC744 \uC5BB\uC744 \uC218 \uC788\uB2E4.\n\n\uC7A5\uCC29
+        \uC138\uD2B8 \uD6A8\uACFC\n(2) \uC8FC\uB2A5\uB825\uCE58 +20%\n(3) \uC8FC\uB2A5\uB825\uCE58
+        +20%\n(5) \uC8FC\uB2A5\uB825\uCE58 +60%"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemdescript/1755
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC0AC\uC6A9 \uC2DC \uD0C8\uB9AC\uC2A4\uB9CC\uC744 \uC5BB\uC744 \uC218 \uC788\uB2E4.\n\n\uC7A5\uCC29
+        \uC138\uD2B8 \uD6A8\uACFC\n(2) \uCE58\uBA85\uD0C0 \uD655\uB960 +15%\n(3)
+        \uD53C\uD574 \uC99D\uAC00 +12%\n(5) \uD53C\uD574 \uC99D\uAC00 +20%"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemdescript/1756
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC0AC\uC6A9 \uC2DC \uD0C8\uB9AC\uC2A4\uB9CC\uC744 \uC5BB\uC744 \uC218 \uC788\uB2E4.\n\n\uC7A5\uCC29
+        \uC138\uD2B8 \uD6A8\uACFC\n(2) \uBB3C\uB9AC \uACF5\uACA9\uB825 +500%\n(3)
+        \uAE30\uBCF8 \uACF5\uACA9 \uD69F\uC218 +1, \uBB3C\uB9AC \uACF5\uACA9\uB825
+        +1000%\n(5) \uD53C\uD574 \uC99D\uAC00 +20%"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemdescript/1757
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC0AC\uC6A9 \uC2DC \uD0C8\uB9AC\uC2A4\uB9CC\uC744 \uC5BB\uC744 \uC218 \uC788\uB2E4.\n\n\uC7A5\uCC29
+        \uC138\uD2B8 \uD6A8\uACFC\n(2) \uBCF4\uC2A4 \uD53C\uD574 \uC99D\uAC00 +100%\n(3)
+        \uBCF4\uC2A4 \uD53C\uD574 \uC99D\uAC00 +150%\n(5) \uBCF4\uC2A4 \uD53C\uD574
+        \uC99D\uAC00 +200%"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemdescript/1758
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC0AC\uC6A9 \uC2DC \uD0C8\uB9AC\uC2A4\uB9CC\uC744 \uC5BB\uC744 \uC218 \uC788\uB2E4.\n\n\uC7A5\uCC29
+        \uC138\uD2B8 \uD6A8\uACFC\n(2) \uC0C1\uD0DC \uC774\uC0C1 \uD53C\uD574 +1000%\n(3)
+        \uC0C1\uD0DC \uC774\uC0C1 \uC911\uCCA9 +30, \uC0C1\uD0DC \uC774\uC0C1 \uCD5C\uB300
+        \uC911\uCCA9 +30\n(5) \uD53C\uD574 \uC99D\uAC00 +20%"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemdescript/1759
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC0AC\uC6A9 \uC2DC \uD0C8\uB9AC\uC2A4\uB9CC\uC744 \uC5BB\uC744 \uC218 \uC788\uB2E4.\n\n\uC7A5\uCC29
+        \uC138\uD2B8 \uD6A8\uACFC\n(2) \uB9C8\uBC95 \uACF5\uACA9\uB825 +500%\n(3)
+        \uC7AC\uC0AC\uC6A9 \uC2DC\uAC04 \uAC10\uC18C +3%, \uB9C8\uBC95 \uACF5\uACA9\uB825
+        +1000%\n(5) \uD53C\uD574 \uC99D\uAC00 +20%"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemdescript/1760
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC0AC\uC6A9 \uC2DC \uD0C8\uB9AC\uC2A4\uB9CC\uC744 \uC5BB\uC744 \uC218 \uC788\uB2E4.\n\n\uC7A5\uCC29
+        \uC138\uD2B8 \uD6A8\uACFC\n(2) \uBC84\uD504 \uD6A8\uC728 \uC99D\uAC00 +100%\n(3)
+        \uBC84\uD504 \uD6A8\uC728 \uC99D\uAC00 +150%\n(5) \uBC84\uD504 \uD6A8\uC728
+        \uC99D\uAC00 +250%"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemdescript/1761
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC0AC\uC6A9 \uC2DC \uD0C8\uB9AC\uC2A4\uB9CC\uC744 \uC5BB\uC744 \uC218 \uC788\uB2E4.\n\n\uC7A5\uCC29
+        \uC138\uD2B8 \uD6A8\uACFC\n(2) \uACBD\uD5D8\uCE58 \uD68D\uB4DD\uB7C9 +100%,
+        \uACE8\uB4DC \uD68D\uB4DD\uB7C9 +50%\n(3) \uACBD\uD5D8\uCE58 \uD68D\uB4DD\uB7C9
+        +150%, \uACE8\uB4DC \uD68D\uB4DD\uB7C9 +50%\n(5) \uACBD\uD5D8\uCE58 \uD68D\uB4DD\uB7C9
+        +200%, \uACE8\uB4DC \uD68D\uB4DD\uB7C9 +50%"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemdescript/1762
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC0AC\uC6A9 \uC2DC \uD0C8\uB9AC\uC2A4\uB9CC\uC744 \uC5BB\uC744 \uC218 \uC788\uB2E4.\n\n\uC7A5\uCC29
+        \uC138\uD2B8 \uD6A8\uACFC\n(2) \uC77C\uBC18 \uBAAC\uC2A4\uD130 \uD53C\uD574
+        +100%, \uACBD\uD5D8\uCE58 \uD68D\uB4DD\uB7C9 +50%\n(3) \uC77C\uBC18 \uBAAC\uC2A4\uD130
+        \uD53C\uD574 +150%, \uACBD\uD5D8\uCE58 \uD68D\uB4DD\uB7C9 +50%\n(5) \uC77C\uBC18
+        \uBAAC\uC2A4\uD130 \uD53C\uD574 +200%, \uACBD\uD5D8\uCE58 \uD68D\uB4DD\uB7C9
+        +50%"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemdescript/1763
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC0AC\uC6A9 \uC2DC \uD2B9\uC218\uD6A8\uACFC 3\uAC1C\uC758 \uD0C8\uB9AC\uC2A4\uB9CC\uC744
+        \uC5BB\uC744 \uC218 \uC788\uB2E4.\n\n\uC7A5\uCC29 \uC138\uD2B8 \uD6A8\uACFC\n(2)
+        \uC8FC\uB2A5\uB825\uCE58 +20%\n(3) \uC8FC\uB2A5\uB825\uCE58 +20%\n(5) \uC8FC\uB2A5\uB825\uCE58
+        +60%"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemdescript/1764
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC0AC\uC6A9 \uC2DC \uD2B9\uC218\uD6A8\uACFC 3\uAC1C\uC758 \uD0C8\uB9AC\uC2A4\uB9CC\uC744
+        \uC5BB\uC744 \uC218 \uC788\uB2E4.\n\n\uC7A5\uCC29 \uC138\uD2B8 \uD6A8\uACFC\n(2)
+        \uCE58\uBA85\uD0C0 \uD655\uB960 +15%\n(3) \uD53C\uD574 \uC99D\uAC00 +12%\n(5)
+        \uD53C\uD574 \uC99D\uAC00 +20%"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemdescript/1765
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC0AC\uC6A9 \uC2DC \uD2B9\uC218\uD6A8\uACFC 3\uAC1C\uC758 \uD0C8\uB9AC\uC2A4\uB9CC\uC744
+        \uC5BB\uC744 \uC218 \uC788\uB2E4.\n\n\uC7A5\uCC29 \uC138\uD2B8 \uD6A8\uACFC\n(2)
+        \uBB3C\uB9AC \uACF5\uACA9\uB825 +500%\n(3) \uAE30\uBCF8 \uACF5\uACA9 \uD69F\uC218
+        +1, \uBB3C\uB9AC \uACF5\uACA9\uB825 +1000%\n(5) \uD53C\uD574 \uC99D\uAC00
+        +20%"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemdescript/1766
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC0AC\uC6A9 \uC2DC \uD2B9\uC218\uD6A8\uACFC 3\uAC1C\uC758 \uD0C8\uB9AC\uC2A4\uB9CC\uC744
+        \uC5BB\uC744 \uC218 \uC788\uB2E4.\n\n\uC7A5\uCC29 \uC138\uD2B8 \uD6A8\uACFC\n(2)
+        \uBCF4\uC2A4 \uD53C\uD574 \uC99D\uAC00 +100%\n(3) \uBCF4\uC2A4 \uD53C\uD574
+        \uC99D\uAC00 +150%\n(5) \uBCF4\uC2A4 \uD53C\uD574 \uC99D\uAC00 +200%"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemdescript/1767
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC0AC\uC6A9 \uC2DC \uD2B9\uC218\uD6A8\uACFC 3\uAC1C\uC758 \uD0C8\uB9AC\uC2A4\uB9CC\uC744
+        \uC5BB\uC744 \uC218 \uC788\uB2E4.\n\n\uC7A5\uCC29 \uC138\uD2B8 \uD6A8\uACFC\n(2)
+        \uC0C1\uD0DC \uC774\uC0C1 \uD53C\uD574 +1000%\n(3) \uC0C1\uD0DC \uC774\uC0C1
+        \uC911\uCCA9 +30, \uC0C1\uD0DC \uC774\uC0C1 \uCD5C\uB300 \uC911\uCCA9 +30\n(5)
+        \uD53C\uD574 \uC99D\uAC00 +20%"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemdescript/1768
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC0AC\uC6A9 \uC2DC \uD2B9\uC218\uD6A8\uACFC 3\uAC1C\uC758 \uD0C8\uB9AC\uC2A4\uB9CC\uC744
+        \uC5BB\uC744 \uC218 \uC788\uB2E4.\n\n\uC7A5\uCC29 \uC138\uD2B8 \uD6A8\uACFC\n(2)
+        \uB9C8\uBC95 \uACF5\uACA9\uB825 +500%\n(3) \uC7AC\uC0AC\uC6A9 \uC2DC\uAC04
+        \uAC10\uC18C +3%, \uB9C8\uBC95 \uACF5\uACA9\uB825 +1000%\n(5) \uD53C\uD574
+        \uC99D\uAC00 +20%"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemdescript/1769
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC0AC\uC6A9 \uC2DC \uD2B9\uC218\uD6A8\uACFC 3\uAC1C\uC758 \uD0C8\uB9AC\uC2A4\uB9CC\uC744
+        \uC5BB\uC744 \uC218 \uC788\uB2E4.\n\n\uC7A5\uCC29 \uC138\uD2B8 \uD6A8\uACFC\n(2)
+        \uBC84\uD504 \uD6A8\uC728 \uC99D\uAC00 +100%\n(3) \uBC84\uD504 \uD6A8\uC728
+        \uC99D\uAC00 +150%\n(5) \uBC84\uD504 \uD6A8\uC728 \uC99D\uAC00 +250%"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemdescript/1770
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC0AC\uC6A9 \uC2DC \uD2B9\uC218\uD6A8\uACFC 3\uAC1C\uC758 \uD0C8\uB9AC\uC2A4\uB9CC\uC744
+        \uC5BB\uC744 \uC218 \uC788\uB2E4.\n\n\uC7A5\uCC29 \uC138\uD2B8 \uD6A8\uACFC\n(2)
+        \uACBD\uD5D8\uCE58 \uD68D\uB4DD\uB7C9 +100%, \uACE8\uB4DC \uD68D\uB4DD\uB7C9
+        +50%\n(3) \uACBD\uD5D8\uCE58 \uD68D\uB4DD\uB7C9 +150%, \uACE8\uB4DC \uD68D\uB4DD\uB7C9
+        +50%\n(5) \uACBD\uD5D8\uCE58 \uD68D\uB4DD\uB7C9 +200%, \uACE8\uB4DC \uD68D\uB4DD\uB7C9
+        +50%"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemdescript/1771
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC0AC\uC6A9 \uC2DC \uD2B9\uC218\uD6A8\uACFC 3\uAC1C\uC758 \uD0C8\uB9AC\uC2A4\uB9CC\uC744
+        \uC5BB\uC744 \uC218 \uC788\uB2E4.\n\n\uC7A5\uCC29 \uC138\uD2B8 \uD6A8\uACFC\n(2)
+        \uC77C\uBC18 \uBAAC\uC2A4\uD130 \uD53C\uD574 +100%, \uACBD\uD5D8\uCE58 \uD68D\uB4DD\uB7C9
+        +50%\n(3) \uC77C\uBC18 \uBAAC\uC2A4\uD130 \uD53C\uD574 +150%, \uACBD\uD5D8\uCE58
+        \uD68D\uB4DD\uB7C9 +50%\n(5) \uC77C\uBC18 \uBAAC\uC2A4\uD130 \uD53C\uD574
+        +200%, \uACBD\uD5D8\uCE58 \uD68D\uB4DD\uB7C9 +50%"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemdescript/588
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uD0C8\uB9AC\uC2A4\uB9CC \uC120\uD0DD \uC0C1\uC790\uC774\uB2E4. \uC0AC\uC6A9
+        \uC2DC \uD0C8\uB9AC\uC2A4\uB9CC\uC744 \uC5BB\uC744 \uC218 \uC788\uB2E4. \uC5BB\uC740
+        \uD0C8\uB9AC\uC2A4\uB9CC\uC740 \uD0C8\uB9AC\uC2A4\uB9CC \uAC00\uBC29\uC73C\uB85C
+        \uB4E4\uC5B4\uAC04\uB2E4."
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemdescript/589
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uD0C8\uB9AC\uC2A4\uB9CC \uBB34\uC791\uC704 \uC0C1\uC790\uC774\uB2E4. \uC0AC\uC6A9
+        \uC2DC \uD0C8\uB9AC\uC2A4\uB9CC\uC744 \uC5BB\uC744 \uC218 \uC788\uB2E4. \uC5BB\uC740
+        \uD0C8\uB9AC\uC2A4\uB9CC\uC740 \uD0C8\uB9AC\uC2A4\uB9CC \uAC00\uBC29\uC73C\uB85C
+        \uB4E4\uC5B4\uAC04\uB2E4."
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemdescript/590
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uBE5B\uB098\uB294 \uD0C8\uB9AC\uC2A4\uB9CC \uC120\uD0DD \uC0C1\uC790\uC774\uB2E4.
+        \uC0AC\uC6A9 \uC2DC \uD0C8\uB9AC\uC2A4\uB9CC\uC744 \uC5BB\uC744 \uC218 \uC788\uB2E4.
+        \uC5BB\uC740 \uD0C8\uB9AC\uC2A4\uB9CC\uC740 \uD0C8\uB9AC\uC2A4\uB9CC \uAC00\uBC29\uC73C\uB85C
+        \uB4E4\uC5B4\uAC04\uB2E4."
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemdescript/591
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uBE5B\uB098\uB294 \uD0C8\uB9AC\uC2A4\uB9CC \uBB34\uC791\uC704 \uC0C1\uC790\uC774\uB2E4.
+        \uC0AC\uC6A9 \uC2DC \uD0C8\uB9AC\uC2A4\uB9CC\uC744 \uC5BB\uC744 \uC218 \uC788\uB2E4.
+        \uC5BB\uC740 \uD0C8\uB9AC\uC2A4\uB9CC\uC740 \uD0C8\uB9AC\uC2A4\uB9CC \uAC00\uBC29\uC73C\uB85C
+        \uB4E4\uC5B4\uAC04\uB2E4."
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Itemdescript/592
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC2DC\uC98C1 \uC774\uBCA4\uD2B8 \uC704\uC7A5\uC744 \uC120\uD0DD\uD574 \uC5BB\uC744
+        \uC218 \uC788\uB294 \uC0C1\uC790\uC774\uB2E4."
       - 
       - 
       - 
@@ -40688,7 +41524,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - "<\uACE0\uC720>\uC2A4\uD1B0 \uC2A4\uD2B8\uB77C\uC774\uD06C222"
+      - "<\uACE0\uC720>\uC2A4\uD1B0 \uC2A4\uD2B8\uB77C\uC774\uD06C"
       - 
       - 
       - 
@@ -42795,7 +43631,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uC9C0\uD61C 70 \uC99D\uAC00"
-      - Wisdom increased by 70
+      - Increases Wisdom by 70
       - 
       - 
       - 
@@ -48527,9 +49363,9 @@ MonoBehaviour:
         Physical attack power +40%
 
         Critical
-        hit chance +18%
+        Strike Chance +18%
 
-        Critical Strike Damage +25%
+        +25% Critical Strike Damage
 
         Damage Reduction
         +35%'
@@ -48555,9 +49391,9 @@ MonoBehaviour:
         Magic attack power +40%
 
         Critical
-        hit chance +18%
+        Strike Chance +18%
 
-        Critical Strike Damage +25%
+        +25% Critical Strike Damage
 
         Damage Reduction
         +35%'
@@ -48583,9 +49419,9 @@ MonoBehaviour:
         Status ailment damage
         +80%
 
-        Critical hit chance +18%
+        Critical Strike Chance +18%
 
-        Critical Strike Damage +25%
+        +25% Critical Strike Damage
 
         Damage
         Reduction +35%'
@@ -49468,7 +50304,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uD2B8\uB864 \uC8FC\uC220\uC0AC"
-      - troll shaman
+      - Troll Shaman
       - 
       - 
       - 
@@ -52129,6 +52965,48 @@ MonoBehaviour:
       - 
       Flags: 0000000000000000
       Languages_Touch: []
+    - Term: Shopname/1113
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC2DC\uC98C2 \uC2A4\uD0C0\uD130 \uD328\uD0A4\uC9C01"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Shopname/1114
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC2DC\uC98C2 \uC2A4\uD0C0\uD130 \uD328\uD0A4\uC9C03"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Shopname/1115
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC2DC\uC98C2 \uC2A4\uD0C0\uD130 \uD328\uD0A4\uC9C03"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
     - Term: Shopinfo/1000
       TermType: 0
       Description: 
@@ -54167,6 +55045,54 @@ MonoBehaviour:
       - 
       Flags: 0000000000000000
       Languages_Touch: []
+    - Term: Shopinfo/1113
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC2DC\uC98C2\uC5D0\uC11C \uC0C8\uB86D\uAC8C \uC0C8\uB86D\uAC8C \uB2E8\uC7A5\uB41C
+        \uC2A4\uD0C0\uD130 \uD328\uD0A4\uC9C0\uC774\uB2E4. \uAC01\uC885 \uC720\uC6A9\uD55C
+        \uC544\uC774\uD15C\uC774 \uB4E4\uC5B4\uC788\uB2E4."
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Shopinfo/1114
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC2DC\uC98C2\uC5D0\uC11C \uC0C8\uB86D\uAC8C \uC0C8\uB86D\uAC8C \uB2E8\uC7A5\uB41C
+        \uC2A4\uD0C0\uD130 \uD328\uD0A4\uC9C0\uC774\uB2E4. \uAC01\uC885 \uC720\uC6A9\uD55C
+        \uC544\uC774\uD15C\uC774 \uB4E4\uC5B4\uC788\uB2E4."
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Shopinfo/1115
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC2DC\uC98C2\uC5D0\uC11C \uC0C8\uB86D\uAC8C \uC0C8\uB86D\uAC8C \uB2E8\uC7A5\uB41C
+        \uC2A4\uD0C0\uD130 \uD328\uD0A4\uC9C0\uC774\uB2E4. \uAC01\uC885 \uC720\uC6A9\uD55C
+        \uC544\uC774\uD15C\uC774 \uB4E4\uC5B4\uC788\uB2E4."
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
     - Term: "Inventory/\uC7AC\uC9C8"
       TermType: 0
       Description: 
@@ -54676,6 +55602,20 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uD3AB"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: Inventory/407
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uD0C8\uB9AC\uC2A4\uB9CC \uCF54\uC5B4"
       - 
       - 
       - 
@@ -58737,7 +59677,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uD22C\uD1B5\uAC00"
-      - tutonga
+      - Tutonga
       - 
       - 
       - 
@@ -64180,6 +65120,51 @@ MonoBehaviour:
       - 
       Flags: 0000000000000000
       Languages_Touch: []
+    - Term: "ContentInfos/\uD0C8\uB9AC\uC2A4\uB9CC"
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uD0C8\uB9AC\uC2A4\uB9CC"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: "ContentInfos/\uD0C8\uB9AC\uC2A4\uB9CC0"
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uD0C8\uB9AC\uC2A4\uB9CC \uCF54\uC5B4\uB294 \uD30C\uD2F0 \uB808\uC774\uB4DC\uC5D0\uC11C
+        \uC5BB\uC744 \uC218 \uC788\uB294 \uC7A5\uCC29 \uC544\uC774\uD15C\uC785\uB2C8\uB2E4.\n\uC7A5\uCC29\uD55C
+        \uD0C8\uB9AC\uC2A4\uB9CC\uC5D0 \uB530\uB77C \uC138\uD2B8 \uD6A8\uACFC\uAC00
+        \uC788\uC2B5\uB2C8\uB2E4.\n\n\n<color=cyan>[\uD0C8\uB9AC\uC2A4\uB9CC \uCF54\uC5B4
+        \uD2B9\uC218 \uD6A8\uACFC]</color>\n\uD0C8\uB9AC\uC2A4\uB9CC\uC740 \uACE0\uC720
+        \uD2B9\uC218\uD6A8\uACFC\uAC00 \uC5C6\uC73C\uBA70 \uD68D\uB4DD \uC2DC 0~3\uAC1C\uC758
+        \uD2B9\uC218 \uD6A8\uACFC\uB97C \uBB34\uC791\uC704\uB85C \uAC00\uC9D1\uB2C8\uB2E4.\n\uD2B9\uC218
+        \uD6A8\uACFC\uB294 \uBCC0\uACBD \uBC0F \uCD94\uAC00\uAC00 \uBD88\uAC00\uB2A5\uD569\uB2C8\uB2E4.\n\n<color=cyan>[\uD0C8\uB9AC\uC2A4\uB9CC
+        \uCF54\uC5B4 \uC138\uD2B8 \uD6A8\uACFC]</color>\n\uAC19\uC740 \uC218\uC758
+        \uD0C8\uB9AC\uC2A4\uB9CC \uCF54\uC5B4\uB97C \uC911\uBCF5 \uC7A5\uCC29 \uC2DC
+        \uC138\uD2B8 \uD6A8\uACFC\uAC00 \uBC1C\uB3D9\uB429\uB2C8\uB2E4.\n\uCD5C\uB300
+        3\uC885\uB958\uC758 \uD0C8\uB9AC\uC2A4\uB9CC \uCF54\uC5B4 \uC138\uD2B8 \uD6A8\uACFC
+        \uBC1C\uB3D9\uC774 \uAC00\uB2A5\uD569\uB2C8\uB2E4.\n\n<color=cyan>[\uD0C8\uB9AC\uC2A4\uB9CC
+        \uCF54\uC5B4 \uD569\uC131]</color>\n3\uAC1C\uC758 \uD0C8\uB9AC\uC2A4\uB9CC
+        \uCF54\uC5B4\uB97C \uD569\uC131\uD560 \uB54C \uBB34\uC791\uC704\uB85C \uCF54\uC5B4\uB97C
+        \uD68D\uB4DD\uD569\uB2C8\uB2E4. \uC7AC\uB8CC\uC758 \uD2B9\uC218 \uD6A8\uACFC\uC5D0
+        \uC0C1\uAD00\uC5C6\uC774\n\uBB34\uC870\uAC74 0~3\uAC1C\uC758 \uD2B9\uC218\uD6A8\uACFC\uB97C
+        \uBB34\uC791\uC704\uB85C \uD68D\uB4DD\uD569\uB2C8\uB2E4."
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
     - Term: "ButtonUI/\uC0AC\uC6A9"
       TermType: 0
       Description: 
@@ -66619,7 +67604,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "[\uC2DC\uC98C\uC77C\uC77C]\uBCF4\uC2A4 \uBAAC\uC2A4\uD130 \uCC98\uCE58 {0}\uD68C"
-      - '[Season daily] Defeat boss monster {0} times'
+      - '[Season Daily] Defeat boss monsters {0} times'
       - 
       - 
       - 
@@ -71715,7 +72700,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycbxhcSJOOxI2cpDPngQJFCYrJuB6ffrqjqE3UgW-z7NUkneTss0VycsDEYRszHhWYImy/exec
     Google_SpreadsheetKey: 1rhi3AD5stOr4ljin6mwlgGM5wvn1pTUlM2ritN6RDf8
     Google_SpreadsheetName: I2Loc RIZE RPG Localization
-    Google_LastUpdatedVersion: 1718395014051
+    Google_LastUpdatedVersion: 1718616795516
     Google_Password: gksrnr13
     GoogleUpdateFrequency: 3
     GoogleInEditorCheckFrequency: 2

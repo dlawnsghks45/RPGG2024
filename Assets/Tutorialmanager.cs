@@ -94,6 +94,7 @@ public class Tutorialmanager : MonoBehaviour
         tutocoroutine.Add(Tutorial_24());
         tutocoroutine.Add(Tutorial_25());
         tutocoroutine.Add(Tutorial_26());
+        tutocoroutine.Add(Tutorial_27());
 
 
         if (int.Parse(PlayerBackendData.Instance.tutoid) >= int.Parse(maxlv))
@@ -1034,6 +1035,7 @@ break;
     public GameObject[] Tutorial_obj24; //펫 튜토
     public GameObject[] Tutorial_obj25; //펫 튜토
     public GameObject[] Tutorial_obj26; //펫 튜토
+    public GameObject[] Tutorial_obj27; //파티레이드
 
 //메뉴 튜토
     public IEnumerator Tutorial_0()
@@ -2175,7 +2177,46 @@ break;
      SkipTutorialbutton_GuideQuest.SetActive(false);
      TutorialTotalManager.Instance.guidepanel.Show(false);
  }
-
+public IEnumerator Tutorial_27()
+ {
+     TutorialTotalManager.Instance.RefreshNow();
+     TutorialTotalManager.Instance.CheckFinish();
+     SkipTutorialbutton.SetActive(true);
+     SkipTutorialbutton_GuideQuest.SetActive(false);
+     GameObject[] obj = Tutorial_obj27;
+     for (int i = 0; i < obj.Length; i++)
+         obj[i].SetActive(false);
+     Tutorial_objAll[27].SetActive(true);
+     for (int i = 0; i < obj.Length; i++)
+         obj[i].SetActive(false);
+     obj[0].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 1);
+     obj[0].SetActive(false);
+     obj[1].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 2);
+     obj[1].SetActive(false);
+     obj[2].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 3);
+     obj[2].SetActive(false);
+     obj[3].SetActive(true);
+     yield return new WaitWhile(() => nowstep < 4);
+     for (int i = 0; i < obj.Length; i++)
+         obj[i].SetActive(false);
+     TutorialTotalManager.Instance.CheckGuideQuest("tutopartyraid");
+     for (int i = 0; i < UIView.VisibleViews.Count; i++)
+     {
+         UIView.VisibleViews[i].Hide(true);
+     }
+     uimanager.Instance.UIVIEWS.Clear();
+     uimanager.Instance.UIVIEWSGameObject.Clear();
+     hidealluiview();
+     for (int i = 0; i < Tutorial_objAll.Length; i++)
+     {
+         Tutorial_objAll[i].SetActive(false);
+     }
+     SkipTutorialbutton_GuideQuest.SetActive(false);
+     TutorialTotalManager.Instance.guidepanel.Show(false);
+ }
  public void ShowInvenPotion()
  {
          Inventory.Instance.ShowInventoryItem("1501");

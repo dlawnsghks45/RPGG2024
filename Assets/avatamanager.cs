@@ -204,7 +204,13 @@ public class avatamanager : MonoBehaviour
         Earn_Avata.sprite = SpriteManager.Instance.GetSprite(SkillDB.Instance.Find_Id(id).Sprite);
         ani.SetTrigger(Show);
     }
-
+    public void EarnTalisman(string id)
+    {
+        Earn_Avata_WeaponBody.SetActive(false);
+        Earn_AvataName.text = Inventory.GetTranslate(TalismanDB.Instance.Find_id(id).name);
+        Earn_Avata.sprite = SpriteManager.Instance.GetSprite(TalismanDB.Instance.Find_id(id).sprite);
+        ani.SetTrigger(Show);
+    }
     public void Bt_ButAvata()
     {
         if (PlayerBackendData.Instance.GetCash() >= int.Parse(Crystalbuytext.text))

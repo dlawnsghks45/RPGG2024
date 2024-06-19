@@ -597,7 +597,7 @@ id,coreid,description,description2,name,info,lv,maxlv,probability,value,c,A,B,ty
 1536,1326,갓 오브 타임,"<color=cyan>[갓 오브 타임]</color>
 주 무기 크로노스의 지팡이 장착 시 잠재된 시간의 힘이 깨어난다.
 -타임 어택이 모든 몬스터를 타격하고 피해량이 2300%에서 2700%
--타임 코어 성공 확률이 1.5배에서 2배로 증가한다.",EquipSkill/1536,EquipSkillInfo/1536,10,10,0,1,0,0,0,0,0,7,FALSE,FALSE,FALSE
+-타임 코어 성공 확률이 1.5배에서 2배로 증가한다.",EquipSkill/1536,EquipSkillInfo/1536,10,10,0,2,0,0,0,0,0,7,FALSE,FALSE,FALSE
 1537,1327,역병의 지배자,"<color=cyan>[역병의 지배자]</color>
 주 무기 절명의 채찍 장착 시 잠재된 역병의 힘이 깨어난다.
 -시체 폭발 마법 스킬 피해가 +10% 추가 증가한다.

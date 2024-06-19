@@ -12,7 +12,7 @@ using Sirenix.OdinInspector;
 
 public class otherusermanager : MonoBehaviour
 {
-   //½Ì±ÛÅæ¸¸µé±â.
+   //ï¿½Ì±ï¿½ï¿½æ¸¸ï¿½ï¿½ï¿½.
    private static otherusermanager _instance = null;
 
    public static otherusermanager Instance
@@ -27,11 +27,9 @@ public class otherusermanager : MonoBehaviour
                //Debug.Log("Player script Error");
             }
          }
-
          return _instance;
       }
    }
-
    public UIView Panel;
 
    public GameObject PlayerUserPanel;
@@ -53,9 +51,9 @@ public class otherusermanager : MonoBehaviour
    [SerializeField] private equipitemslot[] Equipslots;
    [SerializeField] private Skillslot[] Skillslots;
 
-   //Ä³¸¯ÅÍ ´É·ÂÄ¡
+   //Ä³ï¿½ï¿½ï¿½ï¿½ ï¿½É·ï¿½Ä¡
    public Text[] PlayerStat;
-   //ÆĞ½Ãºê
+   //ï¿½Ğ½Ãºï¿½
    public Text[] Passivename;
    public Text[] Passiveinfo;
 
@@ -77,7 +75,7 @@ public class otherusermanager : MonoBehaviour
    
    public void ShowPlayerData(string nickname)
    {
-       //Debug.Log("´Ğ³×ÀÓ" + nickname);
+       //Debug.Log("ï¿½Ğ³ï¿½ï¿½ï¿½" + nickname);
       Panel.Show(false);
       Loading.SetActive(true);
       PlayerUserPanel.SetActive(false);
@@ -100,9 +98,8 @@ public class otherusermanager : MonoBehaviour
          //Debug.Log(nickname);
          //Debug.Log(callback.GetReturnValuetoJSON()["row"]["inDate"].ToString());
          userindate = callback.GetReturnValuetoJSON()["row"]["inDate"].ToString();
-         if (callback.GetReturnValuetoJSON()["row"]["guildName"] != null) // ±æµå ³×ÀÓÀÌ µî·ÏµÇ¾î ÀÖÁö ¾ÊÀ» °æ¿ì null·Î ¹İÈ¯
+         if (callback.GetReturnValuetoJSON()["row"]["guildName"] != null) 
          {
-            //±æµåÀÌ¸§À» ¹Ì¸® ¹Ş¾Æ¿È
             guildName = callback.GetReturnValuetoJSON()["row"]["guildName"].ToString();
             lastlogin = callback.GetReturnValuetoJSON()["row"]["lastLogin"].ToString();
          }
@@ -140,17 +137,14 @@ public class otherusermanager : MonoBehaviour
          {
             if (bro.IsSuccess() == false)
             {
-               // ¿äÃ» ½ÇÆĞ Ã³¸®
+               // ï¿½ï¿½Ã» ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½
                //Debug.Log(bro);
                return;
             }
 
             if (bro.GetReturnValuetoJSON()["rows"].Count <= 0)
             {
-               // ¿äÃ»ÀÌ ¼º°øÇØµµ where Á¶°Ç¿¡ ºÎÇÕÇÏ´Â µ¥ÀÌÅÍ°¡ ¾øÀ» ¼ö ÀÖ±â ¶§¹®¿¡
-               // µ¥ÀÌÅÍ°¡ Á¸ÀçÇÏ´ÂÁö È®ÀÎ
-               // À§¿Í °°Àº new Where() Á¶°ÇÀÇ °æ¿ì Å×ÀÌºí¿¡ row°¡ ÇÏ³ªµµ ¾øÀ¸¸é Count°¡ 0 ÀÌÇÏ ÀÏ ¼ö ÀÖ´Ù.
-               //Debug.Log(bro);
+             
                return;
             }
 
@@ -161,7 +155,7 @@ public class otherusermanager : MonoBehaviour
             PlayerUserPanel.SetActive(true);
            // Debug.Log(bro);
 
-            //µ¥ÀÌÅÍ ÀÔ·Â
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½
             JsonData data = bro.FlattenRows()[0];
             //Bro.Rows()[i]["inDate"]["S"].ToString();
             
@@ -170,35 +164,35 @@ public class otherusermanager : MonoBehaviour
 
             if (nowtime.Date == dateTime.Date)
             {
-               // Debug.Log("¿À´ÃÀÌ °°´Ù");
-                lastlogintext.text = Inventory.GetTranslate("UI2/¸¶Áö¸·Á¢¼Ó½Ã°£¿À´Ã");
+               // Debug.Log("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
+                lastlogintext.text = Inventory.GetTranslate("UI2/ë§ˆì§€ë§‰ì ‘ì†ì‹œê°„ì˜¤ëŠ˜");
             }
             else
             {
-               // Debug.Log("¿À´ÃÀÌ ´Ù¸£´Ù");
+               // Debug.Log("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¸ï¿½ï¿½ï¿½");
                 lastlogintext.text = 
-                    string.Format(Inventory.GetTranslate("UI2/¸¶Áö¸·Á¢¼Ó½Ã°£"),
+                    string.Format(Inventory.GetTranslate("UI2/ë§ˆì§€ë§‰ì ‘ì†ì‹œê°„"),
                         (nowtime - dateTime).Days);
             }
             
             
-            //ÀÌ¸§°ú Á÷¾÷
+            //ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             NameandJobText.text =
                $"Lv.{data["level"].ToString()} {nickname}";
             ClassText.text =
                Inventory.GetTranslate(ClassDB.Instance.Find_id(data["NowClass"]["ClassId1"].ToString()).name);
             Inventory.Instance.ChangeItemRareColor(ClassText,ClassDB.Instance.Find_id(data["NowClass"]["ClassId1"].ToString()).tier);
 
-            AdventureRankText.text = PlayerData.Instance.gettierstarText("UI2/¸ğÇè·©Å©",data["level_adven"].ToString());
+            AdventureRankText.text = PlayerData.Instance.gettierstarText("UI2/ëª¨í—˜ë­í¬",data["level_adven"].ToString());
             GuildText.text = guildName == null ? "" : $"[{guildName}]";
-            LastStage.text = string.Format(Inventory.GetTranslate("UI2/¸¶Áö¸·»ç³ÉÅÍ"),
+            LastStage.text = string.Format(Inventory.GetTranslate("UI2/ë§ˆì§€ë§‰ì‚¬ëƒ¥í„°"),
                 Inventory.GetTranslate(MapDB.Instance.Find_id(data["NowMap"].ToString()).name));
 
        
             
             
-            #region ÀåºñÁ¤º¸
-            //Àåºñ Á¤º¸
+            #region ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            //ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             EquipDatabase[] PlayerEquip = new EquipDatabase[15];
 
 
@@ -207,7 +201,7 @@ public class otherusermanager : MonoBehaviour
                try
                {
                   PlayerEquip[i] = new EquipDatabase(data["EquipmentNow"][i]);
-//                   Debug.Log("Àåºñ¸¦ ³Ö´Â´Ù" + i);
+//                   Debug.Log("ï¿½ï¿½ï¿½ ï¿½Ö´Â´ï¿½" + i);
                }
                catch
                {
@@ -234,7 +228,7 @@ public class otherusermanager : MonoBehaviour
                 }
                 else
                 {
-                    Equipslots[i].SetItem(); //¾øÀ½À¸·Î Ç¥½Ã         
+                    Equipslots[i].SetItem(); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½         
                 }
             }
             PlayerData.Instance.SetAvartaImage(PlayerAvarta,
@@ -263,7 +257,7 @@ public class otherusermanager : MonoBehaviour
 
             #endregion
 
-            #region  Æê
+            #region  ï¿½ï¿½
 
             if (data.ContainsKey("nowPetData"))
             {
@@ -305,9 +299,9 @@ public class otherusermanager : MonoBehaviour
           
 
             #endregion
-            #region ½ºÅ³
+            #region ï¿½ï¿½Å³
 
-            //½ºÅ³.
+            //ï¿½ï¿½Å³.
             foreach (var t in Skillslots)
             {
                t.islock = true;
@@ -336,7 +330,7 @@ public class otherusermanager : MonoBehaviour
             }
 
             #endregion
-            #region ´É·ÂÄ¡
+            #region ï¿½É·ï¿½Ä¡
             foreach (var t in PlayerStat)
             {
                 t.text = "-";
@@ -373,7 +367,7 @@ public class otherusermanager : MonoBehaviour
             }
             
             #endregion
-            #region ÆĞ½Ãºê
+            #region ï¿½Ğ½Ãºï¿½
 
             for (int i = 0; i < data["Passive"].Count; i++)
             {
@@ -398,11 +392,11 @@ public class otherusermanager : MonoBehaviour
            
             
             #endregion
-            #region ¾îºô¸®Æ¼
+            #region ï¿½ï¿½ï¿½ï¿½ï¿½Æ¼
             
             if (data.ContainsKey("Ability"))
             {
-                Debug.Log(data["Ability"].Count);
+    //            Debug.Log(data["Ability"].Count);
 
                 for (int i = 0; i < data["Ability"].Count; i++)
                 {
@@ -424,15 +418,10 @@ public class otherusermanager : MonoBehaviour
                 }
             }
             #endregion
-            #region  À§Àå
+            #region  ï¿½ï¿½ï¿½ï¿½
             if (data.ContainsKey("avata_avata"))
             {
-                    if (data["avata_avata"].ToString() != "")
-                    {
-                        PlayerData.Instance.SetAvartaImage(PlayerAvarta,
-                            SpriteManager.Instance.GetSprite(AvartaDB.Instance.Find_id(data["avata_avata"].ToString())
-                                .sprite));
-                    }
+                 
                     if (data["avata_weapon"].ToString() != "")
                     {
                         PlayerData.Instance.SetAvartaImage(MainWeapon,
@@ -444,6 +433,24 @@ public class otherusermanager : MonoBehaviour
                         PlayerData.Instance.SetAvartaImage(SubWeapon,
                             SpriteManager.Instance.GetSprite(AvartaDB.Instance.Find_id(data["avata_subweapon"].ToString())
                                 .sprite));
+                    }
+                    if (data["avata_avata"].ToString() != "")
+                    {
+                        PlayerData.Instance.SetAvartaImage(PlayerAvarta,
+                            SpriteManager.Instance.GetSprite(AvartaDB.Instance.Find_id(data["avata_avata"].ToString())
+                                .sprite));
+                    }
+    
+                    
+                    if (bool.Parse(AvartaDB.Instance.Find_id(data["avata_avata"].ToString()).iswhole))
+                    {
+                        SubWeapon.enabled = false;
+                        MainWeapon.enabled = false;
+                    }
+                    else
+                    {
+                        SubWeapon.enabled = true;
+                        MainWeapon.enabled = true;
                     }
             }
             #endregion
@@ -487,9 +494,9 @@ public class otherusermanager : MonoBehaviour
            //Debug.Log(nickname);
            //Debug.Log(callback.GetReturnValuetoJSON()["row"]["inDate"].ToString());
            userindate = callback.GetReturnValuetoJSON()["row"]["inDate"].ToString();
-           if (callback.GetReturnValuetoJSON()["row"]["guildName"] != null) // ±æµå ³×ÀÓÀÌ µî·ÏµÇ¾î ÀÖÁö ¾ÊÀ» °æ¿ì null·Î ¹İÈ¯
+           if (callback.GetReturnValuetoJSON()["row"]["guildName"] != null) // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ÏµÇ¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ nullï¿½ï¿½ ï¿½ï¿½È¯
            {
-               //±æµåÀÌ¸§À» ¹Ì¸® ¹Ş¾Æ¿È
+               //ï¿½ï¿½ï¿½ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ ï¿½Ş¾Æ¿ï¿½
                guildName = callback.GetReturnValuetoJSON()["row"]["guildName"].ToString();
                lastlogin = callback.GetReturnValuetoJSON()["row"]["lastLogin"].ToString();
            }
@@ -524,17 +531,14 @@ public class otherusermanager : MonoBehaviour
            {
                if (bro.IsSuccess() == false)
                {
-                   // ¿äÃ» ½ÇÆĞ Ã³¸®
+                   // ï¿½ï¿½Ã» ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½
                    //Debug.Log(bro);
                    return;
                }
 
                if (bro.GetReturnValuetoJSON()["rows"].Count <= 0)
                {
-                   // ¿äÃ»ÀÌ ¼º°øÇØµµ where Á¶°Ç¿¡ ºÎÇÕÇÏ´Â µ¥ÀÌÅÍ°¡ ¾øÀ» ¼ö ÀÖ±â ¶§¹®¿¡
-                   // µ¥ÀÌÅÍ°¡ Á¸ÀçÇÏ´ÂÁö È®ÀÎ
-                   // À§¿Í °°Àº new Where() Á¶°ÇÀÇ °æ¿ì Å×ÀÌºí¿¡ row°¡ ÇÏ³ªµµ ¾øÀ¸¸é Count°¡ 0 ÀÌÇÏ ÀÏ ¼ö ÀÖ´Ù.
-                   //Debug.Log(bro);
+             
                    return;
                }
 
@@ -544,14 +548,13 @@ public class otherusermanager : MonoBehaviour
                PlayerUserPanel.SetActive(true);
                // Debug.Log(bro);
 
-               //µ¥ÀÌÅÍ ÀÔ·Â
+               //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½
                JsonData data = bro.FlattenRows()[0];
                //Bro.Rows()[i]["inDate"]["S"].ToString();
 
                if (!data.ContainsKey("NowClass_train"))
                {
-                   Debug.Log("ÀúÀåµ¥ÀÌÅÍ°¡ ¾ø´Ù");
-                   alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI3/Çã¼ö¾Æºñµ¥À×ÅÍ¾øÀ½"), alertmanager.alertenum.ÀÏ¹İ);
+             //      alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI3/ï¿½ï¿½ï¿½ï¿½Æºï¿½ï¿½ï¿½ï¿½Í¾ï¿½ï¿½ï¿½"), alertmanager.alertenum.ï¿½Ï¹ï¿½);
                    Panel.Hide(true);
                    return;
                }
@@ -562,19 +565,19 @@ public class otherusermanager : MonoBehaviour
 
                if (nowtime.Date == dateTime.Date)
                {
-                   // Debug.Log("¿À´ÃÀÌ °°´Ù");
-                   lastlogintext.text = Inventory.GetTranslate("UI2/¸¶Áö¸·Á¢¼Ó½Ã°£¿À´Ã");
+                   // Debug.Log("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
+                   lastlogintext.text = Inventory.GetTranslate("UI2/ë§ˆì§€ë§‰ì ‘ì†ì‹œê°„ì˜¤ëŠ˜");
                }
                else
                {
-                   // Debug.Log("¿À´ÃÀÌ ´Ù¸£´Ù");
+                   // Debug.Log("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¸ï¿½ï¿½ï¿½");
                    lastlogintext.text =
-                       string.Format(Inventory.GetTranslate("UI2/¸¶Áö¸·Á¢¼Ó½Ã°£"),
+                       string.Format(Inventory.GetTranslate("UI2/ë§ˆì§€ë§‰ì ‘ì†ì‹œê°„"),
                            (nowtime - dateTime).Days);
                }
 
 
-               //ÀÌ¸§°ú Á÷¾÷
+               //ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
                NameandJobText.text =
                    $"Lv.{data["level_train"].ToString()} {nickname}";
                ClassText.text =
@@ -583,17 +586,17 @@ public class otherusermanager : MonoBehaviour
                    ClassDB.Instance.Find_id(data["NowClass_train"]["ClassId1"].ToString()).tier);
 
                AdventureRankText.text =
-                   PlayerData.Instance.gettierstarText("UI2/¸ğÇè·©Å©", data["level_adven_train"].ToString());
+                   PlayerData.Instance.gettierstarText("UI2/ëª¨í—˜ë­í¬", data["level_adven_train"].ToString());
                GuildText.text = guildName == null ? "" : $"[{guildName}]";
-               LastStage.text = string.Format(Inventory.GetTranslate("UI2/¸¶Áö¸·»ç³ÉÅÍ"),
+               LastStage.text = string.Format(Inventory.GetTranslate("UI2/ë§ˆì§€ë§‰ì‚¬ëƒ¥í„°"),
                    Inventory.GetTranslate(MapDB.Instance.Find_id(data["NowMap"].ToString()).name));
 
 
 
 
-               #region ÀåºñÁ¤º¸
+               #region ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-               //Àåºñ Á¤º¸
+               //ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
                EquipDatabase[] PlayerEquip = new EquipDatabase[15];
 
 
@@ -602,7 +605,7 @@ public class otherusermanager : MonoBehaviour
                    try
                    {
                        PlayerEquip[i] = new EquipDatabase(data["EquipmentNow_train"][i]);
-                       // Debug.Log("Àåºñ¸¦ ³Ö´Â´Ù" + i);
+                       // Debug.Log("ï¿½ï¿½ï¿½ ï¿½Ö´Â´ï¿½" + i);
                    }
                    catch
                    {
@@ -629,7 +632,7 @@ public class otherusermanager : MonoBehaviour
                    }
                    else
                    {
-                       Equipslots[i].SetItem(); //¾øÀ½À¸·Î Ç¥½Ã         
+                       Equipslots[i].SetItem(); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½         
                    }
                }
 
@@ -663,9 +666,9 @@ public class otherusermanager : MonoBehaviour
                
                #endregion
 
-               #region ½ºÅ³
+               #region ï¿½ï¿½Å³
 
-               //½ºÅ³.
+               //ï¿½ï¿½Å³.
                foreach (var t in Skillslots)
                {
                    t.islock = true;
@@ -686,7 +689,7 @@ public class otherusermanager : MonoBehaviour
 
                for (int i = 0; i < data["NowClass_train"]["Skills1"].Count; i++)
                {
-                   // Debug.Log("µ¥ÀÌÅÍ´Â" + data["NowClass"]["Skills1"][i]);
+                   // Debug.Log("ï¿½ï¿½ï¿½ï¿½ï¿½Í´ï¿½" + data["NowClass"]["Skills1"][i]);
                    if (data["NowClass_train"]["Skills1"][i] == null ||
                        data["NowClass_train"]["Skills1"][i].ToString() == "") continue;
                    Skillslots[i].skillid = data["NowClass_train"]["Skills1"][i].ToString();
@@ -695,7 +698,7 @@ public class otherusermanager : MonoBehaviour
 
                #endregion
 
-               #region ´É·ÂÄ¡
+               #region ï¿½É·ï¿½Ä¡
 
                foreach (var t in PlayerStat)
                {
@@ -736,7 +739,7 @@ public class otherusermanager : MonoBehaviour
                #endregion
 
 
-               #region ÆĞ½Ãºê
+               #region ï¿½Ğ½Ãºï¿½
 
                for (int i = 0; i < data["Passive_train"].Count; i++)
                {
@@ -785,7 +788,7 @@ public class otherusermanager : MonoBehaviour
 
                #endregion
 
-               #region ¾îºô¸®Æ¼
+               #region ï¿½ï¿½ï¿½ï¿½ï¿½Æ¼
 
                if (data.ContainsKey("TrainAbility"))
                {
@@ -812,7 +815,7 @@ public class otherusermanager : MonoBehaviour
 
                #endregion
                
-               #region  Æê
+               #region  ï¿½ï¿½
 
                if (data.ContainsKey("nowPetData_train"))
                {
@@ -857,7 +860,7 @@ public class otherusermanager : MonoBehaviour
                #endregion
 
                
-               #region  À§Àå
+               #region  ï¿½ï¿½ï¿½ï¿½
                if (data.ContainsKey("avata_avata"))
                {
                    if (data["avata_avata"].ToString() != "")
@@ -878,8 +881,22 @@ public class otherusermanager : MonoBehaviour
                            SpriteManager.Instance.GetSprite(AvartaDB.Instance.Find_id(data["avata_subweapon"].ToString())
                                .sprite));
                    }
+                   
+                   
+                   if (bool.Parse(AvartaDB.Instance.Find_sprite(data["avata_avata"].ToString()).iswhole))
+                   {
+                       SubWeapon.enabled = false;
+                       MainWeapon.enabled = false;
+                   }
+                   else
+                   {
+                       SubWeapon.enabled = true;
+                       MainWeapon.enabled = true;
+                   }
                     
                }
+               
+               
                #endregion
            });
        });
@@ -909,7 +926,7 @@ public class otherusermanager : MonoBehaviour
         EquipD.Clear();
         EquipE.Clear();
         EquipF.Clear();
-        //¸ğµç Àåºñ Å¸ÀÔ °Ë»ö
+        //ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Å¸ï¿½ï¿½ ï¿½Ë»ï¿½
         foreach (var t in equipdata)
         {
             if (t == null) continue;
@@ -969,7 +986,7 @@ public class otherusermanager : MonoBehaviour
             
             foreach (var t in SetString)
             {
-                //ÇØ´ç ºÎÀ§¸¦ ºÒ·¯¿Â´Ù.
+                //ï¿½Ø´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½Â´ï¿½.
                 equipitemslot slots = GetEquipSlots(EquipItemDB.Instance.Find_id(t).Type);
                 if (slots.data != null)
                 {
@@ -1028,7 +1045,7 @@ public class otherusermanager : MonoBehaviour
      
      public InputField ChatReportInput;
      public InputField ChatReportInput2;
-     //Ã¤ÆÃ À¯Àú Á¤º¸
+     //Ã¤ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
      public void Bt_ShowChatUserData(Sprite body,Sprite main,Sprite sub,string username,int adlv = 0)
      {
          if(username == PlayerBackendData.Instance.nickname)
@@ -1043,18 +1060,15 @@ public class otherusermanager : MonoBehaviour
          WithdrawpartyButton.SetActive(false);
          if (isUnblock)
          {
-             Debug.Log("ÇØ´ç À¯Àú´Â Â÷´ÜµÈ »óÅÂÀÔ´Ï´Ù.");
              ChatuserButton[0].SetActive(false);
              ChatuserButton[1].SetActive(true);
          }
          else
          {
-             Debug.Log("ÇØ´ç À¯Àú´Â Â÷´Ü ¸ñ·Ï¿¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù");
              ChatuserButton[0].SetActive(true);
              ChatuserButton[1].SetActive(false);
          }
 
-         //¸®´õ¸¸ ÃÊ´ë°¡ ¶á´Ù.
          if (PartyRaidRoommanager.Instance.nowmyleadernickname == PlayerBackendData.Instance.nickname)
          {
              bool ishave = false;
@@ -1078,7 +1092,7 @@ public class otherusermanager : MonoBehaviour
                  if (PlayerBackendData.Instance.GetAdLv() >= 20 && adlv >= 20)
                      InviteButton.SetActive(true);
              }
-             //³» À¯Àú¶ó¸é
+             //ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
          }
          
          ChatUserPanel.Show(false);
@@ -1090,13 +1104,11 @@ public class otherusermanager : MonoBehaviour
 
          if (isUnblock)
          {
-             Debug.Log("ÇØ´ç À¯Àú´Â Â÷´ÜµÈ »óÅÂÀÔ´Ï´Ù.");
              ChatuserButton[0].SetActive(false);
              ChatuserButton[1].SetActive(true);
          }
          else
          {
-             Debug.Log("ÇØ´ç À¯Àú´Â Â÷´Ü ¸ñ·Ï¿¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù");
              ChatuserButton[0].SetActive(true);
              ChatuserButton[1].SetActive(false);
          }
@@ -1150,10 +1162,9 @@ public class otherusermanager : MonoBehaviour
              (callback) => {
                  if (callback.IsSuccess())
                  {
-                     Debug.Log("½Å°í ¿Ï·á");
-                     alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI4/½Å°í ¿Ï·á"), alertmanager.alertenum.ÀÏ¹İ);
+                     alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI4/ì‹ ê³  ì™„ë£Œ"), alertmanager.alertenum.ì¼ë°˜);
                  }
-                 // ÀÌÈÄ Ã³¸®
+                 // ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½
              }
          );
      }
