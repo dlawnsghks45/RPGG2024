@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -41,6 +43,8 @@ public class BuffManager : MonoBehaviour
     public Image EquipskillBar;
     public float equipskillcur;
     public float equipskillmax;
+    public float equipskillAInt;
+    public TextMeshPro equipskillAText;
 
 
     public void OffEquipSkills()
@@ -51,15 +55,23 @@ public class BuffManager : MonoBehaviour
     public string nowequipid;
     public void SetEquipSkills(string equipid,float max)
     {
+        equipskillAInt = 0;
+        equipskillAText.text = "";
         if(nowequipid.Equals(equipid) && EquipSkillObj.activeSelf)
             return;
-
         nowequipid = equipid;
         EquipskillImage_Weapon.sprite = SpriteManager.Instance.GetSprite(EquipItemDB.Instance.Find_id(equipid).Sprite);
         EquipSkillObj.SetActive(true);
         equipskillmax = max;
         equipskillcur = 0;
+     
         RefreshBar();
+    }
+
+    public void SetEquipSkillMax(float max)
+    {
+        equipskillmax = max;
+        equipskillcur = 0;
     }
 
     void RefreshBar()
@@ -75,7 +87,16 @@ public class BuffManager : MonoBehaviour
             equipskillcur = equipskillmax;
         }
     }
+    public void AddStackA(int stack,int max)
+    {
+        equipskillAInt += stack;
+        if (equipskillAInt >= max)
+        {
+            equipskillAInt = max;
+        }
 
+        equipskillAText.text = equipskillAInt.ToString(CultureInfo.InvariantCulture);
+    }
     public bool IsMaxStack()
     {
         if (equipskillcur >= equipskillmax)

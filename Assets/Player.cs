@@ -836,7 +836,7 @@ public class Player : MonoBehaviour
                 ability_buff = float.Parse(skilldata.value);
                 break;
             case "1312": //적화의 건틀릿
-                Battlemanager.Instance.mainplayer.buffmanager.SetEquipSkills(data.id, 50);
+                Battlemanager.Instance.mainplayer.buffmanager.SetEquipSkills(data.id, 15);
                 isequipskills = true;
 
                 equipskillmanager.Instance.SetStats(
@@ -1017,11 +1017,17 @@ public class Player : MonoBehaviour
                     equipskillmanager.Instance.SetStats(
                         (int)equipskillmanager.EquipStatFloat.E6159_2,
                         2);
+                    
+                    equipskillmanager.Instance.SetStats(
+                        (int)equipskillmanager.EquipStatFloat.E6159_3,
+                        2);
+                    
+                    equipskillmanager.Instance.SetStats(
+                        (int)equipskillmanager.EquipStatFloat.E6159,
+                        float.Parse(skilldata.value));
                 }
 
-                equipskillmanager.Instance.SetStats(
-                    (int)equipskillmanager.EquipStatFloat.E6159,
-                    float.Parse(skilldata.value));
+             
                 break;
             case "1327": //드래곤 애로우
                 equipskillmanager.Instance.SetStats(
@@ -1115,14 +1121,59 @@ public class Player : MonoBehaviour
                 break;
             //피해 증가
             case "1536": //크로노스
+                if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E61521) >
+                    0)
+                {
+//                    Debug.Log("오브ㅜ세트효과발동");
+                    equipskillmanager.Instance.SetStats((int)equipskillmanager.EquipStatFloat.legenstaffdmg,
+                        float.Parse(skilldata.c));
+                    
+                    equipskillmanager.Instance.SetStats(
+                        (int)equipskillmanager.EquipStatFloat.E61611,
+                        float.Parse(skilldata.value));
+                }
+                
+                
+               
+                break;
+            case "1535": //절명의채찍
+                Battlemanager.Instance.mainplayer.buffmanager.SetEquipSkills(data.id, int.Parse(skilldata.A));
+                isequipskills = true;
                 equipskillmanager.Instance.SetStats(
-                    (int)equipskillmanager.EquipStatFloat.E61611,
+                    (int)equipskillmanager.EquipStatFloat.legendotaddstack,
                     float.Parse(skilldata.value));
+                equipskillmanager.Instance.SetStats(
+                    (int)equipskillmanager.EquipStatFloat.legendotmaxstack,
+                    float.Parse(skilldata.c));
+
+                //피해증가
+                equipskillmanager.Instance.SetStats(
+                    (int)equipskillmanager.EquipStatFloat.E6149,
+                    float.Parse(skilldata.probability));
+                //5당 중첩량
+                equipskillmanager.Instance.SetStats(
+                    (int)equipskillmanager.EquipStatFloat.E61511,
+                    10f);
+                //5당 최대량
+                equipskillmanager.Instance.SetStats(
+                    (int)equipskillmanager.EquipStatFloat.E61511_2,
+                    50f);
+                break;
+
+            case "1537": // 절명의 채찍 보조무기
+                if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E61511) >
+                    0)
+                {
+                    buff_maxdotcount = 100;
+                    
+                   equipskillmanager.Instance.SetStats(
+                         (int)equipskillmanager.EquipStatFloat.E6150,
+                         0.125f);
+                }
+                Battlemanager.Instance.mainplayer.buffmanager.SetEquipSkillMax(int.Parse(skilldata.A));
                 break;
         }
     }
-
-
     public float AdventureRankSkillSlot(int lv)
     {
         switch (lv)
@@ -1380,7 +1431,7 @@ public class Player : MonoBehaviour
         buff_castspeed = 0;
         buff_basicatkup = 0;
         buff_alldmgup = 0;
-
+        buff_maxdotcount = 0;
 
         isequipskills = false;
         
@@ -1607,15 +1658,8 @@ public class Player : MonoBehaviour
                 foreach (var skilldata in PlayerBackendData.Instance.GetEquipData()[i].EquipSkill1
                              .Select(t => EquipSkillDB.Instance.Find_id(t)))
                 {
-                    try
-                    {
-                        CheckESKILL(skilldata,data2,data);
-                    }
-                    catch (Exception e)
-                    {
-//                        Debug.Log("버그");
-                        continue;
-                    }
+                    CheckESKILL(skilldata,data2,data);
+                 
                 }
             }
         }
@@ -1636,7 +1680,6 @@ public class Player : MonoBehaviour
                     {
                         EquipSkillDB.Row skilldata = EquipSkillDB.Instance.Find_id(v.Eskill[i]);
                         CheckESKILL(skilldata);
-//                        Debug.Log("스킬체크했다" + v.Eskill[i]);
                     }
                 }
             }
@@ -2300,7 +2343,7 @@ public class Player : MonoBehaviour
 
 
         //��Ʈ
-        Stat_MaxDotCount = gear_maxdotcount + buff_maxdotcount + maxdotcount +
+        Stat_MaxDotCount = gear_maxdotcount  + maxdotcount +
                            (int)pm.GetPassiveStat(Passivemanager.PassiveStatEnum.dotstackup) + set_MaxDotCount
                            + (int)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat
                                .legendotmaxstack)

@@ -268,7 +268,7 @@ public class chatmanager : MonoBehaviour
                          //;membercount9
                          //내용 10
                          //멤버코드
-                         Debug.Log("홍보시작");
+//                         Debug.Log("홍보시작");
                          ShowPartyAdChat(stringdata[3],stringdata[4],stringdata[2],stringdata[10],stringdata[6],stringdata[7]
                          ,stringdata[5],stringdata[8],stringdata[9]);
                          break;
@@ -502,6 +502,7 @@ public class chatmanager : MonoBehaviour
                             if(PartyRaidRoommanager.Instance.nowmyleadernickname != stringdata[2])
                                 break;
                             //레디창을 보여줌
+                            PartyRaidRoommanager.Instance.PartyMember[0].BuffPercent = float.Parse(stringdata[3]);
                             PartyRaidRoommanager.Instance.ShowRaidReadyPanel();
                             break;
                         case "PRYR":
@@ -511,6 +512,7 @@ public class chatmanager : MonoBehaviour
                                 break;
                             //레디창을 보여줌
                             PartyRaidRoommanager.Instance.readyslots[int.Parse(stringdata[4])].SetReady();
+                            Debug.Log("버프는"+  stringdata[5]);
                             PartyRaidRoommanager.Instance.PartyMember[int.Parse(stringdata[4])].BuffPercent =
                                 float.Parse(stringdata[5]);
                             break;

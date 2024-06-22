@@ -336,7 +336,6 @@ public class PartyraidChatManager : MonoBehaviour
             PartyRaidRoommanager.Instance.RaidReadyPanel.SetActive(false);
             Backend.Chat.ChatToChannel(ChannelType.Public,
                 $"{publicsystem};PRRS;{PartyRaidRoommanager.Instance.nowmyleadernickname};{PlayerBackendData.Instance.nickname};{PartyRaidRoommanager.Instance.mypartynum}");
-           // Chat_ChatSystemOnlyContent("파티 레이드가 시작됩니다.");
         }
     }
 

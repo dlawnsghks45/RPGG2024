@@ -259,8 +259,10 @@ public class mapmanager : MonoBehaviour
                         break;
                     case "4": //성물 파괴
                         TutorialTotalManager.Instance.CheckGuideQuest("altarstart");
-                        RankingManager.Instance.RankInsert(altarwarmanager.Instance.totaldmg.ToString(), RankingManager.RankEnum.성물);
+                        RankingManager.Instance.RankInsert(dpsmanager.Instance.TotalDmg.ToString(), RankingManager.RankEnum.성물);
                         LocateMap(savemapid);
+                        dpsmanager.Instance.Bt_SaveDps();
+                        dpsmanager.Instance.EndDps();
                         break;
                     case "5": //골드러쉬
                         LocateMap(savemapid);
@@ -273,8 +275,8 @@ public class mapmanager : MonoBehaviour
                         LocateMap(savemapid);
                         break;
                     case "8": //훈련장
-                        dpsmanager.Instance.EndDps();
                         LocateMap(savemapid);
+                        dpsmanager.Instance.EndDps();
                         break;
                     case "9": //개미굴실패
                         //횟수 복원
@@ -599,7 +601,6 @@ public class mapmanager : MonoBehaviour
                     int.Parse(MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage).mapcount);
                 Invoke(nameof(StartAdventureLv), 2.1f);
                 EnemySpawnManager.Instance.CloseStageObj();
-                //   dpsmanager.Instance.StartDps();
                 break;
             case "3": //싱글 레이드
                 EnemySpawnManager.Instance.spawnedmonstercur = 0;
@@ -616,7 +617,8 @@ public class mapmanager : MonoBehaviour
                 Invoke(nameof(StartAltarBoss), 2.1f);
                 EnemySpawnManager.Instance.CloseStageObj();
                 Battlemanager.Instance.mainplayer.hpmanager.MakeZero();
-                //  dpsmanager.Instance.StartDps();
+                dpsmanager.Instance.StartDps();
+
                 break;
             case "5": //골드러쉬
                 break;

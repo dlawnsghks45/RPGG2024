@@ -253,6 +253,13 @@ public class Battlemanager : MonoBehaviour
                     bool iscrit = Random.Range(0, 101) <= mainplayer.stat_crit ? true : false;
                     decimal totaldmg = (decimal)mainplayer.stat_atk *
                                        (decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6141_2);
+                    
+                    
+                    if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6159_3) > 0)
+                    {
+                        totaldmg *= 2m;
+                    }
+                    
                     Enemy enemy = GetTarget();
                 
                     enemy.hpmanager.TakeDamage(dpsmanager.attacktype.특수효과,"E1312_2",totaldmg*2m, iscrit, mainplayer.stat_critdmg, "", 0, "Fire12");
@@ -272,6 +279,10 @@ public class Battlemanager : MonoBehaviour
                     bool iscrit = Random.Range(0, 101) <= mainplayer.stat_crit ? true : false;
                     decimal totaldmg = (decimal)mainplayer.stat_atk *
                                        (decimal)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6141_2);
+                    
+                   
+
+
                     Enemy enemy = GetTarget();
                 
                     enemy.hpmanager.TakeDamage(dpsmanager.attacktype.특수효과,"E1312_3",totaldmg, iscrit, mainplayer.stat_critdmg, "", 0, "Fire10");

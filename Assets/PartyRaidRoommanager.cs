@@ -316,7 +316,11 @@ public class PartyRaidRoommanager : MonoBehaviour
         JoinUserButton.SetActive(false);
         AdmentiseButton.SetActive(false);
 
+        
+        
         PartyMember[0].SetPlayerData(GiveMyPartyData(), 0);
+        PartyMember[0].BuffPercent = Battlemanager.Instance.mainplayer.Stat_totalbuff;
+        Debug.Log("¹öÇÁ´Â" + "¤·¤·");
         nowmyleadernickname = PlayerBackendData.Instance.nickname;
         mypartynum = 0;
         partyroomdata = new PartyRoom();

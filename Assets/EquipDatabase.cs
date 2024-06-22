@@ -517,6 +517,43 @@ public class EquipDatabase : IEquatable<object>
         if (EquipSkill1.Count != 0)
             ishaveEquipSkill = true;
     }
+
+    public void SetEquipSkillsAdvan(string previd,string[] giveskill)
+    {
+        EquipSkill1.Clear();
+        //고유가 있으면 맨 앞줄 변경
+        if (EquipItemDB.Instance.Find_id(Inventory.Instance.data.itemid).SpeMehodP != "0")
+        {
+            if (EquipItemDB.Instance.Find_id(previd).SpeMehodP != "0")
+            {
+
+                giveskill[0] = EquipItemDB.Instance.Find_id(Inventory.Instance.data.itemid).SpeMehodP;
+            }
+            else
+            {
+
+                List<string> li = new List<string>();
+                li = giveskill.ToList();
+                
+                li.Insert(0, EquipItemDB.Instance.Find_id(Inventory.Instance.data.itemid).SpeMehodP);
+       //         for(int i = 0 ; i < li.Count;i++)
+//                    Debug.Log(li[i]);
+                giveskill = li.ToArray();
+            }
+        }
+        for (int i = 0; i < giveskill.Length; i++)
+        {
+//            Debug.Log("넣었다" + giveskill[i]);
+            if(giveskill[i] == "" || giveskill[i] == "0")
+                continue;
+            EquipSkill1.Add(giveskill[i]);
+        }
+
+        
+        if (EquipSkill1.Count != 0)
+            ishaveEquipSkill = true;
+    }
+
     public void SetEquipSkills(string[] giveskill)
     {
         EquipSkill1.Clear();
@@ -524,33 +561,22 @@ public class EquipDatabase : IEquatable<object>
         //고유가 있으면 맨 앞줄 변경
         if (EquipItemDB.Instance.Find_id(SuccManager.Instance.ResultSlot.data.itemid).SpeMehodP != "0")
         {
-            Debug.Log("다2");
             if (EquipItemDB.Instance.Find_id(SuccManager.Instance.ResourceSlot.data.itemid).SpeMehodP != "0")
             {
-                Debug.Log("다23");
 
                 giveskill[0] = EquipItemDB.Instance.Find_id(SuccManager.Instance.ResultSlot.data.itemid).SpeMehodP;
             }
             else
             {
-                Debug.Log("다42");
 
                 List<string> li = new List<string>();
                 li = giveskill.ToList();
-                for(int i = 0 ; i < li.Count;i++)
-                    Debug.Log(li[i]);
+              
                 li.Insert(0, EquipItemDB.Instance.Find_id(SuccManager.Instance.ResultSlot.data.itemid).SpeMehodP);
-                Debug.Log("다42");
-                for(int i = 0 ; i < li.Count;i++)
-                    Debug.Log(li[i]);
+              
                 giveskill = li.ToArray();
             }
         }
-        
-        Debug.Log("다44");
-
-    
-        
         for (int i = 0; i < giveskill.Length; i++)
         {
 //            Debug.Log("넣었다" + giveskill[i]);
@@ -1348,8 +1374,7 @@ case 10:
             int str = int.Parse(data.AllStat);
             int rareatk = (int)(str * getrarepercent());
             
-            Debug.Log(rareatk);
-            
+//            
             int craftrareatk = (int)(str * getcraftrarepercent());
             int smeltstat = (int)(str * smeltpercent);
             int enchantstat = (int)(str * getEnchantpercent());

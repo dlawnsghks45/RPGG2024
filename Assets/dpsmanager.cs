@@ -102,7 +102,6 @@ public class dpsmanager : MonoBehaviour
         DPSButton.SetActive(false);
         if (isrec)
         {
-            //???? ?г? ????
             savepanel.SetActive(true);
         }
     }
@@ -353,16 +352,10 @@ public class dpsmanager : MonoBehaviour
 
     }
 
-//???? ???? 
-//???,????,????,???
-//?? ?????,??? ??????? , ?ð???,????? ?ð???
-
     public void Bt_SaveDps()
     {
         Timemanager.Instance.RefreshNowTIme();
         PlayerBackendData userData = PlayerBackendData.Instance;
-        //??????? 3?ð??? ??? ??????.
-        //??? ????ð??? ???????? ?????.
         Param param = new Param
         {
             { "level_train", userData.GetLv() },
@@ -377,22 +370,25 @@ public class dpsmanager : MonoBehaviour
             { "TrainTime", maxtime },
             { "BreakTime", breaktime },
             { "DPSDmgText", TotalDPSDmg },
-            { "TrainAbility", userData.Abilitys }
+            { "TrainAbility", userData.Abilitys },
+            { "NowTalismanData_Train", PlayerBackendData.Instance.TalismanPreset[PlayerBackendData.Instance.nowtalismanpreset] }
+            
+            
+            
         };
-
         Where where = new Where();
         where.Equal("owner_inDate", PlayerBackendData.Instance.playerindate);
         SendQueue.Enqueue(Backend.GameData.Update, "PlayerData", where, param, (callback) =>
         {
             if (!callback.IsSuccess())
             {
-                alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI3/?허수아비랭킹등록실패"), alertmanager.alertenum.일반);
+                //alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI3/허수아비랭킹등록실패"), alertmanager.alertenum.일반);
                 return;
             }
 
-            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI3/?허수아비랭킹등록성공"), alertmanager.alertenum.일반);
-            savepanel.gameObject.SetActive(false);
-            RankingManager.Instance.RankInsert(TotalDmg.ToString(), RankingManager.RankEnum.허수아비60);
+            //alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI3/허수아비랭킹등록성공"), alertmanager.alertenum.일반);
+           // savepanel.gameObject.SetActive(false);
+            //RankingManager.Instance.RankInsert(TotalDmg.ToString(), RankingManager.RankEnum.허수아비60);
         });
     }
 }

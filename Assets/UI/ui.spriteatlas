@@ -77,6 +77,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 1721c31242248714fa242fd23e8c52b1, type: 3}
   - {fileID: 21300000, guid: d3afc6120ce6c8a4cae9d4c48c7c1b09, type: 3}
   - {fileID: 21300000, guid: fe3acd327b3ad70479365ebce2f2614a, type: 3}
+  - {fileID: 21300000, guid: 09ba0a42ca8550d4d9dbd5d6a02e7b72, type: 3}
   - {fileID: 21300000, guid: 724a47b28db96e545857929b75026273, type: 3}
   - {fileID: 21300000, guid: a6d7f30314382b94082409f8ba17515d, type: 3}
   - {fileID: 21300000, guid: bf30e7037e8ecc54192afff55b774f12, type: 3}
@@ -137,6 +138,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 783d0a2a273847647981a58f1a9083f0, type: 3}
   - {fileID: 21300000, guid: 4aed67aa271af59458a7c010143cead2, type: 3}
   - {fileID: 21300000, guid: 4850e4baf4a1a6046b505965a7a6b664, type: 3}
+  - {fileID: 21300000, guid: e66553dac9f14c04bb060be107886ea9, type: 3}
   - {fileID: 21300000, guid: bdfa8a3b0c557d744bc52b5a0b41d248, type: 3}
   - {fileID: 21300000, guid: b4c0106b64b67b34098f49430fa941b3, type: 3}
   - {fileID: 21300000, guid: a57c84bb118a7dc4a96150a82356185d, type: 3}
@@ -146,6 +148,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 0e72916ca4fcb184db92a117217ca61f, type: 3}
   - {fileID: 21300000, guid: c34ee78c240b1fb479d75962cec3a034, type: 3}
   - {fileID: 21300000, guid: 778804cc2e2580341ac28974caec18e3, type: 3}
+  - {fileID: 21300000, guid: 78ad103d73e013846bc8fa50cc2efcbb, type: 3}
   - {fileID: 21300000, guid: fc6be35da4dc30a4da535c671955c676, type: 3}
   - {fileID: 21300000, guid: a6c3587d9129d1d46958594b7f0d4504, type: 3}
   - {fileID: 21300000, guid: d877be9dfaf966a4fb47ebf935e5020a, type: 3}
@@ -190,6 +193,7 @@ SpriteAtlas:
   - ButtonYellow
   - Panel
   - InputSelectedThemeBlack 1
+  - c2467
   - c114
   - c31
   - c140
@@ -250,6 +254,7 @@ SpriteAtlas:
   - c464
   - c157
   - ButtonNormalHighlighted
+  - c2473
   - ButtonGreen
   - c27
   - c873
@@ -259,6 +264,7 @@ SpriteAtlas:
   - c151
   - InputSelectedThemePurple
   - ButtonPinkLock
+  - c2474
   - c87
   - InputThemeYellow
   - ButtonPurple

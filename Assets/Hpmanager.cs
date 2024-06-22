@@ -58,13 +58,13 @@ public class Hpmanager : MonoBehaviour
             DotSlots[(int)dottype].transform.SetAsLastSibling();
             DotSlots[(int)dottype].gameObject.SetActive(true);
         }
-        this.maxdotcount = maxdotcount;
+        this.maxdotcount = maxdotcount + Battlemanager.Instance.mainplayer.buff_maxdotcount;
         this.crit = crit;
         this.critdmg = critdmg;
         Dot_Stat[(int)dottype] = stat;
         Dot_Stack[(int)dottype] += stack;
-        if (Dot_Stack[(int)dottype] > maxdotcount)
-            Dot_Stack[(int)dottype] = maxdotcount;
+        if (Dot_Stack[(int)dottype] > this.maxdotcount)
+            Dot_Stack[(int)dottype] = this.maxdotcount;
 
         //Debug.Log("아아" + maxdotcount);
 
@@ -80,6 +80,7 @@ public class Hpmanager : MonoBehaviour
         감전,
         중독,
         죽음,
+        절명,
         Length
     }
 
@@ -946,7 +947,6 @@ public class Hpmanager : MonoBehaviour
                                 Savemanager.Instance.SaveInventory();
                                 RaidManager.Instance.FinishRaid();
                                 break;
-
                             //개미굴
                             case "9":
                                 //플레이어의 레벨과 맵의 레벨이 같다면 레벨업
@@ -1075,8 +1075,6 @@ public class Hpmanager : MonoBehaviour
             {
                 bool iscrit = Random.Range(0, 101) <= crit ? true : false;
                 if (Dot_Stack[i] == 0) continue;
-                //피해를 입힘
-//                Debug.Log("도ㅓ트는" + i);
                 TakeDamage(dpsmanager.attacktype.상태이상,$"Dot{i}",Dot_Stat[i] * Dot_Stack[i], iscrit, critdmg, "", 0, "", i);
                 Dot_Time[i] -= Battlemanager.Instance.mainplayer.dottime;
                 if (Dot_Time[i] <= 0)

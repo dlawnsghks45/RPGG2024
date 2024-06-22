@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -190,6 +191,7 @@ public class Skillmanager : MonoBehaviour
                 decimal cdmg = 0;
                 decimal ddmg = 0;
                 decimal edmg = 0;
+                decimal fdmg = 0;
                 switch (skilldata.skilldata.BuffType)
                 {
 
@@ -199,7 +201,9 @@ public class Skillmanager : MonoBehaviour
                         admg = admg * (decimal)skilldata.Matk;
                         bdmg = targethp.Dot_Stat[3] * targethp.Dot_Stack[3];
                         bdmg = bdmg * (decimal)skilldata.Matk;
-                        totaldmg = admg + bdmg;
+                        cdmg = targethp.Dot_Stat[5] * targethp.Dot_Stack[5];
+                        cdmg = cdmg * (decimal)skilldata.Matk;
+                        totaldmg = admg + bdmg  + cdmg;
 //                        Debug.Log("피해는" + totaldmg);
                         //  Debug.Log(totaldmg + "블루 피해");
                         if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.dotexplosiondmg7) >
@@ -216,7 +220,9 @@ public class Skillmanager : MonoBehaviour
                         admg = admg * (decimal)skilldata.Matk;
                         bdmg = targethp.Dot_Stat[1] * targethp.Dot_Stack[1];
                         bdmg = bdmg * (decimal)skilldata.Matk;
-                        totaldmg = admg + bdmg;
+                        cdmg = targethp.Dot_Stat[5] * targethp.Dot_Stack[5];
+                        cdmg = cdmg * (decimal)skilldata.Matk;
+                        totaldmg = admg + bdmg + cdmg;
                         //   Debug.Log(totaldmg + "레드 피해");
                         if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.dotexplosiondmg7) >
                             0)
@@ -231,7 +237,9 @@ public class Skillmanager : MonoBehaviour
                     case "C":
                         bdmg = targethp.Dot_Stat[4] * targethp.Dot_Stack[4];
                         bdmg = bdmg * (decimal)skilldata.Matk;
-                        totaldmg = admg + bdmg;
+                        cdmg = targethp.Dot_Stat[5] * targethp.Dot_Stack[5];
+                        cdmg = cdmg * (decimal)skilldata.Matk;
+                        totaldmg = cdmg + bdmg;
                         //   Debug.Log(totaldmg + "퍼플 피해");
                         if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.dotexplosiondmg7) >
                             0)
@@ -253,7 +261,9 @@ public class Skillmanager : MonoBehaviour
                         ddmg = ddmg * (decimal)skilldata.Matk;
                         edmg = targethp.Dot_Stat[4] * targethp.Dot_Stack[4];
                         edmg = edmg * (decimal)skilldata.Matk;
-                        totaldmg = admg + bdmg + cdmg + ddmg + edmg;
+                        fdmg = targethp.Dot_Stat[5] * targethp.Dot_Stack[5];
+                        fdmg = fdmg * (decimal)skilldata.Matk;
+                        totaldmg = admg + bdmg + cdmg + ddmg + edmg + fdmg;
 //                        Debug.Log(totaldmg + "포이즌 스트림 피해");
                         break;
                 }
@@ -274,6 +284,17 @@ public class Skillmanager : MonoBehaviour
                 if (dmgup != 0)
                 {
                     totaldmg += totaldmg * 0.5m;
+                }
+
+                if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E61511) != 0)
+                {
+                    Battlemanager.Instance.mainplayer.buffmanager.AddStack(1);
+                    if (Battlemanager.Instance.mainplayer.buffmanager.IsMaxStack())
+                    {
+                        CheckDot("End",
+                            (int)equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E61511_2),
+                            targethp);
+                    }
                 }
 
                 //    Debug.Log("폭발 피해후"  + totaldmg);
@@ -674,6 +695,31 @@ public class Skillmanager : MonoBehaviour
             }
         }
 
+        //골드건
+        //일1313
+        if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6142) != 0)
+        {
+
+            //찬다
+            equipskillmanager.Instance.showequipslots("1313",
+                equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6142_rare)
+                    .ToString("N0")
+                , equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6142_lv).ToString("N0"));
+
+
+            bool iscrit = Random.Range(0, 101) <= mainplayer.stat_crit ? true : false;
+            enemymany = EnemySpawnManager.Instance.gettarget(3);
+
+            foreach (var VARIABLE in enemymany)
+            {
+                VARIABLE.hpmanager.TakeDamage(
+                    dpsmanager.attacktype.특수효과, "E1313",
+                    (decimal)(mainplayer.stat_atk *
+                              equipskillmanager.Instance.GetStats(
+                                  (int)equipskillmanager.EquipStatFloat.E6142_2)),
+                    iscrit, mainplayer.stat_critdmg, "", 0, "Hit1");
+            }
+        }
         //일1313
         if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6145) != 0)
         {
@@ -840,10 +886,100 @@ public class Skillmanager : MonoBehaviour
                         int.Parse(skilldata.skilldata.DotCount) + mainplayer.Stat_AddStack, dmg, mainplayer.stat_crit,
                         mainplayer.stat_critdmg, mainplayer.Stat_MaxDotCount);
                     break;
+                case "End":
+                    //죽음 지헤의 모든 스탯의 * 30 만큼 피해를 준다. 0.5초 마다
+                    dmg = (decimal)(mainplayer.stat_str + mainplayer.stat_dex + mainplayer.stat_int +
+                                    (mainplayer.stat_wis * 1.8f)) * 15;
+                    dmg = dmg + (dmg * (decimal)mainplayer.Stat_DotDmgUp);
+                    if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.dotdouble) != 0)
+                        dmg *= 4m;
+
+                    target.AddDot(Hpmanager.DotType.절명,
+                        int.Parse(skilldata.skilldata.DotCount) + mainplayer.Stat_AddStack, dmg, mainplayer.stat_crit,
+                        mainplayer.stat_critdmg, mainplayer.Stat_MaxDotCount);
+                    break;
             }
         }
         //도트는 갱신이 된다.
 
+    }
+
+    void CheckDot(string dotstring, int dotdcount, Hpmanager target)
+    {
+
+        decimal dmg = 0;
+        switch (dotstring)
+        {
+            case "Bleed": //출혈
+                //출혈 힘 * 지능 * 지혜 * 20
+                dmg = (decimal)((mainplayer.stat_str + mainplayer.stat_int + (mainplayer.stat_wis * 1.8f)) * 12);
+                dmg = dmg + (dmg * (decimal)mainplayer.Stat_DotDmgUp);
+                if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.dotdouble) != 0)
+                    dmg *= 4m;
+                target.AddDot(Hpmanager.DotType.출혈,
+                    dotdcount + mainplayer.Stat_AddStack, dmg, mainplayer.stat_crit,
+                    mainplayer.stat_critdmg, mainplayer.Stat_MaxDotCount);
+                break;
+            case "Fire": //화상
+                //화상 힘 * 지능 * 지혜 * 20
+                dmg = (decimal)((mainplayer.stat_str + mainplayer.stat_int + (mainplayer.stat_wis * 1.8f)) * 12);
+                dmg = dmg + (dmg * (decimal)mainplayer.Stat_DotDmgUp);
+                if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.dotdouble) != 0)
+                    dmg *= 4m;
+
+                target.AddDot(Hpmanager.DotType.화상,
+                    dotdcount + mainplayer.Stat_AddStack, dmg, mainplayer.stat_crit,
+                    mainplayer.stat_critdmg, mainplayer.Stat_MaxDotCount);
+
+                break;
+            case "Shock": //감전
+                //화상 민첩 * 지능 * 지혜 * 20
+                dmg = (decimal)(mainplayer.stat_dex + mainplayer.stat_int + (mainplayer.stat_wis * 1.8f)) * 12;
+                dmg = dmg + (dmg * (decimal)mainplayer.Stat_DotDmgUp);
+                if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.dotdouble) != 0)
+                    dmg *= 4m;
+
+                target.AddDot(Hpmanager.DotType.감전,
+                    dotdcount + mainplayer.Stat_AddStack, dmg, mainplayer.stat_crit,
+                    mainplayer.stat_critdmg, mainplayer.Stat_MaxDotCount);
+                break;
+            case "Poison": //
+                //화상 민첩 * 지능 * 지혜 * 20
+                dmg = (decimal)(mainplayer.stat_dex + mainplayer.stat_int + (mainplayer.stat_wis * 1.8f)) * 12;
+                dmg = dmg + (dmg * (decimal)mainplayer.Stat_DotDmgUp);
+                if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.dotdouble) != 0)
+                    dmg *= 4m;
+
+                target.AddDot(Hpmanager.DotType.중독,
+                    dotdcount + mainplayer.Stat_AddStack, dmg, mainplayer.stat_crit,
+                    mainplayer.stat_critdmg, mainplayer.Stat_MaxDotCount);
+                break;
+            case "Death":
+                //죽음 지헤의 모든 스탯의 * 30 만큼 피해를 준다. 0.5초 마다
+                dmg = (decimal)(mainplayer.stat_str + mainplayer.stat_dex + mainplayer.stat_int +
+                                (mainplayer.stat_wis * 1.8f)) * 15;
+                dmg = dmg + (dmg * (decimal)mainplayer.Stat_DotDmgUp);
+                if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.dotdouble) != 0)
+                    dmg *= 4m;
+
+                target.AddDot(Hpmanager.DotType.죽음,
+                    dotdcount + mainplayer.Stat_AddStack, dmg, mainplayer.stat_crit,
+                    mainplayer.stat_critdmg, mainplayer.Stat_MaxDotCount);
+                break;
+            case "End":
+                //죽음 지헤의 모든 스탯의 * 30 만큼 피해를 준다. 0.5초 마다
+                dmg = (decimal)(mainplayer.stat_str + mainplayer.stat_dex + mainplayer.stat_int +
+                                (mainplayer.stat_wis * 1.8f)) * 17;
+                dmg = dmg + (dmg * (decimal)mainplayer.Stat_DotDmgUp);
+                if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.dotdouble) != 0)
+                    dmg *= 4m;
+
+                target.AddDot(Hpmanager.DotType.절명,
+                    dotdcount + mainplayer.Stat_AddStack, dmg, mainplayer.stat_crit,
+                    mainplayer.stat_critdmg, mainplayer.Stat_MaxDotCount);
+                break;
+        }
+        //도트는 갱신이 된다.
     }
 
 }

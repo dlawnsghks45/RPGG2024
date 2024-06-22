@@ -225,11 +225,15 @@ public class TalismanManager : MonoBehaviour
     private Talismandatabase nowselectdata;
     public void LockItem()
     {
-        nowselectdata.Islock = LockUi.IsOn;
-        if (nowselectpanel != null)
-            nowselectpanel.Refresh(nowselectdata);
-        Savemanager.Instance.SaveTalisman();
-        Savemanager.Instance.Save();
+        if (nowselectdata != null)
+        {
+            nowselectdata.Islock = LockUi.IsOn;
+            if (nowselectpanel != null)
+                nowselectpanel.Refresh(nowselectdata);
+            Savemanager.Instance.SaveTalisman();
+            Savemanager.Instance.Save();
+        }
+
     }
 
     public GameObject EquipButton;
@@ -299,6 +303,50 @@ public class TalismanManager : MonoBehaviour
         }
     }
 
+    public void Bt_ShowTalismanNotMine(Talismandatabase data)
+    {
+        if(data == null)
+            return;
+        Infopnel.Show(false);
+        TalismanDB.Row dbdata = TalismanDB.Instance.Find_id(data.Itemid);
+        info_image.sprite = SpriteManager.Instance.GetSprite(dbdata.sprite);
+        //특수효과
+        for (int i = 0; i < info_eskilltext.Length; i++)
+        {
+            info_eskilltext[i].gameObject.SetActive(false);
+        }
+
+        int colornum = 0;
+        if (data.Eskill != null)
+        {
+            for (int i = 0; i < data.Eskill.Count; i++)
+            {
+                info_eskilltext[i].text = Inventory.GetTranslate(EquipSkillDB.Instance.Find_id(data.Eskill[i]).info);
+                info_eskilltext[i].gameObject.SetActive(true);
+                Inventory.Instance.ChangeItemRareColor(info_eskilltext[i],
+                    EquipSkillDB.Instance.Find_id(data.Eskill[i]).rare);
+                colornum += int.Parse(EquipSkillDB.Instance.Find_id(data.Eskill[i]).rare);
+
+            }
+        }
+        
+        info_nametext.text = Inventory.GetTranslate(dbdata.name);
+        info_nametext.color = TalismanManager.Instance.GetTalismanColor(colornum);
+
+
+        LockUi.IsOn = false;
+        Inventory.Instance.StringRemove();
+        Inventory.Instance.StringWrite(Inventory.GetTranslate(dbdata.setinfo1));
+        Inventory.Instance.StringWrite("\n");
+        Inventory.Instance.StringWrite(Inventory.GetTranslate(dbdata.setinfo2));
+        Inventory.Instance.StringWrite("\n");
+        Inventory.Instance.StringWrite(Inventory.GetTranslate(dbdata.setinfo3));
+        info_Settext.text = Inventory.Instance.StringEnd();
+       
+        UnEquipButton.SetActive(false);
+        EquipButton.SetActive(false);
+        MixSelectButton.SetActive(false);
+    }
 
     public void Bt_UnEquipItem()
     {
@@ -411,6 +459,8 @@ public class TalismanManager : MonoBehaviour
             return;
         }
 
+        toggle[num].IsOn = true;
+        
         
         PlayerBackendData.Instance.nowtalismanpreset = num;
         Refresh();

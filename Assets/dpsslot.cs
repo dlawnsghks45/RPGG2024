@@ -111,6 +111,10 @@ public class dpsslot : MonoBehaviour
                             DPSName.text = Inventory.GetTranslate("UI3/Á×À½");
                             DPSImage.sprite = dpsmanager.Instance.spritedot[4];
                             break;
+                        case "Dot5": //Á×À½
+                            DPSName.text = Inventory.GetTranslate("UI3/Àý¸í");
+                            DPSImage.sprite = dpsmanager.Instance.spritedot[4];
+                            break;
                     }
                     //DAMAGE.text = $"{dpsmanager.convertNumber(dpsdata.totaldmg)}\n({dpsmanager.convertNumber(dpsdata.totaldmg/dpsdata.count)})";
                     break;

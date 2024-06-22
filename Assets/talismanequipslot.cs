@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class talismanequipslot : MonoBehaviour
 {
+
+    public bool isnotmine;
     public Image SetColor;
     private int num;
     public Image Image;
@@ -38,13 +40,9 @@ public class talismanequipslot : MonoBehaviour
             //장착함
 
             Talismandatabase data = PlayerBackendData.Instance.GiveEquipTalismanData()[num];
-
             Image.sprite = SpriteManager.Instance.GetSprite(TalismanDB.Instance.Find_id(
                 data.Itemid).sprite);
             Stateobj[1].SetActive(true);
-
-
-
             //특수효과체크
             if (data.Eskill != null)
             {
@@ -67,6 +65,51 @@ public class talismanequipslot : MonoBehaviour
         }
     }
 
+    public void RemoveTalisman()
+    {
+        foreach (var VARIABLE in Stateobj)
+        {
+            VARIABLE.SetActive(false);
+        }
+
+        talismandatas = null;
+        Stateobj[0].SetActive(true);
+    }
+
+    public Talismandatabase talismandatas;
+
+    public void SetTalismanOtherUser(Talismandatabase data)
+    {
+        if(data == null)
+            return;
+        talismandatas = data;
+        
+        Image.sprite = SpriteManager.Instance.GetSprite(TalismanDB.Instance.Find_id(
+            data.Itemid).sprite);
+        Stateobj[1].SetActive(true);
+
+        foreach (var VARIABLE in Eskill)
+        {
+            VARIABLE.gameObject.SetActive(false);
+        }
+        
+        //특수효과체크
+        if (data.Eskill != null)
+        {
+            int colornum = 0;
+            for (int i = 0; i < data.Eskill.Count; i++)
+            {
+                Eskill[i].gameObject.SetActive(true);
+                Eskill[i].color = Inventory.Instance.GetRareColor(EquipSkillDB.Instance.Find_id(data.Eskill[i]).rare);
+                colornum += int.Parse(EquipSkillDB.Instance.Find_id(data.Eskill[i]).rare);
+            }                    
+            SetColor.color = TalismanManager.Instance.GetTalismanColor(colornum);
+        }
+    }
+    public void ShowTalismanData()
+    {
+        TalismanManager.Instance.Bt_ShowTalismanNotMine(talismandatas);
+    }
 
     public void Bt_EquipTalisman(int num)
     {

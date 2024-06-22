@@ -1324,24 +1324,16 @@ public class equipoptionchanger : MonoBehaviour
 
       if (issucc)
       {
+         string previd =  PlayerBackendData.Instance.GetTypeEquipment(Data.Type)[Inventory.Instance.data.KeyId1].Itemid; 
          PlayerBackendData.Instance.GetTypeEquipment(Data.Type)[Inventory.Instance.data.KeyId1].Itemid = AdvanData.id;
-
-
          if (AdvanData.MinAllDmg != "0" && PlayerBackendData.Instance.GetTypeEquipment(Data.Type)[Inventory.Instance.data.KeyId1].Alldmg1 == 0)
          {
             int alldmg = UnityEngine.Random.Range(int.Parse(AdvanData.MinAllDmg), int.Parse(AdvanData.MaxAllDmg)+1);
             PlayerBackendData.Instance.GetTypeEquipment(Data.Type)[Inventory.Instance.data.KeyId1].Alldmg1 = alldmg;
-            Debug.Log("피증 없어서 만든다");
          }
          
-         
-         if (EquipItemDB.Instance
-                .Find_id(PlayerBackendData.Instance.GetTypeEquipment(Data.Type)[Inventory.Instance.data.KeyId1].Itemid)
-                .SpeMehodP != "0")
-         {
-            PlayerBackendData.Instance.GetTypeEquipment(Data.Type)[Inventory.Instance.data.KeyId1].EquipSkill1[0] =
-               EquipItemDB.Instance.Find_id(AdvanData.id).SpeMehodP;
-         }
+            PlayerBackendData.Instance.GetTypeEquipment(Data.Type)[Inventory.Instance.data.KeyId1].SetEquipSkillsAdvan(previd,
+               PlayerBackendData.Instance.GetTypeEquipment(Data.Type)[Inventory.Instance.data.KeyId1].EquipSkill1.ToArray());
       
          
          string Prevkeyname = PlayerBackendData.Instance.GetTypeEquipment(Data.Type)[Inventory.Instance.data.KeyId1].KeyId1;

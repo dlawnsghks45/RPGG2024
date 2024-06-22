@@ -227,6 +227,7 @@ public class Settingmanager : MonoBehaviour
             { "TalismanData", PlayerBackendData.Instance.TalismanData},
             { "TalismanPreset", PlayerBackendData.Instance.TalismanPreset},
             { "nowtalismanpreset", PlayerBackendData.Instance.nowtalismanpreset},
+            { "NowTalismanData", PlayerBackendData.Instance.TalismanPreset[PlayerBackendData.Instance.nowtalismanpreset]},
             { "Gold", userData.GetMoney() },
             { "Crystal", userData.GetCash() },
             { "avata_avata", userData.avata_avata },
@@ -456,6 +457,8 @@ public class Settingmanager : MonoBehaviour
             { "TalismanData", PlayerBackendData.Instance.TalismanData},
             { "TalismanPreset", PlayerBackendData.Instance.TalismanPreset},
             { "nowtalismanpreset", PlayerBackendData.Instance.nowtalismanpreset},
+            { "NowTalismanData", PlayerBackendData.Instance.TalismanPreset[PlayerBackendData.Instance.nowtalismanpreset]},
+
             { "SaveNum", PlayerBackendData.Instance.ClientSaveNum }
         };
         PlayerBackendData.Instance.sotang_raid = PlayerBackendData.Instance.sotang_raid.Distinct().ToList();
@@ -626,7 +629,8 @@ public class Settingmanager : MonoBehaviour
             { "TalismanData", PlayerBackendData.Instance.TalismanData},
             { "TalismanPreset", PlayerBackendData.Instance.TalismanPreset},
             { "nowtalismanpreset", PlayerBackendData.Instance.nowtalismanpreset},
-            
+            { "NowTalismanData", PlayerBackendData.Instance.TalismanPreset[PlayerBackendData.Instance.nowtalismanpreset]},
+
             { "SaveNum", PlayerBackendData.Instance.ClientSaveNum },
                        //제작
             { "craftmakingid", PlayerBackendData.Instance.craftmakingid },
@@ -795,7 +799,8 @@ public class Settingmanager : MonoBehaviour
             { "TalismanData", PlayerBackendData.Instance.TalismanData},
             { "TalismanPreset", PlayerBackendData.Instance.TalismanPreset},
             { "nowtalismanpreset", PlayerBackendData.Instance.nowtalismanpreset},
-            
+            { "NowTalismanData", PlayerBackendData.Instance.TalismanPreset[PlayerBackendData.Instance.nowtalismanpreset]},
+
             //레벨
             { "level", userData.GetLv() },
             { "levelExp", userData.GetExp() },

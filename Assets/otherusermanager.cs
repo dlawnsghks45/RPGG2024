@@ -67,6 +67,8 @@ public class otherusermanager : MonoBehaviour
 
    public abilityinfoslot[] AbilitySlots;
 
+   public talismanequipslot[] TalismanEquip;
+   
    public void Bt_ShowmytrainingData()
    {
        uimanager.Instance.AddUiview(dpsmanager.Instance.Trainingobj,true);
@@ -130,7 +132,7 @@ public class otherusermanager : MonoBehaviour
             "avata_avata",
             "nowPetid",
             "nowPetData",
-            
+            "NowTalismanData"
          };
 
          SendQueue.Enqueue(Backend.GameData.Get, "PlayerData", where, select, 1, bro =>
@@ -208,6 +210,7 @@ public class otherusermanager : MonoBehaviour
                     
                }
             }
+            
 
 
             battlePointtext.text = PlayerData.Instance.GetEquipPoint(PlayerEquip).ToString("N0");
@@ -257,7 +260,22 @@ public class otherusermanager : MonoBehaviour
 
             #endregion
 
-            #region  ��
+            //탈리스만 초기화
+            for (int i = 0; i < TalismanEquip.Length; i++)
+            {
+                TalismanEquip[i].RemoveTalisman();
+            }
+            if (data.ContainsKey("NowTalismanData"))
+            {
+                for (int i = 0; i < TalismanEquip.Length; i++)
+                {
+                    if (data["NowTalismanData"]["Talismanset"][i] != null)
+                    {
+                        TalismanEquip[i]. SetTalismanOtherUser(new Talismandatabase(data["NowTalismanData"]["Talismanset"][i]));
+                    }
+                }
+            }
+                #region  ��
 
             if (data.ContainsKey("nowPetData"))
             {
@@ -506,6 +524,7 @@ public class otherusermanager : MonoBehaviour
 
            string[] select =
            {
+               "NowTalismanData_train",
                "level_train",
                "level_adven_train",
                "NowClass_train",
@@ -531,41 +550,31 @@ public class otherusermanager : MonoBehaviour
            {
                if (bro.IsSuccess() == false)
                {
-                   // ��û ���� ó��
-                   //Debug.Log(bro);
                    return;
                }
 
+               Debug.Log(bro);
+               
                if (bro.GetReturnValuetoJSON()["rows"].Count <= 0)
                {
-             
                    return;
                }
-
-
 
                Loading.SetActive(false);
                PlayerUserPanel.SetActive(true);
-               // Debug.Log(bro);
-
-               //������ �Է�
+            
                JsonData data = bro.FlattenRows()[0];
-               //Bro.Rows()[i]["inDate"]["S"].ToString();
 
                if (!data.ContainsKey("NowClass_train"))
                {
-             //      alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI3/����ƺ����;���"), alertmanager.alertenum.�Ϲ�);
+                   //      alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI3/����ƺ����;���"), alertmanager.alertenum.�Ϲ�);
                    Panel.Hide(true);
                    return;
                }
-
-
                DateTime nowtime = Timemanager.Instance.GetServerTime();
                DateTime dateTime = DateTime.Parse(data["updatedAt"].ToString());
-
                if (nowtime.Date == dateTime.Date)
                {
-                   // Debug.Log("������ ����");
                    lastlogintext.text = Inventory.GetTranslate("UI2/마지막접속시간오늘");
                }
                else
@@ -612,8 +621,6 @@ public class otherusermanager : MonoBehaviour
 
                    }
                }
-
-
                battlePointtext.text = PlayerData.Instance.GetEquipPoint(PlayerEquip).ToString("N0");
 
                for (int i = 0; i < Equipslots.Length; i++)
@@ -662,8 +669,8 @@ public class otherusermanager : MonoBehaviour
                else
                    PlayerData.Instance.SetSubWeaponImage_remove(SubWeapon);
 
-               
-               
+
+
                #endregion
 
                #region ��ų
@@ -704,127 +711,138 @@ public class otherusermanager : MonoBehaviour
                {
                    t.text = "-";
                }
-               
-               for (int i = 0; i < 17; i++)
+
+               if (data.ContainsKey("Playerstat_train"))
                {
-                   float da = float.Parse(data["Playerstat_train"][i].ToString());
-
-                   PlayerStat[i].text = i is 2 or 10 or 11 or 12 or 13 or 14 or 15 or 16? $"{da:N0}%" : $"{da:N0}";
-               }
-
-               decimal str = decimal.Parse(data["Playerstat_train"][5].ToString());
-               decimal dex= decimal.Parse(data["Playerstat_train"][6].ToString());
-               decimal ints= decimal.Parse(data["Playerstat_train"][7].ToString());
-               decimal wis= decimal.Parse(data["Playerstat_train"][8].ToString());
-
-               if (str + dex > ints + wis)
-               {
-                   DamagerTypeObj[0].SetActive(true);
-                   DamagerTypeObj[1].SetActive(false);
-                   DamagerTypeObj[2].SetActive(false);
-               }
-               else if(ints > wis)
-               {
-                   DamagerTypeObj[0].SetActive(false);
-                   DamagerTypeObj[1].SetActive(true);
-                   DamagerTypeObj[2].SetActive(false);
-               }
-               else
-               {
-                   DamagerTypeObj[0].SetActive(false);
-                   DamagerTypeObj[1].SetActive(false);
-                   DamagerTypeObj[2].SetActive(true);
-               }
-
-               #endregion
-
-
-               #region �нú�
-
-               for (int i = 0; i < data["Passive_train"].Count; i++)
-               {
-//                Debug.Log(data["Passive"][i].ToString());
-                   if (data["Passive_train"][i].ToString() == "" || data["Passive_train"][i].ToString() == "True")
+                   for (int i = 0; i < 17; i++)
                    {
-                       Passivename[i].text = "-";
-                       Passivename[i].color = Color.white;
-                       Passiveinfo[i].text = "-";
+                       float da = float.Parse(data["Playerstat_train"][i].ToString());
+
+                       PlayerStat[i].text = i is 2 or 10 or 11 or 12 or 13 or 14 or 15 or 16 ? $"{da:N0}%" : $"{da:N0}";
+                   }
+
+                   decimal str = decimal.Parse(data["Playerstat_train"][5].ToString());
+                   decimal dex = decimal.Parse(data["Playerstat_train"][6].ToString());
+                   decimal ints = decimal.Parse(data["Playerstat_train"][7].ToString());
+                   decimal wis = decimal.Parse(data["Playerstat_train"][8].ToString());
+
+                   if (str + dex > ints + wis)
+                   {
+                       DamagerTypeObj[0].SetActive(true);
+                       DamagerTypeObj[1].SetActive(false);
+                       DamagerTypeObj[2].SetActive(false);
+                   }
+                   else if (ints > wis)
+                   {
+                       DamagerTypeObj[0].SetActive(false);
+                       DamagerTypeObj[1].SetActive(true);
+                       DamagerTypeObj[2].SetActive(false);
                    }
                    else
                    {
-                       //  Debug.Log(data["Passive_train"][i].ToString());
-                       Passivename[i].text =
-                           Inventory.GetTranslate(PassiveDB.Instance.Find_id(data["Passive_train"][i].ToString()).name);
-                       //  Debug.Log("-00");
-                       Inventory.Instance.ChangeItemRareColor(Passivename[i],
-                           ClassDB.Instance.Find_id(data["Passive_train"][i].ToString()).tier);
-                       //   Debug.Log("-00");
-
-                       Passiveinfo[i].text =
-                           Inventory.GetTranslate(PassiveDB.Instance.Find_id(data["Passive_train"][i].ToString()).info);
-//                    Debug.Log("-00");
-
+                       DamagerTypeObj[0].SetActive(false);
+                       DamagerTypeObj[1].SetActive(false);
+                       DamagerTypeObj[2].SetActive(true);
                    }
-               }
 
-               foreach (var VARIABLE in DPSSlots)
-               {
-                   VARIABLE.gameObject.SetActive(false);
-               }
+                   #endregion
 
 
-               foreach (string key in data["TrainDmg"].Keys)
-               {
-                   Dps_Train.Add(key, new DPS(data["TrainDmg"][key]));
-               }
+                   #region �нú�
 
-               dpsmanager.Instance.ShowDpsList(Dps_Train, DPSSlots);
-               Debug.Log(data["TrainTotalDmg"].ToString());
-               decimal a = decimal.Parse(data["TrainTotalDmg"].ToString(), System.Globalization.NumberStyles.Float);
-               TotalDmg.text = dpsmanager.convertNumber(a);
-               DPSDmg.text = dpsmanager.convertNumber(decimal.Parse(data["DPSDmgText"].ToString(),NumberStyles.Float));
-               TotalTime.text =
-                   $"{data["TrainTime"].ToString()}\n<color=yellow><size=23>({float.Parse(data["BreakTime"].ToString()):N0})</size></color>";
-
-               #endregion
-
-               #region �����Ƽ
-
-               if (data.ContainsKey("TrainAbility"))
-               {
-                   for (int i = 0; i < data["TrainAbility"].Count; i++)
+                   for (int i = 0; i < data["Passive_train"].Count; i++)
                    {
-                       //                Debug.Log(data["Passive"][i].ToString());
-                       if (data["TrainAbility"][i].ToString() == "" || data["TrainAbility"][i].ToString() == "True")
+//                Debug.Log(data["Passive"][i].ToString());
+                       if (data["Passive_train"][i].ToString() == "" || data["Passive_train"][i].ToString() == "True")
                        {
-                           AbilitySlots[i].NoRefresh();
+                           Passivename[i].text = "-";
+                           Passivename[i].color = Color.white;
+                           Passiveinfo[i].text = "-";
                        }
                        else
                        {
-                           AbilitySlots[i].Refresh(data["TrainAbility"][i].ToString());
+                           //  Debug.Log(data["Passive_train"][i].ToString());
+                           Passivename[i].text =
+                               Inventory.GetTranslate(PassiveDB.Instance.Find_id(data["Passive_train"][i].ToString())
+                                   .name);
+                           //  Debug.Log("-00");
+                           Inventory.Instance.ChangeItemRareColor(Passivename[i],
+                               ClassDB.Instance.Find_id(data["Passive_train"][i].ToString()).tier);
+                           //   Debug.Log("-00");
+
+                           Passiveinfo[i].text =
+                               Inventory.GetTranslate(PassiveDB.Instance.Find_id(data["Passive_train"][i].ToString())
+                                   .info);
+//                    Debug.Log("-00");
+
                        }
                    }
-               }
-               else
-               {
-                   for (int i = 0; i < PlayerBackendData.Instance.Abilitys.Length; i++)
+
+                   foreach (var VARIABLE in DPSSlots)
                    {
-                       AbilitySlots[i].NoRefresh();
+                       VARIABLE.gameObject.SetActive(false);
+                   }
+
+
+                   foreach (string key in data["TrainDmg"].Keys)
+                   {
+                       Dps_Train.Add(key, new DPS(data["TrainDmg"][key]));
+                   }
+
+                   dpsmanager.Instance.ShowDpsList(Dps_Train, DPSSlots);
+                   Debug.Log(data["TrainTotalDmg"].ToString());
+                   decimal a = decimal.Parse(data["TrainTotalDmg"].ToString(), System.Globalization.NumberStyles.Float);
+                   TotalDmg.text = dpsmanager.convertNumber(a);
+                   DPSDmg.text =
+                       dpsmanager.convertNumber(decimal.Parse(data["DPSDmgText"].ToString(), NumberStyles.Float));
+                   TotalTime.text =
+                       $"{data["TrainTime"].ToString()}\n<color=yellow><size=23>({float.Parse(data["BreakTime"].ToString()):N0})</size></color>";
+
+                   #endregion
+
+                   #region �����Ƽ
+
+                   if (data.ContainsKey("TrainAbility"))
+                   {
+                       for (int i = 0; i < data["TrainAbility"].Count; i++)
+                       {
+                           //                Debug.Log(data["Passive"][i].ToString());
+                           if (data["TrainAbility"][i].ToString() == "" || data["TrainAbility"][i].ToString() == "True")
+                           {
+                               AbilitySlots[i].NoRefresh();
+                           }
+                           else
+                           {
+                               AbilitySlots[i].Refresh(data["TrainAbility"][i].ToString());
+                           }
+                       }
+                   }
+                   else
+                   {
+                       for (int i = 0; i < PlayerBackendData.Instance.Abilitys.Length; i++)
+                       {
+                           AbilitySlots[i].NoRefresh();
+                       }
                    }
                }
 
                #endregion
-               
-               #region  ��
+
+               #region ��
+
+
+
 
                if (data.ContainsKey("nowPetData_train"))
                {
                    if (data["nowPetData_train"]["Petid"].ToString() != "")
                    {
                        PetImage.sprite =
-                           SpriteManager.Instance.GetSprite(PetDB.Instance.Find_id(data["nowPetData_train"]["Petid"].ToString()).sprite);
+                           SpriteManager.Instance.GetSprite(PetDB.Instance
+                               .Find_id(data["nowPetData_train"]["Petid"].ToString()).sprite);
                        PetImage.enabled = true;
-                       PlayerData.Instance.SetPetStarOther(PetImage.material,int.Parse(data["nowPetData_train"]["Petstar"].ToString()));
+                       PlayerData.Instance.SetPetStarOther(PetImage.material,
+                           int.Parse(data["nowPetData_train"]["Petstar"].ToString()));
 
                    }
                    else
@@ -839,28 +857,46 @@ public class otherusermanager : MonoBehaviour
                        if (data["nowPetid_train"].ToString() != "")
                        {
                            PetImage.sprite =
-                               SpriteManager.Instance.GetSprite(PetDB.Instance.Find_id(data["nowPetid_train"].ToString()).sprite);
+                               SpriteManager.Instance.GetSprite(PetDB.Instance
+                                   .Find_id(data["nowPetid_train"].ToString()).sprite);
                            PetImage.enabled = true;
-                           PlayerData.Instance.SetPetStarOther(PetImage.material,PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar);
+                           PlayerData.Instance.SetPetStarOther(PetImage.material,
+                               PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar);
 
                        }
                        else
                        {
                            PetImage.enabled = false;
                        }
-                   }   
+                   }
                    else
                    {
                        PetImage.enabled = false;
                    }
-                   
+
                }
-               
+
 
                #endregion
-
-               
-               #region  ����
+                Debug.Log("탈리스만체크");
+               //탈리스만 초기화
+               for (int i = 0; i < TalismanEquip.Length; i++)
+               {
+                   TalismanEquip[i].RemoveTalisman();
+               }
+               Debug.Log(data.ContainsKey("NowTalismanData_train"));
+               if (data.ContainsKey("NowTalismanData_train"))
+               {
+                   Debug.Log("잇다");
+                   for (int i = 0; i < TalismanEquip.Length; i++)
+                   {
+                       if (data["NowTalismanData_train"]["Talismanset"][i] != null)
+                       {
+                           TalismanEquip[i]. SetTalismanOtherUser(new Talismandatabase(data["NowTalismanData_train"]["Talismanset"][i]));
+                       }
+                   }
+               }
+               #region avata
                if (data.ContainsKey("avata_avata"))
                {
                    if (data["avata_avata"].ToString() != "")
@@ -875,28 +911,35 @@ public class otherusermanager : MonoBehaviour
                            SpriteManager.Instance.GetSprite(AvartaDB.Instance.Find_id(data["avata_weapon"].ToString())
                                .sprite));
                    }
+
                    if (data["avata_subweapon"].ToString() != "")
                    {
                        PlayerData.Instance.SetAvartaImage(SubWeapon,
-                           SpriteManager.Instance.GetSprite(AvartaDB.Instance.Find_id(data["avata_subweapon"].ToString())
+                           SpriteManager.Instance.GetSprite(AvartaDB.Instance
+                               .Find_id(data["avata_subweapon"].ToString())
                                .sprite));
                    }
-                   
-                   
-                   if (bool.Parse(AvartaDB.Instance.Find_sprite(data["avata_avata"].ToString()).iswhole))
+                   if (data["avata_avata"].ToString() != "")
                    {
-                       SubWeapon.enabled = false;
-                       MainWeapon.enabled = false;
+                       if (bool.Parse(AvartaDB.Instance.Find_sprite(data["avata_avata"].ToString()).iswhole))
+                       {
+                           SubWeapon.enabled = false;
+                           MainWeapon.enabled = false;
+                       }
+                       else
+                       {
+                           SubWeapon.enabled = true;
+                           MainWeapon.enabled = true;
+                       }
                    }
                    else
                    {
                        SubWeapon.enabled = true;
                        MainWeapon.enabled = true;
                    }
-                    
                }
-               
-               
+
+
                #endregion
            });
        });

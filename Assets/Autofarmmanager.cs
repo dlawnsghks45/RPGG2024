@@ -632,19 +632,8 @@ Debug.Log("추가 골드" + PlayerData.Instance.mainplayer.Stat_ExtraGold);
 
      int GetCount_OfflineKill()
      {
-         int a = 0;
-         switch (PlayerBackendData.Instance.Offlinedata.level)
-         {
-             case 1:
-                 a = 8;
-                 break;
-             case 2:
-                 a = 16;
-                 break;
-             case 3:
-                 a = 24;
-                 break;
-         }
+         int a = 24;
+        
          double b = a / (double)PlayerBackendData.Instance.Offlinedata.time;
 
          return (int)(TotalCount_Offline * b);

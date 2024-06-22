@@ -16,6 +16,8 @@ public class rankslot : MonoBehaviour
     public Text Name;
     public Text Score;
 
+    
+    public Image Weapon;
     public Image avata;
     public Image weapon;
     public Image subweapon;
@@ -38,7 +40,7 @@ public class rankslot : MonoBehaviour
         RankPanel.color = Color.white;
         
         playernickname = name;
-        Debug.Log(name);
+//        Debug.Log(name);
         this.indate = indate;
 
         switch (rank)
@@ -62,6 +64,21 @@ public class rankslot : MonoBehaviour
                 RankTop.enabled = true;
                 break;
         }
+        
+        switch (RankingManager.Instance.nowselectnum)
+        {
+            case 1:
+            case 2:
+            case 5:
+            case 0:
+            case 3:
+                Weapon.enabled = true;
+                break;
+            case 4:
+                Weapon.enabled = false;
+
+                break;
+        }
 
         if (avatadata != "")
         {
@@ -71,6 +88,7 @@ public class rankslot : MonoBehaviour
             weapon.gameObject.SetActive(true);
             subweapon.gameObject.SetActive(true);
             
+            Weapon.sprite = SpriteManager.Instance.GetSprite(EquipItemDB.Instance.Find_id(datas[1]).Sprite);
             //위장
             if (datas[3] != "")
             {
@@ -141,13 +159,13 @@ public class rankslot : MonoBehaviour
     {
         switch (RankingManager.Instance.nowselectnum)
         {
-            case 0:
             case 1:
             case 2:
             case 5:
                 otherusermanager.Instance.ShowPlayerData(playernickname);
                 uimanager.Instance.AddUiview(RankingManager.Instance.RankingPanel, true);
                 break;
+            case 0:
             case 3:
                 otherusermanager.Instance.ShowPlayerData_Training(playernickname);
                 uimanager.Instance.AddUiview(RankingManager.Instance.RankingPanel, true);

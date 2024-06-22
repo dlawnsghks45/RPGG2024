@@ -319,23 +319,23 @@ id,coreid,description,description2,name,info,lv,maxlv,probability,value,c,A,B,ty
 골드 획득량 60% 증가",EquipSkill/1307,EquipSkillInfo/1307,9,10,0,0.6,0.5,0,0,passive,expgold,6,FALSE,FALSE,FALSE
 1308,1308,경험치룬5,"추가 경험치 80% 증가
 골드 획득량 80% 증가",EquipSkill/1308,EquipSkillInfo/1308,10,10,0,0.8,0.6,0,0,passive,expgold,6,FALSE,FALSE,FALSE
-1309,1309,파멸의 검,물리 스킬 사용 시 모든 적에게 물리 공격력의 2500% 만큼 피해를 입힌다.,EquipSkill/1309,EquipSkillInfo/1309,10,10,0,25,0,0,0,0,0,7,FALSE,FALSE,FALSE
-1310,1310,하데스의 도끼,"물리 공격력 600% 증가
-모든 지능 지혜가 0으로 고정 지능 지혜를 합친 값 / 2 만큼의 능력치가 힘으로 치환",EquipSkill/1310,EquipSkillInfo/1310,10,10,0,6,0,0,0,0,0,7,FALSE,FALSE,FALSE
-1311,1311,거인 분쇄기,버프 효율 증가 250%,EquipSkill/1311,EquipSkillInfo/1311,10,10,0,3.5,0,0,0,0,0,7,FALSE,FALSE,FALSE
-1312,1312,적화의 건틀릿,"기본 공격 시 물리 공격력의 1050% 만큼 피해를 입히고 적화 중첩 +1
+1309,1309,파멸의 검,물리 스킬 사용 시 모든 적에게 물리 공격력의 4000% 만큼 피해를 입힌다.,EquipSkill/1309,EquipSkillInfo/1309,10,10,0,40,0,0,0,0,0,7,FALSE,FALSE,FALSE
+1310,1310,하데스의 도끼,"물리 공격력 800% 증가
+모든 지능 지혜가 0으로 고정 지능 지혜를 합친 값 만큼의 능력치가 힘으로 치환",EquipSkill/1310,EquipSkillInfo/1310,10,10,0,8,0,0,0,0,0,7,FALSE,FALSE,FALSE
+1311,1311,거인 분쇄기,버프 효율 증가 500%,EquipSkill/1311,EquipSkillInfo/1311,10,10,0,5,0,0,0,0,0,7,FALSE,FALSE,FALSE
+1312,1312,적화의 건틀릿,"기본 공격 시 물리 공격력의 2000% 만큼 피해를 입히고 적화 중첩 +1
 
 [적혼의 권]
-적화 중첩이 15 이라면  적화의 힘을 분출하여 적에게 물리 공격력의 40000%만큼 피해를 입힌다.
+적화 중첩이 15 이라면  적화의 힘을 분출하여 적에게 물리 공격력의 60000%만큼 피해를 입힌다.
 
 [진정한 적혼의 힘]
 주 무기 적화의 건틀릿 장착 시 잠재된 적혼의 힘이 깨어난다.
 -기본 공격 횟수 +2
--적혼의 권 피해량 2배 상승",EquipSkill/1312,EquipSkillInfo/1312,10,10,0,10.5,400,0,0,0,0,7,FALSE,FALSE,TRUE
-1312_2,1312_2,적혼의 권,,EquipSkill/1312_2,EquipSkillInfo/1312_2,10,10,0,10.5,400,0,0,0,0,7,FALSE,FALSE,TRUE
-1312_3,1312_3,진정한 적화의 권,,EquipSkill/1312_3,EquipSkillInfo/1312_3,10,10,0,10.5,400,0,0,0,0,7,FALSE,FALSE,TRUE
+-적혼의 권 피해량 2배 상승",EquipSkill/1312,EquipSkillInfo/1312,10,10,0,20,600,0,0,0,0,7,FALSE,FALSE,TRUE
+1312_2,1312_2,적혼의 권,,EquipSkill/1312_2,EquipSkillInfo/1312_2,10,10,0,20,600,0,0,0,0,7,FALSE,FALSE,TRUE
+1312_3,1312_3,진정한 적화의 권,,EquipSkill/1312_3,EquipSkillInfo/1312_3,10,10,0,20,600,0,0,0,0,7,FALSE,FALSE,TRUE
 1313,1313,골드건,"치명타 확률 1% 당 치명타 피해 200% 증가
-물리 스킬 사용 시 모든 적에게 물리 공격력의 2000% 만큼 피해를 입히는 썬더 볼트를 사용한다.",EquipSkill/1313,EquipSkillInfo/1313,10,10,0,1,1.2,0,0,0,0,7,FALSE,FALSE,FALSE
+물리 스킬 사용 시 모든 적에게 물리 공격력의 2000% 만큼 피해를 입히는 썬더 볼트를 사용한다.",EquipSkill/1313,EquipSkillInfo/1313,10,10,0,1,2,0,0,0,0,7,FALSE,FALSE,FALSE
 1314,1314,드래곤 보우,"치명타 시 적에게 물리 공격력의 2050% 만큼 피해를 입히고 결정 중첩 +1
 공격 기회 당 1회만 피해를 준다.
 
@@ -360,10 +360,10 @@ id,coreid,description,description2,name,info,lv,maxlv,probability,value,c,A,B,ty
 기본 공격 횟수 증가  +2",EquipSkill/1319,EquipSkillInfo/1319,10,10,0,28,0,0,0,0,0,7,FALSE,FALSE,FALSE
 1320,1320,처단자,"상태 이상 중첩 +75
 상태 이상 최대 중첩 +75
-모든 시체 폭발 마법 스킬 피해 30% 증가",EquipSkill/1320,EquipSkillInfo/1320,10,10,0.3,75,75,0,0,0,0,7,FALSE,FALSE,FALSE
+모든 시체 폭발 마법 스킬 피해 30% 증가",EquipSkill/1320,EquipSkillInfo/1320,10,10,0.5,150,150,0,0,0,0,7,FALSE,FALSE,FALSE
 1321,1321,고통,"상태 이상 중첩 +75
 상태 이상 최대 중첩 +75
-상태 이상 피해 피해 속도가 -1초",EquipSkill/1321,EquipSkillInfo/1321,10,10,0.125,75,75,0,0,0,0,7,FALSE,FALSE,FALSE
+상태 이상 피해 피해 속도가 -1초",EquipSkill/1321,EquipSkillInfo/1321,10,10,0.125,150,150,0,0,0,0,7,FALSE,FALSE,FALSE
 1322,1322,보조무기,<고유>단련 - 힘,EquipSkill/1322,EquipSkillInfo/1322,10,10,0,1.2,0,0,0,0,0,7,FALSE,FALSE,FALSE
 1323,1323,보조무기,<고유>단련 - 민첩,EquipSkill/1323,EquipSkillInfo/1323,10,10,0,1.2,0,0,0,0,0,7,FALSE,FALSE,FALSE
 1324,1324,보조무기,<고유>단련 - 지능,EquipSkill/1324,EquipSkillInfo/1324,10,10,0,1.2,0,0,0,0,0,7,FALSE,FALSE,FALSE
@@ -582,23 +582,44 @@ id,coreid,description,description2,name,info,lv,maxlv,probability,value,c,A,B,ty
 1532,1524,단련,"최대 생명력 -9% , 물리 공격력 61% 증가",EquipSkill/1524,EquipSkillInfo/1532,9,10,0.61,0.9,12,0,0,0.61,0.09,5,TRUE,FALSE,FALSE
 1533,1524,단련,"최대 생명력 -10% , 물리 공격력 70% 증가",EquipSkill/1524,EquipSkillInfo/1533,10,10,0.7,1,15,0,0,0.7,0.1,6,TRUE,FALSE,FALSE
 1534,1534,<고유>브레이크 타임,"정신력 소모량이 3배 증가하는 대신 발동된 공격 마법 피해가 250% 증가하고
-마법 스킬 사용 시 적에게 마법 공격력의 2300% 만큼 피해를 입히는 썬더 볼트를 사용한다.",EquipSkill/1534,EquipSkillInfo/1534,10,10,23,1,2.5,0,0,0,0,7,FALSE,FALSE,FALSE
+마법 스킬 사용 시 적에게 마법 공격력의 2300% 만큼 피해를 입히는 썬더 볼트를 사용한다.",EquipSkill/1534,EquipSkillInfo/1534,10,10,23,1,2.5,0,0,0,0,7,FALSE,FALSE,TRUE
 1534_2,1534_2,타임 코어,,EquipSkill/1534_2,EquipSkillInfo/1534_2,10,10,0,0,0,0,0,0,0,7,FALSE,FALSE,TRUE
 1534_3,1534_3,갓 오브 타임,,EquipSkill/1534_3,EquipSkillInfo/1534_3,10,10,0,0,0,0,0,0,0,7,FALSE,FALSE,TRUE
-1535,1535,<고유>역병 채찍,"상태 이상 중첩 +75
-상태 이상 최대 중첩 +75
-모든 시체 폭발 마법 스킬 피해 30% 증가",EquipSkill/1535,EquipSkillInfo/1535,10,10,0.3,75,75,0,0,0,0,7,FALSE,FALSE,FALSE
-1535_2,1535_2,역병의 인도자,"상태 이상 중첩 +75
-상태 이상 최대 중첩 +75
-모든 시체 폭발 마법 스킬 피해 30% 증가",EquipSkill/1535_2,EquipSkillInfo/1535_2,10,10,0.3,75,75,0,0,0,0,7,FALSE,FALSE,FALSE
-1535_3,1535_3,역병의 지배자,"상태 이상 중첩 +75
-상태 이상 최대 중첩 +75
-모든 시체 폭발 마법 스킬 피해 30% 증가",EquipSkill/1535_3,EquipSkillInfo/1535_3,10,10,0.3,75,75,0,0,0,0,7,FALSE,FALSE,FALSE
-1536,1326,갓 오브 타임,"<color=cyan>[갓 오브 타임]</color>
+1535,1535,<고유>역병 채찍,"상태 이상 중첩 +70
+상태 이상 최대 중첩 +70
+모든 시체 폭발 마법 스킬 피해 40% 증가
+모든 시체 폭발 마법 스킬 사용 시 절명 중첩 + 1
+<color=cyan>[절명]</color>
+절명 중첩이 15라면 적에게 절명 상태이상을 부여한다.
+
+<color=cyan>[절명의 힘]</color>
+보조 무기 역병 좀비의 머리 장착 시 모든 절명의 원리를 깨우친다.
+-절명 필요 중첩이 5로 감소하고 상태 이상 최대 중첩이 100 증가한다. ",EquipSkill/1535,EquipSkillInfo/1535,10,10,0.4,150,150,15,0,0,0,7,FALSE,FALSE,TRUE
+1535_2,1535_2,역병의 인도자,"상태 이상 중첩 +70
+상태 이상 최대 중첩 +70
+모든 시체 폭발 마법 스킬 피해 40% 증가
+모든 시체 폭발 마법 스킬 사용 시 절명 중첩 + 1
+<color=cyan>[절명]</color>
+절명 중첩이 15라면 적에게 절명 상태이상을 부여한다.
+
+<color=cyan>[절명의 힘]</color>
+보조 무기 역병 좀비의 머리 장착 시 모든 절명의 원리를 깨우친다.
+-절명 필요 중첩이 5로 감소하고 상태 이상 최대 중첩이 100 증가한다. ",EquipSkill/1535_2,EquipSkillInfo/1535_2,10,10,0.4,150,150,15,0,0,0,7,FALSE,FALSE,TRUE
+1535_3,1535_3,역병의 지배자,"상태 이상 중첩 +70
+상태 이상 최대 중첩 +70
+모든 시체 폭발 마법 스킬 피해 40% 증가
+모든 시체 폭발 마법 스킬 사용 시 절명 중첩 + 1
+<color=cyan>[절명]</color>
+절명 중첩이 15라면 적에게 절명 상태이상을 부여한다.
+
+<color=cyan>[절명의 힘]</color>
+보조 무기 역병 좀비의 머리 장착 시 모든 절명의 원리를 깨우친다.
+-절명 필요 중첩이 5로 감소하고 상태 이상 최대 중첩이 100 증가한다. ",EquipSkill/1535_3,EquipSkillInfo/1535_3,10,10,0.4,75,0,15,0,0,0,7,FALSE,FALSE,TRUE
+1536,1536,갓 오브 타임 보조,"<color=cyan>[갓 오브 타임]</color>
 주 무기 크로노스의 지팡이 장착 시 잠재된 시간의 힘이 깨어난다.
--타임 어택이 모든 몬스터를 타격하고 피해량이 2300%에서 2700%
--타임 코어 성공 확률이 1.5배에서 2배로 증가한다.",EquipSkill/1536,EquipSkillInfo/1536,10,10,0,2,0,0,0,0,0,7,FALSE,FALSE,FALSE
-1537,1327,역병의 지배자,"<color=cyan>[역병의 지배자]</color>
+-공격 마법 피해가 250%에서 300%로 증가
+-타임 코어 성공 확률이 1.5배에서 2배로 증가한다.",EquipSkill/1536,EquipSkillInfo/1536,10,10,0,2,0.5,0,0,0,0,7,FALSE,FALSE,FALSE
+1537,1537,역병의 지배자 보조,"<color=cyan>[역병의 지배자]</color>
 주 무기 절명의 채찍 장착 시 잠재된 역병의 힘이 깨어난다.
 -시체 폭발 마법 스킬 피해가 +10% 추가 증가한다.
--상태 이상 피해 피해 속도가 -0.125초 감소한다.",EquipSkill/1537,EquipSkillInfo/1537,10,10,0,1,0,0,0,0,0,7,FALSE,FALSE,FALSE
+-상태 이상 피해 피해 속도가 -0.125초 감소한다.",EquipSkill/1537,EquipSkillInfo/1537,10,10,0,1,100,5,0,0,0,7,FALSE,FALSE,FALSE

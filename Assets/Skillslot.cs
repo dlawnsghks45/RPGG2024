@@ -408,6 +408,8 @@ public class Skillslot : MonoBehaviour
 
     public void Bt_ShowSkillInfo()
     {
+        if(skillid == "")
+            return;
         Debug.Log(skillid);
         SkillInventory.Instance.ShowChangePanel(skillid);
 

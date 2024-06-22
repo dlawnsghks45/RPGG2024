@@ -1478,6 +1478,19 @@ public class StatShowManager : MonoBehaviour
                 StatSlots[num].gameObject.SetActive(true);
                 num++;
                 
+                dmg = (decimal)(playerdata.stat_str + playerdata.stat_dex + playerdata.stat_int +
+                                (playerdata.stat_wis * 1.8f)) * 17;
+                dmg = dmg + (dmg * (decimal)playerdata.Stat_DotDmgUp);
+                if (Passivemanager.Instance.GetPassiveStat(Passivemanager.PassiveStatEnum.dotdouble) != 0)
+                    dmg *= 4m;
+                    
+                StatSlots[num].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_상태 이상절명")
+                    , "0",
+                    dmg, false, false);
+                StatSlots[num].gameObject.SetActive(true);
+                num++;
+
+                
                 if ((decimal)(playerdata.stat_wis * 0.00001f) != 0)
                 {
                     StatSlots_Percent[numP].RefreshShow(Inventory.GetTranslate("UI4/스탯보기_지혜상태이상")

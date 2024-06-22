@@ -56,6 +56,9 @@ public class presetmanager : MonoBehaviour
     public GameObject[] Preset_AbilityObj;
     public Image[] Preset_AbilityImage;
 
+    //탈리스만
+
+    public talismanequipslot[] Talismanequipslots;
 
     private void Start()
     {
@@ -212,9 +215,23 @@ public class presetmanager : MonoBehaviour
 
             }
         }
+        
+        //탈리스만
+        for (int i = 0; i < Talismanequipslots.Length; i++)
+        {
+            Talismanequipslots[i].RemoveTalisman();
+        }
+
+        if (items.TalismanPreset != -1)
+        {
+            for (int i = 0; i < Talismanequipslots.Length; i++)
+            {
+                Talismanequipslots[i].SetTalismanOtherUser(
+                    PlayerBackendData.Instance.TalismanPreset[items.TalismanPreset].Talismanset[i]);
+            }
+        }
     }
 
-    
     //프리셋 저장
     public void Bt_SavePreset()
     {
@@ -286,6 +303,10 @@ public class presetmanager : MonoBehaviour
                 PlayerBackendData.Instance.Presets[nowselectpreset].Ability[i] = PlayerBackendData.Instance.Abilitys[i];
             }
         }
+
+        PlayerBackendData.Instance.Presets[nowselectpreset].TalismanPreset =
+            PlayerBackendData.Instance.nowtalismanpreset;
+        
         ShowPreset();
         SavePreset();
     }
@@ -415,7 +436,9 @@ public class presetmanager : MonoBehaviour
                 PlayerBackendData.Instance.Abilitys[i] = preset.Ability[i];
             }
         }
-
+        TalismanManager.Instance.Bt_ChangePreset(preset.TalismanPreset);
+        
+        Savemanager.Instance.SaveTalisman();
         //어빌리티
         abilitymanager.Instance.Refresh();
         EquipSetmanager.Instance.EquipSetItem();
@@ -447,6 +470,7 @@ public class PresetItem
     public string PetID = "";
     public string[] Ability = new string[10];
     public string Classid = "";
+    public int TalismanPreset = -1;
 
     public PresetItem()
     {
