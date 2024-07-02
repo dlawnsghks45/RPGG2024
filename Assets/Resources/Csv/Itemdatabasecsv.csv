@@ -52,7 +52,7 @@ id,descriptionKor,sprite,name,description,itemtype,itemsubtype,rare,Recotype,dro
 29,정제된 신의 힘,Item/Season2/3,Itemname/29,Itemdescript/29,1,111,7,,FALSE,0,1000000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 30,"파티 레이드 보상 횟수권,.",Item/Consume/Paper/quest_90,Itemname/30,Itemdescript/30,2,401,6,,TRUE,0,1,FALSE,1,파티레이드주간횟수,1,weekly,0,TRUE,FALSE,FALSE
 31,신 장비 제작석,Item/Season2/1,Itemname/31,Itemdescript/31,1,111,6,,FALSE,0,100000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-,,,,,,,,,,,,,,,,,,,,
+32,새싹 토큰,Item/Event/rain1,Itemname/32,Itemdescript/32,1,111,6,,FALSE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
 ,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,
@@ -487,10 +487,10 @@ id,descriptionKor,sprite,name,description,itemtype,itemsubtype,rare,Recotype,dro
 3009,응축된 마력이 담긴 병,Item/Resource/Dungeon_Boss11,Itemname/3009,Itemdescript/3009,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
 3010,노스 블로우의 심장,Item/Resource/Dungeon_Boss12,Itemname/3010,Itemdescript/3010,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
 3011,공허의 정수,Item/Resource/공허의정수,Itemname/3011,Itemdescript/3011,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-3012,던전 코어,Item/Resource/공허의정수,Itemname/3011,Itemdescript/3011,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-3013,악몽 던전 코어,Item/Resource/공허의정수,Itemname/3011,Itemdescript/3011,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-3014,지옥 던전 코어,Item/Resource/공허의정수,Itemname/3011,Itemdescript/3011,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-3015,,,,,,,,,,,,,,,,,,,,
+3012,던전 코어,Item/Resource/공허의정수,Itemname/3012,Itemdescript/3012,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
+3013,악몽 던전 코어,Item/Resource/공허의정수,Itemname/3013,Itemdescript/3013,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
+3014,지옥 던전 코어,Item/Resource/공허의정수,Itemname/3014,Itemdescript/3014,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
+,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,

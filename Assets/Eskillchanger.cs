@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Eskillchanger : MonoBehaviour
 {
+    private string id;
     public bool issucc;
     public Text Name;
     public Text Info;
@@ -17,6 +18,7 @@ public class Eskillchanger : MonoBehaviour
     public Text LockEsText; // 이름 + 잠금
     public void ShowData(string id)
     {
+        this.id = id;
 //        Debug.Log(id);
         Name.text =
             $"[{Inventory.GetTranslate(EquipSkillDB.Instance.Find_id(id).name)} Lv.{EquipSkillDB.Instance.Find_id(id).lv}]";
@@ -25,6 +27,7 @@ public class Eskillchanger : MonoBehaviour
     }
     public void ShowDataNew(string id)
     {
+        this.id = id;
         Name.text = 
             $"[{Inventory.GetTranslate(EquipSkillDB.Instance.Find_id(id).name)} Lv.{EquipSkillDB.Instance.Find_id(id).lv}]";
 
@@ -35,6 +38,7 @@ public class Eskillchanger : MonoBehaviour
     }
     public void NoData()
     {
+        id = "";
         Name.text = "?";
         Info.text = "?";
         Rare.color = Color.white;
@@ -100,6 +104,9 @@ public class Eskillchanger : MonoBehaviour
 
     public void Bt_ChangeName()
     {
+        if (id != "")
+            Inventory.Instance.ShowEquipskill(id);
+        return;
         if (Name.gameObject.activeSelf)
         {
             Name.gameObject.SetActive(false);
@@ -111,8 +118,8 @@ public class Eskillchanger : MonoBehaviour
             Info.gameObject.SetActive(false);
         }
     }
-    
-    
-    
-    
+
+
+
+
 }

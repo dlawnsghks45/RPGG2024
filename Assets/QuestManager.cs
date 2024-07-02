@@ -125,6 +125,7 @@ public class QuestManager : MonoBehaviour
     {
         if (Timemanager.Instance.isachieveresetweekly)
         {
+            Timemanager.Instance.isachieveresetweekly = false;
             PlayerBackendData.Instance.QuestTotalCount[1] = 0;
             //업적 초기화
             for (int i = 0; i < QuestDB.Instance.NumRows(); i++)

@@ -573,11 +573,13 @@ public class BackendFerderationAuth : MonoBehaviour
                 {
                     temp.Skills[o] = jdata["PresetData"][i]["Skills"][o].ToString();
                 }
+
                 //장비
                 for (int o = 0; o < jdata["PresetData"][i]["EquipDatas"].Count; o++)
                 {
                     temp.EquipDatas[o] = jdata["PresetData"][i]["EquipDatas"][o].ToString();
                 }
+
                 //패시브
                 for (int o = 0; o < jdata["PresetData"][i]["Passive"].Count; o++)
                 {
@@ -586,22 +588,29 @@ public class BackendFerderationAuth : MonoBehaviour
 
                 if (jdata["PresetData"][i].ContainsKey("Ability"))
                 {
-                    
+
                     //패시브
                     for (int o = 0; o < jdata["PresetData"][i]["Ability"].Count; o++)
                     {
                         temp.Ability[o] = jdata["PresetData"][i]["Ability"][o].ToString();
                     }
                 }
-                
+
                 if (jdata["PresetData"][i].ContainsKey("PetID"))
                 {
                     temp.PetID = jdata["PresetData"][i]["PetID"].ToString();
                 }
-                
+
                 temp.Classid = jdata["PresetData"][i]["Classid"].ToString();
+
+                if (jdata["PresetData"][i].ContainsKey("TalismanPreset"))
+                {
+                    temp.TalismanPreset = int.Parse(jdata["PresetData"][i]["TalismanPreset"].ToString());
+                }
+
                 PlayerBackendData.Instance.Presets[i] = temp;
             }
+
             PlayerBackendData.Instance.isloadpreset = true;
         }
 

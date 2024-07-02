@@ -222,7 +222,7 @@ public class equipskillmanager : MonoBehaviour
     {
         if(!SettingReNewal.Instance.EskillPanel[0].IsOn)
             return;
-        
+//        Debug.Log(id);
         equipskillslots[esnum].SetSkill(id,rare,lv);
         equipskillslots[esnum].transform.SetAsLastSibling();
         esnum++;

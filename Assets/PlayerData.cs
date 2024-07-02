@@ -460,8 +460,6 @@ public class PlayerData : MonoBehaviour
     //보조무기
     public void SetpetImage(Sprite image=null, string path=null)
     {
-        Debug.Log(image);
-        Debug.Log(path);
         if (PlayerBackendData.Instance.nowPetid != "")
         {
             PetDB.Row data = PetDB.Instance.Find_id(PlayerBackendData.Instance.nowPetid);
@@ -836,7 +834,12 @@ public class PlayerData : MonoBehaviour
     //    Debug.Log("기본 경험치" +  count);
         count += (decimal)(count * (decimal)mainplayer.Stat_ExtraExp);
       //  Debug.Log("추가 경험치 계산" +  count);
-        if (PlayerBackendData.Instance.ispremium)
+      if (Newbiemanager.Instance.isNewbie)
+      {
+          count *= 2m;
+      }
+
+      if (PlayerBackendData.Instance.ispremium)
         {
             if (PlayerBackendData.Instance.GetLv() < 3000)
             {
@@ -979,9 +982,10 @@ public class PlayerData : MonoBehaviour
                 RefreshExp();
                 RefreshAchExp();
                 RefreshPlayerstat();
-                if (PlayerBackendData.Instance.GetLv() == 900)
+
+                if (Newbiemanager.Instance.isNewbie && PlayerBackendData.Instance.GetLv() > 3500)
                 {
-                    Tutorialmanager.Instance.review.SetActive(true);
+                    Newbiemanager.Instance.FalseNewbie();
                 }
             }
             else
@@ -1073,6 +1077,7 @@ public class PlayerData : MonoBehaviour
         mainplayer.hpmanager.RefreshHp();
         StartCoroutine(SaveAuto());
         LogManager.Instance.CheckBug();
+        Newbiemanager.Instance.CheckNewbie();
     }
 
     //플레이어 스탯

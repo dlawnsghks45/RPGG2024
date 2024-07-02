@@ -668,6 +668,7 @@ public class Inventory : MonoBehaviour
     public GameObject[] EquipSkills_Obj;
     public TMProHyperLink[] EquipSkills;
     public TMPro.TextMeshProUGUI EquipSkill_Count;
+    public TMPro.TextMeshProUGUI EquipSkill_Point;
     public TMProHyperLink SetText;
 
     private void SetChangeEquipData(EquipDatabase data)
@@ -772,6 +773,8 @@ public class Inventory : MonoBehaviour
             _ => nowsettype
         };
 
+        int eskillpoint = 0;
+        
         foreach (var t in InvenslotButtons)
         {
             if(t != null)
@@ -1700,7 +1703,9 @@ public class Inventory : MonoBehaviour
         //숫자가 있으면 그거를 연다
         if (num != -1)
             InventoryToggles[num].IsOn = true;
-       
+
+        PlayerBackendData.Instance.RemoveItemAll("True");
+
         
       //아이템인벤이없다면 새로 추가
         if (nowinvencount < PlayerBackendData.Instance.ItemInventory.Count)
@@ -1723,6 +1728,8 @@ public class Inventory : MonoBehaviour
         //전체
         for (int i = 0; i < PlayerBackendData.Instance.ItemInventory.Count; i++)
         {
+           
+            
             switch (PlayerBackendData.Instance.ItemInventory[i].Id)
             {
                 case "996":

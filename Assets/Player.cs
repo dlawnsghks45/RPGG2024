@@ -1859,6 +1859,119 @@ public class Player : MonoBehaviour
             }
         }
 
+        
+           //탈리스만 2세트
+        foreach (var t in PlayerBackendData.Instance.Talisman2Set)
+        {
+            switch (t)
+            {
+                case "T1000":
+                    talisman_allstat += 0.2f;
+                    break;
+                case "T1001":
+                    talisman_crit += 0.2f;
+                    break;
+                case "T1002":
+                    talisman_atk += 5f;
+                    break;
+                case "T1003":
+                    talisman_Bossdmg += 1f;
+                    break;
+                case "T1004":
+                    talisman_DotDmgUp += 10f;
+                    break;
+                case "T1005":
+                    talisman_matk += 5f;
+                    break;
+                case "T1006":
+                    talisman_Buff += 1f;
+                    break;
+                case "T1007":
+                    talisman_Exp += 1f;
+                    talisman_Gold += 0.5f;
+                    break;
+                case "T1008":
+                    talisman_Mondmg += 1f;
+                    talisman_Exp += 0.5f;
+                    break;
+            }
+        }
+
+        //탈리스만 3세트
+        foreach (var t in PlayerBackendData.Instance.Talisman3Set)
+        {
+            switch (t)
+            {
+                case "T1000":
+                    talisman_allstat += 0.2f;
+                    break;
+                case "T1001":
+                    talisman_dmgup += 0.12f;
+                    break;
+                case "T1002":
+                    talisman_atk += 10f;
+                    break;
+                case "T1003":
+                    talisman_Bossdmg += 1.5f;
+                    break;
+                case "T1004":
+                    talisman_DotDmgUp += 10f;
+                    talisman_MaxDotCount += 30;
+                    talisman_AddStack += 30;
+                    break;
+                case "T1005":
+                    talisman_ReduceCooldown += 0.03f;
+                    talisman_matk += 10f;
+                    break;
+                case "T1006":
+                    talisman_Buff += 1.5f;
+                    break;
+                case "T1007":
+                    talisman_Exp += 1.5f;
+                    talisman_Gold += 0.5f;
+                    break;
+                case "T1008":
+                    talisman_Mondmg += 1.5f;
+                    talisman_Exp += 0.5f;
+
+                    break;
+            }
+        }
+
+         //탈리스만 5세트
+                foreach (var t in PlayerBackendData.Instance.Talisman5Set)
+                {
+                    switch (t)
+                    {
+                        case "T1000":
+                            talisman_allstat += 0.6f;
+                            break;
+                        case "T1001":
+                        case "T1002":
+                        case "T1004":
+                        case "T1005":
+                            talisman_dmgup += 0.2f;
+                            break;
+                        
+                        case "T1003":
+                            talisman_Bossdmg += 2f;
+                            break;
+                       
+                        case "T1006":
+                            talisman_Buff += 2.5f;
+                            break;
+                        case "T1007":
+                            talisman_Exp += 2.0f;
+                            talisman_Gold += 0.5f;
+                            break;
+                        case "T1008":
+                            talisman_Mondmg += 2f;
+                            talisman_Exp += 0.5f;
+
+                            break;
+                    }
+                }
+
 
 
         for (var index = 0; index < Skillmanager.Instance.PlayerBuffImage.Length; index++)
@@ -1868,7 +1981,7 @@ public class Player : MonoBehaviour
         }
 
         Stat_totalbuff = (Passivemanager.Instance.GetPassiveStat(Passivemanager
-            .PassiveStatEnum.buffup) + ability_buff) + talisman_Buff;
+            .PassiveStatEnum.buffup) + ability_buff + talisman_Buff);
         MapDB.Row mapdata_Now = MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage);
         if (mapdata_Now.maptype.Equals("12"))
         {
@@ -2028,118 +2141,7 @@ public class Player : MonoBehaviour
 
         
                  
-        //탈리스만 2세트
-        foreach (var t in PlayerBackendData.Instance.Talisman2Set)
-        {
-            switch (t)
-            {
-                case "T1000":
-                    talisman_allstat += 0.2f;
-                    break;
-                case "T1001":
-                    talisman_crit += 0.2f;
-                    break;
-                case "T1002":
-                    talisman_atk += 5f;
-                    break;
-                case "T1003":
-                    talisman_Bossdmg += 1f;
-                    break;
-                case "T1004":
-                    talisman_DotDmgUp += 10f;
-                    break;
-                case "T1005":
-                    talisman_matk += 5f;
-                    break;
-                case "T1006":
-                    talisman_Buff += 1f;
-                    break;
-                case "T1007":
-                    talisman_Exp += 1f;
-                    talisman_Gold += 0.5f;
-                    break;
-                case "T1008":
-                    talisman_Mondmg += 1f;
-                    talisman_Exp += 0.5f;
-                    break;
-            }
-        }
-
-        //탈리스만 3세트
-        foreach (var t in PlayerBackendData.Instance.Talisman3Set)
-        {
-            switch (t)
-            {
-                case "T1000":
-                    talisman_allstat += 0.2f;
-                    break;
-                case "T1001":
-                    talisman_dmgup += 0.12f;
-                    break;
-                case "T1002":
-                    talisman_atk += 10f;
-                    break;
-                case "T1003":
-                    talisman_Bossdmg += 1.5f;
-                    break;
-                case "T1004":
-                    talisman_DotDmgUp += 10f;
-                    talisman_MaxDotCount += 30;
-                    talisman_AddStack += 30;
-                    break;
-                case "T1005":
-                    talisman_ReduceCooldown += 0.03f;
-                    talisman_matk += 10f;
-                    break;
-                case "T1006":
-                    talisman_Buff += 1.5f;
-                    break;
-                case "T1007":
-                    talisman_Exp += 1.5f;
-                    talisman_Gold += 0.5f;
-                    break;
-                case "T1008":
-                    talisman_Mondmg += 1.5f;
-                    talisman_Exp += 0.5f;
-
-                    break;
-            }
-        }
-
-         //탈리스만 5세트
-                foreach (var t in PlayerBackendData.Instance.Talisman5Set)
-                {
-                    switch (t)
-                    {
-                        case "T1000":
-                            talisman_allstat += 0.6f;
-                            break;
-                        case "T1001":
-                        case "T1002":
-                        case "T1004":
-                        case "T1005":
-                            talisman_dmgup += 0.2f;
-                            break;
-                        
-                        case "T1003":
-                            talisman_Bossdmg += 2f;
-                            break;
-                       
-                        case "T1006":
-                            talisman_Buff += 2.5f;
-                            break;
-                        case "T1007":
-                            talisman_Exp += 2.0f;
-                            talisman_Gold += 0.5f;
-                            break;
-                        case "T1008":
-                            talisman_Mondmg += 2f;
-                            talisman_Exp += 0.5f;
-
-                            break;
-                    }
-                }
-
+     
         
         
         
@@ -2384,9 +2386,9 @@ public class Player : MonoBehaviour
 //        Debug.Log(Stat_ExtraGold);
        
             Stat_ExtraExp += equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.goldexp)+
-                             equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.gold);
+                             equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.exp);
             Stat_ExtraGold += equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.goldexp)+
-                              equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.exp);
+                              equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.gold);
         
         //물약효율
         stat_potionup = gear_potionup + equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat
@@ -2426,8 +2428,8 @@ public class Player : MonoBehaviour
         {
             dottime -= equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat
                 .E6150);
-            Debug.Log("도트시간감소" + equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat
-                .E6150));
+//            Debug.Log("도트시간감소" + equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat
+             //   .E6150));
         }
     }
     public float dottime = 0.5f;

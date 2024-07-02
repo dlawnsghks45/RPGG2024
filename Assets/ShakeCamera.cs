@@ -11,7 +11,11 @@ public class ShakeCamera : MonoBehaviour
 
     public void ShakeCameras()
     {
-        Camera.main.DOShakeRotation(A, B, fadeOut: true);
-        Camera.main.DOShakePosition(A, B, fadeOut: true);
+        if (SettingReNewal.Instance.CameraShake[0].IsOn)
+        {
+            Camera.main.DOShakeRotation(A, B, fadeOut: true);
+            Camera.main.DOShakePosition(A, B, fadeOut: true);
+        }
+     
     }
 }

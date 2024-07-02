@@ -371,7 +371,7 @@ public class dpsmanager : MonoBehaviour
             { "BreakTime", breaktime },
             { "DPSDmgText", TotalDPSDmg },
             { "TrainAbility", userData.Abilitys },
-            { "NowTalismanData_Train", PlayerBackendData.Instance.TalismanPreset[PlayerBackendData.Instance.nowtalismanpreset] }
+            { "NowTalismanData_train", PlayerBackendData.Instance.TalismanPreset[PlayerBackendData.Instance.nowtalismanpreset] }
             
             
             

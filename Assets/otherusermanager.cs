@@ -269,9 +269,10 @@ public class otherusermanager : MonoBehaviour
             {
                 for (int i = 0; i < TalismanEquip.Length; i++)
                 {
-                    if (data["NowTalismanData"]["Talismanset"][i] != null)
+                    if (data["NowTalismanData"]["Talismanset"][i] != null
+                        && data["NowTalismanData"]["Talismanset"][i].ToString() != "True")
                     {
-                        TalismanEquip[i]. SetTalismanOtherUser(new Talismandatabase(data["NowTalismanData"]["Talismanset"][i]));
+                        TalismanEquip[i].SetTalismanOtherUser(new Talismandatabase(data["NowTalismanData"]["Talismanset"][i]));
                     }
                 }
             }
@@ -457,19 +458,26 @@ public class otherusermanager : MonoBehaviour
                         PlayerData.Instance.SetAvartaImage(PlayerAvarta,
                             SpriteManager.Instance.GetSprite(AvartaDB.Instance.Find_id(data["avata_avata"].ToString())
                                 .sprite));
-                    }
-    
-                    
-                    if (bool.Parse(AvartaDB.Instance.Find_id(data["avata_avata"].ToString()).iswhole))
-                    {
-                        SubWeapon.enabled = false;
-                        MainWeapon.enabled = false;
+                        
+                        if (bool.Parse(AvartaDB.Instance.Find_id(data["avata_avata"].ToString()).iswhole))
+                        {
+                            SubWeapon.enabled = false;
+                            MainWeapon.enabled = false;
+                        }
+                        else
+                        {
+                            SubWeapon.enabled = true;
+                            MainWeapon.enabled = true;
+                        }
                     }
                     else
                     {
                         SubWeapon.enabled = true;
                         MainWeapon.enabled = true;
                     }
+    
+                    
+                   
             }
             #endregion
          });

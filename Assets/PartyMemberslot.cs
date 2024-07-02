@@ -30,7 +30,9 @@ public class PartyMemberslot : MonoBehaviour
    public GameObject[] BuffObj;
    public Text[] BuffObjText;
 
-   public float BuffPercent = 0; 
+   public float BuffPercent = 0;
+   
+   public GameObject newbiemark;
    
    public void Set_Battle(string mapname)
    {
@@ -84,7 +86,6 @@ public class PartyMemberslot : MonoBehaviour
       }
       else
       {
-   
          PartyRaidRoommanager.Instance.StartButton.SetActive(false);
       }
       NoUserObj.SetActive(false);
@@ -96,7 +97,6 @@ public class PartyMemberslot : MonoBehaviour
       BuffPercent = 0;
       BufferObj.SetActive(false);
       data = new playerdata();
-      data.GetPlayerData(playerdata);
       data.GetPlayerData(playerdata);
       ShowPlayer();
       NoUserObj.SetActive(false);
@@ -173,6 +173,16 @@ public class PartyMemberslot : MonoBehaviour
       }
 
       PlayerName.text = $"Lv.{data.lv}\n{data.nickname}";
+
+      if (data.isnewbie)
+      {
+         newbiemark.SetActive(true);
+      }
+      else
+      {
+         newbiemark.SetActive(false);
+      }
+      
    }
 
    public void Bt_ShowInvite()
@@ -205,6 +215,7 @@ public class playerdata
    public string subweaponrare;
    public string petpath;
    public string petrare;
+   public bool isnewbie;
 
    public playerdata()
    {
@@ -229,6 +240,10 @@ public class playerdata
 
       petpath = datas[8];
       petrare = datas[9];
+      isnewbie = bool.Parse(datas[11]);
+      
+      
+      
    }
 
    public string GiveData()

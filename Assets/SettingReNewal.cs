@@ -55,7 +55,8 @@ public class SettingReNewal : MonoBehaviour
     public UIToggle[] ItemDrop;
     public UIToggle[] EskillPanel;
     public UIToggle[] SystemChat;
-    
+    public UIToggle[] CameraShake;
+
     //물약
     public Slider HpSlider;
     public Text Hptext;
@@ -201,7 +202,8 @@ public class SettingReNewal : MonoBehaviour
                 ItemDrop[0].IsOn ? 0 : 1,
                 EskillPanel[0].IsOn ? 0 : 1,
                 SystemChat[0].IsOn ? 0 : 1,
-                ButtonSound[0].IsOn ? 0 : 1
+                ButtonSound[0].IsOn ? 0 : 1,
+                CameraShake[0].IsOn ? 0 : 1
             );
 
         Debug.Log("버튼 저장" +   PlayerBackendData.Instance.settingdata.ButtonSound);

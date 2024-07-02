@@ -563,7 +563,7 @@ public class Settingmanager : MonoBehaviour
 
         if (PlayerBackendData.Instance.ServerLv > PlayerBackendData.Instance.GetLv())
         {
-            Debug.Log("여기2");
+//            Debug.Log("여기2");
             return;
         }
         
@@ -716,7 +716,7 @@ public class Settingmanager : MonoBehaviour
                 Savemanager.Instance.SaveSaveNum2();
                 Savemanager.Instance.Save();
             }
-            Debug.Log(issettingsave);
+//            Debug.Log(issettingsave);
             if (issettingsave)
             {
                 //저장 상태
@@ -1445,19 +1445,16 @@ public class Settingmanager : MonoBehaviour
     {
         if (!CheckServerOn())
         {
-            Debug.Log("하이");
             return;
         }
         
         if (PlayerBackendData.Instance.ServerLv > PlayerBackendData.Instance.GetLv())
         {
-//            Debug.Log("하이");
             return;
         }
 
         if (Timemanager.Instance.isstop)
         {
-      //      Debug.Log("하이");
             return;
         }
 
@@ -1489,7 +1486,7 @@ public class Settingmanager : MonoBehaviour
                         if (dateDiff.TotalSeconds >= minofftime)
                         {
                             //오프라인 보상 출력
-                            Debug.Log("오프라인 보상을 출력한다.");
+                            //Debug.Log("오프라인 보상을 출력한다.");
                             Autofarmmanager.Instance.Bt_OpenAuto_Offline(nowtimeNow, datetime, dateDiff.TotalSeconds);
                             Autofarmmanager.Instance.Bt_EarnOfflineReward();
                         }

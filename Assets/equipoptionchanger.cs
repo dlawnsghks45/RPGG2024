@@ -582,6 +582,10 @@ public class equipoptionchanger : MonoBehaviour
 
    public bool islessequipskill;
    
+   //특수효과 피해량 계산기
+   //현재 장착한 특수효과의 능력을 가져옴.
+   //
+
    
    //특수효과 변경
    public void ShowEskillPanel(bool isnew = false)
@@ -599,11 +603,11 @@ public class equipoptionchanger : MonoBehaviour
       }
 
       EquipDatabase data = Inventory.Instance.data;
-
+      prevpoint = 0;
 
       //고유효과 확인여부
       int num = EquipItemDB.Instance.Find_id(data.Itemid).SpeMehodP != "0" ? 1 : 0;
-
+      string nowequiptype =  EquipItemDB.Instance.Find_id(PlayerBackendData.Instance.EquipEquiptment0[0].Itemid).SubType;
       if (data.EquipSkill1.Count - num == 0)
       {
 
@@ -621,13 +625,18 @@ public class equipoptionchanger : MonoBehaviour
             if (isnew)
             {
                eskillnowpanel[i - num].ShowDataNew(data.EquipSkill1[i]);
+               prevpoint += GetEskillPoint(data.EquipSkill1[i],nowequiptype);
 
             }
             else
             {
                eskillnowpanel[i - num].ShowData(data.EquipSkill1[i]);
+               prevpoint += GetEskillPoint(data.EquipSkill1[i],nowequiptype);
             }
          }
+
+         EquipSkillPointTextprev.text = string.Format(Inventory.GetTranslate("UI8/피해 점수이전"), prevpoint.ToString("N0"));
+         EquipSkillPointTextnext.text = "";
 
          for (int i = 0; i < data.EquipSkill1.Count - num; i++)
          {
@@ -663,10 +672,11 @@ public class equipoptionchanger : MonoBehaviour
 
       EquipDatabase data = Inventory.Instance.data;
 
-
+      prevpoint = 0;
+ 
       //고유효과 확인여부
       int num = EquipItemDB.Instance.Find_id(data.Itemid).SpeMehodP != "0" ? 1 : 0;
-
+      string nowequiptype =  EquipItemDB.Instance.Find_id(PlayerBackendData.Instance.EquipEquiptment0[0].Itemid).SubType;
       if (data.EquipSkill1.Count - num == 0)
       {
          eskillnowpanel[0].NoData();
@@ -683,13 +693,18 @@ public class equipoptionchanger : MonoBehaviour
             if (isnew)
             {
                eskillnowpanel[i - num].ShowDataNew(data.EquipSkill1[i]);
+               prevpoint += GetEskillPoint(data.EquipSkill1[i],nowequiptype);
 
             }
             else
             {
                eskillnowpanel[i - num].ShowData(data.EquipSkill1[i]);
+               prevpoint += GetEskillPoint(data.EquipSkill1[i],nowequiptype);
             }
          }
+         
+         EquipSkillPointTextprev.text = string.Format(Inventory.GetTranslate("UI8/피해 점수이전"), prevpoint.ToString("N0"));
+         EquipSkillPointTextnext.text = "";
 
          for (int i = 0; i < data.EquipSkill1.Count - num; i++)
          {
@@ -791,7 +806,10 @@ public class equipoptionchanger : MonoBehaviour
 
    private string[] ChangedOption;
    private string[] SavedOption;
-
+   public Text EquipSkillPointTextprev;
+   public Text EquipSkillPointTextnext;
+   float prevpoint = 0;
+   float nextpoint = 0;
    public void Bt_StartEskillChange()
    {
       if (!Settingmanager.Instance.CheckServerOn())
@@ -821,8 +839,8 @@ public class equipoptionchanger : MonoBehaviour
             return;
          }
       }
-    
 
+      nextpoint = 0;
   
 
       for (int i = 0; i < eskillnowpanel.Length; i++)
@@ -833,6 +851,9 @@ public class equipoptionchanger : MonoBehaviour
       isstart = true;
       ChangedOption = Inventory.Instance.data.GetESkill().ToArray();
 
+      
+      
+      string nowequiptype =  EquipItemDB.Instance.Find_id(PlayerBackendData.Instance.EquipEquiptment0[0].Itemid).SubType;
 
       int num = EquipItemDB.Instance.Find_id(Inventory.Instance.data.Itemid).SpeMehodP != "0" ? 1 : 0;
 
@@ -840,11 +861,20 @@ public class equipoptionchanger : MonoBehaviour
       {
          eskillchangepanel[i - num].gameObject.SetActive(true);
          eskillchangepanel[i - num].ShowDataNew(ChangedOption[i]);
+         nextpoint += GetEskillPoint(ChangedOption[i],nowequiptype);
       }
       EquipBlind.SetActive(true);
       AcceptButton.SetActive(true);
       RerollButton.SetActive(true);
       FirstChangeButton.SetActive(false);
+      
+      EquipSkillPointTextnext.text = nextpoint - prevpoint >= prevpoint
+         ? string.Format(Inventory.GetTranslate("UI8/피해 점수이후+"),nextpoint.ToString("N0"), (nextpoint - prevpoint).ToString("N0"))
+         : string.Format(Inventory.GetTranslate("UI8/피해 점수이후-"),nextpoint.ToString("N0"), (nextpoint - prevpoint).ToString("N0"));
+
+
+
+
       if (islessequipskill)
       {
          PlayerBackendData.Instance.RemoveItem("57", GetNeedESItem());
@@ -879,6 +909,85 @@ public class equipoptionchanger : MonoBehaviour
       Savemanager.Instance.SaveInventory();
       Savemanager.Instance.Save();
 
+   }
+
+   float GetEskillPoint(string id,string weapontype)
+   {
+      float point = 0;
+      EquipSkillDB.Row data = EquipSkillDB.Instance.Find_id(id);
+      
+      if (data.corestat == "")
+         return 0;
+      
+      switch (weapontype)
+      {
+         case "Physic":
+            switch (data.corestat)
+            {
+               case "melee":
+               case "all":
+               case "strdex":
+                  point = float.Parse(data.corestatcost);
+                  break;
+               case "str":
+                  if (ClassDB.Instance.Find_id(PlayerBackendData.Instance.ClassId).mainstat == "str")
+                  {
+                     point = float.Parse(data.corestatcost);
+                  }
+                  else
+                  {
+                     point = float.Parse(data.corestatcost)* 0.6f;
+
+                  }
+                  break;
+               case "dex":
+                  if (ClassDB.Instance.Find_id(PlayerBackendData.Instance.ClassId).mainstat == "dex")
+                  {
+                     point = float.Parse(data.corestatcost);
+                  }
+                  else
+                  {
+                     point = float.Parse(data.corestatcost) * 0.8f;
+                  }
+                  break;
+            }
+
+            break;
+         case "Magic":
+            switch (data.corestat)
+            {
+               case "magic":
+               case "all":
+               case "intwis":
+               case "int":
+                  point = float.Parse(data.corestatcost);
+                  break;
+               case "wis":
+                     point = float.Parse(data.corestatcost) * 0.6f;
+                  break;
+            }
+            break;
+         case "Dot":
+            switch (data.corestat)
+            {
+               case "magic":
+                  point = float.Parse(data.corestatcost) * 0.6f;
+                  break;
+               case "dot":
+               case "all":
+               case "intwis":
+               case "wis":
+
+                  point = float.Parse(data.corestatcost);
+                  break;
+               case "int":
+                  point = float.Parse(data.corestatcost) * 0.6f;
+                  break;
+            }
+            break;
+      }
+
+      return point;
    }
 
    //특수효과를 바꾼다.

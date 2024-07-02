@@ -121,12 +121,62 @@ public class PartyRaidBattlemanager : MonoBehaviour
         
         InitRaid();
         PartyRaidRoommanager.Instance.ExitButton.SetActive(true);
-        PartyRaidRoommanager.Instance.ExitButtons.SetActive(false);
         PartyRaidRoommanager.Instance.PartyradPanel.Show(false);
+        ShowChatPanels();
     }
 
-    
-  
+    public GameObject[] ObjWindow;
+    public GameObject ObjWindowAlert;
+    public Text ObjWindowAlertText;
+
+    public bool isbattle;
+    public void ShowAdsPanels()
+    {
+//        Debug.Log("채팅끔");
+        ObjWindow[0].SetActive(true); //광고
+        ObjWindow[1].SetActive(false); //채팅
+        ObjWindowAlert.SetActive(false);
+        ObjWindowAlertText.text = "";
+        nowalertnum = 0;
+        isbattle = false;
+    }
+    public void ShowChatPanels()
+    {
+        Debug.Log("채팅소");
+        ObjWindow[0].SetActive(false); //광고
+        ObjWindow[1].SetActive(true); //채팅
+        ObjWindowAlert.SetActive(false);
+        ObjWindowAlertText.text = "";
+        nowalertnum = 0;
+        isbattle = true;
+    }
+
+    public UIToggle PartyRaidLobbyToggle;
+    public int nowalertnum = 0;
+    public void RemoveAlert()
+    {
+        //파티레이드 시
+        ObjWindowAlert.SetActive(false);
+        ObjWindowAlertText.text = "";
+        nowalertnum = 0;
+    }
+
+    public void CountAlert()
+    {
+        if (PartyRaidLobbyToggle.IsOn)
+        {
+            RemoveAlert();
+        }
+        else
+        {
+            //파티레이드 시
+            ObjWindowAlert.SetActive(true);
+            nowalertnum++;
+            ObjWindowAlertText.text = nowalertnum.ToString();
+        }
+     
+    }
+
     public int[] nowPenalty = new int[(int)PartyRaidBuffEnemy.Length];
     public decimal NowBossMaxHp = 0;
     public int nowmiddlenum = 0;
@@ -184,7 +234,7 @@ public class PartyRaidBattlemanager : MonoBehaviour
                 string.Format(Inventory.GetTranslate("UI7/버퍼"),(buffmax*100f).ToString("N0"));
         }
         RefreshBossPenaly();
-        PartyRaidRoommanager.Instance.ExitButtons.SetActive(false);
+        ShowChatPanels();
     }
 
     public Text TryCountText;
@@ -281,8 +331,18 @@ public class PartyRaidBattlemanager : MonoBehaviour
             if (curhp <= 0)
             {
                 curhp = 0;
-                
                 ShowReward();
+                
+                MapDB.Row mapdata_Now = MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage);
+                if (mapdata_Now.maptype != "0")
+                {
+                    //사냥터로 강제이동
+                    PlayerBackendData.Instance.spawncount = mapmanager.Instance.savespawncount;
+                    mapmanager.Instance.LocateMap(mapmanager.Instance.savemapid);
+                    alertmanager.Instance.ShowAlert2(Inventory.GetTranslate("UI8/코어보스사망"),alertmanager.alertenum.일반);
+                    return;
+                }
+                
                 break;
             }
         }
@@ -297,7 +357,7 @@ public class PartyRaidBattlemanager : MonoBehaviour
     public Text RewardTextName;
     public void ShowReward()
     {
-        if (PartyRaidRoommanager.Instance.nowmyleadernickname == PlayerBackendData.Instance.nickname)
+        if (PartyRaidRoommanager.Instance.PartyMember[0].data.nickname == PlayerBackendData.Instance.nickname)
         {
             //리더창
             LeaderReward.SetActive(true);

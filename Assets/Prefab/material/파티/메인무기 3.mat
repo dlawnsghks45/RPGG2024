@@ -458,7 +458,7 @@ Material:
     - _MetalNoiseDistortionSpeed: {r: -0.05, g: -0.05, b: 0, a: 0}
     - _MetalNoiseScale: {r: 0.25, g: 0.25, b: 0, a: 0}
     - _MetalNoiseSpeed: {r: 0.05, g: 0.05, b: 0, a: 0}
-    - _OuterOutlineColor: {r: 0.6187502, g: 1, b: 0, a: 1}
+    - _OuterOutlineColor: {r: 1, g: 0, b: 0.24885702, a: 1}
     - _OuterOutlineDistortionIntensity: {r: 0, g: 0, b: 0, a: 0}
     - _OuterOutlineNoiseScale: {r: 0, g: 0, b: 0, a: 0}
     - _OuterOutlineNoiseSpeed: {r: 0, g: 0, b: 0, a: 0}

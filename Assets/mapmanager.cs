@@ -254,8 +254,8 @@ public class mapmanager : MonoBehaviour
                             alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI2/레이드실패"),
                                 alertmanager.alertenum.일반);
                         }
-
                         LocateMap(savemapid);
+                        dpsmanager.Instance.EndDps();
                         break;
                     case "4": //성물 파괴
                         TutorialTotalManager.Instance.CheckGuideQuest("altarstart");
@@ -273,6 +273,8 @@ public class mapmanager : MonoBehaviour
                     case "7": //길드레이드
                         GuildRaidManager.Instance.DmgtoGuildMob();
                         LocateMap(savemapid);
+                        dpsmanager.Instance.EndDps();
+
                         break;
                     case "8": //훈련장
                         LocateMap(savemapid);
@@ -576,7 +578,7 @@ public class mapmanager : MonoBehaviour
                     mondropmanager.Instance.checkDrop = false;
                     mondropmanager.Instance.SetDropData(MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage).monsterid);
                 }
-                
+                dpsmanager.Instance.EndDps();
                 stagetoggle.gameObject.SetActive(true);
                 islocating = true;
                 Invoke(nameof(falseislocating), 4f);
@@ -601,6 +603,7 @@ public class mapmanager : MonoBehaviour
                     int.Parse(MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage).mapcount);
                 Invoke(nameof(StartAdventureLv), 2.1f);
                 EnemySpawnManager.Instance.CloseStageObj();
+                dpsmanager.Instance.StartDps();
                 break;
             case "3": //싱글 레이드
                 EnemySpawnManager.Instance.spawnedmonstercur = 0;
@@ -609,6 +612,8 @@ public class mapmanager : MonoBehaviour
                 Invoke(nameof(StartSingleBoss), 2.1f);
                 Battlemanager.Instance.mainplayer.hpmanager.HealAll();
                 EnemySpawnManager.Instance.CloseStageObj();
+                dpsmanager.Instance.StartDps();
+
                 break;
             case "4": //성물파괴
                 EnemySpawnManager.Instance.spawnedmonstercur = 0;
@@ -631,6 +636,8 @@ public class mapmanager : MonoBehaviour
                 Invoke(nameof(StartSingleBoss), 2.1f);
                 //Battlemanager.Instance.mainplayer.hpmanager.HealAll();
                 EnemySpawnManager.Instance.CloseStageObj();
+                dpsmanager.Instance.StartDps();
+
                 break;
             case "8": //훈련장
                 EnemySpawnManager.Instance.spawnedmonstercur = 0;
@@ -673,8 +680,8 @@ public class mapmanager : MonoBehaviour
                 {
                     //보스방이면
                     //TotalDmg
-                    dpsmanager.Instance.StartDps();
                 }
+                dpsmanager.Instance.StartDps();
                 EnemySpawnManager.Instance.spawnedmonstercur = 0;
                 EnemySpawnManager.Instance.spawnedmonstermax =
                     int.Parse(MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage).mapcount);

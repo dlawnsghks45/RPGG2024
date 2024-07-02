@@ -257,6 +257,9 @@ public string petrare;
     public ObscuredInt AntTotalClear;
     public int ClientSaveNum = 0; //캐릭 레벨
 
+
+    public DateTime PlayerStartTimes;
+
    public DateTime[] PlayerTimes = new DateTime[15];
 
    public string avata_avata;
@@ -723,6 +726,15 @@ public string petrare;
         {
             ItemInventory.RemoveAt(index);
         }
+    }
+
+    public void RemoveItemAll(string itemid)
+    {
+        int index = GetItemIndex(itemid);
+        if (index == -1)
+            return;
+
+        ItemInventory.RemoveAt(index);
     }
 
     //아이템 개수확인
@@ -1318,13 +1330,14 @@ public record SettingData
     public int ItemDrop = 0;
     public int EskillPanel = 0;
     public int SystemChat = 0;
+    public int CameraShake = 1;
 
     public SettingData()
     {
         
     }
 
-    public void SetData(float backsound, float effectsound, int dmgCountNum, int dmgShowNum, int effectColor, int effectShow, float hp, float mp, int itemPanel, int itemDrop, int eskillPanel, int systemChat,int ButtonSound)
+    public void SetData(float backsound, float effectsound, int dmgCountNum, int dmgShowNum, int effectColor, int effectShow, float hp, float mp, int itemPanel, int itemDrop, int eskillPanel, int systemChat,int ButtonSound,int camerashake)
     {
         Backsound = backsound;
         Effectsound = effectsound;
@@ -1339,6 +1352,7 @@ public record SettingData
         EskillPanel = eskillPanel;
         SystemChat = systemChat;
         this.ButtonSound = ButtonSound;
+        this.CameraShake = camerashake;
     }
 }
 

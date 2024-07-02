@@ -281,7 +281,7 @@ public class RankingManager : MonoBehaviour
 
                 if (!callback.IsSuccess()) return;
                 
-                Debug.Log(callback);
+              Debug.Log(callback);
                 loading.SetActive(false);
                 JsonData jsondata = callback.FlattenRows();
                 RankJson[nowselectnum] = jsondata;

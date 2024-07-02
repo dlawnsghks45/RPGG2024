@@ -202,6 +202,7 @@ public class Timemanager : MonoBehaviour
         이벤트무기강화석4,
         이벤트방어구강화석4,
         이벤트장신구강화석4,
+        새싹보상,
         Length
     }
     public enum ContentEnumMonthly
@@ -279,8 +280,8 @@ public class Timemanager : MonoBehaviour
         }
         servertime = Backend.Utils.GetServerTime();
         string time = servertime.GetReturnValuetoJSON()["utcTime"].ToString();
-        DateTime parsedDate = DateTime.Parse(time);
-//        Debug.Log(parsedDate);
+        DateTime parsedDate = TimeZoneInfo.ConvertTimeToUtc(DateTime.Parse(time));
+        parsedDate = parsedDate.AddHours(9);
         return parsedDate;
     }
 
@@ -509,6 +510,8 @@ public class Timemanager : MonoBehaviour
                            //dailyrewardmanager.Instance.Initdailyreward();
                            uimanager.Instance.RefreshShopAndTrade();
                            Settingmanager.Instance.RefreshReset();
+                           Savemanager.Instance.SaveQuest();
+                           Savemanager.Instance.Save();
                        }
 
                        Param param = new Param();
@@ -523,7 +526,6 @@ public class Timemanager : MonoBehaviour
 
                                if (broCallbackUpdate.IsSuccess())
                                {
-                                   Debug.Log("저자자아");
                                    Debug.Log(broCallbackUpdate);
                                }
                            });
@@ -599,7 +601,8 @@ public class Timemanager : MonoBehaviour
                            QuestManager.Instance.ResetWeekly();
                            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI8/퀘스트가초기화"),alertmanager.alertenum.일반);
                            Settingmanager.Instance.RefreshReset();
-
+                           Savemanager.Instance.SaveQuest();
+                           Savemanager.Instance.Save();
                        }
                        Param param = new Param();
 

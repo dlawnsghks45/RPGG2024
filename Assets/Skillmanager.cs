@@ -559,8 +559,8 @@ public class Skillmanager : MonoBehaviour
         //익스플로전
         if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.explosion) != 0)
         {
-            if ((Random.Range(0, 100) * equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E61611) <
-                 equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.explosionhitper)))
+            if ((Random.Range(0, 100) <
+                 GetRate(equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.explosionhitper))))
             {
                 //찬다
                 equipskillmanager.Instance.showequipslots("1150",

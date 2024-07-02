@@ -735,4 +735,19 @@ public class LogManager : MonoBehaviour
             }
         });
     } 
+    
+    public static void Log_FinishPartyRaid(string[] member,string level)
+    {
+        Param param = new Param();
+        param.Add("멤버", member);
+        param.Add("난도", level);
+        SendQueue.Enqueue(Backend.GameLog.InsertLogV2, "파티레이드클리어", param, (callback) =>
+        {
+            // 이후 처리
+            if (callback.IsSuccess())
+            {
+                
+            }
+        });
+    } 
 }

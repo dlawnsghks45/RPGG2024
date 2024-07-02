@@ -460,8 +460,6 @@ public class TalismanManager : MonoBehaviour
         }
 
         toggle[num].IsOn = true;
-        
-        
         PlayerBackendData.Instance.nowtalismanpreset = num;
         Refresh();
         Savemanager.Instance.SaveTalisman();

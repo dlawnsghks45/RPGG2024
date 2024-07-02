@@ -91,7 +91,7 @@ public class EliteRaid : MonoBehaviour
     public string needitemid;
     public void ShowReward()
     {
-        if (LevelCount.nowcount is >= 0 and < 15)
+        if (LevelCount.nowcount is >= 0 and < 16)
         {
             needitemid = "1752";
         }

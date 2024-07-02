@@ -49,7 +49,6 @@ public class PartyRaidRoommanager : MonoBehaviour
     public countpanel LevelCount;
 
 
-    public GameObject ExitButtons;
     //버튼
     public GameObject StartButton;
     public GameObject ChangemapButton;
@@ -57,6 +56,7 @@ public class PartyRaidRoommanager : MonoBehaviour
     public GameObject JoinUserButton;
 
     public GameObject ChatInput;
+    public GameObject ChatInput2;
 
     //정보
     public PartyMemberslot[] PartyMember;
@@ -226,15 +226,16 @@ public class PartyRaidRoommanager : MonoBehaviour
                 readynum++;
         }
 
-        Debug.Log("레디는" + readynum);
-        Debug.Log("인원은" + num);
+//        Debug.Log("레디는" + readynum);
+//        Debug.Log("인원은" + num);
         if (readynum == num)
         {
-            Debug.Log("모두가 레디했다");
+//            Debug.Log("모두가 레디했다");
             RaidReadyPanel.SetActive(false);
 
             //레이드를 시작
             PartyraidChatManager.Instance.Chat_RaidRealStart();
+            PartyRaidBattlemanager.Instance.ShowChatPanels();
         }
         else
         {
@@ -300,34 +301,37 @@ public class PartyRaidRoommanager : MonoBehaviour
             chatmanager.Instance.party_num = 0;
         }
 
+        foreach (var t in chatmanager.Instance.partyraidchatslot2)
+        {
+            t.gameObject.SetActive(false);
+        }
         foreach (var t in chatmanager.Instance.partyraidSystemchatslot)
         {
             t.gameObject.SetActive(false);
             chatmanager.Instance.partySystem_num = 0;
         }
-
+        foreach (var t in chatmanager.Instance.partyraidSystemchatslot2)
+        {
+            t.gameObject.SetActive(false);
+        }
         for (int i = 0; i < PartyMember.Length; i++)
         {
             PartyMember[i].ExitPlayer();
         }
-
         StartButton.SetActive(true);
         ChangemapButton.SetActive(false);
         JoinUserButton.SetActive(false);
         AdmentiseButton.SetActive(false);
-
-        
-        
         PartyMember[0].SetPlayerData(GiveMyPartyData(), 0);
         PartyMember[0].BuffPercent = Battlemanager.Instance.mainplayer.Stat_totalbuff;
-        Debug.Log("버프는" + "ㅇㅇ");
+////        Debug.Log("버프는" + "ㅇㅇ");
         nowmyleadernickname = PlayerBackendData.Instance.nickname;
         mypartynum = 0;
         partyroomdata = new PartyRoom();
         DropId = PartyRaidDB.Instance.Find_id(partyroomdata.nowmap).dropid.Split(';');
         RefreshCount();
         ClearAllJoinUser();
-       ExitButtons.SetActive(true);
+        PartyRaidBattlemanager.Instance.ShowAdsPanels();
     }
 
 
@@ -337,7 +341,7 @@ public class PartyRaidRoommanager : MonoBehaviour
     public string GiveMyPartyData()
     {
         PlayerBackendData a = PlayerBackendData.Instance;
-        string s = $"{a.nickname};{a.playerindate};{a.GetLv()};{a.GetPlayerAvatadataPartyRaid()};{false};";
+        string s = $"{a.nickname};{a.playerindate};{a.GetLv()};{a.GetPlayerAvatadataPartyRaid()};{false};{Newbiemanager.Instance.isNewbie};";
         return s;
     }
 
@@ -386,11 +390,13 @@ public class PartyRaidRoommanager : MonoBehaviour
         {
             //ExitButton.SetActive(false);
             ChatInput.SetActive(false);
+            ChatInput2.SetActive(false);
         }
         else
         {
             //ExitButton.SetActive(true);
             ChatInput.SetActive(true);
+            ChatInput2.SetActive(true);
         }
 
         RefreshMapData();
@@ -509,9 +515,20 @@ public class PartyRaidRoommanager : MonoBehaviour
     
     public decimal GetMaxHp()
     {
-        decimal a =
-            (decimal.Parse(monsterDB.Instance.Find_id(MapDB.Instance.Find_id(partyroomdata.nowmap).monsterid).hp) *
-             (decimal)math.pow(percentlevel[partyroomdata.level-1], partyroomdata.level-1));
+
+        decimal a = 0;
+
+        if (partyroomdata.level.Equals(1))
+        {
+            a = 10000000000000000000;
+        }
+        else
+        {
+            a =(decimal.Parse(monsterDB.Instance.Find_id(MapDB.Instance.Find_id(partyroomdata.nowmap).monsterid).hp) *
+                (decimal)math.pow(percentlevel[partyroomdata.level-1], partyroomdata.level-1));
+        }
+        
+     
         return a;
     }
 

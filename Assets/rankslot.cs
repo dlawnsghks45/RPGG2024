@@ -64,7 +64,7 @@ public class rankslot : MonoBehaviour
                 RankTop.enabled = true;
                 break;
         }
-        
+
         switch (RankingManager.Instance.nowselectnum)
         {
             case 1:
@@ -72,10 +72,12 @@ public class rankslot : MonoBehaviour
             case 5:
             case 0:
             case 3:
-                Weapon.enabled = true;
+                if (Weapon != null)
+                    Weapon.enabled = true;
                 break;
             case 4:
-                Weapon.enabled = false;
+                if (Weapon != null)
+                    Weapon.enabled = false;
 
                 break;
         }
@@ -87,7 +89,7 @@ public class rankslot : MonoBehaviour
             avata.gameObject.SetActive(true);
             weapon.gameObject.SetActive(true);
             subweapon.gameObject.SetActive(true);
-            
+            if(Weapon != null)
             Weapon.sprite = SpriteManager.Instance.GetSprite(EquipItemDB.Instance.Find_id(datas[1]).Sprite);
             //위장
             if (datas[3] != "")

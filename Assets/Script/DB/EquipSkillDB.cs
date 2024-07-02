@@ -55,6 +55,8 @@ public class EquipSkillDB : MonoBehaviour
 		public string isstack;
 		public string isset;
 		public string isusebar;
+		public string corestat;
+		public string corestatcost;
 
 	}
 
@@ -97,6 +99,8 @@ public class EquipSkillDB : MonoBehaviour
 			row.isstack = grid[i][16];
 			row.isset = grid[i][17];
 			row.isusebar = grid[i][18];
+			row.corestat = grid[i][19];
+			row.corestatcost = grid[i][20];
 
 			rowList.Add(row);
 		}
@@ -266,6 +270,22 @@ public class EquipSkillDB : MonoBehaviour
 	public List<Row> FindAll_isusebar(string find)
 	{
 		return rowList.FindAll(x => x.isusebar == find);
+	}
+	public Row Find_corestat(string find)
+	{
+		return rowList.Find(x => x.corestat == find);
+	}
+	public List<Row> FindAll_corestat(string find)
+	{
+		return rowList.FindAll(x => x.corestat == find);
+	}
+	public Row Find_corestatcost(string find)
+	{
+		return rowList.Find(x => x.corestatcost == find);
+	}
+	public List<Row> FindAll_corestatcost(string find)
+	{
+		return rowList.FindAll(x => x.corestatcost == find);
 	}
 
 }

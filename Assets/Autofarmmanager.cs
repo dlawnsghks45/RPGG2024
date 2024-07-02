@@ -604,26 +604,26 @@ public class Autofarmmanager : MonoBehaviour
                                         (decimal)Battlemanager.Instance.mainplayer.Stat_ExtraGold;
                         Gold_Offline.text =
                             $"{((decimal)(drophowmany_Offline[i] * (decimal)GetCount_Offline(i)) + gbadd):N0}"; //({(decimal)(drophowmany_Offline[i] * (decimal)GetCount_Offline(i))}+{gbadd})";
-                        Debug.Log("A골드" + drophowmany_Offline[i]);
-                        Debug.Log("B골드" + GetCount_Offline(i));
+                    //    Debug.Log("A골드" + drophowmany_Offline[i]);
+                   //     Debug.Log("B골드" + GetCount_Offline(i));
                     break;
                 case "1002":
                         Exp_Offline.text =
                             $"{(PlayerData.Instance.GetExp(drophowmany_Offline[i] * GetCount_Offline(i))):N0} "; // ({(drophowmany_Offline[i] * GetCount_Offline(i))}+{gbadd})";
-                        Debug.Log("A" + drophowmany_Offline[i]);
-                        Debug.Log("B" + GetCount_Offline(i));
+                      //  Debug.Log("A" + drophowmany_Offline[i]);
+                      //  Debug.Log("B" + GetCount_Offline(i));
                         break;
                 default:
                     int total = drophowmany_Offline[i] * (int)GetCount_Offline(i);
-                    Debug.Log("A" + drophowmany_Offline[i]);
-                    Debug.Log("B" + GetCount_Offline(i));
+//                    Debug.Log("A" + drophowmany_Offline[i]);
+                   // Debug.Log("B" + GetCount_Offline(i));
                     items_Offline[i].Refresh(dropitemid_Offline[i], total, false);
                     items_Offline[i].gameObject.SetActive(true);
                     break;
             }
         }
-Debug.Log("추가 경험치" + PlayerData.Instance.mainplayer.Stat_ExtraExp);
-Debug.Log("추가 골드" + PlayerData.Instance.mainplayer.Stat_ExtraGold);
+//Debug.Log("추가 경험치" + PlayerData.Instance.mainplayer.Stat_ExtraExp);
+//Debug.Log("추가 골드" + PlayerData.Instance.mainplayer.Stat_ExtraGold);
         //Debug.Log("진행 시간은" + timeDiff.TotalSeconds);
 
     //    StartCoroutine(timer());
@@ -643,7 +643,7 @@ Debug.Log("추가 골드" + PlayerData.Instance.mainplayer.Stat_ExtraGold);
          float rate = (float)droppercent_Offline[num] * 0.000001f;
 
          float a = 0;
-         Debug.Log("데이터 레벨은" + PlayerBackendData.Instance.Offlinedata.level);
+//         Debug.Log("데이터 레벨은" + PlayerBackendData.Instance.Offlinedata.level);
          switch (PlayerBackendData.Instance.Offlinedata.level)
          {
              case 1:
@@ -790,7 +790,7 @@ Debug.Log("추가 골드" + PlayerData.Instance.mainplayer.Stat_ExtraGold);
                                 PlayerData.Instance.UpGoldMon(total);
                                 break;
                             case "1002":
-                                Inventory.Instance.AddItem(dropitemid_Offline[i], (int)total);
+                                Inventory.Instance.AddItemExp(dropitemid_Offline[i], total);
                                 //   Debug.Log(PlayerData.Instance.GetExp(total) + "경험치");
                                 howmanystring.Add(PlayerData.Instance.GetExp(total));
                                 break;

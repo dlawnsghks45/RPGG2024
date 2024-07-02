@@ -188,6 +188,7 @@ Library: lib_burst_generated
 --root-assembly=C:\Unity2\AcrasRPG\Temp\StagingArea\Data\Managed\Unity.Services.Core.Device.dll
 --root-assembly=C:\Unity2\AcrasRPG\Temp\StagingArea\Data\Managed\UnityEngine.Purchasing.WinRTStub.dll
 --root-assembly=C:\Unity2\AcrasRPG\Temp\StagingArea\Data\Managed\Unity.Services.Core.Analytics.dll
+--root-assembly=C:\Unity2\AcrasRPG\Temp\StagingArea\Data\Managed\Unity.Recorder.dll
 --root-assembly=C:\Unity2\AcrasRPG\Temp\StagingArea\Data\Managed\Google.Play.AppUpdate.dll
 --root-assembly=C:\Unity2\AcrasRPG\Temp\StagingArea\Data\Managed\UnityEngine.Purchasing.SecurityCore.dll
 --root-assembly=C:\Unity2\AcrasRPG\Temp\StagingArea\Data\Managed\Unity.2D.Common.Runtime.dll
@@ -209,6 +210,7 @@ Library: lib_burst_generated
 --root-assembly=C:\Unity2\AcrasRPG\Temp\StagingArea\Data\Managed\Sirenix.OdinInspector.CompatibilityLayer.dll
 --root-assembly=C:\Unity2\AcrasRPG\Temp\StagingArea\Data\Managed\UniTask.TextMeshPro.dll
 --root-assembly=C:\Unity2\AcrasRPG\Temp\StagingArea\Data\Managed\Unity.InternalAPIEngineBridge.001.dll
+--root-assembly=C:\Unity2\AcrasRPG\Temp\StagingArea\Data\Managed\Unity.Recorder.Base.dll
 --root-assembly=C:\Unity2\AcrasRPG\Temp\StagingArea\Data\Managed\Unity.XR.ARFoundation.InternalUtils.dll
 --root-assembly=C:\Unity2\AcrasRPG\Temp\StagingArea\Data\Managed\UnityEngine.Purchasing.AppleStub.dll
 --assembly-folder=C:\Unity2\AcrasRPG\Temp\StagingArea\Data\Managed\

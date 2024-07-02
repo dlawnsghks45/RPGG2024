@@ -91,7 +91,9 @@ public class Talismanmixmanager : MonoBehaviour
             {
                 PlayerBackendData.Instance.TalismanData.Remove(mixslots[i].keyid);
             }
-            int r = Random.Range(0, RandomTalismanID.Length + 1);
+            int r = Random.Range(0, RandomTalismanID.Length);
+            Debug.Log(r);
+            Debug.Log(RandomTalismanID[r]);
             A = PlayerBackendData.Instance.MakeTalismanDatabase(RandomTalismanID[r]);
             Savemanager.Instance.SaveTalisman();
             Savemanager.Instance.Save();

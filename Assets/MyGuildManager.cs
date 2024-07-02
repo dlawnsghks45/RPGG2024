@@ -812,7 +812,7 @@ public class MyGuildManager : MonoBehaviour
                string position = json[i]["position"].ToString(); // 최종접속일 확인하기
                GuildMemberInfo info = new GuildMemberInfo(indate, nick, lastLogin,position); // 길드 멤버 정보 생성
                guildMember.Add(indate, info); // inDate(고유 id)를 Key로 Dictionary에 추가
-               Debug.Log(indate);
+//               Debug.Log(indate);
                Backend.Notification.UserIsConnectByIndate(indate); // 해당 유저가 접속중인지 확인
             }
 

@@ -199,7 +199,7 @@ public class EnemySpawnManager : MonoBehaviour
         {
             stagelockindex = true;
             NowStageindex++;
-            Invoke(nameof(stageIndexFalse),1f);
+            Invoke(nameof(stageIndexFalse),0.3f);
         }
         isspawn = false;
         

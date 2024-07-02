@@ -51,6 +51,7 @@ public class chatmanager : MonoBehaviour
     public Transform ChatTrans;
     public Transform ChatTrans_Guild;
     public Transform ChatTrans_PartyRaid;
+    public Transform ChatTrans_PartyRaid2;
 
     public CanvasGroup chatpanelcanvas;
     public Slider chatinvicibleslider;
@@ -132,6 +133,7 @@ public class chatmanager : MonoBehaviour
     
     
     public Scrollbar ChatPanelScrollbar_PartyRaid;
+    public Scrollbar ChatPanelScrollbar_PartyRaid2;
     
      void RefreshChatPanel()
     {
@@ -142,6 +144,7 @@ public class chatmanager : MonoBehaviour
      void RefreshPartyRaidChatPanel()
      {
              ChatPanelScrollbar_PartyRaid.value = 0;
+             ChatPanelScrollbar_PartyRaid2.value = 0;
      }
      
      void RefreshChatPanel_Guild()
@@ -271,6 +274,7 @@ public class chatmanager : MonoBehaviour
 //                         Debug.Log("홍보시작");
                          ShowPartyAdChat(stringdata[3],stringdata[4],stringdata[2],stringdata[10],stringdata[6],stringdata[7]
                          ,stringdata[5],stringdata[8],stringdata[9]);
+                         
                          break;
                         
                         //가입신청자
@@ -556,7 +560,7 @@ public class chatmanager : MonoBehaviour
                             if (PartyRaidRoommanager.Instance.nowmyleadernickname == (PlayerBackendData.Instance
                                     .nickname))
                             {
-                                Debug.Log("레이드 시작" + PartyRaidRoommanager.Instance.partyroomdata.usercount );
+//                                Debug.Log("레이드 시작" + PartyRaidRoommanager.Instance.partyroomdata.usercount );
                                 if (PartyRaidRoommanager.Instance.partyroomdata.usercount > 1)
                                 {
                                     PartyraidChatManager.Instance.recentusers =
@@ -575,8 +579,8 @@ public class chatmanager : MonoBehaviour
                         case "PM":
                             if(PartyRaidRoommanager.Instance.nowmyleadernickname != stringdata[2])
                                 break;
-                            Debug.Log("메시지옴");
                             ShowPartyRaidChat(args.From.NickName, stringdata[4]);
+                            PartyraidChatManager.Instance.IncreaseChatCount();
                             break;
                         
                         case "PSMOC":
@@ -672,6 +676,7 @@ public class chatmanager : MonoBehaviour
                             ShowPartyRaidSystemChat(args.From.NickName, aSF ,PartyRaidRoommanager.Instance.syscolor[0]);
                             PartyRaidRoommanager.Instance.PartyMember[int.Parse(stringdata[4])].Set_EndBattle();
                             PartyRaidBattlemanager.Instance.AttackBossDmgSet(decimal.Parse(stringdata[5],NumberStyles.Float),args.From.NickName);
+                            
                             break;
                         //클리어했다.
                         case "PRKMB":
@@ -712,10 +717,35 @@ public class chatmanager : MonoBehaviour
                             //보스의 버프를
                             string[] datas = args.Message.Split('&');
 
-                            
                             stringdata = datas[0].Split(';');
                             List<string> membername = datas[1].Split(';').ToList();
                             
+                            //파티에 새싹이 있으면 보상
+                            for (int i = 0; i < PartyRaidRoommanager.Instance.PartyMember.Length; i++)
+                            {
+                                if (PartyRaidRoommanager.Instance.PartyMember[i].data != null)
+                                {
+                                    if (PartyRaidRoommanager.Instance.PartyMember[i].data.isnewbie)
+                                    {
+                                        Debug.Log(PartyRaidRoommanager.Instance.PartyMember[i].data.nickname+"는 뉴비다");
+                                        if (Timemanager.Instance.ConSumeCount_WeeklyAscny(
+                                                (int)Timemanager.ContentEnumWeekly.새싹보상,
+                                                1))
+                                        {
+                                            alertmanager.Instance.ShowAlert(string.Format(Inventory.GetTranslate("UI8/무지개지급"),Timemanager.Instance.GetNowCount_weekly2(Timemanager.ContentEnumWeekly.새싹보상)),
+                                                alertmanager.alertenum.일반);
+                                            Inventory.Instance.AddItem("32",5,true,false);
+                                        }
+                                        break;
+                                    }
+                                }
+                            }
+
+                            if (MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage).maptype != "0")
+                            {
+                                mapmanager.Instance.LocateMap(mapmanager.Instance.savemapid); 
+                            }
+
                             if (membername[0] != PartyRaidRoommanager.Instance.nowmyleadernickname)
                             {
                                 PartyRaidRoommanager.Instance.Bt_ExitRoom();
@@ -730,8 +760,6 @@ public class chatmanager : MonoBehaviour
 
                             PartyRaidBattlemanager.Instance.nowlevel = stringdata[5];
                             PartyRaidBattlemanager.Instance.ShowRewardPanel(stringdata[4]);
-                            
-                            
                             
                                 PartyRaidRoommanager.Instance.PartyradPanel.Hide(false);
                                 dpsmanager.Instance.EndDps();
@@ -1600,6 +1628,7 @@ public class chatmanager : MonoBehaviour
     }
     
     public InputField chatinput_party;
+    public InputField chatinput_party2;
 
     public void Bt_SendChat_PartyRaid()
     {
@@ -1622,7 +1651,27 @@ public class chatmanager : MonoBehaviour
 
         chatinput_party.text = "";
     }
+    public void Bt_SendChat_PartyRaid2()
+    {
+        if (chatinput_party2.text == "")
+            return;
+        // 채팅 서버와 클라이언트가 연결되어 있을 경우
+        // isConnect = true
 
+        // 채팅 서버와 클라이언트가 연결되어 있지 않은 경우
+        // isConnect = false
+
+
+        bool isConnect = Backend.Chat.IsChatConnect(ChannelType.Public);
+
+        if (isConnect)
+        {
+            Backend.Chat.ChatToChannel(ChannelType.Public,
+                $"{publicsystem};PM;{PartyRaidRoommanager.Instance.nowmyleadernickname};{PlayerBackendData.Instance.nickname};{chatinput_party2.text}");
+        }
+
+        chatinput_party2.text = "";
+    }
     //연결이 끊어졌을 시 채팅을 저장했다가 연결 후 침
     private bool chathave_pulic = false;
      string chatstring_public = "";
@@ -1643,9 +1692,15 @@ public class chatmanager : MonoBehaviour
     public chatslot[] publicchatslot;
     public chatslot[] guildchatslot;
     public chatslot[] systemchatslot;
+    
     public chatslot[] partyraidchatslot;
     public chatslot[] partyraidSystemchatslot;
     public chatslot[] partyraidAdChatslot;
+    
+    public chatslot[] partyraidchatslot2;
+    public chatslot[] partyraidSystemchatslot2;
+    public chatslot[] partyraidAdChatslot2;
+    
     public int p_num = 0;
     public int g_num = 0;
     public int s_num = 0;
@@ -1731,20 +1786,24 @@ public class chatmanager : MonoBehaviour
     void ShowPartyRaidChat(string nickname, string message)
     {
         // chatslot  chatitempools = Instantiate(chatitempool, ChatTrans);
-            Debug.Log(nickname);
-            Debug.Log(message);
+////            Debug.Log(nickname);
+//            Debug.Log(message);
         partyraidchatslot[party_num].ShowPartyRaidChat(nickname, message);
         partyraidchatslot[party_num].gameObject.SetActive(true);
+        partyraidchatslot2[party_num].ShowPartyRaidChat(nickname, message);
+        partyraidchatslot2[party_num].gameObject.SetActive(true);
         LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)ChatTrans_PartyRaid);
         LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)ChatTrans_PartyRaid);
         RefreshPartyRaidChatPanel();
         lobbyText.text = $"{string.Format(Inventory.GetTranslate("UI6/채팅_파티"),nickname,message)}";
         partyraidchatslot[party_num].transform.SetAsLastSibling();
+        partyraidchatslot2[party_num].transform.SetAsLastSibling();
         party_num++;
         if (party_num >= partyraidchatslot.Length)
         {
             party_num = 0;
         }
+        PartyRaidBattlemanager.Instance.CountAlert();
     }
     
     void ShowPartyAdChat(string lv,string bpranking, string nickname, string message,string mapid,string maplv,string adcode,string rank ,string membercount)
@@ -1752,6 +1811,9 @@ public class chatmanager : MonoBehaviour
         partyraidAdChatslot[partyAd_num].ShowPartyAdChat(lv,bpranking,nickname, message, mapid,maplv,adcode,rank,membercount);
         partyraidAdChatslot[partyAd_num].gameObject.SetActive(true);
 
+        partyraidAdChatslot2[partyAd_num].ShowPartyAdChat(lv,bpranking,nickname, message, mapid,maplv,adcode,rank,membercount);
+        partyraidAdChatslot2[partyAd_num].gameObject.SetActive(true);
+        
         LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)ChatTrans_PartyRaid);
         LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)ChatTrans_PartyRaid);
         RefreshPartyRaidChatPanel();
@@ -1766,22 +1828,28 @@ public class chatmanager : MonoBehaviour
 
         //lobbyText.text = $"{Inventory.GetTranslate("UI6/채팅_시스템")} {message}";
         partyraidAdChatslot[partyAd_num].transform.SetAsLastSibling();
+        partyraidAdChatslot2[partyAd_num].transform.SetAsLastSibling();
         partyAd_num++;
         if (partyAd_num >= partyraidAdChatslot.Length)
         {
             partyAd_num = 0;
         }
+
+        PartyRaidBattlemanager.Instance.CountAlert();
     }
     
     void ShowPartyRaidSystemChat(string nickname, string message,Color color)
     {
         partyraidSystemchatslot[partySystem_num].ShowPartyRaidSystemChat(message,color);
         partyraidSystemchatslot[partySystem_num].gameObject.SetActive(true);
+        partyraidSystemchatslot2[partySystem_num].ShowPartyRaidSystemChat(message,color);
+        partyraidSystemchatslot2[partySystem_num].gameObject.SetActive(true);
         LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)ChatTrans_PartyRaid);
         LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)ChatTrans_PartyRaid);
         RefreshPartyRaidChatPanel();
         lobbyText.text = $"{Inventory.GetTranslate("UI6/채팅_시스템파티")} {message}";
         partyraidSystemchatslot[partySystem_num].transform.SetAsLastSibling();
+        partyraidSystemchatslot2[partySystem_num].transform.SetAsLastSibling();
         partySystem_num++;
         if (partySystem_num >= partyraidSystemchatslot.Length)
         {
