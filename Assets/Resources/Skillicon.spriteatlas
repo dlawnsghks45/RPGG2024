@@ -1375,6 +1375,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 26dcce2de9d41714b86b2609996a7733, type: 3}
   - {fileID: 21300000, guid: a07e8f2dd0f6cf541acc3a67df92aca1, type: 3}
   - {fileID: 21300000, guid: 7b93623d24642da4287b95ad2d4c72c4, type: 3}
+  - {fileID: 21300000, guid: 9930093da3460534e963f5b67e1124c4, type: 3}
   - {fileID: 21300000, guid: 40b43a3d9caa0e2439b4202ab53933fe, type: 3}
   - {fileID: 21300000, guid: eaaedc3d23b06f04ea02baf384343734, type: 3}
   - {fileID: 21300000, guid: 9a5abd3d7637ae9448bca667f7cadb27, type: 3}
@@ -2965,6 +2966,7 @@ SpriteAtlas:
   - 36
   - 3
   - "\uC2E0\uC758\uAC15\uD654\uC11D15-16"
+  - "quest_83 - \uBCF5\uC0AC\uBCF8"
   - "\uCF00\uC774\uD06C\uBE75"
   - Icon23
   - 61

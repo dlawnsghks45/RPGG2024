@@ -12,7 +12,7 @@ ids,namedes,infodes,name,info,items,howmanys,sprite,productid,price,producttype,
 1011, ★1 신의 증표, ★1 신의 증표,Shopname/1011,Shopinfo/1011,4000;1003,1;11,Item/ETC/goldsafe2,rpgg2.class1,1100,all,,FALSE
 1012, ★2 신의 증표, ★2 신의 증표,Shopname/1012,Shopinfo/1012,4001;1003,1;22,Item/ETC/goldsafe2,rpgg2.class2,2200,all,,FALSE
 1013, ★3 신의 증표, ★3 신의 증표,Shopname/1013,Shopinfo/1013,4002;1003,1;33,Item/ETC/goldsafe2,rpgg2.class3,3300,all,,FALSE
-1014, ★4 신의 증표, ★4 신의 증표,Shopname/1014,Shopinfo/1014,4003;1003,1;55,Item/ETC/goldsafe2,rpgg2.class4,5500,all,,FALSE
+1014,, ★4 신의 증표,Shopname/1014,Shopinfo/1014,4003;1003,1;55,Item/ETC/goldsafe2,rpgg2.class4,5500,all,,FALSE
 1015, ★5 신의 증표, ★5 신의 증표,Shopname/1015,Shopinfo/1015,4004;1003,1;110,Item/ETC/goldsafe2,rpgg2.class5,11000,all,,FALSE
 1016, ★6 신의 증표, ★6 신의 증표,Shopname/1016,Shopinfo/1016,4005;1003,1;220,Item/ETC/goldsafe2,rpgg2.class6,22000,all,,FALSE
 ,,,,,,,,,,,,
@@ -31,9 +31,9 @@ ids,namedes,infodes,name,info,items,howmanys,sprite,productid,price,producttype,
 품질 패키지 50개씩
 제련석 100개",Shopname/1020,Shopinfo/1020,4005;40005;1003,1;30;22,Item/Consume/Box/chest_4,rpgg2.package.33000,33000,one,,FALSE
 1021,광고 무제한 제거,광고 무제한 제거,Shopname/1021,Shopinfo/1021,55,1,Item/Consume/Icon48,rpgg2.ads.free,11000,one,,FALSE
-1022,장비 품질 집중 패키지,품질 40장,Shopname/1022,Shopinfo/1022,52;1005;1003,50;10;220,Item/Consume/Paper/quest_27,rpgg2.equip.package1,11000,one,,FALSE
-1023,장비 등급 집중 패키지,등급 40장,Shopname/1023,Shopinfo/1023,53;1005;1003,50;10;220,Item/Consume/Paper/quest_28,rpgg2.equip.package2,11000,one,,FALSE
-1024,장비 특수효과 집중 패키지,특효 40장,Shopname/1024,Shopinfo/1024,54;1005;1003,50;10;220,Item/Consume/Paper/quest_25,rpgg2.equip.package3,11000,one,,FALSE
+1022,장비 품질 집중 패키지,품질 40장,Shopname/1022,Shopinfo/1022,52;1006;1003,60;10;220,Item/Consume/Paper/quest_27,rpgg2.equip.package1,11000,weekly,프상주간패키지재설정1,FALSE
+1023,장비 등급 집중 패키지,등급 40장,Shopname/1023,Shopinfo/1023,53;1006;1003,60;10;220,Item/Consume/Paper/quest_28,rpgg2.equip.package2,11000,weekly,프상주간패키지재설정2,FALSE
+1024,장비 특수효과 집중 패키지,특효 40장,Shopname/1024,Shopinfo/1024,54;1006;1003,60;10;220,Item/Consume/Paper/quest_25,rpgg2.equip.package3,11000,weekly,프상주간패키지재설정3,FALSE
 1025,던전 입장권 집중 패키지,던전 입장권 불꽃,Shopname/1025,Shopinfo/1025,1711;1001;1003,600;1000;220,Item/ETC/DungeonPass,rpgg2.dungeonenter200,11000,one,,FALSE
 1026,크리스탈 6000개,크리스탈 6000개,Shopname/1026,Shopinfo/1026,1001;1001;1003,4000;4000;55,Item/ETC/Fire,rpgg2.fire.40002,5500,one,,FALSE
 1027,크리스탈 12000+750개,크리스탈 12000+750개,Shopname/1027,Shopinfo/1027,1001;1001;1003,8500;8500;110,Item/ETC/Fire,rpgg2.fire.85002,11000,one,,FALSE
@@ -152,9 +152,9 @@ T10 무기
 1096,파티 레이드 출시 기념 상자,불의 축제 상자,Shopname/1096,Shopinfo/1096,30;1003,17;110,Item/Consume/Paper/quest_90,rpgg2.package2024.party1,11000,one,,TRUE
 1097,파티 레이드 출시 기념 상자,불의 축제 상자,Shopname/1097,Shopinfo/1097,30;1003,40;220,Item/Consume/Paper/quest_90,rpgg2.package2024.party2,22000,one,,TRUE
 1098,파티레이드 주간 충전권,불의 축제 상자,Shopname/1098,Shopinfo/1098,30;1003,14;110,Item/Consume/Paper/quest_90,rpgg2.package2024.party3,11000,weekly,프상주간파티레이드충전권,TRUE
-1099,에픽 패키지 펫 패키지Ⅰ,펫 티켓,Shopname/1099,Shopinfo/1099,50006;587;50007;1003,10;1;500;110,Item/Consume/Paper/quest_83,rpgg2.package.pet.3,11000,one,,TRUE
-1100,에픽 패키지 펫 패키지Ⅱ,펫 티켓,Shopname/1100,Shopinfo/1100,50006;587;50007;1003,21;2;1000;220,Item/Consume/Paper/quest_83,rpgg2.package.pet.4,22000,one,,TRUE
-1101,에픽 패키지 펫 패키지Ⅲ,펫 티켓,Shopname/1101,Shopinfo/1101,50006;587;50007;1003,33;3;1500;330,Item/Consume/Paper/quest_83,rpgg2.package.pet.5,33000,one,,TRUE
+1099,에픽 패키지 펫 패키지Ⅰ,펫 티켓,Shopname/1099,Shopinfo/1099,50006;587;50007;1003,15;1;500;110,Item/Consume/Paper/quest_83,rpgg2.package.pet.3,11000,one,,TRUE
+1100,에픽 패키지 펫 패키지Ⅱ,펫 티켓,Shopname/1100,Shopinfo/1100,50006;587;50007;1003,36;2;1000;220,Item/Consume/Paper/quest_83,rpgg2.package.pet.4,22000,one,,TRUE
+1101,에픽 패키지 펫 패키지Ⅲ,펫 티켓,Shopname/1101,Shopinfo/1101,50006;587;50007;1003,50;3;1500;330,Item/Consume/Paper/quest_83,rpgg2.package.pet.5,33000,one,,TRUE
 1102, ★7 신의 증표,,Shopname/1102,Shopinfo/1102,4006;1003,1;330,Item/ETC/goldsafe2,rpgg2.class7,33000,,,TRUE
 1103,[올림푸스]제우스 위장 세트 패키지,설날 위장 + 무기,Shopname/1103,Shopinfo/1103,50006;40025;40026;1003;100018,20;1;1;330;66000,Transform/제우스,rpgg2.package2024.event1,33000,one,,TRUE
 1104,[올림푸스]펫 패키지,펫 티켓,Shopname/1104,Shopinfo/1104,50006;50007;1003;100018,30;600;220;44000,Item/Consume/Paper/quest_83,rpgg2.package2024.event2,22000,one,,TRUE
@@ -169,3 +169,12 @@ T10 무기
 1113,시즌2 스타터 팩1,시즌2 스타터 팩,Shopname/1113,Shopinfo/1113,592;51;50000,1;1;150,Item/Consume/Box/chest_2,rpgg2.package2024.starter1,5500,one,,TRUE
 1114,시즌2 스타터 팩2,시즌2 스타터 팩,Shopname/1114,Shopinfo/1114,592;50001;99001;1711;200000;1750,1;300;400;300;100;80,Item/Consume/Box/chest_3,rpgg2.package2024.starter2,11000,one,,TRUE
 1115,시즌2 스타터 팩3,시즌2 스타터 팩,Shopname/1115,Shopinfo/1115,592;4006;587;40005;50005;50002;50003;50004,2;1;1;5;500;200;300;200,Item/Consume/Box/chest_4,rpgg2.package2024.starter3,33000,one,,TRUE
+1116,올인원 스타터 패키지,올인원 스타터 패키지,Shopname/1116,Shopinfo/1116,,,,rpgg2.package2024.allstarter1,110000,one,,TRUE
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,펫,,,,,,,,,,
+,,강화석3종,,,,,,,,,,
+,,가루,,,,,,,,,,
+,,7차,,,,,,,,,,

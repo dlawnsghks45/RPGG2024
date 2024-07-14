@@ -6,8 +6,8 @@ namespace ES3Internal
 {
 	public static class ES3Stream
 	{
-		public static Stream CreateStream(ES3Settings settings, ES3FileMode fileMode)
-		{
+        public static Stream CreateStream(ES3Settings settings, ES3FileMode fileMode)
+        {
             bool isWriteStream = (fileMode != ES3FileMode.Read);
             Stream stream = null;
 
@@ -29,7 +29,8 @@ namespace ES3Internal
                 else if (settings.location == ES3.Location.PlayerPrefs)
                 {
                     if (isWriteStream)
-                        stream = new ES3PlayerPrefsStream(settings.FullPath, settings.bufferSize, (fileMode == ES3FileMode.Append));
+                        stream = new ES3PlayerPrefsStream(settings.FullPath, settings.bufferSize,
+                            (fileMode == ES3FileMode.Append));
                     else
                     {
                         if (!PlayerPrefs.HasKey(settings.FullPath))
@@ -51,22 +52,33 @@ namespace ES3Internal
                         }
                     }
                     else if (UnityEngine.Application.isEditor)
-                        throw new System.NotSupportedException("Cannot write directly to Resources folder. Try writing to a directory outside of Resources, and then manually move the file there.");
+                        throw new System.NotSupportedException(
+                            "Cannot write directly to Resources folder. Try writing to a directory outside of Resources, and then manually move the file there.");
                     else
-                        throw new System.NotSupportedException("Cannot write to Resources folder at runtime. Use a different save location at runtime instead.");
+                        throw new System.NotSupportedException(
+                            "Cannot write to Resources folder at runtime. Use a different save location at runtime instead.");
                 }
 
                 return CreateStream(stream, settings, fileMode);
             }
-            catch(System.Exception e)
+            catch (System.Exception e)
             {
                 if (stream != null)
                     stream.Dispose();
+                if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "login")
+                {
+                    Debug.Log(e.Message);
+                    if (e.Message.Contains("Could not decrypt file"))
+                    {
+                        ES3.DeleteDirectory(settings);
+                    }
+                }
+                
                 throw e;
             }
-		}
+        }
 
-		public static Stream CreateStream(Stream stream, ES3Settings settings, ES3FileMode fileMode)
+        public static Stream CreateStream(Stream stream, ES3Settings settings, ES3FileMode fileMode)
 		{
             try
             {

@@ -394,28 +394,34 @@ public class NewIAPManager : MonoBehaviour
                     {
                         for (int i = 0; i < PlayerBackendData.Instance.tutoguideid; i++)
                         {
-////                            Debug.Log(TutorialTotalManager.Instance.slots[i].Reward[0].id);
-                            if (TutorialTotalManager.Instance.slots[i].Reward[0].id == "1000")
+                            try
                             {
-                                Inventory.Instance.AddItemExp(TutorialTotalManager.Instance.slots[i].Reward[0].id,
-                                    (decimal)TutorialTotalManager.Instance.slots[i].Reward[0].count, false);
-                            }
-                            else
-                            {
-                                Inventory.Instance.AddItem(TutorialTotalManager.Instance.slots[i].Reward[0].id,
-                                    (int)TutorialTotalManager.Instance.slots[i].Reward[0].count, false);
-                            }
+                                if (TutorialTotalManager.Instance.slots[i].Reward[0].id == "1000")
+                                {
+                                    Inventory.Instance.AddItemExp(TutorialTotalManager.Instance.slots[i].Reward[0].id,
+                                        (decimal)TutorialTotalManager.Instance.slots[i].Reward[0].count, false);
+                                }
+                                else
+                                {
+                                    Inventory.Instance.AddItem(TutorialTotalManager.Instance.slots[i].Reward[0].id,
+                                        (int)TutorialTotalManager.Instance.slots[i].Reward[0].count, false);
+                                }
                             
-                            if (TutorialTotalManager.Instance.slots[i].Reward[1].id == "1011")
-                            {
-                                Inventory.Instance.AddItemExp(TutorialTotalManager.Instance.slots[i].Reward[1].id,
-                                    (decimal)TutorialTotalManager.Instance.slots[i].Reward[1].count, false);
-                            }
+                                if (TutorialTotalManager.Instance.slots[i].Reward[1].id == "1011")
+                                {
+                                    Inventory.Instance.AddItemExp(TutorialTotalManager.Instance.slots[i].Reward[1].id,
+                                        (decimal)TutorialTotalManager.Instance.slots[i].Reward[1].count, false);
+                                }
 
-                            idss.Add(TutorialTotalManager.Instance.slots[i].Reward[0].id);
-                            hw.Add((decimal)TutorialTotalManager.Instance.slots[i].Reward[0].count);
-                            idss.Add(TutorialTotalManager.Instance.slots[i].Reward[1].id);
-                            hw.Add((decimal)TutorialTotalManager.Instance.slots[i].Reward[1].count);
+                                idss.Add(TutorialTotalManager.Instance.slots[i].Reward[0].id);
+                                hw.Add((decimal)TutorialTotalManager.Instance.slots[i].Reward[0].count);
+                                idss.Add(TutorialTotalManager.Instance.slots[i].Reward[1].id);
+                                hw.Add((decimal)TutorialTotalManager.Instance.slots[i].Reward[1].count);
+                            }
+                            catch
+                            {
+                                break;
+                            }
                         }
 
                         PlayerData.Instance.RefreshInitData();

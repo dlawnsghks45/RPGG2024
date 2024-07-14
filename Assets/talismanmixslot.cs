@@ -14,8 +14,22 @@ public class talismanmixslot : MonoBehaviour
     public Image[] Eskill;
     public Image Line;
     public ParticleSystem startparticle;
+
+    void ShowSlot()
+    {
+        for (int i = 0; i < TalismanManager.Instance.talismaninven.Count; i++)
+        {
+            if (TalismanManager.Instance.talismaninven[i].keyid.Equals(keyid))
+            {
+                TalismanManager.Instance.talismaninven[i].gameObject.SetActive(true);
+                break;
+            }
+        }
+    }
+    
     public void RemoveItem()
     {
+       
         keyid = "";
         No.SetActive(true);
         Yes.SetActive(false);
@@ -64,6 +78,7 @@ public class talismanmixslot : MonoBehaviour
     {
         if (keyid != "")
         {
+            ShowSlot();
             RemoveItem();
             Talismanmixmanager.Instance.RefreshResult();
         }

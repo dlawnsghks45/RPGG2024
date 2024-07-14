@@ -774,17 +774,17 @@ id,coreid,description,description2,name,info,lv,maxlv,probability,value,c,A,B,ty
 
 <color=cyan>[절명의 힘]</color>
 보조 무기 역병 좀비의 머리 장착 시 모든 절명의 원리를 깨우친다.
--절명 필요 중첩이 5로 감소하고 상태 이상 최대 중첩이 100 증가한다. ",EquipSkill/1535,EquipSkillInfo/1535,10,10,0.4,150,150,15,0,0,0,7,FALSE,FALSE,TRUE,,
+-절명 필요 중첩이 5로 감소하고 상태 이상 최대 중첩이 100 증가한다. ",EquipSkill/1535,EquipSkillInfo/1535,10,10,0.7,150,150,15,0,0,0,7,FALSE,FALSE,TRUE,,
 1535_2,1535_2,역병의 인도자,"상태 이상 중첩 +70
 상태 이상 최대 중첩 +70
-모든 시체 폭발 마법 스킬 피해 40% 증가
+모든 시체 폭발 마법 스킬 피해 70% 증가
 모든 시체 폭발 마법 스킬 사용 시 절명 중첩 + 1
 <color=cyan>[절명]</color>
 절명 중첩이 15라면 적에게 절명 상태이상을 부여한다.
 
 <color=cyan>[절명의 힘]</color>
 보조 무기 역병 좀비의 머리 장착 시 모든 절명의 원리를 깨우친다.
--절명 필요 중첩이 5로 감소하고 상태 이상 최대 중첩이 100 증가한다. ",EquipSkill/1535_2,EquipSkillInfo/1535_2,10,10,0.4,150,150,15,0,0,0,7,FALSE,FALSE,TRUE,,
+-절명 필요 중첩이 5로 감소하고 상태 이상 최대 중첩이 100 증가한다. ",EquipSkill/1535_2,EquipSkillInfo/1535_2,10,10,0.7,150,150,15,0,0,0,7,FALSE,FALSE,TRUE,,
 1535_3,1535_3,역병의 지배자,"상태 이상 중첩 +70
 상태 이상 최대 중첩 +70
 모든 시체 폭발 마법 스킬 피해 40% 증가
@@ -794,11 +794,11 @@ id,coreid,description,description2,name,info,lv,maxlv,probability,value,c,A,B,ty
 
 <color=cyan>[절명의 힘]</color>
 보조 무기 역병 좀비의 머리 장착 시 모든 절명의 원리를 깨우친다.
--절명 필요 중첩이 5로 감소하고 상태 이상 최대 중첩이 100 증가한다. ",EquipSkill/1535_3,EquipSkillInfo/1535_3,10,10,0.4,75,0,15,0,0,0,7,FALSE,FALSE,TRUE,,
+-절명 필요 중첩이 5로 감소하고 상태 이상 최대 중첩이 100 증가한다. ",EquipSkill/1535_3,EquipSkillInfo/1535_3,10,10,0.7,75,0,15,0,0,0,7,FALSE,FALSE,TRUE,,
 1536,1536,갓 오브 타임 보조,"<color=cyan>[갓 오브 타임]</color>
 주 무기 크로노스의 지팡이 장착 시 잠재된 시간의 힘이 깨어난다.
--공격 마법 피해가 250%에서 300%로 증가
--타임 코어 성공 확률이 1.5배에서 2배로 증가한다.",EquipSkill/1536,EquipSkillInfo/1536,10,10,0,2,0.5,0,0,0,0,7,FALSE,FALSE,FALSE,,
+-공격 마법 피해가 250%에서 320%로 증가
+-타임 코어 성공 확률이 1.5배에서 2배로 증가한다.",EquipSkill/1536,EquipSkillInfo/1536,10,10,0,2,0.7,0,0,0,0,7,FALSE,FALSE,FALSE,,
 1537,1537,역병의 지배자 보조,"<color=cyan>[역병의 지배자]</color>
 주 무기 절명의 채찍 장착 시 잠재된 역병의 힘이 깨어난다.
 -시체 폭발 마법 스킬 피해가 +10% 추가 증가한다.

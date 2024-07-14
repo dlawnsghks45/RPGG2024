@@ -304,6 +304,10 @@ public class PartyraidChatManager : MonoBehaviour
         Invoke(nameof(NoReady), 12);
     }
 
+    public void RemoveNoready()
+    {
+        CancelInvoke(nameof(NoReady));
+    }
     //11초 뒤에 내가 레디를 안했다면 강퇴
     public void NoReady()
     {

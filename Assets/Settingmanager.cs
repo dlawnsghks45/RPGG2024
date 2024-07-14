@@ -164,6 +164,7 @@ public class Settingmanager : MonoBehaviour
         {
             return;
         }
+        Debug.Log("여기22");
 
         SaveDataALl(true);
         
@@ -554,19 +555,18 @@ public class Settingmanager : MonoBehaviour
     public void SaveDataALl(bool issettingsave =false,bool isexit = false,bool ischange = false)
     {
         Savemanager.Instance.SaveEvery();
+        Debug.Log("여기");
         if (!CheckServerOn())
         {
             SaveDataALl(issettingsave, isexit);
             Debug.Log("여기");
             return;
         }
-
         if (PlayerBackendData.Instance.ServerLv > PlayerBackendData.Instance.GetLv())
         {
-//            Debug.Log("여기2");
+            Debug.Log("여기2");
             return;
         }
-        
         
         Savemanager.Instance.SaveSaveNum();
         Timemanager.Instance.RefreshNowTIme();
@@ -772,6 +772,41 @@ public class Settingmanager : MonoBehaviour
                 });
     }
 
+    public void Savetime()
+    {
+        PlayerBackendData userData = PlayerBackendData.Instance;
+        Param paramData = new Param
+        {
+            //가방
+            { "inventory", userData.ItemInventory },
+            { "Gold", userData.GetMoney() },
+            { "Crystal", userData.GetCash() },
+            //퀘스트
+            { "QuestCount", PlayerBackendData.Instance.QuestCount },
+            { "QuestIsFinish", PlayerBackendData.Instance.QuestIsFinish },
+            { "QuestTotalCount", PlayerBackendData.Instance.QuestTotalCount },
+
+       
+            //레벨
+            { "level", userData.GetLv() },
+            { "levelExp", userData.GetExp() },
+            { "Class", userData.ClassData },
+            { "NowClass", userData.ClassData[userData.ClassId] },
+            { "Playertime", userData.PlayerTimes },
+        };
+        
+        
+        // key 컬럼의 값이 keyCode인 데이터 검색
+        Where where = new Where();
+        where.Equal("owner_inDate", PlayerBackendData.Instance.playerindate);
+
+        SendQueue.Enqueue(Backend.GameData.Update, "PlayerData", where, paramData, (callback) =>
+        {
+            // 이후 처리
+            if (!callback.IsSuccess()) return;
+            LogManager.UserInventoryLog(paramData);
+        });
+    }
     public void OnlyInvenSave()
     {
         if (PlayerBackendData.Instance.ServerLv > PlayerBackendData.Instance.GetLv())

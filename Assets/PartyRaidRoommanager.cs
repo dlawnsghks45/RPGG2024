@@ -157,33 +157,47 @@ public class PartyRaidRoommanager : MonoBehaviour
 
     public void ShowRaidReadyPanel()
     {
-        PartyradPanel.Show(false);
-        for (int i = 0; i < readyslots.Length; i++)
+        Debug.Log("레이드시작12");
+        Debug.Log(partyroomdata.usercount);
+        
+        
+        if (partyroomdata.usercount == 1)
         {
-            readyslots[i].gameObject.SetActive(false);
-        }
-
-        for (int i = 0; i < PartyMember.Length; i++)
-        {
-            if (PartyMember[i].data != null)
-            {
-                readyslots[i].InitData(PartyMember[i].data.nickname);
-                readyslots[i].gameObject.SetActive(true);
-            }
-        }
-
-        readymaptext.text = string.Format(Inventory.GetTranslate("UI7/초대내용"),
-            Inventory.GetTranslate(MapDB.Instance.Find_id(partyroomdata.nowmap).name), partyroomdata.level);
-
-        RaidReadyPanel.SetActive(true);
-        if (nowmyleadernickname == PlayerBackendData.Instance.nickname)
-        {
-            Invoke(nameof(RaidStartCheck), 11f);
+            Debug.Log("레이드시작");
+            readyslots[0].InitData(PartyMember[0].data.nickname);
+            OnlyReadyCheck();
         }
         else
         {
-            PartyraidChatManager.Instance.TrggetNoready();
+            PartyradPanel.Show(false);
+            for (int i = 0; i < readyslots.Length; i++)
+            {
+                readyslots[i].gameObject.SetActive(false);
+            }
+
+            for (int i = 0; i < PartyMember.Length; i++)
+            {
+                if (PartyMember[i].data != null)
+                {
+                    readyslots[i].InitData(PartyMember[i].data.nickname);
+                    readyslots[i].gameObject.SetActive(true);
+                }
+            }
+            
+            readymaptext.text = string.Format(Inventory.GetTranslate("UI7/초대내용"),
+                Inventory.GetTranslate(MapDB.Instance.Find_id(partyroomdata.nowmap).name), partyroomdata.level);
+
+            RaidReadyPanel.SetActive(true);
+            if (nowmyleadernickname == PlayerBackendData.Instance.nickname)
+            {
+                Invoke(nameof(RaidStartCheck), 11f);
+            }
+            else
+            {
+                PartyraidChatManager.Instance.TrggetNoready();
+            }
         }
+  
     }
 
     //준비
@@ -205,8 +219,7 @@ public class PartyRaidRoommanager : MonoBehaviour
         readyslots[num].SetReady();
     }
 
-    //타이머가 종료되면 레디에 따라 달라진다.
-    void RaidStartCheck()
+    public void OnlyReadyCheck()
     {
         int num = 0;
         bool[] isnoready = new bool[4];
@@ -226,8 +239,8 @@ public class PartyRaidRoommanager : MonoBehaviour
                 readynum++;
         }
 
-//        Debug.Log("레디는" + readynum);
-//        Debug.Log("인원은" + num);
+        Debug.Log("레디는" + readynum);
+        Debug.Log("인원은" + num);
         if (readynum == num)
         {
 //            Debug.Log("모두가 레디했다");
@@ -236,28 +249,32 @@ public class PartyRaidRoommanager : MonoBehaviour
             //레이드를 시작
             PartyraidChatManager.Instance.Chat_RaidRealStart();
             PartyRaidBattlemanager.Instance.ShowChatPanels();
+            CancelInvoke(nameof(RaidStartCheck));
+            PartyraidChatManager.Instance.RemoveNoready();
+
         }
-        else
+    }
+    //타이머가 종료되면 레디에 따라 달라진다.
+    public void RaidStartCheck()
+    {
+        //레디가 안됐다.
+        for (int i = 0; i < readyslots.Length; i++)
         {
-            for (int i = 0; i < readyslots.Length; i++)
+            if (PartyMember[i].data != null)
             {
-                if (PartyMember[i].data != null)
+                if (!readyslots[i].isready)
                 {
-                    if (!readyslots[i].isready)
-                    {
-                        //해당유저 탈퇴
-                        Debug.Log("유저를 삭젷나다.");
-                        RaidReadyPanel.SetActive(false);
-                        alertmanager.Instance.ShowAlert(
-                            string.Format(Inventory.GetTranslate("UI7/준비안해서 탈퇴"), PartyMember[i].data.nickname),
-                            alertmanager.alertenum.일반);
-                        PartyMember[i].ExitPlayer();
-                    }
+                    //해당유저 탈퇴
+                    RaidReadyPanel.SetActive(false);
+                    alertmanager.Instance.ShowAlert(
+                        string.Format(Inventory.GetTranslate("UI7/준비안해서 탈퇴"), PartyMember[i].data.nickname),
+                        alertmanager.alertenum.일반);
+                    PartyMember[i].ExitPlayer();
                 }
             }
-
-            RaidReadyPanel.SetActive(false);
         }
+
+        RaidReadyPanel.SetActive(false);
     }
 
 

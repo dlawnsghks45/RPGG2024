@@ -990,6 +990,99 @@ public class equipoptionchanger : MonoBehaviour
       return point;
    }
 
+   public  float GetEskillPoint(EquipDatabase equipdata,string weapontype)
+   {
+      float point = 0;
+
+      //고유가 있으면 1부터 시작 없으면 0부터 시작
+      int startindex = EquipItemDB.Instance.Find_id(equipdata.Itemid).SpeMehodP != "0" ? 1 : 0;
+
+
+      for (int i = startindex; i < equipdata.EquipSkill1.Count; i++)
+      {
+         EquipSkillDB.Row data = EquipSkillDB.Instance.Find_id(equipdata.EquipSkill1[i]);
+
+         if (data.corestat == "")
+            return 0;
+
+         switch (weapontype)
+         {
+            case "Physic":
+               switch (data.corestat)
+               {
+                  case "melee":
+                  case "all":
+                  case "strdex":
+                     point += float.Parse(data.corestatcost);
+                     break;
+                  case "str":
+                     if (ClassDB.Instance.Find_id(PlayerBackendData.Instance.ClassId).mainstat == "str")
+                     {
+                        point += float.Parse(data.corestatcost);
+                     }
+                     else
+                     {
+                        point += float.Parse(data.corestatcost) * 0.6f;
+
+                     }
+
+                     break;
+                  case "dex":
+                     if (ClassDB.Instance.Find_id(PlayerBackendData.Instance.ClassId).mainstat == "dex")
+                     {
+                        point += float.Parse(data.corestatcost);
+                     }
+                     else
+                     {
+                        point += float.Parse(data.corestatcost) * 0.8f;
+                     }
+
+                     break;
+               }
+
+               break;
+            case "Magic":
+               switch (data.corestat)
+               {
+                  case "magic":
+                  case "all":
+                  case "intwis":
+                  case "int":
+                     point += float.Parse(data.corestatcost);
+                     break;
+                  case "wis":
+                     point += float.Parse(data.corestatcost) * 0.6f;
+                     break;
+               }
+
+               break;
+            case "Dot":
+               switch (data.corestat)
+               {
+                  case "magic":
+                     point += float.Parse(data.corestatcost) * 0.6f;
+                     break;
+                  case "dot":
+                  case "all":
+                  case "intwis":
+                  case "wis":
+
+                     point += float.Parse(data.corestatcost);
+                     break;
+                  case "int":
+                     point += float.Parse(data.corestatcost) * 0.6f;
+                     break;
+               }
+
+               break;
+         }
+      }
+
+      //장비의 점수는
+//      Debug.Log("이 잠비의 피해 점수는" + point);
+      return point;
+   }
+     
    //특수효과를 바꾼다.
    public void Bt_AcceptESkill()
    {

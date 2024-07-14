@@ -456,7 +456,7 @@ public string petrare;
         {
             Cash = 0;
             Savemanager.Instance.SaveCash();
-            Settingmanager.Instance.SaveDataInventory();
+            //Settingmanager.Instance.SaveDataInventory();
         }
         return Cash.GetDecrypted();
     }
@@ -698,8 +698,10 @@ public string petrare;
             if (itemdata.Isstack == "TRUE")
             {
                 //새로 등록
-                
                 int index = GetItemIndex(itemid);
+                if (ItemInventory[index].Howmany > 2100000000)
+                    return;
+                
                 ItemInventory[index].Howmany += howmany;
             }
             else
@@ -1330,7 +1332,7 @@ public record SettingData
     public int ItemDrop = 0;
     public int EskillPanel = 0;
     public int SystemChat = 0;
-    public int CameraShake = 1;
+    public int CameraShake = 0;
 
     public SettingData()
     {

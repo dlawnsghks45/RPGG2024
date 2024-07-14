@@ -247,7 +247,7 @@ public class GuildManager : MonoBehaviour
         //초기길드데이터를 불러온다.
         SendQueue.Enqueue(Backend.Guild.GetMyGuildInfoV3, (callback) =>
         {
-        //    Debug.Log("길드체크");
+        //    Debug.Log("길wwwww드체크");
          //   Debug.Log(callback);
             if (!callback.IsSuccess())
             {

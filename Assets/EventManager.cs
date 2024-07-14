@@ -37,6 +37,7 @@ public class EventManager : MonoBehaviour
     private void Start()
     {
         EventListTest();
+        RefreshEvent();
     }
 
     public void EventListTest()
@@ -114,6 +115,33 @@ public class EventManager : MonoBehaviour
     {
         Settingmanager.Instance.Bt_OpenURL(url);
     }
+    
+    
+    
+    
+    
+    //이벤트 페이지
+    public UIView EventUI;
+    public string[] EventItemID;
+    public Image EventMonster;
+    public itemiconslot[] eventitem;
+
+    public void ShowEventUI()
+    {
+        EventUI.Show(false);
+    }
+
+    void RefreshEvent()
+    {
+        for (int i = 0; i < eventitem.Length; i++)
+        {
+            eventitem[i].Refresh(EventItemID[i], 1, false);
+        }
+
+        EventMonster.sprite = SpriteManager.Instance.GetSprite(monsterDB.Instance.Find_id("4999").sprite);
+    }
+
+
 }
 
 public partial class EventItem

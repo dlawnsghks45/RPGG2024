@@ -60,9 +60,9 @@ public GameObject DungeonRewardPanel;
             autocount -= count;
         }
 
-        if (autocount > 50)
+        if (autocount > 200)
         {
-            autocount = 50;
+            autocount = 200;
         }
         
         AutoItemNeedCount.text = $"X {getneedautocount()}";

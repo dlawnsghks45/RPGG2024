@@ -2998,7 +2998,6 @@ public class Inventory : MonoBehaviour
      public void Box_SelectItem()
      {
          if(boxdata.C != "Choice") return;
-         Debug.Log(":ddwadwa:");
          box_curselect++;
          BoxChoiceText.text = $"{box_curselect.ToString()}/{box_maxselect.ToString()}";
          
@@ -3104,9 +3103,10 @@ public class Inventory : MonoBehaviour
                                  for (int i = 0; i < curBoxcount; i++)
                                  {
                                     AddItem(t.id, t.itemcount, false);
-                                    getid.Add(t.id);
-                                    gethowmany.Add((t.itemcount).ToString());
+                                
                                  }
+                                 getid.Add(t.id);
+                                 gethowmany.Add((t.itemcount * curBoxcount).ToString());
                                  Savemanager.Instance.SaveTalisman();
                              }
                              else

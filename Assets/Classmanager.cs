@@ -705,7 +705,7 @@ public class Classmanager : MonoBehaviour
                     if (PlayerBackendData.Instance.Skills[i] != null && PlayerBackendData.Instance.Skills[i] != "")
                     {
                     
-                        Debug.Log(PlayerBackendData.Instance.Skills[i]);
+//                        Debug.Log(PlayerBackendData.Instance.Skills[i]);
                         PlayerBackendData.Instance.ClassData[PlayerBackendData.Instance.ClassId].Skills1[i] = PlayerBackendData.Instance.Skills[i];
                     }
                 }

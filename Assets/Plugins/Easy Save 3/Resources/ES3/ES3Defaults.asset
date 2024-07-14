@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings:
     _location: 0
-    path: 2024-02-29T07:42:05.415Z.es3
+    path: 2024-06-30T22:50:43.546Z.es3
     encryptionType: 1
     compressionType: 0
     encryptionPassword: gksrnr13
@@ -60,5 +60,5 @@ MonoBehaviour:
   autoUpdateReferences: 1
   addAllPrefabsToManager: 1
   logDebugInfo: 0
-  logWarnings: 1
-  logErrors: 1
+  logWarnings: 0
+  logErrors: 0

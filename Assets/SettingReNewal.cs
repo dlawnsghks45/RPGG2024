@@ -104,6 +104,7 @@ public class SettingReNewal : MonoBehaviour
         ItemDrop[data.ItemDrop].IsOn = true;
         EskillPanel[data.EskillPanel].IsOn = true;
         SystemChat[data.SystemChat].IsOn = true;
+        CameraShake[data.CameraShake].IsOn = true;
         
         SetEffectColor();
     }
@@ -145,7 +146,7 @@ public class SettingReNewal : MonoBehaviour
     void SetEffectColor()
     {
         float a = 1f;
-        Debug.Log("이펙트 컬러는" + PlayerBackendData.Instance.settingdata.EffectColor);
+//        Debug.Log("이펙트 컬러는" + PlayerBackendData.Instance.settingdata.EffectColor);
         switch (PlayerBackendData.Instance.settingdata.EffectColor)
         {
             case 0:
@@ -187,7 +188,7 @@ public class SettingReNewal : MonoBehaviour
         }
         
         //이펙트 색
-        Debug.Log("이펙트 컬러" +  numeffectcolor);
+//        Debug.Log("이펙트 컬러" +  numeffectcolor);
         PlayerBackendData.Instance.settingdata.SetData
             (
                 BackgroundSlider.value,
@@ -206,7 +207,7 @@ public class SettingReNewal : MonoBehaviour
                 CameraShake[0].IsOn ? 0 : 1
             );
 
-        Debug.Log("버튼 저장" +   PlayerBackendData.Instance.settingdata.ButtonSound);
+//        Debug.Log("버튼 저장" +   PlayerBackendData.Instance.settingdata.ButtonSound);
         SetEffectColor();
 
         Param paramEquip = new Param { { "SettingData", PlayerBackendData.Instance.settingdata } };

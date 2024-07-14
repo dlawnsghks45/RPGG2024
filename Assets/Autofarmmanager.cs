@@ -135,7 +135,7 @@ public class Autofarmmanager : MonoBehaviour
 
         if (timeDiff.TotalSeconds < 0)
         {
-            dateTime = Timemanager.Instance.GetServerTime().AddHours(8);
+            dateTime = Timemanager.Instance.GetServerTime();
                 timeDiff =
                 dateTime - PlayerBackendData.Instance.PlayerTimes[(int)PlayerBackendData.timesenum.autofarm];
             
@@ -369,20 +369,15 @@ public class Autofarmmanager : MonoBehaviour
             alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI2/자동보상최소1시간"), alertmanager.alertenum.일반);
             return;
         }
-
-
         List<decimal> howmanystring = new List<decimal>();
-
-
-
         panel.Hide(false);
         alertmanager.Instance.Bt_ClickMenu();
         AutofarmFastobj.SetActive(false);
         dateTime = Timemanager.Instance.GetServerTime();
+        Debug.Log("저장 시간" + dateTime);
         PlayerBackendData.Instance.PlayerTimes[(int)PlayerBackendData.timesenum.autofarm]
             = dateTime;
         Settingmanager.Instance.OnlyInvenSave();
-
         for (int i = 0; i < dropitemid.Count; i++)
         {
             decimal total = (decimal)drophowmany[i] * (decimal)GetCount(i);
@@ -490,22 +485,27 @@ public class Autofarmmanager : MonoBehaviour
     {
         if (PlayerBackendData.Instance.PlayerTimes[(int)PlayerBackendData.timesenum.autofarm].Equals(DateTime.MinValue))
         {
-            //Debug.Log("아직 시작안해싿");
             //처음 시작 현재시작으로 조정
             dateTime = Timemanager.Instance.GetServerTime();
             PlayerBackendData.Instance.PlayerTimes[(int)PlayerBackendData.timesenum.autofarm]
                 = dateTime;
-
+            Settingmanager.Instance.Savetime();
         }
         else
         {
-            //Debug.Log("시작했다");
+            Debug.Log("시작했다");
         }
 
         TimeSpan timeDiff =
             Timemanager.Instance.NowTime -
             PlayerBackendData.Instance.PlayerTimes[(int)PlayerBackendData.timesenum.autofarm];
 
+        Debug.Log("3자동시간" + timeDiff);
+
+        
+      
+        
+       
         if (timeDiff.TotalSeconds > MaxTime)
         {
             AutofarmFastobj.SetActive(true);

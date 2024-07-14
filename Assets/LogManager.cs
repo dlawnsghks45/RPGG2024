@@ -203,13 +203,18 @@ public class LogManager : MonoBehaviour
             Debug.Log(callback);
         });
     }
-    public static void FinishCraft( string craftid ,List<int> count ,List<string> result,bool isequip)
+
+    public static void FinishCraft(string craftid, List<int> count, List<string> result, bool isequip)
     {
-        Param param = new Param ();
-        param.Add ( "아이디" , craftid);
-        param.Add ( "횟수" , count);
-        param.Add ( "결과" , result);
-        param.Add ( "크리스탈" , PlayerBackendData.Instance.GetCash());
+        Param param = new Param();
+        param.Add("아이디", craftid);
+        if (isequip)
+            param.Add("장비이름",
+                Inventory.GetTranslate(EquipItemDB.Instance.Find_id(CraftTableDB.Instance.Find_id(craftid).Successid)
+                    .Name));
+        param.Add("횟수", count);
+        param.Add("결과", result);
+        param.Add("크리스탈", PlayerBackendData.Instance.GetCash());
 
         if (isequip)
         {
@@ -227,10 +232,10 @@ public class LogManager : MonoBehaviour
                 Debug.Log(callback);
             });
         }
-        
+
         equipoptionchanger.Instance.Bt_SaveServerData();
     }
-    
+
     public static void LogAdlv(int Adlv)
     {
         Param param = new Param ();
@@ -742,6 +747,37 @@ public class LogManager : MonoBehaviour
         param.Add("멤버", member);
         param.Add("난도", level);
         SendQueue.Enqueue(Backend.GameLog.InsertLogV2, "파티레이드클리어", param, (callback) =>
+        {
+            // 이후 처리
+            if (callback.IsSuccess())
+            {
+                
+            }
+        });
+    } 
+    public static void Log_FieldMap(string id,int maplv)
+    {
+        Param param = new Param();
+        param.Add("맵이름", Inventory.GetTranslate(MapDB.Instance.Find_id(id).name));
+        param.Add("맵ID", id);
+        param.Add("맵Lv", maplv);
+        
+        SendQueue.Enqueue(Backend.GameLog.InsertLogV2, "로그_스테이지클리어", param, (callback) =>
+        {
+            // 이후 처리
+            if (callback.IsSuccess())
+            {
+                
+            }
+        });
+    } 
+    
+    public static void Log_LevelUp(int level)
+    {
+        Param param = new Param();
+        param.Add("레벨", level);
+        
+        SendQueue.Enqueue(Backend.GameLog.InsertLogV2, "로그_레벨업10", param, (callback) =>
         {
             // 이후 처리
             if (callback.IsSuccess())

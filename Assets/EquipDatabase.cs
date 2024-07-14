@@ -436,8 +436,8 @@ public class EquipDatabase : IEquatable<object>
             {
                 //잠금이라면     
                // Debug.Log("잠금"+i);
-                Debug.Log("개수"+LockSkill.Count);
-               Debug.Log(LockSkill[i]);
+            //  Debug.Log("개수"+LockSkill.Count);
+             //  Debug.Log(LockSkill[i]);
                     selectedskill.Add(LockSkill[i]);
                 //스택형이 아니라면 뺀다
                 if (!bool.Parse(EquipSkillDB.Instance.Find_id(LockSkill[i]).isstack))

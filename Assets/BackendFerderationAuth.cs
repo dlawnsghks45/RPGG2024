@@ -190,7 +190,7 @@ public class BackendFerderationAuth : MonoBehaviour
     public GameObject NotThisDeviceObj;
     public Text ModelText;
     public GameObject FileDifferentobj;
-    private JsonData jdata;
+    public JsonData jdata;
     
     public void MakeID()
     {
@@ -438,7 +438,7 @@ public class BackendFerderationAuth : MonoBehaviour
         {
             for (int i = 0; i < jdata["Playertime"].Count; i++)
             {
-                PlayerBackendData.Instance.PlayerTimes[i] = DateTime.Parse(jdata["Playertime"][i].ToString());
+                PlayerBackendData.Instance.PlayerTimes[i] = TimeZoneInfo.ConvertTimeToUtc(DateTime.Parse(jdata["Playertime"][i].ToString()));
             }
         }
         
@@ -514,6 +514,17 @@ public class BackendFerderationAuth : MonoBehaviour
                 PlayerBackendData.Instance.settingdata.ItemDrop = int.Parse(jdata["SettingData"]["ItemDrop"].ToString());
                 PlayerBackendData.Instance.settingdata.EskillPanel = int.Parse(jdata["SettingData"]["EskillPanel"].ToString());
                 PlayerBackendData.Instance.settingdata.SystemChat = int.Parse(jdata["SettingData"]["SystemChat"].ToString());
+                if (jdata["SettingData"].ContainsKey("CameraShake"))
+                {
+//                    Debug.Log("여기다 ㅁ카메라 불러옴");
+                    PlayerBackendData.Instance.settingdata.CameraShake = int.Parse(jdata["SettingData"]["CameraShake"].ToString());
+                }
+                else
+                {
+              //      Debug.Log("여기다 ㅁ카메라");
+                    PlayerBackendData.Instance.settingdata.CameraShake = 1;
+                }
+
                 //물약
                 PlayerBackendData.Instance.settingdata.Hp = float.Parse(jdata["SettingData"]["Hp"].ToString());
                 PlayerBackendData.Instance.settingdata.Mp = float.Parse(jdata["SettingData"]["Mp"].ToString());

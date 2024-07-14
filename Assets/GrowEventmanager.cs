@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Doozy.Engine.UI;
@@ -74,6 +75,22 @@ public class GrowEventmanager : MonoBehaviour
             //Recomend_WeaponMagic[1].SetActive(true);
             //Recomend_WeaponMagic[3].SetActive(true);
             break;
+      }
+   }
+
+   public void Start()
+   {
+      //복귀 유저
+      if (PlayerBackendData.Instance.GetLv() < 1500 &&
+          PlayerBackendData.Instance.tutoguideid != 0)
+      {
+         PlayerBackendData.Instance.tutoguideid = 0;
+         PlayerBackendData.Instance.tutoguideisfinish = false;
+         
+         Savemanager.Instance.SaveGuideQuest();
+         Savemanager.Instance.Save();
+         Tutorialmanager.Instance.hidealluiview();
+         Bt_ShowPanel();
       }
    }
 
@@ -163,7 +180,7 @@ public class GrowEventmanager : MonoBehaviour
             for (int i = 0; i < giveclass.Length; i++)
             {
                Classmanager.Instance.Bt_BuyClass(giveclass[i]);
-               Debug.Log("준 스킬 " + giveclass[i]  + "ㅋ" + ClassDB.Instance.Find_id(giveclass[i]).giveskill);
+//w               Debug.Log("준 스킬 " + giveclass[i]  + "ㅋ" + ClassDB.Instance.Find_id(giveclass[i]).giveskill);
             }
 
             //직업해금및 패시브 장착및 스킬자착

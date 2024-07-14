@@ -929,7 +929,6 @@ break;
 
         if (PlayerBackendData.Instance.tutoid.Equals(maxlv))
         {
-            Debug.Log("아아아아");
             TutorialTotalManager.Instance.RefreshInfo();
             TutorialTotalManager.Instance.RefreshNow();
             GrowEventmanager.Instance.Bt_ShowPanel();
@@ -1224,6 +1223,9 @@ break;
         obj[5].SetActive(false);
         obj[6].SetActive(true);
         yield return new WaitWhile(() => nowstep < 7);
+        obj[6].SetActive(false);
+        obj[7].SetActive(true);
+        yield return new WaitWhile(() => nowstep < 8);
         hidealluiview();
         EndTutorial();
         CheckTutorial("changemaplv");

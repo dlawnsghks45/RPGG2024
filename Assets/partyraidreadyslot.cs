@@ -41,5 +41,6 @@ public class partyraidreadyslot : MonoBehaviour
         notreadyobj.SetActive(false);
         readyobj.SetActive(true);
         isready = true;
+        PartyRaidRoommanager.Instance.OnlyReadyCheck();
     }
 }

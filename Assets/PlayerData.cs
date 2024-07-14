@@ -983,6 +983,12 @@ public class PlayerData : MonoBehaviour
                 RefreshAchExp();
                 RefreshPlayerstat();
 
+                if (PlayerBackendData.Instance.GetLv() % 10 == 0)
+                {
+                    LogManager.Log_LevelUp(PlayerBackendData.Instance.GetLv());
+                }
+                
+                
                 if (Newbiemanager.Instance.isNewbie && PlayerBackendData.Instance.GetLv() > 3500)
                 {
                     Newbiemanager.Instance.FalseNewbie();

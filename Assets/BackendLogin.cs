@@ -1,10 +1,7 @@
 using System;
 using BackEnd;
 using GooglePlayGames;
-using GooglePlayGames.BasicApi;
 using System.Collections;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Doozy.Engine.UI;
 using LitJson;
 using TMPro;
@@ -14,6 +11,25 @@ using UnityEngine.UI;
 
 public class BackendLogin : MonoBehaviour
 {
+    //싱글톤만들기.
+    private static BackendLogin _instance = null;
+    public static BackendLogin Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType(typeof(BackendLogin)) as BackendLogin;
+
+                if (_instance == null)
+                {
+                    //Debug.Log("Player script Error");
+                }
+            }
+            return _instance;
+        }
+    }
+
     public GameObject serverobj;
     //서비스 ㅣ용약관
     public bool ispolicyon = false;
@@ -336,7 +352,7 @@ public class BackendLogin : MonoBehaviour
 
         if (data.ContainsKey("PlayerSaveTime"))
         {
-            RecentServerDateTimeText.text = DateTime.Parse(data["PlayerSaveTime"].ToString())
+            RecentServerDateTimeText.text = TimeZoneInfo.ConvertTimeToUtc(DateTime.Parse(data["PlayerSaveTime"].ToString()))
                 .ToString("yyyy-MM-dd HH:mm:ss");
             Savedtime = DateTime.Parse(data["PlayerSaveTime"].ToString());
         }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using BackEnd;
 using Doozy.Engine.UI;
 using Sirenix.OdinInspector;
+using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -184,7 +185,7 @@ public class WorldBossManager : MonoBehaviour
 
         Param param = new Param();
         string names = WorldBossDB.Instance.Find_id(playingplaydata.bossid).Dataname;
-        param.Add(names, decimal.Parse(score) / devidetime);
+        param.Add(names, Math.Truncate(decimal.Parse(score) / devidetime));
         param.Add("PlayerAvatadata", PlayerBackendData.Instance.GetPlayerAvatadata()); //클래스;무기;보조무기;아바타;아바타무기;아바타보조무기
         SendQueue.Enqueue(Backend.URank.User.UpdateUserScore, playingplaydata.RankingID, "RankData", rowInDate, param,
             rankBro =>

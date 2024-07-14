@@ -689,7 +689,8 @@ public class Hpmanager : MonoBehaviour
                                     {
                                         Autofarmmanager.Instance.FinishCheckOffline();
                                     }
-                                    
+
+                                    bool isrec = false;
                                     //스테이지면 다음 스테이지로 넘김
                                     if (int.Parse(
                                             MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage).mapneednum) >=
@@ -698,6 +699,8 @@ public class Hpmanager : MonoBehaviour
                                         PlayerBackendData.Instance.SetFieldLV(int.Parse(MapDB.Instance
                                             .Find_id(PlayerBackendData.Instance.nowstage).mapneednum) + 1);
                                         Savemanager.Instance.SaveStageData();
+                                     
+                                        isrec = true;
                                     }
 
                                     if (!mapmanager.Instance.stageautouptoggle.isOn && MapDB.Instance
@@ -705,6 +708,11 @@ public class Hpmanager : MonoBehaviour
                                     {
                                         mapmanager.Instance.LocateMap(MapDB.Instance
                                             .Find_id(PlayerBackendData.Instance.nowstage).mapnextstage);
+                                        if (isrec)
+                                        {
+                                            LogManager.Log_FieldMap(PlayerBackendData.Instance.nowstage,int.Parse(MapDB.Instance
+                                                .Find_id(PlayerBackendData.Instance.nowstage).mapneednum));
+                                        }
                                     }
 
                                     //특수 포탈 체크

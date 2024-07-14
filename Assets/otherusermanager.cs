@@ -47,6 +47,7 @@ public class otherusermanager : MonoBehaviour
    public Text LastStage;
    public Text lastlogintext;
    public Text battlePointtext;
+   public Text EquipskillPointtext;
 
    [SerializeField] private equipitemslot[] Equipslots;
    [SerializeField] private Skillslot[] Skillslots;
@@ -221,11 +222,14 @@ public class otherusermanager : MonoBehaviour
                   Equipslots[i].SetItem(PlayerEquip[i], false);
             }
 
-
+            float eskillpoint = 0;
+            string weapontype = EquipItemDB.Instance.Find_id(PlayerEquip[0].Itemid).SubType;
+            
             for (int i = 0; i < Equipslots.Length; i++)
             {
                 if (PlayerEquip[i] != null)
                 {
+                    eskillpoint += equipoptionchanger.Instance.GetEskillPoint(PlayerEquip[i], weapontype);
                     Equipslots[i].SetItem(PlayerEquip[i], false);
                    // CheckSetItem(PlayerEquip, PlayerEquip[i].Itemid, true);
                 }
@@ -234,6 +238,8 @@ public class otherusermanager : MonoBehaviour
                     Equipslots[i].SetItem(); //�������� ǥ��         
                 }
             }
+            EquipskillPointtext.text = eskillpoint.ToString("N0");
+
             PlayerData.Instance.SetAvartaImage(PlayerAvarta,
                SpriteManager.Instance.GetSprite(ClassDB.Instance.Find_id(data["NowClass"]["ClassId1"].ToString())
                   .classsprite));
@@ -631,6 +637,9 @@ public class otherusermanager : MonoBehaviour
                }
                battlePointtext.text = PlayerData.Instance.GetEquipPoint(PlayerEquip).ToString("N0");
 
+               float eskillpoint = 0;
+               string weapontype = EquipItemDB.Instance.Find_id(PlayerEquip[0].Itemid).SubType;
+               
                for (int i = 0; i < Equipslots.Length; i++)
                {
                    if (PlayerEquip[i] != null)
@@ -642,6 +651,7 @@ public class otherusermanager : MonoBehaviour
                {
                    if (PlayerEquip[i] != null)
                    {
+                       eskillpoint += equipoptionchanger.Instance.GetEskillPoint(PlayerEquip[i], weapontype);
                        Equipslots[i].SetItem(PlayerEquip[i], false);
                        // CheckSetItem(PlayerEquip, PlayerEquip[i].Itemid, true);
                    }
@@ -651,7 +661,9 @@ public class otherusermanager : MonoBehaviour
                    }
                }
 
+               EquipskillPointtext.text = eskillpoint.ToString("N0");
 
+               
                PlayerData.Instance.SetAvartaImage(PlayerAvarta,
                    SpriteManager.Instance.GetSprite(ClassDB.Instance
                        .Find_id(data["NowClass_train"]["ClassId1"].ToString())
