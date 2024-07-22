@@ -203,6 +203,11 @@ public class Timemanager : MonoBehaviour
         이벤트방어구강화석4,
         이벤트장신구강화석4,
         새싹보상,
+        주간카르마_보옥,
+        주간카르마_파티레이드,
+        주간카르마_특수재료,
+        주간프상카르마1,
+        주간프상카르마2,
         Length
     }
     public enum ContentEnumMonthly
@@ -512,6 +517,7 @@ public class Timemanager : MonoBehaviour
                            Settingmanager.Instance.RefreshReset();
                            Savemanager.Instance.SaveQuest();
                            Savemanager.Instance.Save();
+                           Settingmanager.Instance.SaveSotangs();
                        }
 
                        Param param = new Param();

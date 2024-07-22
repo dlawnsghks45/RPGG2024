@@ -67,6 +67,11 @@ public class mondropmanager : MonoBehaviour
                 if(monpos != null)
                     ItemDropManager.Instance.SpawnItem(ItemdatabasecsvDB.Instance.Find_id(dropid[i]).sprite,bool.Parse(ItemdatabasecsvDB.Instance.Find_id(dropid[i]).droprare),monpos.position);
 
+                if (ItemdatabasecsvDB.Instance.Find_id(dropid[i]).Alert.Equals("TRUE"))
+                {
+                    chatmanager.Instance.ChattoDropItem(dropid[i]);
+                }
+                
                 switch (MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage).maptype)
                 {
                     case "0":
@@ -155,6 +160,11 @@ public class mondropmanager : MonoBehaviour
             { 
 //                Debug.Log("줬다!");
 
+                if (ItemdatabasecsvDB.Instance.Find_id(dropid[i]).Alert.Equals("TRUE"))
+                {
+                    chatmanager.Instance.ChattoDropItem(dropid[i]);
+                }
+                
                 int Howmany = Random.Range(minhowmany[i], maxhowmany[i]);
                 Inventory.Instance.AddItem(dropid[i], Howmany,false,true);
                 if(monpos != null)
@@ -197,52 +207,134 @@ public class mondropmanager : MonoBehaviour
         }
     }
 
-    
-      public void GiveDropToInvenToryBossPercentUp(Transform monpos,string monid,decimal addper)
+
+    public void GiveDropToInvenToryPercentUp(Transform monpos, string dropid, decimal addper, int killcount = 1,
+        bool issotang = false)
     {
-        if (nowdropbossid is "" or "0")
-            return;
-
-        List<MonDropDB.Row> data = MonDropDB.Instance.FindAll_id(monsterDB.Instance.Find_id(monid).dropid);
-
-        for (int i = 0; i < data.Count; i++)
+        List<MonDropDB.Row> data = MonDropDB.Instance.FindAll_id(dropid);
+        for (int j = 0; j < killcount; j++)
         {
+            for (int i = 0; i < data.Count; i++)
+            {
 
-            decimal howmanycount = bool.Parse(data[i].Ispercent)
-                ? decimal.Parse(data[i].maxhowmany) * addper
-                : decimal.Parse(data[i].maxhowmany);
+                decimal howmanycount = bool.Parse(data[i].Ispercent)
+                    ? decimal.Parse(data[i].maxhowmany) * addper
+                    : decimal.Parse(data[i].maxhowmany);
 
-            float percent = float.Parse(data[i].rate);
+                float percent = float.Parse(data[i].rate);
 
-            decimal minh = decimal.Parse(data[i].minhowmany) * addper;
-            decimal maxh = decimal.Parse(data[i].maxhowmany) * addper;
-            
-            Random.InitState((int)Time.deltaTime + PlayerBackendData.Instance.GetRandomSeed());
-            Ran_rate = Random.Range(0, 1000000);// 1,000,000이 100%이다.
-            if (Ran_rate <= getpercent(percent))
-            { 
-                int Howmany = Random.Range((int)minh,(int)maxh);
-                Inventory.Instance.AddItem(data[i].itemid, Howmany,false,true);
-                if(monpos != null)
-                    ItemDropManager.Instance.SpawnItem(ItemdatabasecsvDB.Instance.Find_id(data[i].itemid).sprite,bool.Parse(ItemdatabasecsvDB.Instance.Find_id(data[i].itemid).droprare),monpos.position);
+                decimal minh = decimal.Parse(data[i].minhowmany) * addper;
+                decimal maxh = decimal.Parse(data[i].maxhowmany) * addper;
 
-                switch (MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage).maptype)
+                Random.InitState((int)Time.deltaTime + PlayerBackendData.Instance.GetRandomSeed());
+                Ran_rate = Random.Range(0, 1000000); // 1,000,000이 100%이다.
+                if (Ran_rate <= getpercent(percent))
                 {
-                    //던전
-                    case "1":
-                        break;
-                    //레이드
-                    case "3":
+                    int Howmany = Random.Range((int)minh, (int)maxh);
+                    Inventory.Instance.AddItem(data[i].itemid, Howmany, false, true);
+                    if (monpos != null)
+                        ItemDropManager.Instance.SpawnItem(ItemdatabasecsvDB.Instance.Find_id(data[i].itemid).sprite,
+                            bool.Parse(ItemdatabasecsvDB.Instance.Find_id(data[i].itemid).droprare), monpos.position);
+
+                    if (issotang)
+                    {
                         RaidManager.Instance.AddLoot(data[i].itemid, Howmany);
-                        break;
-                   
+                    }
+
+                    switch (MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage).maptype)
+                    {
+                        case "0":
+                            if (issotang)
+                            {
+                                // DungeonManager.Instance.AddLoot(dropid[i], Howmany);
+                            }
+                            else
+                            {
+                                mondropmanager.Instance.Dropitem(data[i].itemid, Howmany);
+                            }
+
+                            break;
+                        //던전
+                        case "1":
+                            break;
+                        //레이드
+                        case "3":
+                            RaidManager.Instance.AddLoot(data[i].itemid, Howmany);
+                            break;
+
+                    }
                 }
             }
-            
         }
     }
 
-      
+    public void GiveDropToInvenToryBossPercentUp(Transform monpos, string monid, decimal addper, int killcount = 1,
+        bool issotang = false)
+    {
+        List<MonDropDB.Row> data = MonDropDB.Instance.FindAll_id(monsterDB.Instance.Find_id(monid).dropid);
+        Debug.Log("킬카운트");
+        for (int j = 0; j < killcount; j++)
+        {
+            for (int i = 0; i < data.Count; i++)
+            {
+
+                decimal howmanycount = bool.Parse(data[i].Ispercent)
+                    ? decimal.Parse(data[i].maxhowmany) * addper
+                    : decimal.Parse(data[i].maxhowmany);
+
+                float percent = float.Parse(data[i].rate);
+
+                decimal minh = decimal.Parse(data[i].minhowmany) * addper;
+                decimal maxh = decimal.Parse(data[i].maxhowmany) * addper;
+
+                if (ItemdatabasecsvDB.Instance.Find_id(data[i].id).Alert.Equals("TRUE"))
+                {
+                    chatmanager.Instance.ChattoDropItem(data[i].id);
+                }
+                
+                Random.InitState((int)Time.deltaTime + PlayerBackendData.Instance.GetRandomSeed());
+                Ran_rate = Random.Range(0, 1000000); // 1,000,000이 100%이다.
+                if (Ran_rate <= getpercent(percent))
+                {
+                    int Howmany = Random.Range((int)minh, (int)maxh);
+                    Inventory.Instance.AddItem(data[i].itemid, Howmany, false, true);
+                    if (monpos != null)
+                        ItemDropManager.Instance.SpawnItem(ItemdatabasecsvDB.Instance.Find_id(data[i].itemid).sprite,
+                            bool.Parse(ItemdatabasecsvDB.Instance.Find_id(data[i].itemid).droprare), monpos.position);
+
+                    if (issotang)
+                    {
+                        RaidManager.Instance.AddLoot(data[i].itemid, Howmany);
+                    }
+
+                    switch (MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage).maptype)
+                    {
+                        case "0":
+                            if (issotang)
+                            {
+                                // DungeonManager.Instance.AddLoot(dropid[i], Howmany);
+                            }
+                            else
+                            {
+                                mondropmanager.Instance.Dropitem(data[i].itemid, Howmany);
+                            }
+
+                            break;
+                        //던전
+                        case "1":
+                            break;
+                        //레이드
+                        case "3":
+                            RaidManager.Instance.AddLoot(data[i].itemid, Howmany);
+                            break;
+
+                    }
+                }
+            }
+        }
+    }
+
+
     public void GiveDropToInvenToryBoss(Transform monpos,string maptype,List<string> dropid , List<int>minhowmany,List<int> maxhowmany,List<float> percent,bool issotang =false)
     {
         if (nowdropbossid == "")
@@ -260,6 +352,11 @@ public class mondropmanager : MonoBehaviour
                 if(monpos != null)
                     ItemDropManager.Instance.SpawnItem(ItemdatabasecsvDB.Instance.Find_id(dropid[i]).sprite,bool.Parse(ItemdatabasecsvDB.Instance.Find_id(dropid[i]).droprare),monpos.position);
 
+                if (ItemdatabasecsvDB.Instance.Find_id(dropid[i]).Alert.Equals("TRUE"))
+                {
+                    chatmanager.Instance.ChattoDropItem(dropid[i]);
+                }
+                
                 switch (maptype)
                 {
                     case "0":
@@ -313,8 +410,10 @@ public class mondropmanager : MonoBehaviour
 
     }
     [SerializeField]
-    string nowdropid = "";
-    string nowdropbossid = "";
+    public string nowdropid = "";
+    public string nowdropbossid = "";
+    public string nowmonid = "";
+    public monsterDB.Row mondata;
     public List<string> Mon_DropItemID = new List<string>();
     public List<int> Mon_DropItemMinHowmany = new List<int>();
     public List<int> Mon_DropItemMaxHowmany = new List<int>();
@@ -399,10 +498,10 @@ public class mondropmanager : MonoBehaviour
             return;
         }
         checkDrop = true;
-        
-        nowdropid = monsterDB.Instance.Find_id(MonID.ToString()).dropid;
-        nowdropbossid = monsterDB.Instance.Find_id(MonID.ToString()).bossdrop;
-        
+        nowmonid = MonID;
+        mondata = monsterDB.Instance.Find_id(MonID);
+        nowdropid = mondata.dropid;
+        nowdropbossid = mondata.bossdrop;
       
         Mon_DropItemID.Clear();
         Mon_DropItemMinHowmany.Clear();

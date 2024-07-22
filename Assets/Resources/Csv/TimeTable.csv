@@ -114,10 +114,10 @@ enumname,maxcount,type
 프상마법사입장권패키지1,2,weekly
 프상마법사입장권패키지2,2,weekly
 프상승급석패키지,3,weekly
-프상주간펫패키지1,2,weekly
-프상주간펫패키지2,1,weekly
+프상주간펫패키지1,3,weekly
+프상주간펫패키지2,2,weekly
 파티레이드주간횟수,10,weekly
-프상주간파티레이드충전권,2,weekly
+프상주간파티레이드충전권,5,weekly
 이벤트등급재설정3,30,weekly
 이벤트품질재설정3,30,weekly
 이벤트특효재설정3,30,weekly
@@ -131,3 +131,8 @@ enumname,maxcount,type
 이벤트방어구강화석4,20,weekly
 이벤트장신구강화석4,20,weekly
 새싹보상,30,weekly
+주간카르마_보옥,2,weekly
+주간카르마_파티레이드,5,weekly
+주간카르마_특수재료,10,weekly
+주간프상카르마1,3,weekly
+주간프상카르마2,2,weekly

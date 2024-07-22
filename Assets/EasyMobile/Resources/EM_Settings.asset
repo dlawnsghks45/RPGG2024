@@ -1136,6 +1136,20 @@ MonoBehaviour:
       _description: 
       _storeSpecificIds: []
       _isEditingAdvanced: 0
+    - _name: rpgg2.packagekarma.1
+      _type: 0
+      _id: rpgg2.packagekarma.1
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
+    - _name: rpgg2.packagekarma.2
+      _type: 0
+      _id: rpgg2.packagekarma.2
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
   mNotificationSettings:
     mAutoInit: 1
     mAutoInitDelay: 0

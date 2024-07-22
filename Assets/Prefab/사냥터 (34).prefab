@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1336854214}
   - component: {fileID: 1336854213}
   - component: {fileID: 1336854212}
+  - component: {fileID: 5306172132192478321}
   m_Layer: 5
   m_Name: "\uC0AC\uB0E5\uD130\uC774\uB984 (2)"
   m_TagString: Untagged
@@ -94,6 +95,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
+--- !u!114 &5306172132192478321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336854209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
 --- !u!1 &439613691804617461
@@ -434,6 +450,7 @@ GameObject:
   - component: {fileID: 8158311052607040529}
   - component: {fileID: 8158311052607040528}
   - component: {fileID: 8158311052607040531}
+  - component: {fileID: 1659619585923868206}
   m_Layer: 5
   m_Name: "\uC0AC\uB0E5\uD130\uC774\uB984"
   m_TagString: Untagged
@@ -518,6 +535,21 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!114 &1659619585923868206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8158311052607040525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &8158311054046025042
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,7 +625,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1.69
+  m_PixelsPerUnitMultiplier: 1.01
 --- !u!1 &8158311054231158828
 GameObject:
   m_ObjectHideFlags: 0

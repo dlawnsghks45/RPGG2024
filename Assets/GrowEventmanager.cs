@@ -39,6 +39,10 @@ public class GrowEventmanager : MonoBehaviour
    public GameObject[] Recomend_WeaponMagic;
    public void Bt_ShowPanel()
    {
+      if (PlayerBackendData.Instance.GetLv() >= 1500)
+         return;
+      
+      
       //직업 계산
       GrowChoicePanel.Show(false);
 

@@ -12,7 +12,7 @@ ids,namedes,infodes,name,info,items,howmanys,sprite,productid,price,producttype,
 1011, ★1 신의 증표, ★1 신의 증표,Shopname/1011,Shopinfo/1011,4000;1003,1;11,Item/ETC/goldsafe2,rpgg2.class1,1100,all,,FALSE
 1012, ★2 신의 증표, ★2 신의 증표,Shopname/1012,Shopinfo/1012,4001;1003,1;22,Item/ETC/goldsafe2,rpgg2.class2,2200,all,,FALSE
 1013, ★3 신의 증표, ★3 신의 증표,Shopname/1013,Shopinfo/1013,4002;1003,1;33,Item/ETC/goldsafe2,rpgg2.class3,3300,all,,FALSE
-1014,, ★4 신의 증표,Shopname/1014,Shopinfo/1014,4003;1003,1;55,Item/ETC/goldsafe2,rpgg2.class4,5500,all,,FALSE
+1014, ★4 신의 증표, ★4 신의 증표,Shopname/1014,Shopinfo/1014,4003;1003,1;55,Item/ETC/goldsafe2,rpgg2.class4,5500,all,,FALSE
 1015, ★5 신의 증표, ★5 신의 증표,Shopname/1015,Shopinfo/1015,4004;1003,1;110,Item/ETC/goldsafe2,rpgg2.class5,11000,all,,FALSE
 1016, ★6 신의 증표, ★6 신의 증표,Shopname/1016,Shopinfo/1016,4005;1003,1;220,Item/ETC/goldsafe2,rpgg2.class6,22000,all,,FALSE
 ,,,,,,,,,,,,
@@ -169,12 +169,11 @@ T10 무기
 1113,시즌2 스타터 팩1,시즌2 스타터 팩,Shopname/1113,Shopinfo/1113,592;51;50000,1;1;150,Item/Consume/Box/chest_2,rpgg2.package2024.starter1,5500,one,,TRUE
 1114,시즌2 스타터 팩2,시즌2 스타터 팩,Shopname/1114,Shopinfo/1114,592;50001;99001;1711;200000;1750,1;300;400;300;100;80,Item/Consume/Box/chest_3,rpgg2.package2024.starter2,11000,one,,TRUE
 1115,시즌2 스타터 팩3,시즌2 스타터 팩,Shopname/1115,Shopinfo/1115,592;4006;587;40005;50005;50002;50003;50004,2;1;1;5;500;200;300;200,Item/Consume/Box/chest_4,rpgg2.package2024.starter3,33000,one,,TRUE
-1116,올인원 스타터 패키지,올인원 스타터 패키지,Shopname/1116,Shopinfo/1116,,,,rpgg2.package2024.allstarter1,110000,one,,TRUE
-,,,,,,,,,,,,
-,,,,,,,,,,,,
-,,,,,,,,,,,,
-,,,,,,,,,,,,
-,,펫,,,,,,,,,,
-,,강화석3종,,,,,,,,,,
-,,가루,,,,,,,,,,
-,,7차,,,,,,,,,,
+1116,올인원 스타터 패키지,올인원 스타터 패키지,Shopname/1116,Shopinfo/1116,1001;568;569;570;571;587;50002;50003;50004;50005;4006;532;533;534;40005;30;1003,100000;1;1;4;2;1;1000;1000;1000;300;1;2;2;2;20;20;990,Item/Consume/Box/드래곤체스트,rpgg2.all.package2,99000,one,,TRUE
+1117,지나간 이벤트 위장 패키지,크리스마스 위장 패키지,Shopname/1084,Shopinfo/1084,50006;40014;40015;1003,20;1;1;330,Transform/산타,rpgg2.package2023.ch4,33000,one,,TRUE
+1118,지나간 이벤트 위장 패키지,설날 위장 패키지,Shopname/1085,Shopinfo/1085,50006;40016;40018;1003,20;1;1;330,Transform/대장군,rpgg2.package2024.ny1,33000,one,,TRUE
+1119,지나간 이벤트 위장 패키지,불의 축제 위장 패키지,Shopname/1092,Shopinfo/1092,50006;40020;40021;1003,20;1;1;330,Transform/디아블로,rpgg2.package2024.fire1,33000,one,,TRUE
+1120,지나간 이벤트 위장 패키지,[올림푸스]제우스 위장 세트 패키지,Shopname/1103,Shopinfo/1103,50006;40025;40026;1003;100018,20;1;1;330,Transform/제우스,rpgg2.package2024.event1,33000,one,,TRUE
+1121,지나간 이벤트 위장 패키지,[여름2024]서핑 위장 세트 패키지,Shopname/1108,Shopinfo/1108,50006;40028;1003;100021,20;1;330,Transform/서핑,rpgg2.package2024.6.event1,22000,one,,TRUE
+1122,[주간]카르마 패키지Ⅰ,카르마 15000개,Shopname/1122,Shopinfo/1122,3015;1003,30000;110,Item/ETC2/c7524,rpgg2.packagekarma.1,11000,weekly,주간프상카르마1,TRUE
+1123,[주간]카르마 패키지Ⅱ,카르마 55000개,Shopname/1123,Shopinfo/1123,3015;1003,100000;330,Item/ETC2/c7524,rpgg2.packagekarma.2,33000,weekly,주간프상카르마2,TRUE

@@ -555,16 +555,16 @@ public class Settingmanager : MonoBehaviour
     public void SaveDataALl(bool issettingsave =false,bool isexit = false,bool ischange = false)
     {
         Savemanager.Instance.SaveEvery();
-        Debug.Log("여기");
+       // Debug.Log("여기");
         if (!CheckServerOn())
         {
             SaveDataALl(issettingsave, isexit);
-            Debug.Log("여기");
+        //    Debug.Log("여기");
             return;
         }
         if (PlayerBackendData.Instance.ServerLv > PlayerBackendData.Instance.GetLv())
         {
-            Debug.Log("여기2");
+//            Debug.Log("여기2");
             return;
         }
         
@@ -1482,12 +1482,12 @@ public class Settingmanager : MonoBehaviour
         {
             return;
         }
-        
+        /*
         if (PlayerBackendData.Instance.ServerLv > PlayerBackendData.Instance.GetLv())
         {
             return;
         }
-
+*/
         if (Timemanager.Instance.isstop)
         {
             return;
@@ -1510,11 +1510,11 @@ public class Settingmanager : MonoBehaviour
                 if (data.ContainsKey("OfflineTime"))
                 {
                     nowtimeNow = Timemanager.Instance.GetServerTime();
-                    DateTime datetime = System.DateTime.Parse(data["OfflineTime"].ToString());
+                    DateTime datetime = TimeZoneInfo.ConvertTimeToUtc(DateTime.Parse(data["OfflineTime"].ToString()));
                     TimeSpan dateDiff = nowtimeNow - datetime;
-//                    Debug.Log(nowtimeNow);
-               //    Debug.Log(datetime);
-//                    Debug.Log("총안들어온 시간" +  dateDiff.TotalSeconds);
+                    Debug.Log(nowtimeNow);
+                    Debug.Log(datetime);
+                    Debug.Log("총안들어온 시간" +  dateDiff.TotalSeconds);
 
                     if (PlayerBackendData.Instance.Offlinedata != null)
                     {

@@ -786,4 +786,15 @@ public class LogManager : MonoBehaviour
             }
         });
     } 
+    
+    public static void CrystalHack(decimal count)
+    {
+        Param param = new Param();
+        param.Add("农府胶呕", count);
+
+        SendQueue.Enqueue(Backend.GameLog.InsertLogV2, "农府胶呕琴荤侩", param, (callback) =>
+        {
+            // 捞饶 贸府
+        });
+    }
 }

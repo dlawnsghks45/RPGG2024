@@ -5,11 +5,11 @@ A2002,2,문어 전사,모든 능력치 +4%,Avartaname/2002,,AvartaGetinfo/2002,A
 A2003,3,문어 마법사,모든 능력치 +4%,Avartaname/2003,,AvartaGetinfo/2003,A,Transform/문어마법사,,allstat,0.04,0,Avartainfo/2002,5,TRUE,crystal,20000,FALSE
 A2004,4,독문어,모든 능력치 +4%,Avartaname/2004,,AvartaGetinfo/2004,A,Transform/독문어,,allstat,0.04,0,Avartainfo/2002,5,TRUE,crystal,20000,FALSE
 A2005,5,문어왕,모든 능력치 +7%,Avartaname/2005,,AvartaGetinfo/2005,A,Transform/문어왕 - 복사본,,allstat,0.07,0,Avartainfo/2005,6,TRUE,crystal,35000,FALSE
-A2006,6,크리스마스 위장,경험치 획득량 증가 +10%,Avartaname/2006,,AvartaGetinfo/2006,A,Transform/산타,,exp,0.1,0,Avartainfo/2006,6,TRUE,item,,FALSE
-A2007,7,크리스마스 무기,골드 획득량 증가 +15%,Avartaname/2007,,AvartaGetinfo/2007,W,Item/Event/크리스마스/무기_산타무기_장착,,gold,0.15,0,Avartainfo/2007,6,TRUE,item,,FALSE
-A2008,8,설날위장구매(대장군),경험치 획득량 증가 +10%,Avartaname/2008,,AvartaGetinfo/2008,A,Transform/대장군,,exp,0.1,0,Avartainfo/2006,6,TRUE,item,,FALSE
-A2009,9,설날위장이벤트(사또),경험치 획득량 증가 +5%,Avartaname/2009,,AvartaGetinfo/2009,A,Transform/사또,,exp,0.05,0,Avartainfo/2006,5,TRUE,item,,FALSE
-A2010,10,망령기사,경험치 획득량 증가 +5%,Avartaname/2010,,AvartaGetinfo/2010,A,Transform/망령기사,,exp,0.1,0,Avartainfo/2006,6,TRUE,item,,FALSE
+A2006,6,크리스마스 위장,경험치 획득량 증가 +10%,Avartaname/2006,,AvartaGetinfo/2006,A,Transform/산타,,exp,0.25,0,Avartainfo/2006,6,TRUE,item,,FALSE
+A2007,7,크리스마스 무기,골드 획득량 증가 +15%,Avartaname/2007,,AvartaGetinfo/2007,W,Item/Event/크리스마스/무기_산타무기_장착,,gold,0.25,0,Avartainfo/2007,6,TRUE,item,,FALSE
+A2008,8,설날위장구매(대장군),경험치 획득량 증가 +10%,Avartaname/2008,,AvartaGetinfo/2008,A,Transform/대장군,,exp,0.25,0,Avartainfo/2006,6,TRUE,item,,FALSE
+A2009,9,설날위장이벤트(사또),경험치 획득량 증가 +5%,Avartaname/2009,,AvartaGetinfo/2009,A,Transform/사또,,exp,0.25,0,Avartainfo/2006,5,TRUE,item,,FALSE
+A2010,10,망령기사,경험치 획득량 증가 +5%,Avartaname/2010,,AvartaGetinfo/2010,A,Transform/망령기사,,exp,0.25,0,Avartainfo/2006,6,TRUE,item,,FALSE
 A2011,11,호박기사,경험치 획득량 증가 +5%,Avartaname/2011,,AvartaGetinfo/2011,A,Transform/호박기사1,,exp,0.05,0,Avartainfo/2006,5,TRUE,item,,FALSE
 A2012,12,화이트슈트,경험치 획득량 증가 +5%,Avartaname/2012,,AvartaGetinfo/2000,A,Transform/화이트슈트,,allstat,0.04,0,Avartainfo/2002,5,TRUE,crystal,20000,FALSE
 A2013,13,카타나,,Avartaname/2013,,AvartaGetinfo/2000,W,위장/무기위장/0,,allstat,0.02,0,Avartainfo/2000,5,TRUE,crystal,10000,FALSE
@@ -48,14 +48,14 @@ A2045,45,루비 지팡이,,Avartaname/2045,,AvartaGetinfo/2000,W,위장/무기�
 A2046,46,다크 글레이브,,Avartaname/2046,,AvartaGetinfo/2000,W,위장/무기위장/33,,allstat,0.02,0,Avartainfo/2000,5,TRUE,crystal,10000,FALSE
 A2047,47,곡괭이,,Avartaname/2047,,AvartaGetinfo/2000,W,위장/무기위장/34,,allstat,0.02,0,Avartainfo/2000,5,TRUE,crystal,10000,FALSE
 A2048,48,기습단검,,Avartaname/2048,,AvartaGetinfo/2000,W,위장/무기위장/35,,allstat,0.02,0,Avartainfo/2000,5,TRUE,crystal,10000,FALSE
-A2049,49,월도,,Avartaname/2049,,AvartaGetinfo/2008,W,위장/무기위장/36,,gold,0.15,0,Avartainfo/2007,6,TRUE,item,,FALSE
-A2050,50,디아블로,불의 축제 이벤트,Avartaname/2050,,AvartaGetinfo/2012,A,Transform/디아블로,,exp,0.1,0,Avartainfo/2006,6,TRUE,item,,FALSE
-A2051,51,겁화,,Avartaname/2051,,AvartaGetinfo/2012,W,위장/무기위장/37,,gold,0.15,0,Avartainfo/2007,6,TRUE,item,,FALSE
-A2052,52,프리미엄 위장,바이킹,Avartaname/2052,,AvartaGetinfo/2013,A,Transform/바이킹,,expdmg,0.25,0.03,Avartainfo/2010,7,TRUE,item,,FALSE
-A2053,53,프리미엄 위장 무기,황금검,Avartaname/2053,,AvartaGetinfo/2013,W,위장/무기위장/38,,golddmg,0.25,0.03,Avartainfo/2011,7,TRUE,item,,FALSE
-A2054,54,양날 파괴  도끼,시즌4 패키지,Avartaname/2054,,AvartaGetinfo/2011,W,위장/무기위장/39,,gold,0.15,0,Avartainfo/2007,6,TRUE,item,,FALSE
-A2055,55,제우스,올림푸스 이벤트,Avartaname/2055,,AvartaGetinfo/2014,A,Transform/제우스,,exp,0.1,0,Avartainfo/2006,6,TRUE,item,,FALSE
-A2056,56,제우스의 번개,올림푸스 이벤트,Avartaname/2056,,AvartaGetinfo/2014,W,위장/무기위장/40,,gold,0.15,0,Avartainfo/2007,6,TRUE,item,,FALSE
-A2057,57,양날 파괴  도끼,시즌5패키지,Avartaname/2057,,AvartaGetinfo/2015,W,위장/무기위장/41,,gold,0.15,0,Avartainfo/2007,6,TRUE,item,,FALSE
-A2058,58,서핑,여름 이벤트,Avartaname/2058,,AvartaGetinfo/2016,A,Transform/서핑,,exp,0.1,0,Avartainfo/2012,6,TRUE,item,,TRUE
-A2059,59,트리슈라,시즌6패키지,Avartaname/2059,,AvartaGetinfo/2017,W,위장/무기위장/42,,gold,0.15,0,Avartainfo/2007,6,TRUE,item,,FALSE
+A2049,49,월도,,Avartaname/2049,,AvartaGetinfo/2008,W,위장/무기위장/36,,gold,0.25,0,Avartainfo/2007,6,TRUE,item,,FALSE
+A2050,50,디아블로,불의 축제 이벤트,Avartaname/2050,,AvartaGetinfo/2012,A,Transform/디아블로,,exp,0.25,0,Avartainfo/2006,6,TRUE,item,,FALSE
+A2051,51,겁화,,Avartaname/2051,,AvartaGetinfo/2012,W,위장/무기위장/37,,gold,0.25,0,Avartainfo/2007,6,TRUE,item,,FALSE
+A2052,52,프리미엄 위장,바이킹,Avartaname/2052,,AvartaGetinfo/2013,A,Transform/바이킹,,expdmg,0.5,0.03,Avartainfo/2010,7,TRUE,item,,FALSE
+A2053,53,프리미엄 위장 무기,황금검,Avartaname/2053,,AvartaGetinfo/2013,W,위장/무기위장/38,,golddmg,0.5,0.03,Avartainfo/2011,7,TRUE,item,,FALSE
+A2054,54,양날 파괴  도끼,시즌4 패키지,Avartaname/2054,,AvartaGetinfo/2011,W,위장/무기위장/39,,gold,0.25,0,Avartainfo/2007,6,TRUE,item,,FALSE
+A2055,55,제우스,올림푸스 이벤트,Avartaname/2055,,AvartaGetinfo/2014,A,Transform/제우스,,exp,0.25,0,Avartainfo/2006,6,TRUE,item,,FALSE
+A2056,56,제우스의 번개,올림푸스 이벤트,Avartaname/2056,,AvartaGetinfo/2014,W,위장/무기위장/40,,gold,0.25,0,Avartainfo/2007,6,TRUE,item,,FALSE
+A2057,57,양날 파괴  도끼,시즌5패키지,Avartaname/2057,,AvartaGetinfo/2015,W,위장/무기위장/41,,gold,0.25,0,Avartainfo/2007,6,TRUE,item,,FALSE
+A2058,58,서핑,여름 이벤트,Avartaname/2058,,AvartaGetinfo/2016,A,Transform/서핑,,exp,0.25,0,Avartainfo/2012,6,TRUE,item,,TRUE
+A2059,59,트리슈라,시즌6패키지,Avartaname/2059,,AvartaGetinfo/2017,W,위장/무기위장/42,,gold,0.25,0,Avartainfo/2007,6,TRUE,item,,FALSE

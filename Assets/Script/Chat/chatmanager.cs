@@ -241,6 +241,18 @@ public class chatmanager : MonoBehaviour
                                     Inventory.GetTranslate(PetDB.Instance.Find_id(stringdata[4])
                                         .name)), false);
                             break;
+                        case "DROPI":
+                            //$"{publicsystem};DROPI;{PlayerBackendData.Instance.nickname};{itemid}");
+//                            Debug.Log(stringdata[3]);
+                        //    Debug.Log(stringdata[2]);
+                        //    Debug.Log(Inventory.GetTranslate("UI6/채팅_아이템나옴"));
+                            ItemdatabasecsvDB.Row itemdata = ItemdatabasecsvDB.Instance.Find_id(stringdata[3]);
+                            ShowSystemChat(args.From.NickName,
+                                string.Format(Inventory.GetTranslate("UI6/채팅_아이템나옴"),
+                                    stringdata[2], //이름
+                                    Inventory.Instance.GetRareColorFF(itemdata.rare)
+                                    ,Inventory.GetTranslate(itemdata.name)), false);
+                            break;
                         case "RAREUP":
                             ShowSystemChat(args.From.NickName,
                                 string.Format(Inventory.GetTranslate("UI7/샤이닝등급성공"),
@@ -1203,8 +1215,17 @@ public class chatmanager : MonoBehaviour
                                             , Inventory.Instance.GetRareColorFF(stringdata[3]),
                                             Inventory.GetTranslate(PetDB.Instance.Find_id(stringdata[4])
                                                 .name)), false);
-                              //      Debug.Log("call5");
-
+                                    break;
+                                case "DROPI":
+                                  //  Debug.Log(stringdata[3]);
+                                 //   Debug.Log(stringdata[2]);
+                                 //   Debug.Log(Inventory.GetTranslate("UI6/채팅_아이템나옴"));
+                                    ItemdatabasecsvDB.Row itemdata = ItemdatabasecsvDB.Instance.Find_id(stringdata[3]);
+                                    ShowSystemChat(nickname,
+                                        string.Format(Inventory.GetTranslate("UI6/채팅_아이템나옴"),
+                                            stringdata[2], //이름
+                                            Inventory.Instance.GetRareColorFF(itemdata.rare)
+                                            ,Inventory.GetTranslate(itemdata.name)), false);
                                     break;
                                 case "RAREUP":
                                     ShowSystemChat(nickname,
@@ -1322,6 +1343,21 @@ public class chatmanager : MonoBehaviour
             //시스템이다 / 닉네임 /강퇴처리한다.
             Backend.Chat.ChatToChannel(ChannelType.Public,
                 $"{publicsystem};EUP;{PlayerBackendData.Instance.nickname};{rare};{itemid};{Upgradecount}");
+        }
+    }
+    
+    public void ChattoDropItem(string itemid)
+    {
+        bool isConnect = Backend.Chat.IsChatConnect(ChannelType.Public);
+        if (isConnect)
+        {
+//            Debug.Log("여기입니다");
+            //Debug.Log("길드 채널에 연결되어 있습니다");
+            //withdraw
+            //시스템이다 / 닉네임 /강퇴처리한다.
+//            Debug.Log("드랍" + itemid);
+            Backend.Chat.ChatToChannel(ChannelType.Public,
+                $"{publicsystem};DROPI;{PlayerBackendData.Instance.nickname};{itemid}");
         }
     }
     

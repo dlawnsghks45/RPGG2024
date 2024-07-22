@@ -57,6 +57,7 @@ public class ItemdatabasecsvDB : MonoBehaviour
 		public string Isstack;
 		public string IsCrafting;
 		public string IsEquipBox;
+		public string Alert;
 
 	}
 
@@ -101,6 +102,7 @@ public class ItemdatabasecsvDB : MonoBehaviour
 			row.Isstack = grid[i][18];
 			row.IsCrafting = grid[i][19];
 			row.IsEquipBox = grid[i][20];
+			row.Alert = grid[i][21];
 
 			rowList.Add(row);
 		}
@@ -286,6 +288,14 @@ public class ItemdatabasecsvDB : MonoBehaviour
 	public List<Row> FindAll_IsEquipBox(string find)
 	{
 		return rowList.FindAll(x => x.IsEquipBox == find);
+	}
+	public Row Find_Alert(string find)
+	{
+		return rowList.Find(x => x.Alert == find);
+	}
+	public List<Row> FindAll_Alert(string find)
+	{
+		return rowList.FindAll(x => x.Alert == find);
 	}
 
 }

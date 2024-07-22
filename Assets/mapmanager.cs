@@ -820,6 +820,7 @@ public class mapmanager : MonoBehaviour
     [SerializeField] private Transform field_nightmare;
     [SerializeField] private Transform field_hell;
     [SerializeField] private Transform field_hell2;
+    [SerializeField] private Transform field_hell3;
     [SerializeField] private stageslot stageobj;
     void Initmapdata()
     {
@@ -850,6 +851,12 @@ public class mapmanager : MonoBehaviour
             if (data.maparray.Equals("지옥사냥터2"))
             {
                 stageslot slot = Instantiate(stageobj, field_hell2);
+                slot.Refresh(data.id);
+                slot.gameObject.SetActive(true);
+            }
+            if (data.maparray.Equals("지옥사냥터3"))
+            {
+                stageslot slot = Instantiate(stageobj, field_hell3);
                 slot.Refresh(data.id);
                 slot.gameObject.SetActive(true);
             }
@@ -903,10 +910,7 @@ public class mapmanager : MonoBehaviour
             Boss_FieldMonDropItem[i].gameObject.SetActive(true);
         }
         mapmanager.Instance.FieldCountLv[PlayerBackendData.Instance.spawncount - 1].isOn = true;
-
         dropItemPanel_Field.Show(true);
-        
-        
         Autofarmmanager.Instance.Bt_RefreshOfflineData();
     }
 

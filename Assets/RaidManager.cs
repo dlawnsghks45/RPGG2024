@@ -219,8 +219,6 @@ public class RaidManager : MonoBehaviour
 
     public void Bt_StartFinishSotang()
     {
-       
-        
         dungeondropsid.Clear();
         dungeondropshowmany.Clear();
         MapDB.Row mapdata_Now = MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage);
@@ -256,11 +254,10 @@ public class RaidManager : MonoBehaviour
             StartCoroutine(FinishRaidReward2());
         }
     }
-    
-    
     // ReSharper disable Unity.PerformanceAnalysis
     private IEnumerator FinishRaidReward()
     {
+        Debug.Log(raidmonsterid);
         RaidFinishText.text = string.Format(Inventory.GetTranslate("UI/레이드토벌완료"),
             Inventory.GetTranslate(monsterDB.Instance.Find_id(raidmonsterid).name));
         monsterimage_raidfinish.sprite =
@@ -272,8 +269,6 @@ public class RaidManager : MonoBehaviour
             t.canvas.alpha =0;
             t.canvas.interactable =false;
         }
-
-        
        // achievemanager.Instance.AddCount(Acheves.레이드격파, 1);
         QuestManager.Instance.AddCount(1, "singleraid");
 
@@ -296,8 +291,9 @@ public class RaidManager : MonoBehaviour
     }
 
     // ReSharper disable Unity.PerformanceAnalysis
-    private IEnumerator FinishRaidReward2()
+    public IEnumerator FinishRaidReward2()
     {
+        Debug.Log(raidmonsterid);
         RaidFinishText.text = string.Format(Inventory.GetTranslate("UI/레이드토벌완료"),
             Inventory.GetTranslate(monsterDB.Instance.Find_id(raidmonsterid).name));
         monsterimage_raidfinish.sprite =
@@ -349,7 +345,7 @@ public class RaidManager : MonoBehaviour
 
 
 
-    void GiveDropToInvenToryBoss(List<string> dropid, List<int> minhowmany, List<int> maxhowmany,
+    public void GiveDropToInvenToryBoss(List<string> dropid, List<int> minhowmany, List<int> maxhowmany,
         List<int> percent)
     {
         for (int j = 0; j < sotangcount; j++)

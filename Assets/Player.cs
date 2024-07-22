@@ -369,31 +369,31 @@ public class Player : MonoBehaviour
                 switch (data2.SubType)
                 {
                     case "Physic":
-                        equipskillmanager.Instance.SetStats(
+                        equipskillmanager.Instance.SetStats2(
                             (int)equipskillmanager.EquipStatFloat.thundersmash,
                             float.Parse(skilldata.c));
-                        equipskillmanager.Instance.SetStats(
+                        equipskillmanager.Instance.SetStats2(
                             (int)equipskillmanager.EquipStatFloat.thundersmashhitper,
                             float.Parse(skilldata.A));
-                        equipskillmanager.Instance.SetStats(
+                        equipskillmanager.Instance.SetStats2(
                             (int)equipskillmanager.EquipStatFloat.thundersmashrare,
                             float.Parse(skilldata.rare));
-                        equipskillmanager.Instance.SetStats(
+                        equipskillmanager.Instance.SetStats2(
                             (int)equipskillmanager.EquipStatFloat.thundersmashlv,
                             float.Parse(skilldata.lv));
                         break;
                     case "Magic":
                     case "Dot":
-                        equipskillmanager.Instance.SetStats(
+                        equipskillmanager.Instance.SetStats2(
                             (int)equipskillmanager.EquipStatFloat.explosion,
                             float.Parse(skilldata.value));
-                        equipskillmanager.Instance.SetStats(
+                        equipskillmanager.Instance.SetStats2(
                             (int)equipskillmanager.EquipStatFloat.explosionhitper,
                             float.Parse(skilldata.probability));
-                        equipskillmanager.Instance.SetStats(
+                        equipskillmanager.Instance.SetStats2(
                             (int)equipskillmanager.EquipStatFloat.explosionrare,
                             float.Parse(skilldata.rare));
-                        equipskillmanager.Instance.SetStats(
+                        equipskillmanager.Instance.SetStats2(
                             (int)equipskillmanager.EquipStatFloat.explosionlv,
                             float.Parse(skilldata.lv));
                         break;
@@ -475,31 +475,31 @@ public class Player : MonoBehaviour
                 switch (data2.SubType)
                 {
                     case "Physic":
-                        equipskillmanager.Instance.SetStats(
+                        equipskillmanager.Instance.SetStats2(
                             (int)equipskillmanager.EquipStatFloat.thundersmash,
                             float.Parse(skilldata.c));
-                        equipskillmanager.Instance.SetStats(
+                        equipskillmanager.Instance.SetStats2(
                             (int)equipskillmanager.EquipStatFloat.thundersmashhitper,
                             float.Parse(skilldata.A));
-                        equipskillmanager.Instance.SetStats(
+                        equipskillmanager.Instance.SetStats2(
                             (int)equipskillmanager.EquipStatFloat.thundersmashrare,
                             float.Parse(skilldata.rare));
-                        equipskillmanager.Instance.SetStats(
+                        equipskillmanager.Instance.SetStats2(
                             (int)equipskillmanager.EquipStatFloat.thundersmashlv,
                             float.Parse(skilldata.lv));
                         break;
                     case "Magic":
                     case "Dot":
-                        equipskillmanager.Instance.SetStats(
+                        equipskillmanager.Instance.SetStats2(
                             (int)equipskillmanager.EquipStatFloat.explosion,
                             float.Parse(skilldata.value));
-                        equipskillmanager.Instance.SetStats(
+                        equipskillmanager.Instance.SetStats2(
                             (int)equipskillmanager.EquipStatFloat.explosionhitper,
                             float.Parse(skilldata.probability));
-                        equipskillmanager.Instance.SetStats(
+                        equipskillmanager.Instance.SetStats2(
                             (int)equipskillmanager.EquipStatFloat.explosionrare,
                             float.Parse(skilldata.rare));
-                        equipskillmanager.Instance.SetStats(
+                        equipskillmanager.Instance.SetStats2(
                             (int)equipskillmanager.EquipStatFloat.explosionlv,
                             float.Parse(skilldata.lv));
                         break;
@@ -1030,9 +1030,15 @@ public class Player : MonoBehaviour
              
                 break;
             case "1327": //드래곤 애로우
-                equipskillmanager.Instance.SetStats(
-                    (int)equipskillmanager.EquipStatFloat.E6160,
-                    float.Parse(skilldata.value));
+                
+                if (equipskillmanager.Instance.GetStats((int)equipskillmanager.EquipStatFloat.E6143) >
+                    0)
+                {
+                    equipskillmanager.Instance.SetStats(
+                        (int)equipskillmanager.EquipStatFloat.E6160,
+                        float.Parse(skilldata.value));
+                    Battlemanager.Instance.mainplayer.buffmanager.SetEquipSkills(data.id, 25);
+                }
                 break;
 
 

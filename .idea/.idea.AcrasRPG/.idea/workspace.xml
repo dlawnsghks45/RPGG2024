@@ -6,46 +6,205 @@
   <component name="ChangeListManager">
     <list default="true" id="026fe4cd-66d7-4da1-a1b1-1a7d0490dfd5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AcrasRPG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AcrasRPG/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Armory/Spritesheets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Armory/Spritesheets/Item_Sheet_Armor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Armory/Spritesheets/Item_Sheet_Armor.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Armory/Spritesheets/Item_Sheet_Weapons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Armory/Spritesheets/Item_Sheet_Weapons.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Aviary/Bird Names.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Aviary/Bird Names.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Aviary/Spritesheets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Aviary/Spritesheets/Item_Sheet_Aviary.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Aviary/Spritesheets/Item_Sheet_Aviary.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Botany/Spritesheet.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Botany/Spritesheet/Botany Names.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Botany/Spritesheet/Botany Names.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Botany/Spritesheet/Item_Sheet_Botany.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Botany/Spritesheet/Item_Sheet_Botany.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Clothes/Spritesheets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Clothes/Spritesheets/Item_Sheet_Capes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Clothes/Spritesheets/Item_Sheet_Capes.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Clothes/Spritesheets/Item_Sheet_Capes_Wool_Brown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Clothes/Spritesheets/Item_Sheet_Capes_Wool_Brown.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Clothes/Spritesheets/Item_Sheet_Capes_Wool_Pink.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Clothes/Spritesheets/Item_Sheet_Capes_Wool_Pink.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Clothes/Spritesheets/Item_Sheet_Clothes_Leather_Black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Clothes/Spritesheets/Item_Sheet_Clothes_Leather_Black.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Clothes/Spritesheets/Item_Sheet_Clothes_Leather_Brown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Clothes/Spritesheets/Item_Sheet_Clothes_Leather_Brown.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Clothes/Spritesheets/Item_Sheet_Clothes_Leather_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Clothes/Spritesheets/Item_Sheet_Clothes_Leather_Dark.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Clothes/Spritesheets/Item_Sheet_Wool_White.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Clothes/Spritesheets/Item_Sheet_Wool_White.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Emoticons/Spritesheets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Emoticons/Spritesheets/Item_Sheet_Emoticons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Emoticons/Spritesheets/Item_Sheet_Emoticons.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Fishing/Spritesheets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Fishing/Spritesheets/Fish Names.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Fishing/Spritesheets/Fish Names.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Fishing/Spritesheets/Item_Sheet_Fishing.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Fishing/Spritesheets/Item_Sheet_Fishing.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Flowers/Spritesheets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Flowers/Spritesheets/Flower Names.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Flowers/Spritesheets/Flower Names.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Flowers/Spritesheets/Item_Sheet_Flowers.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Flowers/Spritesheets/Item_Sheet_Flowers.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Gems/Spritesheets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Gems/Spritesheets/Item_Sheet_Gems.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Gems/Spritesheets/Item_Sheet_Gems.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/General/Spritesheets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/General/Spritesheets/Item_Sheet_General.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/General/Spritesheets/Item_Sheet_General.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Holidays/Christmas/Spritesheets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Holidays/Christmas/Spritesheets/Item_Sheet_Christmas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Holidays/Christmas/Spritesheets/Item_Sheet_Christmas.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Holidays/Halloween/Spritesheets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Holidays/Halloween/Spritesheets/Item_Sheet_Halloween.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Holidays/Halloween/Spritesheets/Item_Sheet_Halloween.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Holidays/St. Patricks/Spritesheet.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Holidays/St. Patricks/Spritesheet/Item_Sheet_StPatricks.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Holidays/St. Patricks/Spritesheet/Item_Sheet_StPatricks.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Insects/Spritesheets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Insects/Spritesheets/Insect Names.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Insects/Spritesheets/Insect Names.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Insects/Spritesheets/Item_Sheet_Insects.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Insects/Spritesheets/Item_Sheet_Insects.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Bracelets/Spritesheets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Bracelets/Spritesheets/Item_Spritesheet_Bracelets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Bracelets/Spritesheets/Item_Spritesheet_Bracelets.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Necklaces/Spritesheets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Necklaces/Spritesheets/Item_Sheet_Necklaces_Original.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Necklaces/Spritesheets/Item_Sheet_Necklaces_Original.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Necklaces/Spritesheets/Variants.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Necklaces/Spritesheets/Variants/Item_Sheet_Necklaces_Adamantine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Necklaces/Spritesheets/Variants/Item_Sheet_Necklaces_Adamantine.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Necklaces/Spritesheets/Variants/Item_Sheet_Necklaces_Angelic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Necklaces/Spritesheets/Variants/Item_Sheet_Necklaces_Angelic.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Necklaces/Spritesheets/Variants/Item_Sheet_Necklaces_Cobalt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Necklaces/Spritesheets/Variants/Item_Sheet_Necklaces_Cobalt.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Necklaces/Spritesheets/Variants/Item_Sheet_Necklaces_Copper.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Necklaces/Spritesheets/Variants/Item_Sheet_Necklaces_Copper.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Necklaces/Spritesheets/Variants/Item_Sheet_Necklaces_Crimson.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Necklaces/Spritesheets/Variants/Item_Sheet_Necklaces_Crimson.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Necklaces/Spritesheets/Variants/Item_Sheet_Necklaces_Fateful.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Necklaces/Spritesheets/Variants/Item_Sheet_Necklaces_Fateful.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Necklaces/Spritesheets/Variants/Item_Sheet_Necklaces_Gold.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Necklaces/Spritesheets/Variants/Item_Sheet_Necklaces_Gold.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Necklaces/Spritesheets/Variants/Item_Sheet_Necklaces_Iron.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Necklaces/Spritesheets/Variants/Item_Sheet_Necklaces_Iron.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Necklaces/Spritesheets/Variants/Item_Sheet_Necklaces_Nova.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Necklaces/Spritesheets/Variants/Item_Sheet_Necklaces_Nova.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Necklaces/Spritesheets/Variants/Item_Sheet_Necklaces_Other.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Necklaces/Spritesheets/Variants/Item_Sheet_Necklaces_Other.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Necklaces/Spritesheets/Variants/Item_Sheet_Necklaces_Platinum.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Necklaces/Spritesheets/Variants/Item_Sheet_Necklaces_Platinum.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Necklaces/Spritesheets/Variants/Item_Sheet_Necklaces_Silver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Necklaces/Spritesheets/Variants/Item_Sheet_Necklaces_Silver.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Necklaces/Spritesheets/Variants/Item_Sheet_Necklaces_Steel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Necklaces/Spritesheets/Variants/Item_Sheet_Necklaces_Steel.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Rings/Spritesheets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Rings/Spritesheets/Item_Sheet_Rings_Original.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Rings/Spritesheets/Item_Sheet_Rings_Original.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Rings/Spritesheets/Variants.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Rings/Spritesheets/Variants/Item_Sheet_Rings_Adamantine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Rings/Spritesheets/Variants/Item_Sheet_Rings_Adamantine.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Rings/Spritesheets/Variants/Item_Sheet_Rings_Angelic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Rings/Spritesheets/Variants/Item_Sheet_Rings_Angelic.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Rings/Spritesheets/Variants/Item_Sheet_Rings_Cobalt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Rings/Spritesheets/Variants/Item_Sheet_Rings_Cobalt.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Rings/Spritesheets/Variants/Item_Sheet_Rings_Copper.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Rings/Spritesheets/Variants/Item_Sheet_Rings_Copper.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Rings/Spritesheets/Variants/Item_Sheet_Rings_Crimson.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Rings/Spritesheets/Variants/Item_Sheet_Rings_Crimson.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Rings/Spritesheets/Variants/Item_Sheet_Rings_Fateful.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Rings/Spritesheets/Variants/Item_Sheet_Rings_Fateful.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Rings/Spritesheets/Variants/Item_Sheet_Rings_Gold.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Rings/Spritesheets/Variants/Item_Sheet_Rings_Gold.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Rings/Spritesheets/Variants/Item_Sheet_Rings_Iron.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Rings/Spritesheets/Variants/Item_Sheet_Rings_Iron.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Rings/Spritesheets/Variants/Item_Sheet_Rings_Nova.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Rings/Spritesheets/Variants/Item_Sheet_Rings_Nova.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Rings/Spritesheets/Variants/Item_Sheet_Rings_Platinum.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Rings/Spritesheets/Variants/Item_Sheet_Rings_Platinum.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Rings/Spritesheets/Variants/Item_Sheet_Rings_Silver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Rings/Spritesheets/Variants/Item_Sheet_Rings_Silver.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Rings/Spritesheets/Variants/Item_Sheet_Rings_Steel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Jewelry/Rings/Spritesheets/Variants/Item_Sheet_Rings_Steel.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Librarium/Singles/45_Scroll_Mystical.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Librarium/Singles/45_Scroll_Mystical.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Librarium/Singles/49_Scroll_Wondrous.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Librarium/Singles/49_Scroll_Wondrous.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Librarium/Singles/53_Scroll_Magical.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Librarium/Singles/53_Scroll_Magical.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Librarium/Singles/56_Scroll_Jewelry_Blank.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Librarium/Singles/56_Scroll_Jewelry_Blank.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Librarium/Singles/62_MythicalPages_Darkness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Librarium/Singles/62_MythicalPages_Darkness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Librarium/Spritesheets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Librarium/Spritesheets/Item_Sheet_Librarium.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Librarium/Spritesheets/Item_Sheet_Librarium.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Miscellaneous/Singles/157_Handyman_Nails.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Miscellaneous/Singles/157_Handyman_Nails.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Miscellaneous/Singles/178_Lava_Blob.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Miscellaneous/Singles/178_Lava_Blob.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Miscellaneous/Singles/193_Goat_Horn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Miscellaneous/Singles/193_Goat_Horn.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Miscellaneous/Spritesheets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Miscellaneous/Spritesheets/Item_Sheet_Miscellaneous.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/PixelItems/Miscellaneous/Spritesheets/Item_Sheet_Miscellaneous.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/Read Me.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/Read Me.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/Scenes/All_Items.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Admurin's Pixel Items/Scenes/All_Items.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Autofarmmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Autofarmmanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BackendFerderationAuth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BackendFerderationAuth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Classmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Classmanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DungeonManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DungeonManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EquipDatabase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EquipDatabase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EasyMobile/Generated/EM_IAPConstants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EasyMobile/Generated/EM_IAPConstants.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EasyMobile/Resources/EM_Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EasyMobile/Resources/EM_Settings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EliteRaid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EliteRaid.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GrowEventmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GrowEventmanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GuildManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GuildManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hpmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hpmanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LogManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LogManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/NewIAPManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewIAPManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PartyRaidRoommanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PartyRaidRoommanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PartyraidChatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PartyraidChatManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Panelcheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Panelcheck.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PartyRaidBattlemanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PartyRaidBattlemanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PlayerBackendData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerBackendData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.startup.startup-runtime-1.0.0.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.startup.startup-runtime-1.0.0.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.work.work-runtime-2.7.0.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.work.work-runtime-2.7.0.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-lite-22.0.0.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-lite-22.0.0.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.sglib.easymobile.easy-mobile-1.5.1.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.sglib.easymobile.easy-mobile-1.5.1.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3Defaults.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3Defaults.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Scripts/Streams/ES3Stream.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Scripts/Streams/ES3Stream.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/material/메인무기.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/material/메인무기.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/material/유저정보/펫 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/material/유저정보/펫 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/material/파티/메인무기 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/material/파티/메인무기 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/CollectionRenewal.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/CollectionRenewal.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/material/파티/펫 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/material/파티/펫 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/사냥터 (34).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/사냥터 (34).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RaidManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RaidManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/Avarta.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/Avarta.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/CraftTable.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/CraftTable.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/EquipChange.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/EquipChange.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/EquipItem.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/EquipItem.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/Itemdatabasecsv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/Itemdatabasecsv.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/Level.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/Level.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/Map.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/Map.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/MonDrop.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/MonDrop.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/Quest.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/Quest.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/Shop.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/Shop.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/TimeTable.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/TimeTable.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/TradeShop.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/TradeShop.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/altarrenewal.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/altarrenewal.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Csv/monster.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Csv/monster.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/I2Languages.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/I2Languages.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skillicon.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skillicon.spriteatlas" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lobby.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SettingReNewal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SettingReNewal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/login.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/login.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Chat/chatmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Chat/chatmanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/DB/ItemdatabasecsvDB.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/DB/ItemdatabasecsvDB.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/DB/monsterDB.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/DB/monsterDB.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settingmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settingmanager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Timemanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Timemanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tutorialmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tutorialmanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WorldBossManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WorldBossManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/equipoptionchanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/equipoptionchanger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/castingbarslot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/castingbarslot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/equipskillmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/equipskillmanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/equipskillslot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/equipskillslot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/itemshowcountslot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/itemshowcountslot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/mapmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/mapmanager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/mondropmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/mondropmanager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/otherusermanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/otherusermanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/partyraidreadyslot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/partyraidreadyslot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/talismanmixslot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/talismanmixslot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tradebuy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tradebuy.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -442,6 +601,10 @@
       <workItem from="1720065114909" duration="1000" />
       <workItem from="1720065136075" duration="6812000" />
       <workItem from="1720335168331" duration="19984000" />
+      <workItem from="1721027663022" duration="1571000" />
+      <workItem from="1721317486394" duration="6710000" />
+      <workItem from="1721608446906" duration="2361000" />
+      <workItem from="1721643980330" duration="6528000" />
     </task>
     <task id="LOCAL-00001" summary="gg">
       <created>1681093758612</created>
@@ -565,13 +728,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/itemshowcountslot.cs</url>
-          <line>39</line>
+          <line>38</line>
           <properties documentPath="C:\Unity2\AcrasRPG\Assets\itemshowcountslot.cs" initialLine="39" containingFunctionPresentation="메서드 'SetData'">
             <startOffsets>
-              <option value="1086" />
+              <option value="1076" />
             </startOffsets>
             <endOffsets>
-              <option value="1123" />
+              <option value="1113" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="36" />

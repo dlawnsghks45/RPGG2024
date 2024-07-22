@@ -14,6 +14,7 @@ public class
         //Debug.Log(id);
         nametext.text =
             $"{Inventory.GetTranslate(EquipSkillDB.Instance.Find_id(id).name)} Lv.{lv}";
+//        Debug.Log("Rare "+  rare  + "ID" + id);
         rareimage.color = Inventory.Instance.GetRareColor(rare);
         ani.SetTrigger("start");
     }

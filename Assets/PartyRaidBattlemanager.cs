@@ -412,13 +412,20 @@ public class PartyRaidBattlemanager : MonoBehaviour
             List<MonDropDB.Row> dropdatas = MonDropDB.Instance.FindAll_id(rewardid);
             dungeondropsid.Clear();
             dungeondropshowmany.Clear();
+            QuestManager.Instance.AddCount(1, "partyraid");
             foreach (var t in dropdatas)
             {
-                //                Debug.Log(dropid[i]);
+              
+                
+                
                 Random.InitState((int)Time.deltaTime + PlayerBackendData.Instance.GetRandomSeed());
                 int Ran_rate = Random.Range(0, 1000000); // 1,000,000이 100%이다.
                 if (Ran_rate <= int.Parse(t.rate)) //mondropmanager.Instance.getpercent(percent[i]))
                 {
+                    if (ItemdatabasecsvDB.Instance.Find_id(t.itemid).Alert.Equals("TRUE"))
+                    {
+                        chatmanager.Instance.ChattoDropItem(t.itemid);
+                    }
                     int Howmany = Random.Range(int.Parse(t.minhowmany), int.Parse(t.maxhowmany));
                     Inventory.Instance.AddItem(t.itemid, Howmany, false, true);
                     RaidManager.Instance.AddLoot(t.itemid, Howmany);
@@ -437,6 +444,7 @@ public class PartyRaidBattlemanager : MonoBehaviour
                 List<MonDropDB.Row> dropdatas = MonDropDB.Instance.FindAll_id(rewardid);
                 dungeondropsid.Clear();
                 dungeondropshowmany.Clear();
+                QuestManager.Instance.AddCount(1, "partyraid");
                 foreach (var t in dropdatas)
                 {
                     //                Debug.Log(dropid[i]);
@@ -444,6 +452,11 @@ public class PartyRaidBattlemanager : MonoBehaviour
                     int Ran_rate = Random.Range(0, 1000000); // 1,000,000이 100%이다.
                     if (Ran_rate <= int.Parse(t.rate)) //mondropmanager.Instance.getpercent(percent[i]))
                     {
+                        if (ItemdatabasecsvDB.Instance.Find_id(t.itemid).Alert.Equals("TRUE"))
+                        {
+                            chatmanager.Instance.ChattoDropItem(t.itemid);
+                        }
+                        
                         int Howmany = Random.Range(int.Parse(t.minhowmany), int.Parse(t.maxhowmany));
                         Inventory.Instance.AddItem(t.itemid, Howmany, false, true);
                         RaidManager.Instance.AddLoot(t.itemid, Howmany);

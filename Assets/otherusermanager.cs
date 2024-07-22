@@ -59,6 +59,13 @@ public class otherusermanager : MonoBehaviour
    public Text[] Passiveinfo;
 
 
+   
+   //�нú�
+   public Text[] AltarLv;
+   public Text[] AltarStat;
+   public Text CollectionLv;
+   public Text CollectionStat;
+   
    private string userindate;
    private string guildName;
    private string lastlogin;
@@ -75,419 +82,488 @@ public class otherusermanager : MonoBehaviour
        uimanager.Instance.AddUiview(dpsmanager.Instance.Trainingobj,true);
        ShowPlayerData_Training(PlayerBackendData.Instance.nickname);
    }
-   
+
    public void ShowPlayerData(string nickname)
    {
        //Debug.Log("�г���" + nickname);
-      Panel.Show(false);
-      Loading.SetActive(true);
-      PlayerUserPanel.SetActive(false);
-      PlayerInfoToggles[2].gameObject.SetActive(false);
-      PlayerInfoToggles[0].ToggleOn();
-      PlayerInfoToggles[0].ExecuteClick();
+       Panel.Show(false);
+       Loading.SetActive(true);
+       PlayerUserPanel.SetActive(false);
+       PlayerInfoToggles[2].gameObject.SetActive(false);
+       PlayerInfoToggles[0].ToggleOn();
+       PlayerInfoToggles[0].IsOn = true;
+       PlayerInfoToggles[0].ExecuteClick();
 
-      foreach (var VARIABLE in PlayerInfoObj)
-      {
-          VARIABLE.SetActive(false);
-      }
-      PlayerInfoObj[0].SetActive(true);
-      
-      
-      userindate = null;
+       foreach (var VARIABLE in PlayerInfoObj)
+       {
+           VARIABLE.SetActive(false);
+       }
 
-      SendQueue.Enqueue(Backend.Social.GetUserInfoByNickName, nickname, (callback) =>
-      {
-         if (!callback.IsSuccess()) return;
-         //Debug.Log(nickname);
-         //Debug.Log(callback.GetReturnValuetoJSON()["row"]["inDate"].ToString());
-         userindate = callback.GetReturnValuetoJSON()["row"]["inDate"].ToString();
-         if (callback.GetReturnValuetoJSON()["row"]["guildName"] != null) 
-         {
-            guildName = callback.GetReturnValuetoJSON()["row"]["guildName"].ToString();
-            lastlogin = callback.GetReturnValuetoJSON()["row"]["lastLogin"].ToString();
-         }
-
-         
-         for (int i = 0; i < AbilitySlots.Length; i++)
-         {
-             AbilitySlots[i].NoRefresh();
-         }
-         
-         
-         Where where = new Where();
-         where.Equal("owner_inDate", userindate);
-
-         string[] select =
-         {
-            "level",
-            "level_adven",
-            "NowClass",
-            "EquipmentNow",
-            "Passive",
-            "Playerstat",
-            "NowMap",
-            "updatedAt",
-            "Ability",
-            "avata_weapon",
-            "avata_subweapon",
-            "avata_avata",
-            "nowPetid",
-            "nowPetData",
-            "NowTalismanData"
-         };
-
-         SendQueue.Enqueue(Backend.GameData.Get, "PlayerData", where, select, 1, bro =>
-         {
-            if (bro.IsSuccess() == false)
-            {
-               // ��û ���� ó��
-               //Debug.Log(bro);
-               return;
-            }
-
-            if (bro.GetReturnValuetoJSON()["rows"].Count <= 0)
-            {
-             
-               return;
-            }
-
-       
-
-            
-            Loading.SetActive(false);
-            PlayerUserPanel.SetActive(true);
-           // Debug.Log(bro);
-
-            //������ �Է�
-            JsonData data = bro.FlattenRows()[0];
-            //Bro.Rows()[i]["inDate"]["S"].ToString();
-            
-            DateTime nowtime = Timemanager.Instance.GetServerTime();
-            DateTime dateTime = DateTime.Parse(data["updatedAt"].ToString());
-
-            if (nowtime.Date == dateTime.Date)
-            {
-               // Debug.Log("������ ����");
-                lastlogintext.text = Inventory.GetTranslate("UI2/마지막접속시간오늘");
-            }
-            else
-            {
-               // Debug.Log("������ �ٸ���");
-                lastlogintext.text = 
-                    string.Format(Inventory.GetTranslate("UI2/마지막접속시간"),
-                        (nowtime - dateTime).Days);
-            }
-            
-            
-            //�̸��� ����
-            NameandJobText.text =
-               $"Lv.{data["level"].ToString()} {nickname}";
-            ClassText.text =
-               Inventory.GetTranslate(ClassDB.Instance.Find_id(data["NowClass"]["ClassId1"].ToString()).name);
-            Inventory.Instance.ChangeItemRareColor(ClassText,ClassDB.Instance.Find_id(data["NowClass"]["ClassId1"].ToString()).tier);
-
-            AdventureRankText.text = PlayerData.Instance.gettierstarText("UI2/모험랭크",data["level_adven"].ToString());
-            GuildText.text = guildName == null ? "" : $"[{guildName}]";
-            LastStage.text = string.Format(Inventory.GetTranslate("UI2/마지막사냥터"),
-                Inventory.GetTranslate(MapDB.Instance.Find_id(data["NowMap"].ToString()).name));
-
-       
-            
-            
-            #region �������
-            //��� ����
-            EquipDatabase[] PlayerEquip = new EquipDatabase[15];
+       PlayerInfoObj[0].SetActive(true);
 
 
-            for (int i = 0; i < PlayerBackendData.Instance.EquipEquiptment0.Length; i++)
-            {
-               try
+       userindate = null;
+
+       SendQueue.Enqueue(Backend.Social.GetUserInfoByNickName, nickname, (callback) =>
+       {
+           if (!callback.IsSuccess()) return;
+           //Debug.Log(nickname);
+           //Debug.Log(callback.GetReturnValuetoJSON()["row"]["inDate"].ToString());
+           userindate = callback.GetReturnValuetoJSON()["row"]["inDate"].ToString();
+           if (callback.GetReturnValuetoJSON()["row"]["guildName"] != null)
+           {
+               guildName = callback.GetReturnValuetoJSON()["row"]["guildName"].ToString();
+               lastlogin = callback.GetReturnValuetoJSON()["row"]["lastLogin"].ToString();
+           }
+
+
+           for (int i = 0; i < AbilitySlots.Length; i++)
+           {
+               AbilitySlots[i].NoRefresh();
+           }
+
+
+           Where where = new Where();
+           where.Equal("owner_inDate", userindate);
+
+           string[] select =
+           {
+               "level",
+               "level_adven",
+               "NowClass",
+               "EquipmentNow",
+               "Passive",
+               "Playerstat",
+               "NowMap",
+               "updatedAt",
+               "Ability",
+               "avata_weapon",
+               "avata_subweapon",
+               "avata_avata",
+               "nowPetid",
+               "nowPetData",
+               "NowTalismanData",
+               "Altar_Lvs",
+               "CollectionNew"
+           };
+
+           SendQueue.Enqueue(Backend.GameData.Get, "PlayerData", where, select, 1, bro =>
+           {
+               if (bro.IsSuccess() == false)
                {
-                  PlayerEquip[i] = new EquipDatabase(data["EquipmentNow"][i]);
+                   // ��û ���� ó��
+                   //Debug.Log(bro);
+                   return;
+               }
+
+               if (bro.GetReturnValuetoJSON()["rows"].Count <= 0)
+               {
+
+                   return;
+               }
+
+
+
+
+               Loading.SetActive(false);
+               PlayerUserPanel.SetActive(true);
+               // Debug.Log(bro);
+
+               //������ �Է�
+               JsonData data = bro.FlattenRows()[0];
+               //Bro.Rows()[i]["inDate"]["S"].ToString();
+
+               DateTime nowtime = Timemanager.Instance.GetServerTime();
+               DateTime dateTime = DateTime.Parse(data["updatedAt"].ToString());
+
+               if (nowtime.Date == dateTime.Date)
+               {
+                   // Debug.Log("������ ����");
+                   lastlogintext.text = Inventory.GetTranslate("UI2/마지막접속시간오늘");
+               }
+               else
+               {
+                   // Debug.Log("������ �ٸ���");
+                   lastlogintext.text =
+                       string.Format(Inventory.GetTranslate("UI2/마지막접속시간"),
+                           (nowtime - dateTime).Days);
+               }
+
+
+               //�̸��� ����
+               NameandJobText.text =
+                   $"Lv.{data["level"].ToString()} {nickname}";
+               ClassText.text =
+                   Inventory.GetTranslate(ClassDB.Instance.Find_id(data["NowClass"]["ClassId1"].ToString()).name);
+               Inventory.Instance.ChangeItemRareColor(ClassText,
+                   ClassDB.Instance.Find_id(data["NowClass"]["ClassId1"].ToString()).tier);
+
+               AdventureRankText.text = PlayerData.Instance.gettierstarText("UI2/모험랭크", data["level_adven"].ToString());
+               GuildText.text = guildName == null ? "" : $"[{guildName}]";
+               LastStage.text = string.Format(Inventory.GetTranslate("UI2/마지막사냥터"),
+                   Inventory.GetTranslate(MapDB.Instance.Find_id(data["NowMap"].ToString()).name));
+
+
+
+
+               #region �������
+
+               //��� ����
+               EquipDatabase[] PlayerEquip = new EquipDatabase[15];
+
+
+               for (int i = 0; i < PlayerBackendData.Instance.EquipEquiptment0.Length; i++)
+               {
+                   try
+                   {
+                       PlayerEquip[i] = new EquipDatabase(data["EquipmentNow"][i]);
 //                   Debug.Log("��� �ִ´�" + i);
+                   }
+                   catch
+                   {
+
+                   }
                }
-               catch
+
+
+
+               battlePointtext.text = PlayerData.Instance.GetEquipPoint(PlayerEquip).ToString("N0");
+
+               for (int i = 0; i < Equipslots.Length; i++)
                {
-                    
+                   if (PlayerEquip[i] != null)
+                       Equipslots[i].SetItem(PlayerEquip[i], false);
                }
-            }
-            
+
+               float eskillpoint = 0;
+               string weapontype = EquipItemDB.Instance.Find_id(PlayerEquip[0].Itemid).SubType;
+
+               for (int i = 0; i < Equipslots.Length; i++)
+               {
+                   if (PlayerEquip[i] != null)
+                   {
+                       eskillpoint += equipoptionchanger.Instance.GetEskillPoint(PlayerEquip[i], weapontype);
+                       Equipslots[i].SetItem(PlayerEquip[i], false);
+                       // CheckSetItem(PlayerEquip, PlayerEquip[i].Itemid, true);
+                   }
+                   else
+                   {
+                       Equipslots[i].SetItem(); //�������� ǥ��         
+                   }
+               }
+
+               EquipskillPointtext.text = eskillpoint.ToString("N0");
+
+               PlayerData.Instance.SetAvartaImage(PlayerAvarta,
+                   SpriteManager.Instance.GetSprite(ClassDB.Instance.Find_id(data["NowClass"]["ClassId1"].ToString())
+                       .classsprite));
+
+               if (PlayerEquip[0] != null)
+               {
+                   PlayerData.Instance.SetWeaponImage(MainWeapon,
+                       SpriteManager.Instance.GetSprite(EquipItemDB.Instance
+                           .Find_id(PlayerEquip[0].Itemid).EquipSprite));
+                   PlayerData.Instance.SetWeaponRareOther(MainWeapon.material, PlayerEquip[0].CraftRare1);
+               }
+               else
+                   PlayerData.Instance.SetWeaponImage_remove_Other(MainWeapon);
+
+               if (PlayerEquip[1] != null)
+               {
+                   PlayerData.Instance.SetSubWeaponImage(SubWeapon,
+                       SpriteManager.Instance.GetSprite(EquipItemDB.Instance
+                           .Find_id(PlayerEquip[1].Itemid).EquipSprite));
+                   PlayerData.Instance.SetWeaponRareOther(SubWeapon.material, PlayerEquip[1].CraftRare1);
+               }
+               else
+                   PlayerData.Instance.SetSubWeaponImage_remove(SubWeapon);
+
+               #endregion
+
+               //탈리스만 초기화
+               for (int i = 0; i < TalismanEquip.Length; i++)
+               {
+                   TalismanEquip[i].RemoveTalisman();
+               }
+
+               if (data.ContainsKey("NowTalismanData"))
+               {
+                   for (int i = 0; i < TalismanEquip.Length; i++)
+                   {
+                       if (data["NowTalismanData"]["Talismanset"][i] != null
+                           && data["NowTalismanData"]["Talismanset"][i].ToString() != "True")
+                       {
+                           TalismanEquip[i]
+                               .SetTalismanOtherUser(new Talismandatabase(data["NowTalismanData"]["Talismanset"][i]));
+                       }
+                   }
+               }
+
+               #region ��
+
+               if (data.ContainsKey("nowPetData"))
+               {
+
+                   if (data["nowPetData"]["Petid"].ToString() != "")
+                   {
+                       PetImage.sprite =
+                           SpriteManager.Instance.GetSprite(PetDB.Instance
+                               .Find_id(data["nowPetData"]["Petid"].ToString()).sprite);
+                       PetImage.enabled = true;
+                       PlayerData.Instance.SetPetStarOther(PetImage.material,
+                           int.Parse(data["nowPetData"]["Petstar"].ToString()));
+                   }
+                   else
+                   {
+                       PetImage.enabled = false;
+                   }
+               }
+               else
+               {
+                   if (data.ContainsKey("nowPetid"))
+                   {
+                       if (data["nowPetid"].ToString() != "")
+                       {
+                           PetImage.sprite =
+                               SpriteManager.Instance.GetSprite(PetDB.Instance.Find_id(data["nowPetid"].ToString())
+                                   .sprite);
+                           PetImage.enabled = true;
+                           //   PlayerData.Instance.SetPetStarOther(PetImage.material,PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar);
+                       }
+                       else
+                       {
+                           PetImage.enabled = false;
+                       }
+                   }
+                   else
+                   {
+                       PetImage.enabled = false;
+                   }
+               }
 
 
-            battlePointtext.text = PlayerData.Instance.GetEquipPoint(PlayerEquip).ToString("N0");
-            
-            for (int i = 0; i < Equipslots.Length; i++)
-            {
-               if (PlayerEquip[i] != null)
-                  Equipslots[i].SetItem(PlayerEquip[i], false);
-            }
+               #endregion
 
-            float eskillpoint = 0;
-            string weapontype = EquipItemDB.Instance.Find_id(PlayerEquip[0].Itemid).SubType;
-            
-            for (int i = 0; i < Equipslots.Length; i++)
-            {
-                if (PlayerEquip[i] != null)
-                {
-                    eskillpoint += equipoptionchanger.Instance.GetEskillPoint(PlayerEquip[i], weapontype);
-                    Equipslots[i].SetItem(PlayerEquip[i], false);
-                   // CheckSetItem(PlayerEquip, PlayerEquip[i].Itemid, true);
-                }
-                else
-                {
-                    Equipslots[i].SetItem(); //�������� ǥ��         
-                }
-            }
-            EquipskillPointtext.text = eskillpoint.ToString("N0");
+               #region ��ų
 
-            PlayerData.Instance.SetAvartaImage(PlayerAvarta,
-               SpriteManager.Instance.GetSprite(ClassDB.Instance.Find_id(data["NowClass"]["ClassId1"].ToString())
-                  .classsprite));
+               //��ų.
+               foreach (var t in Skillslots)
+               {
+                   t.islock = true;
+                   t.RefreshSkillOtherUser();
+               }
 
-            if (PlayerEquip[0] != null)
-            {
-               PlayerData.Instance.SetWeaponImage(MainWeapon,
-                  SpriteManager.Instance.GetSprite(EquipItemDB.Instance
-                     .Find_id(PlayerEquip[0].Itemid).EquipSprite));
-               PlayerData.Instance.SetWeaponRareOther(MainWeapon.material, PlayerEquip[0].CraftRare1);
-            }
-            else
-               PlayerData.Instance.SetWeaponImage_remove_Other(MainWeapon);
+               int classskillslotcount =
+                   int.Parse(ClassDB.Instance.Find_id(data["NowClass"]["ClassId1"].ToString()).skillslotcount);
 
-            if (PlayerEquip[1] != null)
-            {
-               PlayerData.Instance.SetSubWeaponImage(SubWeapon,
-                  SpriteManager.Instance.GetSprite(EquipItemDB.Instance
-                     .Find_id(PlayerEquip[1].Itemid).EquipSprite));
-               PlayerData.Instance.SetWeaponRareOther(SubWeapon.material, PlayerEquip[1].CraftRare1);
-            }
-            else
-               PlayerData.Instance.SetSubWeaponImage_remove(SubWeapon);
+               for (int i = 0;
+                    i < classskillslotcount +
+                    PlayerData.Instance.mainplayer.AdventureRankSkillSlot(int.Parse(data["level_adven"].ToString()));
+                    i++)
+               {
+                   Skillslots[i].islock = false;
+               }
 
-            #endregion
+               for (int i = 0; i < data["NowClass"]["Skills1"].Count; i++)
+               {
+                   if (data["NowClass"]["Skills1"][i] == null) continue;
+                   if (data["NowClass"]["Skills1"][i].ToString().Equals("")) continue;
+                   if (data["NowClass"]["Skills1"][i].ToString().Equals("NULL")) continue;
+                   if (data["NowClass"]["Skills1"][i].ToString().Equals("True")) continue;
+                   Skillslots[i].skillid = data["NowClass"]["Skills1"][i].ToString();
+                   Skillslots[i].RefreshSkillOtherUser();
+               }
 
-            //탈리스만 초기화
-            for (int i = 0; i < TalismanEquip.Length; i++)
-            {
-                TalismanEquip[i].RemoveTalisman();
-            }
-            if (data.ContainsKey("NowTalismanData"))
-            {
-                for (int i = 0; i < TalismanEquip.Length; i++)
-                {
-                    if (data["NowTalismanData"]["Talismanset"][i] != null
-                        && data["NowTalismanData"]["Talismanset"][i].ToString() != "True")
-                    {
-                        TalismanEquip[i].SetTalismanOtherUser(new Talismandatabase(data["NowTalismanData"]["Talismanset"][i]));
-                    }
-                }
-            }
-                #region  ��
+               #endregion
 
-            if (data.ContainsKey("nowPetData"))
-            {
+               #region �ɷ�ġ
 
-                if (data["nowPetData"]["Petid"].ToString() != "")
-                {
-                    PetImage.sprite =
-                        SpriteManager.Instance.GetSprite(PetDB.Instance.Find_id(data["nowPetData"]["Petid"].ToString()).sprite);
-                    PetImage.enabled = true;
-                    PlayerData.Instance.SetPetStarOther(PetImage.material,
-                       int.Parse(data["nowPetData"]["Petstar"].ToString()));
-                }
-                else
-                {
-                    PetImage.enabled = false;
-                }
-            }
-            else
-            {
-                if (data.ContainsKey("nowPetid"))
-                {
-                    if (data["nowPetid"].ToString() != "")
-                    {
-                        PetImage.sprite =
-                            SpriteManager.Instance.GetSprite(PetDB.Instance.Find_id(data["nowPetid"].ToString()).sprite);
-                        PetImage.enabled = true;
-                     //   PlayerData.Instance.SetPetStarOther(PetImage.material,PlayerBackendData.Instance.PetData[PlayerBackendData.Instance.nowPetid].Petstar);
-                    }
-                    else
-                    {
-                        PetImage.enabled = false;
-                    }
-                }   
-                else
-                {
-                    PetImage.enabled = false;
-                }
-            }
-          
+               foreach (var t in PlayerStat)
+               {
+                   t.text = "-";
+               }
 
-            #endregion
-            #region ��ų
+               for (int i = 0; i < 17; i++)
+               {
+                   decimal da = decimal.Parse(data["Playerstat"][i].ToString());
+                   PlayerStat[i].text = i is 2 or 10 or 11 or 12 or 13 or 14 or 15 or 16 ? $"{da:N0}%" : $"{da:N0}";
+               }
 
-            //��ų.
-            foreach (var t in Skillslots)
-            {
-               t.islock = true;
-               t.RefreshSkillOtherUser();
-            }
 
-            int classskillslotcount =
-               int.Parse(ClassDB.Instance.Find_id(data["NowClass"]["ClassId1"].ToString()).skillslotcount);
+               decimal str = decimal.Parse(data["Playerstat"][5].ToString());
+               decimal dex = decimal.Parse(data["Playerstat"][6].ToString());
+               decimal ints = decimal.Parse(data["Playerstat"][7].ToString());
+               decimal wis = decimal.Parse(data["Playerstat"][8].ToString());
 
-            for (int i = 0;
-                 i < classskillslotcount +
-                 PlayerData.Instance.mainplayer.AdventureRankSkillSlot(int.Parse(data["level_adven"].ToString()));
-                 i++)
-            {
-               Skillslots[i].islock = false;
-            }
+               if (str + dex > ints + wis)
+               {
+                   DamagerTypeObj[0].SetActive(true);
+                   DamagerTypeObj[1].SetActive(false);
+                   DamagerTypeObj[2].SetActive(false);
+               }
+               else if (ints > wis)
+               {
+                   DamagerTypeObj[0].SetActive(false);
+                   DamagerTypeObj[1].SetActive(true);
+                   DamagerTypeObj[2].SetActive(false);
+               }
+               else
+               {
+                   DamagerTypeObj[0].SetActive(false);
+                   DamagerTypeObj[1].SetActive(false);
+                   DamagerTypeObj[2].SetActive(true);
+               }
 
-            for (int i = 0; i < data["NowClass"]["Skills1"].Count; i++)
-            {
-               if (data["NowClass"]["Skills1"][i] == null) continue;
-               if (data["NowClass"]["Skills1"][i].ToString().Equals("")) continue;
-               if (data["NowClass"]["Skills1"][i].ToString().Equals("NULL")) continue;
-               if (data["NowClass"]["Skills1"][i].ToString().Equals("True")) continue;
-               Skillslots[i].skillid = data["NowClass"]["Skills1"][i].ToString();
-               Skillslots[i].RefreshSkillOtherUser();
-            }
+               #endregion
 
-            #endregion
-            #region �ɷ�ġ
-            foreach (var t in PlayerStat)
-            {
-                t.text = "-";
-            }
-            for (int i = 0; i < 17; i++)
-            {
-                decimal da = decimal.Parse(data["Playerstat"][i].ToString());
-                PlayerStat[i].text = i is 2 or 10 or 11 or 12 or 13 or 14 or 15 or 16 ? $"{da:N0}%" : $"{da:N0}";
-            }
-            
-       
-            decimal str = decimal.Parse(data["Playerstat"][5].ToString());
-            decimal dex= decimal.Parse(data["Playerstat"][6].ToString());
-            decimal ints= decimal.Parse(data["Playerstat"][7].ToString());
-            decimal wis= decimal.Parse(data["Playerstat"][8].ToString());
+               #region �нú�
 
-            if (str + dex > ints + wis)
-            {
-                DamagerTypeObj[0].SetActive(true);
-                DamagerTypeObj[1].SetActive(false);
-                DamagerTypeObj[2].SetActive(false);
-            }
-            else if(ints > wis)
-            {
-                DamagerTypeObj[0].SetActive(false);
-                DamagerTypeObj[1].SetActive(true);
-                DamagerTypeObj[2].SetActive(false);
-            }
-            else
-            {
-                DamagerTypeObj[0].SetActive(false);
-                DamagerTypeObj[1].SetActive(false);
-                DamagerTypeObj[2].SetActive(true);
-            }
-            
-            #endregion
-            #region �нú�
-
-            for (int i = 0; i < data["Passive"].Count; i++)
-            {
+               for (int i = 0; i < data["Passive"].Count; i++)
+               {
 //                Debug.Log(data["Passive"][i].ToString());
-                if (data["Passive"][i].ToString() == "" || data["Passive"][i].ToString() == "True")
-                {
-                    Passivename[i].text = "-";
-                    Passivename[i].color = Color.white;
-                    Passiveinfo[i].text = "-";
-                }
-                else
-                {
-                    Passivename[i].text =
-                        Inventory.GetTranslate(PassiveDB.Instance.Find_id(data["Passive"][i].ToString()).name);
-                    Inventory.Instance.ChangeItemRareColor(Passivename[i],
-                        ClassDB.Instance.Find_id(data["Passive"][i].ToString()).tier);
-                    Passiveinfo[i].text =
-                        Inventory.GetTranslate(PassiveDB.Instance.Find_id(data["Passive"][i].ToString()).info);
-                }
-            }
-            
-           
-            
-            #endregion
-            #region �����Ƽ
-            
-            if (data.ContainsKey("Ability"))
-            {
-    //            Debug.Log(data["Ability"].Count);
+                   if (data["Passive"][i].ToString() == "" || data["Passive"][i].ToString() == "True")
+                   {
+                       Passivename[i].text = "-";
+                       Passivename[i].color = Color.white;
+                       Passiveinfo[i].text = "-";
+                   }
+                   else
+                   {
+                       Passivename[i].text =
+                           Inventory.GetTranslate(PassiveDB.Instance.Find_id(data["Passive"][i].ToString()).name);
+                       Inventory.Instance.ChangeItemRareColor(Passivename[i],
+                           ClassDB.Instance.Find_id(data["Passive"][i].ToString()).tier);
+                       Passiveinfo[i].text =
+                           Inventory.GetTranslate(PassiveDB.Instance.Find_id(data["Passive"][i].ToString()).info);
+                   }
+               }
 
-                for (int i = 0; i < data["Ability"].Count; i++)
-                {
-                    if (data["Ability"][i].ToString() == "" || data["Ability"][i].ToString() == "True")
-                    {
-                        AbilitySlots[i].NoRefresh();
-                    }
-                    else
-                    {
-                        AbilitySlots[i].Refresh(data["Ability"][i].ToString());
-                    }
-                }
-            }
-            else
-            {
-                for (int i = 0; i < PlayerBackendData.Instance.Abilitys.Length; i++)
-                {
-                    AbilitySlots[i].NoRefresh();
-                }
-            }
-            #endregion
-            #region  ����
-            if (data.ContainsKey("avata_avata"))
-            {
-                 
-                    if (data["avata_weapon"].ToString() != "")
-                    {
-                        PlayerData.Instance.SetAvartaImage(MainWeapon,
-                            SpriteManager.Instance.GetSprite(AvartaDB.Instance.Find_id(data["avata_weapon"].ToString())
-                                .sprite));
-                    }
-                    if (data["avata_subweapon"].ToString() != "")
-                    {
-                        PlayerData.Instance.SetAvartaImage(SubWeapon,
-                            SpriteManager.Instance.GetSprite(AvartaDB.Instance.Find_id(data["avata_subweapon"].ToString())
-                                .sprite));
-                    }
-                    if (data["avata_avata"].ToString() != "")
-                    {
-                        PlayerData.Instance.SetAvartaImage(PlayerAvarta,
-                            SpriteManager.Instance.GetSprite(AvartaDB.Instance.Find_id(data["avata_avata"].ToString())
-                                .sprite));
-                        
-                        if (bool.Parse(AvartaDB.Instance.Find_id(data["avata_avata"].ToString()).iswhole))
-                        {
-                            SubWeapon.enabled = false;
-                            MainWeapon.enabled = false;
-                        }
-                        else
-                        {
-                            SubWeapon.enabled = true;
-                            MainWeapon.enabled = true;
-                        }
-                    }
-                    else
-                    {
-                        SubWeapon.enabled = true;
-                        MainWeapon.enabled = true;
-                    }
-    
-                    
+
+
+               #endregion
+
+               #region �����Ƽ
+
+               if (data.ContainsKey("Ability"))
+               {
+                   //            Debug.Log(data["Ability"].Count);
+
+                   for (int i = 0; i < data["Ability"].Count; i++)
+                   {
+                       if (data["Ability"][i].ToString() == "" || data["Ability"][i].ToString() == "True")
+                       {
+                           AbilitySlots[i].NoRefresh();
+                       }
+                       else
+                       {
+                           AbilitySlots[i].Refresh(data["Ability"][i].ToString());
+                       }
+                   }
+               }
+               else
+               {
+                   for (int i = 0; i < PlayerBackendData.Instance.Abilitys.Length; i++)
+                   {
+                       AbilitySlots[i].NoRefresh();
+                   }
+               }
+
+               #endregion
+
+               #region ����
+
+               if (data.ContainsKey("avata_avata"))
+               {
+
+                   if (data["avata_weapon"].ToString() != "")
+                   {
+                       PlayerData.Instance.SetAvartaImage(MainWeapon,
+                           SpriteManager.Instance.GetSprite(AvartaDB.Instance.Find_id(data["avata_weapon"].ToString())
+                               .sprite));
+                   }
+
+                   if (data["avata_subweapon"].ToString() != "")
+                   {
+                       PlayerData.Instance.SetAvartaImage(SubWeapon,
+                           SpriteManager.Instance.GetSprite(AvartaDB.Instance
+                               .Find_id(data["avata_subweapon"].ToString())
+                               .sprite));
+                   }
+
+                   if (data["avata_avata"].ToString() != "")
+                   {
+                       PlayerData.Instance.SetAvartaImage(PlayerAvarta,
+                           SpriteManager.Instance.GetSprite(AvartaDB.Instance.Find_id(data["avata_avata"].ToString())
+                               .sprite));
+
+                       if (bool.Parse(AvartaDB.Instance.Find_id(data["avata_avata"].ToString()).iswhole))
+                       {
+                           SubWeapon.enabled = false;
+                           MainWeapon.enabled = false;
+                       }
+                       else
+                       {
+                           SubWeapon.enabled = true;
+                           MainWeapon.enabled = true;
+                       }
+                   }
+                   else
+                   {
+                       SubWeapon.enabled = true;
+                       MainWeapon.enabled = true;
+                   }
+               }
+
+               #endregion
+
+               //제단 / 수집
+
+               if (data.ContainsKey("CollectionNew"))
+               {
+                   for (int i = 0; i < AltarLv.Length; i++)
+                   {
+                       AltarLv[i].text = $"Lv.{data["Altar_Lvs"][i].ToString()}";
+                       AltarStat[i].text =
+                           $"{(int.Parse(data["Altar_Lvs"][i].ToString()) * int.Parse(altarrenewalDB.Instance.Find_id(i.ToString()).stat)).ToString("N0")}";
+                   }
+
+                   int num = 0;
+
+                   for (int i = 0; i < data["CollectionNew"].Count; i++)
+                   {
+                       if (bool.Parse(data["CollectionNew"][i].ToString()))
+                           num++;
+                   }
+
+                   CollectionLv.text =
+                       $"{num.ToString()} / {CollectionRenewalDB.Instance.NumRows()}\n(<color=yellow>{(((float)num / CollectionRenewalDB.Instance.NumRows()) * 100f):N2}%)</color>";
                    
-            }
-            #endregion
-         });
-      });
+                   
+                   float statnum = 0;
+                   for (int i = 0; i < data["CollectionNew"].Count; i++)
+                   {
+                       if (bool.Parse(data["CollectionNew"][i].ToString()))
+                       {
+                           statnum += float.Parse(CollectionRenewalDB.Instance.GetAt(i).stat);
+                       }
+                   }
+
+                   CollectionStat.text = statnum.ToString("N0");
+               }
+               else
+               {
+                   for (int i = 0; i < AltarLv.Length; i++)
+                   {
+                       AltarLv[i].text = "Lv.0";
+                       AltarStat[i].text = "0";
+                   }
+
+                   CollectionLv.text =
+                       $"{0} / {CollectionRenewalDB.Instance.NumRows()}(<color=yellow>{((0f / CollectionRenewalDB.Instance.NumRows()) * 100f):N2}%)</color>";
+                   CollectionStat.text = "0";
+               }
+           });
+       });
    }
 
    public GameObject[] DamagerTypeObj;
@@ -503,9 +579,7 @@ public class otherusermanager : MonoBehaviour
    public void ShowPlayerData_Training(string nickname)
    {
        Dps_Train.Clear();
-       PlayerInfoToggles[2].gameObject.SetActive(true);
-       PlayerInfoToggles[2].ToggleOn();
-       PlayerInfoToggles[2].ExecuteClick();
+   
 
        foreach (var VARIABLE in PlayerInfoObj)
        {
@@ -514,6 +588,11 @@ public class otherusermanager : MonoBehaviour
 
        PlayerInfoObj[0].SetActive(true);
 
+       PlayerInfoToggles[2].gameObject.SetActive(true);
+       PlayerInfoToggles[2].ToggleOn();
+       PlayerInfoToggles[2].IsOn = true;
+       PlayerInfoToggles[2].ExecuteClick();
+       
        Panel.Show(false);
        Loading.SetActive(true);
        PlayerUserPanel.SetActive(false);
@@ -558,6 +637,8 @@ public class otherusermanager : MonoBehaviour
                "avata_avata",
                "nowPetid_train",
                "nowPetData_train",
+               "Altar_Lvs",
+               "CollectionNew"
            };
 
            SendQueue.Enqueue(Backend.GameData.Get, "PlayerData", where, select, 1, bro =>
@@ -898,16 +979,16 @@ public class otherusermanager : MonoBehaviour
 
 
                #endregion
-                Debug.Log("탈리스만체크");
+              //  Debug.Log("탈리스만체크");
                //탈리스만 초기화
                for (int i = 0; i < TalismanEquip.Length; i++)
                {
                    TalismanEquip[i].RemoveTalisman();
                }
-               Debug.Log(data.ContainsKey("NowTalismanData_train"));
+           //    Debug.Log(data.ContainsKey("NowTalismanData_train"));
                if (data.ContainsKey("NowTalismanData_train"))
                {
-                   Debug.Log("잇다");
+//                   Debug.Log("잇다");
                    for (int i = 0; i < TalismanEquip.Length; i++)
                    {
                        if (data["NowTalismanData_train"]["Talismanset"][i] != null)
@@ -941,15 +1022,32 @@ public class otherusermanager : MonoBehaviour
                    }
                    if (data["avata_avata"].ToString() != "")
                    {
-                       if (bool.Parse(AvartaDB.Instance.Find_sprite(data["avata_avata"].ToString()).iswhole))
+                       Debug.Log(data["avata_avata"].ToString());
+                       try
                        {
-                           SubWeapon.enabled = false;
-                           MainWeapon.enabled = false;
+                           if (bool.Parse(AvartaDB.Instance.Find_sprite(data["avata_avata"].ToString()).iswhole))
+                           {
+                               SubWeapon.enabled = false;
+                               MainWeapon.enabled = false;
+                           }
+                           else
+                           {
+                               SubWeapon.enabled = true;
+                               MainWeapon.enabled = true;
+                           }
                        }
-                       else
+                       catch
                        {
-                           SubWeapon.enabled = true;
-                           MainWeapon.enabled = true;
+                           if (bool.Parse(AvartaDB.Instance.Find_id(data["avata_avata"].ToString()).iswhole))
+                           {
+                               SubWeapon.enabled = false;
+                               MainWeapon.enabled = false;
+                           }
+                           else
+                           {
+                               SubWeapon.enabled = true;
+                               MainWeapon.enabled = true;
+                           }
                        }
                    }
                    else
@@ -958,7 +1056,52 @@ public class otherusermanager : MonoBehaviour
                        MainWeapon.enabled = true;
                    }
                }
+               //제단 / 수집
 
+               if (data.ContainsKey("CollectionNew"))
+               {
+                   for (int i = 0; i < AltarLv.Length; i++)
+                   {
+                       AltarLv[i].text = $"Lv.{data["Altar_Lvs"][i].ToString()}";
+                       AltarStat[i].text =
+                           $"{(int.Parse(data["Altar_Lvs"][i].ToString()) * int.Parse(altarrenewalDB.Instance.Find_id(i.ToString()).stat)).ToString("N0")}";
+                   }
+
+                   int num = 0;
+
+                   for (int i = 0; i < data["CollectionNew"].Count; i++)
+                   {
+                       if (bool.Parse(data["CollectionNew"][i].ToString()))
+                           num++;
+                   }
+
+                   CollectionLv.text =
+                       $"{num.ToString()} / {CollectionRenewalDB.Instance.NumRows()}\n(<color=yellow>{(((float)num / CollectionRenewalDB.Instance.NumRows()) * 100f):N2}%)</color>";
+                   
+                   
+                   float statnum = 0;
+                   for (int i = 0; i < data["CollectionNew"].Count; i++)
+                   {
+                       if (bool.Parse(data["CollectionNew"][i].ToString()))
+                       {
+                           statnum += float.Parse(CollectionRenewalDB.Instance.GetAt(i).stat);
+                       }
+                   }
+
+                   CollectionStat.text = statnum.ToString("N0");
+               }
+               else
+               {
+                   for (int i = 0; i < AltarLv.Length; i++)
+                   {
+                       AltarLv[i].text = "Lv.0";
+                       AltarStat[i].text = "0";
+                   }
+
+                   CollectionLv.text =
+                       $"{0} / {CollectionRenewalDB.Instance.NumRows()}(<color=yellow>{((0f / CollectionRenewalDB.Instance.NumRows()) * 100f):N2}%)</color>";
+                   CollectionStat.text = "0";
+               }
 
                #endregion
            });

@@ -204,6 +204,10 @@ public class equipskillmanager : MonoBehaviour
     {
         EquipStat[num] += value;
     }
+    public void SetStats2(int num , float value)
+    {
+        EquipStat[num] = value;
+    }
     public void ResetStats()
     {
         for(int i = 0; i < EquipStat.Length;i++)

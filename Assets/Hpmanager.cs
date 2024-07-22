@@ -660,12 +660,23 @@ public class Hpmanager : MonoBehaviour
                                         QuestManager.Instance.AddCount(1, "eventmon");
                                     }
 
+                                    if (mondropmanager.Instance.mondata.droppercentup != "0")
+                                    {
+                                        mondropmanager.Instance.GiveDropToInvenToryPercentUp(transform,
+                                            mondropmanager.Instance.nowdropid,
+                                            decimal.Parse(mondropmanager.Instance.mondata.droppercentup)
+                                            , 1, false);
+                                    }
+                                    else
+                                    {
+                                        mondropmanager.Instance.GiveDropToInvenToryBoss(transform,
+                                            mondropmanager.Instance.Mon_DropItemIDboss,
+                                            mondropmanager.Instance.Mon_DropItemMinHowmanyboss,
+                                            mondropmanager.Instance.Mon_DropItemMaxHowmanyboss,
+                                            mondropmanager.Instance.Mon_DropItemPercentboss);
+                                    }
                                     //현재 점수가 같다면. 처음으로 간다.
-                                    mondropmanager.Instance.GiveDropToInvenToryBoss(transform,
-                                        mondropmanager.Instance.Mon_DropItemIDboss,
-                                        mondropmanager.Instance.Mon_DropItemMinHowmanyboss,
-                                        mondropmanager.Instance.Mon_DropItemMaxHowmanyboss,
-                                        mondropmanager.Instance.Mon_DropItemPercentboss);
+                                    
                                     EnemySpawnManager.Instance.CheckFieldKillBoss();
                                     EnemySpawnManager.Instance.NowStageindex = 0;
                                     EnemySpawnManager.Instance.spawnedmonstercur = 0;
@@ -689,7 +700,6 @@ public class Hpmanager : MonoBehaviour
                                     {
                                         Autofarmmanager.Instance.FinishCheckOffline();
                                     }
-
                                     bool isrec = false;
                                     //스테이지면 다음 스테이지로 넘김
                                     if (int.Parse(
@@ -702,7 +712,6 @@ public class Hpmanager : MonoBehaviour
                                      
                                         isrec = true;
                                     }
-
                                     if (!mapmanager.Instance.stageautouptoggle.isOn && MapDB.Instance
                                             .Find_id(PlayerBackendData.Instance.nowstage).mapnextstage != "0")
                                     {
@@ -714,24 +723,31 @@ public class Hpmanager : MonoBehaviour
                                                 .Find_id(PlayerBackendData.Instance.nowstage).mapneednum));
                                         }
                                     }
-
                                     //특수 포탈 체크
                                     if (Portalmanager.Instance.canmakeportal())
                                     {
                                         //Portalmanager.Instance.ShowPortal();
                                     }
-
                                     Battlemanager.Instance.mainplayer.hpmanager.HealAll();
                                 }
                                 else
                                 {
-
-
                                     EnemySpawnManager.Instance.CheckFieldKillAll();
-                                    mondropmanager.Instance.GiveDropToInvenTory(transform,mondropmanager.Instance.Mon_DropItemID
-                                        , mondropmanager.Instance.Mon_DropItemMinHowmany,
-                                        mondropmanager.Instance.Mon_DropItemMaxHowmany,
-                                        mondropmanager.Instance.Mon_DropItemPercent);
+                                    if (mondropmanager.Instance.mondata.droppercentup != "0")
+                                    {
+                                        mondropmanager.Instance.GiveDropToInvenToryPercentUp(transform,
+                                            mondropmanager.Instance.nowdropbossid,
+                                            decimal.Parse(mondropmanager.Instance.mondata.droppercentup)
+                                            , 1, false);
+                                    }
+                                    else
+                                    {
+                                        mondropmanager.Instance.GiveDropToInvenTory(transform,
+                                            mondropmanager.Instance.Mon_DropItemID
+                                            , mondropmanager.Instance.Mon_DropItemMinHowmany,
+                                            mondropmanager.Instance.Mon_DropItemMaxHowmany,
+                                            mondropmanager.Instance.Mon_DropItemPercent);
+                                    }
 
                                     mondropmanager.Instance.GiveEventDropToInvenTory(transform,
                                         mondropmanager.Instance.Event_DropItemID

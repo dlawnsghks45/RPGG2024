@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Doozy.Engine.UI;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
@@ -36,11 +37,14 @@ public class EliteRaid : MonoBehaviour
     
     public string nowmon = "5031";
 
+    public GameObject  SotangButtons;
+
     private void Start()
     {
         LevelCount.SetCount(PlayerBackendData.Instance.ContentLevel[10] + 1);
         LevelCount.Maxcount = LevelCount.nowcount;
         Refresh();
+        SotangCount.nowcount = 1;
     }
 
 
@@ -58,6 +62,19 @@ public class EliteRaid : MonoBehaviour
         
         RefreshHp();
         ShowReward();
+        ButtonCheck();
+    }
+
+    void ButtonCheck()
+    {
+        SotangButtons.SetActive(false);
+        if (PlayerBackendData.Instance.ContentLevel[10] != 0)
+        {
+       //     Debug.Log(LevelCount.nowcount + "현재");
+//            Debug.Log(PlayerBackendData.Instance.ContentLevel[10] + "미래");
+            if (LevelCount.nowcount-1 < PlayerBackendData.Instance.ContentLevel[10])
+                SotangButtons.SetActive(true);
+        }
     }
 
     void RefreshHp()
@@ -99,7 +116,7 @@ public class EliteRaid : MonoBehaviour
         {
             needitemid = "1753";
         }
-
+       
         Needitem.Refresh(needitemid, 1,false,false,false);
 
         foreach (var VARIABLE in Reward)
@@ -116,7 +133,6 @@ public class EliteRaid : MonoBehaviour
             decimal howmanycount = bool.Parse(data[i].Ispercent)
                 ? decimal.Parse(data[i].maxhowmany) * GetPercent()
                 : decimal.Parse(data[i].maxhowmany);
-
 //            Debug.Log(howmanycount);
             Reward[i].Refresh(data[i].itemid, howmanycount, false, false, false);
             Reward[i].gameObject.SetActive(true);
@@ -148,5 +164,63 @@ public class EliteRaid : MonoBehaviour
         else
             alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI3/아이템이부족"), alertmanager.alertenum.일반);
 
+    }
+
+    public UIView SotangView;
+    public itemshowcountslot SotangItem;
+    public countpanel SotangCount;
+
+    public void Bt_StartSotang()
+    {
+        RaidManager.Instance.raidmonsterid = "5031";
+        RaidManager.Instance.dungeondropsid.Clear();
+        RaidManager.Instance.dungeondropshowmany.Clear();
+        
+        MapDB.Row mapdata_Now = MapDB.Instance.Find_id(PlayerBackendData.Instance.nowstage);
+        if (mapdata_Now.maptype != "0")
+        {
+            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI/사냥터만가능"), alertmanager.alertenum.주의);
+            return;
+        }
+
+        if (mapmanager.Instance.islocating)
+        {
+            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI2/맵이동중불가"), alertmanager.alertenum.주의);
+            return;
+        }
+
+        if (!Settingmanager.Instance.CheckServerOn())
+        {
+            return;
+            //다시 시도
+        }
+        
+        
+        if (PlayerBackendData.Instance.CheckItemAndRemove(needitemid, SotangCount.nowcount))
+        {
+            // achievemanager.Instance.AddCount(Acheves.레이드격파, sotangcount);
+            QuestManager.Instance.AddCount(SotangCount.nowcount, "singleraid");
+
+            mondropmanager.Instance.GiveDropToInvenToryBossPercentUp(null,
+                "5031",EliteRaid.Instance.GetPercent(),SotangCount.nowcount,true);
+            
+            LogManager.Stang_Raid(SotangCount.nowcount);
+           
+            StartCoroutine(RaidManager.Instance.FinishRaidReward2());
+        }
+        else
+        {
+            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI/아이템부족"), alertmanager.alertenum.주의);
+        }
+    }
+    
+    public void Bt_ShowSotang()
+    {
+        SotangItem.id = needitemid;
+        SotangItem.InitData();
+        SotangItem.SetData();
+        SotangView.Show(false);
+        SotangCount.Maxcount = PlayerBackendData.Instance.CheckItemCount(needitemid);
+        SotangCount.SetCount(1);
     }
 }

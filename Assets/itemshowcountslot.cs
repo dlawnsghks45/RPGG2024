@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class itemshowcountslot : MonoBehaviour
 {
-    //ÇØ´ç ¾ÆÀÌµğ¿¡ °³¼ö¸¦ º¸¿©ÁÖ´Â °ÍÀÌ´Ù.
+    //í•´ë‹¹ ì•„ì´ë””ì— ê°œìˆ˜ë¥¼ ë³´ì—¬ì£¼ëŠ” ê²ƒì´ë‹¤.
     [SerializeField] private RectTransform panel;
     public string id;
     public Image ItemImage;

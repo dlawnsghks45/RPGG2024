@@ -37,6 +37,11 @@ public class Panelcheck : MonoBehaviour
             FieldTG[3].IsOn = true;
             FieldTG[3].ExecuteClick();
         }
+        if (PlayerBackendData.Instance.GetFieldLv() >= 135)
+        {
+            FieldTG[4].IsOn = true;
+            FieldTG[4].ExecuteClick();
+        }
     }
 
     public void RefreshDungeonToggle()

@@ -330,8 +330,6 @@ public string petrare;
     
 
     public int spawncount = 1   ; //사냥터 소환마리수
-
-
     public string nowstage; //현재 스테이지
 
     public string ClassId = "C1000"; //직업레벨
@@ -454,8 +452,21 @@ public string petrare;
     {
         if (Cash >= 3000000)
         {
+            if (Cash >= 1500000)
+            {
+                try
+                {
+                    LogManager.CrystalHack(Cash);
+                }
+                catch
+                {
+
+                }
+            }
+
             Cash = 0;
             Savemanager.Instance.SaveCash();
+         
             //Settingmanager.Instance.SaveDataInventory();
         }
         return Cash.GetDecrypted();

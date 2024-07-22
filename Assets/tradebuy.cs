@@ -14,6 +14,11 @@ public class tradebuy : MonoBehaviour
     public Image GiveImage;
     public string Tradeid;
 
+    public Image ItemHaveImage;
+    public Text ItemHaveCount;
+    public Text ItemHaveName;
+
+    
     private int totalcost;
 
     private int maxcount = 1000; 
@@ -91,6 +96,12 @@ public class tradebuy : MonoBehaviour
         //
         giveid = TradeShopDB.Instance.Find_id(tradeid).giveid;
         givehowmany = decimal.Parse(TradeShopDB.Instance.Find_id(tradeid).givehowmany);
+        
+        
+        //보유개수
+        ItemHaveImage.sprite = NeedImage.sprite;
+        ItemHaveCount.text = PlayerBackendData.Instance.CheckItemCount(needid).ToString("N0");
+        ItemHaveName.text = Inventory.GetTranslate(ItemdatabasecsvDB.Instance.Find_id(needid).name);
         
         //구매 개수에 따른 지급 개수
         totalcost = 0;

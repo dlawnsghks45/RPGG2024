@@ -1,540 +1,555 @@
-id,descriptionKor,sprite,name,description,itemtype,itemsubtype,rare,Recotype,droprare,buy,sell,dropalert,itemiconnew,A,B,C,D,Isstack,IsCrafting,IsEquipBox
-인덱스,,탄산음료,이름,아이템 정보,종류,주문서 등 2차분류,등급,,리워드때 이팩트용,구매 가격,판매 가격,드롭 시 전체 알람,드랍알림 0없음1좋음,상자아이템번호,상자아이템개수',상자 특성 All Random Choice,초이스면 초이스 개수,아이템이 겹치는가,,장비상자박승인가
-1000,골드,Item/ETC/Gold,Itemname/1000,Itemdescript/1000,0,107,0,,FALSE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1001,불꽃,Item/ETC/Fire,Itemname/1001,Itemdescript/1001,0,108,0,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1002,경험치,Item/ETC/Exp,Itemname/1002,Itemdescript/1002,0,109,0,,FALSE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1003,마일리지,Item/ETC/Fire2,Itemname/1003,Itemdescript/1003,3,115,0,,FALSE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1011,경험치,Item/ETC/Exp,Itemname/1002,Itemdescript/1002,0,109,0,,FALSE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-999,업적 경험치,Item/ETC/Exp,Itemname/999,Itemdescript/999,0,112,0,,FALSE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-998,시즌 경험치,Item/ETC/Exp,Itemname/998,Itemdescript/998,0,998,0,,FALSE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-996,초보자인장,Item/ETC/Exp,Itemname/998,Itemdescript/998,1,111,0,,FALSE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-997,베테랑인장,Item/ETC/Exp,Itemname/998,Itemdescript/998,1,111,0,,FALSE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-10,최하급 결정,Item/ETC/0_Item,Itemname/10,Itemdescript/10,1,111,0,,FALSE,0,50,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-11,하급 결정,Item/ETC/1_Item,Itemname/11,Itemdescript/11,1,111,1,,FALSE,0,100,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-12,중급 결정,Item/ETC/2_Item,Itemname/12,Itemdescript/12,1,111,2,,FALSE,0,200,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-13,상급 결정,Item/ETC/3_Item,Itemname/13,Itemdescript/13,1,111,3,,FALSE,0,400,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-14,최상급 결정,Item/ETC/4_Item,Itemname/14,Itemdescript/14,1,111,4,,FALSE,0,800,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-15,신의 결정,Item/ETC/5_Item,Itemname/15,Itemdescript/15,1,111,5,,FALSE,0,1600,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-16,악몽의 파편 악몽사냥터 드랍,Item/Resource/Scale2,Itemname/16,Itemdescript/16,1,111,5,,FALSE,0,1600,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-17,1억 골드,Item/유물/bag3,Itemname/17,Itemdescript/17,1,111,6,,TRUE,0,100000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-18,지옥의 파편,Item/Resource/완벽한룬의기억 1,Itemname/18,Itemdescript/18,1,111,6,,TRUE,0,3000,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-19,지옥 레이드 결정,Item/Resource/신화악세파편,Itemname/19,Itemdescript/19,1,111,6,,TRUE,0,100000,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-50000,악몽 악세서리 승급석Ⅰ,Item/Resource/DungeonChange1,Itemname/50000,Itemdescript/50000,1,111,6,,TRUE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-50001,룬 승급석,Item/룬/Icon32,Itemname/50001,Itemdescript/50001,1,111,6,,TRUE,0,100000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-20,레이드 토큰,Item/ETC/pvpcoin,Itemname/20,Itemdescript/20,1,100,6,,FALSE,0,1,FALSE,1,0,0,0,0,TRUE,FALSE,FALSE
-50002,장비 무기 강화석,Item/Resource/Enchant_Weapon,Itemname/50002,Itemdescript/50002,1,111,6,,TRUE,0,1000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-50003,장비 방어구 강화석,Item/Resource/Enchant_Armor,Itemname/50003,Itemdescript/50003,1,111,6,,TRUE,0,1000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-50004,장비 악세서리 강화석,Item/Resource/Enchant_Pet,Itemname/50004,Itemdescript/50004,1,111,6,,TRUE,0,1000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-50005,강화 촉진 가루,Item/Resource/강화촉진제,Itemname/50005,Itemdescript/50005,1,111,6,,TRUE,0,1000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-50006,고급 펫 상자 티켓,Item/Consume/Paper/quest_83,Itemname/50006,Itemdescript/50006,1,111,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-50007,펫 초월석,Item/Resource/material_06,Itemname/50007,Itemdescript/50007,1,111,6,,TRUE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-50008,장비 룬 강화석,Item/Resource/jinRune,Itemname/50008,Itemdescript/50008,1,111,7,,TRUE,0,5000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-21,룬 파편,Item/룬/Icon30,Itemname/21,Itemdescript/21,1,111,5,,FALSE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-22,룬 완성석,Item/룬/Icon36,Itemname/22,Itemdescript/22,1,111,6,,FALSE,0,2000000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-,,,,,,,,,,,,,,,,,,,,
-,시즌 2,,,,,,,,,,,,,,,,,,,
-23,불지옥 파편,,Itemname/23,Itemdescript/23,1,111,5,,FALSE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-24,지옥 레이드 결정,Item/Resource/신화악세파편,Itemname/24,Itemdescript/24,1,111,5,,FALSE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-25,,,Itemname/25,Itemdescript/25,1,111,5,,FALSE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-26,신 장비 파편,Item/Season2/0,Itemname/26,Itemdescript/26,1,111,5,,FALSE,0,5000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-27,신 장비 제작석,Item/Season2/1,Itemname/27,Itemdescript/27,1,111,6,,FALSE,0,10,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-28,신전의 보옥,Item/Season2/2,Itemname/28,Itemdescript/28,1,111,7,,FALSE,0,500000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-29,정제된 신의 힘,Item/Season2/3,Itemname/29,Itemdescript/29,1,111,7,,FALSE,0,1000000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-30,"파티 레이드 보상 횟수권,.",Item/Consume/Paper/quest_90,Itemname/30,Itemdescript/30,2,401,6,,TRUE,0,1,FALSE,1,파티레이드주간횟수,1,weekly,0,TRUE,FALSE,FALSE
-31,신 장비 제작석,Item/Season2/1,Itemname/31,Itemdescript/31,1,111,6,,FALSE,0,100000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-32,새싹 토큰,Item/Event/rain1,Itemname/32,Itemdescript/32,1,111,6,,FALSE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-40000,100만골드,Item/유물/bag1,Itemname/40000,Itemdescript/40000,1,111,4,,TRUE,0,1000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-40001,1천만골드,Item/유물/bag2,Itemname/40001,Itemdescript/40001,1,111,5,,TRUE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-40002,1억 골드,Item/유물/bag3,Itemname/40002,Itemdescript/40002,1,111,6,,TRUE,0,100000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-,,,,,,,,,,,,,,,,,,,,
-40003,룰렛 열쇠 파편A,Item/Consume/Box2/Icon25,Itemname/40003,Itemdescript/40003,1,111,6,,TRUE,0,1000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-40004,룰렛 열쇠 파편B,Item/Consume/Box2/Icon27,Itemname/40004,Itemdescript/40004,1,111,6,,TRUE,0,5000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-40005,룰렛 열쇠 파편C,Item/Consume/Box2/Icon26,Itemname/40005,Itemdescript/40005,1,111,6,,TRUE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-,,,,,,,,,,,,,,,,,,,,
-40006,프리미엄 룰렛 코인,Item/Consume/Box2/Icon38,Itemname/40006,Itemdescript/40006,1,111,6,,TRUE,0,10000000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-40007,크리스마스 룰렛 아이템,Item/Event/크리스마스/01_Gingerbread_Whole,Itemname/40007,Itemdescript/40007,1,111,6,,TRUE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-,,,,,,,,,,,,,,,,,,,,
-위장,,,,,,,,,,,,,,,,,,,,
-40008,서큐버스,Transform/1020,Itemname/40008,Itemdescript/40008,2,403,6,,FALSE,0,1,FALSE,1,A2000,0,0,0,TRUE,0,FALSE
-40009,뱀파이어,Transform/1007,Itemname/40009,Itemdescript/40009,2,403,6,,FALSE,0,1,FALSE,1,A2001,0,0,0,TRUE,0,FALSE
-40010,문어 전사,Transform/문어전사,Itemname/40010,Itemdescript/40010,2,403,6,,FALSE,0,1,FALSE,1,A2002,0,0,0,TRUE,0,FALSE
-40011,문어 마법사,Transform/문어마법사,Itemname/40011,Itemdescript/40011,2,403,6,,FALSE,0,1,FALSE,1,A2003,0,0,0,TRUE,0,FALSE
-40012,독문어,Transform/독문어,Itemname/40012,Itemdescript/40012,2,403,6,,FALSE,0,1,FALSE,1,A2004,0,0,0,TRUE,0,FALSE
-40013,문어왕,Transform/문어왕 - 복사본,Itemname/40013,Itemdescript/40013,2,403,6,,FALSE,0,1,FALSE,1,A2005,0,0,0,TRUE,0,FALSE
-40014,크리스마스 위장,Transform/산타,Itemname/40014,Itemdescript/40014,2,403,6,,FALSE,0,1,FALSE,1,A2006,0,0,0,TRUE,0,FALSE
-40015,크리스마스 무기,Item/Event/크리스마스/크리스마스사탕 1,Itemname/40015,Itemdescript/40015,2,403,6,,FALSE,0,1,FALSE,1,A2007,0,0,0,TRUE,0,FALSE
-40016,설날위장구매(대장군),Transform/대장군,Itemname/40016,Itemdescript/40016,2,403,6,,FALSE,0,1,FALSE,1,A2008,0,0,0,TRUE,0,FALSE
-40017,설날위장이벤트(사또),Transform/사또,Itemname/40017,Itemdescript/40017,2,403,6,,FALSE,0,1,FALSE,1,A2009,0,0,0,TRUE,0,FALSE
-40018,월도,Item/위장/36,Itemname/40018,Itemdescript/40018,2,403,6,,FALSE,0,1,FALSE,1,A2049,0,0,0,TRUE,0,FALSE
-40019,망령 기사,Transform/망령기사,Itemname/40019,Itemdescript/40019,2,403,6,,FALSE,0,1,FALSE,1,A2010,0,0,0,TRUE,0,FALSE
-40020,디아블로,Transform/디아블로,Itemname/40020,Itemdescript/40020,2,403,6,,FALSE,0,1,FALSE,1,A2050,0,0,0,TRUE,0,FALSE
-40021,겁화,Item/위장/37,Itemname/40021,Itemdescript/40021,2,403,6,,FALSE,0,1,FALSE,1,A2051,0,0,0,TRUE,0,FALSE
-40022,프리미엄 위장,Transform/바이킹,Itemname/40022,Itemdescript/40022,2,403,7,,FALSE,0,1,FALSE,1,A2052,0,0,0,TRUE,0,FALSE
-40023,프리미엄 위장 무기,Item/위장/38,Itemname/40023,Itemdescript/40023,2,403,7,,FALSE,0,1,FALSE,1,A2053,0,0,0,TRUE,0,FALSE
-40024,양날 파괴  도끼,Item/위장/39,Itemname/40024,Itemdescript/40024,2,403,6,,FALSE,0,1,FALSE,1,A2054,0,0,0,TRUE,0,FALSE
-40025,제우스,Transform/제우스,Itemname/40025,Itemdescript/40025,2,403,6,,FALSE,0,1,FALSE,1,A2055,0,0,0,TRUE,0,FALSE
-40026,제우스의번개,Item/위장/40,Itemname/40026,Itemdescript/40026,2,403,6,,FALSE,0,1,FALSE,1,A2056,0,0,0,TRUE,0,FALSE
-40027,도깨비 방망이,Item/위장/41,Itemname/40027,Itemdescript/40027,2,403,6,,FALSE,0,1,FALSE,1,A2057,0,0,0,TRUE,0,FALSE
-40028,여름 서퍼,Transform/서핑,Itemname/40028,Itemdescript/40028,2,403,6,,FALSE,0,1,FALSE,1,A2058,0,0,0,TRUE,0,FALSE
-40029,트리슈라,Item/위장/42,Itemname/40029,Itemdescript/40029,2,403,6,,FALSE,0,1,FALSE,1,A2059,0,0,0,TRUE,0,FALSE
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-48000,북극곰,Item/Pet/0,petname/1000,Itemdescript/48000,2,406,1,,FALSE,0,1,FALSE,1,P1000,0,0,0,TRUE,0,FALSE
-48001,사막여우,Item/Pet/1,petname/1001,Itemdescript/48000,2,406,1,,FALSE,0,1,FALSE,1,P1001,0,0,0,TRUE,0,FALSE
-48002,노란전갈,Item/Pet/2,petname/1002,Itemdescript/48000,2,406,1,,FALSE,0,1,FALSE,1,P1002,0,0,0,TRUE,0,FALSE
-48003,하운드,Item/Pet/3,petname/1003,Itemdescript/48000,2,406,1,,FALSE,0,1,FALSE,1,P1003,0,0,0,TRUE,0,FALSE
-48004,임프,Item/Pet/4,petname/1004,Itemdescript/48000,2,406,2,,FALSE,0,1,FALSE,1,P1004,0,0,0,TRUE,0,FALSE
-48005,아이스 가고일,Item/Pet/5,petname/1005,Itemdescript/48000,2,406,2,,FALSE,0,1,FALSE,1,P1005,0,0,0,TRUE,0,FALSE
-48006,포이즌 임프,Item/Pet/6,petname/1006,Itemdescript/48000,2,406,2,,FALSE,0,1,FALSE,1,P1006,0,0,0,TRUE,0,FALSE
-48007,고스트,Item/Pet/7,petname/1007,Itemdescript/48000,2,406,2,,FALSE,0,1,FALSE,1,P1007,0,0,0,TRUE,0,FALSE
-48008,드라켄,Item/Pet/8,petname/1008,Itemdescript/48000,2,406,3,,FALSE,0,1,FALSE,1,P1008,0,0,0,TRUE,0,FALSE
-48009,옥토퍼즈,Item/Pet/9,petname/1009,Itemdescript/48000,2,406,3,,FALSE,0,1,FALSE,1,P1009,0,0,0,TRUE,0,FALSE
-48010,발록,Item/Pet/10,petname/1010,Itemdescript/48000,2,406,3,,FALSE,0,1,FALSE,1,P1010,0,0,0,TRUE,0,FALSE
-48011,리퍼,Item/Pet/11,petname/1011,Itemdescript/48000,2,406,3,,FALSE,0,1,FALSE,1,P1011,0,0,0,TRUE,0,FALSE
-48012,적룡,Item/Pet/12,petname/1012,Itemdescript/48000,2,406,4,,FALSE,0,1,FALSE,1,P1012,0,0,0,TRUE,0,FALSE
-48013,백룡,Item/Pet/13,petname/1013,Itemdescript/48000,2,406,4,,FALSE,0,1,FALSE,1,P1013,0,0,0,TRUE,0,FALSE
-48014,독룡,Item/Pet/14,petname/1014,Itemdescript/48000,2,406,4,,FALSE,0,1,FALSE,1,P1014,0,0,0,TRUE,0,FALSE
-48015,악룡,Item/Pet/15,petname/1015,Itemdescript/48000,2,406,4,,FALSE,0,1,FALSE,1,P1015,0,0,0,TRUE,0,FALSE
-48016,이그니스,Item/Pet/16,petname/1016,Itemdescript/48000,2,406,5,,FALSE,0,1,FALSE,1,P1016,0,0,0,TRUE,0,FALSE
-48017,스핑크스,Item/Pet/17,petname/1017,Itemdescript/48000,2,406,5,,FALSE,0,1,FALSE,1,P1017,0,0,0,TRUE,0,FALSE
-48018,카흐마,Item/Pet/18,petname/1018,Itemdescript/48000,2,406,5,,FALSE,0,1,FALSE,1,P1018,0,0,0,TRUE,0,FALSE
-48019,Missing,Item/Pet/19,petname/1019,Itemdescript/48000,2,406,5,,FALSE,0,1,FALSE,1,P1019,0,0,0,TRUE,0,FALSE
-48020,까치,Item/Pet/20,petname/1020,Itemdescript/48000,2,406,6,,FALSE,0,1,FALSE,1,P1020,0,0,0,TRUE,0,FALSE
-48021,뱁새,Item/Pet/21,petname/1021,Itemdescript/48000,2,406,6,,FALSE,0,1,FALSE,1,P1021,0,0,0,TRUE,0,FALSE
-48022,유령나무,Item/Pet/22,petname/1022,Itemdescript/48000,2,406,6,,FALSE,0,1,FALSE,1,P1022,0,0,0,TRUE,0,FALSE
-48023,루돌프,Item/Pet/23,petname/1023,Itemdescript/48000,2,406,6,,FALSE,0,1,FALSE,1,P1023,0,0,0,TRUE,0,FALSE
-48024,붉은 갈기 검은용,Item/Pet/24,petname/1024,Itemdescript/48000,2,406,6,,FALSE,0,1,FALSE,1,P1024,0,0,0,TRUE,0,FALSE
-48025,푸른 갈기 검은용,Item/Pet/25,petname/1025,Itemdescript/48000,2,406,6,,FALSE,0,1,FALSE,1,P1025,0,0,0,TRUE,0,FALSE
-48026,녹빛 갈기 검은용,Item/Pet/26,petname/1026,Itemdescript/48000,2,406,6,,FALSE,0,1,FALSE,1,P1026,0,0,0,TRUE,0,FALSE
-48027,황금 갈기 검은용,Item/Pet/27,petname/1027,Itemdescript/48000,2,406,6,,FALSE,0,1,FALSE,1,P1027,0,0,0,TRUE,0,FALSE
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-1000001,All Stat 20,Item/ETC/hunter,Itemname/1000001,Itemdescript/1000001,0,200,1,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1000002,All Stat 30,Item/ETC/hunter,Itemname/1000002,Itemdescript/1000002,0,200,2,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1000003,All Stat 40,Item/ETC/hunter,Itemname/1000003,Itemdescript/1000003,0,200,2,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1000004,All Stat 50,Item/ETC/hunter,Itemname/1000004,Itemdescript/1000004,0,200,3,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1000005,All Stat 60,Item/ETC/hunter,Itemname/1000005,Itemdescript/1000005,0,200,3,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1000006,All Stat 70,Item/ETC/hunter,Itemname/1000006,Itemdescript/1000006,0,200,4,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1000007,All Stat 80,Item/ETC/hunter,Itemname/1000007,Itemdescript/1000007,0,200,4,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1000008,All Stat 90,Item/ETC/hunter,Itemname/1000008,Itemdescript/1000008,0,200,5,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1000009,All Stat 100,Item/ETC/hunter,Itemname/1000009,Itemdescript/1000009,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1000010,All Stat 110,Item/ETC/hunter,Itemname/1000010,Itemdescript/1000010,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1000011,All Stat 120,Item/ETC/hunter,Itemname/1000011,Itemdescript/1000011,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1000012,All Stat 130,Item/ETC/hunter,Itemname/1000012,Itemdescript/1000012,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1000013,All Stat 140,Item/ETC/hunter,Itemname/1000013,Itemdescript/1000013,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1000014,All Stat 150,Item/ETC/hunter,Itemname/1000014,Itemdescript/1000014,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1000015,All Stat 160,Item/ETC/hunter,Itemname/1000015,Itemdescript/1000015,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1000016,All Stat 170,Item/ETC/hunter,Itemname/1000016,Itemdescript/1000016,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1000017,All Stat 180,Item/ETC/hunter,Itemname/1000017,Itemdescript/1000017,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1000018,All Stat 190,Item/ETC/hunter,Itemname/1000018,Itemdescript/1000018,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1000019,All Stat 200,Item/ETC/hunter,Itemname/1000019,Itemdescript/1000019,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1000020,All Stat 210,Item/ETC/hunter,Itemname/1000020,Itemdescript/1000020,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1000021,All Stat 220,Item/ETC/hunter,Itemname/1000021,Itemdescript/1000021,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1000022,All Stat 230,Item/ETC/hunter,Itemname/1000022,Itemdescript/1000022,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1000023,All Stat 240,Item/ETC/hunter,Itemname/1000023,Itemdescript/1000023,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1000024,All Stat 250,Item/ETC/hunter,Itemname/1000024,Itemdescript/1000024,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1000025,All Stat 260,Item/ETC/hunter,Itemname/1000025,Itemdescript/1000025,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1000026,All Stat 270,Item/ETC/hunter,Itemname/1000026,Itemdescript/1000026,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1000027,All Stat 280,Item/ETC/hunter,Itemname/1000027,Itemdescript/1000027,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1000028,All Stat 290,Item/ETC/hunter,Itemname/1000028,Itemdescript/1000028,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-1000029,All Stat 300,Item/ETC/hunter,Itemname/1000029,Itemdescript/1000029,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-50,엘리의 축복 31일,Item/Consume/Boost,Itemname/50,Itemdescript/50,2,300,6,,FALSE,0,1,FALSE,1,31,0,0,0,TRUE,0,FALSE
-51,엘리의 축복 15일,Item/Consume/Boost,Itemname/51,Itemdescript/51,2,300,6,,FALSE,0,1,FALSE,1,15,0,0,0,TRUE,0,FALSE
-52,장비 품질 변경서,Item/Consume/Paper/quest_27,Itemname/52,Itemdescript/52,2,2,6,,FALSE,0,1,FALSE,1,1,0,0,0,TRUE,0,FALSE
-53,장비 등급 변경서,Item/Consume/Paper/quest_28,Itemname/53,Itemdescript/53,2,2,6,,FALSE,0,1,FALSE,1,1,0,0,0,TRUE,0,FALSE
-54,장비 특수효과 변경,Item/Consume/Paper/quest_25,Itemname/54,Itemdescript/54,2,2,6,,FALSE,0,1,FALSE,1,1,0,0,0,TRUE,0,FALSE
-55,광고 무제한 제거,Item/Consume/icon48,Itemname/55,Itemdescript/55,3,111,6,,FALSE,0,1,FALSE,1,31,0,0,0,TRUE,0,FALSE
-56,길드 토큰,Item/Resource/길드토큰,Itemname/56,Itemdescript/56,1,100,6,,FALSE,0,1,FALSE,1,0,0,0,0,TRUE,0,FALSE
-57,불안정한 장비 특수효과 변경,Item/Consume/Paper/quest_23,Itemname/57,Itemdescript/57,2,2,5,,FALSE,0,1000000,FALSE,1,1,0,0,0,TRUE,0,FALSE
-100000,안씀,Item/Event/E1,Itemname/100000,Itemdescript/100000,1,116,4,,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100001,안씀,Item/Event/E2,Itemname/100001,Itemdescript/100001,1,116,5,,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100002,안씀,Item/Event/E3,Itemname/100002,Itemdescript/100002,1,116,6,,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100003,안씀,Item/Event/E4,Itemname/100003,Itemdescript/100003,1,116,4,,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100004,안씀,Item/Event/E5,Itemname/100004,Itemdescript/100004,1,116,5,,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100005, ,Item/Event/E6,Itemname/100005,Itemdescript/100005,1,116,6,,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100006,안씀,Item/Event/E7,Itemname/100006,Itemdescript/100006,1,116,4,,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100007,안씀,Item/Event/E8,Itemname/100007,Itemdescript/100007,1,116,5,,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100008,안씀,Item/Event/E9,Itemname/100008,Itemdescript/100008,1,116,6,,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100009,안씀,Item/Event/크리스마스/44_Christmas_Ornament_Red_Ball_Flat,Itemname/100009,Itemdescript/100006,1,116,4,,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100010,안씀,Item/Event/크리스마스/46_Christmas_Ornament_Red_Ball_Stripe,Itemname/100010,Itemdescript/100007,1,116,5,,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100011,안씀,Item/Event/크리스마스/50_Christmas_Ornament_Gold_Ball,Itemname/100011,Itemdescript/100008,1,116,6,,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100012,안씀,Item/Event/설날/복조리,Itemname/100012,Itemdescript/100006,1,116,4,,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100013,안씀,Item/Event/설날/복조리1,Itemname/100013,Itemdescript/100007,1,116,5,,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100014,안씀,Item/Event/설날/복조리3,Itemname/100014,Itemdescript/100008,1,116,6,,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100015,안씀,Item/Event/E10,Itemname/100015,Itemdescript/100006,1,116,4,,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100016,안씀,Item/Event/E11,Itemname/100016,Itemdescript/100007,1,116,5,,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100017,안씀,Item/Event/E12,Itemname/100017,Itemdescript/100008,1,116,6,,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100018,안씀,Item/Event/E13,Itemname/100018,Itemdescript/100006,1,116,4,,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100019,안씀,Item/Event/E14,Itemname/100019,Itemdescript/100007,1,116,5,,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100020,안씀,Item/Event/E15,Itemname/100020,Itemdescript/100008,1,116,6,,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100021,이벤트 아이템 [낮은 드롭율],Item/Event/E16,Itemname/100021,Itemdescript/100006,1,116,4,,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100022,이벤트 아이템 [중간 드롭율],Item/Event/E17,Itemname/100022,Itemdescript/100007,1,116,5,,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-100023,이벤트 아이템 [업적으로만지급],Item/Event/E18,Itemname/100023,Itemdescript/100008,1,116,6,,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-100100,산타 조합1,Item/Event/크리스마스/05_Santa_Hat,Itemname/100100,Itemdescript/100100,1,116,5,,TRUE,0,200000,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE
-100101,산타 조합2,Item/Event/크리스마스/07_Santa_Jacket,Itemname/100101,Itemdescript/100101,1,116,5,,TRUE,0,200000,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE
-100102,산타 조합3,Item/Event/크리스마스/09_Santa_Gloves,Itemname/100102,Itemdescript/100102,1,116,5,,TRUE,0,200000,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE
-100103,산타 조합4,Item/Event/크리스마스/11_Santa_Belt,Itemname/100103,Itemdescript/100103,1,116,5,,FALSE,0,5000000,,0,0,0,0,0,TRUE,FALSE,FALSE
-100104,산타 조합 품 선택 상자,Item/Event/크리스마스/1,Itemname/100104,Itemdescript/100104,2,400,6,,TRUE,0,1,FALSE,0,100100;100101;100102,2;2;2,Choice,1,TRUE,FALSE,FALSE
-100105,진저 쿠키 조각A,Item/Event/크리스마스/04_Gingerbread_Bite,Itemname/100105,Itemdescript/100105,1,116,4,,TRUE,0,100000,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE
-100106,진저 쿠키 조각B,Item/Event/크리스마스/02_Gingerbread_Bite,Itemname/100106,Itemdescript/100106,1,116,5,,FALSE,0,500000,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE
-100107,진저 쿠키 조각C,Item/Event/크리스마스/01_Gingerbread_Whole,Itemname/100107,Itemdescript/100107,1,116,6,,FALSE,0,10000000,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE
-200000,레이드 입장권,Item/Consume/Paper/quest_82,Itemname/200000,Itemdescript/200000,2,401,6,,TRUE,0,1,FALSE,1,레이드,1,daily,0,TRUE,0,FALSE
-200001,200레벨 경험치 스크롤,Item/Consume/Paper/quest_08,Itemname/200001,Itemdescript/200001,2,402,6,,FALSE,0,1,FALSE,1,86759030,0,0,0,TRUE,0,FALSE
-200002,300레벨 경험치 스크롤,Item/Consume/Paper/quest_08,Itemname/200002,Itemdescript/200002,2,402,6,,FALSE,0,1,FALSE,1,1045879131,0,0,0,TRUE,0,FALSE
-200003,400레벨 경험치 스크롤,Item/Consume/Paper/quest_08,Itemname/200003,Itemdescript/200003,2,402,6,,FALSE,0,1,FALSE,1,3683420881,0,0,0,TRUE,0,FALSE
-200004,500레벨 경험치 스크롤,Item/Consume/Paper/quest_08,Itemname/200004,Itemdescript/200004,2,402,6,,FALSE,0,1,FALSE,1,9925920881,0,0,0,TRUE,0,FALSE
-200005,200~400레벨 경험치 스크롤,Item/Consume/Paper/quest_08,Itemname/200005,Itemdescript/200005,2,402,6,,FALSE,0,1,FALSE,1,3598599987,0,0,0,TRUE,0,FALSE
-200006,300~500레벨 경험치 스크롤,Item/Consume/Paper/quest_08,Itemname/200006,Itemdescript/200006,2,402,6,,FALSE,0,1,FALSE,1,8898443167,0,0,0,TRUE,0,FALSE
-200007,700레벨 경험치 스크롤,Item/Consume/Paper/quest_08,Itemname/200007,Itemdescript/200007,2,402,6,,FALSE,0,1,FALSE,1,30025920881,0,0,0,TRUE,0,FALSE
-200008,300~700레벨 경험치 스크롤,Item/Consume/Paper/quest_08,Itemname/200008,Itemdescript/200008,2,402,6,,FALSE,0,1,FALSE,1,20169850000,0,0,0,TRUE,0,FALSE
-,,,,,,,,,,,,,,,,,,,,
-200009,제단 강화 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200009,Itemdescript/200009,2,405,6,,TRUE,0,1,FALSE,1,0,0,0,0,TRUE,0,FALSE
-200010,스킬북 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200010,Itemdescript/200010,2,405,6,,TRUE,0,1,FALSE,1,3,0,0,0,TRUE,0,FALSE
-200011,개미굴 제단 강화석 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200011,Itemdescript/200011,2,405,6,,TRUE,0,1,FALSE,1,6,0,0,0,TRUE,0,FALSE
-200012,룰렛 열쇠 - 프리미엄 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200012,Itemdescript/200012,2,405,6,,TRUE,0,1,FALSE,1,9,0,0,0,TRUE,0,FALSE
-200013,성장 콘텐츠 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200013,Itemdescript/200013,2,405,6,,TRUE,0,1,FALSE,1,12,0,0,0,TRUE,0,FALSE
-200014,악몽 장비 승급석 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200014,Itemdescript/200014,2,405,6,,TRUE,0,1,FALSE,1,15,0,0,0,TRUE,0,FALSE
-200015,유물 수집 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200015,Itemdescript/200015,2,405,6,,TRUE,0,1,FALSE,1,18,0,0,0,TRUE,0,FALSE
-200016,룬 제련 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200016,Itemdescript/200016,2,405,6,,TRUE,0,1,FALSE,1,21,0,0,0,TRUE,0,FALSE
-200017,펫 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200017,Itemdescript/200017,2,405,6,,TRUE,0,1,FALSE,1,24,0,0,0,TRUE,0,FALSE
-200018,1200레벨 경험치 스크롤,Item/Consume/Paper/quest_08,Itemname/200018,Itemdescript/200018,2,402,6,,FALSE,0,1,FALSE,1,170225920881,0,0,0,TRUE,0,FALSE
-,,,,,,,,,,,,,,,,,,,,
-500,아이템 상자,Item/Consume/Box/골드유물,Itemname/500,Itemdescript/500,2,400,5,,FALSE,0,1,FALSE,0,10;11;12;13;14;15;1000,10;100;1000;10000;100000;1000000;200000000,All,0,TRUE,FALSE,FALSE
-501,장비 상자,Item/Consume/Box/드래곤체스트,Itemname/501,Itemdescript/501,2,400,6,,FALSE,0,1,FALSE,0,E1003;E2002;E3004;E4007;E5005;E1015;E5513;E5522;E5529;E5532,0,All,0,TRUE,FALSE,TRUE
-502,아이템 상자,Item/Consume/Box/골드유물,Itemname/500,Itemdescript/500,2,400,3,,FALSE,0,1,FALSE,0,10;11;12;13;14;15;1000,10;100;1000;10000;100000;1000000;200000000,Choice,3,TRUE,FALSE,FALSE
-503,장비 상자,Item/Consume/Box/드래곤체스트,Itemname/501,Itemdescript/501,2,400,4,,FALSE,0,1,FALSE,0,E1003;E2002;E3004;E4007;E5005;E1015;E5513;E5522;E5529;E5532,0,Random,0,TRUE,FALSE,TRUE
-,,,,,,,,,,,,,,,,,,,FALSE,
-504,테스트 패키지,Item/Consume/Box/드래곤체스트,Itemname/504,Itemdescript/504,2,400,6,,FALSE,0,1,FALSE,0,1712;99000;1711;507;505;1000,3000;3000;3000;1;1;5000000,All,0,TRUE,FALSE,FALSE
-505,방어구 악세 상자,Item/Consume/Box/bluebox,Itemname/505,Itemdescript/505,2,400,4,,FALSE,0,1,FALSE,0,E5004;E5005;E5006;E5007;E5008;E5009,0,All,0,TRUE,FALSE,TRUE
-506,신의 증표 상자,Item/Consume/Box/죽은왕상자,Itemname/506,Itemdescript/506,2,400,5,,FALSE,0,1,FALSE,0,4000;4001;4002;4003;4004;4005,2;3;6;6;6;6,All,0,TRUE,FALSE,FALSE
-507,무기 상자,Item/Consume/Box/redbox,Itemname/507,Itemdescript/507,2,400,4,,FALSE,0,1,FALSE,0,E5000;E5001;E5002;E5003;E5004;E1014;E1015;E1016,0,All,0,TRUE,FALSE,TRUE
-506,신의 증표 상자,Item/Consume/Box/죽은왕상자,Itemname/506,Itemdescript/506,2,400,5,,FALSE,0,1,FALSE,0,4000;4001;4002;4003;4004;4005,2;3;6;6;6;6,All,0,TRUE,FALSE,FALSE
-508,발록 무기 선택 상자 [1회 패키지],Item/Consume/Box/redbox,Itemname/508,Itemdescript/508,2,400,5,,TRUE,0,1,FALSE,0,E5532;E5533;E5534;E5535,,Choice,1,TRUE,FALSE,TRUE
-509,5T 방어구 상자 [1회 패키지],Item/Consume/Box/bluebox,Itemname/509,Itemdescript/509,2,400,2,,TRUE,0,1,FALSE,0,E5004;E5005;E5006;E5007;E5008;E5009,,All,0,TRUE,FALSE,TRUE
-510,4T 방어구 상자 [1회 패키지],Item/Consume/Box/bluebox,Itemname/510,Itemdescript/510,2,400,2,,TRUE,0,1,FALSE,0,E4004;E4005;E4006;E4007;E4008;E4009,,All,0,TRUE,FALSE,TRUE
-511,3T 방어구 상자 [1회 패키지],Item/Consume/Box/bluebox,Itemname/511,Itemdescript/511,2,400,1,,TRUE,0,1,FALSE,0,E3004;E3005;E3006;E3007;E3008;E3009,,All,0,TRUE,FALSE,TRUE
-512,숲 보조무기 선택 상자 [1회 패키지],Item/Consume/Box/redbox,Itemname/512,Itemdescript/512,2,400,5,,TRUE,0,1,FALSE,0,E5510;E5511;E5512,,Choice,1,TRUE,FALSE,TRUE
-513,3T 무기 선택 상자 [1회 패키지],Item/Consume/Box/redbox,Itemname/513,Itemdescript/513,2,400,1,,TRUE,0,1,FALSE,0,E3000;E3001;E3002;E3003,,Choice,1,TRUE,FALSE,TRUE
-514,4T 무기 선택 상자 [1회 패키지],Item/Consume/Box/redbox,Itemname/514,Itemdescript/514,2,400,2,,TRUE,0,1,FALSE,0,E4000;E4001;E4002;E4003,,Choice,1,TRUE,FALSE,TRUE
-515,레이즈 무기 선택 상자 [1회 패키지],Item/Consume/Box/redbox,Itemname/515,Itemdescript/515,2,400,5,,TRUE,0,1,FALSE,0,E5500;E5501;E5502;E5503,,Choice,1,TRUE,FALSE,TRUE
-516,레이즈 무기 선택 상자 [1회 패키지],Item/Consume/Box/redbox,Itemname/516,Itemdescript/516,2,400,5,,TRUE,0,1,FALSE,0,E6005,,Choice,1,TRUE,FALSE,TRUE
-517,악몽파편꾸러미,Item/Consume/Box/bag6,Itemname/517,Itemdescript/517,2,400,5,,TRUE,0,1,FALSE,0,16,300,All,0,TRUE,FALSE,FALSE
-518,악몽 장신구 무작위 상자,Item/Consume/Box/드래곤체스트,Itemname/518,Itemdescript/518,2,400,6,,TRUE,0,1,FALSE,0,E6006;E6010;E6014;E6007;E6011;E6015,,Random,0,TRUE,FALSE,TRUE
-519,악몽 장신구 선택 상자,Item/Consume/Box/드래곤체스트,Itemname/519,Itemdescript/519,2,400,6,,TRUE,0,1,FALSE,0,E6006;E6010;E6014;E6007;E6011;E6015,,Choice,1,TRUE,FALSE,TRUE
-520,악몽 장신구★ 선택 상자,Item/Consume/Box/드래곤체스트,Itemname/520,Itemdescript/520,2,400,6,,TRUE,0,1,FALSE,0,E6008;E6012;E6016;E6009;E6013;E6017,,Choice,1,TRUE,FALSE,TRUE
-521,10T 무기 선택 상자 [1회 패키지],Item/Consume/Box/죽은왕상자,Itemname/521,Itemdescript/521,2,400,6,,TRUE,0,1,FALSE,0,E6000;E6001;E6002;E6003;E6004,,Choice,1,TRUE,FALSE,TRUE
-522,죽음 방어구★ 세트 상자 [1회 패키지],Item/Consume/Box/죽은왕상자,Itemname/522,Itemdescript/522,2,400,6,,TRUE,0,1,FALSE,0,E5524;E5525;E5526;E5527,,All,0,TRUE,FALSE,TRUE
-523,불의 보옥 장신구★ 세트 상자 [1회 패키지],Item/Consume/Box/죽은왕상자,Itemname/523,Itemdescript/523,2,400,6,,TRUE,0,1,FALSE,0,E5530;E5531,,All,0,TRUE,FALSE,TRUE
-524,지옥파편꾸러미,Item/Consume/Box/bag6,Itemname/524,Itemdescript/524,2,400,6,,TRUE,0,1,FALSE,0,18,300,All,0,TRUE,FALSE,FALSE
-525,물약 상자,Item/Consume/Box/chest_1,Itemname/525,Itemdescript/525,2,400,5,,TRUE,0,1,FALSE,0,1537;1542,100000;100000,All,0,TRUE,FALSE,FALSE
-526,모든 재설정 상자,Item/Consume/Box/chest_2,Itemname/526,Itemdescript/526,2,400,5,,TRUE,0,1,FALSE,0,52;53;54,10;10;10,All,0,TRUE,FALSE,FALSE
-점핑,,,,,,,,,,,,,,,,,,,,
-527,무기 점핑 상자,Item/Consume/Box/redbox,Itemname/527,Itemdescript/527,2,400,6,,FALSE,0,1,FALSE,0,E70000;E70001;E70002;E70003;E70004,,All,0,TRUE,FALSE,TRUE
-528,방어구 점핑 상자,Item/Consume/Box/bluebox,Itemname/528,Itemdescript/528,2,400,6,,FALSE,0,1,FALSE,0,E70005;E70006;E70007;E70008,,All,0,TRUE,FALSE,TRUE
-529,장신구 점핑 상자,Item/Consume/Box/greenbox,Itemname/529,Itemdescript/529,2,400,6,,FALSE,0,1,FALSE,0,E70009;E70010,,All,0,TRUE,FALSE,TRUE
-530,보조장비 점핑 상자,Item/Consume/Box/redbox,Itemname/530,Itemdescript/530,2,400,6,,FALSE,0,1,FALSE,0,E70011;E70012;E70013,,All,0,TRUE,FALSE,TRUE
-,,,,,,,,,,,,,,,,,,,,
-531,점핑 총 상자,Item/Consume/Box/chest_4,Itemname/531,Itemdescript/531,2,400,6,,TRUE,0,1,FALSE,0,4001;4002;4003;4004;4005;1006;1751;1750;57;1001;1537;1542,2;2;2;2;2;50;30;30;200;10000;10000;10000,All,0,TRUE,FALSE,FALSE
-532,하급 스킬북 선택 상자,Item/Consume/Box2/Icon1,Itemname/532,Itemdescript/532,2,400,5,,TRUE,0,1,FALSE,0,80000;80001;80002;80003;80004,1;1;1;1;1,Choice,1,TRUE,FALSE,FALSE
-533,중급 스킬북 선택 상자,Item/Consume/Box2/Icon3,Itemname/533,Itemdescript/533,2,400,6,,TRUE,0,1,FALSE,0,80005;80006;80007;80008,1;1;1;1,Choice,1,TRUE,FALSE,FALSE
-534,상급 스킬북 선택 상자,Item/Consume/Box2/Icon5,Itemname/534,Itemdescript/534,2,400,6,,TRUE,0,1,FALSE,0,80009;80010;80011;80012;80013,1;1;1;1;1,Choice,1,TRUE,FALSE,FALSE
-535,재설정 선택상자,Item/Consume/Box/chest_2,Itemname/535,Itemdescript/535,2,400,5,,TRUE,0,1,FALSE,0,52;53;54,1;1;1,Choice,1,TRUE,FALSE,FALSE
-536,5승급 방어구 선택 상자,Item/Consume/Box/죽은왕상자,Itemname/536,Itemdescript/536,2,400,5,,TRUE,0,1,FALSE,0,538;539;540,1;1;1,Choice,1,TRUE,FALSE,FALSE
-537,5승급 장신구 선택 상자,Item/Consume/Box/죽은왕상자,Itemname/537,Itemdescript/537,2,400,5,,TRUE,0,1,FALSE,0,541;542,1;1,Choice,1,TRUE,FALSE,FALSE
-538,5승급 물리,Item/Consume/Box/redbox,Itemname/538,Itemdescript/538,2,400,6,,TRUE,0,1,FALSE,0,E20004;E20009;E20014;E20019,,Choice,1,TRUE,FALSE,TRUE
-539,5승급 마법,Item/Consume/Box/bluebox,Itemname/539,Itemdescript/539,2,400,6,,TRUE,0,1,FALSE,0,E20024;E20029;E20034;E20039,,Choice,1,TRUE,FALSE,TRUE
-540,5승급 상태,Item/Consume/Box/greenbox,Itemname/540,Itemdescript/540,2,400,6,,TRUE,0,1,FALSE,0,E20044;E20049;E20054;E20059,,Choice,1,TRUE,FALSE,TRUE
-541,5승급 반지,Item/Consume/Box/드래곤체스트,Itemname/541,Itemdescript/541,2,400,6,,TRUE,0,1,FALSE,0,E10024;E10025;E10026,,Choice,1,TRUE,FALSE,TRUE
-542,5승급 목걸이,Item/Consume/Box/드래곤체스트,Itemname/542,Itemdescript/542,2,400,6,,TRUE,0,1,FALSE,0,E10027;E10028;E10029,,Choice,1,TRUE,FALSE,TRUE
-,,,,,,,,,,,,,,,,,,,,
-543,[이벤트]할로윈 상자,Item/Consume/Box/할로윈상자,Itemname/543,Itemdescript/543,2,400,6,,FALSE,0,1,FALSE,0,535;40000;40000;40001;40001;40002;40002;40003;40004;1005;1006;1750,1;100;1000;20;50;5;20;2;1;5;2;1,Random,0,TRUE,FALSE,FALSE
-545,[이벤트]산타의 선물 주머니,Item/Consume/Box/New box/산타의봇짐,Itemname/545,Itemdescript/545,2,400,6,,FALSE,0,1,FALSE,0,535;40000;40000;40001;40001;40002;40002;40003;40004;1005;1006;1750,1;100;1000;20;50;5;20;2;1;5;2;1,Random,0,TRUE,FALSE,FALSE
-,,,,,,,,,,,,,,,,,,,,
-544,악몽 방어구 선택 상자,Item/Consume/Box/드래곤체스트,Itemname/544,Itemdescript/544,2,400,6,,FALSE,0,1,FALSE,0,E6020;E6021;E6022;E6023;E6028;E6029;E6030;E6031;E6036;E6037;E6038;E6039,,Choice,1,TRUE,FALSE,TRUE
-,0,,,,,,,,,,,,,,,,,,,
-508,발록 무기 선택 상자 [1회 패키지],Item/Consume/Box/redbox,Itemname/508,Itemdescript/508,2,400,5,,FALSE,0,1,FALSE,0,E5532;E5533;E5534;E5535,,Choice,1,TRUE,FALSE,TRUE
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-5450,악몽 무기 선택상자,Item/Consume/Box/죽은왕상자,Itemname/5450,Itemdescript/5450,2,400,6,,TRUE,0,1,FALSE,0,E6052;E6053;E6054;E6055;E6056;E6057;E6058;E6059,,Choice,1,TRUE,FALSE,TRUE
-546,악몽 보조 무기 선택상자,Item/Consume/Box/죽은왕상자,Itemname/546,Itemdescript/546,2,400,6,,TRUE,0,1,FALSE,0,E6044;E6045;E6046;E6047,,Choice,1,TRUE,FALSE,TRUE
-547,악몽 장신구 선택 상자,Item/Consume/Box/죽은왕상자,Itemname/547,Itemdescript/547,2,400,6,,TRUE,0,1,FALSE,0,E6006;E6010;E6014;E6007;E6011;E6015,,Choice,1,TRUE,FALSE,TRUE
-548,악몽 방어구 세트 선택 상자,Item/Consume/Box/죽은왕상자,Itemname/548,Itemdescript/548,2,400,6,,TRUE,0,1,FALSE,0,549;550;551,1;1;1,Choice,1,TRUE,FALSE,FALSE
-549,사무라이 세트 상자,Item/Consume/Box2/Icon17,Itemname/549,Itemdescript/549,2,400,6,,TRUE,0,1,FALSE,0,E6020;E6021;E6022;E6023,,All,0,TRUE,FALSE,TRUE
-550,대마법사 세트 상자,Item/Consume/Box2/Icon19,Itemname/550,Itemdescript/550,2,400,6,,TRUE,0,1,FALSE,0,E6028;E6029;E6030;E6031,,All,0,TRUE,FALSE,TRUE
-551,독룡 세트상자,Item/Consume/Box2/Icon23,Itemname/551,Itemdescript/551,2,400,6,,TRUE,0,1,FALSE,0,E6036;E6037;E6038;E6039,,All,0,TRUE,FALSE,TRUE
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-552,하급 고대 유물 선택 상자,Item/Consume/Box/chest_2,Itemname/552,Itemdescript/552,2,400,4,,TRUE,0,100000000,FALSE,0,90000;90001;90002,5;5;5,Choice,1,TRUE,FALSE,FALSE
-553,하급 고대 유물 무작위 상자,Item/Consume/Box/chest_2,Itemname/553,Itemdescript/553,2,400,4,,TRUE,0,100000000,FALSE,0,90000;90001;90002,5;5;5,Random,0,TRUE,FALSE,FALSE
-554,중급 고대 유물 선택 상자,Item/Consume/Box/chest_3,Itemname/554,Itemdescript/554,2,400,5,,TRUE,0,200000000,FALSE,0,90003;90004;90005,5;5;5,Choice,1,TRUE,FALSE,FALSE
-555,중급 고대 유물 무작위 상자,Item/Consume/Box/chest_3,Itemname/555,Itemdescript/555,2,400,5,,TRUE,0,200000000,FALSE,0,90003;90004;90005,5;5;5,Random,0,TRUE,FALSE,FALSE
-556,고급 고대 유물 선택 상자,Item/Consume/Box/chest_4,Itemname/556,Itemdescript/556,2,400,6,,TRUE,0,300000000,FALSE,0,90006;90007;90008,5;5;5,Choice,1,TRUE,FALSE,FALSE
-557,고급 고대 유물 무작위 상자,Item/Consume/Box/chest_4,Itemname/557,Itemdescript/557,2,400,6,,TRUE,0,300000000,FALSE,0,90006;90007;90008,5;5;5,Random,0,TRUE,FALSE,FALSE
-,,,,,,,,,,,,,,,,,,,,
-558,5승급 무기 선택 상자,Item/Consume/Box2/Icon17,Itemname/558,Itemdescript/558,2,400,5,,TRUE,0,1,FALSE,0,E6092;E6093;E6094;E6095;E6096;E6097;E6098;E6099,,Choice,1,TRUE,FALSE,TRUE
-559,5승급 보조무기 선택 상자,Item/Consume/Box2/Icon23,Itemname/559,Itemdescript/559,2,400,5,,TRUE,0,1,FALSE,0,E6116;E6117;E6118;E6119,,Choice,1,TRUE,FALSE,TRUE
-,,,,,,,,,,,,,,,,,,,,
-560,보스룬 상자,Item/Consume/Box2/Icon7,Itemname/560,Itemdescript/560,2,400,6,,TRUE,0,1,FALSE,0,E6120,,All,1,TRUE,FALSE,TRUE
-561,일반룬 상자,Item/Consume/Box2/Icon7,Itemname/561,Itemdescript/561,2,400,6,,TRUE,0,1,FALSE,0,E6126,,All,1,TRUE,FALSE,TRUE
-562,골드룬 상자,Item/Consume/Box2/Icon7,Itemname/562,Itemdescript/562,2,400,6,,TRUE,0,1,FALSE,0,E6132,,All,1,TRUE,FALSE,TRUE
-563,전체룬 상자,Item/Consume/Box2/Icon7,Itemname/563,Itemdescript/563,2,400,6,,TRUE,0,1,FALSE,0,E6120;E6132,,Choice,1,TRUE,FALSE,TRUE
-564,룬선택상자,Item/Consume/Box2/Icon7,Itemname/564,Itemdescript/564,2,400,6,,TRUE,0,1,FALSE,0,E6125;E6137,,Choice,1,TRUE,FALSE,TRUE
-565,[이벤트]설날 복 주머니,Item/Event/설날/설날복주머니,Itemname/565,Itemdescript/565,2,400,6,,FALSE,0,1,FALSE,0,50005;50006;535;40000;40000;40001;40001;40002;40002;40003;40004;1005;1006;1750,10;1;1;100;1000;20;50;5;20;2;1;5;2;1,Random,0,TRUE,FALSE,FALSE
-566,2023 겨울 쿠폰 상자,Item/Consume/Box/chest_4,Itemname/566,Itemdescript/566,2,400,6,,TRUE,0,1,FALSE,0,200002;527;528;529;530;4001;4002;4003;4004,1;1;1;1;1;1;1;1;1,All,0,TRUE,FALSE,FALSE
-567,[이벤트]보물 상자,Item/Consume/Box2/Icon15,Itemname/567,Itemdescript/567,2,400,6,,FALSE,0,1,FALSE,0,50005;50006;535;40000;40000;40001;40001;40002;40002;40003;40004;1005;1006;1750,10;1;1;100;1000;20;50;5;20;2;1;5;2;1,Random,0,TRUE,FALSE,FALSE
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-568,시즌2 무기 상자,Item/Consume/Box2/Icon17,Itemname/568,Itemdescript/568,2,400,7,,TRUE,0,1,FALSE,0,E6138;E6139;E6140;E6142;E6144;E6145;E6146;E6147;E6148;E6149;E6150,,Choice,1,TRUE,FALSE,TRUE
-569,시즌2 보조무기 상자,Item/Consume/Box2/Icon7,Itemname/569,Itemdescript/569,2,400,7,,TRUE,0,1,FALSE,0,E6155;E6156;E6157;E6158,,Choice,1,TRUE,FALSE,TRUE
-570,시즌2 방어구 상자,Item/Consume/Box2/Icon23,Itemname/570,Itemdescript/570,2,400,7,,TRUE,0,1,FALSE,0,E6151;E6152;E6153;E6154,,Choice,1,TRUE,FALSE,TRUE
-571,시즌2 장신구 상자,Item/Consume/Box2/Icon21,Itemname/571,Itemdescript/571,2,400,7,,TRUE,0,1,FALSE,0,E6161;E6162;E6163;E6164;E6165;E6166,,Choice,1,TRUE,FALSE,TRUE
-572,파티 레이드 토벌 상자,Item/Consume/Box/pvpbag,Itemname/572,Itemdescript/572,2,400,6,,FALSE,0,1,FALSE,0,50005;535;40000;40000;40001;40001;40002;40002;40003;40004;1005;1006;1750,3;1;100;1000;20;50;5;20;2;1;5;2;1,Random,0,TRUE,FALSE,FALSE
-573,[시즌2]초고속 성장 패키지,Item/Consume/Box/죽은왕상자,Shopname/1040,Shopinfo/1040,2,400,7,,TRUE,0,1,FALSE,0,200018;4005;558;559;575;576;532;533;534;40005;40002;526;1711;99000;1003,1;2;2;2;2;2;2;2;2;20;1000;15;1200;15000;2200,All,0,TRUE,FALSE,FALSE
-574,점핑 총 상자,Item/Consume/Box/chest_4,Itemname/531,Itemdescript/531,2,400,7,,TRUE,0,1,FALSE,0,200007;4001;4002;4003;4004,1;1;1;1;1,All,0,TRUE,FALSE,FALSE
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,576,,,,,,
-575,3승급 방어구 선택 상자,Item/Consume/Box/죽은왕상자,Itemname/575,Itemdescript/575,2,400,5,,TRUE,0,1,FALSE,0,577;578;579,1;1;1,Choice,1,TRUE,FALSE,FALSE
-576,3승급 장신구 선택 상자,Item/Consume/Box/죽은왕상자,Itemname/576,Itemdescript/576,2,400,5,,TRUE,0,1,FALSE,0,580;581,1;1,All,1,TRUE,FALSE,FALSE
-577,3승급 물리,Item/Consume/Box/redbox,Itemname/577,Itemdescript/577,2,400,6,,TRUE,0,1,FALSE,0,E20002;E20007;E20012;E20017,,All,1,TRUE,FALSE,TRUE
-578,3승급 마법,Item/Consume/Box/bluebox,Itemname/578,Itemdescript/578,2,400,6,,TRUE,0,1,FALSE,0,E20022;E20027;E20032;E20037,,All,1,TRUE,FALSE,TRUE
-579,3승급 상태,Item/Consume/Box/greenbox,Itemname/579,Itemdescript/579,2,400,6,,TRUE,0,1,FALSE,0,E20042;E20047;E20052;E20057,,All,1,TRUE,FALSE,TRUE
-580,3승급 반지,Item/Consume/Box/드래곤체스트,Itemname/580,Itemdescript/580,2,400,6,,TRUE,0,1,FALSE,0,E10012;E10013;E10014,,Choice,1,TRUE,FALSE,TRUE
-581,3승급 목걸이,Item/Consume/Box/드래곤체스트,Itemname/581,Itemdescript/581,2,400,6,,TRUE,0,1,FALSE,0,E10015;E10016;E10017,,Choice,1,TRUE,FALSE,TRUE
-,,,,,,,,,,,,,,,,,,,,
-582,노란전갈,Item/Consume/Box/New box/quest_125,Itemname/582,Itemdescript/582,2,400,1,,TRUE,0,1,FALSE,0,48000;48001;48002;48003,1;1;1;1,Choice,1,TRUE,FALSE,FALSE
-583,임프,Item/Consume/Box/New box/quest_126,Itemname/583,Itemdescript/583,2,400,2,,TRUE,0,1,FALSE,0,48004;48005;48006;48007,1;1;1;1,Choice,1,TRUE,FALSE,FALSE
-584,드라켄,Item/Consume/Box/New box/quest_122,Itemname/584,Itemdescript/584,2,400,3,,TRUE,0,1,FALSE,0,48008;48009;48010;48011,1;1;1;1,Choice,1,TRUE,FALSE,FALSE
-585,백룡,Item/Consume/Box/New box/quest_108,Itemname/585,Itemdescript/585,2,400,4,,TRUE,0,1,FALSE,0,48012;48013;48014;48015,1;1;1;1,Choice,1,TRUE,FALSE,FALSE
-586,이그니스,Item/Consume/Box/New box/quest_121,Itemname/586,Itemdescript/586,2,400,5,,TRUE,0,1,FALSE,0,48016;48017;48018;48019,1;1;1;1,Choice,1,TRUE,FALSE,FALSE
-587,까치,Item/Consume/Box/New box/quest_146,Itemname/587,Itemdescript/587,2,400,6,,TRUE,0,1,FALSE,0,48020;48021;48022;48023;48024;48025;48026;48027,1;1;1;1;1;1;1;1,Choice,1,TRUE,FALSE,FALSE
-,,,,,,,,,,,,,,,,,,,,
-588,탈리스만 선택 상자,Item/Consume/Box/chest_3,Itemname/588,Itemdescript/588,2,400,6,,TRUE,0,100000000,TRUE,0,1754;1755;1756;1757;1758;1759;1760;1761;1762,1;1;1;1;1;1;1;1;1,Choice,1,TRUE,FALSE,FALSE
-589,탈리스만 무작위 상자,Item/Consume/Box/chest_4,Itemname/589,Itemdescript/589,2,400,6,,TRUE,0,100000000,FALSE,0,1754;1755;1756;1757;1758;1759;1760;1761;1762,1;1;1;1;1;1;1;1;1,Random,0,TRUE,FALSE,FALSE
-590,빛나는 탈리스만 선택 상자,Item/Consume/Box/chest_3,Itemname/590,Itemdescript/590,2,400,7,,TRUE,0,100000000,TRUE,0,1763;1764;1765;1766;1767;1768;1769;1770;1771,1;1;1;1;1;1;1;1;1,Choice,1,TRUE,FALSE,FALSE
-591,빛나는 탈리스만 무작위 상자,Item/Consume/Box/chest_4,Itemname/591,Itemdescript/591,2,400,7,,TRUE,0,100000000,FALSE,0,1763;1764;1765;1766;1767;1768;1769;1770;1771,1;1;1;1;1;1;1;1;1,Random,0,TRUE,FALSE,FALSE
-,,,,,,,,,,,,,,,,,,,,
-592,전 시즌 위장 선택 상자,Item/Consume/Box2/Icon11,Itemname/592,Itemdescript/592,2,400,7,,TRUE,0,0,TRUE,0,40014;40015;40016;40017;40018;40019;40020;40021;40024;40025;40026;40027,1;1;1;1;1;1;1;1;1;1;1;1;1,Choice,1,TRUE,FALSE,FALSE
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-1500,신의 결정,Item/Consume/Potion/HP12,Itemname/1500,Itemdescript/1500,2,101,0,,FALSE,0,0,FALSE,0,500,0,0,0,TRUE,TRUE,FALSE
-1510,HP포션 테스트,Item/Consume/Potion/MP8,Itemname/1510,Itemdescript/1510,2,102,0,,FALSE,0,0,FALSE,0,0,500,0,0,TRUE,FALSE,FALSE
-,,,,,,,,,,,,,,,,,0,,,FALSE
-1004,유일 제작 비법서,Item/Resource/0.Unique2,Itemname/1004,Itemdescript/1004,1,110,2,,TRUE,0,1,FALSE,1,0,0,0,0,TRUE,TRUE,FALSE
-1005,전설 제작 비법서,Item/Resource/2.Legend,Itemname/1005,Itemdescript/1005,1,110,3,,TRUE,0,1,FALSE,1,0,0,0,0,TRUE,TRUE,FALSE
-1006,신화 제작 비법서,Item/Resource/3.Godlike,Itemname/1006,Itemdescript/1006,1,110,4,,TRUE,0,1,FALSE,3,0,0,0,0,TRUE,TRUE,FALSE
-1007,신 제작 비법서,Item/Resource/3.God,Itemname/1007,Itemdescript/1007,1,110,5,,TRUE,0,1,FALSE,3,0,0,0,0,TRUE,TRUE,FALSE
-1010,제작 비법서 조각,Item/ETC/quest_343,Itemname/1010,Itemdescript/1010,1,110,3,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-,,,,,,,,,,,,,,,,,0,,,FALSE
-,,,,,,,,,,,,,,,,,0,,,FALSE
-1501,MP포션 테스트,Item/Consume/Potion/HP0,Itemname/1501,Itemdescript/1501,2,101,1,,FALSE,0,1,FALSE,0,5000,0,0,0,TRUE,FALSE,FALSE
-1502,HP포션1,Item/Consume/Potion/HP1,Itemname/1502,Itemdescript/1502,2,101,2,,FALSE,0,1,FALSE,0,10000,0,0,0,TRUE,FALSE,FALSE
-1503,HP포션2,Item/Consume/Potion/HP2,Itemname/1503,Itemdescript/1503,2,101,3,,FALSE,0,1,FALSE,0,20000,0,0,0,TRUE,FALSE,FALSE
-1504,HP포션3,Item/Consume/Potion/HP3,Itemname/1504,Itemdescript/1504,2,101,4,,FALSE,0,1,FALSE,0,40000,0,0,0,TRUE,FALSE,FALSE
-1505,HP포션5,Item/Consume/Potion/HP4,Itemname/1505,Itemdescript/1505,2,101,5,,FALSE,0,1,FALSE,0,70000,0,0,0,TRUE,FALSE,FALSE
-,,,,,,,,,,,,,,,,,0,,,FALSE
-1530,MP포션1,Item/Consume/Potion/MP0,Itemname/1530,Itemdescript/1530,2,102,1,,FALSE,0,1,FALSE,0,0,5000,0,0,TRUE,FALSE,FALSE
-1531,MP포션2,Item/Consume/Potion/MP1,Itemname/1531,Itemdescript/1531,2,102,2,,FALSE,0,1,FALSE,0,0,10000,0,0,TRUE,FALSE,FALSE
-1532,MP포션3,Item/Consume/Potion/MP2,Itemname/1532,Itemdescript/1532,2,102,3,,FALSE,0,1,FALSE,0,0,20000,0,0,TRUE,FALSE,FALSE
-1533,MP포션4,Item/Consume/Potion/MP3,Itemname/1533,Itemdescript/1533,2,102,4,,FALSE,0,1,FALSE,0,0,40000,0,0,TRUE,FALSE,FALSE
-1534,MP포션5,Item/Consume/Potion/MP4,Itemname/1534,Itemdescript/1534,2,102,5,,FALSE,0,1,FALSE,0,0,70000,0,0,TRUE,FALSE,FALSE
-,,,,,,,,,,,,,,,,,,,,
-1535,HP포션 5%,Item/Consume/Potion/HPP1,Itemname/1535,Itemdescript/1535,2,101,4,,FALSE,0,1,FALSE,0,0,0,0.05,0,TRUE,FALSE,FALSE
-1536,HP포션 7%,Item/Consume/Potion/HPP2,Itemname/1536,Itemdescript/1536,2,101,5,,FALSE,0,1,FALSE,0,0,0,0.07,0,TRUE,FALSE,FALSE
-1537,HP포션 10%,Item/Consume/Potion/HPP3,Itemname/1537,Itemdescript/1537,2,101,6,,FALSE,0,1,FALSE,0,0,0,0.1,0,TRUE,FALSE,FALSE
-1538,HP포션 %,Item/Consume/Potion/HP3,Itemname/1538,Itemdescript/1538,2,101,4,,FALSE,0,800,FALSE,0,0,0,0.01,0,TRUE,FALSE,FALSE
-1539,HP포션 %,Item/Consume/Potion/HP4,Itemname/1539,Itemdescript/1539,2,101,5,,FALSE,0,1200,FALSE,0,0,0,0.01,0,TRUE,FALSE,FALSE
-,,,,,,,,,,,,,,,,,0,,,FALSE
-1540,MP포션 5%,Item/Consume/Potion/MPP1,Itemname/1540,Itemdescript/1540,2,102,4,,FALSE,0,1,FALSE,0,0,0,0,0.05,TRUE,FALSE,FALSE
-1541,MP포션 7%,Item/Consume/Potion/MPP1,Itemname/1541,Itemdescript/1541,2,102,5,,FALSE,0,1,FALSE,0,0,0,0,0.07,TRUE,FALSE,FALSE
-1542,MP포션 10%,Item/Consume/Potion/MPP3,Itemname/1542,Itemdescript/1542,2,102,6,,FALSE,0,1,FALSE,0,0,0,0,0.1,TRUE,FALSE,FALSE
-1543,MP포션4,Item/Consume/Potion/MP3,Itemname/1543,Itemdescript/1543,2,102,4,,FALSE,0,800,FALSE,0,0,0,0,0.01,TRUE,FALSE,FALSE
-1544,MP포션5,Item/Consume/Potion/MP4,Itemname/1544,Itemdescript/1544,2,102,5,,FALSE,0,1200,FALSE,0,0,0,0,0.01,TRUE,FALSE,FALSE
-,,,,,,,,,,,,,,,,,,,,FALSE
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-1700,장비 파편,Item/Resource/crafting/0,Itemname/1700,Itemdescript/1700,1,111,0,,FALSE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-1710,스킬 조각,Item/ETC/Skillpaper,Itemname/1710,Itemdescript/1710,1,111,5,,FALSE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-1711,던전 입장권,Item/ETC/DungeonPass,Itemname/1711,Itemdescript/1711,3,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-1712,제단 강화석,Item/ETC/OpenBox,Itemname/1712,Itemdescript/1712,1,111,5,,TRUE,0,1,FALSE,3,0,0,0,0,TRUE,TRUE,FALSE
-,,,,,,,,,,,,,,,,,0,,,FALSE
-1713,장비 전승석,Item/ETC/전승석,Itemname/1713,Itemdescript/1713,1,117,6,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-1714,개미굴 제단 강화석,Item/Resource/신악세파편칼날,Itemname/1714,Itemdescript/1714,1,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-1715,개미굴 증표,Item/Resource/DungeonChange,Itemname/1715,Itemdescript/1715,1,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-,,,,,,,,,,,,,,,,,,,,
-1716,스킬 룬 1,Item/ETC/RUNE1,Itemname/1716,Itemdescript/1716,1,111,5,,FALSE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-1717,스킬 룬 2,Item/ETC/RUNE2,Itemname/1717,Itemdescript/1717,1,111,5,,FALSE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-1718,스킬 룬 3,Item/ETC/RUNE3,Itemname/1718,Itemdescript/1718,1,111,6,,FALSE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-1719,스킬 룬 4,Item/ETC/RUNE4,Itemname/1719,Itemdescript/1719,1,111,6,,FALSE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-1720,스킬 룬 5,Item/ETC/RUNE5,Itemname/1720,Itemdescript/1720,1,111,6,,FALSE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-,,,,,,,,,,,,,,,,,,,,
-1750,마법사의 묘 입장권,Item/ETC/DungeonPass2,Itemname/1750,Itemdescript/1750,3,111,6,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-,,,,,,,,,,,,,,,,,,,,
-1751,장비 변경권,Item/Scroll/Scroll12,Itemname/1751,Itemdescript/1751,1,117,6,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-1752,발록의 정수1~10,Item/Resource/Dungeon_Boss6,Itemname/1752,Itemdescript/1752,3,111,7,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-1753,발록의 정수11~15,Item/Resource/Dungeon_Boss6,Itemname/1753,Itemdescript/1753,3,111,7,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-1754,대지의 탈리스만 코어,Item/Talisman/0,Itemname/1754,Itemdescript/1754,6,407,7,,FALSE,0,1,FALSE,1,T1000,0,0,0,TRUE,0,FALSE
-1755,죽음의 탈리스만 코어,Item/Talisman/1,Itemname/1755,Itemdescript/1755,6,407,7,,FALSE,0,1,FALSE,1,T1001,0,0,0,TRUE,0,FALSE
-1756,칼날의 탈리스만 코어,Item/Talisman/2,Itemname/1756,Itemdescript/1756,6,407,7,,FALSE,0,1,FALSE,1,T1002,0,0,0,TRUE,0,FALSE
-1757,용의 탈리스만 코어,Item/Talisman/3,Itemname/1757,Itemdescript/1757,6,407,7,,FALSE,0,1,FALSE,1,T1003,0,0,0,TRUE,0,FALSE
-1758,독사의 탈리스만 코어,Item/Talisman/4,Itemname/1758,Itemdescript/1758,6,407,7,,FALSE,0,1,FALSE,1,T1004,0,0,0,TRUE,0,FALSE
-1759,번개의 탈리스만 코어,Item/Talisman/5,Itemname/1759,Itemdescript/1759,6,407,7,,FALSE,0,1,FALSE,1,T1005,0,0,0,TRUE,0,FALSE
-1760,빛의 탈리스만 코어,Item/Talisman/6,Itemname/1760,Itemdescript/1760,6,407,7,,FALSE,0,1,FALSE,1,T1006,0,0,0,TRUE,0,FALSE
-1761,거인의 탈리스만 코어,Item/Talisman/7,Itemname/1761,Itemdescript/1761,6,407,7,,FALSE,0,1,FALSE,1,T1007,0,0,0,TRUE,0,FALSE
-1762,키메라의 탈리스만 코어,Item/Talisman/8,Itemname/1762,Itemdescript/1762,6,407,7,,FALSE,0,1,FALSE,1,T1008,0,0,0,TRUE,0,FALSE
-1763,빛나는 대지의 탈리스만 코어,Item/Talisman/0,Itemname/1763,Itemdescript/1763,7,407,7,,FALSE,0,1,FALSE,1,T1000,1,0,1,TRUE,0,FALSE
-1764,빛나는 죽음의 탈리스만 코어,Item/Talisman/1,Itemname/1764,Itemdescript/1764,7,407,7,,FALSE,0,1,FALSE,1,T1001,1,0,1,TRUE,0,FALSE
-1765,빛나는 칼날의 탈리스만 코어,Item/Talisman/2,Itemname/1765,Itemdescript/1765,7,407,7,,FALSE,0,1,FALSE,1,T1002,1,0,1,TRUE,0,FALSE
-1766,빛나는 용의 탈리스만 코어,Item/Talisman/3,Itemname/1766,Itemdescript/1766,7,407,7,,FALSE,0,1,FALSE,1,T1003,1,0,1,TRUE,0,FALSE
-1767,빛나는 독사의 탈리스만 코어,Item/Talisman/4,Itemname/1767,Itemdescript/1767,7,407,7,,FALSE,0,1,FALSE,1,T1004,1,0,1,TRUE,0,FALSE
-1768,빛나는 번개의 탈리스만 코어,Item/Talisman/5,Itemname/1768,Itemdescript/1768,7,407,7,,FALSE,0,1,FALSE,1,T1005,1,0,1,TRUE,0,FALSE
-1769,빛나는 빛의 탈리스만 코어,Item/Talisman/6,Itemname/1769,Itemdescript/1769,7,407,7,,FALSE,0,1,FALSE,1,T1006,1,0,1,TRUE,0,FALSE
-1770,빛나는 거인의 탈리스만 코어,Item/Talisman/7,Itemname/1770,Itemdescript/1770,7,407,7,,FALSE,0,1,FALSE,1,T1007,1,0,1,TRUE,0,FALSE
-1771,빛나는 키메라의 탈리스만 코어,Item/Talisman/8,Itemname/1771,Itemdescript/1771,7,407,7,,FALSE,0,1,FALSE,1,T1008,1,0,1,TRUE,0,FALSE
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-99000,제련석,Item/Resource/acientresource/제련석,Itemname/99000,Itemdescript/99000,3,111,3,,FALSE,0,1,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-99001,룬 제련석,Item/룬/Icon27,Itemname/99001,Itemdescript/99001,3,111,5,,FALSE,0,1,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-99002,최상급 제련석,Item/Resource/acientresource/제련석,Itemname/99002,Itemdescript/99002,3,111,3,,FALSE,0,1,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-99003,최고급 제련석,Item/Resource/acientresource/제련석,Itemname/99003,Itemdescript/99003,3,111,4,,FALSE,0,1,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-보스재료,,,,,,,,,,,,,,,,,0,,,FALSE
-2900,토벌 증표[뱀장어],Item/Resource/tobul,Itemname/2900,Itemdescript/2900,4,111,6,,FALSE,0,1,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE
-2901,토벌 증표[심해어],Item/Resource/tobul,Itemname/2901,Itemdescript/2901,4,111,6,,FALSE,0,1,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE
-2902,토벌 증표[공허 촉수],Item/Resource/tobul,Itemname/2902,Itemdescript/2902,4,111,6,,FALSE,0,1,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE
-2903,토벌 증표[재앙의 씨앗],Item/Resource/tobul,Itemname/2903,Itemdescript/2903,4,111,6,,FALSE,0,1,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE
-2904,토벌 증표[뱀장어],Item/Resource/tobul,Itemname/2904,Itemdescript/2904,4,111,6,,FALSE,0,1,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE
-2905,토벌 증표[심해어],Item/Resource/tobul,Itemname/2905,Itemdescript/2905,4,111,6,,FALSE,0,1,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE
-2906,토벌 증표[공허 촉수],Item/Resource/tobul,Itemname/2906,Itemdescript/2906,4,111,6,,FALSE,0,1,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE
-2907,토벌 증표[재앙의 씨앗],Item/Resource/tobul,Itemname/2907,Itemdescript/2907,4,111,6,,FALSE,0,1,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE
-2908,레이드 토벌 증표,Item/Resource/tobul,Itemname/2908,Itemdescript/2908,4,111,6,,FALSE,0,1,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-3000,감염된 농장 보스 재료,Item/Resource/Dungeon_Boss1,Itemname/3000,Itemdescript/3000,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-3001,늪지대 보스 재료,Item/Resource/Dungeon_Boss2,Itemname/3001,Itemdescript/3001,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-3002,투탕카멘의 묘 보스 재료,Item/Resource/Dungeon_Boss3,Itemname/3002,Itemdescript/3002,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-3003,지하 감옥 보스 재료,Item/Resource/Dungeon_Boss4,Itemname/3003,Itemdescript/3003,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-3004,화산 보스 재료,Item/Resource/Dungeon_Boss5,Itemname/3004,Itemdescript/3004,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-3005,마계 중심부 재료,Item/Resource/Dungeon_Boss6,Itemname/3005,Itemdescript/3005,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-3006,샤이아 재료,Item/Resource/Dungeon_Boss7,Itemname/3006,Itemdescript/3006,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-3007,고대 드래곤의 마력 뼛조각,Item/Resource/Dungeon_Boss8,Itemname/3007,Itemdescript/3007,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-3008,제국 금고 열쇠,Item/Resource/Dungeon_Boss9,Itemname/3008,Itemdescript/3008,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-3009,응축된 마력이 담긴 병,Item/Resource/Dungeon_Boss11,Itemname/3009,Itemdescript/3009,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-3010,노스 블로우의 심장,Item/Resource/Dungeon_Boss12,Itemname/3010,Itemdescript/3010,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-3011,공허의 정수,Item/Resource/공허의정수,Itemname/3011,Itemdescript/3011,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-3012,던전 코어,Item/Resource/공허의정수,Itemname/3012,Itemdescript/3012,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-3013,악몽 던전 코어,Item/Resource/공허의정수,Itemname/3013,Itemdescript/3013,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-3014,지옥 던전 코어,Item/Resource/공허의정수,Itemname/3014,Itemdescript/3014,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,0,,,FALSE
-4000, ★1 신의 증표,Item/ETC/goldsafe2,Itemname/4000,Itemdescript/4000,3,114,1,,FALSE,0,20000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-4001, ★2 신의 증표,Item/ETC/goldsafe2,Itemname/4001,Itemdescript/4001,3,114,2,,FALSE,0,50000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-4002, ★3 신의 증표,Item/ETC/goldsafe2,Itemname/4002,Itemdescript/4002,3,114,3,,FALSE,0,100000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-4003, ★4 신의 증표,Item/ETC/goldsafe2,Itemname/4003,Itemdescript/4003,3,114,4,,FALSE,0,300000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-4004, ★5 신의 증표,Item/ETC/goldsafe2,Itemname/4004,Itemdescript/4004,3,114,5,,FALSE,0,1000000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-4005, ★6 신의 증표,Item/ETC/goldsafe2,Itemname/4005,Itemdescript/4005,3,114,6,,FALSE,0,5000000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-4006, ★7 신의 증표,Item/ETC/goldsafe2,Itemname/4006,Itemdescript/4006,3,114,7,,FALSE,0,30000000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-4007, ★8 신의 증표,Item/ETC/goldsafe2,Itemname/4007,Itemdescript/4007,3,114,4,,FALSE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-4008, ★9 신의 증표,Item/ETC/goldsafe2,Itemname/4008,Itemdescript/4008,3,114,5,,FALSE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-4009, ★10 신의 증표,Item/ETC/goldsafe2,Itemname/4009,Itemdescript/4009,3,114,5,,FALSE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-80000,평타 강화,Item/Skillbook/44,Itemname/80000,Itemdescript/80000,2,999,5,Physic,TRUE,0,1500000000,FALSE,0,5000,,All,0,TRUE,FALSE,TRUE
-80001,그레이트 샤우트,Item/Skillbook/5001,Itemname/80001,Itemdescript/80001,2,999,5,all,TRUE,0,1500000000,FALSE,0,5001,,All,0,TRUE,FALSE,TRUE
-80002,그레이트 블레싱,Item/Skillbook/5002,Itemname/80002,Itemdescript/80002,2,999,5,Physic,TRUE,0,1500000000,FALSE,0,5002,,All,0,TRUE,FALSE,TRUE
-80003,그레이드 샤프아이,Item/Skillbook/5003,Itemname/80003,Itemdescript/80003,2,999,5,all,TRUE,0,1500000000,FALSE,0,5003,,All,0,TRUE,FALSE,TRUE
-80004,매직 캐스터,Item/Skillbook/5004,Itemname/80004,Itemdescript/80004,2,999,5,Magic,TRUE,0,1500000000,FALSE,0,5004,,All,0,TRUE,FALSE,TRUE
-80005,메테오스트라이크,Item/Skillbook/5005,Itemname/80005,Itemdescript/80005,2,999,5,Magic,TRUE,0,3000000000,FALSE,0,5005,,All,0,TRUE,FALSE,TRUE
-80006,다크스트라이크,Item/Skillbook/5006,Itemname/80006,Itemdescript/80006,2,999,5,Physic,TRUE,0,3000000000,FALSE,0,5006,,All,0,TRUE,FALSE,TRUE
-80007,시체 폭발 - 그린,Item/Skillbook/5007,Itemname/80007,Itemdescript/80007,2,999,5,Dot,TRUE,0,3000000000,FALSE,0,5007,,All,0,TRUE,FALSE,TRUE
-80008,시체 폭발 - 레드,Item/Skillbook/5007,Itemname/80008,Itemdescript/80008,2,999,5,Dot,TRUE,0,3000000000,FALSE,0,5008,,All,0,TRUE,FALSE,TRUE
-80009,시체 폭발 - 퍼플,Item/Skillbook/5007,Itemname/80009,Itemdescript/80009,2,999,6,Dot,TRUE,0,5000000000,FALSE,0,5009,,All,0,TRUE,FALSE,TRUE
-80010,차원참,Item/Skillbook/5010,Itemname/80010,Itemdescript/80010,2,999,6,Physic,TRUE,0,5000000000,FALSE,0,5010,,All,0,TRUE,FALSE,TRUE
-80011,드래곤 브레스,Item/Skillbook/5005,Itemname/80011,Itemdescript/80011,2,999,6,Magic,TRUE,0,5000000000,FALSE,0,5011,,All,0,TRUE,FALSE,TRUE
-80012,피어싱,Item/Skillbook/5012,Itemname/80012,Itemdescript/80012,2,999,6,Physic,TRUE,0,5000000000,FALSE,0,5012,,All,0,TRUE,FALSE,TRUE
-80013,매직볼트,Item/Skillbook/5005,Itemname/80013,Itemdescript/80013,2,999,6,Magic,TRUE,0,5000000000,FALSE,0,5013,,All,0,TRUE,FALSE,TRUE
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-유물,,,,,,,,,,,,,,,,,,,,
-90000,갑옷 조각,Item/유물/갑옷조각,Itemname/90000,Itemdescript/90000,4,111,4,,FALSE,0,5000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-90001,거울,Item/유물/거울,Itemname/90001,Itemdescript/90001,4,111,4,,FALSE,0,5000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-90002,금닢,Item/유물/금닢,Itemname/90002,Itemdescript/90002,4,111,4,,FALSE,0,5000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-90003,독병,Item/유물/독병,Itemname/90003,Itemdescript/90003,4,111,5,,FALSE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-90004,오리,Item/유물/레몬덕,Itemname/90004,Itemdescript/90004,4,111,5,,FALSE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-90005,마녀의 빗자루,Item/유물/마녀의빗자루,Itemname/90005,Itemdescript/90005,4,111,5,,FALSE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-90006,양초,Item/유물/성난양초,Itemname/90006,Itemdescript/90006,4,111,6,,TRUE,0,20000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-90007,죄수의 족쇄,Item/유물/죄수의족쇄,Itemname/90007,Itemdescript/90007,4,111,6,,TRUE,0,20000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
-90008,피닉스의 부리,Item/유물/피닉스의부리,Itemname/90008,Itemdescript/90008,4,111,6,,TRUE,0,20000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE
+id,descriptionKor,sprite,name,description,itemtype,itemsubtype,rare,Recotype,droprare,buy,sell,dropalert,itemiconnew,A,B,C,D,Isstack,IsCrafting,IsEquipBox,Alert
+인덱스,,탄산음료,이름,아이템 정보,종류,주문서 등 2차분류,등급,,리워드때 이팩트용,구매 가격,판매 가격,드롭 시 전체 알람,드랍알림 0없음1좋음,상자아이템번호,상자아이템개수',상자 특성 All Random Choice,초이스면 초이스 개수,아이템이 겹치는가,,장비상자박승인가,
+1000,골드,Item/ETC/Gold,Itemname/1000,Itemdescript/1000,0,107,0,,FALSE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1001,불꽃,Item/ETC/Fire,Itemname/1001,Itemdescript/1001,0,108,0,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1002,경험치,Item/ETC/Exp,Itemname/1002,Itemdescript/1002,0,109,0,,FALSE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1003,마일리지,Item/ETC/Fire2,Itemname/1003,Itemdescript/1003,3,115,0,,FALSE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1011,경험치,Item/ETC/Exp,Itemname/1002,Itemdescript/1002,0,109,0,,FALSE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+999,업적 경험치,Item/ETC/Exp,Itemname/999,Itemdescript/999,0,112,0,,FALSE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+998,시즌 경험치,Item/ETC/Exp,Itemname/998,Itemdescript/998,0,998,0,,FALSE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+996,초보자인장,Item/ETC/Exp,Itemname/998,Itemdescript/998,1,111,0,,FALSE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+997,베테랑인장,Item/ETC/Exp,Itemname/998,Itemdescript/998,1,111,0,,FALSE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+10,최하급 결정,Item/ETC/0_Item,Itemname/10,Itemdescript/10,1,111,0,,FALSE,0,50,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+11,하급 결정,Item/ETC/1_Item,Itemname/11,Itemdescript/11,1,111,1,,FALSE,0,100,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+12,중급 결정,Item/ETC/2_Item,Itemname/12,Itemdescript/12,1,111,2,,FALSE,0,200,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+13,상급 결정,Item/ETC/3_Item,Itemname/13,Itemdescript/13,1,111,3,,FALSE,0,400,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+14,최상급 결정,Item/ETC/4_Item,Itemname/14,Itemdescript/14,1,111,4,,FALSE,0,800,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+15,신의 결정,Item/ETC/5_Item,Itemname/15,Itemdescript/15,1,111,5,,FALSE,0,1600,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+16,악몽의 파편 악몽사냥터 드랍,Item/Resource/Scale2,Itemname/16,Itemdescript/16,1,111,5,,FALSE,0,1600,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+17,1억 골드,Item/유물/bag3,Itemname/17,Itemdescript/17,1,111,6,,TRUE,0,100000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+18,지옥의 파편,Item/Resource/완벽한룬의기억 1,Itemname/18,Itemdescript/18,1,111,6,,TRUE,0,3000,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+19,지옥 레이드 결정,Item/Resource/신화악세파편,Itemname/19,Itemdescript/19,1,111,6,,TRUE,0,100000,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+50000,악몽 악세서리 승급석Ⅰ,Item/Resource/DungeonChange1,Itemname/50000,Itemdescript/50000,1,111,6,,TRUE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+50001,룬 승급석,Item/룬/Icon32,Itemname/50001,Itemdescript/50001,1,111,6,,TRUE,0,100000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+20,레이드 토큰,Item/ETC/pvpcoin,Itemname/20,Itemdescript/20,1,100,6,,FALSE,0,1,FALSE,1,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+50002,장비 무기 강화석,Item/Resource/Enchant_Weapon,Itemname/50002,Itemdescript/50002,1,111,6,,TRUE,0,1000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+50003,장비 방어구 강화석,Item/Resource/Enchant_Armor,Itemname/50003,Itemdescript/50003,1,111,6,,TRUE,0,1000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+50004,장비 악세서리 강화석,Item/Resource/Enchant_Pet,Itemname/50004,Itemdescript/50004,1,111,6,,TRUE,0,1000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+50005,강화 촉진 가루,Item/Resource/강화촉진제,Itemname/50005,Itemdescript/50005,1,111,6,,TRUE,0,1000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+50006,고급 펫 상자 티켓,Item/ETC2/50006,Itemname/50006,Itemdescript/50006,1,111,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+50007,펫 초월석,Item/Resource/material_06,Itemname/50007,Itemdescript/50007,1,111,6,,TRUE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+50008,장비 룬 강화석,Item/Resource/jinRune,Itemname/50008,Itemdescript/50008,1,111,7,,TRUE,0,5000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+21,룬 파편,Item/룬/Icon30,Itemname/21,Itemdescript/21,1,111,5,,FALSE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+22,룬 완성석,Item/룬/Icon36,Itemname/22,Itemdescript/22,1,111,6,,FALSE,0,2000000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,TRUE
+,,,,,,,,,,,,,,,,,,,,,
+,시즌 2,,,,,,,,,,,,,,,,,,,,
+23,불지옥 파편,,Itemname/23,Itemdescript/23,1,111,5,,FALSE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+24,지옥 레이드 결정,Item/Resource/신화악세파편,Itemname/24,Itemdescript/24,1,111,5,,FALSE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+25,,,Itemname/25,Itemdescript/25,1,111,5,,FALSE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+26,신 장비 파편,Item/Season2/0,Itemname/26,Itemdescript/26,1,111,5,,FALSE,0,5000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+27,신 장비 제작석,Item/Season2/1,Itemname/27,Itemdescript/27,1,111,6,,FALSE,0,10,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+28,신전의 보옥,Item/Season2/2,Itemname/28,Itemdescript/28,1,111,7,,FALSE,0,500000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,TRUE
+29,정제된 신의 힘,Item/Season2/3,Itemname/29,Itemdescript/29,1,111,7,,FALSE,0,1000000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,TRUE
+30,"파티 레이드 보상 횟수권,.",Item/Consume/Paper/quest_90,Itemname/30,Itemdescript/30,2,401,6,,TRUE,0,1,FALSE,1,파티레이드주간횟수,1,weekly,0,TRUE,FALSE,FALSE,FALSE
+31,신 장비 제작석,Item/Season2/1,Itemname/31,Itemdescript/31,1,111,6,,FALSE,0,100000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+32,새싹 토큰 (무지개),Item/Event/rain1,Itemname/32,Itemdescript/32,1,111,6,,FALSE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+40000,100만골드,Item/유물/bag1,Itemname/40000,Itemdescript/40000,1,111,4,,TRUE,0,1000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+40001,1천만골드,Item/유물/bag2,Itemname/40001,Itemdescript/40001,1,111,5,,TRUE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+40002,1억 골드,Item/유물/bag3,Itemname/40002,Itemdescript/40002,1,111,6,,TRUE,0,100000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+40003,룰렛 열쇠 파편A,Item/Consume/Box2/Icon25,Itemname/40003,Itemdescript/40003,1,111,6,,TRUE,0,1000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+40004,룰렛 열쇠 파편B,Item/Consume/Box2/Icon27,Itemname/40004,Itemdescript/40004,1,111,6,,TRUE,0,5000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+40005,룰렛 열쇠 파편C,Item/Consume/Box2/Icon26,Itemname/40005,Itemdescript/40005,1,111,6,,TRUE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+40006,프리미엄 룰렛 코인,Item/Consume/Box2/Icon38,Itemname/40006,Itemdescript/40006,1,111,6,,TRUE,0,10000000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+40007,크리스마스 룰렛 아이템,Item/Event/크리스마스/01_Gingerbread_Whole,Itemname/40007,Itemdescript/40007,1,111,6,,TRUE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+위장,,,,,,,,,,,,,,,,,,,,,
+40008,서큐버스,Transform/1020,Itemname/40008,Itemdescript/40008,2,403,6,,FALSE,0,1,FALSE,1,A2000,0,0,0,TRUE,0,FALSE,FALSE
+40009,뱀파이어,Transform/1007,Itemname/40009,Itemdescript/40009,2,403,6,,FALSE,0,1,FALSE,1,A2001,0,0,0,TRUE,0,FALSE,FALSE
+40010,문어 전사,Transform/문어전사,Itemname/40010,Itemdescript/40010,2,403,6,,FALSE,0,1,FALSE,1,A2002,0,0,0,TRUE,0,FALSE,FALSE
+40011,문어 마법사,Transform/문어마법사,Itemname/40011,Itemdescript/40011,2,403,6,,FALSE,0,1,FALSE,1,A2003,0,0,0,TRUE,0,FALSE,FALSE
+40012,독문어,Transform/독문어,Itemname/40012,Itemdescript/40012,2,403,6,,FALSE,0,1,FALSE,1,A2004,0,0,0,TRUE,0,FALSE,FALSE
+40013,문어왕,Transform/문어왕 - 복사본,Itemname/40013,Itemdescript/40013,2,403,6,,FALSE,0,1,FALSE,1,A2005,0,0,0,TRUE,0,FALSE,FALSE
+40014,크리스마스 위장,Transform/산타,Itemname/40014,Itemdescript/40014,2,403,6,,FALSE,0,1,FALSE,1,A2006,0,0,0,TRUE,0,FALSE,FALSE
+40015,크리스마스 무기,Item/Event/크리스마스/크리스마스사탕 1,Itemname/40015,Itemdescript/40015,2,403,6,,FALSE,0,1,FALSE,1,A2007,0,0,0,TRUE,0,FALSE,FALSE
+40016,설날위장구매(대장군),Transform/대장군,Itemname/40016,Itemdescript/40016,2,403,6,,FALSE,0,1,FALSE,1,A2008,0,0,0,TRUE,0,FALSE,FALSE
+40017,설날위장이벤트(사또),Transform/사또,Itemname/40017,Itemdescript/40017,2,403,6,,FALSE,0,1,FALSE,1,A2009,0,0,0,TRUE,0,FALSE,FALSE
+40018,월도,Item/위장/36,Itemname/40018,Itemdescript/40018,2,403,6,,FALSE,0,1,FALSE,1,A2049,0,0,0,TRUE,0,FALSE,FALSE
+40019,망령 기사,Transform/망령기사,Itemname/40019,Itemdescript/40019,2,403,6,,FALSE,0,1,FALSE,1,A2010,0,0,0,TRUE,0,FALSE,FALSE
+40020,디아블로,Transform/디아블로,Itemname/40020,Itemdescript/40020,2,403,6,,FALSE,0,1,FALSE,1,A2050,0,0,0,TRUE,0,FALSE,FALSE
+40021,겁화,Item/위장/37,Itemname/40021,Itemdescript/40021,2,403,6,,FALSE,0,1,FALSE,1,A2051,0,0,0,TRUE,0,FALSE,FALSE
+40022,프리미엄 위장,Transform/바이킹,Itemname/40022,Itemdescript/40022,2,403,7,,FALSE,0,1,FALSE,1,A2052,0,0,0,TRUE,0,FALSE,FALSE
+40023,프리미엄 위장 무기,Item/위장/38,Itemname/40023,Itemdescript/40023,2,403,7,,FALSE,0,1,FALSE,1,A2053,0,0,0,TRUE,0,FALSE,FALSE
+40024,양날 파괴  도끼,Item/위장/39,Itemname/40024,Itemdescript/40024,2,403,6,,FALSE,0,1,FALSE,1,A2054,0,0,0,TRUE,0,FALSE,FALSE
+40025,제우스,Transform/제우스,Itemname/40025,Itemdescript/40025,2,403,6,,FALSE,0,1,FALSE,1,A2055,0,0,0,TRUE,0,FALSE,FALSE
+40026,제우스의번개,Item/위장/40,Itemname/40026,Itemdescript/40026,2,403,6,,FALSE,0,1,FALSE,1,A2056,0,0,0,TRUE,0,FALSE,FALSE
+40027,도깨비 방망이,Item/위장/41,Itemname/40027,Itemdescript/40027,2,403,6,,FALSE,0,1,FALSE,1,A2057,0,0,0,TRUE,0,FALSE,FALSE
+40028,여름 서퍼,Transform/서핑,Itemname/40028,Itemdescript/40028,2,403,6,,FALSE,0,1,FALSE,1,A2058,0,0,0,TRUE,0,FALSE,FALSE
+40029,트리슈라,Item/위장/42,Itemname/40029,Itemdescript/40029,2,403,6,,FALSE,0,1,FALSE,1,A2059,0,0,0,TRUE,0,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+48000,북극곰,Item/Pet/0,petname/1000,Itemdescript/48000,2,406,1,,FALSE,0,1,FALSE,1,P1000,0,0,0,TRUE,0,FALSE,FALSE
+48001,사막여우,Item/Pet/1,petname/1001,Itemdescript/48000,2,406,1,,FALSE,0,1,FALSE,1,P1001,0,0,0,TRUE,0,FALSE,FALSE
+48002,노란전갈,Item/Pet/2,petname/1002,Itemdescript/48000,2,406,1,,FALSE,0,1,FALSE,1,P1002,0,0,0,TRUE,0,FALSE,FALSE
+48003,하운드,Item/Pet/3,petname/1003,Itemdescript/48000,2,406,1,,FALSE,0,1,FALSE,1,P1003,0,0,0,TRUE,0,FALSE,FALSE
+48004,임프,Item/Pet/4,petname/1004,Itemdescript/48000,2,406,2,,FALSE,0,1,FALSE,1,P1004,0,0,0,TRUE,0,FALSE,FALSE
+48005,아이스 가고일,Item/Pet/5,petname/1005,Itemdescript/48000,2,406,2,,FALSE,0,1,FALSE,1,P1005,0,0,0,TRUE,0,FALSE,FALSE
+48006,포이즌 임프,Item/Pet/6,petname/1006,Itemdescript/48000,2,406,2,,FALSE,0,1,FALSE,1,P1006,0,0,0,TRUE,0,FALSE,FALSE
+48007,고스트,Item/Pet/7,petname/1007,Itemdescript/48000,2,406,2,,FALSE,0,1,FALSE,1,P1007,0,0,0,TRUE,0,FALSE,FALSE
+48008,드라켄,Item/Pet/8,petname/1008,Itemdescript/48000,2,406,3,,FALSE,0,1,FALSE,1,P1008,0,0,0,TRUE,0,FALSE,FALSE
+48009,옥토퍼즈,Item/Pet/9,petname/1009,Itemdescript/48000,2,406,3,,FALSE,0,1,FALSE,1,P1009,0,0,0,TRUE,0,FALSE,FALSE
+48010,발록,Item/Pet/10,petname/1010,Itemdescript/48000,2,406,3,,FALSE,0,1,FALSE,1,P1010,0,0,0,TRUE,0,FALSE,FALSE
+48011,리퍼,Item/Pet/11,petname/1011,Itemdescript/48000,2,406,3,,FALSE,0,1,FALSE,1,P1011,0,0,0,TRUE,0,FALSE,FALSE
+48012,적룡,Item/Pet/12,petname/1012,Itemdescript/48000,2,406,4,,FALSE,0,1,FALSE,1,P1012,0,0,0,TRUE,0,FALSE,FALSE
+48013,백룡,Item/Pet/13,petname/1013,Itemdescript/48000,2,406,4,,FALSE,0,1,FALSE,1,P1013,0,0,0,TRUE,0,FALSE,FALSE
+48014,독룡,Item/Pet/14,petname/1014,Itemdescript/48000,2,406,4,,FALSE,0,1,FALSE,1,P1014,0,0,0,TRUE,0,FALSE,FALSE
+48015,악룡,Item/Pet/15,petname/1015,Itemdescript/48000,2,406,4,,FALSE,0,1,FALSE,1,P1015,0,0,0,TRUE,0,FALSE,FALSE
+48016,이그니스,Item/Pet/16,petname/1016,Itemdescript/48000,2,406,5,,FALSE,0,1,FALSE,1,P1016,0,0,0,TRUE,0,FALSE,FALSE
+48017,스핑크스,Item/Pet/17,petname/1017,Itemdescript/48000,2,406,5,,FALSE,0,1,FALSE,1,P1017,0,0,0,TRUE,0,FALSE,FALSE
+48018,카흐마,Item/Pet/18,petname/1018,Itemdescript/48000,2,406,5,,FALSE,0,1,FALSE,1,P1018,0,0,0,TRUE,0,FALSE,FALSE
+48019,Missing,Item/Pet/19,petname/1019,Itemdescript/48000,2,406,5,,FALSE,0,1,FALSE,1,P1019,0,0,0,TRUE,0,FALSE,FALSE
+48020,까치,Item/Pet/20,petname/1020,Itemdescript/48000,2,406,6,,FALSE,0,1,FALSE,1,P1020,0,0,0,TRUE,0,FALSE,FALSE
+48021,뱁새,Item/Pet/21,petname/1021,Itemdescript/48000,2,406,6,,FALSE,0,1,FALSE,1,P1021,0,0,0,TRUE,0,FALSE,FALSE
+48022,유령나무,Item/Pet/22,petname/1022,Itemdescript/48000,2,406,6,,FALSE,0,1,FALSE,1,P1022,0,0,0,TRUE,0,FALSE,FALSE
+48023,루돌프,Item/Pet/23,petname/1023,Itemdescript/48000,2,406,6,,FALSE,0,1,FALSE,1,P1023,0,0,0,TRUE,0,FALSE,FALSE
+48024,붉은 갈기 검은용,Item/Pet/24,petname/1024,Itemdescript/48000,2,406,6,,FALSE,0,1,FALSE,1,P1024,0,0,0,TRUE,0,FALSE,FALSE
+48025,푸른 갈기 검은용,Item/Pet/25,petname/1025,Itemdescript/48000,2,406,6,,FALSE,0,1,FALSE,1,P1025,0,0,0,TRUE,0,FALSE,FALSE
+48026,녹빛 갈기 검은용,Item/Pet/26,petname/1026,Itemdescript/48000,2,406,6,,FALSE,0,1,FALSE,1,P1026,0,0,0,TRUE,0,FALSE,FALSE
+48027,황금 갈기 검은용,Item/Pet/27,petname/1027,Itemdescript/48000,2,406,6,,FALSE,0,1,FALSE,1,P1027,0,0,0,TRUE,0,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+1000001,All Stat 20,Item/ETC/hunter,Itemname/1000001,Itemdescript/1000001,0,200,1,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1000002,All Stat 30,Item/ETC/hunter,Itemname/1000002,Itemdescript/1000002,0,200,2,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1000003,All Stat 40,Item/ETC/hunter,Itemname/1000003,Itemdescript/1000003,0,200,2,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1000004,All Stat 50,Item/ETC/hunter,Itemname/1000004,Itemdescript/1000004,0,200,3,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1000005,All Stat 60,Item/ETC/hunter,Itemname/1000005,Itemdescript/1000005,0,200,3,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1000006,All Stat 70,Item/ETC/hunter,Itemname/1000006,Itemdescript/1000006,0,200,4,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1000007,All Stat 80,Item/ETC/hunter,Itemname/1000007,Itemdescript/1000007,0,200,4,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1000008,All Stat 90,Item/ETC/hunter,Itemname/1000008,Itemdescript/1000008,0,200,5,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1000009,All Stat 100,Item/ETC/hunter,Itemname/1000009,Itemdescript/1000009,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1000010,All Stat 110,Item/ETC/hunter,Itemname/1000010,Itemdescript/1000010,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1000011,All Stat 120,Item/ETC/hunter,Itemname/1000011,Itemdescript/1000011,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1000012,All Stat 130,Item/ETC/hunter,Itemname/1000012,Itemdescript/1000012,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1000013,All Stat 140,Item/ETC/hunter,Itemname/1000013,Itemdescript/1000013,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1000014,All Stat 150,Item/ETC/hunter,Itemname/1000014,Itemdescript/1000014,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1000015,All Stat 160,Item/ETC/hunter,Itemname/1000015,Itemdescript/1000015,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1000016,All Stat 170,Item/ETC/hunter,Itemname/1000016,Itemdescript/1000016,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1000017,All Stat 180,Item/ETC/hunter,Itemname/1000017,Itemdescript/1000017,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1000018,All Stat 190,Item/ETC/hunter,Itemname/1000018,Itemdescript/1000018,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1000019,All Stat 200,Item/ETC/hunter,Itemname/1000019,Itemdescript/1000019,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1000020,All Stat 210,Item/ETC/hunter,Itemname/1000020,Itemdescript/1000020,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1000021,All Stat 220,Item/ETC/hunter,Itemname/1000021,Itemdescript/1000021,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1000022,All Stat 230,Item/ETC/hunter,Itemname/1000022,Itemdescript/1000022,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1000023,All Stat 240,Item/ETC/hunter,Itemname/1000023,Itemdescript/1000023,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1000024,All Stat 250,Item/ETC/hunter,Itemname/1000024,Itemdescript/1000024,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1000025,All Stat 260,Item/ETC/hunter,Itemname/1000025,Itemdescript/1000025,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1000026,All Stat 270,Item/ETC/hunter,Itemname/1000026,Itemdescript/1000026,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1000027,All Stat 280,Item/ETC/hunter,Itemname/1000027,Itemdescript/1000027,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1000028,All Stat 290,Item/ETC/hunter,Itemname/1000028,Itemdescript/1000028,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+1000029,All Stat 300,Item/ETC/hunter,Itemname/1000029,Itemdescript/1000029,0,200,6,,TRUE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+50,엘리의 축복 31일,Item/Consume/Boost,Itemname/50,Itemdescript/50,2,300,6,,FALSE,0,1,FALSE,1,31,0,0,0,TRUE,FALSE,FALSE,FALSE
+51,엘리의 축복 15일,Item/Consume/Boost,Itemname/51,Itemdescript/51,2,300,6,,FALSE,0,1,FALSE,1,15,0,0,0,TRUE,FALSE,FALSE,FALSE
+52,장비 품질 변경서,Item/ETC2/52,Itemname/52,Itemdescript/52,2,2,6,,FALSE,0,1,FALSE,1,1,0,0,0,TRUE,FALSE,FALSE,FALSE
+53,장비 등급 변경서,Item/ETC2/53,Itemname/53,Itemdescript/53,2,2,6,,FALSE,0,1,FALSE,1,1,0,0,0,TRUE,FALSE,FALSE,FALSE
+54,장비 특수효과 변경,Item/ETC2/54,Itemname/54,Itemdescript/54,2,2,6,,FALSE,0,1,FALSE,1,1,0,0,0,TRUE,FALSE,FALSE,FALSE
+55,광고 무제한 제거,Item/Consume/icon48,Itemname/55,Itemdescript/55,3,111,6,,FALSE,0,1,FALSE,1,31,0,0,0,TRUE,FALSE,FALSE,FALSE
+56,길드 토큰,Item/Resource/길드토큰,Itemname/56,Itemdescript/56,1,100,6,,FALSE,0,1,FALSE,1,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+57,불안정한 장비 특수효과 변경,Item/ETC2/57,Itemname/57,Itemdescript/57,2,2,5,,FALSE,0,1000000,FALSE,1,1,0,0,0,TRUE,FALSE,FALSE,FALSE
+100000,안씀,Item/Event/E1,Itemname/100000,Itemdescript/100000,1,116,4,,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+100001,안씀,Item/Event/E2,Itemname/100001,Itemdescript/100001,1,116,5,,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+100002,안씀,Item/Event/E3,Itemname/100002,Itemdescript/100002,1,116,6,,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+100003,안씀,Item/Event/E4,Itemname/100003,Itemdescript/100003,1,116,4,,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+100004,안씀,Item/Event/E5,Itemname/100004,Itemdescript/100004,1,116,5,,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+100005, ,Item/Event/E6,Itemname/100005,Itemdescript/100005,1,116,6,,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+100006,안씀,Item/Event/E7,Itemname/100006,Itemdescript/100006,1,116,4,,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+100007,안씀,Item/Event/E8,Itemname/100007,Itemdescript/100007,1,116,5,,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+100008,안씀,Item/Event/E9,Itemname/100008,Itemdescript/100008,1,116,6,,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+100009,안씀,Item/Event/크리스마스/44_Christmas_Ornament_Red_Ball_Flat,Itemname/100009,Itemdescript/100006,1,116,4,,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+100010,안씀,Item/Event/크리스마스/46_Christmas_Ornament_Red_Ball_Stripe,Itemname/100010,Itemdescript/100007,1,116,5,,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+100011,안씀,Item/Event/크리스마스/50_Christmas_Ornament_Gold_Ball,Itemname/100011,Itemdescript/100008,1,116,6,,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+100012,안씀,Item/Event/설날/복조리,Itemname/100012,Itemdescript/100006,1,116,4,,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+100013,안씀,Item/Event/설날/복조리1,Itemname/100013,Itemdescript/100007,1,116,5,,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+100014,안씀,Item/Event/설날/복조리3,Itemname/100014,Itemdescript/100008,1,116,6,,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+100015,안씀,Item/Event/E10,Itemname/100015,Itemdescript/100006,1,116,4,,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+100016,안씀,Item/Event/E11,Itemname/100016,Itemdescript/100007,1,116,5,,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+100017,안씀,Item/Event/E12,Itemname/100017,Itemdescript/100008,1,116,6,,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+100018,안씀,Item/Event/E13,Itemname/100018,Itemdescript/100006,1,116,4,,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+100019,안씀,Item/Event/E14,Itemname/100019,Itemdescript/100007,1,116,5,,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+100020,안씀,Item/Event/E15,Itemname/100020,Itemdescript/100008,1,116,6,,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+100021,이벤트 아이템 [낮은 드롭율],Item/Event/E16,Itemname/100021,Itemdescript/100006,1,116,4,,FALSE,0,1000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+100022,이벤트 아이템 [중간 드롭율],Item/Event/E17,Itemname/100022,Itemdescript/100007,1,116,5,,FALSE,0,10000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+100023,이벤트 아이템 [업적으로만지급],Item/Event/E18,Itemname/100023,Itemdescript/100008,1,116,6,,FALSE,0,100000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+100100,산타 조합1,Item/Event/크리스마스/05_Santa_Hat,Itemname/100100,Itemdescript/100100,1,116,5,,TRUE,0,200000,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+100101,산타 조합2,Item/Event/크리스마스/07_Santa_Jacket,Itemname/100101,Itemdescript/100101,1,116,5,,TRUE,0,200000,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+100102,산타 조합3,Item/Event/크리스마스/09_Santa_Gloves,Itemname/100102,Itemdescript/100102,1,116,5,,TRUE,0,200000,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+100103,산타 조합4,Item/Event/크리스마스/11_Santa_Belt,Itemname/100103,Itemdescript/100103,1,116,5,,FALSE,0,5000000,,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+100104,산타 조합 품 선택 상자,Item/Event/크리스마스/1,Itemname/100104,Itemdescript/100104,2,400,6,,TRUE,0,1,FALSE,0,100100;100101;100102,2;2;2,Choice,1,TRUE,FALSE,FALSE,FALSE
+100105,진저 쿠키 조각A,Item/Event/크리스마스/04_Gingerbread_Bite,Itemname/100105,Itemdescript/100105,1,116,4,,TRUE,0,100000,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+100106,진저 쿠키 조각B,Item/Event/크리스마스/02_Gingerbread_Bite,Itemname/100106,Itemdescript/100106,1,116,5,,FALSE,0,500000,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+100107,진저 쿠키 조각C,Item/Event/크리스마스/01_Gingerbread_Whole,Itemname/100107,Itemdescript/100107,1,116,6,,FALSE,0,10000000,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+200000,레이드 입장권,Item/Consume/Paper/quest_82,Itemname/200000,Itemdescript/200000,2,401,6,,TRUE,0,1,FALSE,1,레이드,1,daily,0,TRUE,0,FALSE,FALSE
+200001,200레벨 경험치 스크롤,Item/Consume/Paper/quest_08,Itemname/200001,Itemdescript/200001,2,402,6,,FALSE,0,1,FALSE,1,86759030,0,0,0,TRUE,0,FALSE,FALSE
+200002,300레벨 경험치 스크롤,Item/Consume/Paper/quest_08,Itemname/200002,Itemdescript/200002,2,402,6,,FALSE,0,1,FALSE,1,1045879131,0,0,0,TRUE,0,FALSE,FALSE
+200003,400레벨 경험치 스크롤,Item/Consume/Paper/quest_08,Itemname/200003,Itemdescript/200003,2,402,6,,FALSE,0,1,FALSE,1,3683420881,0,0,0,TRUE,0,FALSE,FALSE
+200004,500레벨 경험치 스크롤,Item/Consume/Paper/quest_08,Itemname/200004,Itemdescript/200004,2,402,6,,FALSE,0,1,FALSE,1,9925920881,0,0,0,TRUE,0,FALSE,FALSE
+200005,200~400레벨 경험치 스크롤,Item/Consume/Paper/quest_08,Itemname/200005,Itemdescript/200005,2,402,6,,FALSE,0,1,FALSE,1,3598599987,0,0,0,TRUE,0,FALSE,FALSE
+200006,300~500레벨 경험치 스크롤,Item/Consume/Paper/quest_08,Itemname/200006,Itemdescript/200006,2,402,6,,FALSE,0,1,FALSE,1,8898443167,0,0,0,TRUE,0,FALSE,FALSE
+200007,700레벨 경험치 스크롤,Item/Consume/Paper/quest_08,Itemname/200007,Itemdescript/200007,2,402,6,,FALSE,0,1,FALSE,1,30025920881,0,0,0,TRUE,0,FALSE,FALSE
+200008,300~700레벨 경험치 스크롤,Item/Consume/Paper/quest_08,Itemname/200008,Itemdescript/200008,2,402,6,,FALSE,0,1,FALSE,1,20169850000,0,0,0,TRUE,0,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+200009,제단 강화 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200009,Itemdescript/200009,2,405,6,,TRUE,0,1,FALSE,1,0,0,0,0,TRUE,0,FALSE,FALSE
+200010,스킬북 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200010,Itemdescript/200010,2,405,6,,TRUE,0,1,FALSE,1,3,0,0,0,TRUE,0,FALSE,FALSE
+200011,개미굴 제단 강화석 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200011,Itemdescript/200011,2,405,6,,TRUE,0,1,FALSE,1,6,0,0,0,TRUE,0,FALSE,FALSE
+200012,룰렛 열쇠 - 프리미엄 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200012,Itemdescript/200012,2,405,6,,TRUE,0,1,FALSE,1,9,0,0,0,TRUE,0,FALSE,FALSE
+200013,성장 콘텐츠 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200013,Itemdescript/200013,2,405,6,,TRUE,0,1,FALSE,1,12,0,0,0,TRUE,0,FALSE,FALSE
+200014,악몽 장비 승급석 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200014,Itemdescript/200014,2,405,6,,TRUE,0,1,FALSE,1,15,0,0,0,TRUE,0,FALSE,FALSE
+200015,유물 수집 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200015,Itemdescript/200015,2,405,6,,TRUE,0,1,FALSE,1,18,0,0,0,TRUE,0,FALSE,FALSE
+200016,룬 제련 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200016,Itemdescript/200016,2,405,6,,TRUE,0,1,FALSE,1,21,0,0,0,TRUE,0,FALSE,FALSE
+200017,펫 패키지 1/3,Item/Consume/Paper/quest_41,Itemname/200017,Itemdescript/200017,2,405,6,,TRUE,0,1,FALSE,1,24,0,0,0,TRUE,0,FALSE,FALSE
+200018,1200레벨 경험치 스크롤,Item/Consume/Paper/quest_08,Itemname/200018,Itemdescript/200018,2,402,6,,FALSE,0,1,FALSE,1,170225920881,0,0,0,TRUE,0,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+500,아이템 상자,Item/Consume/Box/골드유물,Itemname/500,Itemdescript/500,2,400,5,,FALSE,0,1,FALSE,0,10;11;12;13;14;15;1000,10;100;1000;10000;100000;1000000;200000000,All,0,TRUE,FALSE,FALSE,FALSE
+501,장비 상자,Item/Consume/Box/드래곤체스트,Itemname/501,Itemdescript/501,2,400,6,,FALSE,0,1,FALSE,0,E1003;E2002;E3004;E4007;E5005;E1015;E5513;E5522;E5529;E5532,0,All,0,TRUE,FALSE,TRUE,FALSE
+502,아이템 상자,Item/Consume/Box/골드유물,Itemname/500,Itemdescript/500,2,400,3,,FALSE,0,1,FALSE,0,10;11;12;13;14;15;1000,10;100;1000;10000;100000;1000000;200000000,Choice,3,TRUE,FALSE,FALSE,FALSE
+503,장비 상자,Item/Consume/Box/드래곤체스트,Itemname/501,Itemdescript/501,2,400,4,,FALSE,0,1,FALSE,0,E1003;E2002;E3004;E4007;E5005;E1015;E5513;E5522;E5529;E5532,0,Random,0,TRUE,FALSE,TRUE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+504,테스트 패키지,Item/Consume/Box/드래곤체스트,Itemname/504,Itemdescript/504,2,400,6,,FALSE,0,1,FALSE,0,1712;99000;1711;507;505;1000,3000;3000;3000;1;1;5000000,All,0,TRUE,FALSE,FALSE,FALSE
+505,방어구 악세 상자,Item/Consume/Box/bluebox,Itemname/505,Itemdescript/505,2,400,4,,FALSE,0,1,FALSE,0,E5004;E5005;E5006;E5007;E5008;E5009,0,All,0,TRUE,FALSE,TRUE,FALSE
+506,신의 증표 상자,Item/Consume/Box/죽은왕상자,Itemname/506,Itemdescript/506,2,400,5,,FALSE,0,1,FALSE,0,4000;4001;4002;4003;4004;4005,2;3;6;6;6;6,All,0,TRUE,FALSE,FALSE,FALSE
+507,무기 상자,Item/Consume/Box/redbox,Itemname/507,Itemdescript/507,2,400,4,,FALSE,0,1,FALSE,0,E5000;E5001;E5002;E5003;E5004;E1014;E1015;E1016,0,All,0,TRUE,FALSE,TRUE,FALSE
+506,신의 증표 상자,Item/Consume/Box/죽은왕상자,Itemname/506,Itemdescript/506,2,400,5,,FALSE,0,1,FALSE,0,4000;4001;4002;4003;4004;4005,2;3;6;6;6;6,All,0,TRUE,FALSE,FALSE,FALSE
+508,발록 무기 선택 상자 [1회 패키지],Item/Consume/Box/redbox,Itemname/508,Itemdescript/508,2,400,5,,TRUE,0,1,FALSE,0,E5532;E5533;E5534;E5535,,Choice,1,TRUE,FALSE,TRUE,FALSE
+509,5T 방어구 상자 [1회 패키지],Item/Consume/Box/bluebox,Itemname/509,Itemdescript/509,2,400,2,,TRUE,0,1,FALSE,0,E5004;E5005;E5006;E5007;E5008;E5009,,All,0,TRUE,FALSE,TRUE,FALSE
+510,4T 방어구 상자 [1회 패키지],Item/Consume/Box/bluebox,Itemname/510,Itemdescript/510,2,400,2,,TRUE,0,1,FALSE,0,E4004;E4005;E4006;E4007;E4008;E4009,,All,0,TRUE,FALSE,TRUE,FALSE
+511,3T 방어구 상자 [1회 패키지],Item/Consume/Box/bluebox,Itemname/511,Itemdescript/511,2,400,1,,TRUE,0,1,FALSE,0,E3004;E3005;E3006;E3007;E3008;E3009,,All,0,TRUE,FALSE,TRUE,FALSE
+512,숲 보조무기 선택 상자 [1회 패키지],Item/Consume/Box/redbox,Itemname/512,Itemdescript/512,2,400,5,,TRUE,0,1,FALSE,0,E5510;E5511;E5512,,Choice,1,TRUE,FALSE,TRUE,FALSE
+513,3T 무기 선택 상자 [1회 패키지],Item/Consume/Box/redbox,Itemname/513,Itemdescript/513,2,400,1,,TRUE,0,1,FALSE,0,E3000;E3001;E3002;E3003,,Choice,1,TRUE,FALSE,TRUE,FALSE
+514,4T 무기 선택 상자 [1회 패키지],Item/Consume/Box/redbox,Itemname/514,Itemdescript/514,2,400,2,,TRUE,0,1,FALSE,0,E4000;E4001;E4002;E4003,,Choice,1,TRUE,FALSE,TRUE,FALSE
+515,레이즈 무기 선택 상자 [1회 패키지],Item/Consume/Box/redbox,Itemname/515,Itemdescript/515,2,400,5,,TRUE,0,1,FALSE,0,E5500;E5501;E5502;E5503,,Choice,1,TRUE,FALSE,TRUE,FALSE
+516,레이즈 무기 선택 상자 [1회 패키지],Item/Consume/Box/redbox,Itemname/516,Itemdescript/516,2,400,5,,TRUE,0,1,FALSE,0,E6005,,Choice,1,TRUE,FALSE,TRUE,FALSE
+517,악몽파편꾸러미,Item/Consume/Box/bag6,Itemname/517,Itemdescript/517,2,400,5,,TRUE,0,1,FALSE,0,16,300,All,0,TRUE,FALSE,FALSE,FALSE
+518,악몽 장신구 무작위 상자,Item/Consume/Box/드래곤체스트,Itemname/518,Itemdescript/518,2,400,6,,TRUE,0,1,FALSE,0,E6006;E6010;E6014;E6007;E6011;E6015,,Random,0,TRUE,FALSE,TRUE,FALSE
+519,악몽 장신구 선택 상자,Item/Consume/Box/드래곤체스트,Itemname/519,Itemdescript/519,2,400,6,,TRUE,0,1,FALSE,0,E6006;E6010;E6014;E6007;E6011;E6015,,Choice,1,TRUE,FALSE,TRUE,FALSE
+520,악몽 장신구★ 선택 상자,Item/Consume/Box/드래곤체스트,Itemname/520,Itemdescript/520,2,400,6,,TRUE,0,1,FALSE,0,E6008;E6012;E6016;E6009;E6013;E6017,,Choice,1,TRUE,FALSE,TRUE,FALSE
+521,10T 무기 선택 상자 [1회 패키지],Item/Consume/Box/죽은왕상자,Itemname/521,Itemdescript/521,2,400,6,,TRUE,0,1,FALSE,0,E6000;E6001;E6002;E6003;E6004,,Choice,1,TRUE,FALSE,TRUE,FALSE
+522,죽음 방어구★ 세트 상자 [1회 패키지],Item/Consume/Box/죽은왕상자,Itemname/522,Itemdescript/522,2,400,6,,TRUE,0,1,FALSE,0,E5524;E5525;E5526;E5527,,All,0,TRUE,FALSE,TRUE,FALSE
+523,불의 보옥 장신구★ 세트 상자 [1회 패키지],Item/Consume/Box/죽은왕상자,Itemname/523,Itemdescript/523,2,400,6,,TRUE,0,1,FALSE,0,E5530;E5531,,All,0,TRUE,FALSE,TRUE,FALSE
+524,지옥파편꾸러미,Item/Consume/Box/bag6,Itemname/524,Itemdescript/524,2,400,6,,TRUE,0,1,FALSE,0,18,300,All,0,TRUE,FALSE,FALSE,FALSE
+525,물약 상자,Item/Consume/Box/chest_1,Itemname/525,Itemdescript/525,2,400,5,,TRUE,0,1,FALSE,0,1537;1542,100000;100000,All,0,TRUE,FALSE,FALSE,FALSE
+526,모든 재설정 상자,Item/Consume/Box/chest_2,Itemname/526,Itemdescript/526,2,400,5,,TRUE,0,1,FALSE,0,52;53;54,10;10;10,All,0,TRUE,FALSE,FALSE,FALSE
+점핑,,,,,,,,,,,,,,,,,,,,,
+527,무기 점핑 상자,Item/Consume/Box/redbox,Itemname/527,Itemdescript/527,2,400,6,,FALSE,0,1,FALSE,0,E70000;E70001;E70002;E70003;E70004,,All,0,TRUE,FALSE,TRUE,FALSE
+528,방어구 점핑 상자,Item/Consume/Box/bluebox,Itemname/528,Itemdescript/528,2,400,6,,FALSE,0,1,FALSE,0,E70005;E70006;E70007;E70008,,All,0,TRUE,FALSE,TRUE,FALSE
+529,장신구 점핑 상자,Item/Consume/Box/greenbox,Itemname/529,Itemdescript/529,2,400,6,,FALSE,0,1,FALSE,0,E70009;E70010,,All,0,TRUE,FALSE,TRUE,FALSE
+530,보조장비 점핑 상자,Item/Consume/Box/redbox,Itemname/530,Itemdescript/530,2,400,6,,FALSE,0,1,FALSE,0,E70011;E70012;E70013,,All,0,TRUE,FALSE,TRUE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+531,점핑 총 상자,Item/Consume/Box/chest_4,Itemname/531,Itemdescript/531,2,400,6,,TRUE,0,1,FALSE,0,4001;4002;4003;4004;4005;1006;1751;1750;57;1001;1537;1542,2;2;2;2;2;50;30;30;200;10000;10000;10000,All,0,TRUE,FALSE,FALSE,FALSE
+532,하급 스킬북 선택 상자,Item/Consume/Box2/Icon1,Itemname/532,Itemdescript/532,2,400,5,,TRUE,0,1,FALSE,0,80000;80001;80002;80003;80004,1;1;1;1;1,Choice,1,TRUE,FALSE,FALSE,FALSE
+533,중급 스킬북 선택 상자,Item/Consume/Box2/Icon3,Itemname/533,Itemdescript/533,2,400,6,,TRUE,0,1,FALSE,0,80005;80006;80007;80008,1;1;1;1,Choice,1,TRUE,FALSE,FALSE,FALSE
+534,상급 스킬북 선택 상자,Item/Consume/Box2/Icon5,Itemname/534,Itemdescript/534,2,400,6,,TRUE,0,1,FALSE,0,80009;80010;80011;80012;80013,1;1;1;1;1,Choice,1,TRUE,FALSE,FALSE,FALSE
+535,재설정 선택상자,Item/Consume/Box/chest_2,Itemname/535,Itemdescript/535,2,400,5,,TRUE,0,1,FALSE,0,52;53;54,1;1;1,Choice,1,TRUE,FALSE,FALSE,FALSE
+536,5승급 방어구 선택 상자,Item/Consume/Box/죽은왕상자,Itemname/536,Itemdescript/536,2,400,5,,TRUE,0,1,FALSE,0,538;539;540,1;1;1,Choice,1,TRUE,FALSE,FALSE,FALSE
+537,5승급 장신구 선택 상자,Item/Consume/Box/죽은왕상자,Itemname/537,Itemdescript/537,2,400,5,,TRUE,0,1,FALSE,0,541;542,1;1,Choice,1,TRUE,FALSE,FALSE,FALSE
+538,5승급 물리,Item/Consume/Box/redbox,Itemname/538,Itemdescript/538,2,400,6,,TRUE,0,1,FALSE,0,E20004;E20009;E20014;E20019,,Choice,1,TRUE,FALSE,TRUE,FALSE
+539,5승급 마법,Item/Consume/Box/bluebox,Itemname/539,Itemdescript/539,2,400,6,,TRUE,0,1,FALSE,0,E20024;E20029;E20034;E20039,,Choice,1,TRUE,FALSE,TRUE,FALSE
+540,5승급 상태,Item/Consume/Box/greenbox,Itemname/540,Itemdescript/540,2,400,6,,TRUE,0,1,FALSE,0,E20044;E20049;E20054;E20059,,Choice,1,TRUE,FALSE,TRUE,FALSE
+541,5승급 반지,Item/Consume/Box/드래곤체스트,Itemname/541,Itemdescript/541,2,400,6,,TRUE,0,1,FALSE,0,E10024;E10025;E10026,,Choice,1,TRUE,FALSE,TRUE,FALSE
+542,5승급 목걸이,Item/Consume/Box/드래곤체스트,Itemname/542,Itemdescript/542,2,400,6,,TRUE,0,1,FALSE,0,E10027;E10028;E10029,,Choice,1,TRUE,FALSE,TRUE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+543,[이벤트]할로윈 상자,Item/Consume/Box/할로윈상자,Itemname/543,Itemdescript/543,2,400,6,,FALSE,0,1,FALSE,0,535;40000;40000;40001;40001;40002;40002;40003;40004;1005;1006;1750,1;100;1000;20;50;5;20;2;1;5;2;1,Random,0,TRUE,FALSE,FALSE,FALSE
+545,[이벤트]산타의 선물 주머니,Item/Consume/Box/New box/산타의봇짐,Itemname/545,Itemdescript/545,2,400,6,,FALSE,0,1,FALSE,0,535;40000;40000;40001;40001;40002;40002;40003;40004;1005;1006;1750,1;100;1000;20;50;5;20;2;1;5;2;1,Random,0,TRUE,FALSE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+544,악몽 방어구 선택 상자,Item/Consume/Box/드래곤체스트,Itemname/544,Itemdescript/544,2,400,6,,FALSE,0,1,FALSE,0,E6020;E6021;E6022;E6023;E6028;E6029;E6030;E6031;E6036;E6037;E6038;E6039,,Choice,1,TRUE,FALSE,TRUE,FALSE
+,0,,,,,,,,,,,,,,,,,,,,
+508,발록 무기 선택 상자 [1회 패키지],Item/Consume/Box/redbox,Itemname/508,Itemdescript/508,2,400,5,,FALSE,0,1,FALSE,0,E5532;E5533;E5534;E5535,,Choice,1,TRUE,FALSE,TRUE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+5450,악몽 무기 선택상자,Item/Consume/Box/죽은왕상자,Itemname/5450,Itemdescript/5450,2,400,6,,TRUE,0,1,FALSE,0,E6052;E6053;E6054;E6055;E6056;E6057;E6058;E6059,,Choice,1,TRUE,FALSE,TRUE,FALSE
+546,악몽 보조 무기 선택상자,Item/Consume/Box/죽은왕상자,Itemname/546,Itemdescript/546,2,400,6,,TRUE,0,1,FALSE,0,E6044;E6045;E6046;E6047,,Choice,1,TRUE,FALSE,TRUE,FALSE
+547,악몽 장신구 선택 상자,Item/Consume/Box/죽은왕상자,Itemname/547,Itemdescript/547,2,400,6,,TRUE,0,1,FALSE,0,E6006;E6010;E6014;E6007;E6011;E6015,,Choice,1,TRUE,FALSE,TRUE,FALSE
+548,악몽 방어구 세트 선택 상자,Item/Consume/Box/죽은왕상자,Itemname/548,Itemdescript/548,2,400,6,,TRUE,0,1,FALSE,0,549;550;551,1;1;1,Choice,1,TRUE,FALSE,FALSE,FALSE
+549,사무라이 세트 상자,Item/Consume/Box2/Icon17,Itemname/549,Itemdescript/549,2,400,6,,TRUE,0,1,FALSE,0,E6020;E6021;E6022;E6023,,All,0,TRUE,FALSE,TRUE,FALSE
+550,대마법사 세트 상자,Item/Consume/Box2/Icon19,Itemname/550,Itemdescript/550,2,400,6,,TRUE,0,1,FALSE,0,E6028;E6029;E6030;E6031,,All,0,TRUE,FALSE,TRUE,FALSE
+551,독룡 세트상자,Item/Consume/Box2/Icon23,Itemname/551,Itemdescript/551,2,400,6,,TRUE,0,1,FALSE,0,E6036;E6037;E6038;E6039,,All,0,TRUE,FALSE,TRUE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+552,하급 고대 유물 선택 상자,Item/Consume/Box/chest_2,Itemname/552,Itemdescript/552,2,400,4,,TRUE,0,100000000,FALSE,0,90000;90001;90002,5;5;5,Choice,1,TRUE,FALSE,FALSE,FALSE
+553,하급 고대 유물 무작위 상자,Item/Consume/Box/chest_2,Itemname/553,Itemdescript/553,2,400,4,,TRUE,0,100000000,FALSE,0,90000;90001;90002,5;5;5,Random,0,TRUE,FALSE,FALSE,FALSE
+554,중급 고대 유물 선택 상자,Item/Consume/Box/chest_3,Itemname/554,Itemdescript/554,2,400,5,,TRUE,0,200000000,FALSE,0,90003;90004;90005,5;5;5,Choice,1,TRUE,FALSE,FALSE,FALSE
+555,중급 고대 유물 무작위 상자,Item/Consume/Box/chest_3,Itemname/555,Itemdescript/555,2,400,5,,TRUE,0,200000000,FALSE,0,90003;90004;90005,5;5;5,Random,0,TRUE,FALSE,FALSE,FALSE
+556,고급 고대 유물 선택 상자,Item/Consume/Box/chest_4,Itemname/556,Itemdescript/556,2,400,6,,TRUE,0,300000000,FALSE,0,90006;90007;90008,5;5;5,Choice,1,TRUE,FALSE,FALSE,FALSE
+557,고급 고대 유물 무작위 상자,Item/Consume/Box/chest_4,Itemname/557,Itemdescript/557,2,400,6,,TRUE,0,300000000,FALSE,0,90006;90007;90008,5;5;5,Random,0,TRUE,FALSE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+558,5승급 무기 선택 상자,Item/Consume/Box2/Icon17,Itemname/558,Itemdescript/558,2,400,5,,TRUE,0,1,FALSE,0,E6092;E6093;E6094;E6095;E6096;E6097;E6098;E6099,,Choice,1,TRUE,FALSE,TRUE,FALSE
+559,5승급 보조무기 선택 상자,Item/Consume/Box2/Icon23,Itemname/559,Itemdescript/559,2,400,5,,TRUE,0,1,FALSE,0,E6116;E6117;E6118;E6119,,Choice,1,TRUE,FALSE,TRUE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+560,보스룬 상자,Item/Consume/Box2/Icon7,Itemname/560,Itemdescript/560,2,400,6,,TRUE,0,1,FALSE,0,E6120,,All,1,TRUE,FALSE,TRUE,FALSE
+561,일반룬 상자,Item/Consume/Box2/Icon7,Itemname/561,Itemdescript/561,2,400,6,,TRUE,0,1,FALSE,0,E6126,,All,1,TRUE,FALSE,TRUE,FALSE
+562,골드룬 상자,Item/Consume/Box2/Icon7,Itemname/562,Itemdescript/562,2,400,6,,TRUE,0,1,FALSE,0,E6132,,All,1,TRUE,FALSE,TRUE,FALSE
+563,전체룬 상자,Item/Consume/Box2/Icon7,Itemname/563,Itemdescript/563,2,400,6,,TRUE,0,1,FALSE,0,E6120;E6132,,Choice,1,TRUE,FALSE,TRUE,FALSE
+564,룬선택상자,Item/Consume/Box2/Icon7,Itemname/564,Itemdescript/564,2,400,6,,TRUE,0,1,FALSE,0,E6125;E6137,,Choice,1,TRUE,FALSE,TRUE,FALSE
+565,[이벤트]설날 복 주머니,Item/Event/설날/설날복주머니,Itemname/565,Itemdescript/565,2,400,6,,FALSE,0,1,FALSE,0,50005;50006;535;40000;40000;40001;40001;40002;40002;40003;40004;1005;1006;1750,10;1;1;100;1000;20;50;5;20;2;1;5;2;1,Random,0,TRUE,FALSE,FALSE,FALSE
+566,2023 겨울 쿠폰 상자,Item/Consume/Box/chest_4,Itemname/566,Itemdescript/566,2,400,6,,TRUE,0,1,FALSE,0,200002;527;528;529;530;4001;4002;4003;4004,1;1;1;1;1;1;1;1;1,All,0,TRUE,FALSE,FALSE,FALSE
+567,[이벤트]보물 상자,Item/Consume/Box2/Icon15,Itemname/567,Itemdescript/567,2,400,6,,FALSE,0,1,FALSE,0,50005;50006;535;40000;40000;40001;40001;40002;40002;40003;40004;1005;1006;1750,10;1;1;100;1000;20;50;5;20;2;1;5;2;1,Random,0,TRUE,FALSE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+568,시즌2 무기 상자,Item/Consume/Box2/Icon17,Itemname/568,Itemdescript/568,2,400,7,,TRUE,0,1,FALSE,0,E6138;E6139;E6140;E6142;E6144;E6145;E6146;E6147;E6148;E6149;E6150,,Choice,1,TRUE,FALSE,TRUE,FALSE
+569,시즌2 보조무기 상자,Item/Consume/Box2/Icon7,Itemname/569,Itemdescript/569,2,400,7,,TRUE,0,1,FALSE,0,E6155;E6156;E6157;E6158,,Choice,1,TRUE,FALSE,TRUE,FALSE
+570,시즌2 방어구 상자,Item/Consume/Box2/Icon23,Itemname/570,Itemdescript/570,2,400,7,,TRUE,0,1,FALSE,0,E6151;E6152;E6153;E6154,,Choice,1,TRUE,FALSE,TRUE,FALSE
+571,시즌2 장신구 상자,Item/Consume/Box2/Icon21,Itemname/571,Itemdescript/571,2,400,7,,TRUE,0,1,FALSE,0,E6161;E6162;E6163;E6164;E6165;E6166,,Choice,1,TRUE,FALSE,TRUE,FALSE
+572,파티 레이드 토벌 상자,Item/Consume/Box/pvpbag,Itemname/572,Itemdescript/572,2,400,6,,FALSE,0,1,FALSE,0,50005;535;40000;40000;40001;40001;40002;40002;40003;40004;1005;1006;1750,3;1;100;1000;20;50;5;20;2;1;5;2;1,Random,0,TRUE,FALSE,FALSE,FALSE
+573,[시즌2]초고속 성장 패키지,Item/Consume/Box/죽은왕상자,Shopname/1040,Shopinfo/1040,2,400,7,,TRUE,0,1,FALSE,0,200018;4005;558;559;575;576;532;533;534;40005;40002;526;1711;99000;1003,1;2;2;2;2;2;2;2;2;20;1000;15;1200;15000;2200,All,0,TRUE,FALSE,FALSE,FALSE
+574,점핑 총 상자,Item/Consume/Box/chest_4,Itemname/531,Itemdescript/531,2,400,7,,TRUE,0,1,FALSE,0,200007;4001;4002;4003;4004,1;1;1;1;1,All,0,TRUE,FALSE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,576,,,,,,,
+575,3승급 방어구 선택 상자,Item/Consume/Box/죽은왕상자,Itemname/575,Itemdescript/575,2,400,5,,TRUE,0,1,FALSE,0,577;578;579,1;1;1,Choice,1,TRUE,FALSE,FALSE,FALSE
+576,3승급 장신구 선택 상자,Item/Consume/Box/죽은왕상자,Itemname/576,Itemdescript/576,2,400,5,,TRUE,0,1,FALSE,0,580;581,1;1,All,1,TRUE,FALSE,FALSE,FALSE
+577,3승급 물리,Item/Consume/Box/redbox,Itemname/577,Itemdescript/577,2,400,6,,TRUE,0,1,FALSE,0,E20002;E20007;E20012;E20017,,All,1,TRUE,FALSE,TRUE,FALSE
+578,3승급 마법,Item/Consume/Box/bluebox,Itemname/578,Itemdescript/578,2,400,6,,TRUE,0,1,FALSE,0,E20022;E20027;E20032;E20037,,All,1,TRUE,FALSE,TRUE,FALSE
+579,3승급 상태,Item/Consume/Box/greenbox,Itemname/579,Itemdescript/579,2,400,6,,TRUE,0,1,FALSE,0,E20042;E20047;E20052;E20057,,All,1,TRUE,FALSE,TRUE,FALSE
+580,3승급 반지,Item/Consume/Box/드래곤체스트,Itemname/580,Itemdescript/580,2,400,6,,TRUE,0,1,FALSE,0,E10012;E10013;E10014,,Choice,1,TRUE,FALSE,TRUE,FALSE
+581,3승급 목걸이,Item/Consume/Box/드래곤체스트,Itemname/581,Itemdescript/581,2,400,6,,TRUE,0,1,FALSE,0,E10015;E10016;E10017,,Choice,1,TRUE,FALSE,TRUE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+582,노란전갈,Item/Consume/Box/New box/quest_125,Itemname/582,Itemdescript/582,2,400,1,,TRUE,0,1,FALSE,0,48000;48001;48002;48003,1;1;1;1,Choice,1,TRUE,FALSE,FALSE,FALSE
+583,임프,Item/Consume/Box/New box/quest_126,Itemname/583,Itemdescript/583,2,400,2,,TRUE,0,1,FALSE,0,48004;48005;48006;48007,1;1;1;1,Choice,1,TRUE,FALSE,FALSE,FALSE
+584,드라켄,Item/Consume/Box/New box/quest_122,Itemname/584,Itemdescript/584,2,400,3,,TRUE,0,1,FALSE,0,48008;48009;48010;48011,1;1;1;1,Choice,1,TRUE,FALSE,FALSE,FALSE
+585,백룡,Item/Consume/Box/New box/quest_108,Itemname/585,Itemdescript/585,2,400,4,,TRUE,0,1,FALSE,0,48012;48013;48014;48015,1;1;1;1,Choice,1,TRUE,FALSE,FALSE,FALSE
+586,이그니스,Item/Consume/Box/New box/quest_121,Itemname/586,Itemdescript/586,2,400,5,,TRUE,0,1,FALSE,0,48016;48017;48018;48019,1;1;1;1,Choice,1,TRUE,FALSE,FALSE,FALSE
+587,까치,Item/Consume/Box/New box/quest_146,Itemname/587,Itemdescript/587,2,400,6,,TRUE,0,1,FALSE,0,48020;48021;48022;48023;48024;48025;48026;48027,1;1;1;1;1;1;1;1,Choice,1,TRUE,FALSE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+588,탈리스만 선택 상자,Item/Consume/Box/chest_3,Itemname/588,Itemdescript/588,2,400,6,,TRUE,0,100000000,TRUE,0,1754;1755;1756;1757;1758;1759;1760;1761;1762,1;1;1;1;1;1;1;1;1,Choice,1,TRUE,FALSE,FALSE,FALSE
+589,탈리스만 무작위 상자,Item/Consume/Box/chest_4,Itemname/589,Itemdescript/589,2,400,6,,TRUE,0,100000000,FALSE,0,1754;1755;1756;1757;1758;1759;1760;1761;1762,1;1;1;1;1;1;1;1;1,Random,0,TRUE,FALSE,FALSE,FALSE
+590,빛나는 탈리스만 선택 상자,Item/Consume/Box/chest_3,Itemname/590,Itemdescript/590,2,400,7,,TRUE,0,100000000,TRUE,0,1763;1764;1765;1766;1767;1768;1769;1770;1771,1;1;1;1;1;1;1;1;1,Choice,1,TRUE,FALSE,FALSE,TRUE
+591,빛나는 탈리스만 무작위 상자,Item/Consume/Box/chest_4,Itemname/591,Itemdescript/591,2,400,7,,TRUE,0,100000000,FALSE,0,1763;1764;1765;1766;1767;1768;1769;1770;1771,1;1;1;1;1;1;1;1;1,Random,0,TRUE,FALSE,FALSE,TRUE
+,,,,,,,,,,,,,,,,,,,,,
+592,전 시즌 위장 선택 상자,Item/Consume/Box2/Icon11,Itemname/592,Itemdescript/592,2,400,7,,TRUE,0,0,TRUE,0,40014;40015;40016;40017;40018;40019;40020;40021;40024;40025;40026;40027,1;1;1;1;1;1;1;1;1;1;1;1;1,Choice,1,TRUE,FALSE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+1500,신의 결정,Item/Consume/Potion/HP12,Itemname/1500,Itemdescript/1500,2,101,0,,FALSE,0,0,FALSE,0,500,0,0,0,TRUE,TRUE,FALSE,FALSE
+1510,HP포션 테스트,Item/Consume/Potion/MP8,Itemname/1510,Itemdescript/1510,2,102,0,,FALSE,0,0,FALSE,0,0,500,0,0,TRUE,FALSE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,0,,,FALSE,FALSE
+1004,유일 제작 비법서,Item/Resource/0.Unique2,Itemname/1004,Itemdescript/1004,1,110,2,,TRUE,0,1,FALSE,1,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+1005,전설 제작 비법서,Item/Resource/2.Legend,Itemname/1005,Itemdescript/1005,1,110,3,,TRUE,0,1,FALSE,1,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+1006,신화 제작 비법서,Item/Resource/3.Godlike,Itemname/1006,Itemdescript/1006,1,110,4,,TRUE,0,1,FALSE,3,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+1007,신 제작 비법서,Item/Resource/3.God,Itemname/1007,Itemdescript/1007,1,110,5,,TRUE,0,1,FALSE,3,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+1010,제작 비법서 조각,Item/ETC/quest_343,Itemname/1010,Itemdescript/1010,1,110,3,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,0,,,FALSE,FALSE
+,,,,,,,,,,,,,,,,,0,,,FALSE,FALSE
+1501,MP포션 테스트,Item/Consume/Potion/HP0,Itemname/1501,Itemdescript/1501,2,101,1,,FALSE,0,1,FALSE,0,5000,0,0,0,TRUE,FALSE,FALSE,FALSE
+1502,HP포션1,Item/Consume/Potion/HP1,Itemname/1502,Itemdescript/1502,2,101,2,,FALSE,0,1,FALSE,0,10000,0,0,0,TRUE,FALSE,FALSE,FALSE
+1503,HP포션2,Item/Consume/Potion/HP2,Itemname/1503,Itemdescript/1503,2,101,3,,FALSE,0,1,FALSE,0,20000,0,0,0,TRUE,FALSE,FALSE,FALSE
+1504,HP포션3,Item/Consume/Potion/HP3,Itemname/1504,Itemdescript/1504,2,101,4,,FALSE,0,1,FALSE,0,40000,0,0,0,TRUE,FALSE,FALSE,FALSE
+1505,HP포션5,Item/Consume/Potion/HP4,Itemname/1505,Itemdescript/1505,2,101,5,,FALSE,0,1,FALSE,0,70000,0,0,0,TRUE,FALSE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,0,,,FALSE,FALSE
+1530,MP포션1,Item/Consume/Potion/MP0,Itemname/1530,Itemdescript/1530,2,102,1,,FALSE,0,1,FALSE,0,0,5000,0,0,TRUE,FALSE,FALSE,FALSE
+1531,MP포션2,Item/Consume/Potion/MP1,Itemname/1531,Itemdescript/1531,2,102,2,,FALSE,0,1,FALSE,0,0,10000,0,0,TRUE,FALSE,FALSE,FALSE
+1532,MP포션3,Item/Consume/Potion/MP2,Itemname/1532,Itemdescript/1532,2,102,3,,FALSE,0,1,FALSE,0,0,20000,0,0,TRUE,FALSE,FALSE,FALSE
+1533,MP포션4,Item/Consume/Potion/MP3,Itemname/1533,Itemdescript/1533,2,102,4,,FALSE,0,1,FALSE,0,0,40000,0,0,TRUE,FALSE,FALSE,FALSE
+1534,MP포션5,Item/Consume/Potion/MP4,Itemname/1534,Itemdescript/1534,2,102,5,,FALSE,0,1,FALSE,0,0,70000,0,0,TRUE,FALSE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+1535,HP포션 5%,Item/Consume/Potion/HPP1,Itemname/1535,Itemdescript/1535,2,101,4,,FALSE,0,1,FALSE,0,0,0,0.05,0,TRUE,FALSE,FALSE,FALSE
+1536,HP포션 7%,Item/Consume/Potion/HPP2,Itemname/1536,Itemdescript/1536,2,101,5,,FALSE,0,1,FALSE,0,0,0,0.07,0,TRUE,FALSE,FALSE,FALSE
+1537,HP포션 10%,Item/Consume/Potion/HPP3,Itemname/1537,Itemdescript/1537,2,101,6,,FALSE,0,1,FALSE,0,0,0,0.1,0,TRUE,FALSE,FALSE,FALSE
+1538,HP포션 %,Item/Consume/Potion/HP3,Itemname/1538,Itemdescript/1538,2,101,4,,FALSE,0,800,FALSE,0,0,0,0.01,0,TRUE,FALSE,FALSE,FALSE
+1539,HP포션 %,Item/Consume/Potion/HP4,Itemname/1539,Itemdescript/1539,2,101,5,,FALSE,0,1200,FALSE,0,0,0,0.01,0,TRUE,FALSE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,0,,,FALSE,FALSE
+1540,MP포션 5%,Item/Consume/Potion/MPP1,Itemname/1540,Itemdescript/1540,2,102,4,,FALSE,0,1,FALSE,0,0,0,0,0.05,TRUE,FALSE,FALSE,FALSE
+1541,MP포션 7%,Item/Consume/Potion/MPP1,Itemname/1541,Itemdescript/1541,2,102,5,,FALSE,0,1,FALSE,0,0,0,0,0.07,TRUE,FALSE,FALSE,FALSE
+1542,MP포션 10%,Item/Consume/Potion/MPP3,Itemname/1542,Itemdescript/1542,2,102,6,,FALSE,0,1,FALSE,0,0,0,0,0.1,TRUE,FALSE,FALSE,FALSE
+1543,MP포션4,Item/Consume/Potion/MP3,Itemname/1543,Itemdescript/1543,2,102,4,,FALSE,0,800,FALSE,0,0,0,0,0.01,TRUE,FALSE,FALSE,FALSE
+1544,MP포션5,Item/Consume/Potion/MP4,Itemname/1544,Itemdescript/1544,2,102,5,,FALSE,0,1200,FALSE,0,0,0,0,0.01,TRUE,FALSE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+1700,장비 파편,Item/Resource/crafting/0,Itemname/1700,Itemdescript/1700,1,111,0,,FALSE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+1710,스킬 조각,Item/ETC/Skillpaper,Itemname/1710,Itemdescript/1710,1,111,5,,FALSE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+1711,던전 입장권,Item/ETC/DungeonPass,Itemname/1711,Itemdescript/1711,3,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+1712,제단 강화석,Item/ETC/OpenBox,Itemname/1712,Itemdescript/1712,1,111,5,,TRUE,0,1,FALSE,3,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,0,,,,
+1713,장비 전승석,Item/ETC/전승석,Itemname/1713,Itemdescript/1713,1,117,6,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+1714,개미굴 제단 강화석,Item/Resource/신악세파편칼날,Itemname/1714,Itemdescript/1714,1,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+1715,개미굴 증표,Item/Resource/DungeonChange,Itemname/1715,Itemdescript/1715,1,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+1716,스킬 룬 1,Item/ETC/RUNE1,Itemname/1716,Itemdescript/1716,1,111,5,,FALSE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+1717,스킬 룬 2,Item/ETC/RUNE2,Itemname/1717,Itemdescript/1717,1,111,5,,FALSE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+1718,스킬 룬 3,Item/ETC/RUNE3,Itemname/1718,Itemdescript/1718,1,111,6,,FALSE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+1719,스킬 룬 4,Item/ETC/RUNE4,Itemname/1719,Itemdescript/1719,1,111,6,,FALSE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+1720,스킬 룬 5,Item/ETC/RUNE5,Itemname/1720,Itemdescript/1720,1,111,6,,FALSE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+1750,마법사의 묘 입장권,Item/ETC/DungeonPass2,Itemname/1750,Itemdescript/1750,3,111,6,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+1751,장비 변경권,Item/Scroll/Scroll12,Itemname/1751,Itemdescript/1751,1,117,6,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+1752,발록의 정수1~10,Item/Resource/Dungeon_Boss6,Itemname/1752,Itemdescript/1752,3,111,7,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+1753,발록의 정수11~15,Item/Resource/Dungeon_Boss6,Itemname/1753,Itemdescript/1753,3,111,7,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+1754,대지의 탈리스만 코어,Item/Talisman/0,Itemname/1754,Itemdescript/1754,6,407,7,,FALSE,0,1,FALSE,1,T1000,0,0,0,TRUE,0,FALSE,FALSE
+1755,죽음의 탈리스만 코어,Item/Talisman/1,Itemname/1755,Itemdescript/1755,6,407,7,,FALSE,0,1,FALSE,1,T1001,0,0,0,TRUE,0,FALSE,FALSE
+1756,칼날의 탈리스만 코어,Item/Talisman/2,Itemname/1756,Itemdescript/1756,6,407,7,,FALSE,0,1,FALSE,1,T1002,0,0,0,TRUE,0,FALSE,FALSE
+1757,용의 탈리스만 코어,Item/Talisman/3,Itemname/1757,Itemdescript/1757,6,407,7,,FALSE,0,1,FALSE,1,T1003,0,0,0,TRUE,0,FALSE,FALSE
+1758,독사의 탈리스만 코어,Item/Talisman/4,Itemname/1758,Itemdescript/1758,6,407,7,,FALSE,0,1,FALSE,1,T1004,0,0,0,TRUE,0,FALSE,FALSE
+1759,번개의 탈리스만 코어,Item/Talisman/5,Itemname/1759,Itemdescript/1759,6,407,7,,FALSE,0,1,FALSE,1,T1005,0,0,0,TRUE,0,FALSE,FALSE
+1760,빛의 탈리스만 코어,Item/Talisman/6,Itemname/1760,Itemdescript/1760,6,407,7,,FALSE,0,1,FALSE,1,T1006,0,0,0,TRUE,0,FALSE,FALSE
+1761,거인의 탈리스만 코어,Item/Talisman/7,Itemname/1761,Itemdescript/1761,6,407,7,,FALSE,0,1,FALSE,1,T1007,0,0,0,TRUE,0,FALSE,FALSE
+1762,키메라의 탈리스만 코어,Item/Talisman/8,Itemname/1762,Itemdescript/1762,6,407,7,,FALSE,0,1,FALSE,1,T1008,0,0,0,TRUE,0,FALSE,FALSE
+1763,빛나는 대지의 탈리스만 코어,Item/Talisman/0,Itemname/1763,Itemdescript/1763,7,407,7,,FALSE,0,1,FALSE,1,T1000,1,0,1,TRUE,0,FALSE,TRUE
+1764,빛나는 죽음의 탈리스만 코어,Item/Talisman/1,Itemname/1764,Itemdescript/1764,7,407,7,,FALSE,0,1,FALSE,1,T1001,1,0,1,TRUE,0,FALSE,TRUE
+1765,빛나는 칼날의 탈리스만 코어,Item/Talisman/2,Itemname/1765,Itemdescript/1765,7,407,7,,FALSE,0,1,FALSE,1,T1002,1,0,1,TRUE,0,FALSE,TRUE
+1766,빛나는 용의 탈리스만 코어,Item/Talisman/3,Itemname/1766,Itemdescript/1766,7,407,7,,FALSE,0,1,FALSE,1,T1003,1,0,1,TRUE,0,FALSE,TRUE
+1767,빛나는 독사의 탈리스만 코어,Item/Talisman/4,Itemname/1767,Itemdescript/1767,7,407,7,,FALSE,0,1,FALSE,1,T1004,1,0,1,TRUE,0,FALSE,TRUE
+1768,빛나는 번개의 탈리스만 코어,Item/Talisman/5,Itemname/1768,Itemdescript/1768,7,407,7,,FALSE,0,1,FALSE,1,T1005,1,0,1,TRUE,0,FALSE,TRUE
+1769,빛나는 빛의 탈리스만 코어,Item/Talisman/6,Itemname/1769,Itemdescript/1769,7,407,7,,FALSE,0,1,FALSE,1,T1006,1,0,1,TRUE,0,FALSE,TRUE
+1770,빛나는 거인의 탈리스만 코어,Item/Talisman/7,Itemname/1770,Itemdescript/1770,7,407,7,,FALSE,0,1,FALSE,1,T1007,1,0,1,TRUE,0,FALSE,TRUE
+1771,빛나는 키메라의 탈리스만 코어,Item/Talisman/8,Itemname/1771,Itemdescript/1771,7,407,7,,FALSE,0,1,FALSE,1,T1008,1,0,1,TRUE,0,FALSE,TRUE
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+99000,제련석,Item/Resource/acientresource/제련석,Itemname/99000,Itemdescript/99000,3,111,3,,FALSE,0,1,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+99001,룬 제련석,Item/룬/Icon27,Itemname/99001,Itemdescript/99001,3,111,5,,FALSE,0,1,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+99002,최상급 제련석,Item/Resource/acientresource/제련석,Itemname/99002,Itemdescript/99002,3,111,3,,FALSE,0,1,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+99003,최고급 제련석,Item/Resource/acientresource/제련석,Itemname/99003,Itemdescript/99003,3,111,4,,FALSE,0,1,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+보스재료,,,,,,,,,,,,,,,,,,,,,
+2900,토벌 증표[뱀장어],Item/Resource/tobul,Itemname/2900,Itemdescript/2900,4,111,6,,FALSE,0,1,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+2901,토벌 증표[심해어],Item/Resource/tobul,Itemname/2901,Itemdescript/2901,4,111,6,,FALSE,0,1,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+2902,토벌 증표[공허 촉수],Item/Resource/tobul,Itemname/2902,Itemdescript/2902,4,111,6,,FALSE,0,1,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+2903,토벌 증표[재앙의 씨앗],Item/Resource/tobul,Itemname/2903,Itemdescript/2903,4,111,6,,FALSE,0,1,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+2904,토벌 증표[뱀장어],Item/Resource/tobul,Itemname/2904,Itemdescript/2904,4,111,6,,FALSE,0,1,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+2905,토벌 증표[심해어],Item/Resource/tobul,Itemname/2905,Itemdescript/2905,4,111,6,,FALSE,0,1,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+2906,토벌 증표[공허 촉수],Item/Resource/tobul,Itemname/2906,Itemdescript/2906,4,111,6,,FALSE,0,1,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+2907,토벌 증표[재앙의 씨앗],Item/Resource/tobul,Itemname/2907,Itemdescript/2907,4,111,6,,FALSE,0,1,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+2908,레이드 토벌 증표,Item/Resource/tobul,Itemname/2908,Itemdescript/2908,4,111,6,,FALSE,0,1,TRUE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+3000,감염된 농장 보스 재료,Item/Resource/Dungeon_Boss1,Itemname/3000,Itemdescript/3000,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+3001,늪지대 보스 재료,Item/Resource/Dungeon_Boss2,Itemname/3001,Itemdescript/3001,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+3002,투탕카멘의 묘 보스 재료,Item/Resource/Dungeon_Boss3,Itemname/3002,Itemdescript/3002,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+3003,지하 감옥 보스 재료,Item/Resource/Dungeon_Boss4,Itemname/3003,Itemdescript/3003,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+3004,화산 보스 재료,Item/Resource/Dungeon_Boss5,Itemname/3004,Itemdescript/3004,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+3005,마계 중심부 재료,Item/Resource/Dungeon_Boss6,Itemname/3005,Itemdescript/3005,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+3006,샤이아 재료,Item/Resource/Dungeon_Boss7,Itemname/3006,Itemdescript/3006,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+3007,고대 드래곤의 마력 뼛조각,Item/Resource/Dungeon_Boss8,Itemname/3007,Itemdescript/3007,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+3008,제국 금고 열쇠,Item/Resource/Dungeon_Boss9,Itemname/3008,Itemdescript/3008,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+3009,응축된 마력이 담긴 병,Item/Resource/Dungeon_Boss11,Itemname/3009,Itemdescript/3009,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+3010,노스 블로우의 심장,Item/Resource/Dungeon_Boss12,Itemname/3010,Itemdescript/3010,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+3011,공허의 정수,Item/Resource/공허의정수,Itemname/3011,Itemdescript/3011,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+3012,던전 코어,Item/Resource/공허의정수,Itemname/3012,Itemdescript/3012,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+3013,악몽 던전 코어,Item/Resource/공허의정수,Itemname/3013,Itemdescript/3013,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+3014,지옥 던전 코어,Item/Resource/공허의정수,Itemname/3014,Itemdescript/3014,4,111,5,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+3015,카르마,Item/ETC2/c7524,Itemname/3015,Itemdescript/3015,4,111,7,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+3016,대 못,Item/ETC2/157_Handyman_Nails,Itemname/3016,Itemdescript/3016,4,111,6,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+3017,용암석,Item/ETC2/178_Lava_Blob,Itemname/3017,Itemdescript/3017,4,111,6,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+3018,산양의 뿔,Item/ETC2/193_Goat_Horn,Itemname/3018,Itemdescript/3018,4,111,6,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+3019,가죽,Item/ETC2/1230,Itemname/3019,Itemdescript/3019,4,111,6,,TRUE,0,1,FALSE,0,0,0,0,0,TRUE,TRUE,FALSE,FALSE
+3020,카르마 상자,Item/Consume/Box/enchantbox,Itemname/3020,Itemdescript/3020,2,400,5,,TRUE,0,1,FALSE,0,3015,200,All,0,TRUE,FALSE,FALSE,FALSE
+3021,카르마 상자,Item/Consume/Box/enchantbox,Itemname/3021,Itemdescript/3021,2,400,6,,TRUE,0,1,FALSE,0,3015,500,All,0,TRUE,FALSE,FALSE,FALSE
+3022,카르마 상자,Item/Consume/Box/enchantbox,Itemname/3022,Itemdescript/3022,2,400,7,,TRUE,0,1,FALSE,0,3015,2000,All,0,TRUE,FALSE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+4000, ★1 신의 증표,Item/ETC/goldsafe2,Itemname/4000,Itemdescript/4000,3,114,1,,FALSE,0,20000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+4001, ★2 신의 증표,Item/ETC/goldsafe2,Itemname/4001,Itemdescript/4001,3,114,2,,FALSE,0,50000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+4002, ★3 신의 증표,Item/ETC/goldsafe2,Itemname/4002,Itemdescript/4002,3,114,3,,FALSE,0,100000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+4003, ★4 신의 증표,Item/ETC/goldsafe2,Itemname/4003,Itemdescript/4003,3,114,4,,FALSE,0,300000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+4004, ★5 신의 증표,Item/ETC/goldsafe2,Itemname/4004,Itemdescript/4004,3,114,5,,FALSE,0,1000000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+4005, ★6 신의 증표,Item/ETC/goldsafe2,Itemname/4005,Itemdescript/4005,3,114,6,,FALSE,0,5000000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+4006, ★7 신의 증표,Item/ETC/goldsafe2,Itemname/4006,Itemdescript/4006,3,114,7,,FALSE,0,30000000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+4007, ★8 신의 증표,Item/ETC/goldsafe2,Itemname/4007,Itemdescript/4007,3,114,4,,FALSE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+4008, ★9 신의 증표,Item/ETC/goldsafe2,Itemname/4008,Itemdescript/4008,3,114,5,,FALSE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+4009, ★10 신의 증표,Item/ETC/goldsafe2,Itemname/4009,Itemdescript/4009,3,114,5,,FALSE,0,0,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+80000,평타 강화,Item/Skillbook/44,Itemname/80000,Itemdescript/80000,2,999,5,Physic,TRUE,0,1500000000,FALSE,0,5000,,All,0,TRUE,FALSE,TRUE,FALSE
+80001,그레이트 샤우트,Item/Skillbook/5001,Itemname/80001,Itemdescript/80001,2,999,5,all,TRUE,0,1500000000,FALSE,0,5001,,All,0,TRUE,FALSE,TRUE,FALSE
+80002,그레이트 블레싱,Item/Skillbook/5002,Itemname/80002,Itemdescript/80002,2,999,5,Physic,TRUE,0,1500000000,FALSE,0,5002,,All,0,TRUE,FALSE,TRUE,FALSE
+80003,그레이드 샤프아이,Item/Skillbook/5003,Itemname/80003,Itemdescript/80003,2,999,5,all,TRUE,0,1500000000,FALSE,0,5003,,All,0,TRUE,FALSE,TRUE,FALSE
+80004,매직 캐스터,Item/Skillbook/5004,Itemname/80004,Itemdescript/80004,2,999,5,Magic,TRUE,0,1500000000,FALSE,0,5004,,All,0,TRUE,FALSE,TRUE,FALSE
+80005,메테오스트라이크,Item/Skillbook/5005,Itemname/80005,Itemdescript/80005,2,999,5,Magic,TRUE,0,3000000000,FALSE,0,5005,,All,0,TRUE,FALSE,TRUE,FALSE
+80006,다크스트라이크,Item/Skillbook/5006,Itemname/80006,Itemdescript/80006,2,999,5,Physic,TRUE,0,3000000000,FALSE,0,5006,,All,0,TRUE,FALSE,TRUE,FALSE
+80007,시체 폭발 - 그린,Item/Skillbook/5007,Itemname/80007,Itemdescript/80007,2,999,5,Dot,TRUE,0,3000000000,FALSE,0,5007,,All,0,TRUE,FALSE,TRUE,FALSE
+80008,시체 폭발 - 레드,Item/Skillbook/5007,Itemname/80008,Itemdescript/80008,2,999,5,Dot,TRUE,0,3000000000,FALSE,0,5008,,All,0,TRUE,FALSE,TRUE,FALSE
+80009,시체 폭발 - 퍼플,Item/Skillbook/5007,Itemname/80009,Itemdescript/80009,2,999,6,Dot,TRUE,0,5000000000,FALSE,0,5009,,All,0,TRUE,FALSE,TRUE,FALSE
+80010,차원참,Item/Skillbook/5010,Itemname/80010,Itemdescript/80010,2,999,6,Physic,TRUE,0,5000000000,FALSE,0,5010,,All,0,TRUE,FALSE,TRUE,FALSE
+80011,드래곤 브레스,Item/Skillbook/5005,Itemname/80011,Itemdescript/80011,2,999,6,Magic,TRUE,0,5000000000,FALSE,0,5011,,All,0,TRUE,FALSE,TRUE,FALSE
+80012,피어싱,Item/Skillbook/5012,Itemname/80012,Itemdescript/80012,2,999,6,Physic,TRUE,0,5000000000,FALSE,0,5012,,All,0,TRUE,FALSE,TRUE,FALSE
+80013,매직볼트,Item/Skillbook/5005,Itemname/80013,Itemdescript/80013,2,999,6,Magic,TRUE,0,5000000000,FALSE,0,5013,,All,0,TRUE,FALSE,TRUE,FALSE
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+유물,,,,,,,,,,,,,,,,,,,,,
+90000,갑옷 조각,Item/유물/갑옷조각,Itemname/90000,Itemdescript/90000,4,111,4,,FALSE,0,5000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+90001,거울,Item/유물/거울,Itemname/90001,Itemdescript/90001,4,111,4,,FALSE,0,5000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+90002,금닢,Item/유물/금닢,Itemname/90002,Itemdescript/90002,4,111,4,,FALSE,0,5000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+90003,독병,Item/유물/독병,Itemname/90003,Itemdescript/90003,4,111,5,,FALSE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+90004,오리,Item/유물/레몬덕,Itemname/90004,Itemdescript/90004,4,111,5,,FALSE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+90005,마녀의 빗자루,Item/유물/마녀의빗자루,Itemname/90005,Itemdescript/90005,4,111,5,,FALSE,0,10000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+90006,양초,Item/유물/성난양초,Itemname/90006,Itemdescript/90006,4,111,6,,TRUE,0,20000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+90007,죄수의 족쇄,Item/유물/죄수의족쇄,Itemname/90007,Itemdescript/90007,4,111,6,,TRUE,0,20000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE
+90008,피닉스의 부리,Item/유물/피닉스의부리,Itemname/90008,Itemdescript/90008,4,111,6,,TRUE,0,20000000,FALSE,0,0,0,0,0,TRUE,FALSE,FALSE,FALSE

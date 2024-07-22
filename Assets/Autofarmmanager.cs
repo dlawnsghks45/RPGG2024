@@ -41,7 +41,7 @@ public class Autofarmmanager : MonoBehaviour
     //게임=처음만들떄 시작
 
     //필드 레벨에 맞는 사냥터를 불러옴
-    string GetMapIdByFI()
+    public string GetMapIdByFI()
     {
         if (PlayerBackendData.Instance.GetFieldLv().Equals(0))
         {
@@ -53,13 +53,32 @@ public class Autofarmmanager : MonoBehaviour
             if (MapDB.Instance.GetAt(i).maptype.Equals("0") &&
                 MapDB.Instance.GetAt(i).mapneednum.Equals((PlayerBackendData.Instance.GetFieldLv() - 1).ToString()))
             {
+                Debug.Log("맵은" +  MapDB.Instance.GetAt(i).id) ;
                 return MapDB.Instance.GetAt(i).id;
             }
         }
 
         return "1000";
     }
+    public string GetMapIdByFI2()
+    {
+        if (PlayerBackendData.Instance.GetFieldLv().Equals(0))
+        {
+            return "1000";
+        }
+        Debug.Log("아이디는" + PlayerBackendData.Instance.GetFieldLv());
+        for (int i = 0; i < MapDB.Instance.NumRows(); i++)
+        {
+            if (MapDB.Instance.GetAt(i).maptype.Equals("0") &&
+                MapDB.Instance.GetAt(i).mapneednum.Equals((PlayerBackendData.Instance.GetFieldLv()).ToString()))
+            {
+                Debug.Log("아이디는" + MapDB.Instance.GetAt(i).id);
+                return MapDB.Instance.GetAt(i).id;
+            }
+        }
 
+        return "1000";
+    }
     //최대 8시간 계산
     //초당 0.277
     //시간 당 천마리 저장
@@ -89,6 +108,7 @@ public class Autofarmmanager : MonoBehaviour
     [SerializeField] private List<int> drophowmany = new List<int>();
     [SerializeField] private List<int> droppercent = new List<int>();
 
+    
     void RefreshCountFast()
     {
         int adscount = (int)Enum.Parse(typeof(Timemanager.ContentEnumDaily),
@@ -158,25 +178,31 @@ public class Autofarmmanager : MonoBehaviour
         //Debug.Log("드로ㅗㅂ 아이 "+dropid);
 
         bool isfinddrop = false;
-        for (int i = 0; i < MonDropDB.Instance.NumRows(); i++)
+
+        List<MonDropDB.Row> DropData = MonDropDB.Instance.FindAll_id(dropid);
+
+        if (monsterDB.Instance.Find_id(mapdata.monsterid).droppercentup != "0")
         {
-            if (MonDropDB.Instance.GetAt(i).id.Equals(dropid))
+            foreach (var t in DropData)
             {
-                //Debug.Log("asdasd" + i);
-                isfinddrop = true;
-                dropitemid.Add(MonDropDB.Instance.GetAt(i).itemid);
-                drophowmany.Add(int.Parse(MonDropDB.Instance.GetAt(i).minhowmany));
-                droppercent.Add(int.Parse(MonDropDB.Instance.GetAt(i).rate));
-            }
-            else
-            {
-                if (isfinddrop)
-                {
-                    //찾은 후 못찾게 된다면 끝났다는뜻
-                    //    break;
-                }
+                dropitemid.Add(t.itemid);
+
+                float count = float.Parse(t.minhowmany) *
+                              float.Parse(monsterDB.Instance.Find_id(mapdata.monsterid).droppercentup);
+                drophowmany.Add((int)count);
+                droppercent.Add(int.Parse(t.rate));
             }
         }
+        else
+        {
+            foreach (var t in DropData)
+            {
+                dropitemid.Add(t.itemid);
+                drophowmany.Add(int.Parse(t.minhowmany));
+                droppercent.Add(int.Parse(t.rate));
+            }
+        }
+
 
         foreach (var VARIABLE in items)
         {
@@ -580,14 +606,32 @@ public class Autofarmmanager : MonoBehaviour
         minute = (int)TotalCount_Offline % 3600 / 60; //분을 구하기위해서 입력되고 남은값에서 또 60을 나눈다.
         second = (int)TotalCount_Offline % 3600 % 60; //마지막 남은 시간에서 분을 뺀 나머지 시간을 초로 계산함
         TimeText_Offline.text = $"{hour:D2}:{minute:D2}:{second:D2}";
-        for (int i = 0; i < data.Length; i++)
-        {
-                Debug.Log("asdasd" + i);
-                dropitemid_Offline.Add(data[i].itemid);
-                drophowmany_Offline.Add(int.Parse(data[i].minhowmany));
-                droppercent_Offline.Add(int.Parse(data[i].rate));
-        }
+        
+        List<MonDropDB.Row> DropData = MonDropDB.Instance.FindAll_id(dropid);
 
+        
+        if (monsterDB.Instance.Find_id(mapdata.monsterid).droppercentup != "0")
+        {
+            foreach (var t in DropData)
+            {
+                dropitemid_Offline.Add(t.itemid);
+
+                float count = float.Parse(t.minhowmany) *
+                              float.Parse(monsterDB.Instance.Find_id(mapdata.monsterid).droppercentup);
+                drophowmany_Offline.Add((int)count);
+                droppercent_Offline.Add(int.Parse(t.rate));
+            }
+        }
+        else
+        {
+            foreach (var t in DropData)
+            {
+                dropitemid_Offline.Add(t.itemid);
+                drophowmany_Offline.Add(int.Parse(t.minhowmany));
+                droppercent_Offline.Add(int.Parse(t.rate));
+            }
+        }
+        
         foreach (var VARIABLE in items_Offline)
         {
             VARIABLE.gameObject.SetActive(false);

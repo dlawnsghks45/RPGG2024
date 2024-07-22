@@ -85,7 +85,6 @@ public class castingbarslot : MonoBehaviour
             if (mainplayer.isme)
             {
                 Skillmanager.Instance.UseSkill_Mainplayer(nowskill);
-
                 if (nowskill.skilldata.SkillType == "MagicAttack")
                 {
                     //본캐라면
