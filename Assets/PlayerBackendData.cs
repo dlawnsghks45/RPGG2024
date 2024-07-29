@@ -70,6 +70,8 @@ public class PlayerBackendData : MonoBehaviour
         {
             TalismanPreset[i] = new PresetTalisman();
         }
+        
+            
         DontDestroyOnLoad(this);
     }
 

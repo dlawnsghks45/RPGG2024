@@ -991,7 +991,8 @@ public class otherusermanager : MonoBehaviour
 //                   Debug.Log("잇다");
                    for (int i = 0; i < TalismanEquip.Length; i++)
                    {
-                       if (data["NowTalismanData_train"]["Talismanset"][i] != null)
+                       Debug.Log(data["NowTalismanData_train"]["Talismanset"][i].ToString());
+                       if (data["NowTalismanData_train"]["Talismanset"][i].ToString() != "True")
                        {
                            TalismanEquip[i]. SetTalismanOtherUser(new Talismandatabase(data["NowTalismanData_train"]["Talismanset"][i]));
                        }

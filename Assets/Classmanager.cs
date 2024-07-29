@@ -681,7 +681,7 @@ public class Classmanager : MonoBehaviour
         RefreshJobSlot();
         
        
-        
+        LogManager.ChangeClass(PlayerBackendData.Instance.ClassId);
     }
     public void Bt_SelectClass(string classid,string[] skills,bool justequip = false)
     {
@@ -729,7 +729,7 @@ public class Classmanager : MonoBehaviour
             }
         }
       
-        
+        LogManager.ChangeClass(classid);
     }
     public void Bt_SelectPassive()
     {

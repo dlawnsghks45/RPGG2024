@@ -361,12 +361,13 @@ public class LogManager : MonoBehaviour
         });
     }
     
-    public static void BoxOpen(string ItemName,int count)
+    public static void BoxOpen(string itemid,int count)
     {
         Param param = new Param();
         param.Add("크리스탈" ,PlayerBackendData.Instance.GetCash());
         param.Add("레벨" ,PlayerBackendData.Instance.GetLv());
-        param.Add("아이템이름", ItemName);
+        param.Add("아이템이름", Inventory.GetTranslate(ItemdatabasecsvDB.Instance.Find_id(itemid).name));
+        param.Add("아이템개수", PlayerBackendData.Instance.CheckItemCount(itemid));
         param.Add("횟수",count);
         SendQueue.Enqueue(Backend.GameLog.InsertLogV2, "박스오픈", param, ( callback ) => 
         {
@@ -415,7 +416,18 @@ public class LogManager : MonoBehaviour
             // 이후 처리
         });
     }
-    
+    public static void Sotang_Raid_Elite(int count,string needitem)
+    {
+        Param param = new Param();
+        param.Add("소탕횟수" ,count);
+        param.Add("입장권이름" ,Inventory.GetTranslate(ItemdatabasecsvDB.Instance.Find_id(needitem).name));
+        param.Add("입장권개수" ,PlayerBackendData.Instance.CheckItemCount(needitem));
+        param.Add("레벨" ,PlayerBackendData.Instance.GetLv());
+        SendQueue.Enqueue(Backend.GameLog.InsertLogV2, "소탕_기간틱레이드", param, ( callback ) => 
+        {
+            // 이후 처리
+        });
+    }
     
     
     public static void RareLog(string prevrare,string nextrare,string equipid)
@@ -793,6 +805,34 @@ public class LogManager : MonoBehaviour
         param.Add("크리스탈", count);
 
         SendQueue.Enqueue(Backend.GameLog.InsertLogV2, "크리스탈핵사용", param, (callback) =>
+        {
+            // 이후 처리
+        });
+    }
+    
+    public static void ChangeClass(string Classid)
+    {
+        Param param = new Param();
+        param.Add("선택 클래스 이름", Inventory.GetTranslate(ClassDB.Instance.Find_id(Classid).name));
+
+        SendQueue.Enqueue(Backend.GameLog.InsertLogV2, "로그_클래스변경", param, (callback) =>
+        {
+            // 이후 처리
+        });
+    }
+    public static void TalismanMix(string A,string B,string C,Talismandatabase data)
+    {
+        Param param = new Param();
+        param.Add("재료A",Inventory.GetTranslate(TalismanDB.Instance.Find_id(A).name) );
+        param.Add("재료B",Inventory.GetTranslate(TalismanDB.Instance.Find_id(B).name) );
+        param.Add("재료C",Inventory.GetTranslate(TalismanDB.Instance.Find_id(C).name) );
+        
+        
+        
+        param.Add("탈리스만이름", Inventory.GetTranslate(TalismanDB.Instance.Find_id(data.Itemid).name));
+        param.Add("뽑은탈리스만", data);
+
+        SendQueue.Enqueue(Backend.GameLog.InsertLogV2, "로그_클래스변경", param, (callback) =>
         {
             // 이후 처리
         });

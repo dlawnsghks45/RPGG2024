@@ -110,7 +110,7 @@ public class TutorialTotalManager : MonoBehaviour
         switch (PlayerBackendData.Instance.tutoguideid)
         {
             case 0: //진로 선택
-                Tutorialmanager.Instance.CheckTutorial("tutoguide");
+                Tutorialmanager.Instance.CheckTutorial("SelectClass");
                 break;
             case 1:
                 //초보자 점핑 지원 물품 상자 사용
@@ -622,7 +622,15 @@ public class TutorialTotalManager : MonoBehaviour
         switch (PlayerBackendData.Instance.tutoguideid)
         {
             case 0 :
-                GrowEventmanager.Instance.Bt_ShowPanel();
+                Debug.Log(PlayerBackendData.Instance.GetLv());
+                if (PlayerBackendData.Instance.GetLv() >= 1500)
+                {
+                    Tutorialmanager.Instance.CheckTutorial("tutoguide");
+                }
+                else
+                {
+                    GrowEventmanager.Instance.Bt_ShowPanel();
+                }
                 break;
             case 1 : //초보자 점핑 지원 물품 상자 사용
                 toggles_quest[0].IsOn = true;

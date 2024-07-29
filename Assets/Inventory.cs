@@ -2652,13 +2652,35 @@ public class Inventory : MonoBehaviour
             return;
         }
 
-        curBoxcount++;
-        BoxManyInput.text = curBoxcount.ToString();
+        if (nowselectid.Equals("588") || nowselectid.Equals("590"))
+        {
+            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI8/하나씩만가능"), alertmanager.alertenum.일반);
+            //작동안됨
+            curBoxcount = 1;
+            BoxManyInput.text = curBoxcount.ToString();
+        }
+        else
+        {
+            curBoxcount++;
+            BoxManyInput.text = curBoxcount.ToString();
+        }
+        
     }
     public void Bt_MaxPlus()
     {
-        curBoxcount = maxBoxcount;
-        BoxManyInput.text = curBoxcount.ToString();
+        if (nowselectid.Equals("588") || nowselectid.Equals("590"))
+        {
+            //작동안됨
+            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI8/하나씩만가능"), alertmanager.alertenum.일반);
+            curBoxcount = 1;
+            BoxManyInput.text = curBoxcount.ToString();
+        }
+        else
+        {
+            curBoxcount = maxBoxcount;
+            BoxManyInput.text = curBoxcount.ToString();
+        }
+      
     }
     public void CheckCount(string count)
     {
@@ -2682,25 +2704,45 @@ public class Inventory : MonoBehaviour
 
     public void Bt_Minus()
     {
-        if (curBoxcount == 1)
+        if (nowselectid.Equals("588") || nowselectid.Equals("590"))
         {
-            //최소
-            alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI3/최소"), alertmanager.alertenum.일반);
-            return;
+            //작동안됨
+            curBoxcount = 1;
+            BoxManyInput.text = curBoxcount.ToString();
+        }
+        else
+        {
+            if (curBoxcount == 1)
+            {
+                //최소
+                alertmanager.Instance.ShowAlert(Inventory.GetTranslate("UI3/최소"), alertmanager.alertenum.일반);
+                return;
+            }
+
+            curBoxcount--;
+            BoxManyInput.text = curBoxcount.ToString();
         }
 
-        curBoxcount--;
-        BoxManyInput.text = curBoxcount.ToString();
+      
 
     }
+
     public void Bt_MinMinus()
     {
-        curBoxcount=1;
-        BoxManyInput.text = curBoxcount.ToString();
-
+        if (nowselectid.Equals("588") || nowselectid.Equals("590"))
+        {
+            //작동안됨
+            curBoxcount = 1;
+            BoxManyInput.text = curBoxcount.ToString();
+        }
+        else
+        {
+            curBoxcount = 1;
+            BoxManyInput.text = curBoxcount.ToString();
+        }
     }
 
-        #endregion
+    #endregion
 
         public Text showearnExp;
         public Text showearnGold;
@@ -2935,11 +2977,13 @@ public class Inventory : MonoBehaviour
     
             if (data.C.Equals("Choice"))
             {
-                BoxChoiceText.gameObject.SetActive(true);
-                BoxGetButton.Interactable = false;
-                box_curselect = 0;
-                box_maxselect = int.Parse(data.D);
-                BoxChoiceText.text = $"0/{box_maxselect.ToString()}";
+             
+                    BoxChoiceText.gameObject.SetActive(true);
+                    BoxGetButton.Interactable = false;
+                    box_curselect = 0;
+                    box_maxselect = int.Parse(data.D);
+                    BoxChoiceText.text = $"{box_maxselect.ToString()}";
+
             }
         }
         else
@@ -3156,7 +3200,7 @@ public class Inventory : MonoBehaviour
          
          //저장
          Savemanager.Instance.SaveInventory();
-         LogManager.BoxOpen(GetTranslate(boxdata.name),curBoxcount);
+         LogManager.BoxOpen(boxdata.id,curBoxcount);
          RefreshInventory();
          Savemanager.Instance.Save();
          ShowEarnItem(getid.ToArray(), gethowmany.ToArray(), bool.Parse(boxdata.IsEquipBox));

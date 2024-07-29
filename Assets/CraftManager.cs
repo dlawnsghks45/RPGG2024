@@ -395,7 +395,23 @@ public class CraftManager : MonoBehaviour
 
         craftPercent.text = string.Format(Inventory.GetTranslate("ButtonUI/성공확률"), craftdata.SuccessPercent);
         dt = new DateTime(0);
-        craftTime.text = (dt.AddSeconds(double.Parse(craftdata.crafttime) * nowselectcount)).ToString("HH:mm:ss");
+        
+        //시, 분, 초 선언
+
+        int hours2, minute2, second2;
+
+        //시간공식
+        dt = dt.AddSeconds(double.Parse(craftdata.crafttime) * nowselectcount);
+        int num = dt.Millisecond;
+        Debug.Log("시간초는" + num);
+        hours2 = num / 3600;//시 공식
+        
+
+        minute2 = num % 3600 / 60;//분을 구하기위해서 입력되고 남은값에서 또 60을 나눈다.
+
+        second2 = num % 3600 % 60;//마지막 남은 시간에서 분을 뺀 나머지 시간을 초로 계산함
+        
+        craftTime.text = ($"{hours2:00}:{minute2:00}:{second2:00}");
         //개수 설정
         nowselectcount = 1;
         countinput.text = "1";
@@ -510,7 +526,19 @@ public class CraftManager : MonoBehaviour
         
         times = PlayerBackendData.Instance.ispremium ? times * 0.5f : times;
         
-        craftTime.text = (dt.AddSeconds(times)).ToString("HH:mm:ss");
+        //시, 분, 초 선언
+
+        int hours2, minute2, second2;
+
+        Debug.Log("시간초는" + (int)times);
+        hours2 = (int)times / 3600;//시 공식
+        
+
+        minute2 = (int)times % 3600 / 60;//분을 구하기위해서 입력되고 남은값에서 또 60을 나눈다.
+
+        second2 = (int)times % 3600 % 60;//마지막 남은 시간에서 분을 뺀 나머지 시간을 초로 계산함
+        
+        craftTime.text = ($"{hours2:00}:{minute2:00}:{second2:00}");
         needgold = decimal.Parse(craftdata.needgold) * nowselectcount;
         needgoldtext.text = dpsmanager.convertNumber(needgold);
         LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)needgoldtext.transform);

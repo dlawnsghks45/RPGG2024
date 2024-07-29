@@ -967,6 +967,7 @@ public class petmanager : MonoBehaviour
                // 이후 처리
                if (callback.IsSuccess())
                {
+                   PlayerData.Instance.RefreshPlayerstat();
                }
            });
        }

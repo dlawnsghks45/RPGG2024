@@ -7,6 +7,7 @@ public class talismanmixslot : MonoBehaviour
 {
     public int selectnum;
     public string keyid;
+    public string Itemid;
     public GameObject No;
     public GameObject Yes;
     public Image Image;
@@ -43,6 +44,7 @@ public class talismanmixslot : MonoBehaviour
         Line.color = Color.yellow;
         TalismanDB.Row datas = TalismanDB.Instance.Find_id(data.Itemid);
         keyid = data.Keyid;
+        Itemid = data.Itemid;
         //이미지
         Image.sprite = SpriteManager.Instance.GetSprite(datas.sprite);
         //특수효과]

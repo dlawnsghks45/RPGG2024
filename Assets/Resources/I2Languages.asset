@@ -13447,7 +13447,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uCD5C\uADFC \uC0AC\uB0E5\uD130\n<color=cyan>{0}</color>"
-      - 'recent hunting ground
+      - 'recent hunting grounds
 
         <color=cyan>{0}</color>'
       - 
@@ -13955,7 +13955,8 @@ MonoBehaviour:
         \uC77C\uC2DC\uC815\uC9C0\uB429\uB2C8\uB2E4."
       - 'We''ve detected you logging in from another device.
 
-        The game pauses.'
+        The game is
+        paused.'
       - 
       - 
       - 
@@ -14479,7 +14480,7 @@ MonoBehaviour:
       Languages:
       - "\uB808\uC774\uB4DC\uC5D0 \uC2E4\uD328\uD558\uC5EC \uB808\uC774\uB4DC \uB3C4\uC804
         \uAE30\uD68C\uAC00 1\uD68C \uCDA9\uC804\uB429\uB2C8\uB2E4."
-      - If you fail a raid, your chance to challenge the raid will be charged once.
+      - If you fail the raid, your chance to challenge the raid will be charged once.
       - 
       - 
       - 
@@ -22947,6 +22948,21 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uC18C\uC9C0\uD488"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 0000000000000000
+      Languages_Touch: []
+    - Term: "UI8/\uD558\uB098\uC529\uB9CC\uAC00\uB2A5"
+      TermType: 0
+      Description: 
+      Languages:
+      - "\uC774 \uC544\uC774\uD15C\uC740 \uCD5C\uB300 1\uAC1C\uB9CC \uC5F4 \uC218
+        \uC788\uC2B5\uB2C8\uB2E4."
       - 
       - 
       - 
@@ -42117,7 +42133,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uBC1C\uB85D\uC758 \uC77C\uACA9"
-      - Balrog Strike
+      - Balrog's Strike
       - 
       - 
       - 
@@ -42383,7 +42399,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "<\uACE0\uC720>\uBBF8\uC9C0\uC758 \uB9C8\uB825"
-      - <Unique>Unknown magical power
+      - <Unique>Unknown Magical Power
       - 
       - 
       - 
@@ -44043,8 +44059,8 @@ MonoBehaviour:
         inflict damage equal to 250% of physical attack power.
 
         [Magic Weapon]
-        When using a magic skill, there is a 25% chance of inflicting magic damage
-        equal to 200% of magic attack power.'
+        When using a magic skill, there is a 25% chance to inflict magic damage equal
+        to 200% of magic attack power.'
       - 
       - 
       - 
@@ -45953,8 +45969,8 @@ MonoBehaviour:
         inflict damage equal to 250% of physical attack power.
 
         [Magic Weapon]
-        When using a magic skill, there is a 25% chance of inflicting magic damage
-        equal to 200% of magic attack power.'
+        When using a magic skill, there is a 25% chance to inflict magic damage equal
+        to 200% of magic attack power.'
       - 
       - 
       - 
@@ -50926,7 +50942,7 @@ MonoBehaviour:
         Critical
         Strike Chance +18%
 
-        +25% Critical Strike Damage
+        Critical Strike Damage +25%
 
         Damage Reduction
         +35%'
@@ -50954,7 +50970,7 @@ MonoBehaviour:
         Critical
         Strike Chance +18%
 
-        +25% Critical Strike Damage
+        Critical Strike Damage +25%
 
         Damage Reduction
         +35%'
@@ -50982,10 +50998,10 @@ MonoBehaviour:
 
         Critical Strike Chance +18%
 
-        +25% Critical Strike Damage
+        Critical Strike Damage
+        +25%
 
-        Damage
-        Reduction +35%'
+        Damage Reduction +35%'
       - 
       - 
       - 
@@ -52705,7 +52721,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uD06C\uB9AC\uC2A4\uD0C8 8000+500\uAC1C"
-      - 8000+500 crystals
+      - 8000+500 Crystals
       - 
       - 
       - 
@@ -54843,7 +54859,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\u26055 \uC9C1\uC5C5\uC744 \uC5BB\uC744 \uC218 \uC788\uB294 \uC99D\uD45C\uC774\uB2E4."
-      - "This is a certificate that allows you to get a \u26055 job."
+      - "This is a proof that you can get a \u26055 job."
       - 
       - 
       - 
@@ -58356,7 +58372,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uBBF8\uC9C0\uC758 \uC6A9\uC758 \uB098\uB77C"
-      - The Unknown Land of Dragons
+      - The unknown land of dragons
       - 
       - 
       - 
@@ -63024,7 +63040,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uC774\uBBF8 \uAC00\uC785 \uC2E0\uCCAD\uD55C \uAE38\uB4DC\uC785\uB2C8\uB2E4."
-      - This is a guild you have already applied to join.
+      - This is a guild that you have already applied to join.
       - 
       - 
       - 
@@ -63759,7 +63775,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uC774\uBBF8 \uC9C0\uB09C \uC784\uBB34\uC785\uB2C8\uB2E4."
-      - This mission has already passed.
+      - It's already a past mission.
       - 
       - 
       - 
@@ -64081,7 +64097,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uD558\uAE09 \uACB0\uC815 \uB0A9\uD488 -3-"
-      - Subordinate Crystal Delivery -3-
+      - Low-Level Crystal Delivery -3-
       - 
       - 
       - 
@@ -64515,7 +64531,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "\uCD5C\uC0C1\uAE09 \uACB0\uC815 200,000\uAC1C \uB0A9\uD488"
-      - Delivered 200,000 top quality crystals
+      - Delivery of 200,000 top quality crystals
       - 
       - 
       - 
@@ -65034,7 +65050,7 @@ MonoBehaviour:
       Languages:
       - "\uBCF4\uC2A4 \uBAAC\uC2A4\uD130\uB97C \uC0C1\uB300\uD558\uC5EC \uB808\uC774\uB4DC
         \uCF54\uC778\uBC0F \uBE44\uBC95\uC11C\uB97C \uD68D\uB4DD \uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
-      - You can obtain raid coins and secret recipes by dealing with boss monsters.
+      - You can obtain raid coins and secret recipes by fighting boss monsters.
       - 
       - 
       - 
@@ -65128,8 +65144,8 @@ MonoBehaviour:
         \uBB34\uAE30 \uC81C\uC791\uC774 \uAC00\uB2A5\uD569\uB2C8\uB2E4."
       - 'Dungeon - Entry to the infected farm is possible.
 
-        Raise''s weapons
-        can be crafted.'
+        It is possible
+        to craft Raze''s weapons.'
       - 
       - 
       - 
@@ -74824,7 +74840,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycbxhcSJOOxI2cpDPngQJFCYrJuB6ffrqjqE3UgW-z7NUkneTss0VycsDEYRszHhWYImy/exec
     Google_SpreadsheetKey: 1rhi3AD5stOr4ljin6mwlgGM5wvn1pTUlM2ritN6RDf8
     Google_SpreadsheetName: I2Loc RIZE RPG Localization
-    Google_LastUpdatedVersion: 1721617145879
+    Google_LastUpdatedVersion: 1721961932500
     Google_Password: gksrnr13
     GoogleUpdateFrequency: 3
     GoogleInEditorCheckFrequency: 2

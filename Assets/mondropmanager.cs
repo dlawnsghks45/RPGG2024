@@ -286,10 +286,11 @@ public class mondropmanager : MonoBehaviour
 
                 decimal minh = decimal.Parse(data[i].minhowmany) * addper;
                 decimal maxh = decimal.Parse(data[i].maxhowmany) * addper;
-
-                if (ItemdatabasecsvDB.Instance.Find_id(data[i].id).Alert.Equals("TRUE"))
+                
+                Debug.Log(data[i].id);
+                if (ItemdatabasecsvDB.Instance.Find_id(data[i].itemid).Alert.Equals("TRUE"))
                 {
-                    chatmanager.Instance.ChattoDropItem(data[i].id);
+                    chatmanager.Instance.ChattoDropItem(data[i].itemid);
                 }
                 
                 Random.InitState((int)Time.deltaTime + PlayerBackendData.Instance.GetRandomSeed());

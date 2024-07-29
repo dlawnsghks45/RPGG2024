@@ -40,10 +40,15 @@ public class GrowEventmanager : MonoBehaviour
    public void Bt_ShowPanel()
    {
       if (PlayerBackendData.Instance.GetLv() >= 1500)
+      {
+         TutorialTotalManager.Instance.CheckGuideQuest("SelectClass");
          return;
+      }
+      else
+      {
+         GrowEventmanager.Instance.Bt_ShowPanel();
+      }
       
-      
-      //직업 계산
       GrowChoicePanel.Show(false);
 
       foreach (var VARIABLE in Recomend_First)

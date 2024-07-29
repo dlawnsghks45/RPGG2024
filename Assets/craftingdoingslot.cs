@@ -62,7 +62,7 @@ public class craftingdoingslot : MonoBehaviour
             nowsecond = dateDiff.TotalSeconds;
             dt = new DateTime(dateDiff.Ticks);
             dt.AddSeconds(nowsecond);
-
+    
             StartCoroutine(TimeStart());
             Refresh();
         }
@@ -86,7 +86,16 @@ public class craftingdoingslot : MonoBehaviour
         }
         else
         {
-            NowleftTime.text = dt.ToString("HH:mm:ss");
+            
+            //시, 분, 초 선언
+
+            int hours2, minute2, second2;
+
+            hours2 = (int)nowsecond / 3600;//시 공식
+            minute2 = (int)nowsecond % 3600 / 60;//분을 구하기위해서 입력되고 남은값에서 또 60을 나눈다.
+            second2 = (int)nowsecond % 3600 % 60;//마지막 남은 시간에서 분을 뺀 나머지 시간을 초로 계산함
+        
+            NowleftTime.text = ($"{hours2:00}:{minute2:00}:{second2:00}");
             GetResultButton.SetActive(false);
             FinishUsingFireButton.SetActive(true);
         }

@@ -1,17 +1,63 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.unity3d.player"
-    xmlns:tools="http://schemas.android.com/tools">
-    <application>
-        <activity android:name="com.unity3d.player.UnityPlayerActivity"
-                  android:theme="@style/UnityThemeSelector">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="unityplayer.UnityActivity" android:value="true" />
-            
-        </activity>
-    </application>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.LKGames.com.unity.RPGG2" xmlns:tools="http://schemas.android.com/tools">
+  <application>
+    <activity android:name="com.unity3d.player.UnityPlayerActivity" android:theme="@style/UnityThemeSelector">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+      <meta-data android:name="unityplayer.UnityActivity" android:value="true" />
+      <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="http" android:host="rpgg2.abr.ge" />
+      </intent-filter>
+      <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="https" android:host="rpgg2.abr.ge" />
+      </intent-filter>
+      <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="http" android:host="rpgg2.airbridge.io" />
+      </intent-filter>
+      <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="https" android:host="rpgg2.airbridge.io" />
+      </intent-filter>
+      <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="http" android:host="rpgg2.deeplink.page" />
+      </intent-filter>
+      <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="https" android:host="rpgg2.deeplink.page" />
+      </intent-filter>
+    </activity>
+    <meta-data android:name="co.ab180.airbridge.sdk.app_name" android:value="airbridge==rpgg2" />
+    <meta-data android:name="co.ab180.airbridge.sdk.app_token" android:value="airbridge==723426760ffb411cbfb2401b7fbe97bb" />
+    <meta-data android:name="co.ab180.airbridge.sdk.sdk_signature_secret_id" android:value="airbridge==" />
+    <meta-data android:name="co.ab180.airbridge.sdk.sdk_signature_secret" android:value="airbridge==" />
+    <meta-data android:name="co.ab180.airbridge.sdk.log_level" android:value="5" />
+    <meta-data android:name="co.ab180.airbridge.sdk.custom_domain" android:value="" />
+    <meta-data android:name="co.ab180.airbridge.sdk.session_timeout_seconds" android:value="300" />
+    <meta-data android:name="co.ab180.airbridge.sdk.user_info_hash_enabled" android:value="true" />
+    <meta-data android:name="co.ab180.airbridge.sdk.location_collection_enabled" android:value="false" />
+    <meta-data android:name="co.ab180.airbridge.sdk.track_airbridge_link_only" android:value="false" />
+    <meta-data android:name="co.ab180.airbridge.sdk.auto_start_tracking_enabled" android:value="true" />
+    <meta-data android:name="co.ab180.airbridge.sdk.facebook_deferred_app_link_enabled" android:value="false" />
+    <provider android:name="co.ab180.airbridge.unity.AirbridgeContentProvider" android:authorities="com.LKGames.com.unity.RPGG2.co.ab180.airbridge.unity.AirbridgeContentProvider" android:exported="false" />
+  </application>
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 </manifest>

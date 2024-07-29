@@ -116,9 +116,9 @@ public class Settingmanager : MonoBehaviour
                 JsonData data = bro.FlattenRows()[0];
                 if (data.ContainsKey("PlayerSaveTime"))
                 {
-                    RecentServerDateTimeText.text = DateTime.Parse(data["PlayerSaveTime"].ToString())
+                    RecentServerDateTimeText.text = TimeZoneInfo.ConvertTimeToUtc(DateTime.Parse(data["PlayerSaveTime"].ToString()))
                         .ToString("yyyy-MM-dd HH:mm:ss");
-                    Savedtime = DateTime.Parse(data["PlayerSaveTime"].ToString());
+                    Savedtime = TimeZoneInfo.ConvertTimeToUtc(DateTime.Parse(data["PlayerSaveTime"].ToString()));
                 }
                 else
                 {

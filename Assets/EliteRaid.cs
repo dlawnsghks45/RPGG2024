@@ -204,7 +204,7 @@ public class EliteRaid : MonoBehaviour
             mondropmanager.Instance.GiveDropToInvenToryBossPercentUp(null,
                 "5031",EliteRaid.Instance.GetPercent(),SotangCount.nowcount,true);
             
-            LogManager.Stang_Raid(SotangCount.nowcount);
+            LogManager.Sotang_Raid_Elite(SotangCount.nowcount,needitemid);
            
             StartCoroutine(RaidManager.Instance.FinishRaidReward2());
         }
